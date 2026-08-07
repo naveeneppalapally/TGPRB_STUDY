@@ -28,6 +28,8 @@
 
 import fs from 'fs'
 import path from 'path'
+import os from 'os'
+import { execSync } from 'child_process'
 import { S3Client, PutObjectCommand, HeadObjectCommand } from '@aws-sdk/client-s3'
 
 // ── Parse CLI args ──────────────────────────────────────────────────────────
@@ -100,11 +102,40 @@ async function upload() {
     process.exit(1)
   }
 
-  const body = fs.readFileSync(resolvedFile)
-  const contentType = mimeType(resolvedFile)
+  const ext = path.extname(resolvedFile).toLowerCase()
+  const isImage = ['.png', '.jpg', '.jpeg', '.gif'].includes(ext)
+
+  let uploadFile = resolvedFile
+  let uploadKey  = key!
+  let tmpWebP    = ''
+
+  // Auto-convert PNG/JPG to WebP via ffmpeg (80% smaller, lossless quality)
+  if (isImage && ext !== '.webp' && ext !== '.svg') {
+    try {
+      execSync('ffmpeg -version', { stdio: 'ignore' })
+      tmpWebP = path.join(os.tmpdir(), `${path.basename(resolvedFile, ext)}.webp`)
+      console.log(`Converting ${ext} -> WebP (quality 85) ...`)
+      execSync(`ffmpeg -i "${resolvedFile}" -quality 85 "${tmpWebP}" -y`, { stdio: 'pipe' })
+
+      // Update the key to use .webp extension
+      uploadKey = uploadKey.replace(/\.(png|jpg|jpeg|gif)$/i, '.webp')
+      uploadFile = tmpWebP
+
+      const origSize = fs.statSync(resolvedFile).size
+      const newSize  = fs.statSync(tmpWebP).size
+      const saving   = Math.round((1 - newSize / origSize) * 100)
+      console.log(`WebP: ${(origSize / 1024).toFixed(0)}KB -> ${(newSize / 1024).toFixed(0)}KB (-${saving}%)`)
+    }
+    catch {
+      console.log('ffmpeg not found - uploading original file without conversion')
+    }
+  }
+
+  const body = fs.readFileSync(uploadFile)
+  const contentType = mimeType(uploadFile)
   const fileSizeMB = (body.length / 1024 / 1024).toFixed(2)
 
-  console.log(`Uploading ${path.basename(resolvedFile)} (${fileSizeMB} MB) -> ${bucketName}/${key} ...`)
+  console.log(`Uploading ${path.basename(uploadFile)} (${fileSizeMB} MB) -> ${bucketName}/${uploadKey} ...`)
 
   await r2.send(new PutObjectCommand({
     Bucket:      bucketName,
