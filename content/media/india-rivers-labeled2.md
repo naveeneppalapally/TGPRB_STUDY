@@ -1,6 +1,6 @@
 ---
 id: "MEDIA-INDIA-RIVERS-LABELED2"
-asset_url: "r2://tslprb-media/images/geography/india_rivers_labeled2.png"
+asset_url: "r2://tslprb-media/https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp"
 public_url: ""
 source_domain: "wikimedia.org"
 rights_status: "needs_replacement_before_release"

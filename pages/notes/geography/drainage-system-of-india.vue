@@ -87,13 +87,13 @@
           <!-- High-Quality Labeled Physical River Map of India -->
           <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-4 text-center shadow-sm">
             <img
-              src="/images/geography/india_rivers_labeled2.webp"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp"
               alt="Physical Map of India with labeled rivers - Indus, Ganges, Brahmaputra, Narmada, Godavari, Krishna, Kaveri"
               class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
             />
             <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 text-body-xs text-gray-500 font-mono">
               <span>Physical relief map with labeled river systems (Wikimedia Commons / CC BY-SA 3.0)</span>
-              <a href="/images/geography/india_rivers_labeled2.webp" target="_blank" class="text-amber-600 hover:underline flex items-center gap-1 font-sans font-medium">
+              <a href="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp" target="_blank" class="text-amber-600 hover:underline flex items-center gap-1 font-sans font-medium">
                 Open Full Res (1431×1491) ↗
               </a>
             </div>
@@ -102,7 +102,7 @@
           <!-- Secondary Overview Flow Diagram -->
           <div class="mb-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
             <img
-              src="/images/geography/india_rivers_wiki.webp"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136896/geography/india_rivers_wiki.webp"
               alt="Plan of River Systems of India - System Overview Diagram"
               class="mx-auto block w-full max-w-3xl h-auto object-contain rounded-lg"
             />

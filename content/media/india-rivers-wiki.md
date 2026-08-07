@@ -1,6 +1,6 @@
 ---
 id: "MEDIA-INDIA-RIVERS-WIKI"
-asset_url: "r2://tslprb-media/images/geography/india_rivers_wiki.png"
+asset_url: "r2://tslprb-media/https://res.cloudinary.com/gbxjgmck/image/upload/v1786136896/geography/india_rivers_wiki.webp"
 public_url: ""
 source_domain: "wikimedia.org"
 rights_status: "needs_replacement_before_release"
