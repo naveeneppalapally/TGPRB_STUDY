@@ -4,8 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - 'public/images/**'
       - 'assets-to-upload/**'
+
+# Give the workflow write access to push the rewritten URLs back
+permissions:
+  contents: write
 
 jobs:
   upload:
@@ -15,11 +18,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Install ffmpeg
         run: sudo apt-get install -y ffmpeg
