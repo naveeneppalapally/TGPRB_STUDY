@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2015-P-102",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 102,
+  "question_text": "Assertion (A) :\nMoney bill cannot be returned by the President to the Parliament\nReason (R)\n:  Money bill is presented in the Lok Sabha with the permission of the\nPresident\n˙xmsºΩFyµR∂©´s (A)\n: ≠sªRΩÚ ’¡Ã˝¡V©´sV LSxtÌsQ˚xmsºΩ ºΩLjigji FyL˝RiÆ™sVLi»¡VNRPV xmsLizmsLiøR¡¤Õ¡[≤R∂V\nNSLRiﬂ·Li (R)\n: LSxtÌsQ˚xmsºΩ @©´sV™´sVºΩª][ ≠sªRΩÚ ’¡Ã˝¡V Õ‹[N`PxqsÀ≥œ¡Õ‹[ ˙xmsÆ™s[aRP#|ms»Ì¡ ¡≤R∂V©´sV\n————————————————————————————————————————\n32  X",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is true",
+    "(A) ™´sVLji∏R∂VV (R) IxmsˆV ™´sVLji∏R∂VV (A) NRPV (R) xqsLji\\π∏∂V©´s ≠s™´s-LRiﬂ·",
+    "(A) ™´sVLji∏R∂VV (R) IxmsˆV, NS¨s (A) NRPV (R) xqsLji-\\π∏∂V©´s ≠s™´s-LRiﬂ· NSµR∂V",
+    "(A) IxmsˆV NS¨s (R) ªRΩxmsˆV",
+    "(A) ªRΩxmsˆV NS¨s (R) IxmsˆV",
+    "CP 2015 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "c870a7b70fc6e826f93b29d610a43d93"
+}

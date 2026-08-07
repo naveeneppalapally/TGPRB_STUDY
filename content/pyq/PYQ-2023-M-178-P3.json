@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2023-M-178-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 178,
+  "question_text": "Observe the following data flow diagram whic P\ns the sequence of activities in g PrOces,\nof\ngetting admission in a college. ;\nx eros AGeray (Kx ¥\nS Somos? Gado Hrosera§ aod O94 ceo exysroo SrDod Se SS Shang,\ne. BPG) Es)\nB88D0408.\nLeave\nCollege\nSma\nAsk for Branch\nDarrio (roo)\nSOS GIGS Bes\nL No ;\nIs branch available | No es Yes Cancel of Enroll\nDario aoup ? Boo kon, Derr | e055)5D OAT Dosoee\nYes | eayso S\nFill form & Submit\nDocument\nPHO DOD Dewan\nSRW} oErB)\nYes | asso\nValidation of\nDocuments Nee\nDLSPO HoBos .\nYes | esso i\nRequest for fee Is fund available No Sa &\nSyap Moon SIGS DPOSIO Gorr 7] ‘ ‘ E =\nYes | e)50 3 —\nPay fee | |\nSep BDoxy\nGet Receipt Admission confirm\n68659 aroesy ; WSF veto)\nIf a student submits all the valid documents, then the Possible reason would be for not getting\nadmission is\nSOEDS Seren oo) SeOyh, Hg SISsw OSTEHs AS srtsoo\n28 Dars6\nSey BO\na i ee ee ee\naaa = TO\nGET ITON\np 179. Study the following information carefully and answer the question given bel\non given below.\n(i) A*B means A is nephew of B\n(ii) A @ B means A is mother of B\n(iii) A & B means A is grandfather of B\n(iv) A$B means A is husband of B\n(v) A #B means A is father of B\nWhich one of the followi wes\nmember ? owing relations is true from the expression P & Q$R@S* T#U,if Uisa male\nGob Sirerorgy erl(igrr expobsiSo Eh, Gob Gee seirgrsaasgod.\n(i) A* Boog Bink cies A\n(i) A @Bood Bank 4 A\n(iii) A & Boot BGn%, es A\n(iv) A$ Beod B aint; J6 A\n(vy) A#B 08 Bint, soi A\nU ad toi Sa%gBd Bod Somoyrod® P&QSRES*T# U 0S SdrSo aye O8 Sasser SxS QOS.\nTHR (2) U*Q (3) R@U (4) SSU",
+  "options": [
+    "His required branch is not available (2) He has one document invalid",
+    "No funds available for fee (4) Forget to take the receipt for fee payment",
+    "S888 SSH rod Fe",
+    "©0828 ax SOGDS Slo Seo",
+    "9 BQoserO8 SOS xarocsso Bm (4) Se BOON WHeio Brocco o9 ater A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "99c5cac692517454ec15e0e286060a1c"
+}

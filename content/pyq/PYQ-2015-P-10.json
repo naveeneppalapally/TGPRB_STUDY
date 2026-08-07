@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-P-10",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 10,
+  "question_text": "From the following pairs of words, select the one which is synonymous :\n————————————————————————————————————————",
+  "options": [
+    "Colloquial — grammatical",
+    "Excess — surplus",
+    "Fair — strong",
+    "Alert — inactive"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bfb60233518a3315e7d6b874d3afaebb"
+}

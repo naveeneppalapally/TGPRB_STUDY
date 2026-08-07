@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-134",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 134,
+  "question_text": "Which of the following Diamond Mine locations is wrongly Matched\n",
+  "options": [
+    "Kolluru - Guntur District",
+    "Paritala - Krishna District",
+    "Vajrakarur - Chittoor District",
+    "Gandikota - Kadapa",
+    " - ",
+    " - ",
+    " - ",
+    " - "
+  ],
+  "is_duplicate": false,
+  "content_hash": "8cc4be04357f097dc5284c4f0807f52e"
+}

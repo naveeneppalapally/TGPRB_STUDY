@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-110",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 110,
+  "question_text": "In which language many Kanishka coins and inscriptions are available\n",
+  "options": [
+    "Prakrita language",
+    "Bactrian language",
+    "Greek language",
+    "Afghani language",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "a6a8a225362244bf3609b77a8ea69953"
+}

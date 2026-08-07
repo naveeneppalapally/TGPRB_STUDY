@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-44",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 44,
+  "question_text": "The simple interest on a sum of money P is 1\n50 of the principal amount P and the number of\nyears is 2\nP P 1\n50\n",
+  "options": [
+    "of the rate of interest per annum. The interest rate per annum is",
+    "6%",
+    "5%",
+    "4%",
+    "2%"
+  ],
+  "is_duplicate": false,
+  "content_hash": "81ec9072837d266e2430eac8eb62a467"
+}

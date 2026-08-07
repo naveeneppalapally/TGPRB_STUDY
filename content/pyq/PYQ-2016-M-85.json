@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-85",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 85,
+  "question_text": "Assertion (A)\n: Annie Besant organised the Home Rule movement against the British\nRule\nReason (R)\n: She wanted to bring all sections of the Indians into one fold\n˙xmsºΩFyµR∂©´s (A) : ˙’¡…”¡xtsv FyÃ¡©´sNRPV ™´s˘ºΩlLi[NRPLigS @¨s’¡|qsLi… x§¶‹[™±sV LRiWÃ¡V DµR∂˘™´sW¨sı ©´s≤T∂FyLRiV\nNSLRiﬂ·Li (R)\n: AÆ™sV À≥ÿLRiºdΩ∏R∂VVÃ¡LiµR∂Lji¨s IZNP[ ø≥R¡˙ªRΩLi ˙NTPLiµR∂NTP ¬ø¡[LSËÃ¡¨s ANSLiOTPQLi¿¡Liµj∂\n————————————————————————————————————————",
+  "options": [
+    "Both (A) and (R) are correct and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are correct but (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is true",
+    "(A) ™´sVLji∏R∂VV (R) ¨s«¡Li ™´sVLji∏R∂VV (A) NTP (R) xqsLj \\π∏∂V©´s ≠s™´s-LRi·",
+    "(A) ™´sVLj ∏R∂VV (R) ¨s«¡Li, NS¨s (A) NTP (R) xqsLji-\\π∏∂V©´s ≠s™´s-LRi· NSµR∂V",
+    "(A) ¨s«¡Li NS¨s (R) ªRΩxmsˆV",
+    "(A) ªRΩxmsˆV NS¨s (R) ¨s«¡Li"
+  ],
+  "is_duplicate": false,
+  "content_hash": "97d64dbe66bd6412295fb2ae683049ec"
+}

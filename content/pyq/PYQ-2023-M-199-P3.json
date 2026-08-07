@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2023-M-199-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 199,
+  "question_text": "A,B,C, D, Eare five students. P, Q,R, S, T are five authors, each of them wrote exactly one book\non the subjects Mathematics, Physics, Chemistry, Botany and Zoology need not be in the same\norder. Each student owns only one book. R is the author of Chemistry which is not owned by B or\nE. A owns Mathematics book. B owns the book written by T but not Physics. D owns Zoology book\nwritten by P. Physics book is not written by S. then Physics book is\nA,B,C, D, Een mtosvo& Sorgen, P,Q, R, S, Ten athivo8 sifomsen. Sd GB avr NBSEHo,\nPBSEKHo, SrabsaKo, HLT Ho HOaio aoeargjo Od HoyowoD (VS KS0d* SSS) ASW Se ad\naS Disa) Shor’. HB darsQ SSo0 ad a8 H¥sQ) Sosorr KOA soert. R SarohsayGo Beans; S\nDH¥o BScr Eo oso sth. KBsar[so Hi8o A odo, TS SHoswAS HS¥o B Modo; sh FOST Ho\nst. PS SDosaaS zobeho Hi¥o D odo. PBST Ho HASrN S SHosS%. wons POST Ho OxKo",
+  "options": [
+    "Written by S and owned by C (2) | Written by Q and owned by C",
+    "| Written by P and owned by E (4) Written by Q and owned by E",
+    "S83 Sd0sH808 SBaiw C Bodo (2) Q8 Sdo%a808 Baio C Rosso",
+    "PS SdosmBo® sak» E soso (4) Q8 SdXosHBo@ LBaiw E R0K0"
+  ],
+  "is_duplicate": false,
+  "content_hash": "df663ba95af1a1aff2fe608a8c4f3e34"
+}

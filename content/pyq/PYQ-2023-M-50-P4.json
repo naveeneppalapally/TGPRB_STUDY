@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2023-M-50-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 50,
+  "question_text": "India’s Unified Payments Interface (UPI) payment system has been linked with\ncountry's ‘Pay Now’ system in February, 2023.",
+  "options": [
+    "United States of America (USA)",
+    "United Arab Emirates (UAE)",
+    "Singapore",
+    "Canada ;"
+  ],
+  "is_duplicate": false,
+  "content_hash": "f8fb11b67de1dae5b2f143c66bb028aa"
+}

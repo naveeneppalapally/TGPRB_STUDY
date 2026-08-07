@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-34",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 34,
+  "question_text": "The ages of  A and B are in the ratio 3:5. Ten years later, the ratio of their ages will be 31:45.\nTheir present ages are (in years)\n31:45 ",
+  "options": [
+    "B 3:5 ",
+    "21, 35",
+    "24, 40",
+    "18, 30",
+    "27, 45"
+  ],
+  "is_duplicate": false,
+  "content_hash": "d0b4cb05f9d043e65ebe1fe0338024b6"
+}

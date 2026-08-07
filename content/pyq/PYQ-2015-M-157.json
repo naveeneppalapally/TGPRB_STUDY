@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-157",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 157,
+  "question_text": "Match the following:\nList - I\nList - II\n(a)\nAutotrophs\n(i)\nTransfer of energy from one level to\nanother\n(b)\nHetrotrophs\n(ii)\nHierarchical arrangement of organisms\n(c)\nTropic structure\n(iii) Depends on other organisms for their\nfood\n(d)\nFood chain\n(iv) Prepare the food themselves\n\nI\nII\n(a)\n\n(i)\n\n(b) \n(ii) \n(c) \n(iii) \n(d) \n(iv) \nThe correct answer is\n\n(a)\n(b)\n(c)\n(d)\niii\nii\ni\niv\ni\nii\nii\niii\niv\niii\ni\niv",
+  "options": [
+    "iv",
+    "iii",
+    "i",
+    "ii"
+  ],
+  "is_duplicate": false,
+  "content_hash": "98f98c21dc0b9d4f9ade5e8d032b71ea"
+}

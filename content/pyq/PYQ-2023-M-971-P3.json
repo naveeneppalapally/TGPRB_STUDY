@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-971-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 971,
+  "question_text": "25 (3) 222.75 (4)\ni 42 hours and another wall clock loses 2 minutes in 24 hours. Both\nhen these two clocks show",
+  "options": [
+    "225 (2)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "fcc8b9a7c7a29e602874554cbbdd6e11"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-136",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 136,
+  "question_text": "Match the following :\n(a)\nSivadevayya\n(i)\nPratapacharitramu\n(b)\nEkamranatha\n(ii)\nNirostya Ramayanam\n(c)\nManchana\n(iii) Purushartasaram\n(d)\nShakalya malla\n(iv) Keyurabahu Charitra\n\n(a)\n\n(i)\n\n(b) \n(ii) \n(c) \n(iii) \n(d) \n(iv) \nThe correct answer is\n",
+  "options": [
+    "a-ii, b-iii, c-i, d-iv",
+    "a-iv, b-ii, c-iii, d-i",
+    "a-iii, b-i, c-iv, d-ii",
+    "a-iii, b-ii, c-i, d-iv"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a002ce943123e40917f3cc44711065a5"
+}

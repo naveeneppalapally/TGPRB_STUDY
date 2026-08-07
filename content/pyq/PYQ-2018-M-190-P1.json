@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-190-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 190,
+  "question_text": "[s A, a sister of B?\nIl) Ais father of two children P and Q\nBo Astéo vQdom?\nI) PQes ad& 2ooso A doe",
+  "options": [
+    "Bisasister ofA",
+    "Ags Beso"
+  ],
+  "is_duplicate": false,
+  "content_hash": "18050df302a751638f91439127737f72"
+}

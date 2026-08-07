@@ -1,0 +1,20 @@
+{
+  "id": "PYQ-2023-M-177",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2023_Mains.txt",
+  "exam": "Constable",
+  "year": 2023,
+  "stage": "Mains",
+  "question_number": 177,
+  "question_text": "Aword series is given with a missing word. Choose the correct opti ‘ ;\nBag, Book, Bench, Pencil, ___- ,",
+  "options": [
+    "rng cod C0 0 50 G8 BSQHASA, S89 Sedo iB soca hes areas",
+    "Class (2) Eraser (3) Teacher (4) Student"
+  ],
+  "is_duplicate": false,
+  "content_hash": "d6affe523ee957a550f213cf095de0eb"
+}

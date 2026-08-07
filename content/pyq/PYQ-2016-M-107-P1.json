@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-107-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 107,
+  "question_text": "25 : 125 : : 49 : ______\n________________________________________________________________________",
+  "options": [
+    "206",
+    "180",
+    "216",
+    "343"
+  ],
+  "is_duplicate": false,
+  "content_hash": "0115e912cd59981ee4cba20b32443c44"
+}

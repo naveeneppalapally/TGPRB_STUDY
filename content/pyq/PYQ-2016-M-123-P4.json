@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-123-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 123,
+  "question_text": "Assertion (A) : There is no conclusive proof of the temples are public places of worship\nin the Indus civilisation.\nReason (R) :\nTo the Indus civilisation people religion was perhaps more a personal and\nprivate matter than a public affair.\nThe correct answer is :\nÁ|ü‹bÕ<äq (A) : dæ+<Ûä÷ Hê>∑]ø£‘· Hê{Ï eT‘· $XÊ«düeTT\\qT Á|ü‹_+_+#˚ <˚yê\\j·TeTT\\T ø±ì\nÁ|ü»\\+‘ê ø£*dæ Äsê<Ûäq #˚ùd ÁbÕ+‘·eTT\\T ø±ì \\uÛÑ´+ ø±˝Ò<äT\nø±s¡D+ (R) :\ndæ+<Ûä÷ Hê>∑]ø£‘· Á|ü»\\≈£î eT‘·+ e´øÏÔ>∑‘·+ ø±ì kÕeT÷Væ≤ø£ $XÊ«dü+ ø±q≥T¢+~\ndü¬s’q düe÷<Ûëq+ :\nP12\n41-A\nGS-1\nBooklet Code A",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is true",
+    "(A) eT]j·TT (R) ì»+ (R) (A) ≈£î dü] nsTTq $es¡D",
+    "(A) eT]j·TT (R) ¬s+&É÷ ì»+ ø±ì, (R) (A) ≈£î dü¬s’q $es¡D ø±<äT",
+    "(A) ì»+ ø±ì (R) ‘·|ü",
+    "(A) ‘·|ü ø±ì (R) ì»+"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-123-P2",
+  "content_hash": "4f6e42ea5df3bf803a50422df8c09309"
+}

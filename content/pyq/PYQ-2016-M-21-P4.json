@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-21-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 21,
+  "question_text": "at 40 km/h and 16 minutes late when it travels at 30 km/h. The distance between the stations\nin km is\n¬s+&ÉT ùdºwüHé\\ eT<Ûä´ q&ç#˚ ˇø£ ¬s’\\T 40 km/h y˚>∑+‘√ Á|üj·÷DÏdüTÔ+&É>± n~ #˚sê*‡q Á|ü<˚XÊìøÏ\n10 ì$TcÕ\\T Ä\\dü´+>± #˚]q~. n<˚$<Ûä+>± 30 km/h y˚>∑+‘√ Á|üj·÷DÏdüTÔ+&É>± 16 ì$TcÕ\\T\nÄ\\dü´+>± #˚]q~. ¬s+&ÉT ùdºwüHé\\T eT<Ûä´ <ä÷s¡+ øÏ.MT.\\˝À\n________________________________________________________________________",
+  "options": [
+    "train running between two stations arrives its destination 10 minutes late when it travels",
+    "24",
+    "12",
+    "10",
+    "20"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-21-P2",
+  "content_hash": "bc024914eeddc580b4b09150c8f90d44"
+}

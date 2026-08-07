@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-30",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 30,
+  "question_text": "When two persons are quarrelling with each other, you will _________\n",
+  "options": [
+    "Run away from there",
+    "Join one side",
+    "Pacify two persons",
+    "Call police",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "3ca580b3f7c7588608579a96e2cbb781"
+}

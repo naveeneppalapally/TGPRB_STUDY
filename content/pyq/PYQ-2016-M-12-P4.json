@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-12-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 12,
+  "question_text": "In which one of the following, sound travels fastest?\ná ÁøÏ+~ yê{Ï˝À <˚ì qT+∫ <Ûä«ì Ä‹ ‘·«s¡>± Á|üj·÷DÏ+#·TqT\n________________________________________________________________________",
+  "options": [
+    "Solid",
+    "Liquid",
+    "Gas",
+    "Vacuum",
+    "|òüTq|ü<ës¡∆+",
+    "Á<äe|ü<ës¡∆+",
+    "yêj·TTe⁄",
+    "X¯Sq´eTT"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-12-P2",
+  "content_hash": "272ec8fd5e59d595ff3a0d57f494c358"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-40",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 40,
+  "question_text": "The average of four consecutive numbers A, B, C, D is 55.5. Then, the product BC =\nA, B, C, D 55.5. BC =",
+  "options": [
+    "2580",
+    "3060",
+    "3080",
+    "3660"
+  ],
+  "is_duplicate": false,
+  "content_hash": "17cf1384f41c4c787a99618ed6f644e9"
+}

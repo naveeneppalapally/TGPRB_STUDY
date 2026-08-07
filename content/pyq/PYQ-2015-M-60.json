@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-60",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 60,
+  "question_text": "The value of Planck’s constant in SI units is\nSI Planck’s constant",
+  "options": [
+    "6.62 × 10–34 Js",
+    "6 × 1023 Js",
+    "10 × 106 M–1",
+    "8.314 × 10–7 J"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3b0e3e2820ee184ec767fccad6ad85aa"
+}

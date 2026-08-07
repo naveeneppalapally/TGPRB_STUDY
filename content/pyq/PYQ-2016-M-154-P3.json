@@ -1,0 +1,20 @@
+{
+  "id": "PYQ-2016-M-154-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 154,
+  "question_text": "Praveen Kumar has passed BA with 68% marks and PG Diploma in Computer Applications\nwith 70% marks. He has secured 70% marks in Computer Skill Test. His date of birth is",
+  "options": [],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-154-P1",
+  "content_hash": "a908890e40f785a0513cbad903e2b3ad"
+}

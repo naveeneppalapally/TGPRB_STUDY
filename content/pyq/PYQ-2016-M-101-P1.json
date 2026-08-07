@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-101-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 101,
+  "question_text": "The missing term in the sequence 1, 3, 3, 6, 7, 9, __, 12, 21 is\nnqTÁø£eT+ 1, 3, 3, 6, 7, 9, __, 12, 21 ˝À ˝À|æ+∫q |ü<ä+\n________________________________________________________________________",
+  "options": [
+    "10",
+    "11",
+    "12",
+    "13"
+  ],
+  "is_duplicate": false,
+  "content_hash": "0f662b1787875b69a0387f657c27d16f"
+}

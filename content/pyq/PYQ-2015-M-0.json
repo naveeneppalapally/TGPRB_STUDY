@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-0",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 0,
+  "question_text": "3, 8, 15, 24, ______",
+  "options": [
+    "36",
+    "35",
+    "34",
+    "33"
+  ],
+  "is_duplicate": false,
+  "content_hash": "12c6f2ed28a0244287567f5b1ede1e88"
+}

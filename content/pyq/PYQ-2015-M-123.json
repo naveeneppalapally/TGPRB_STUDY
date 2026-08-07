@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-123",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 123,
+  "question_text": "At which place in Telangana large number of Roman coins were found.\n",
+  "options": [
+    "Keesara",
+    "Chaitanyapuri",
+    "Gutiparthi",
+    "Saleshwaram",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "ec61c5a7f9c04cd2a34a372063575b69"
+}

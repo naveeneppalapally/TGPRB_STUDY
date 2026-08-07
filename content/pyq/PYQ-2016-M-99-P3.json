@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-99-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 99,
+  "question_text": "The height of a conical tent is 14 feet and the radius of its base is 6 feet. If  12 persons\nsleep in this tent, the average cubic feet of air available to each person (in cubic feet) is\nX¯+≈£îe⁄ Äø±s¡+˝À ñqï ˇø£ >∑T&Üs¡|ü⁄ m‘·TÔ 14 n&ÉT>∑T\\T eT]j·TT <ëì uÛÑ÷yê´kÕs¡∆+ 6 n&ÉT>∑T\\T.\nÄ >∑T&Üs¡+˝À 12 eT+~ e´≈£îÔ\\T ìÁ<äb˛‘·T+fÒ, ˇø=ÿø£ÿ]øÏ n+<˚ dü>∑≥T >±* |òüTq|ü]e÷D+\n(|òüTq n&ÉT>∑T\\˝À)\n________________________________________________________________________",
+  "options": [
+    "30",
+    "33",
+    "36",
+    "44"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-99-P1",
+  "content_hash": "5329c50c1f48537b9e77ae13793806cb"
+}

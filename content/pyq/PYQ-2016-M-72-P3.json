@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-72-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 72,
+  "question_text": "There are five men and four ladies to dine at a round table.  The number of ways they can\nseat themselves so that no two ladies are together is\nnsTT<äT>∑Ts¡T |ü⁄s¡Twüß\\T eT]j·TT q\\T>∑Ts¡T Åd”Ô\\T ˇø£ >∑T+Á&Éì ã\\¢ #·T≥÷º uÛÀ»HêìøÏ ≈£Ls√Ãyê*.\n@ Çs¡Te⁄s¡T Åd”Ô\\T ø£*dæ ≈£Ls√Ã≈£î+&Ü yês¡T ≈£Ls√Ã>∑*π> |ü<ä∆‘·T\\ dü+K´\nP11\n16-A\nP-1\nBooklet Code A",
+  "options": [
+    "3280",
+    "3180",
+    "3080",
+    "2880"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-72-P1",
+  "content_hash": "3ccfd8af53735636ddec9d56068fd7b7"
+}

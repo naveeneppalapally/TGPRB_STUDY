@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2018-M-15-P2",
+  "type": "pyq",
+  "exam_section": "Telugu",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P2_Telugu.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P2",
+  "part_name": "Telugu",
+  "question_number": 15,
+  "question_text": "Which of the following is an ungrammatical sentence 7\nproject to the company.",
+  "options": [
+    "Have they not been practising yoga since their childhood ?",
+    "Thagigm bes beesiiocking (afd meticulosslaiamal: susthbepmipopbeniticd the",
+    "Hasn't he repaired the vehicle yet 7",
+    "If were you, I wouldn't write this examination."
+  ],
+  "is_duplicate": false,
+  "content_hash": "ddc6e048b2a77228ad6ec81a162cb59a"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-9-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 9,
+  "question_text": "The L.C.M. of two numbers is 495 and their HCF is 5.  If the sum of the two numbers is\n100 then their difference is\n¬s+&ÉT dü+K´\\ ø£.kÕ.>∑T 495 eT]j·TT yê{Ï >∑.kÕ.uÛ≤ 5. Ä ¬s+&ÉT dü+K´\\ yÓTT‘·Ô+ 100 nsTT‘˚,\nyê{Ï uÛÒ<ä+\n________________________________________________________________________",
+  "options": [
+    "10",
+    "46",
+    "70",
+    "90"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-9-P1",
+  "content_hash": "b2d3c1f04e0610e6a8d5e1b820e29def"
+}

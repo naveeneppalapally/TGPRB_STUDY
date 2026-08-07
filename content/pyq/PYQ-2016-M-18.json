@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-18",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 18,
+  "question_text": "The author names three different ways in which a man may react to sudden danger. What\nare they ?\npossessed of the necessary courage, and face the danger.\n————————————————————————————————————————",
+  "options": [
+    "He may be paralysed with fear, seized with panic or act like an inferior animal.",
+    "He may be paralysed with fear, run away or fight.",
+    "He may flee in panic, or fight back or stand still.",
+    "He may be paralysed with fear or seized with panic, or as if by miracle become"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-18",
+  "content_hash": "994bca95fb88a94ad8def89ec97b6c3a"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-108-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 108,
+  "question_text": "Beetroot, Brinjal, Carrot, Potato ;\n|S, Sosros, S985, aomscoon",
+  "options": [
+    "Potato (2) Carrot (3) Brinjal (4) Beetroot",
+    "worddoos (2): -srgoe 6) Sosa (4) Descresy"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bee450af6fa0dee6296e9c1232d4891f"
+}

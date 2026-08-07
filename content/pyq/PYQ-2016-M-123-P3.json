@@ -1,0 +1,32 @@
+{
+  "id": "PYQ-2016-M-123-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 123,
+  "question_text": "Examine the following relationships among members of a family of six persons - A, B, C,\nD, E and F\n(i)\nThe number of males equals to that of the females\n(ii)\n(iii) D is the mother of two, one boy and one girl\n(iv)\n(v)\nThere is one married couple in the family at present\nAn inference that can be drawn from the above information is\nÄs¡T>∑Ts¡T e´≈£îÔ\\T A, B, C, D, E, F \\T >∑\\ ˇø£ ≈£î≥T+ã düuÛÑT´˝À¢ ÁøÏ+~ dü+ã+<Ûë\\THêïsTT.\n(i)\n≈£î≥T+ã+˝À Ä&Éyê] dü+K´ eT>∑yê] dü+K´≈£î düe÷q+\n(ii)\nA, E \\T F ≈£î ≈£îe÷s¡T\\T\n(iii) ˇø£ u≤\\T&ÉT, ˇø£ u≤*ø£\\ Ç<ä›]ø° ‘·*¢ D\n(iv)\n(v)\nÁ|üdüTÔ‘êìøÏ ≈£î≥T+ã+˝À ˇø£ yÓ’yêVæ≤ø£ »+≥ ñ+~\nô|’ düe÷#ês¡+ qT+∫ sêã≥º>∑\\ ˇø£ ìsê∆s¡D\nP11\n25-A\nP-1\nBooklet Code A",
+  "options": [
+    "and E are sons of  F",
+    "is the son of A",
+    "A, B and C are all females",
+    "A is the husband of D",
+    "D is the grand daughter of  F",
+    "E and F are children of  D",
+    "øÏ B ≈£îe÷s¡T&ÉT",
+    "A, B, C \\T n+<äs¡÷ Ä&Éyêπs",
+    "D øÏ A uÛÑs¡Ô",
+    "F øÏ D eTqTeTsê\\T",
+    "E, F \\T D dü+‘êq+"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-123-P1",
+  "content_hash": "867890e8ae6351fdd6c49151e61d76a1"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-183-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 183,
+  "question_text": "If xyz represents a number written in the decimal system, then the suitable value of x in the\nequation 5x2+2x5 = 887 is\n<äXÊ+X¯e÷q+˝À ˇø£ dü+K´ì xyz #·÷|æ‘˚, düMTø£s¡D+ 5x2+2x5 = 887 ˝À dü]b˛j˚T x $\\Te\n________________________________________________________________________",
+  "options": [
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-183-P1",
+  "content_hash": "03966c752dca15a68ec1534d7e52c732"
+}

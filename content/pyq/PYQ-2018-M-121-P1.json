@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-121-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 121,
+  "question_text": "Number of persons who read both newspapers A and B is\nro: S@Seo A Sobok» B a9 doGosa HASrH Doms",
+  "options": [
+    "45 (2) 22 (3) 32 (4) 52"
+  ],
+  "is_duplicate": false,
+  "content_hash": "000a3083ae45b0960baad6a82c35316f"
+}

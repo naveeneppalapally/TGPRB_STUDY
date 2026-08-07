@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-56-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 56,
+  "question_text": "Four persons can reep 12 acres in 10 days by working for 9 hours a day.  The number of\nhours in a day that five persons have to work in order to reap 16 acres in 8 days is\nq\\T>∑Ts¡T e´≈£îÔ\\T 12 mø£sê\\ |ü+≥qT s√E≈£î 9 >∑+≥\\ #=|üq |üì#˚dæ 10 s√E\\˝À ø√j·T>∑\\s¡T.\n◊<äT>∑Ts¡T e´≈£îÔ\\T 16 mø£sê\\ |ü+≥qT 8 s√E\\˝À ø√j·÷\\+fÒ s√E≈£î |üì#˚j·÷*‡q >∑+≥\\ dü+K´\n________________________________________________________________________",
+  "options": [
+    "12",
+    "10",
+    "9",
+    "8"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-56-P1",
+  "content_hash": "2f973260e52d126369f7b1a9fdf06a13"
+}

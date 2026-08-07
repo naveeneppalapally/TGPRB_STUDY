@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-133-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 133,
+  "question_text": "If P is the brother of Q, Q is the daughter of R and S is the father of P, then how is R\nrelated to S?\nQs Paeddh, RE Ld79 Q, XBoin P§ Soa S$ won waydo S8& RAMDsHRw?\n—() #8 (2) a@&doeo\n@) ards (4) #dmrs",
+  "options": [
+    "Husband (2) Brother",
+    "Wife (4) Grand father"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bb85ebd046f8780ba810fb2f422ff818"
+}

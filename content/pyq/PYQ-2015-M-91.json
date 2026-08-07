@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-91",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 91,
+  "question_text": "15th August, 2016 falls on Monday, what is the day on 15th August, 2017?\n152016 152017",
+  "options": [
+    "Monday",
+    "Wednesday",
+    "Sunday",
+    "Tuesday",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "da3e256c9f621c38abcd49bd5caa9ea7"
+}

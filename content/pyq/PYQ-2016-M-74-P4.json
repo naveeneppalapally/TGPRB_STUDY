@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-74-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 74,
+  "question_text": "Read the following statements\na)\nHimalayas are young fold mountains.\nb)\nThey are uplifted from Tethys sea.\nc)\nThe East-West extent of Himalayas is about 2500 kms.\ná ÁøÏ+~ $es¡D #·<äe+&ç\na)\nVæ≤e÷\\j·÷\\T ‘·s¡TD eTT&É‘· |üs¡«‘ê\\T.\nb)\nn$ f…~∏dt düeTTÁ<ä+ qT+&ç ô|’øÏ ˝Ò|üã&Ü¶sTT.\nc)\nVæ≤e÷\\j·÷\\T ‘·÷s¡TŒ`|ü•ÃeT+>± <ë<ë|ü⁄ 2500 øÏ.MT\\ bı&Ée⁄‘√ $düÔ]+∫ ñHêïsTT.\nWhich of the above statements is/are correct\nM{Ï˝À @~ dü]jÓÆTq $es¡D\nP12\n25-A\nGS-1\nBooklet Code A",
+  "options": [
+    "a & c",
+    "b & c",
+    "a & b",
+    "a, b & c"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-74-P2",
+  "content_hash": "81b59dbfa0b9c9012ba0eec5bf931b8c"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-96",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 96,
+  "question_text": "Observe the sequence given and find out how many letters are immediately followed by a\nnumber and preceded by a symbol?\n\n\nM * K 5.L * N 3 X ? P 4 * L M % N 4\nP31\n19-A\nX1\nBooklet Code A",
+  "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3d6c6433b6b9fb61190cddec2d7b8f89"
+}

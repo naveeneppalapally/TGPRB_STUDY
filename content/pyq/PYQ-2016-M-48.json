@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2016-M-48",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 48,
+  "question_text": "Assertion (A): An electrical motor converts mechanical energy into electrical energy.\nReason (R)\n: An electrical motor works on the principle of mutual induction.\n˙xmsºΩFyµR∂©´s (A)\n: ≠sµR∂V˘ª`Ω Æ™sW»¡LRiV ∏R∂WLi˙ºΩNRP aRPNTPÚ¨s ≠sµR∂V˘ª`Ω aRPNTPÚgS ™´sWLRiVxqsVÚLiµj∂.\nNSLRiﬂ·™´sVV (R)\n: @©Ø[˘©´s˘ ˙}msLRiNRPªRΩ*™´sVV xqsW˙ªRΩLi\\|ms ≠sµR∂V˘ª`Ω Æ™sW…ÿLRiV xms¨s¬ø¡[xq VÚLiµj∂.\n————————————————————————————————————————\n12 X",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "Both (A) and (R) are false",
+    "(A) is true but (R) is false",
+    "(A) ™´sVLji∏R∂VV (R) lLiLi≤R∂W ¨s«¡™´sVV ™´sVLji∏R∂VV (A) NRPV (R) xqsLji\\π∏∂V©´s ≠s™´s-LRi·",
+    "(A) ™´sVLji∏R∂VV (R) lLiLi≤R∂W ¨s«¡™´sVV NS¨s (A) NRPV (R) xqsLji-\\π∏∂V©´s ≠s™´s-LRi· NSµR∂V",
+    "(A) ™´sVLji∏R∂VV (R) Ã¡V lLiLi≤R∂V ªRΩxmsˆV",
+    "(A) ¨s«¡™´sVV NS¨s (R) ªRΩxmsˆV",
+    "CP 2015 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e9b40a6921d3eb5817da836297924858"
+}

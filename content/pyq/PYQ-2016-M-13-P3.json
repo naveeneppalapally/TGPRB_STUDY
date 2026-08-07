@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-13-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 13,
+  "question_text": "4 dü+e‘·‡sê\\T. n|ü⁄&ÉT Ä ‘·s¡>∑‹˝Àì u≤*ø£\\ dü+K´\n________________________________________________________________________",
+  "options": [
+    "10",
+    "11",
+    "13",
+    "20"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-13-P1",
+  "content_hash": "ffa89873c56b18ed5807a45f4c002a71"
+}

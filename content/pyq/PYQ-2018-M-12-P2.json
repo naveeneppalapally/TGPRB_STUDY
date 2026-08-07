@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-12-P2",
+  "type": "pyq",
+  "exam_section": "Telugu",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P2_Telugu.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P2",
+  "part_name": "Telugu",
+  "question_number": 12,
+  "question_text": "In the following question, four pairs of words are given. Find the word pair which have\ndissimilar meaning from the options given below :",
+  "options": [
+    "_ retrospective/prospective (2) entice/lure",
+    "abhor/detest (4)  introspection/brooding"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3d65eb38adee8720d08334ae1e5c8838"
+}

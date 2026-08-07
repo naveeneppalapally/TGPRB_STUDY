@@ -1,0 +1,33 @@
+{
+  "id": "PYQ-2016-M-88-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 88,
+  "question_text": "The time difference between Indian standard time and Greenwich mean time is\nuÛ≤s¡‘· ÁbÕe÷DÏø£ ø±˝≤ìøÏ Á^Hé$#Y MTHé f…Æ+≈£î >∑\\ e´‘ê´dü+\nP12\n28-A\nGS-1\nBooklet Code A",
+  "options": [
+    "5 hours",
+    "5 1",
+    "hours",
+    "6 hours",
+    "6 1",
+    "hours",
+    "5 >∑+≥\\T",
+    "5 1",
+    ">∑+≥\\T",
+    "6 >∑+≥\\T",
+    "6 1",
+    ">∑+≥\\T"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-88-P2",
+  "content_hash": "b99f588825da0d2efe65a05a4487d525"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-192-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 192,
+  "question_text": "The missing terms in the following sequence in the order they appear are\n& S08 G46 Sods Soren wd Say Sdovest\nS. 1,9, W, 2,3, E,0, 5, __,",
+  "options": [
+    "Ns",
+    "N,7 (3) N,6 (4) N53"
+  ],
+  "is_duplicate": false,
+  "content_hash": "6b29d1f725e8707f26bd4efc4b7ff826"
+}

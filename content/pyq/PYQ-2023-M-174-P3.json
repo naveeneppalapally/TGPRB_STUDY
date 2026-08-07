@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2023-M-174-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 174,
+  "question_text": "Among A, B, C one is a doctor, one is a teacher and one is an engineer. D, E, F are their wives (need\nnot be in the same order). E marries an engineer. Husband of F is not a doctor. B is a teacher. D\nmarried C who is not an engineer. then\nA, B, Co® ath Beith, att admgyciets Oat ast ao@dS. D, E, Fen 0 arte (od Semone!\nSASSO Sto). EaoslSx DarivsrBos. F Bok, JG Stogt sth. Bas aoydine. Cd D darspirGob\nSA wS% g02D5 sr. wand",
+  "options": [
+    "Husband of F is a doctor (2) Cis the husband of E",
+    "Eis the wife of B (4) Cis a Doctor",
+    "FG@inky 8% Beioge (2) EG@as gC",
+    "Bank ots E (4) CBeeseo"
+  ],
+  "is_duplicate": false,
+  "content_hash": "d4636af1c97e9acb53cb1958952d1fce"
+}

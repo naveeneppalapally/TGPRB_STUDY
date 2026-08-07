@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-137",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 137,
+  "question_text": "Arrange the following in chronological order\n(a)\nSikander Jah\n(b)\nMir Mahabub Ali Khan\n(c)\nNasiruddaula\n(d)\nNizam Ali\n\n(a)\n\n(b) \n(c) \n(d) ",
+  "options": [
+    "d , a, c, b",
+    "a, b, c, d",
+    "b, c, d, a",
+    "a, d, c, b"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bf660122094d41d8b20387af27ee6f97"
+}

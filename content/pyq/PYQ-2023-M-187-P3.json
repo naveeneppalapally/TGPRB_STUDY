@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-187-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 187,
+  "question_text": "If THERAPY is coded as GSVIZKB then the code of the word BIOGRAPHY is\nTHERAPY 9 GSVIZKB re 86 38, BIOGRAPHY ams §°6",
+  "options": [
+    "YRMTIZKSB (2) YRLTJZKSB (3) YRLSIZKTB (4). YRLTIZKSB"
+  ],
+  "is_duplicate": false,
+  "content_hash": "05a5d41e00b8811fe3ea9bf01cf90ba0"
+}

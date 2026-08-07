@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-15-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 15,
+  "question_text": "Two equal sums of money were invested, one at 4% and the other at 4 1\n7 years, if the simple interest received from the later exceeds that received from the former\nby Rs. 94.50, then each sum was (in rupees)\nˇø£ <ëìøÏ 4% #=|üq, eTs=ø£<ëìøÏ 4 1\n7 dü+ˆˆ\\ ‘·s¡Tyê‘· ¬s+&Ée yÓTT‘·Ô+ô|’q e∫Ãq kÕ<Ûës¡D e&û¶, yÓTT<ä{Ï <ëìô|’ e∫Ãq <ëìø£Hêï s¡÷.",
+  "options": [
+    "%.  At the end of",
+    "% #=|üq ¬s+&ÉT düe÷q yÓTT‘êÔ\\qT ô|≥Tºã&ç ô|{≤ºs¡T."
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-15-P1",
+  "content_hash": "123835634c040d8dcb357bf762a5dc98"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-10",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2023_Mains.txt",
+  "exam": "Constable",
+  "year": 2023,
+  "stage": "Mains",
+  "question_number": 10,
+  "question_text": "—_ the correct form of the following sentence to be converted to direct speech.\nThey a sini they wont Start the admission process the following day.”",
+  "options": [
+    "“We will start the admission process tomorrow,” they told us.",
+    "We told them, “They will start the admission process tomorrow.”",
+    "“We would start the admission process the next day,” they told us.",
+    "We told them, “We had to start the admission process tomorrow.”"
+  ],
+  "is_duplicate": false,
+  "content_hash": "663515b4dc8e0b934c431f92c6e79c56"
+}

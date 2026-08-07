@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-51-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 51,
+  "question_text": "Ifthe number 19585*2, is divisible by 3, then the smallest digit in place of * is\nSome 19585*2, 3 J arhosadad, wayd * PSsnd* God w8 OA) wos",
+  "options": [
+    "7 (2) 5 (3) 2 44) 0"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5443ccf9adfb11a92b43c4b6bfaa9019"
+}

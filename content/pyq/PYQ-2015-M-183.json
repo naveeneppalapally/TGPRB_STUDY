@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-183",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 183,
+  "question_text": "Sex ratio means (from among the following)\n\nP31\n43-A\nX1\nBooklet Code A",
+  "options": [
+    "Number of males per 1,000 females",
+    "Number of males per 100 females",
+    "Number of females per 1,000 males",
+    "Number of females per 100 males",
+    "1,000 ",
+    "100 ",
+    "1,000 ",
+    "100 "
+  ],
+  "is_duplicate": false,
+  "content_hash": "4f735d7a64004c6d04051dc396934729"
+}

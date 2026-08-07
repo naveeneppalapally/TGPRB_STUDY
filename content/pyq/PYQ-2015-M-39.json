@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-39",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 39,
+  "question_text": "Three individuals A, B, C start a company and contribute a total of Rs.P towards its running.\ncontributions of A, B and C are in the ratio 8:7:6, then P (in rupees) is\nA, B, C PB\nA 50,000 C B 50,000\nA, B, C 8:7:6 P ",
+  "options": [
+    "contributes Rs.50,000 more than B and B contributes Rs.50,000 more than C. If the",
+    "10,50,000",
+    "12,00,000",
+    "13,50,000",
+    "14,00,000"
+  ],
+  "is_duplicate": false,
+  "content_hash": "121ea2bbfc4bbfd05f5719e95004883b"
+}

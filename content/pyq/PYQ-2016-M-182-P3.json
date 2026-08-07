@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-182-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 182,
+  "question_text": "P has arrived at 3:30 pm, 40 minutes later than Q. Q was present 15 minutes before the\nscheduled time of the meeting. The meeting was scheduled at\nQ ø£qï 40 ì$TcÕ\\T Ä\\dü´+>± kÕ. 3.30 ì.\\≈£î P e#ÓÃqT. ìØí‘· düeTj·÷ì ø£+fÒ 15 ì$TcÕ\\\neTT+<˚ Q #˚s¡Tø=HÓqT. n|ü⁄&ÉT düe÷y˚X¯ düeTj·T+\n________________________________________________________________________",
+  "options": [
+    "2:55 pm",
+    "3:00 pm",
+    "3:05 pm",
+    "3:10 pm",
+    "kÕ. 2:55",
+    "kÕ. 3:00",
+    "kÕ. 3:05",
+    "kÕ. 3:10"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-182-P1",
+  "content_hash": "a58638887d16fa711e159e527b3909d1"
+}

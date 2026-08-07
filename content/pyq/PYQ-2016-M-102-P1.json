@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-102-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 102,
+  "question_text": "The term that comes next in the arrangement of letters given below is.\nÁøÏ+<ä Ç∫Ãq nø£ås¡ neT]ø£˝À ‘·sê«‘· e#˚Ã |ü<ä+\nYEB, WFD, UHG, SKI, __________ is\n________________________________________________________________________",
+  "options": [
+    "QGL",
+    "QOL",
+    "TOL",
+    "QNL"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3e0ce0e8f7e33b1e9f6b256195d3bb9e"
+}

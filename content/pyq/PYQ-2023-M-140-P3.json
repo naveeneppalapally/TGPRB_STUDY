@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-140-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 140,
+  "question_text": "Choose the pair from the alternatives that has the same relationship as the first pair mentioned\nbefore : : has.\nty 2 : § moe a) 2d\nPulp : Paper: :\n> aero Sonossnod eero® Sovoqra), SOAS adX Osro Ld DNAS IO\nDuke : Duchess (3) Stallion : Colt (4) Another : Books\ne are given below",
+  "options": [
+    "Flax: Linen (2)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "d47e7ffa947b2887664547a1586c7b84"
+}

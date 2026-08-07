@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2016-P-154",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 154,
+  "question_text": "Assertion (A) : Major Industrial regions of India have developed in the immediate hinterland\nports of Kolkata, Mumbai and Chennai.\nReason (R)\n: The ports provide access to the raw materials available in the hinterlands of\nthese ports as well as to the world markets.\n˙xmsºΩFyµR∂©´s (A)\n: À≥ÿLRiªRΩÆµ∂[aRPLiÕ‹[¨s N][ÕﬁNRPªyÚ, ™´sVVLi\\¤À¡LiVV ™´sVLji∏R∂VV ¬ø¡\\Æ©sQı J≤R∂ lLi[™´soÃ¡NRPV A©´sVNRPV¨s D©´sı\nF°xtsQNRP ˙FyLiªyÃ¡Õ‹[ FyLji˙aS≠sVNRP ˙FyLiªyÃ¡V ÀÿgS @’≥¡™´sXµÙj∂¬ø¡LiµyLiVV.\nNSLRiﬂ·™´sVV (R)\n: C J≤R∂ lLi[™´soÃ¡V ªRΩ™´sV F°xtsQNRP ˙FyLiªyÃ¡Õ‹[ Ã¡’≥¡Li¬ø¡[ ™´sVV≤T∂ xqsLRiNRPVÃ¡©´sV F~LiµR∂≤y¨sNTP\n™´sVLji∏R∂VV ˙xmsxmsLiøR¡ ™´sWlLi‰…ﬁÃ¡©´sV ¬ø¡[LRi≤y¨sNTP @©´sV™´sogS D©yıLiVV.\n————————————————————————————————————————\n43  G",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is true",
+    "(A) ™´sVLji∏R∂VV (R) Ã¡V lLiLi≤R∂V ¨s«¡Li ™´sVLji∏R∂VV (A) NTP (R) xqsLji\\π∏∂V©´s ≠s™´s-LRiﬂ·",
+    "(A) ™´sVLji∏R∂VV (R) Ã¡V lLiLi≤R∂W ¨s«¡Li NS¨s (A) NTP (R) xqsLji-\\π∏∂V©´s ≠s™´s-LRiﬂ· NSµR∂V",
+    "(A) ¨s«¡Li NS¨s (R) ªRΩxmsˆV",
+    "(A) ªRΩxmsˆV NS¨s (R) ¨s«¡Li",
+    "IS 2016 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "7988b95800c5f9743750e5f1051e3a8f"
+}

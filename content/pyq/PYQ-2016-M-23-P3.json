@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-23-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 23,
+  "question_text": "The sum of three numbers is 186.  If the ratio between the first and second is 2:3 and that\nbetween the second and third is 7:9, then the second number is\neT÷&ÉT dü+K´\\ yÓTT‘·Ô+ 186. yÓTT<ä{Ï ¬s+&ÉT dü+K´\\ eT<Ûä´ ìwüŒ‹Ô 2:3 eT]j·TT ¬s+&Ée, eT÷&Ée\ndü+K´\\ eT<Ûä´ ìwüŒ‹Ô 7:9 nsTT‘˚ ¬s+&Ée dü+K´\nP11\n7-A\nP-1\nBooklet Code A",
+  "options": [
+    "53",
+    "63",
+    "58",
+    "68"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-23-P1",
+  "content_hash": "3d6d5c0df58a60f309e2b3a9c3a51d6a"
+}

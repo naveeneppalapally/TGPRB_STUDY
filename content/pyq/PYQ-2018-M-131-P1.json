@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2018-M-131-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 131,
+  "question_text": "Among the given four options, which one when placed in the blank space of given figure\nwould complete the pattern symmetrically?\nadys Soesd ard Qo0s BSS ads Teor adssnos Baa wL8Q w Sho\nwaSor sGHsH08?\nSf",
+  "options": [
+    "(2)",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "ef5d0ec7eb88b18773c63e4cf7047565"
+}

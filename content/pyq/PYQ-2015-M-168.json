@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-168",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 168,
+  "question_text": "Read the following statements:\na)\nShanmuganathan is appointed as Governor of Meghalaya\nb)\nDraupadi Murmu is appointed as Governor of Jharkhand\nc)\nTathagata Roy is appointed as Governor of Arunachal Pradesh\nd)\nNajma Heptullah is appointed as Governor of Mizoram\n\na)\n\nb)\n\nc)\n\nd)\n\nChoose the correct statements :\n",
+  "options": [
+    "a & c",
+    "a & b",
+    "b & d",
+    "a & d"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3b3e3d0ef327a80aa64d8816a60065dd"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-195",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 195,
+  "question_text": "Match the following:\nDay\nDate\na)\nNational Science Day\ni)\nOctober, 8\nb)\nAir Force Day\nii)\nFebruary, 28\nc)\nNavy Day\niii)\nMay, 21\nd)\nAnti Terrorism day\niv)\nDecember, 4\n\n\n\na)\n\ni)\n8\nb)\n\nii)\n 28\nc)\n\niii)  21\nd)\n\niv)\n 4\nThe correct answer is\n",
+  "options": [
+    "a-iii, b-i, c-iv, d-ii",
+    "a-i, b-iii, c-iv, d-ii",
+    "a-ii, b-i, c-iv, d-iii",
+    "a-iv, b-ii, c-iii, d-i"
+  ],
+  "is_duplicate": false,
+  "content_hash": "f137fe6b8130eb09059051aee9a37d5f"
+}

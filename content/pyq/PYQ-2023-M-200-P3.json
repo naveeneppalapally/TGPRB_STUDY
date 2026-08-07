@@ -1,0 +1,28 @@
+{
+  "id": "PYQ-2023-M-200-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 200,
+  "question_text": "Assertion (A): In anon leap year 1%t January and 315t December fall on the Bind day of the\nweek.\nReason (R): __ There will be two odd days in a leap year beyond 52 weeks.\nDy Soyo (A): aS OX GoHAHCo +H SoSBKos*, adSO 15 HA BRowS 318 BA arSos'o 28 Sted\nseSes0 (R): 52 aro Sous 2 Seren at Oxy HoSHVOS® doepay,\n-o00-\npr sISQeIAP seo AMIN",
+  "options": [
+    "| both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is truc",
+    "(A) S26c5n (R) Bothy Segev Soba (A) § (R) SOgdS Dsve0",
+    "(A) S28cbm (R) Sots Seen se) (A) 8 (R) Sogns DASE sres",
+    "(A) H&sn Se (R) ees",
+    "(A) eSeipein se (R) Sess"
+  ],
+  "is_duplicate": false,
+  "content_hash": "badb30032de930c85624f6e5a8417b53"
+}

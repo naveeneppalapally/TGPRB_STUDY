@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-94",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 94,
+  "question_text": "position, from the starting point?\n68\n",
+  "options": [
+    "Girl travels 6 km and takes left, further travels 8 km. What is the straight distance to that",
+    "12 km",
+    "10 km",
+    "9 km",
+    "14 km"
+  ],
+  "is_duplicate": false,
+  "content_hash": "13c98c7d94058b125959b5a7b6dc7138"
+}

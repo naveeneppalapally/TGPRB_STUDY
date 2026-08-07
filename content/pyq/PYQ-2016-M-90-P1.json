@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-90-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 90,
+  "question_text": "The angle between the two hands of a clock when the time is 8:30 is\ndüeTj·T+ 8:30 nsTTq|ü&ÉT >∑&çj·÷s¡+˝Àì ¬s+&ÉT eTTﬁ¯ﬂ eT<Ûä´ ø√D+\n________________________________________________________________________",
+  "options": [
+    "80°",
+    "75°",
+    "60°",
+    "105°"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a99d11b73b65f70dc760bc3d7cf39a06"
+}

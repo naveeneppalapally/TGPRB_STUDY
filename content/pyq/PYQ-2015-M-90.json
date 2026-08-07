@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-90",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 90,
+  "question_text": "If 1st April of year falls on Sunday, what is the day on 15th August of the same year?\n15\n\nP31\n18-A\nX1\nBooklet Code A",
+  "options": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "61bb0c9609b02e61d41e9422a658452f"
+}

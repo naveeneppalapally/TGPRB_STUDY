@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-163-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 163,
+  "question_text": "Increasing order of exchange values of INR (I), NZD (N), EURO (E), AUD (A) with\nUSD is\nUSD & INR (1), NZD (N), EURO (E), AUD (A) © 3x68 Dende _wSiinc Bivo",
+  "options": [
+    "LNEA (2) E,LN,A @ LNAE (4) LLE,A.N"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a2300971604422b23afff46797da0039"
+}

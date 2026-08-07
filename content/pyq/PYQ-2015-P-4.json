@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-P-4",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 4,
+  "question_text": "Identify the part of the sentence which has an error in the following statements.\nChildren washed (A)/their hands (B)/after they played (C)/with a new born puppy (D).\n————————————————————————————————————————",
+  "options": [
+    "(A)",
+    "(B)",
+    "(C)",
+    "(D)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8cc3eb0508d576c7199237f4e78e63e5"
+}

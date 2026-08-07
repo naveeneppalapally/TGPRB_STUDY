@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-175",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 175,
+  "question_text": "Which of the following decades was declared by the UNO as a ‘Decade of Education for\nSustainable Development’?\n",
+  "options": [
+    "2000-10",
+    "2005-15",
+    "2010-20",
+    "2015-25"
+  ],
+  "is_duplicate": false,
+  "content_hash": "339680198f60f153eecead60cad557e4"
+}

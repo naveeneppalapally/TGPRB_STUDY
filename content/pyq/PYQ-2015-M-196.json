@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-196",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 196,
+  "question_text": "Consider the following statements\na)\nSupreme Court Constituted Social Justice Bench in the year 2015.\nb)\nThe Social Justice Bench of Supreme Court was set up by the Chief Justice of India,\nH.L. Dattu.\nc)\nThe Social Justice Bench sits every Friday to hear the cases.\n\na)\n2015 \nb)\n\nc)\n\nChoose the correct statement/s :\n :\nP31\n47-A\nX1\nBooklet Code A",
+  "options": [
+    "a & b",
+    "c & a",
+    "b & c",
+    "a"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e6301ec8f8e92a91c8ea19a065f55b1f"
+}

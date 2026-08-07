@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-46",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 46,
+  "question_text": "The amount deposited in a bank for 3 years at the rate of 10% per annum, compounded\nyearly is given in List I. In List II, compound interest is given. Match them\n10%3I \nII \nList - I\nList - II\n(a)\n20000\n(i)\n7850\n(b)\n15000\n(ii)\n3310\n(c)\n10000\n(iii) 4865\n(iv) 4965\n(v)\n6620\nCorrect match is\n",
+  "options": [
+    "a-v, b-iii, c-ii",
+    "a-i, b-iv, c-ii",
+    "a-v, b-iv, c-ii",
+    "a-i, b-iv, c-iii"
+  ],
+  "is_duplicate": false,
+  "content_hash": "99377e5397cafacc104505111cdfc564"
+}

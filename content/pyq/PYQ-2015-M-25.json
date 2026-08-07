@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-25",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 25,
+  "question_text": "Do you produce a wrong evidence to your parents regarding your performance in Exams?\n\n",
+  "options": [
+    "I do",
+    "No",
+    "Sometimes",
+    "Depending upon the situation",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "4443bc22587e1f870c4f725b5202ce94"
+}

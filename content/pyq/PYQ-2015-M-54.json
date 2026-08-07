@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-54",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 54,
+  "question_text": "\n\n\n\n\nx\nx\n25\n.\n35\n0615\n.0\n1225",
+  "options": [
+    "0.001",
+    "0.0001",
+    "0.02",
+    "0.01"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2d099599f8e1509d622477d2b19ae261"
+}

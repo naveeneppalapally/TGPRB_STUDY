@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-1-P2",
+  "type": "pyq",
+  "exam_section": "Telugu",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P2_Telugu.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P2",
+  "part_name": "Telugu",
+  "question_number": 1,
+  "question_text": "Choose the incorrectly spelt word from the following set of words :",
+  "options": [
+    "acquaintance (2) maneouvre",
+    "erroneously . (4) demurrage"
+  ],
+  "is_duplicate": false,
+  "content_hash": "98370c35cfa9188f405013d970ffa0c2"
+}

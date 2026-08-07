@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-338-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 338,
+  "question_text": "158, 639, 543, 449 \\˝À dü]b˛\\ì~\n________________________________________________________________________",
+  "options": [
+    "449",
+    "639",
+    "543",
+    "158"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3fc1b06344cce94d3e9b457138d2f8df"
+}

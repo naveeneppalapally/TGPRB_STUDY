@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-185-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 185,
+  "question_text": "Who is tallest among A, B, C?\nI) Ais taller than B.\nII) Bis shorter than C.\nA, B, C acd* wdsod SEAS ISG?\nTl Bay Awédsard.\nIl) C8ay Ba gard.",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "29ebf72b8d8cd32b6c0b51800c18f744"
+}

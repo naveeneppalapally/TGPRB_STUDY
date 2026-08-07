@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-44-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 44,
+  "question_text": "Ifxcy:z = 7:8:9, then 2.2.2 =\nz Xx\nxy:z = 7:8:9 wand, waryes Bd oe a\nyzx",
+  "options": [
+    "72:63:56 (2) 56:63:72",
+    "648: 448: 441 “A 4412448: 648"
+  ],
+  "is_duplicate": false,
+  "content_hash": "f3a7f1daa6f7e70c36027ea7d2d180c1"
+}

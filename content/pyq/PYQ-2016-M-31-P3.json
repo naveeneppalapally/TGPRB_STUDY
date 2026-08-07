@@ -1,0 +1,31 @@
+{
+  "id": "PYQ-2016-M-31-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 31,
+  "question_text": "5 th full.  Pipe A can fill the tank in 10 minutes and pipe B can empty it in\n6 minutes.  If both the pipes are open, the time taken to empty or fill the tank completely is\nˇø£ ˙ﬁ¯ﬂ ‘={Ïº 2\n5 uÛ≤>∑+ ì+&ç ñ+~. >=≥ºeTT A <ëìì 10 ì$TcÕ\\˝À ì+|ü>∑*–‘˚, >=≥ºeTT\nne{≤ìøÏ >±˙ ˝Òø£ |üP]Ô>± ì+&É&ÜìøÏ >±˙ |üfÒº düeTj·T+\n________________________________________________________________________",
+  "options": [
+    "water tank is 2",
+    "6 minutes to empty",
+    "6 minutes to fill",
+    "9 minutes to empty",
+    "9 minutes to fill",
+    "<ëìì 6 ì$TcÕ\\˝À U≤∞ #˚j·T>∑\\T>∑T‘·T+~. ¬s+&ÉT >={≤º\\÷ ‘Ó]∫ ñ+∫‘˚ Ä ‘={Ïº |üP]Ô>± U≤∞",
+    "U≤∞ ne{≤ìøÏ 6 ìˆˆ\\T",
+    "ì+&É{≤ìøÏ 6 ìˆˆ\\T",
+    "U≤∞ ne{≤ìøÏ 9 ìˆˆ\\T",
+    "ì+&É{≤ìøÏ 9 ìˆˆ\\T"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-31-P1",
+  "content_hash": "c402c095b0d10274b46c076d83a1c35b"
+}

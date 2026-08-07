@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2016-P-99",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 99,
+  "question_text": "————————————————————————————————————————",
+  "options": [
+    "3",
+    "4",
+    "5",
+    "6"
+  ],
+  "is_duplicate": false,
+  "content_hash": "21f22c0809536b569a9c17a1cbc2f514"
+}

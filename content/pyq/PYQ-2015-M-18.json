@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-18",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 18,
+  "question_text": "What were all early motor cars?",
+  "options": [
+    "A plaything or toy meant for engineers",
+    "A vehicle better than horse-driven vehicle",
+    "Noisy, clumsy, queer-looking things",
+    "Dangerous but beautiful"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8254d2c4abc3a07ae7010344a5239e58"
+}

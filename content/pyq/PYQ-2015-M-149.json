@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-149",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 149,
+  "question_text": "Arrange the following in chronological order\n(a)\nEight point formula\n(b)\nSix point formula\n(c)\nFive point formula\n(d)\nThe Presidential order\n\n(a)\n\n(b) \n(c) \n(d) \nP31\n31-A\nX1\nBooklet Code A",
+  "options": [
+    "a, c, b, d",
+    "a, b, c, d",
+    "d, b, c, a",
+    "b, a, d, c"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b53f5e79eff3bc32fd321b6254a36c5f"
+}

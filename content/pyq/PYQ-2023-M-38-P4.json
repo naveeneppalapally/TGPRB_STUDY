@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-38-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 38,
+  "question_text": "Indian Start-ups received a funding of around ___in 2022, according to PWC.",
+  "options": [
+    "$12 billion (2) $24 billion",
+    "$36 billion (4) $48 billion"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e53c09075cc90e5cff50723dd709c50e"
+}

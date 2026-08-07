@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-5042-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 5042,
+  "question_text": "5043, 5044, 5045, 5046, 5047, 5048, 5049, 5050, 505, ...\n. 050 4) 504",
+  "options": [
+    "5049 (2) a 3) 5051 (4) $048"
+  ],
+  "is_duplicate": false,
+  "content_hash": "f053de053b90464b4d5ac05a9f38e757"
+}

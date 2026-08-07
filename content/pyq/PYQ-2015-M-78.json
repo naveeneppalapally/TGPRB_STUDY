@@ -1,0 +1,18 @@
+{
+  "id": "PYQ-2015-M-78",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 78,
+  "question_text": "Find the next number in the series\n",
+  "options": [],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-M-76",
+  "content_hash": "7435dd2e4ece4d88d040aebf6cf0d987"
+}

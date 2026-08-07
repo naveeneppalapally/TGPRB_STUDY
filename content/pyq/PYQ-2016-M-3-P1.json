@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-3-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 3,
+  "question_text": "If one third of the one fourth of a number is 15, then one tenth of that number is\nˇø£ dü+K´˝Àì Hê\\T>∑e e+‘·T˝À eT÷&Ée e+‘·T 15 nsTT‘˚, Ä dü+K´˝À |ü<äe e+‘·T\n________________________________________________________________________",
+  "options": [
+    "12",
+    "16",
+    "18",
+    "22"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2c76dfd9361e767ad776f5a1abad6a33"
+}

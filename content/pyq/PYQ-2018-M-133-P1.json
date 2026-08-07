@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2018-M-133-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 133,
+  "question_text": "If P is the brother of Q, Q is the daughter of R and S is the father of P, then how is R\nrelated to S?\nQ8 Paddod, RS SoS7rd Q, SBctn P§ Soa S eons ways S& RALHs vo?\na 8\nGB) ws",
+  "options": [
+    "Husband",
+    "Wife",
+    "Brother",
+    "Grand father",
+    "Mdcodo",
+    "#éir&"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bf78d54577c6b70368009ace0ee6a6e0"
+}

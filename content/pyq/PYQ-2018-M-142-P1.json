@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-142-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 142,
+  "question_text": "The number of integers in U that are divisible by exactly any Wwo of 2,3,5 is",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "5bdab52fc6ad68d499b9cd484906350c"
+}

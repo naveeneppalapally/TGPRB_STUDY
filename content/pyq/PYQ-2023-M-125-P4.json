@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-125-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 125,
+  "question_text": "Murrah, Bhadwari and Rohtak are the breeds of :\nAvo, Bergd, Sssres§ arevoew S3 S08 a8 BoGSA :",
+  "options": [
+    "Goats (2) Sheep (3) Buffalos (4) Horses",
+    "aseo (2) Fen (3) Be (4) togren"
+  ],
+  "is_duplicate": false,
+  "content_hash": "7016bebde5bdd4019fdb1940fb6231de"
+}

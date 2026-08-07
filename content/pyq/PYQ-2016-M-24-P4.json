@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-24-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 24,
+  "question_text": "The approximate percentage of fresh water in solid and liquid states on earth\n|òüTq eT]j·TT Á<äe dæú‘·T\\˝À uÛÑ÷$T MT<ä düTe÷s¡T m+‘· XÊ‘·+ eT+∫˙s¡T (fresh water) ñ+≥T+~\nP12\n8-A\nGS-1\nBooklet Code A",
+  "options": [
+    "25%",
+    "2.5%",
+    "12.5%",
+    "9.25%"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-24-P2",
+  "content_hash": "3db46cd3619c6e343092c2ffbf1faff4"
+}

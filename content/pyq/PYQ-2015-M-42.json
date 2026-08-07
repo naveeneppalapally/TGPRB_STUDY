@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2015-M-42",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 42,
+  "question_text": "profit of 23%. The overall percentage of his profit is\n2\n23%",
+  "options": [
+    "person sold 3",
+    "rd of his articles at a profit of 35%. The rest of his articles were sold at a",
+    "35%",
+    "27%",
+    "29%",
+    "30%",
+    "31%"
+  ],
+  "is_duplicate": false,
+  "content_hash": "38a78dd914555b32e8bbd1920d5bfb8d"
+}

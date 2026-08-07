@@ -1,0 +1,565 @@
+/* =============================================================================
+   TGPRB StudyOS — design tokens & editorial layer
+   Nuxt UI v2 handles component chrome (app.config.ts). This file owns tokens,
+   base styles, editorial utilities, and a legacy compatibility layer.
+   ========================================================================== */
+
+/* ── 1. Tokens ──────────────────────────────────────────────────────────── */
+:root {
+  /* Typography Scale Variables (Controlled via Settings) */
+  --scale-heading: 1;
+  --scale-subheading: 1;
+  --scale-base: 1;
+  
+  color-scheme: light;
+  --bg:          #f5f3ec;
+  --bg-elevated: #fffefa;
+  --bg-subtle:   #eeebe0;
+  --bg-inset:    #e9e5d7;
+  --line:        rgba(28, 25, 23, 0.09);
+  --line-strong: rgba(28, 25, 23, 0.17);
+  --text-1: #1c1917;
+  --text-2: #565049;
+  --text-3: #8d867a;
+  --accent:        #cd8a14;
+  --accent-strong: #a86a0c;
+  --accent-soft:   rgba(205, 138, 20, 0.10);
+  --accent-line:   rgba(205, 138, 20, 0.35);
+  --jade:      #187a57;
+  --jade-soft: rgba(24, 122, 87, 0.10);
+  --jade-line: rgba(24, 122, 87, 0.32);
+  --red:      #dc2626;
+  --red-soft: rgba(220, 38, 38, 0.07);
+  --red-line: rgba(220, 38, 38, 0.30);
+  --sky:      #2563eb;
+  --sky-soft: rgba(37, 99, 235, 0.08);
+  /* Dark "artifact" card — used in both modes for field-manual panels */
+  --ink-card:      #17140f;
+  --ink-card-line: rgba(245, 240, 230, 0.10);
+  --ink-card-text: #e9e2d2;
+  --radius: 10px;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg:          #100f0c;
+  --bg-elevated: #17150f;
+  --bg-subtle:   #14120d;
+  --bg-inset:    #0b0a08;
+  --line:        rgba(245, 240, 230, 0.08);
+  --line-strong: rgba(245, 240, 230, 0.15);
+  --text-1: #f3efe4;
+  --text-2: #b6ae9d;
+  --text-3: #7e7767;
+  --accent:        #e5ad31;
+  --accent-strong: #ecc555;
+  --accent-soft:   rgba(229, 173, 49, 0.11);
+  --accent-line:   rgba(229, 173, 49, 0.38);
+  --jade:      #4ab488;
+  --jade-soft: rgba(74, 180, 136, 0.11);
+  --jade-line: rgba(74, 180, 136, 0.35);
+  --red:      #f87171;
+  --red-soft: rgba(248, 113, 113, 0.09);
+  --red-line: rgba(248, 113, 113, 0.32);
+  --sky:      #60a5fa;
+  --sky-soft: rgba(96, 165, 250, 0.10);
+}
+
+/* ── 2. Base ────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body {
+  background-color: var(--bg);
+  color: var(--text-1);
+  font-feature-settings: 'cv11', 'ss01';
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+.dark body {
+  background-image:
+    radial-gradient(900px 340px at 75% -8%, rgba(229, 173, 49, 0.05), transparent 65%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+::selection {
+  background: rgba(229, 173, 49, 0.30);
+  color: inherit;
+}
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 8px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* ── 3. Token utilities (pair with Tailwind layout classes) ────────────── */
+.bg-base   { background-color: var(--bg); }
+.bg-elev   { background-color: var(--bg-elevated); }
+.bg-sub    { background-color: var(--bg-subtle); }
+.bg-inset  { background-color: var(--bg-inset); }
+.t-hi  { color: var(--text-1); }
+.t-mid { color: var(--text-2); }
+.t-lo  { color: var(--text-3); }
+.b-line   { border-color: var(--line); }
+.b-strong { border-color: var(--line-strong); }
+.accent        { color: var(--accent); }
+.accent-strong { color: var(--accent-strong); }
+.bg-accent-soft { background-color: var(--accent-soft); }
+.num { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+
+/* Mono micro eyebrow — the app's signature label style */
+.eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+/* Hairline surface — replaces generic "gray card" chrome */
+.panel {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.panel-pad { padding: 20px 22px; }
+@media (min-width: 640px) { .panel-pad { padding: 24px 26px; } }
+.panel-hover { transition: border-color 0.15s ease, background-color 0.15s ease; }
+.panel-hover:hover { border-color: var(--line-strong); }
+
+/* Blueprint grid texture for hero / empty states */
+.bg-blueprint {
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 90% 100% at 30% 0%, black 30%, transparent 78%);
+  mask-image: radial-gradient(ellipse 90% 100% at 30% 0%, black 30%, transparent 78%);
+}
+
+/* Numbered section header (01 — Introduction ————) */
+.sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; }
+.sec-head .sec-num {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.sec-head .sec-title {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+}
+.sec-head .sec-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  transform: translateY(-4px);
+}
+.sec-head .sec-meta {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  transform: translateY(-4px);
+}
+
+/* Chips — deliberate replacement for default badges */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--bg-subtle);
+  color: var(--text-2);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.chip-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.chip-saffron { border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent-strong); }
+.chip-jade    { border-color: var(--jade-line);   background: var(--jade-soft);   color: var(--jade); }
+.chip-red     { border-color: var(--red-line);    background: var(--red-soft);    color: var(--red); }
+.chip-sky     { border-color: rgba(96, 165, 250, 0.35); background: var(--sky-soft); color: var(--sky); }
+.chip .dot { width: 5px; height: 5px; border-radius: 999px; background: currentColor; }
+
+/* Callout — hairline panel with a 2px accent rail (replaces UAlert in notes) */
+.callout {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  padding: 13px 16px 13px 18px;
+  overflow: hidden;
+}
+.callout::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 2px;
+  background: var(--text-3);
+  opacity: 0.5;
+}
+.callout-saffron { background: var(--accent-soft); border-color: var(--accent-line); }
+.callout-saffron::before { background: var(--accent); opacity: 1; }
+.callout-saffron .callout-title { color: var(--accent-strong); }
+.callout-jade { background: var(--jade-soft); border-color: var(--jade-line); }
+.callout-jade::before { background: var(--jade); opacity: 1; }
+.callout-jade .callout-title { color: var(--jade); }
+.callout-red { background: var(--red-soft); border-color: var(--red-line); }
+.callout-red::before { background: var(--red); opacity: 1; }
+.callout-red .callout-title { color: var(--red); }
+.callout-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-1);
+}
+.callout-body {
+  margin-top: 3px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
+/* Editorial hairline table */
+.table-note { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table-note th {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  text-align: left;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid var(--line-strong);
+  white-space: nowrap;
+}
+.table-note td {
+  padding: 9px 12px 9px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-2);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.table-note tbody tr { transition: background-color 0.1s ease; }
+.table-note tbody tr:hover { background: var(--accent-soft); }
+.table-note tbody tr:last-child td { border-bottom: none; }
+.table-note td:first-child, .table-note th:first-child { padding-left: 2px; }
+.table-note .cell-key { color: var(--text-1); font-weight: 600; }
+.table-note .cell-num {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--text-1);
+  white-space: nowrap;
+}
+
+/* "Hot" marker — PYQ-examined fact (replaces ⚡ emoji markers) */
+.hot { color: var(--accent-strong); font-weight: 600; }
+.hot-tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 5px;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  color: var(--accent-strong);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  vertical-align: 1px;
+}
+
+/* Dark artifact panel — field-manual card, same in both modes */
+.artifact {
+  background: var(--ink-card);
+  border: 1px solid var(--ink-card-line);
+  border-radius: var(--radius);
+  color: var(--ink-card-text);
+}
+.artifact ::selection { background: rgba(229, 173, 49, 0.35); }
+
+
+/* Interactive MCQ option (note page PYQs) */
+.opt {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg-elevated);
+  color: var(--text-2);
+  font-size: 13px;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 0.12s ease, background-color 0.12s ease, transform 0.12s ease, opacity 0.12s ease;
+}
+.opt:not(:disabled):hover {
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+  transform: translateY(-1px);
+}
+.opt:disabled { cursor: default; }
+.opt-letter {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 5px;
+  border: 1px solid var(--line-strong);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-3);
+  transition: inherit;
+}
+.opt:not(:disabled):hover .opt-letter {
+  border-color: var(--accent-line);
+  color: var(--accent-strong);
+}
+.opt-correct { border-color: var(--jade-line); background: var(--jade-soft); color: var(--text-1); font-weight: 500; }
+.opt-correct .opt-letter { border-color: var(--jade-line); background: var(--jade); color: #fff; }
+.opt-wrong { border-color: var(--red-line); background: var(--red-soft); color: var(--text-1); }
+.opt-wrong .opt-letter { border-color: var(--red-line); background: var(--red); color: #fff; }
+.opt-dim { opacity: 0.45; }
+
+/* ── 4. Note body typography (markdown notes via [slug].vue / NoteRenderer) ── */
+.note-body { max-width: 70ch; font-size: 14px; line-height: 1.75; color: var(--text-2); }
+.note-body h2 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-1);
+  margin: 2.25rem 0 0.75rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.note-body h3 {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-1);
+  margin: 1.5rem 0 0.5rem;
+}
+.note-body p { margin-bottom: 0.85rem; }
+.note-body strong { color: var(--text-1); font-weight: 600; }
+.note-body ul, .note-body ol { padding-left: 1.25rem; margin-bottom: 0.85rem; }
+.note-body li { margin-bottom: 0.3rem; }
+.note-body li::marker { color: var(--accent); }
+.note-body a { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--accent-line); }
+.note-body table { width: 100%; font-size: 13px; margin-bottom: 1rem; border-collapse: collapse; }
+.note-body th {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  text-align: left;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+.note-body td { padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); }
+.note-body blockquote {
+  border-left: 2px solid var(--accent);
+  padding: 10px 16px;
+  margin: 1rem 0;
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+  color: var(--text-2);
+}
+.note-body code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+  padding: 1px 6px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  color: var(--text-1);
+}
+.note-body pre {
+  border: 1px solid var(--ink-card-line);
+  border-radius: var(--radius);
+  background: var(--ink-card);
+  color: var(--ink-card-text);
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.note-body pre code { background: none; border: none; padding: 0; color: inherit; }
+
+/* PYQ callout inside markdown notes */
+.pyq-callout {
+  border-left: 2px solid var(--accent);
+  padding: 9px 16px;
+  margin: 0.75rem 0;
+  background: var(--accent-soft);
+  border-radius: 0 8px 8px 0;
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+
+/* ── 5. Legacy compatibility layer ────────────────────────────────────────
+   Older components (GateQuiz, FlashcardReview, DrainageMap, NoteRenderer)
+   reference CSS vars and classes from a previous stylesheet. Map them onto
+   the new tokens so nothing renders unstyled.                              */
+:root, .dark {
+  --accent-glow: var(--accent-soft);
+  --bg-primary: var(--bg);
+  --bg-secondary: var(--bg-subtle);
+  --bg-surface: var(--bg-elevated);
+  --bg-tertiary: var(--bg-subtle);
+  --bg-overlay: var(--bg-inset);
+  --bg-raised: var(--bg-subtle);
+  --border: var(--line);
+  --border-subtle: var(--line);
+  --border-active: var(--accent-line);
+  --border-focus: var(--accent);
+  --text-hi: var(--text-1);
+  --text-mid: var(--text-2);
+  --text-lo: var(--text-3);
+  --text-muted: var(--text-3);
+  --text-primary: var(--text-1);
+  --text-secondary: var(--text-2);
+  --ok: var(--jade);
+  --fail: var(--red);
+}
+
+.mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: var(--bg-subtle);
+  color: var(--text-2);
+  font-size: 11px;
+  font-weight: 500;
+}
+.badge-tier1 { display: inline-flex; padding: 3px 9px; border-radius: 6px; font-size: 11px; font-weight: 600; border: 1px solid var(--accent-line); background: var(--accent-soft); color: var(--accent-strong); }
+.badge-tier2 { display: inline-flex; padding: 3px 9px; border-radius: 6px; font-size: 11px; font-weight: 600; border: 1px solid rgba(96,165,250,0.35); background: var(--sky-soft); color: var(--sky); }
+.badge-tier3 { display: inline-flex; padding: 3px 9px; border-radius: 6px; font-size: 11px; font-weight: 600; border: 1px solid var(--line); background: var(--bg-subtle); color: var(--text-2); }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--line);
+  color: var(--text-3);
+}
+.pill-t1 { border-color: var(--accent-line); background: var(--accent-soft); color: var(--accent-strong); }
+.pill-t2 { border-color: rgba(96,165,250,0.35); background: var(--sky-soft); color: var(--sky); }
+.pill-t3 { border-color: var(--line); background: var(--bg-subtle); color: var(--text-3); }
+
+.surface {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.12s ease, transform 0.12s ease;
+}
+.dark .btn-primary { color: #1c1917; }
+.btn-primary:hover:not(:disabled) { filter: brightness(1.08); transform: translateY(-1px); }
+.btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.btn-again, .btn-hard, .btn-good, .btn-easy {
+  padding: 9px 0;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: filter 0.12s ease, transform 0.12s ease;
+}
+.btn-again:hover, .btn-hard:hover, .btn-good:hover, .btn-easy:hover { filter: brightness(1.1); transform: translateY(-1px); }
+.btn-again { background: var(--red-soft); border-color: var(--red-line); color: var(--red); }
+.btn-hard  { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent-strong); }
+.btn-good  { background: var(--jade-soft); border-color: var(--jade-line); color: var(--jade); }
+.btn-easy  { background: var(--sky-soft); border-color: rgba(96,165,250,0.35); color: var(--sky); }
+
+
+/* ── 6. Variant helpers ───────────────────────────────────────────────────
+   Tailwind can't generate hover:/group-hover: variants for the plain-CSS
+   token utilities above, so the handful we use are defined by hand.        */
+.hover\:t-hi:hover { color: var(--text-1); }
+.hover\:t-mid:hover { color: var(--text-2); }
+.hover\:b-strong:hover { border-color: var(--line-strong); }
+.hover\:accent:hover { color: var(--accent); }
+.hover\:accent-strong:hover { color: var(--accent-strong); }
+.group:hover .group-hover\:accent { color: var(--accent); }
+
+/* Translucent base — sticky topbar over scrolling content */
+.bg-base-85 { background-color: color-mix(in srgb, var(--bg) 86%, transparent); }
+

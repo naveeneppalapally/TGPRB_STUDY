@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-85-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 85,
+  "question_text": "The calender for the year 2007 will be the same as for the year\n2007 e dü+e‘·‡s¡|ü⁄ ø±´\\+&És¡T≈£î düeT+>± ø±´\\+&ÉsY ñ+&˚ dü+e‘·‡s¡+\n________________________________________________________________________",
+  "options": [
+    "2014",
+    "2016",
+    "2017",
+    "2018"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-85-P1",
+  "content_hash": "92689fceecd183460527d97012d0d630"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "PYQ-2022-P-45",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2022_Prelims.txt",
+  "exam": "SI",
+  "year": 2022,
+  "stage": "Prelims",
+  "question_number": 45,
+  "question_text": "Let G be the GCD of three numbers 3,780, 3,465 and 3,003 and L be the LCM of 3,465 and\nL age",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "12efcc2264c0bf52242aaa818e152c74"
+}

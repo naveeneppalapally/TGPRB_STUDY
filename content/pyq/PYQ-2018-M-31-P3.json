@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-31-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 31,
+  "question_text": "The greatest five digit number which is a perfect square is\n. a\na) SSgs0 eons eBng wond Gos Sows\n— :\n‘ 22",
+  "options": [
+    "99856 (2) 99225 (3) 96721 (4) 93025"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2aafc2b3153f5f3ee1df21199b8796fe"
+}

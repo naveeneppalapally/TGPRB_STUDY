@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-49",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 49,
+  "question_text": "hours and 30 minutes. After that, the speed was reduced to 50 km/hr. If the distance between\nthe cities is 345 km, at what time did he reach the city Q?\n6.30 a.m P Q 90 km/hr\n23050 km/hr\n345 kmQ ",
+  "options": [
+    "person left a city P to go to city Q at 6.30 a.m. He travelled at a speed of 90 km/hr for 2",
+    "10.25 a.m",
+    "11.15 a.m",
+    "11.24 a.m",
+    "11.50 a.m"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1536869adcf78b6940ec09f95d6b6e65"
+}

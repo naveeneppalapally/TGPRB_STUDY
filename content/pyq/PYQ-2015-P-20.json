@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-P-20",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 20,
+  "question_text": "Select an appropriate title for the passage.\n————————————————————————————————————————",
+  "options": [
+    "The Miracle of Danger",
+    "Courage and Panic",
+    "The Will to Fight",
+    "The Change of Nature"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e720effcf25567115e7759a3ea7e1905"
+}

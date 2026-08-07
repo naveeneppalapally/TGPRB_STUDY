@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-111-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 111,
+  "question_text": "Count the number parallelograms in the given figure.\nBN)S Seis\" Kirods Seotyero Some S8poi06.\nA, B, C, D, E, F, Gare placed one above the other in the descending\n5 more than that of F and D. Lowest salary is not for D. Salary of\ns not the highest salaried person. ¥ 30,000 is the second highest\nThird lowest salary is 71,000. F is not the third highest salaried person. E's salary is less\nbut more than that of D. C's salary is 15,000. If any two successive salaries are\nn the sum of the salaries of F and A is",
+  "options": [
+    "14 (2) 15 (3) 16 (4) 17"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e5a2a45f7ff8878e124ba9b08ee61375"
+}

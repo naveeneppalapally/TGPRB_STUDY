@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2016-M-60",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 60,
+  "question_text": "Assertion (A)\n: The rate of photosynthesis is more in red light than in blue light.\nReason (R)\n: The energy content of red photon is more than blue photon.\n˙xmsºΩFyµR∂©´s (A)\n: ¨ds÷¡ NSLiºΩÕ‹[ NRPLi¤…¡[ FsLRiVxmso NSLiºΩÕ‹[ NTPLRi·«¡©´s˘ xqsLiπ∏∂WgRi ˙NTP∏R∂VlLi[»¡V FsNRPV‰™´s\nNSLRiﬂ·Li (R)\n: FsLRiVxmso Fn°…ÿ©±s aRPNTPÚ, ¨ds÷¡ Fn°…ÿ©±s aRPNTPÚ NRPLi¤…¡[ FsNRPV‰™´s\n————————————————————————————————————————\n16 X",
+  "options": [
+    "Both (A) and (R) are correct and (R) is the correct explanation to (A)",
+    "Both (A) and (R) are correct but (R) is not the correct explanation to (A)",
+    "(A) is correct but (R) is wrong",
+    "(A) is wrong but (R) is correct",
+    "(A) ™´sVLji∏R∂VV (R) lLiLi≤R∂V xqsLji\\π∏∂V©´s≠s ™´sVLji∏R∂VV (A) NRPV (R) xqsLji\\π∏∂V©´s ≠s™´s-LRi·",
+    "(A) ™´sVLji∏R∂VV (R) lLiLi≤R∂V xqsLji\\π∏∂V©´s≠s, NS¨s (A) NRPV (R) xqsLji-\\π∏∂V©´s ≠s™´s-LRi· NSµR∂V",
+    "(A) xqsLji\\π∏∂V©´sµj∂, NS¨s (R) xqsLji\\π∏∂V©´sµj∂ NSµR∂V",
+    "(A) xqsLji\\π∏∂V©´sµj∂ NSµR∂V, NS¨s (R) xqsLji\\π∏∂V©´sµj∂",
+    "CP 2015 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "4fe06e73cc2be1afcbee3376816d4123"
+}

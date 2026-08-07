@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-14",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 14,
+  "question_text": "Choose the correct order of the following jumbled sentences to make it a meaningful\nparagraph.\n(a)\n(b)\nOnce, an ant who had come to drink at a stream fell into the water and was carried\naway by the swift current\n(c)\nHe was about to fire when the ant, who was nearby, crawled forward and bit him sharply\non the ankle\n(d)\nSometime after this, a hunter, creeping through the bushes, saw the dove asleep, and\ntook a careful aim with his gun",
+  "options": [
+    "dove, perched on a nearby tree, saw the ant's danger and dropped a leaf into the water",
+    "1-(d), 2-(c), 3-(b), 4-(a)",
+    "1-(c), 2-(d), 3-(a), 4-(b)",
+    "1-(b), 2-(a), 3-(d), 4-(c)",
+    "1-(a), 2-(c), 3-(d), 4-(b)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "110f66ef0d5ff1729b496f72964e1f69"
+}

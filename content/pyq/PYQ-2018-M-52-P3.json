@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-52-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 52,
+  "question_text": "Ifthe number 45135*2 is divisible by 8, then the smallest whole number in place of * is",
+  "options": [
+    "(2) 2 (3) 4 (4) 6"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e7d9763dc5c3de7055491663742712ef"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-108",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 108,
+  "question_text": "Arrange the following Ayurvedic doctors in a chronological order according to their\nexistence\na)\nJivaka\nb)\nVagbhata\nc)\nSushruta\nd)\nCharaka\n\na)\n\nb)\n\nc)\n\nd)\n",
+  "options": [
+    "d   a   b   c",
+    "c   b   d   a",
+    "a   c   d   b",
+    "b   d   a   c"
+  ],
+  "is_duplicate": false,
+  "content_hash": "c8a790e009aa2368321ad02c0c3fed0b"
+}

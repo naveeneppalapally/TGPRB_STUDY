@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-P-1",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 1,
+  "question_text": "Choose the right matching of one word substitutes with their description.\n(i)\nCongestion\n(ii) Collision\n(iii) Bottleneck\n(iv) Breakdown\n————————————————————————————————————————",
+  "options": [
+    "An accident in which two vehicles hit each other",
+    "Situation in which roads are full of traffic",
+    "Occasion when a vehicle stops working",
+    "Place in a road where the traffic cannot pass",
+    "(i) – (C),  (ii) – (B),  (iii) – (A),  (iv) – (D)",
+    "(i) – (A),  (ii) – (D),  (iii) – (B),  (iv) – (C)",
+    "(i) – (D),  (ii) – (C),  (iii) – (A), (iv) – (B)",
+    "(i) – (B),  (ii) – (A),  (iii) – (D),  (iv) – (C)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2f7eb3aaeea2c92b4b3785687f32b286"
+}

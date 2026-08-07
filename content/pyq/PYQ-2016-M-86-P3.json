@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-86-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 86,
+  "question_text": "Which of the following is not a leap year?\ná ÁøÏ+~ yêì˝À ©|ü⁄ dü+e‘·‡s¡+ ø±ì~ @~?\n________________________________________________________________________",
+  "options": [
+    "700",
+    "800",
+    "1600",
+    "2000"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-86-P1",
+  "content_hash": "b3349587d62512d9084b33a6074dbeb7"
+}

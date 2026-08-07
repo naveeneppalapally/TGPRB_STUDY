@@ -1,0 +1,30 @@
+{
+  "id": "PYQ-2015-P-45",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 45,
+  "question_text": "The ratios of surface areas of 2 cubes are given in List–I. In List–II, the ratios of their\nvolumes are given. Match them :\nList–I\nList–II\n(a)\n(i)\n(b)\n(ii) 1 : 27\n(c)\n(iii) 1 : 36\n(iv) 1 : 64\nxms…Ì”¡NRP IÕ‹[ lLiLi≤R∂V xmnsV©´s™´sVVÃ¡ ™´s˙NRPªRΩ÷d¡∏R∂W™´sLRiﬂ·™´sVVÃ¡ (Surface areas) ¨sxtsQˆªRΩVÚÃ¡V B™´s* ¡≤T∂©´s≠s.\nxms…Ì”¡NRP IIÕ‹[ ™y…”¡ xmnsV©´s xmsLji™´sWﬂ·™´sVVÃ¡ ¨sxtsˆªRΩVÚÃ¡V B™´s* ¡≤T∂©´s≠s. ™y…”¡¨s «¡ªRΩxmsLRiøR¡Li≤T∂ :\n«ÿ’¡ªy-I\n«ÿ’¡ªy-II\n(a)\n(i)\n(b)\n(ii) 1: 27\n(c)\n(iii) 1 : 36\n(iv) 1 : 64\nThe correct match is\nxqsLji\\π∏∂V©´s «‹[≤T∂\n————————————————————————————————————————",
+  "options": [
+    ": 16",
+    ": 125",
+    ": 25",
+    ": 9",
+    ": 16",
+    ": 125",
+    ": 25",
+    ": 9",
+    "(a) ! (iv), (b) ! (i), (c) ! (ii)",
+    "(a) ! (iii), (b) ! (i), (c) ! (ii)",
+    "(a) ! (iv), (b) ! (i), (c) ! (iii)",
+    "(a) ! (ii), (b) ! (iv), (c) ! (iii)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "812a4b294f29df14b394aae47eb7afd4"
+}

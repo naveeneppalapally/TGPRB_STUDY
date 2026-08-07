@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-125",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 125,
+  "question_text": "Who was the author of the text “Kavijanashrayam”?\n",
+  "options": [
+    "Somadeva Suri",
+    "Pampa",
+    "Malliya Rechana",
+    "Satyasraya",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "7af4358fc9a79cd80d96d38164397605"
+}

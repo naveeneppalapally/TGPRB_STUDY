@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-199",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 199,
+  "question_text": "Consider the following statements:\na)\nOperation Rahat, 2015 was commanded by Gen V.K. Singh.\nb)\nOperation Rahat is a rescue mission to evacuate Indian civilians from Syria.\nc)\nINS Sumitra was deployed in Operation Rahat\n\na)\n 2015 \nb)\n\nc)\n\nChoose the correct statements:\n",
+  "options": [
+    "a & c",
+    "a & b",
+    "b & c",
+    "a, b & c"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b1ad9e4e309d82efc1f1c9381252c0c2"
+}

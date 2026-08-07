@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2023-M-176-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 176,
+  "question_text": "The missing term of the series 1, 3, 6, 11, 18, ?, 42, 59 is",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "2ad77c7a1e225be039ce4f75c3f31514"
+}

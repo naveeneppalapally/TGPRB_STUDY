@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-98-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 98,
+  "question_text": "IfAecars 50% more than B and B earns x % less than A then x =\nB08 A, 50% 28,5 HoMBR, DHOch. A SoG Bx % SKS HoMPOY wasps x =",
+  "options": [
+    "A",
+    "665 QB 335 (3) 50 (4) 25"
+  ],
+  "is_duplicate": false,
+  "content_hash": "cf038a76062d8aef14dc191422a07641"
+}

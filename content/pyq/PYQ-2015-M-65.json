@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-65",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 65,
+  "question_text": "For an endothermic reaction where\nH\n\nrespresents the enthalpy of the reaction, the\nminimum value of the activation energy will be\nH\n\n\nminimum value\n\n\n\n\n",
+  "options": [
+    "H",
+    "= H",
+    "H",
+    "Zero ()"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a179a23aad76cbd284ac87691eee93db"
+}

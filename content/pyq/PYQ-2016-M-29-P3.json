@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-29-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 29,
+  "question_text": "diameter ‘2d’ for doing the same job is (in minutes)\nyê´düeTT ªdμ >∑\\ ˇø£ >=≥ºeTT ˇø£ ˙ﬁ¯ﬂ ‘={Ïºì 40 ì$TcÕ\\˝À U≤∞ #˚düTÔ+~. n<˚ |üì #˚j·T{≤ìøÏ\n‘2d’ yê´düeTT>± >∑\\ >={≤ºìøÏ |üfÒº düeTj·T+ (ì$TcÕ\\˝À)\nP11\n8-A\nP-1\nBooklet Code A",
+  "options": [
+    "pipe of diameter ‘d’ can drain a water tank in 40 minutes.  The time taken by a pipe of",
+    "5",
+    "10",
+    "20",
+    "50"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-29-P1",
+  "content_hash": "787e75d289db604352ab7b0383d12068"
+}

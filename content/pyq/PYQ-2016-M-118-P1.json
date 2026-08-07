@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2016-M-118-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 118,
+  "question_text": "The odd thing out of  338, 158, 639, 543, 449 is",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "f820fc31ab23a01316061a8daebc0c67"
+}

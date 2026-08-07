@@ -1,0 +1,31 @@
+{
+  "id": "PYQ-2015-M-31",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 31,
+  "question_text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(\nn\nn\nn\nn\nP31\n8-A\nX1\nBooklet Code A",
+  "options": [
+    "1",
+    "1",
+    "1",
+    ".... 1",
+    "3",
+    "n",
+    ")1",
+    "",
+    "n",
+    "",
+    "n",
+    "(4)",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "b0e1d613712b2d23c746ca8932653253"
+}

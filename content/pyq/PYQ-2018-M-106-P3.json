@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-106-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 106,
+  "question_text": "343, 1331, 2197, 4913, 6859, 9261",
+  "options": [
+    "343 (2) 2197 3) 6859 (4) 9261"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2018-M-106-P1",
+  "content_hash": "c31828eb0d2f1c37986ac94d1de3973b"
+}

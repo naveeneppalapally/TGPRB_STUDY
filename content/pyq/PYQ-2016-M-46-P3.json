@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2016-M-46-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 46,
+  "question_text": "for Rs. 21,44,520 making a profit of 15%.  The cost of the house for A (in rupees) is\n˝≤uÛÑ+ e#˚Ã≥T¢ D øÏ s¡÷ˆˆ 21,44,520 øÏ ne÷às¡T. A Ä Ç+{Ïì ø=qï yÓ\\ (s¡÷bÕj·T\\˝À)\n________________________________________________________________________",
+  "options": [
+    "sells a house to B at a profit of 12%.  B sells it to C at a loss of 10% and C sells it to D",
+    "ˇø£ Ç+{Ïì B øÏ 12% ˝≤uÛ≤ìøÏ ne÷à&ÉT. B <ëìì 10% qcÕºìøÏ C øÏ eT]j·TT C <ëìì 15%",
+    "20,00,000",
+    "18,50,000",
+    "25,00,000",
+    "22,50,000"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-46-P1",
+  "content_hash": "7cd56287f32736c4ae59501a6a041f8e"
+}

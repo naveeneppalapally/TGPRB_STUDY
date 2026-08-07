@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-184",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 184,
+  "question_text": "Choose the correct match\nArmy\nNavy\nAirforce\nSub-Lientenant\nFlight Lientenant\nCommander\nSquadron header\nCommodore\nAir commodore\nRear Admiral\nAir vice Marshal\n\n\n\n\n\n\n\n\n\n\n\n",
+  "options": [
+    "Captain",
+    "Major",
+    "Colonel",
+    "Major-general",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "7742cdc8759184ae9c02d42bd32cd46f"
+}

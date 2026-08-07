@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-93",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 93,
+  "question_text": "Shankar is 8th from top and 24th from last in his class. How many students should be added\nto make the strength 40?\n824\n40",
+  "options": [
+    "8",
+    "9",
+    "10",
+    "16"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a5010c57f1033f2ff5c68916980a77fa"
+}

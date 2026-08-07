@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-77",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 77,
+  "question_text": "Find the number in the place of  question mark (?)\n(?) \n?\nP31\n16-A\nX1\nBooklet Code A",
+  "options": [
+    "21",
+    "22",
+    "29",
+    "20",
+    "35 5",
+    "4 29 3",
+    "4",
+    "1"
+  ],
+  "is_duplicate": false,
+  "content_hash": "183da81f21a6ea8936e0d72c53f5ea63"
+}

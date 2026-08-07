@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-37-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 37,
+  "question_text": "Out of three numbers, the first is twice the second and is half of the third.  If the average of\nthe three numbers is 56, then the difference of the first and third numbers is\neT÷&ÉT dü+K´\\˝À yÓTT<ä{Ï dü+K´ ¬s+&Ée<ëìøÏ ¬s+&ç+‘·\\÷ eT]j·TT eT÷&Ée <ëì˝À dü>∑+. á\neT÷&ç+{Ï dü>∑≥T 56 nsTT‘˚ yÓTT<ä{Ï dü+K´ eT]j·TT eT÷&Ée dü+K´\\ eT<Ûä´ uÛÒ<ä+\n________________________________________________________________________",
+  "options": [
+    "12",
+    "20",
+    "24",
+    "48"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-37-P1",
+  "content_hash": "7942297ff974b833a9de41b22a6991c3"
+}

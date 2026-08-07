@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-130",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 130,
+  "question_text": "Match the following :\n(a)\nRela Dance\n(i)\nKondagattujatara\n(b)\nGusadi Dance\n(ii)\nLimbadrigutta\n(c)\nMutyampeta\n(iii) Koyas\n(d)\nBhimgal\n(iv) Gonds\n\n(a)\n\n(i)\n\n(b) \n(ii) \n(c) \n(iii) \n(d) \n(iv) \nThe correct answer is\n",
+  "options": [
+    "a-i, b-ii, c-iii, d-iv",
+    "a-ii, b-i, c-iv, d-iii",
+    "a-iii, b-iv, c-i, d-ii",
+    "a-iv, b-iii, c-ii, d-i"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e0f913015ba40e732c5856fd6799745e"
+}

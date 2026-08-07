@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-133",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 133,
+  "question_text": "Match the following :\n(a)\nBayyaram Tank\n(i)\nJagadala Mummada\n(b)\nPakala Tank\n(ii)\nProlaraju I\n(c)\nKesamudram Tank\n(iii) Mailamba\n(d)\nNagasamudram Tank\n(iv) Nagambika\n\n(a)\n\n(i)\n\n(b) \n(ii) \n(c) \n(iii) \n(d) \n(iv) \nThe correct answer is\n\nP31\n28-A\nX1\nBooklet Code A",
+  "options": [
+    "a-i, b-ii, c-iii, d-iv",
+    "a-ii, b-i, c-iv, d-iii",
+    "a-iii, b-i, c-ii, d-iv",
+    "a-iv, b-iii, c-i, d-ii"
+  ],
+  "is_duplicate": false,
+  "content_hash": "53d6f7331e0f0c68532b208d0095b240"
+}

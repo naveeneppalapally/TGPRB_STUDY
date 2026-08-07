@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-100-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 100,
+  "question_text": "The metallic solid cone is melted and converted into the shape of solid cylinder of equal\nradius. If the height of the cylinder is 6 m, the height of the cone is (in mts)\nˇø£ ˝ÀVü≤|ü⁄ |òüTq X¯+≈£îe⁄qT ø£]–+∫ n<˚ yê´kÕs¡ú+ >∑\\ ˇø£ |òüTq dü÷ú|ü Äø±s¡+>± e÷sêÃs¡T. Ä\ndü÷ú|ü+ m‘·TÔ 6 MTˆˆ nsTT‘˚, Ä X¯+≈£îe⁄ m‘·TÔ (MT≥s¡¢˝À)\n________________________________________________________________________",
+  "options": [
+    "15",
+    "16",
+    "17",
+    "18"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-100-P1",
+  "content_hash": "2dca03a8b6b8540c443feba4e20fc84d"
+}

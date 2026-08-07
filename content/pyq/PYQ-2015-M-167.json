@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-167",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 167,
+  "question_text": "Assertion (A) : Collective responsibility of cabinet signifies unity and coordination among\nmembers of the council of ministers\nReason (R) :\nIt is the prerogative of the Prime Minister to select or drop a member of\nthe cabinet\nThe correct answer is\n(A) \n\n\n(R) \n\n\n\nP31\n38-A\nX1\nBooklet Code A",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true and (R) is false",
+    "(A) is false and (R) is true",
+    "(A)(R) (A)(R)",
+    "(A)(R) (A)(R)",
+    "(A)(R) ",
+    "(A)(R) "
+  ],
+  "is_duplicate": false,
+  "content_hash": "16c6bbf7c10f369b5af4e50ef8ecab70"
+}

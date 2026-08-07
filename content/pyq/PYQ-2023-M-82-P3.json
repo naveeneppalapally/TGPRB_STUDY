@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-82-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 82,
+  "question_text": "The day of the week on 12th January, 1863 was w Monday ' Ww",
+  "options": [
+    "Tuesday (2) Saturday (3) Sunday"
+  ],
+  "is_duplicate": false,
+  "content_hash": "50039f9be0beb60ab8b495a264c11b05"
+}

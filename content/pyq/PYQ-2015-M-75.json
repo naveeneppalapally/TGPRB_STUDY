@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-75",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 75,
+  "question_text": "The largest organ in human body is\n",
+  "options": [
+    "Brain",
+    "Heart",
+    "Skin",
+    "Liver",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "bb2820e2f1052dfe5eb014fa4540ee7e"
+}

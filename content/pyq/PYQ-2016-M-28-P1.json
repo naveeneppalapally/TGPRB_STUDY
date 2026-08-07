@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-28-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 28,
+  "question_text": "If  a:b = c:d = e:f = 1:2, then (pa + qc + re) : (pb + qd + rf) =\na:b = c:d = e:f = 1:2 nsTT‘˚ (pa + qc + re) : (pb + qd + rf) =\n________________________________________________________________________",
+  "options": [
+    "1 : 3",
+    "1:2",
+    "2 : 3",
+    "3 : 2"
+  ],
+  "is_duplicate": false,
+  "content_hash": "9de7ab6c4da59548a2ea6faf5f1878f1"
+}

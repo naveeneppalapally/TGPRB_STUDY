@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-9",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 9,
+  "question_text": "25, 49, _____ , 169",
+  "options": [
+    "100",
+    "121",
+    "64",
+    "144"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b15044c3b58f8f4a6b310d166fb5cfa3"
+}

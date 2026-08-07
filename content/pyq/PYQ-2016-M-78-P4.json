@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-78-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 78,
+  "question_text": "Assertion (A) : Tropical decideous forests are associated with N.E parts of India.\nReason (R) :\nTropical decideous forest shed their leaves during the dry season.\nThe correct answer is\nÁ|ü‹bÕ<äq (A) : áXÊq´ uÛ≤s¡‘·<˚X¯+˝À ñwüíeT+&É\\ Ä≈£îsê\\TÃ n&Ée⁄\\THêïsTT.\nø±s¡D+ (R) : y˚dü$ø±\\+˝À ñwüíeT+&É\\ Ä≈£îsê\\TÃ n&Ée⁄\\T yê{Ï Ä≈£î\\qT H˚\\$&ÉT#·TqT.\ndü]jÓÆTq düe÷<Ûëq+\n________________________________________________________________________",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A).",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A).",
+    "(A) is true and (R) is false.",
+    "(A) is false and (R)is true.",
+    "(A) eT]j·TT (R) ¬s+&É÷ ˇ|ü eT]j·TT (R) nH˚~ (A) ≈£î dü]jÓÆTq $es¡D.",
+    "(A) eT]j·TT (R) ¬s+&É÷ ˇ|ü ø±ì (R) nH˚~ (A) ≈£î dü¬s’q $es¡D ø±<äT.",
+    "(A) nH˚~ ˇ|ü eT]j·TT (R) nH˚~ ‘·|ü.",
+    "(A) nH˚~ ‘·|ü eT]j·TT (R) nH˚~ ˇ|ü."
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-78-P2",
+  "content_hash": "20b216f59f395aead3583dbcb7599f33"
+}

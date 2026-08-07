@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-118",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 118,
+  "question_text": "The first telegraphic line introdued by Lord Dalhousie in 1853 ran between\n1853telegraphic line\nP31\n25-A\nX1\nBooklet Code A",
+  "options": [
+    "Bombay and Thana",
+    "Calcutta and Madras",
+    "Bombay and Madras",
+    "Calcutta and Agra",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "2837b6926ec14ce044adb7daa8ac20a6"
+}

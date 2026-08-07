@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-200-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 200,
+  "question_text": "The Indian Government on 17% September, 1948\nto bring Hyderabad state into the Indian Union ?",
+  "options": [
+    "Operation Logo (2) Operation Code",
+    "Operation Polo (4) Operation Vijay"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bffb846e131bccc09a244f8e3f0c27d3"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2016-M-196-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 196,
+  "question_text": "The correct choice for ‘?’ in figure A from figure B.\n|ü≥+ A ˝Àì >∑Ts¡TÔ ª?μ øÏ |ü≥+ B ˝Àì dü]jÓÆTq~\nIV\nV\n________________________________________________________________________",
+  "options": [
+    "(B)      (C)",
+    "I            II            III",
+    "I",
+    "II",
+    "III",
+    "IV"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-196-P1",
+  "content_hash": "1c8712705e69cc9aaee53fb1af505c3c"
+}

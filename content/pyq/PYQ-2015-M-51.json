@@ -1,0 +1,30 @@
+{
+  "id": "PYQ-2015-M-51",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 51,
+  "question_text": " and  are the roots of the quadratic equation\n0\n\n\nr\nqx\npx\n. Match the items in List\nI and List II\n\n0\n\n\nr\nqx\npx\n. I II\n\nList - I\nList - II\nI\nII\n(a)\n\n\n(i)\npr\nq \n(b)\n\n\n\n\n(ii)\npr\npr\nq\n(c)\n\n\n(iii)\npr\npr\nq\n(iv)\nr\nq\n\nCorrect match is\n\nP31\n12-A\nX1\nBooklet Code A",
+  "options": [
+    "",
+    "",
+    "1 ",
+    "2",
+    "p",
+    "2 ",
+    "2",
+    "2 ",
+    "a-iv, b-iii, c-i",
+    "a-iv, b-ii, c-iii",
+    "a-i, b-iii, c-iv",
+    "a-ii, b-iv, c-iii"
+  ],
+  "is_duplicate": false,
+  "content_hash": "0f5105c8f3a7ede5827a4cc374968634"
+}

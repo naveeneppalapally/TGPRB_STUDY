@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2016-P-19",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 19,
+  "question_text": "There are 100 students in a class. Number of boys is 10 more than the number of girls. The\naverage weight of boys is 50 kg and average weight of the whole class is 45.5 kg. The\naverage weight of girls is (in kg)\nINRP ªRΩLRigRiºΩÕ‹[ 100 ™´sVLiµj∂ ≠sµy˘LÛRiVÃ¡V D©yıLRiV. ÀÿÃ¡VLRi xqsLi≈¡˘ Àÿ÷¡NRPÃ¡ xqsLi≈¡˘ NRPLi¤…¡[ 10\nFsNRPV‰™´s. ÀÿÃ¡VLRi xqsgRi»¡V  ¡LRiV™´so 50 NTP.˙gS ªRΩLRigRiºΩÕ‹[¨s ≠sµy˘LÛRiVÃ¡LiµR∂Lji xqsgRi»¡V  ¡LRiV™´so 45.5 NTP.˙gS\nÀÿ÷¡NRPÃ¡ xqsgRi»¡V  ¡LRiV™´so (NTP.˙gSÃ¡Õ‹[)\n————————————————————————————————————————",
+  "options": [
+    "40",
+    "45",
+    "50",
+    "52"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bdf14181d9e4ed41a5d2986f601477b8"
+}

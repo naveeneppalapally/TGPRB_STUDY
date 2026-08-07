@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-17",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 17,
+  "question_text": "How did most people regard early motor cars?",
+  "options": [
+    "Not better than horse-driven engines",
+    "A mere joke, or as rather dangerous playthings",
+    "A mere scientific experiment",
+    "A cumbersome vehicle"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2fd661c53774ebe991eb39ede4247f7a"
+}

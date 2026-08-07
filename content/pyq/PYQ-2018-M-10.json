@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-10",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2018_Mains.txt",
+  "exam": "Constable",
+  "year": 2018,
+  "stage": "Mains",
+  "question_number": 10,
+  "question_text": "The following sentence is in Direct Speech, Choose the correct option which expresses the same\nsentence in Indirect Speech : 1\nThe spectators said, “Bravo ! Well played, Sachin”. i\nG)__ The spectators encouraged Sachin saying that he played well.",
+  "options": [
+    "The spectators called Sachin. bravo because he had played well. ;",
+    "The spectators said that Sachin has played well,",
+    "The spectators applauded Sachin saying that he had played well."
+  ],
+  "is_duplicate": false,
+  "content_hash": "a25a8201cabd7d813398d770ac466399"
+}

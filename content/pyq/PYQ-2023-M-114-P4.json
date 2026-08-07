@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-114-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 114,
+  "question_text": "Srinagar is situated on the bank of which river?\nBSB 9 SB WES GAYS ?",
+  "options": [
+    "Ravi (2) Jhelum (3) Beas (4) Satlej",
+    "od (2) eo (3) Dose (4) x88"
+  ],
+  "is_duplicate": false,
+  "content_hash": "c0fcb7068965309cf67360a2239fc737"
+}

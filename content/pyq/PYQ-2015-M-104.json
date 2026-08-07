@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-104",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 104,
+  "question_text": "Which of the following text does not come under Sruti literature\n",
+  "options": [
+    "Brahmanas",
+    "Vedangas",
+    "Aranyakas",
+    "Upanishads",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "33bbe0dd188028532c56c61712bd3d94"
+}

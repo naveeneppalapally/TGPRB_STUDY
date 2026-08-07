@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-101",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 101,
+  "question_text": "At which Indus valley site maximum wells were discovered?\n\nP31\n20-A\nX1\nBooklet Code A",
+  "options": [
+    "Harappa",
+    "Mohenjodaro",
+    "Dholavira",
+    "Kalibangan",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "50eca021cdb15f9ed4f3b5c03d8680f3"
+}

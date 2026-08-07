@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-26-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 26,
+  "question_text": "If x : y = 3 : 4, then (7x + 3y) : (7x – 3y) =\nx : y = 3 : 4 nsTT‘˚, (7x + 3y) : (7x – 3y) =\n________________________________________________________________________",
+  "options": [
+    "5 : 2",
+    "4 : 3",
+    "11 : 3",
+    "37 : 19"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-26-P1",
+  "content_hash": "5a07138d9582b901b7fef2694a370fab"
+}

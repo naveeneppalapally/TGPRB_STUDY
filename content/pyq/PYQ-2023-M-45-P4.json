@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-45-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 45,
+  "question_text": "Sound cannot travel through\nS200 mrgar ossrEsoSTAD.",
+  "options": [
+    "Gases (2) Vacuum (3) Liquid (4) Solids",
+    "aogaae (2) arSgSd%o (3) SS Sarg (4) DS Sorgen"
+  ],
+  "is_duplicate": false,
+  "content_hash": "85f36face14c6be371120ea3f7641122"
+}

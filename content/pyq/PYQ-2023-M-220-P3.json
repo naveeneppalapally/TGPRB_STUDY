@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-220-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 220,
+  "question_text": "25",
+  "options": [
+    "8460 boxes eto 10 Kono (2)",
+    "72 8ee sons a5on0 8 Kono"
+  ],
+  "is_duplicate": false,
+  "content_hash": "7ace0a7106070cc84c1445d1ff0347a1"
+}

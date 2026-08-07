@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2023-M-188-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 188,
+  "question_text": "Identify the largest district in Telangana State from its area point of view.\nBoorread® THOS MSo Sorr 08 DS Bex Gorn,",
+  "options": [
+    "Adilabad (2) Mancheriyal",
+    "Hyderabad (4) Bhadradhri Kothagudem",
+    "eoBerest (2) Loaded",
+    "wSorerd (4) Soe SStirBo"
+  ],
+  "is_duplicate": false,
+  "content_hash": "cf56e2d1bbbe587bbec75a10bcd8a4f1"
+}

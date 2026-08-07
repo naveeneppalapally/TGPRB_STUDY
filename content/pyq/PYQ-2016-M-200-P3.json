@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-200-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 200,
+  "question_text": "The digit that should come next in the number sequence is\n9 8 7 6 5 4 3 2 1 8 7 6 5 4 3 2 1 7 6 5 4 3 2 1\ndü+U≤´qTÁø£eT+ 9 8 7 6 5 4 3 2 1 8 7 6 5 4 3 2 1 7 6 5 4 3 2 1 ˝À sêe\\dæq ‘·sê«‹ n+¬ø",
+  "options": [
+    "9",
+    "8",
+    "7",
+    "6"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b296bf8c2e605552a8c5f3abdf875a34"
+}

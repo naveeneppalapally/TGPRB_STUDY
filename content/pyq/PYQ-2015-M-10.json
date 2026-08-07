@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-10",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 10,
+  "question_text": "Choose the correctly spelt word from the options given below.",
+  "options": [
+    "occasional",
+    "occassional",
+    "ocasional",
+    "occational"
+  ],
+  "is_duplicate": false,
+  "content_hash": "28c51aae7338d11e5aa0661320318b32"
+}

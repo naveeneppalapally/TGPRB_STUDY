@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-105-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 105,
+  "question_text": "ZA, YE, XI, WO, TU",
+  "options": [
+    "ZA (2) XI (3) Wo 4) TU"
+  ],
+  "is_duplicate": false,
+  "content_hash": "da5f42a66185b6472313b1ec9916a9b8"
+}

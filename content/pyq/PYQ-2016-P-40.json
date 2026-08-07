@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-P-40",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 40,
+  "question_text": "The distance between two stations A, B is 390 km. A train starts from station A at 10 AM\nand travels towards station B at 65 kmph. Another train starts from station B at 11 AM and\ntravels towards station A at 35 kmph. The time they meet is\nÆ™s[gRiLiª][  ¡∏R∂VÃ¡VÆµ∂[Lji }qÌsxtsQ©´sV B \\Æ™sxmso ˙xms∏R∂Wﬂ”·xqsVÚLiµj∂. Æ™s[L]NRP \\lLiÃ¡V }qÌsxtsQ©´sV B ™´sµÙR∂ 11 A.MNRPV\n35 NTP≠dsV/gRiLi Æ™s[gRiLiª][  ¡∏R∂VÃ¡VÆµ∂[Lji }qÌsxtsQ©´sV A \\Æ™sxmso ˙xms∏R∂Wﬂ”·xqsVÚLiµj∂. @≠s NRPÃ¡VxqsVNRPVÆ©s[ xqs™´sV∏R∂VLi\n————————————————————————————————————————\n12  G",
+  "options": [
+    "™´sVLji∏R∂VV B }qÌsxtsQ©˝´s ™´sVµ≥R∂˘ µR∂WLRiLi 390 NTP.≠dsV. INRP \\lLiÃ¡V }qÌsxtsQ©´sV A ™´sµÙR∂ 10 A.MNRPV 65 NTP.≠dsV/gRiLi",
+    "2 PM",
+    "2.15 PM",
+    "2.30 PM",
+    "2.45 PM",
+    "IS 2016 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "e61b596b91e4e41334e06a66ae101575"
+}

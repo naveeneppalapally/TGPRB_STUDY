@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-20",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 20,
+  "question_text": "What is incorrect about the internal combustion engine?",
+  "options": [
+    "fuel burnt in it as waste",
+    "light in weight",
+    "noisy and clumsy",
+    "small in size"
+  ],
+  "is_duplicate": false,
+  "content_hash": "ab359fac19f23af7067a174f99f446b4"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2018-M-14",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2018_Mains.txt",
+  "exam": "Constable",
+  "year": 2018,
+  "stage": "Mains",
+  "question_number": 14,
+  "question_text": "The author mentions the work of Darwin and Fabre in order to\nPPC-GS1 4\nAn\n1S. Which of the following statements is not true according to the passage ?\nsubsequently break off.",
+  "options": [
+    "_ provide experimental evidence of the inflexibility of one kind of insect behaviour.",
+    "contradict the conventional wisdom about “typical” wasp behaviour.",
+    "illustrate the strength of the wasp’s maternal affection.",
+    "explore the logical implications of the thesis articulated earlier.",
+    "Darwin restrains the grasshopper while the wasp attempts to drag it by its antennae, which",
+    "Darwin releases the grasshopper but the wasp ignores it.",
+    "The wasp takes significant time to retrieve the grasshopper, then re-inspects the burrow.",
+    "The wasp instantly brings the grasshopper and moves into the burrow."
+  ],
+  "is_duplicate": false,
+  "content_hash": "ef2de73b42600fe286dd706412c4492a"
+}

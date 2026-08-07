@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-104-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 104,
+  "question_text": "The 21st term in the sequence 3, 9, 15, 21, ... is\nnqTÁø£eT+ 3, 9, 15, 21, ... ˝À 21 e |ü<ä+\n________________________________________________________________________",
+  "options": [
+    "117",
+    "123",
+    "121",
+    "119"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-104-P1",
+  "content_hash": "854fb6c8b26b5482ae9889879311c9ae"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-19",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 19,
+  "question_text": "What made the English inventors handicapped?\nmiles an hour",
+  "options": [
+    "The general public did not welcome the invention",
+    "The quaint old law that forbade any such vehicle to attain a greater than four",
+    "Non-availability of adequate fuel power the engine",
+    "Availability of micro-air vehicles"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1a1ecc3e99cb8aa2f55fd6ac2a5c8e77"
+}

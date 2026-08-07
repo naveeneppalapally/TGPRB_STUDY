@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-102-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 102,
+  "question_text": "56,34, 14,7\n(i) 7 . (2) 14 G6) 34 (4) 56",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "c4178d5b8d8a96b081be6abba13f16e5"
+}

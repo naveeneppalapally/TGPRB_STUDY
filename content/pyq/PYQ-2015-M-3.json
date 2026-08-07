@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2015-M-3",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 3,
+  "question_text": "10, 24, 45, _____\nObserve the following information on viewership\nof TV Channels, pertaining to families of an\napartment, and answer the questions from 83 to 85.\nTV\n8385\n\n15\n9\n5\n10\n8\n7\nQ\nP\n8\nHindi\n\nEnglish\n\nTelugu\n\n9            4\n36          16\n5            ?\n49         25\nP31\n17-A\nX1\nBooklet Code A",
+  "options": [
+    "60",
+    "84",
+    "73",
+    "76",
+    "6",
+    "8",
+    "12",
+    "4",
+    "6",
+    "3",
+    "6"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a0a10f424c26df9fb72023bfbedbe2a4"
+}

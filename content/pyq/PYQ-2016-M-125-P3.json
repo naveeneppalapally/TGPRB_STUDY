@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-125-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 125,
+  "question_text": "K is the brother of N and X. Y is the mother of N and Z is the father of K. The statements\namong the following that is not definitely true is\nN, X \\≈£î K k˛<äs¡T&ÉT, N øÏ Y ‘·*¢, K øÏ Z ‘·+Á&ç. ÁøÏ+~ Á|üe#·Hê˝À¢ K∫Ã‘·+>± ì»+ ø±ì~\n________________________________________________________________________",
+  "options": [
+    "K is the son of Z",
+    "Y is the wife of Z",
+    "K is the son of Y",
+    "N is the brother of X",
+    "Z øÏ K ≈£îe÷s¡T&ÉT",
+    "Z øÏ Y uÛ≤s¡´",
+    "Y øÏ K ≈£îe÷s¡T&ÉT",
+    "X øÏ N k˛<äs¡T&ÉT"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-125-P1",
+  "content_hash": "854ef17d108820dc92a0edb9b408f8ce"
+}

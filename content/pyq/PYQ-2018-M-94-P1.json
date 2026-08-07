@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-94-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 94,
+  "question_text": "By what percentage should the radius of a sphere be increased so that the volume increases\nby 200%?\naS M¥Soo Boxy BoSS0Sre00 200% Ddrrvcd wr TPT) Hows Tso",
+  "options": [
+    "(¥%3-1)100 (v3-1)100 @) (¥3-1) (4) (v3-1)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "120f8e0839430ed382882a813357f2ef"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-166-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 166,
+  "question_text": "The codes for few letters are given in below table. The code of a letter not in the tables is itself.\nLetter} V| J | R[ ATD] BTW\nCode | 1 2/3 ]/4/5176\nFI/K]U|/G/H|I|[E|P\n7/8l#talel]@lo]s{*\nThe code of a word is obtained by replacing the letters of the word subject to the conditions\n(a) If both the ends of a word are vowels then write the codes of these two letters as codes of the\nimmediate next consonants.\n(b) _ If first letter is consonant and last letter is vowel interchange the codes of these two letters.\n(c) _ If first letter is vowel and last letter is consonant then both are to be coded as the code for that\nconsonant.\nThe codes for the words 'DRAG' and 'PRAVEDI are respectively\nSA) ofrot S'Ee Gots SGUS* axoShd. S48S* TD oF HOE SE wv eXdab.\negom| V] J | R|A|D|B)Ww)/F/K/U|G)H/T]|E]P\nwot }1/2/3}4}/5]/e6]7]}/8]#]al}*|e@]o[s]*\nal iio Ant, SE wagons od 6 siret ote rd Seo eri, Sdodsohs Nabiiren :\n(a) a Sho Ant, SS wf Doty ecige cond, h8, rd soy Bows Si) sreyo Ent, SE\n(ardioo8.\n(b) eas Sthod® Boi effFo sey, ISO e¥5o extn ©ond, PH SEvx S6X)Go arto.\n(c) a8 SoG Bs w¥So wely, O80 eo sey ond, Boer @ sey Bnd) SES arao’:\n‘DRAG! x8e% 'PRAVEDI' Sore Brey SE Stir",
+  "options": [
+    "534%, ©3145$* (2) 543%, *341$5© (3) 534%, ©341$5* (4)  %435, *5$143©"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8a2038f84e0e94bedada23b447ffc77e"
+}

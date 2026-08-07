@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-113-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 113,
+  "question_text": "If LARSEQ  is the code word for MASTER, then the code word STEAM is\nLARSEQ nH˚~ MASTER øÏ ø√&é |ü<äyÓTÆ‘˚, STEAM øÏ ø√&é |ü<ä+\nP11\n23-A\nP-1\nBooklet Code A",
+  "options": [
+    "RSEAL",
+    "SREAL",
+    "SREAM",
+    "SRAEL"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-113-P1",
+  "content_hash": "94ff0e4dd06d634a4d9ebc91fff8067f"
+}

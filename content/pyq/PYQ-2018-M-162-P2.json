@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-162-P2",
+  "type": "pyq",
+  "exam_section": "Telugu",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P2_Telugu.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P2",
+  "part_name": "Telugu",
+  "question_number": 162,
+  "question_text": "On 8\" February 2018, it was a Thursday, Then, what was the day on 8\" February 2017 ?\n8 HOSS 2018 S Mea SAn HAMdsh 29h, 8 H[O56 2017 5 Sands Sar",
+  "options": [
+    "Wednesday (2) Thursday (3) Friday (4) Tuesday",
+    "@wGerdaon (2) Mhtsrdano (3) HiSardain (4) otitardein"
+  ],
+  "is_duplicate": false,
+  "content_hash": "ba8dee17b34c67855c8e21e893413d6c"
+}

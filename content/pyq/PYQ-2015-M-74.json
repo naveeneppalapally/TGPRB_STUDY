@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-74",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 74,
+  "question_text": "The universal acceptor blood group is\n",
+  "options": [
+    "O–",
+    "A–",
+    "B+",
+    "AB+"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a8ee9af7690c8d8e55de7f62380015e1"
+}

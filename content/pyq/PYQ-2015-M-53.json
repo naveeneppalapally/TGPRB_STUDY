@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-53",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 53,
+  "question_text": "is at a distance of 4 meters from the pole. The length of the ladder is (in meters)\n60°\n4",
+  "options": [
+    "ladder which is touching the top of a pole makes an angle 60° with the floor. Its lower end",
+    "6",
+    "8",
+    "9",
+    "10"
+  ],
+  "is_duplicate": false,
+  "content_hash": "434e0d10a05ac6429e416892fd4063a6"
+}

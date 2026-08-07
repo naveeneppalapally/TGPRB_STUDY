@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-14-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 14,
+  "question_text": "Which device is used to measure the speed of wind?\n>±* y˚>±ìï ø=\\e&ÜìøÏ ñ|üjÓ÷–+#˚ |ü]ø£s¡eTT\n________________________________________________________________________",
+  "options": [
+    "Altimeter",
+    "Calorimeter",
+    "Chronometer",
+    "Anemometer",
+    "n©ºMT≥sY",
+    "¬ø˝ÀØMT≥sY",
+    "Áø√H√MT≥sY",
+    "n˙yÓ÷MT≥sY"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-14-P2",
+  "content_hash": "b060300ac0caad98b33610c600fe3a77"
+}

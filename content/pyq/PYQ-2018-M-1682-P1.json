@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-1682-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 1682,
+  "question_text": "1683, 1684, 1685, 1686, 1687, 1688, 1689, . . .",
+  "options": [
+    "1682 (2) 1685 58) 1687 (4) 1689"
+  ],
+  "is_duplicate": false,
+  "content_hash": "7f7b7d32448c629e7f3c2e2c0d4cb037"
+}

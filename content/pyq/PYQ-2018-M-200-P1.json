@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-200-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 200,
+  "question_text": "1, 5, 7 and 10 together represent",
+  "options": [
+    "Unemployed graduates (2) Employed graduates",
+    "Unemployed post-graduates (4) Employed post-graduates"
+  ],
+  "is_duplicate": false,
+  "content_hash": "4c4b4528de87c2b4bae308b506bd032d"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-62",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 62,
+  "question_text": "Chemical name of Dry Ice is\n",
+  "options": [
+    "Solid H2O",
+    "Solid O3",
+    "Solid CaCO3",
+    "Solid CO2",
+    "H2O",
+    "O3",
+    "CaCO3",
+    "CO2"
+  ],
+  "is_duplicate": false,
+  "content_hash": "9e592e43b0fb8a46c97d64eace0eec33"
+}

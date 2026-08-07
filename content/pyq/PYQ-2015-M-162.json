@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-162",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 162,
+  "question_text": "Read the following statements:\na)\nNational Advisory Council was established by NDA Government\nb)\nThe chair person of National Advisory Council was Sonia Gandhi\nc)\nNational Advisory Council advises Union and State Governments\nd)\nPrime Minister is the Chairman of National Advisory Council\n\na)\n\nb)\n\nc)\n\nd)\n\nChoose the correct statements:\n\nP31\n36-A\nX1\nBooklet Code A",
+  "options": [
+    "a & d",
+    "b only",
+    "a, b & c",
+    "b & d"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3c4d972bdf1c5b7f084e8b5f354cdfa2"
+}

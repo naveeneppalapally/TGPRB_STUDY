@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-176",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 176,
+  "question_text": "Match the following:\nOrganisation\nYear of establishment\n(a)\nBorder Security Force\n(i)\n1963\n(b)\nIndo-Tibetan Border Police\n(ii)\n1965\n(c)\nSashastra Seema Bal\n(iii) 1978\n(d)\nCoast Guard\n(iv) 1962\n\n\n\n(a)\n\n(i)\n1963\n(b) \n(ii)\n1965\n(c) \n(iii) 1978\n(d) \n(iv) 1962\nThe correct answer is\n\nP31\n41-A\nX1\nBooklet Code A",
+  "options": [
+    "a-ii, b-iv, c-i, d-iii",
+    "a-ii, b-iv, c-iii, d-i",
+    "a-iv, b-ii, c-i, d-iii",
+    "a-iii, b-i, c-ii, d-iv"
+  ],
+  "is_duplicate": false,
+  "content_hash": "c3ce5a11eb420d48da4bf24de938869a"
+}

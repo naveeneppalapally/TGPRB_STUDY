@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-115-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 115,
+  "question_text": "MP : HK : : WZ :_________\n________________________________________________________________________",
+  "options": [
+    "QS",
+    "PS",
+    "RU",
+    "RV"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-115-P1",
+  "content_hash": "3b85e16494118593005842380ba0b957"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "PYQ-2016-M-81-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 81,
+  "question_text": "The sum of the series\n5\n5\n5\n5\n+\n+\n+\n+\n∞ is\nÁX‚DÏ\n5\n5\n5\n5\n+\n+\n+\n+\n∞ jÓTTø£ÿ yÓTT‘·Ô+\n24\n24\n24\n24\nP11\n18-A\nP-1\nBooklet Code A",
+  "options": [
+    "3",
+    "2",
+    "2",
+    "....",
+    "3",
+    "2",
+    "2",
+    "....",
+    "17",
+    "15",
+    "13",
+    "11"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a0e7ec78dac04edd4878d7b4c31f59df"
+}

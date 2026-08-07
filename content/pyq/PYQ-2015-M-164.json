@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-164",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 164,
+  "question_text": "Assertion (A) : The Parliament can legislate matters in State List in national interest.\nReason (R) :\nRajya Sabha is part of Parliament.\nThe correct answer is\n(A) \n\n(R) \n\n",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true and (R) is not the correct explanation of (A)",
+    "(A) is true and (R) is false",
+    "(A) is false and (R) is true",
+    "(A)(R) (A)(R)",
+    "(A)(R) (A)(R)",
+    "(A)(R) ",
+    "(A)(R) "
+  ],
+  "is_duplicate": false,
+  "content_hash": "8b563d9dec7fde4320d20f02a96f780f"
+}

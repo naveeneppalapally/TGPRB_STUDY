@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-70-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 70,
+  "question_text": "Who won the Hyderabad E-Prix Formula-E car race in February 2023?\nLucas di Grassi (2) Mitch Evans\nAntonio Felix da Costa (4) Jean-Eric-Vergne",
+  "options": [
+    "(3)",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "1d9d8fca4e44249e9ec3095c7664bbcd"
+}

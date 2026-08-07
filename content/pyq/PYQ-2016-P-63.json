@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2016-P-63",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 63,
+  "question_text": "(1)\n1339\n————————————————————————————————————————",
+  "options": [
+    "2665",
+    "3991",
+    "4223"
+  ],
+  "is_duplicate": false,
+  "content_hash": "6336826eda4b6e3f8bce68355c8de322"
+}

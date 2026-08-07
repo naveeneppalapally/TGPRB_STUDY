@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-132-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 132,
+  "question_text": "If the image of a clock in a mirror shows the time as 6:30, then the actual time shown by\nthe clock is\nwdod aS Kaairdo co, (OBDowo Ssocira) 6:30 m urds way w Aadizdo\narNod ween Saoctwho",
+  "options": [
+    "6:30 (2) 9:30 3) 5:30 (4) 2:30"
+  ],
+  "is_duplicate": false,
+  "content_hash": "02e7651c0edc2139d648850097ddb2cd"
+}

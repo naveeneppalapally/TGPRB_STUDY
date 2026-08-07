@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-57",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 57,
+  "question_text": "The instrument used to measure sounds under water is\n",
+  "options": [
+    "Hygrometer",
+    "Hydrophone",
+    "Hypsometer",
+    "Gramaphone",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "6c4bf4d46b7b6b02164bdd95f7c0349b"
+}

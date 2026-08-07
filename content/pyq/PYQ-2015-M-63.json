@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-63",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 63,
+  "question_text": "Which one of the following atmospheric layers help in radio communications\n",
+  "options": [
+    "Troposphere",
+    "Ionosphere",
+    "Stratosphere",
+    "Mesosphere",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "63c8d60be3e5fb0e84bd3d99b0fb107f"
+}

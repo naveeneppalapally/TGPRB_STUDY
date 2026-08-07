@@ -1,0 +1,17 @@
+{
+  "id": "PYQ-2016-P-89",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 89,
+  "question_text": "Find the missing number in the sequence 120, 99, 80, 63, 48, ?",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "bfa960e7074fe076eeb2f3d51113cc24"
+}

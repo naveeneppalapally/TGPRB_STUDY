@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-143-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 143,
+  "question_text": "Number of students who do not read any newspaper ts\n(lL) 21 (2) 20 me) 19 (4)",
+  "options": [
+    "TT GSE ShSa IoGEe Sows"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1dde821cd4c36cd76243868d3a516bcb"
+}

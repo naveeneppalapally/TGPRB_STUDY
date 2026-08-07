@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2018-M-169-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 169,
+  "question_text": "Inacode the letters of the English alphabet arc coded by numbers as follows.\nAolZO2,B 03, Yo4,CO5,XO6...\nThen the code for COME TODAY is\naS SES aot w§ross Somgod Go déor §& Bao.\nAG1,Z202,B 83, Y 4, Co5,Xo6...\newaydo COME TODAY 8), §°6",
+  "options": [
+    "(14, 24, 7,1 4, 5, 24, 25, 9",
+    "5,24,25,9 44,247,104",
+    "5, 24, 25; 2. 12, 24,7, 1,4",
+    "5, 24,25, 9 19, 26,71 Ae"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5fff6467bceef81fc85205ca4574ed14"
+}

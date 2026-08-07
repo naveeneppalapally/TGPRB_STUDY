@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2015-M-41",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 41,
+  "question_text": "for 19 runs. His bowling average after this match decreases by 0.1 runs. The number of\nwickets taken by him before this match is\nbowling9.5\n193",
+  "options": [
+    "cricketer's bowling average is 9.5 runs per wicket. In the next match, he takes 3 wickets"
+  ],
+  "is_duplicate": false,
+  "content_hash": "9adfd3d61eac828dd3893a464098ec6a"
+}

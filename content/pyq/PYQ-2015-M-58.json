@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-58",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 58,
+  "question_text": "Convert 10 inches into kilometers\n10",
+  "options": [
+    "254 × 10–3",
+    "2.54 × 10–4",
+    "2.54 × 104",
+    "25.4 × 10–4"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5e0b3b13db5f250785e352355193faf7"
+}

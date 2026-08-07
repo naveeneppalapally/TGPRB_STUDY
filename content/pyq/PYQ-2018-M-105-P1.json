@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-105-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 105,
+  "question_text": "ZA, YE, XI, WO, TU",
+  "options": [
+    "ZA (2) XI (3) wo 4) TU"
+  ],
+  "is_duplicate": false,
+  "content_hash": "54ccdc6aa39a376d8a86c36ad815b225"
+}

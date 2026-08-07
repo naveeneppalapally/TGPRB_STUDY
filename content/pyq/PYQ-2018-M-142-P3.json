@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-142-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 142,
+  "question_text": "The number of integers in U that are divisible by exactly any two of 2,35 is",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "a747dd344a4f4d7aa8b8ebac1d5d750b"
+}

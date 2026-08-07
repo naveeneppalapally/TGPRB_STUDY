@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-158",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 158,
+  "question_text": "Five persons A, B, C, D and E sit around a table such that A is diametrically opposite to\nE and C, D are on either side of A. If there is only one person D to the right of A, then\nthe order in which they sit is\nHµR∂VgRiVLRiV ™´s˘NRPVÚÃ¡V A, B, C, D, E INRP  ¡Ã˝¡ øR¡V»Ì¡W NRPWLRiVË©yıLRiV. @LiµR∂VÕ‹[ A, E INRP ™y˘xqsxmso\n@LiøR¡VÕ˝‹[ DLi≤R∂gS, C, D Ã¡V ANTP BLRiV˙xmsNRP‰Ã¡ D©yıLRiV. ANTP NRPV≤T∂ ˙xmsNRP‰©´s D©´sı IZNP[ ™´s˘QNTPÚ D\n@LiVVæªΩ[ ™yŒ˝œ¡ß NRPWLRiVË©´sı ˙NRP™´sVLi\n————————————————————————————————————————",
+  "options": [
+    "ADEBC",
+    "ACEBD",
+    "ABEDC",
+    "AEDBC"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-158",
+  "content_hash": "c7b6aaeafa8593d70086394174ef0dee"
+}

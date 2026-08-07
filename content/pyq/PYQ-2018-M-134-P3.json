@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2018-M-134-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 134,
+  "question_text": "IfA is B’s brother, B is C’s sister, and C is the mother of the boy D, then D is A’s\nD, Aco®,\n30-C\nRe GEI II ON\nAR-2 Booklet Code: €",
+  "options": [
+    "Sister (2) Brother (3) Uncle a: > (4) Nephew",
+    "Buk, Added A, C Bos, 50 B Sako erento D Ang, 58 C, von’ ware",
+    "a6 (2) addoeb 6): Srdootsgi (A) Beeye"
+  ],
+  "is_duplicate": false,
+  "content_hash": "78c76eb9e2a84da7cd8013fd5f3c8f08"
+}

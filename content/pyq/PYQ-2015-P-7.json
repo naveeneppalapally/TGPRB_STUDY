@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-P-7",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 7,
+  "question_text": "To “take a leaf out of someone’s book” is to\n————————————————————————————————————————",
+  "options": [
+    "Steal something",
+    "Damage something",
+    "Cheat someone",
+    "Imitate somebody in a particular way"
+  ],
+  "is_duplicate": false,
+  "content_hash": "03c60ba9a64f01f33eff0ac977ad4ea5"
+}

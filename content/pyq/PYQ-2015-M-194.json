@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-194",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 194,
+  "question_text": "Choose the incorrect pair from the following:\nStadium\nLocation\nStadium\nLocation\nJamshedpur\nPune\nKolkata\nNavi Mumbai\n\n\n\n\n\n\n\n\n",
+  "options": [
+    "Keenan stadium",
+    "Shivaji stadium",
+    "Ranji stadium",
+    "D.Y. Patil stadium",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "b6bb0062a44715e1dc45117d97abb577"
+}

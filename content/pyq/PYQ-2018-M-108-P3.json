@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-108-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 108,
+  "question_text": "Beetroot, Brinjal, Carrot, Potato\n|r, Sosros, sg35, aomgtioos",
+  "options": [
+    "| Potato (2) Carrot (3) | Brinjal (4) Beetroot",
+    "wormrgediood (2): erga 6) Sosa (4) Deseires"
+  ],
+  "is_duplicate": false,
+  "content_hash": "abd3c07f77be8f3245a56a603386e8e8"
+}

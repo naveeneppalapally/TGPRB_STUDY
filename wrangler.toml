@@ -1,0 +1,20 @@
+name = "tslprb-studyos"
+pages_build_output_dir = ".output/public"
+compatibility_date = "2025-01-01"
+
+# nodejs_compat is required because @nuxtjs/supabase and several Nuxt internals
+# use Node.js APIs (Buffer, crypto, process) that are not available in the
+# standard Cloudflare Workers runtime. This flag polyfills them at the edge.
+compatibility_flags = ["nodejs_compat"]
+
+# R2 bucket binding for media assets (images, PDFs).
+# The bucket name must match what you created in your Cloudflare dashboard.
+# Access in server routes via: event.context.cloudflare.env.MEDIA_BUCKET
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "tslprb-media"
+
+# NOTE: Do NOT put SUPABASE_URL / SUPABASE_ANON_KEY / SUPABASE_SERVICE_KEY here.
+# Set them as encrypted environment variables in the Cloudflare Pages dashboard
+# under Settings > Environment variables. They will be injected at build time
+# and runtime automatically without ever touching this file.

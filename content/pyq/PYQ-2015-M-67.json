@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-67",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 67,
+  "question_text": "The term “Dark Fermentation” means\nDark Fermentation",
+  "options": [
+    "a method to reduce CO2 in the atmosphere",
+    "a method to produce hydrogen as fuel from waste water",
+    "a method to dispose nuclear waste",
+    "a method to produce methane from organic waste",
+    "CO2 ",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "b71a196fa5ea2195b4afcc237eeb0bf9"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-100",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 100,
+  "question_text": "Who is sitting on the side exactly opposite to ‘D’ ?",
+  "options": [
+    "",
+    "F",
+    "B",
+    "A",
+    "C"
+  ],
+  "is_duplicate": false,
+  "content_hash": "06d1b8171f0193c2bcaa67ebda246f05"
+}

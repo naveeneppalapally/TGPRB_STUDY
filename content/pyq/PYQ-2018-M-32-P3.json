@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-32-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 32,
+  "question_text": "162+ 172 + 182+ + 30 - | |",
+  "options": [
+    "6215~ (2)£/7725- (3) 8215 (4) 9535"
+  ],
+  "is_duplicate": false,
+  "content_hash": "4ba6d4f327f0719bd6fa1bd11686e7ed"
+}

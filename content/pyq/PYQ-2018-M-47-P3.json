@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-47-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 47,
+  "question_text": "if 2227-8 oa. then a:b =\n(36)\" -9* -(18)°\n8° -(27)* 6°\n(36) -9*-(18)”\n=27.3° wond esx& a:b=",
+  "options": [
+    "1:8 (2) 72:3 (3) 8:1 4) 3:2"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b6e033f99a0ea10e30222d6b1de3f02f"
+}

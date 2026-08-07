@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-87",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 87,
+  "question_text": "If UMBRELLA is coded as VLCQFKMZ, then JUSTICE is coded as\nUMBRELLAVLCQFKMZJUSTICE",
+  "options": [
+    "KSSTJBF",
+    "KTTSICF",
+    "KTTSJBF",
+    "KTSSJAF"
+  ],
+  "is_duplicate": false,
+  "content_hash": "3618c78d7c284b3789eec0c7df3a40bd"
+}

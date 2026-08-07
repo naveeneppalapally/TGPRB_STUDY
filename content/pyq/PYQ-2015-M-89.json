@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-89",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 89,
+  "question_text": "If TEN, GANG and MEAT are coded as 439, 6596 and 1354 respectively, then how is\nMANAGEMENT coded?\nTEN, GANGMEAT439, 65961354\nMANAGEMENT",
+  "options": [
+    "1595363194",
+    "1595313694",
+    "1595361934",
+    "1595631394"
+  ],
+  "is_duplicate": false,
+  "content_hash": "34100e7fd9018542d241156c1134e3f4"
+}

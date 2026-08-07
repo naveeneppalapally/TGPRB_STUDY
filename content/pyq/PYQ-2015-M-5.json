@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-5",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 5,
+  "question_text": "His mother was _________ American though his father was __________ European.",
+  "options": [
+    "a, a",
+    "a, an",
+    "an, a",
+    "an, an"
+  ],
+  "is_duplicate": false,
+  "content_hash": "9a849e91fc81a712755e98937b11f335"
+}

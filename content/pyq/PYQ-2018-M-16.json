@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-16",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2018_Mains.txt",
+  "exam": "Constable",
+  "year": 2018,
+  "stage": "Mains",
+  "question_number": 16,
+  "question_text": "The primary purpose of the passage is to",
+  "options": [
+    "argue that insects are not unique in their dependence on rigid routines.",
+    "_ argue that insect behaviour relies on rigid routines which appear to be unconscious.",
+    "analyze the maternal behaviour of wasps.",
+    "compare and contrast the work of Darwin and Fabre."
+  ],
+  "is_duplicate": false,
+  "content_hash": "c620228ba33a05f669f1413d6897cdb6"
+}

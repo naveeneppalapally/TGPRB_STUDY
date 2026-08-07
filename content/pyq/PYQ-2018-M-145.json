@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-145",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2018_Mains.txt",
+  "exam": "Constable",
+  "year": 2018,
+  "stage": "Mains",
+  "question_number": 145,
+  "question_text": "49:121:: 169:\nQG) 289 (4) 324",
+  "options": [
+    "225 (2) 256"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b4b73552e1c5861c4d4508205086e5bb"
+}

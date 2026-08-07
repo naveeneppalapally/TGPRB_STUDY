@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-33",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 33,
+  "question_text": "The smallest number which when subtracted by 11 is divisible by 16, 18, 21, 24 and 28 is\n1116, 18, 21, 24 28 \n",
+  "options": [
+    "1109",
+    "1119",
+    "1019",
+    "1214"
+  ],
+  "is_duplicate": false,
+  "content_hash": "be1947d1d6c64b7e8475bf80663c172b"
+}

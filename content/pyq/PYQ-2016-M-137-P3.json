@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-137-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 137,
+  "question_text": "In a row of boys, K is fifth from the left and R is sixth from the right. If they exchange their\npositions, K becomes the thirteen from the left. Then the position of R from the right is\nu≤\\Ts¡ es¡dü˝À m&ÉeTyÓ’|ü⁄ qT+∫ ◊<äeyê&ÉT K, ≈£î&çyÓ’|ü⁄ qT+∫ Äs¡eyê&ÉT R. yê] kÕúHê\\T\n‘ês¡Te÷s¡T #˚düT≈£î+fÒ K kÕúq+ m&ÉeTqT+∫ |ü<äeT÷&Ée~ nsTT‘˚ ≈£î&çyÓ’|ü⁄ qT+∫ R kÕúq+\n________________________________________________________________________",
+  "options": [
+    "Seventh",
+    "Eleventh",
+    "Fourteenth",
+    "Eighteenth",
+    "@&Ée~",
+    "|ü<äø=+&Ée~",
+    "|ü<ëï\\T>∑e~",
+    "|ü<Ó›ì$T<äe~"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-137-P1",
+  "content_hash": "098cd2a0b57de48a7171e44ef8c59295"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-148",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 148,
+  "question_text": "Observe the following figures :\n˙NTPLiµj∂ xms…ÿÃ¡©´sV gRi™´sV¨sLiøR¡Li≤T∂ :\nThen, (A, B) =\n@xmsˆV≤R∂V, (A, B) =\n————————————————————————————————————————",
+  "options": [
+    "(–2, 15)",
+    "(–2, 13.5)",
+    "(–3, 13)",
+    "(–3, 13.5)"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-148",
+  "content_hash": "e8f6f22033312a8f2dce63646d93e0a9"
+}

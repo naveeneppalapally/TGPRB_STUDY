@@ -1,0 +1,41 @@
+{
+  "note_id": "NOTE-GEO-DRAINAGE",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-DRAIN-01",
+      "question": "Which of the following is a west-flowing peninsular river that forms an estuary instead of a delta?",
+      "options": ["Godavari", "Narmada", "Krishna", "Cauvery"],
+      "correct_answer": 1,
+      "explanation": "Narmada flows through a rift valley westward into the Arabian Sea and forms an estuary, not a delta. All east-flowing rivers (Godavari, Krishna, Cauvery) form deltas."
+    },
+    {
+      "id": "GATE-DRAIN-02",
+      "question": "The Brahmaputra river is known by which name in Tibet?",
+      "options": ["Dihang", "Tsangpo", "Meghna", "Padma"],
+      "correct_answer": 1,
+      "explanation": "Brahmaputra is called Tsangpo in Tibet, Dihang in Arunachal Pradesh, and Brahmaputra in Assam."
+    },
+    {
+      "id": "GATE-DRAIN-03",
+      "question": "Which doab lies between the Beas and Sutlej rivers?",
+      "options": ["Bari Doab", "Bist Doab", "Rechna Doab", "Chaj Doab"],
+      "correct_answer": 1,
+      "explanation": "Bist Doab lies between Beas and Sutlej. Bari = Beas-Ravi. Rechna = Ravi-Chenab. Chaj = Chenab-Jhelum."
+    },
+    {
+      "id": "GATE-DRAIN-04",
+      "question": "How many states fall in the catchment area of the Godavari river?",
+      "options": ["5", "6", "7", "8"],
+      "correct_answer": 2,
+      "explanation": "Godavari basin covers 7 states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka, and Odisha."
+    },
+    {
+      "id": "GATE-DRAIN-05",
+      "question": "The Luni river, originating from the Pushkar Valley, ends in which of the following?",
+      "options": ["Arabian Sea", "Rann of Kutch", "Gulf of Khambhat", "Bay of Bengal"],
+      "correct_answer": 1,
+      "explanation": "Luni is India's only major river with inland drainage — it ends in the Rann of Kutch without reaching any sea."
+    }
+  ]
+}

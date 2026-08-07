@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-40-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 40,
+  "question_text": "ˇø£ dü+K´ x qT 30% ô|+∫, ‘·s¡Tyê‘· 30% ‘·–Z+#ês¡T. Ä dü+K´ x\n________________________________________________________________________",
+  "options": [
+    "number x is increased by 30% and then decreased by 30%, then the number x",
+    "Does not change",
+    "Decreases by 6%",
+    "Increases by 6%",
+    "Decreases by 9%",
+    "e÷s¡<äT",
+    "6% ‘·–Z+~",
+    "6% ô|]–+~",
+    "9% ‘·–Z+~"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2cb5eb607e1b79bea25a71edfcd3b658"
+}

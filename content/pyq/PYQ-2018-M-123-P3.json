@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-123-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 123,
+  "question_text": "Number of persons who read all three newspapers is\nSarg ro Sesor YASH HONS\npersons who read either newspaper B or newspaper Cis",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "94087668261ccb7ba853711e774b55a2"
+}

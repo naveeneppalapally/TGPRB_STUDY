@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-181",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 181,
+  "question_text": "Match the following:\nList - I (Day)\nList - II (Date)\na)\nEarth Day\n(i)\n22nd April\nb)\nInternational Tigers Day\n(ii)\n8th June\nc)\nWorld Oceans Day\n(iii) 29th July\nd)\nNational Sports Day\n(iv) 29th August\n\nI\nII\na)\n\n(i)\n 22\nb)\n\n(ii)  8\nc)\n\n(iii)  29\nd)\n\n(iv)  29\nThe correct answer is\n",
+  "options": [
+    "a-(iii), b-(i), c-(iv), d-(ii)",
+    "a-(iv), b-(ii), c-(i), d-(iii)",
+    "a-(ii), b-(iv), c-(iii), d-(i)",
+    "a-(i), b-(iii), c-(ii), d-(iv)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8dfe8ca009b2d991de62154d3d901891"
+}

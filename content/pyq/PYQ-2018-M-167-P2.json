@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2018-M-167-P2",
+  "type": "pyq",
+  "exam_section": "Telugu",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P2_Telugu.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P2",
+  "part_name": "Telugu",
+  "question_number": 167,
+  "question_text": "DOCTOR : DISEASE : : SHERIFF :\nBoose : Sio':: DAH:",
+  "options": [
+    "CRIME _ (2) DUAL WAR",
+    "MURDER (4) THEFT",
+    "0 (2) god dingo.",
+    "ores (4) GSotidso"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8493e9afe4699405164d4dd808258599"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-7",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 7,
+  "question_text": "Either of the roads ___________ to Vasantha Nagar.",
+  "options": [
+    "lead",
+    "leads",
+    "have led",
+    "are led"
+  ],
+  "is_duplicate": false,
+  "content_hash": "7248722d505e891c9cf0a7a1af9e14dd"
+}

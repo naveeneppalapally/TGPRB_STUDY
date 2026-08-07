@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2018-M-169-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 169,
+  "question_text": "Ina code the letters of the English alphabet arc coded by numbers as follows.\nAG1,Z202,B 03, YO4,CO5,XO6...\nThen the code for COME TODAY is\naS SES aot w¥ross Somgod Go dédor §& Baw.\nAG1,Z202,B 863, Yo4, Co5,Xe6...\newdyebo COME TODAY a8, 6",
+  "options": [
+    "(14, 24, 7, 1 4, 5, 24, 25,9",
+    "5,24,25,9 4, 24, 7",
+    "5,24,25,9 12,242.14",
+    "5,24,25,9 12,26, 214"
+  ],
+  "is_duplicate": false,
+  "content_hash": "9024b64ef6a9071c1eab6b42bf5e24d7"
+}

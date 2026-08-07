@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-92",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 92,
+  "question_text": "Secretary has arrived at 10.10 am, 30 minutes before chairperson. Chairperson arrived\n10 minutes late to the scheduled meeting. When is meeting scheduled?\n10.10 am\n3010\n",
+  "options": [
+    "10.40 am",
+    "10.10 am",
+    "10.30 am",
+    "10.20 am"
+  ],
+  "is_duplicate": false,
+  "content_hash": "99c9180da678da9b88e4d8d75ebdd355"
+}

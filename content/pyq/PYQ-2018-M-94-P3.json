@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-94-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 94,
+  "question_text": "By what percentage should the radius of a sphere be increased so that the volume increases\nby 200%?\naS SSo9 CoH, HSSHS00 200% DdmrecSs xa rgrora now d)S Tdo",
+  "options": [
+    "(¥3-1) 100 (2) (v3-1)100 (3) (¥%-1) (4) (3-1)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "22b4fc205907fcb170ea71760d9b1c5e"
+}

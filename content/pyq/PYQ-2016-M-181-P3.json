@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-181-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 181,
+  "question_text": "Two positions of dice are shown below. The number of points that appear on the face opposite\nto the face containing 5 points is\n¬s+&ÉT bÕ∫ø£\\T øÏ+~ $<Ûä+>± ñHêïsTT. Ç+<äT˝À 5 _+<äTe⁄\\T >∑\\ eTTU≤ìøÏ m<äTs¡T>± ñqï\neTTK+ô|’ >∑\\ _+<äTe⁄\\ dü+K´\n•     •\n•     •\n•\n•\n•    •\n•     •\n•     •\n•\n•    •\nP11\n43-A\nP-1\nBooklet Code A",
+  "options": [
+    "3",
+    "1",
+    "2",
+    "4"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-181-P1",
+  "content_hash": "c902e3977507cb0f4c1eb2fa83631b05"
+}

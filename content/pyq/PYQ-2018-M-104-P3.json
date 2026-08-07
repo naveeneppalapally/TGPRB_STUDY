@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-104-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 104,
+  "question_text": "9, 49, 81, 121, 169, 289\nh) 49 (2) 81 (3) 121 (4) 169",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "66548ecce7fb706bc381b0e051b8a0cb"
+}

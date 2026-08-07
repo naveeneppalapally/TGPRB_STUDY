@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Nuxt build artifacts
+.nuxt/
+.output/
+dist/
+
+# Environment secrets - NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# Wrangler local state
+.wrangler/
+.dev.vars
+
+# Nuxt Content SQLite cache (auto-generated, not source)
+.data/
+
+# Large binaries and archives - do not commit
+*.zip
+*.tar.gz
+*.sqlite
+*.db
+
+# OS / editor
+.DS_Store
+.directory
+Thumbs.db
+.idea/
+.vscode/settings.json
+
+# Logs
+*.log
+npm-debug.log*

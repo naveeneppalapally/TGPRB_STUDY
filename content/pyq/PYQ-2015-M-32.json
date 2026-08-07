@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-32",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 32,
+  "question_text": "The ratio of two numbers is 3:5 and their H.C.F is 5. Then, their L.C.M is\n3:5 H.C.F () 5\nL.C.M ()",
+  "options": [
+    "45",
+    "35",
+    "150",
+    "75"
+  ],
+  "is_duplicate": false,
+  "content_hash": "0dc77f3578a48aeba25a96ef559f008c"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-17-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 17,
+  "question_text": "Polymerase chain reaction is a technique to make copies of\nbÕ*eTπsCŸ >=\\TdüT #·s¡´ |ü<ä∆‹ <ë«sê á ÁøÏ+~ yêì ø±|”\\qT ‘·j·÷s¡T#˚j·Te#·TÃ\n________________________________________________________________________",
+  "options": [
+    "DNA using living cells",
+    "RNA using living cells",
+    "DNA using dead cells",
+    "RNA using dead cells",
+    "düJe ø£D≤\\qT ñ|üjÓ÷–dü÷Ô DNA qT",
+    "düJe ø£D≤\\qT ñ|üjÓ÷–dü÷Ô RNA qT",
+    "ìØ®e ø£D≤\\qT ñ|üjÓ÷–dü÷Ô DNA qT",
+    "ìØ®e ø£D≤\\qT ñ|üjÓ÷–dü÷Ô RNA qT"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-17-P2",
+  "content_hash": "35da0e72ac22dc17eedcdc05e622d684"
+}

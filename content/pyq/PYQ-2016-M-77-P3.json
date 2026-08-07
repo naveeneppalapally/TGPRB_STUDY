@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-77-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 77,
+  "question_text": "of the train is (in mts.)\nˇø£ ¬s’\\T ˇø£ f…*Á>±|òü⁄ düÔ+uÛ≤ìï 8 ôdø£qT\\˝ÀqT, 264 MTˆˆ\\ bı&Ée⁄qï e+‘ÓqqT 20 ôdø£qT\\˝ÀqT\n<ë≥>∑\\<äT. n|ü⁄&ÉT Ä ¬s’\\T bı&Ée⁄ (MT≥s¡¢˝À)\nP11\n17-A\nP-1\nBooklet Code A",
+  "options": [
+    "train passes a telegraph post in 8 sec. and a 264 m long bridge in 20 sec. Then the length",
+    "180",
+    "176",
+    "164",
+    "158"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-77-P1",
+  "content_hash": "19130d218205f805463d0d4a157f8de4"
+}

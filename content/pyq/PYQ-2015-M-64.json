@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-64",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 64,
+  "question_text": "Among the elements given below, which one has the highest electronegativity\n",
+  "options": [
+    "Cl",
+    "Br",
+    "O",
+    "N"
+  ],
+  "is_duplicate": false,
+  "content_hash": "72fc2664f10f2929175072f816f912e5"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-191-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 191,
+  "question_text": "Did the person A get profit?\nIl) The person A sold 8 bananas out of 9 bananas for Rs. 32.\n9 & A 30 Sr.o8 Baye.\nIl) 9 eSBSQs* 8 wSSSHx A 32 dros wSAC.",
+  "options": [
+    "The person A purchased 9 bananas for Rs. 30."
+  ],
+  "is_duplicate": false,
+  "content_hash": "e5e79e4be33d29d0e7e21b00c0b7a67f"
+}

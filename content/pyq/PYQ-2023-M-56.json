@@ -1,0 +1,20 @@
+{
+  "id": "PYQ-2023-M-56",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2023_Mains.txt",
+  "exam": "Constable",
+  "year": 2023,
+  "stage": "Mains",
+  "question_number": 56,
+  "question_text": "Name the Afghan leader who strongly supported Rana Pratap Singh in the battle of Haldighati in 1576.",
+  "options": [
+    "Hasan Khan Mewati (2) Hakim Khan Sur",
+    "Nusrat Shah (4) Munim Khan"
+  ],
+  "is_duplicate": false,
+  "content_hash": "6c3e19dd2cc158b7fa275d5b082a612c"
+}

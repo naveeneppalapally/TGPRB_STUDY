@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-101-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 101,
+  "question_text": "15, 35, 99, 143\n(I) 99 B® 14 (3) 35 (4) 15",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "0599f8957d7d87fb2f597a4beb3bfa93"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-191",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 191,
+  "question_text": "Smallest parliamentary constituency in terms of number of electors is\n",
+  "options": [
+    "Ladak",
+    "Daman and Diu",
+    "Lakshadweep",
+    "Andaman and Nicobar island",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "dc12865e3b61e7f0b4eba63f32a0866f"
+}

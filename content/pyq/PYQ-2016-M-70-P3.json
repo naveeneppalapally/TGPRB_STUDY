@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-70-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 70,
+  "question_text": "From a group of 6 men and 4 women a committee of 4 persons is to be formed.   The\nnumber of different ways in which it can be done so that the committee has at least one\nwomen is\n6 >∑Ts¡T |ü⁄s¡Twüß\\T, 4 >∑Ts¡T Åd”Ô\\T ñqï ˇø£ düeT÷Vü≤eTT qT+∫ 4 >∑Ts¡T e´≈£îÔ\\Tqï ˇø£ ø£$T{°ì\n@s¡Œs¡#ê*. ø£˙dü+ ˇø£ Åd”Ô nsTTHê ñ+&˚≥T¢ @s¡Œs¡#·>∑*π> ø£$T{°\\ dü+K´\n________________________________________________________________________",
+  "options": [
+    "210",
+    "225",
+    "195",
+    "185"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-70-P1",
+  "content_hash": "9f9b0c90069f6b6ddd02922a6f1a2ab1"
+}

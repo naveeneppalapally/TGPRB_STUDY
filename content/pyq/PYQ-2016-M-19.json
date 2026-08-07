@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-19",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 19,
+  "question_text": "Why does the author feel happy in the recollection of dangers faced and overcome ?\n————————————————————————————————————————",
+  "options": [
+    "Because they brought him a new experience and lifted him above himself for a time",
+    "Because he was lucky to be alive",
+    "Because they brought him a new experience",
+    "Because he survived his ordeal"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-19",
+  "content_hash": "8c603fa88c1e98f88451c80a9c117237"
+}

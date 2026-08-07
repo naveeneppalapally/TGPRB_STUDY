@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-146-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 146,
+  "question_text": "Number of students who read newspapers B and C but not Ais\nwor Seseo B, Ceo Seoydr As BdSd IopQo dons",
+  "options": [
+    "23 (2) 20 (3) 17 AD Vs"
+  ],
+  "is_duplicate": false,
+  "content_hash": "eec5ea11567fd5a47b9f090cb4f197af"
+}

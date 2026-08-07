@@ -1,0 +1,200 @@
+[
+  {
+    "id": "FC-GEO-DRAIN-001",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Peninsular Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Which is the longest peninsular river in India?",
+    "back": "Godavari — 1,465 km. It is also called 'Dakshin Ganga'. Originates from Nasik, Maharashtra."
+  },
+  {
+    "id": "FC-GEO-DRAIN-002",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Peninsular Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "How many states does the Godavari basin cover?",
+    "back": "7 states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka, Odisha."
+  },
+  {
+    "id": "FC-GEO-DRAIN-003",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Peninsular Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Which is the easternmost tributary of the Godavari?",
+    "back": "Sabari. Common trap: Indravati is the LARGEST tributary, but Sabari is the EASTERNMOST."
+  },
+  {
+    "id": "FC-GEO-DRAIN-004",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "West-Flowing Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Narmada river flows into which sea? Does it form a delta or estuary?",
+    "back": "Arabian Sea. It forms an ESTUARY (not a delta) because it flows through a rift valley with higher velocity."
+  },
+  {
+    "id": "FC-GEO-DRAIN-005",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "West-Flowing Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Where does the Luni river end?",
+    "back": "Rann of Kutch — it's India's only major river with inland drainage (doesn't reach any sea)."
+  },
+  {
+    "id": "FC-GEO-DRAIN-006",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "West-Flowing Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Where does the Narmada river originate?",
+    "back": "Amarkantak Plateau, Madhya Pradesh. Length: 1,312 km."
+  },
+  {
+    "id": "FC-GEO-DRAIN-007",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Dams & Projects",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Ukai Dam is on which river?",
+    "back": "Tapi (Tapti) river, Gujarat."
+  },
+  {
+    "id": "FC-GEO-DRAIN-008",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Dams & Projects",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Matatilla Project is on which river?",
+    "back": "Betwa river, Uttar Pradesh."
+  },
+  {
+    "id": "FC-GEO-DRAIN-009",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Dams & Projects",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Bhakra-Nangal Dam is on which river?",
+    "back": "Sutlej river (Indus system). Located at HP/Punjab border."
+  },
+  {
+    "id": "FC-GEO-DRAIN-010",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Dams & Projects",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Sardar Sarovar Dam is on which river?",
+    "back": "Narmada river, Gujarat."
+  },
+  {
+    "id": "FC-GEO-DRAIN-011",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Dams & Projects",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Rajoli Banda Diversion Scheme is on which river?",
+    "back": "Tungabhadra river, Mahabubnagar (Telangana). Most-repeated TSLPRB question (3 papers)."
+  },
+  {
+    "id": "FC-GEO-DRAIN-012",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Himalayan Rivers",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "What is the Brahmaputra called in Tibet?",
+    "back": "Tsangpo. In Arunachal Pradesh it's called Dihang. It is an antecedent river (older than the Himalayas)."
+  },
+  {
+    "id": "FC-GEO-DRAIN-013",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Doabs",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Name the 4 doabs of the Punjab region and the rivers between them.",
+    "back": "Bist (Beas-Sutlej) · Bari (Beas-Ravi) · Rechna (Ravi-Chenab) · Chaj (Chenab-Jhelum). Mnemonic: BCR CC."
+  },
+  {
+    "id": "FC-GEO-DRAIN-014",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Waterfalls",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Jog Falls (Gersoppa) is on which river?",
+    "back": "Sharavathy river, Karnataka. Highest plunge waterfall in India (253m)."
+  },
+  {
+    "id": "FC-GEO-DRAIN-015",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Waterfalls",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Dhuandhar (Marble) Falls is on which river?",
+    "back": "Narmada river at Bhedaghat, Jabalpur (MP). Marble rocks on both sides create the 'smoke' effect."
+  },
+  {
+    "id": "FC-GEO-DRAIN-016",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Historical Names",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Which river was known as 'Iravati' in ancient times?",
+    "back": "Ravi. Other ancient names: Jhelum=Vitasta, Chenab=Asikni, Beas=Vipasha, Sutlej=Shatudri."
+  },
+  {
+    "id": "FC-GEO-DRAIN-017",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Krishna Tributaries",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Name 4 key tributaries of the Krishna river.",
+    "back": "Bhima, Tungabhadra, Malaprabha, Ghataprabha. Trap: Purna and Pravara are Godavari tributaries, NOT Krishna."
+  },
+  {
+    "id": "FC-GEO-DRAIN-018",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Drainage System of India",
+    "subtopic": "Peninsular Drainage Pattern",
+    "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
+    "source_note_id": "NOTE-GEO-DRAINAGE",
+    "front": "Why do most peninsular rivers flow west to east?",
+    "back": "The Western Ghats act as the main water divide. The plateau slopes eastward, so rivers flow toward the Bay of Bengal. Only Narmada and Tapi flow west through rift valleys."
+  }
+]

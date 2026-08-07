@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-141-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 141,
+  "question_text": "|(AUBUC)|= tes se",
+  "options": [
+    "126 (2) 124 3) 120 (4) 100"
+  ],
+  "is_duplicate": false,
+  "content_hash": "85ae2603274a285749a7569e69c416d9"
+}

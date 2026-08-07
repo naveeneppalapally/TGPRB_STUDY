@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-106-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 106,
+  "question_text": "7528 is related to 5306, in the same way as 4673 is related to _________\n7528 nH˚ dü+K´≈£î 5306 dü+ã+~Û+∫q Ø‹˝À 4673 ≈£î dü+ã+~Û+∫q dü+K´ _________\n________________________________________________________________________",
+  "options": [
+    "2367",
+    "2451",
+    "2531",
+    "2641"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-106-P1",
+  "content_hash": "81b33e7b26484e78dd5c3700b8a4f829"
+}

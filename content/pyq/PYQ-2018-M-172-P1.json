@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-172-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 172,
+  "question_text": "In acertain code language, if ADILABAD is coded as 76547276 and WARANGAL is\n7 coded as 37170874, then in the same code language BANGLA is coded as\nok 86 eas* ADILABAD 8), §& 76547276 60%) WARANGAL Gok, 58\n37170874 wand od 86 eras? BANGLA anf, 86",
+  "options": [
+    "271347 (2) 270437 (3) 273047 (4) 270847"
+  ],
+  "is_duplicate": false,
+  "content_hash": "75f5ee0360d99da16983d49e5bdab276"
+}

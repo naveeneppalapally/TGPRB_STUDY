@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-80",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 80,
+  "question_text": "Observe the figures given below. Fill the place with question mark (?) with suitable number\n(?) ",
+  "options": [
+    "6",
+    "5",
+    "7",
+    "9"
+  ],
+  "is_duplicate": false,
+  "content_hash": "663c5566d20496f0fd6cdf44a810dd1e"
+}

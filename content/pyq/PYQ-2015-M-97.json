@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-97",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 97,
+  "question_text": "Three engineers P, Q, R are designing a project. Can we find out in how much time all the\nthree engineers will complete the designing, observing the following statements?\nI.\nP & Q can complete the design in 2 months\nII.\nQ & R can complete the design in 1½ months\nIII.\nP & R can complete the design in 3 months.\nP, Q, R \n\nI.\nP Q \nII.\nQ R \nIII.\nP  R \nStudy the data given and answer the questions 98 to 100 based on the same.\nSix friends A, B, C, D, E and F are sitting on the corners (vertices) of a Hexagon shaped table, all\nfacing towards centre. ‘A’ sits between F and C. D is on the second right of B and is the immediate\nneighbour of C.\n98  100 \nA, B, C, D, E  F \nF  C AB\nDDC",
+  "options": [
+    "I & II are sufficient",
+    "I, II & III are sufficient",
+    "I, II & III are insufficient",
+    "I & III are sufficient",
+    "I  II ",
+    "I, II  III ",
+    "I, II  III ",
+    "I  III "
+  ],
+  "is_duplicate": false,
+  "content_hash": "0351141828b9a2bbbc9bf7b37e42cb37"
+}

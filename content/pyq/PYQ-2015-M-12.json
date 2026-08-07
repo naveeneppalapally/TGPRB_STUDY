@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-12",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 12,
+  "question_text": "What is the meaning of the underlined phrase in ‘How did you wolf down that pizza so\nquickly’?",
+  "options": [
+    "To eat gently",
+    "To eat hungrily",
+    "To eat slowly",
+    "To swallow slowly"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1efa9c008291453fd0a57137ba8f51cb"
+}

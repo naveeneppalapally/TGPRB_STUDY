@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-190-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 190,
+  "question_text": "fs A, a sister of B?\nIl) Ais father of two children P and Q\nBr Asso eQcoomw?\nIl) P.Qed adv Seok Ados\ne",
+  "options": [
+    "Bis asister ofA",
+    "Ags Badd"
+  ],
+  "is_duplicate": false,
+  "content_hash": "43b4cd275a046b5b9e6f560c36de6f34"
+}

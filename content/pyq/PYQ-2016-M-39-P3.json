@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-39-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 39,
+  "question_text": "The population of a town is 1,54,000.  It increases by 5% during the first year.  During the\nsecond year it decreases by 10% and increases by 10% during the third year.  Then the\npopulation of the town after 3 years is\nˇø£ |ü≥ºD+˝Àì »HêuÛ≤ 1,54,000. yÓTT<ä{Ï dü+e‘·‡s¡+˝À n~ 5% ô|]–+~. ¬s+&Ée dü+e‘·‡s¡+˝À\nn~ 10% ‘·–Z eTs¡\\ eT÷&Ée dü+e‘·‡s¡+˝À 10% ô|]–+~. eT÷&ÉT dü+e‘·‡sê\\ ‘·s¡Tyê‘· Ä |ü≥ºD\n»HêuÛ≤\nP11\n10-A\nP-1\nBooklet Code A",
+  "options": [
+    "1,61,700",
+    "1,60,700",
+    "1,60,083",
+    "1,70,062"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-39-P1",
+  "content_hash": "dc570db7a78741778c09abf304324d1b"
+}

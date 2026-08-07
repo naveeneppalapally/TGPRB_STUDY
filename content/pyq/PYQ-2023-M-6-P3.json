@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-6-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 6,
+  "question_text": "7",
+  "options": [
+    "(2) - 3) 5 4 5"
+  ],
+  "is_duplicate": false,
+  "content_hash": "fcd9f09c1bc16fba3dbf8035a465176c"
+}

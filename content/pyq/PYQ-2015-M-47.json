@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-47",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 47,
+  "question_text": "6 men and 8 women can do a work in 40 days. 8 men and 16 women finish the same work in\n24 days. In how many days can 10 men and 8 women finish the same work?\n68408\n162410\n8\nP31\n11-A\nX1\nBooklet Code A",
+  "options": [
+    "16",
+    "24",
+    "28",
+    "30"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8efe8c6bac43cd5087888ec48ec20d9a"
+}

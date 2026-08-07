@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-13",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 13,
+  "question_text": "Fill in the blank with a suitable word to make the following sentence a meaningful one.\nThe festival is a three-day-long celebration that combines ______ feasts as well as ______\nfasting.\n————————————————————————————————————————",
+  "options": [
+    "unornamented, resolute",
+    "paltry, obstinate",
+    "scanty, parsimonious",
+    "sumptuous, rigid"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-13",
+  "content_hash": "926b3daa5da3a95c25924b142cd305b4"
+}

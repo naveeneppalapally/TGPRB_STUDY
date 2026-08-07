@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-13",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2018_Mains.txt",
+  "exam": "Constable",
+  "year": 2018,
+  "stage": "Mains",
+  "question_number": 13,
+  "question_text": "_ In the following question, there are six sentences of a paragraph marked S1, S6, P, Q, R, S. The\npositions of $1 and S6 are fixed. You are required to choose the most logical sequence of the\nsentences that form the paragraph :\nSl: There are divergent theories of education.\nP: There is still another which holds that education has to be considered rather in relation to\ncommunity than to the other.\nQ: Yet, again some believe that a right proportion of all the theories should go into every\nsystem.\nR: The other holds that the purpose of education is to impart culture.\nS: The first considers that the sole purpose of education is to provide opportunities for\ngrowth.\n$6: No actual education proceeds wholly and completely on any one of the theories.\nRead the following passage and answer the questions (from 14 to 16) that follow :\nInsect behaviour generally appears to be explicable in terms of unconscious, inflexible stimulus-\nresponse mechanisms. For instance, a female sphex wasp leaves her egg sealed in a burrow alongside a\nparalyzed grasshopper, which her larvae can eat upon hatching. Before she deposits the grasshopper in\nthe burrow, she inspects the burrow; if the inspection reveals no problems, she drags the grasshopper\ninside by its antennae. As thoughtful as this behaviour appears, it reveals its mechanistic character upon\ninterference. Darwin discovered that prior removal of the grasshopper’s antennae prevents the wasp\nfrom depositing the grasshopper, even though the legs or ovipositor could also serve as handles.\nLikewise, Fabre moved the grasshopper a few centimeters away from the burrow’s mouth while the\nwasp was inside inspecting. The wasp returned the grasshopper to the edge of the burrow and then\nbegan a new inspection. Fabre performed this disruptive maneuver forty times; the wasp’s response\nnever changed.",
+  "options": [
+    "PQRS (2) PQSR G) RPQ (4) SQPR"
+  ],
+  "is_duplicate": false,
+  "content_hash": "49d278d566a2576b071633cef4ba7dd7"
+}

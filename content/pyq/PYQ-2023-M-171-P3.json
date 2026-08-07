@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2023-M-171-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 171,
+  "question_text": "In a certain code, VERBAL is coded as 22-22-18-25-1-15 and REASON is codeq 4\n18-22-1-8-15-13. The code of CUBOID is\naS 29% S'Ge', VERBAL & 22-22-18-25-1-15 reir REASON & 18-22-1-8-15-13 mS 86 dag\neaxs CUBOID ant SE",
+  "options": [
+    "3-6-2-12-9-23 (2)  24-6-25-12-18-4",
+    "3-21-2-15-9-4 (4) 24-6-25-12-18-23"
+  ],
+  "is_duplicate": false,
+  "content_hash": "905903da4d65f337907836ec886c5dbf"
+}

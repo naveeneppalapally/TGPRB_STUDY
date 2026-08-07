@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-144-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 144,
+  "question_text": "Number of students who read only one newspaper ts\nSSe0 a8, TE HGS nw Ja5 Iogpau Hops",
+  "options": [
+    "141 (2) 151 (3) 147 (4) 157"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a49b3c775911901b8d5029f884e6195f"
+}

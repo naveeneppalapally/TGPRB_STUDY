@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2018-M-132-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 132,
+  "question_text": "If the image of a clock in a mirror shows the time as 6:30, then the actual time shown by\nthe clock is\nwos a KAadivdo Gok, SS2oa0 SSocira) 6:30 rr srds wayc w AAodzdo\nArDod woo dxioavo",
+  "options": [
+    "6:30 (2) 9:30",
+    "5:30",
+    "2:30"
+  ],
+  "is_duplicate": false,
+  "content_hash": "37722e9e2073cb1ca32ce65f998b4278"
+}

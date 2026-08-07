@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-15-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 15,
+  "question_text": "D568 Sart Soaye Sie 18. won Bo6G, HrssS HBdin ses Soaso Sie\nTage",
+  "options": [
+    "(21 (2) 9 (3) 15 (4) 16"
+  ],
+  "is_duplicate": false,
+  "content_hash": "40be5d80e57cc1e65797a2db2ce1504f"
+}

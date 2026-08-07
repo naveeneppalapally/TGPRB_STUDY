@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-143",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 143,
+  "question_text": "The Shivaram Wildlife Sanctuary is located in which of the following districts of Telangana\n",
+  "options": [
+    "Adilabad - Nizamabad",
+    "Mahabubnagar - Medak",
+    "Karimnagar  - Warangal",
+    "Adilabad - Karimnagar",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "4e38445164357abd6e460b0f1323f9bf"
+}

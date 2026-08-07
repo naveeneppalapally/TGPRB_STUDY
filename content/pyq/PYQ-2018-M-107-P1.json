@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-107-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 107,
+  "question_text": "1156, 1444, 1764, 2430",
+  "options": [
+    "1764 (2) 1444 _ 3) 1156 4) 2430"
+  ],
+  "is_duplicate": false,
+  "content_hash": "ffe85de8ab85f25002e2a9e806834fb3"
+}

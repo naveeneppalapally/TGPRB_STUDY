@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2023-M-175-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 175,
+  "question_text": "In a certain code,\nORDER NOW FOR PROFIT is written as \"oh aj ey ag\"\nNOW RIGHT FOR HIM is written as \"ag aj ev es\"\nFOR PROFIT PLACE ORDER is written as \"oh ey ib ag\"\nIN RIGHT ORDER ONLY is written as \"ev hd ey oz\"\nCode for PLACE HIM ORDER is\nORDER NOW FOR PROFIT & \"oh aj ey ag\" rm |=>aba&od.\nNOW RIGHT FOR HIM & \"ag aj ev es\" rm (e>abaéod.\nFOR PROFIT PLACE ORDER & \"oh ey ib ag\" re (e»cha&od.\nIN RIGHT ORDER ONLY re \"ev hd ey 02\" Erakn&od.\nPLACE HIM ORDER Gui) 8°&",
+  "options": [
+    "294 SES",
+    "esibag (2) oz ev.aj (3) esey ib",
+    "ozevag"
+  ],
+  "is_duplicate": false,
+  "content_hash": "152898de726b3e97e6802b65ba0aa0e5"
+}

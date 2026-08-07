@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-45",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 45,
+  "question_text": "person B at simple interest 10% for T years. If the Bank receives an interest of Rs. 1,76,000\nat the end of the period, then T = (in years)\nA 3,00,000 8%B \n2,00,00010%T \n1,76,000 T = ",
+  "options": [
+    "Bank lends Rs. 3,00,000 to a person A at simple interest 8% and Rs. 2,00,000 to another",
+    "5",
+    "4",
+    "3",
+    "2"
+  ],
+  "is_duplicate": false,
+  "content_hash": "7dfacfdd81fac235ec44096797b32ce9"
+}

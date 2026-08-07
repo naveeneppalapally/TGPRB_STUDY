@@ -1,0 +1,20 @@
+{
+  "id": "PYQ-2018-M-18",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2018_Mains.txt",
+  "exam": "Constable",
+  "year": 2018,
+  "stage": "Mains",
+  "question_number": 18,
+  "question_text": "Which of the following words is correctly spelt ?",
+  "options": [
+    "_ Liason (2) _ Irresistable",
+    "Fluorescent (4) Farenheit"
+  ],
+  "is_duplicate": false,
+  "content_hash": "71775eb46105788c66881d94aea4aaf4"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-2",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 2,
+  "question_text": "6, 30, ____, 1890, 20790; 6, 7, 15, 42, ____, 231.\n————————————————————————————————————————",
+  "options": [
+    "208, 122",
+    "210, 106",
+    "216, 106",
+    "210, 144"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-2",
+  "content_hash": "a8a40aa290f36ff7505444873d518216"
+}

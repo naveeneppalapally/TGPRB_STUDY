@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2023-M-189-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 189,
+  "question_text": "Choose the correct option that continues the series 132, 182, 306, 380, 552, 870,",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "7430dbb47a95c777b0d71c8ac4cb5be5"
+}

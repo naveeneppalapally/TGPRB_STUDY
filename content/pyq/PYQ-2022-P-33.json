@@ -1,0 +1,17 @@
+{
+  "id": "PYQ-2022-P-33",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2022_Prelims.txt",
+  "exam": "SI",
+  "year": 2022,
+  "stage": "Prelims",
+  "question_number": 33,
+  "question_text": "Twocubes, each of volume 4,096 c.c., are joined to form a cuboid. Then the difference between\nthe surface area of the cuboid and the total surface area of the two cubes is (in sq.cm)",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "29420ad03608d32f622bab273129e83c"
+}

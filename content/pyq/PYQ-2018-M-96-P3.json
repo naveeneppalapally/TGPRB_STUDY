@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-96-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 96,
+  "question_text": "The sum of all two digit numbers which leave remainder 4 when divided by 11 is\n113 erAowdmr 4 %30 SB) Sot wos Somge Sno",
+  "options": [
+    "15 (2) 92 (3) 400 (4) 428"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bf2b3d89903dd792de0f0b83d0b4d58f"
+}

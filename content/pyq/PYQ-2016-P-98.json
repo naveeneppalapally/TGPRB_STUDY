@@ -1,0 +1,31 @@
+{
+  "id": "PYQ-2016-P-98",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 98,
+  "question_text": "————————————————————————————————————————\n23\n5\n8\n?\n25  G",
+  "options": [
+    "26",
+    "28",
+    "30",
+    "32",
+    "8",
+    "27",
+    "3",
+    "24",
+    "4",
+    "6",
+    "4",
+    "6",
+    "IS 2016 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "6ccc721d5e5f6ded3c7380d4bd1e4c8c"
+}

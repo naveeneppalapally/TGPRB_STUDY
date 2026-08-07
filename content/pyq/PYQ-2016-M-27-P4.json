@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-27-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 27,
+  "question_text": "Volume occupied by one molecule of water is? (density of water = 1 g/cm3)\nˇø£ ˙{Ï nDTe⁄ ÄÁø£$T+#˚ |òüTq |ü]e÷DeTT (˙{Ï kÕ+Á<ä‘· R 1 g/cm3)\n________________________________________________________________________",
+  "options": [
+    "9.0 × 10–23 cm3",
+    "6.023 × 10–23 cm3",
+    "3.0 × 10–23 cm3",
+    "5.2 × 10–23 cm3"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-27-P2",
+  "content_hash": "1143c9d446d9d70cdb658e484b8f24ab"
+}

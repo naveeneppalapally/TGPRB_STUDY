@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-37",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 37,
+  "question_text": "In an election between two candidates 80% of the enrolled voters voted. Of these votes,\n5% votes were declared invalid. The winning candidate got 32490 votes which is 60% of\nthe valid votes. The total number of voters enrolled in the election is\n80%\nvotes5%32490\n60%\nP31\n9-A\nX1\nBooklet Code A",
+  "options": [
+    "75850",
+    "64750",
+    "82500",
+    "71250"
+  ],
+  "is_duplicate": false,
+  "content_hash": "4775f0c8d25bbc04b61d2e53ebecb973"
+}

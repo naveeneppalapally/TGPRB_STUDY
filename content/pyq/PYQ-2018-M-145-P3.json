@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-145-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 145,
+  "question_text": "Number of students who read exactly two newspapers is\nmy dor Bodh IT SEs wad Serssj0 Sons",
+  "options": [
+    "78 2) 5l (G3) 64 (4) 58"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b97400c5c8a37551a7aad3233aa21110"
+}

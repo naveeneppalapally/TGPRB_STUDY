@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-88",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 88,
+  "question_text": "If TBDIJO is coded for SACHIN, then which of the following words is coded as IZVOEBJ\nTBDIJOSACHINIZVOEBJ ",
+  "options": [
+    "SAMURAI",
+    "MARUTHI",
+    "HYUNDAI",
+    "CRICKET"
+  ],
+  "is_duplicate": false,
+  "content_hash": "bec69fbeb6a43fd219900669a9183fd7"
+}

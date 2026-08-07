@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-171",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 171,
+  "question_text": "Nobel Prize in Economics was awarded to one of the following :\n",
+  "options": [
+    "Sir C.V. Raman",
+    "Amarthya Sen",
+    "Ch. Hanumantha Rao",
+    "C. Rangarajan",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "317cf07ed51dabecd046ea5d95e5b476"
+}

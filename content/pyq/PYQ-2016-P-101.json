@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2016-P-101",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Prelims.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Prelims",
+  "question_number": 101,
+  "question_text": "Identify the correct statements\n(a)\nMagnetic force does ‘no work’.\n(b)\nElectrostatic charges generate magnetic field.\n(c)\nIf the lines of magnetic force are parallel then magnetic field is uniform.\n(d)\nUniform magnetic field is conservative.\nxqs\\lLi©´s ≠s™´sLRiﬂ·Ã¡V gRiVLjiÚLiøR¡Li≤T∂\n(a) @∏R∂Vry‰LiªRΩ  ¡Ã¡™´sVV \"xms¨s¬ø¡[∏R∂VµR∂V'.\n(b) zqÛsLRi ≠sµR∂V˘µyÆ™s[aRP™´sVVÃ¡ ™´sÃ¡©´s @∏R∂Vry‰LiªRΩ ZOP[Q˙ªRΩ™´sVV DªRΩˆºΩÚ @gRiV©´sV.\n(c) @∏R∂Vry‰LiªRΩ  ¡Ã¡ lLi[≈¡Ã¡V xqs™´sWLiªRΩLRi\\Æ™sV©´s @∏R∂Vry‰LiªRΩ ZOP[Q˙ªRΩ™´sVV GNRPLkiºΩÕ‹[ DLi≤R∂V©´sV.\n(d) GNRPLkiºΩ @∏R∂Vry‰LiªRΩ ZOP[Q˙ªRΩ™´sVV ¨sªRΩ˘ªRΩ*Q\\Æ™sV©´sµj∂.\n————————————————————————————————————————",
+  "options": [
+    "(a), (c)",
+    "(a), (c), (d)",
+    "(a), (b), (c)",
+    "(b), (c)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "2d6eba22674cffbd1fb17ef8620305e8"
+}

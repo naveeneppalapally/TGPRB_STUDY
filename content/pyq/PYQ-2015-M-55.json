@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-55",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 55,
+  "question_text": "If 2a = 3b = 4c and\n,\n61\n26\n\n\n\nc\nb\na\nthen\n\n\n\nb\na\n2a = 3b = 4c \n,\n61\n26\n\n\n\nc\nb\na\n\n\n\n\nb\na",
+  "options": [
+    "2",
+    "c",
+    "2",
+    "c",
+    "144",
+    "361",
+    "104",
+    "122"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1e588d2a2e947633faff30041a70eb44"
+}

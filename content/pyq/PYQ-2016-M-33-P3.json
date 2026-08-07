@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2016-M-33-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 33,
+  "question_text": "If the average of  x and 1\nx (x ≠ 0) is M, then the average of  x2 and\nx is\nx eT]j·TT 1\nx (x ≠ 0) \\ dü>∑≥T M nsTT‘˚ x2 eT]j·TT\nx \\ dü>∑≥T\nP11\n9-A\nP-1\nBooklet Code A",
+  "options": [
+    "1",
+    "1",
+    "1 – M2",
+    "1 – 2M",
+    "2M2 – 1",
+    "2M2 + 1"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-33-P1",
+  "content_hash": "61e03abf0005d2efcbfdcda831cc1ce8"
+}

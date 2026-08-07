@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-76-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 76,
+  "question_text": "The distance between P and Q is 27 kms. Two men A and B walk from P to Q at rates 4 and\n5 km an hour, respectively. B reaches Q and returns immediately and meets A at R. The\ndistance from P to R is (in kms)\nP eT]j·TT Q \\ eT<Ûä´ <ä÷s¡+ 27 øÏ.MT.\\T. A eT]j·TT B nqT Ç<ä›s¡T e´≈£îÔ\\T P qT+&ç Q øÏ >∑+≥≈£î\nes¡Tdü>± 4 eT]j·TT 5 øÏ.MT\\ #=|üq q&ç#ês¡T. Q øÏ #˚]q B yÓ+≥H˚ ‹]– ãj·T\\T<˚] A ì R e<ä›\nø£*XÊ&ÉT. P qT+&ç R øÏ ñqï <ä÷s¡+ (øÏ.MT.\\˝À)\n________________________________________________________________________",
+  "options": [
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-76-P1",
+  "content_hash": "392044831536150d6b072e89113bf6bb"
+}

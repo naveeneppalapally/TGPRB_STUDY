@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-82-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 82,
+  "question_text": "If a body falls 16 m in the 1st second of its motion, 48 m in the 2nd, 80 m in the 3rd,\n112 m in the 4th and so on, then the distance it fall during the 11th second of its motion\nis (in meters)\nˇø£ edüTÔe⁄ <ëì >∑eTq+˝À yÓTT<ä{Ï ôdø£qT˝À 16 MT≥s¡T¢, ¬s+&Ée ôdø£qT˝À 48 MT≥s¡T¢, eT÷&Ée\nôdø£qT˝À 80 MT≥s¡T¢, Hê\\T>∑e ôdø£qT˝À 112 MT≥s¡¢ #=|üq |ü&ÉT‘·÷ ñ+fÒ <ëì >∑eTq+˝Àì\n11 e ôdø£qT˝À n~ |ü&˚ <ä÷s¡+ (MT≥s¡¢˝À)\n________________________________________________________________________",
+  "options": [
+    "338",
+    "340",
+    "334",
+    "336"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-82-P1",
+  "content_hash": "353c5cfb82d1c577f0adc61b27591cd0"
+}

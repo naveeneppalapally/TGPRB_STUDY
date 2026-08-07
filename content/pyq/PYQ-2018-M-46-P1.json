@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-46-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 46,
+  "question_text": "Two positive integers whose sum is 143, cannot be in the ratio\n\\\nSot G8 amore Sogo l4iwand, & Somgen Goh AA AS* GodsH\nSO) 2:7 (2) 8:3\nae 4 65",
+  "options": [
+    "6:7 (4) 4:9"
+  ],
+  "is_duplicate": false,
+  "content_hash": "287725eed61ae447b4a6765d239cd750"
+}

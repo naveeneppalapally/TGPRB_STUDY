@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-136-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 136,
+  "question_text": "Who sits opposite to T?\nTS dgstorr DSh Srdy\\ayo?",
+  "options": [
+    "S (2) Q G3) R Onn"
+  ],
+  "is_duplicate": false,
+  "content_hash": "376deb182f6010c50d4211bd81e31dc4"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "PYQ-2022-P-50",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2022_Prelims.txt",
+  "exam": "SI",
+  "year": 2022,
+  "stage": "Prelims",
+  "question_number": 50,
+  "question_text": "Theset ofall perfect numbers and twin primes among the numbers 1, 2, 3, 4, 5,6, 7, 8, 9 is",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "e815790df4f1337402be77fe3418de44"
+}

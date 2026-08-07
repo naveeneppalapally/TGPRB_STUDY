@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2023-M-101-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 101,
+  "question_text": "Eight persons A, B, C, D, E, F, G, H are sitting in a straight line facing North. They have different\nages 12, 18, 27, 32, 34, 49, 55, and 63 not necessarily in the same order. B is sitting second to the\nleft of the one having 49 years. Between B and D there are two persons and D is right of B. The\nperson second to the right of D has age 32 and he is at the right end. There is one person between\nthe persons having age 32 and 18. A is sitting second to the left of E: A is sitting immediate left of\nand G is 7 years. Both are not sitting together. One who is 27 years old is sitting at the left end. C\n~is 6 years younger to D. The one who is 55 years old and H are immediate neighbours. The\nnumber of persons between H and the one having age 34 years is equal to the number of persons\nbetween F and the one having age 55 years. The persons between B and D are\nA,B,C, D,E, F,G, Hod 928 S08 s&tio BSH sori a8 SwHoxis® SwByaryt. sr Scoxyjen 12, 18,",
+  "options": [
+    "The one who is 63 years old is sitting to the immediate left of B. Difference between ages of B"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5faf472e2ed204e514d10ba3db9313d5"
+}

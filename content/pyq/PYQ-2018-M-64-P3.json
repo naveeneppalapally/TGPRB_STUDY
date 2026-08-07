@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-64-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 64,
+  "question_text": "Asum of money is doubled at some compound interest in 8 years. The number of years in\nwhich the amount becomes 4 times with same rate of interest is\naf MSny Sod WESFoins* 8 Sosa SSnos* Bodosean wHeo0H. oS SESSA dens\n& Pdny PMhosa wSPAE SOLS Sods Sino Somes",
+  "options": [
+    "12 (2) 14 (3) 16 (4) 32"
+  ],
+  "is_duplicate": false,
+  "content_hash": "df5ad76a1e41fa3e7c41d6c4695a5612"
+}

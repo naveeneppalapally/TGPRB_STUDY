@@ -1,0 +1,28 @@
+{
+  "id": "PYQ-2023-M-125-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 125,
+  "question_text": "An examination is conducted in a class and ranks are allotted to the students according to their\nmarks obtained in the examination. It is observed that the rank of a student A is 20 from the top\nand 23\"4 from the bottom. The rank of another student B among the passed students is 10'* from\nthe top and 19\" from the bottom. Then the total number of students who passed in the examination\nis\na SENBE 2.8 HEX MdeSrosrth HOcio w SOXS* art HoOS Arto eqrSorr sO8 oyosooxd Seravoat.\naS DoyO A Gk oyot BD sod 20 SB SoOdin (808 X08 23. SH rv KxVoert.. SHES AaB Bains oyow\nB8OBS Dorgtpos® P o8 1056 SBdto BoB ko8 19 56. Sond @ HESS? SHWBS Sogo Aorgtyo Sos\nso-so\naslo",
+  "options": [
+    "equal to the total number of students who failed in the examination",
+    "_ thrice the total number of students who failed in the examination",
+    "half times the total number of students who failed in the examination",
+    "_ twice the total number of students who failed in the examination",
+    "© SOgS* S85 Sndo Dorstho Somst Sairo",
+    "@ S646 S&S Swdo Derstho Somse sarc Dey",
+    "(3) © BOYS SS Sno Aorxtho Home 2 Bey",
+    "© SOZS° BIS Smdo Darytho Somss Both Sey"
+  ],
+  "is_duplicate": false,
+  "content_hash": "ed16de46ca25b3e3d7c514f27c7a025d"
+}

@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-133-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 133,
+  "question_text": "Some of the cricket players are tennis players, some tennis players are hockey players and\nno cricket player is a hockey player.\nThe diagrams that correctly represent the above statements is\nø=+<äs¡T ÁøÏ¬ø{Ÿ Ä≥>±ﬁ¯óﬂ f…ìïdt Ä≥>±ﬁ¯óﬂ, ø=+<äs¡T f…ìïdt Ä≥>±ﬁ¯óﬂ Vü‰ø° Ä≥>±ﬁ¯óﬂ, @ ÁøÏ¬ø{Ÿ\nÄ≥>±&É÷ Vü‰ø° Ä≥>±&ÉT ø±<äT.\nô|’ Á|üe#·Hê\\qT dü÷∫+#˚ dü]jÓÆTq ∫Á‘·+\n________________________________________________________________________",
+  "options": [
+    "(2)",
+    "(4)"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-133-P1",
+  "content_hash": "d5f071eb0ffec07459017f970892188b"
+}

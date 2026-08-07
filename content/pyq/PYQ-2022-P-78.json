@@ -1,0 +1,20 @@
+{
+  "id": "PYQ-2022-P-78",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2022_Prelims.txt",
+  "exam": "SI",
+  "year": 2022,
+  "stage": "Prelims",
+  "question_number": 78,
+  "question_text": "The letters of the English alphabet are coded as follows:\nk” Jetter of the alphabet is coded as\n(i) (k+17)*letter when 1 sk $9\n(ii) (k-1) letter when 10 S$ k $18\n(sii) (k-18)* letter when 19 Sk S 26\nFor decoding reverse process is used.\nThe word that is coded as GAURDis\nGoh O8bired’a escrow Gi Sod Nor FE Tew. ks ofr TE oxo.\n(i) (k+17)Se¥8o, 1 Sk S Peonsees\n(ii) (k-1)Se¥60,10Sks 1S coniae\n(iii) (k-18)Se¥80, 19 Sk S 26ecnrsg\nASE Sater d8 4,588 GS >So’.\nGAURD re 868 erahads So\n21\nAddaley7",
+  "options": [
+    "YRCQU (@) yYspav (3) XRDPV (4) YSDNA",
+    "GET ITON"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1cb3c40ffbcb6cc6a1220d33013108a7"
+}

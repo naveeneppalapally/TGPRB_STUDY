@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2018-M-129-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 129,
+  "question_text": "Which of the three figures from the following five figures A, B, C, D and E form a\nsquare?\n& 605 Qscaas pts DoSoe A, B,C, D S809 Ewes 9 sont sosno0 af\nSbob Oo SHOW?\n6) ACD (3) BCE,",
+  "options": [
+    "B Cc D E",
+    "ABE",
+    "BCD"
+  ],
+  "is_duplicate": false,
+  "content_hash": "0be59a83c96d33715da9f00cf3f81f46"
+}

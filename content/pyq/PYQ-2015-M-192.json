@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-192",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 192,
+  "question_text": "Match the following:\nDay (Significance)\nMonth\na)\nWorld Kidney Day\ni)\nFeb, 4\nb)\nWorld Cancer Day\nii)\nMarch, 24\nc)\nWorld Tuberculosis Day\niii)\nMarch, 10\nd)\nWorld Disabled Day\niv)\nDecember, 3\n\n\n\na)\n\ni)\n 14\nb)\n\nii)\n 24\nc)\n\niii)  10\nd)\n\niv)\n 3\nThe correct answer is\n",
+  "options": [
+    "a-ii, b-iv, c-iii, d-i",
+    "a-iv, b-ii, c-i, d-iii",
+    "a-iii, b-ii, c-iv, d-i",
+    "a-iii, b-i, c-ii, d-iv"
+  ],
+  "is_duplicate": false,
+  "content_hash": "11dba684acc2f7d79cdf650649d8e521"
+}

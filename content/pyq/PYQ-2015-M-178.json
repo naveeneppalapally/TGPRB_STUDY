@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2015-M-178",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 178,
+  "question_text": "Read the following statements:\n\nA\n2014\nB\n2016\nC\n2015\nChoose the correct statements:\n",
+  "options": [
+    "Commonwealth Games, 2014 were held in Kaulalampur",
+    "Kabaddi World cup, 2016 will be held in Ahmedabad",
+    "National Games, 2015 were held in Kerala",
+    "A & B",
+    "B & C",
+    "C & A",
+    "A, B & C"
+  ],
+  "is_duplicate": false,
+  "content_hash": "a45fd60e3490842690b987acb734e80c"
+}

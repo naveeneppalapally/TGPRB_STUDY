@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-182-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 182,
+  "question_text": "Who is tallest among A, B, C, D, E?\nI) Dis taller than B, but shorter than E\nI) Cis taller than both B and E but shorter thar{A\nA, B, C, D, Eves ©8 PENS DSC?\nIl) B,Ee sy CSA, FD ASay ony. 2",
+  "options": [
+    "Ded S9§ B Say SGA, Sa E 8a 28. 3"
+  ],
+  "is_duplicate": false,
+  "content_hash": "738a977a3dba523b2d329d5ca704d567"
+}

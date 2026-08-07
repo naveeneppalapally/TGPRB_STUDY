@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2015-P-157",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 157,
+  "question_text": "We want to find the heaviest of the four objects P, Q, R, S. Observe the following statements :\nI.\nQ is heavier than P, but lighter than S.\nII.\nR is heavier than Q.\nThen\nP, Q, R, S @Æ©s[ ©yÃ¡VgRiV ™´sxqsVÚ™´soÃ¡Õ‹[ @ºΩ  ¡LRiV\\Æ™s©´s ™´sxqsVÚ™´so©´sV NRP©´sVN][‰™y÷¡. ˙NTPLiµR∂ B¿¡Ë©´s\n˙xms™´søR¡©´s™´sVVÃ¡V øR¡W≤R∂Li≤T∂\nI.\nP NRP©yı Q  ¡LRiV™´so FsNRPV‰™´s DLiµj∂, NS¨s Q  ¡LRiV™´so S  ¡LRiV™´so NRP©yı ªRΩNRPV‰™´s DLiµj∂\nII.\nQ NRP©yı R  ¡LRiV™´so FsNRPV‰™´s DLiµj∂\n@xmsˆV≤R∂V\n————————————————————————————————————————\nS\nI\n5\n6\n7\nT\n49  X",
+  "options": [
+    "Data in statement I is sufficient",
+    "Data in statement II is sufficient",
+    "Data in statements I and II is sufficient",
+    "Data in statements I and II is not sufficient",
+    "˙xms™´søR¡©´s™´sVV IÕ‹[ B¿¡Ë©´s xqs™´sWøyLRi™´sVV øyÃ¡V",
+    "˙xms™´søR¡©´s™´sVV IIÕ‹[ B¿¡Ë©´s xqs™´sWøyLRi™´sVV øyÃ¡V",
+    "˙xms™´søR¡©´s™´sVVÃ¡V I ™´sVLji∏R∂VV IIÕ‹[ B¿¡Ë©´s xqs™´sWøyLRi™´sVV øyÃ¡V",
+    "˙xms™´søR¡©´s™´sVVÃ¡V I ™´sVLji∏R∂VV IIÕ‹[ B¿¡Ë©´s xqs™´sWøyLRi™´sVV øyÃ¡µR∂V",
+    "2",
+    "5",
+    "CP 2015 A"
+  ],
+  "is_duplicate": false,
+  "content_hash": "eed81244ee1203e026a40ea9924d4c9e"
+}

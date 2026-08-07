@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-1682-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 1682,
+  "question_text": ".1683, 1684, 1685, 1686, 1687, 1688, 1689, . . .",
+  "options": [
+    "1682 (2) 1685 58) 1687 (4) 1689"
+  ],
+  "is_duplicate": false,
+  "content_hash": "1f797c3dc80b6affaa62c5a9bf5d0578"
+}

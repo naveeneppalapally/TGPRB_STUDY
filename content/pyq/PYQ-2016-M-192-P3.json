@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-192-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 192,
+  "question_text": "In the figure below, the number at the symbol ‘?’ is\nÁøÏ+~ |ü≥+˝À, >∑Ts¡TÔ ª?μ e<ä› dü+K´\n________________________________________________________________________",
+  "options": [
+    "64",
+    "144",
+    "169",
+    "25"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-192-P1",
+  "content_hash": "ee0034168dba46aa6ccaf61859af37f5"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2023-M-19",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2023_Mains.txt",
+  "exam": "Constable",
+  "year": 2023,
+  "stage": "Mains",
+  "question_number": 19,
+  "question_text": "Identify the correct antonym of the underlined word in the following sentence.\nHe was fishing for a squid with pals in shallow water.",
+  "options": [
+    "Shoal (2) Superficial (3) Deep (4) Skin-deep"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5d6cef950a26ffc630010fe56611f05d"
+}

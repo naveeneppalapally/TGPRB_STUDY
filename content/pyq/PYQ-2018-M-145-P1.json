@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-145-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 145,
+  "question_text": "Number of students who read exactly two newspapers Is —— ;\nmd sor Bod To, Jose HbS Seogdjo Hows",
+  "options": [
+    "78 @) Sl (3) 64 (4) $8 ."
+  ],
+  "is_duplicate": false,
+  "content_hash": "e9e9e234606efbe9eb84b4ac9d28891b"
+}

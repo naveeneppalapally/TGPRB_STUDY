@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-140-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 140,
+  "question_text": "Which pair is not correctly matched\ná ÁøÏ+~ yêì˝À @~ dü] nsTTq »‘· ø±<äT\n________________________________________________________________________",
+  "options": [
+    "Tomb of Gesu Daraj  -  Gulbarga",
+    "Madarasa of Mahammud Gawan  -  Bidar",
+    "Chand Minar  -  Daulatabad",
+    "Solah Khamba Mosque  -  Bijapur",
+    "^düT <äsêCŸ düe÷~Û ` >∑T\\“sêZ",
+    "eTVü≤eT÷<é >∑yêHé eT<Ûäs¡kÕ ` ;<äsY",
+    "#ê+<é $THêsY ` <Í\\‘êu≤<é",
+    "k˛˝≤ ø£+uÛÑ eTd”<äT ` ;C≤|üPsY"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-140-P2",
+  "content_hash": "59a96a85c5e61aa86641a3fca452cfae"
+}

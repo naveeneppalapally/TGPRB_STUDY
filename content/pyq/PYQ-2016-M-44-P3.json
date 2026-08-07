@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-44-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 44,
+  "question_text": "son and 10% of the balance he donated to a trust.  If he is left with Rs. 10,080.  His income\n(in rupees)\nˇø£ e´øÏÔ ‘·q Ä<ëj·T+˝À 20% ô|<ä› ≈£îe÷s¡TìøÏ, $T–*q <ëì˝À 30% ∫qï ≈£îe÷s¡TìøÏ Ç∫Ã\nÇ+ø± $T–*q <ëì˝À 10% ˇø£ Á≥düTº≈£î <ëq+ #˚XÊ&ÉT. n‘·ì e<ä› Ç+ø± s¡÷ˆˆ 10,080 $T–*‘˚,\nn‘·ì Ä<ëj·TeTT (s¡÷bÕj·T\\˝À)\n________________________________________________________________________",
+  "options": [
+    "person gave 20% of his income to his elder son, 30% of the remaining to the younger",
+    "50,000",
+    "40,000",
+    "30,000",
+    "20,000"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-44-P1",
+  "content_hash": "95011c2f54ec4fd1e4ad3c1c1dfbd12b"
+}

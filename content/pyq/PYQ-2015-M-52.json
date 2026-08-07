@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2015-M-52",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 52,
+  "question_text": "Three cubes with sides in the ratio 3:4:5 are melted to form a single cube whose diagonal\nis\ncm. The sides of the cubes are (in cm)\n3:4:5 \n\n",
+  "options": [
+    "18",
+    "18",
+    "3, 4, 5",
+    "6, 8,10",
+    "9, 12, 15",
+    "12, 16, 20"
+  ],
+  "is_duplicate": false,
+  "content_hash": "c8a5fc356272f6e308192192b3f87b89"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "PYQ-2015-P-11",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Prelims.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Prelims",
+  "question_number": 11,
+  "question_text": "Match the left-hand column with the right-hand column with the help of the codes given\nbelow :\n(i)\na person who goes out and gets stories for newspapers\n(ii)\na person who writes articles in newspapers and magazines\n(iii) a newspaper you can buy every day after about 5 p.m.\n(iv) a magazine that children read, with cartoon pictures\n(v)\na programme on TV about animals, birds etc.\n(E)\n————————————————————————————————————————",
+  "options": [
+    "A nature programme",
+    "A Comic",
+    "An evening (news) paper",
+    "A journalist",
+    "reporter",
+    "(i)-(E), (ii)-(D), (iii)-(C), (iv)-(B), (v)-(A)",
+    "(i)-(B), (ii)-(A), (iii)-(C), (iv)-(D), (v)-(E)",
+    "(i)-(A), (ii)-(B), (iii)-(C), (iv)-(D), (v)-(E)",
+    "(i)-(C), (ii)-(D), (iii)-(A), (iv)-(B), (v)-(E)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "cbb8d34007989cdece119383024873b3"
+}

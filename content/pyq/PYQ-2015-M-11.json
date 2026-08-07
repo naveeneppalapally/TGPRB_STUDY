@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-11",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 11,
+  "question_text": "What is the meaning of underlined idiom in “We would be glad to put you up for a few days\nif you would like to stay”?",
+  "options": [
+    "tolerate someone",
+    "build something",
+    "provide accommodation",
+    "contribute something"
+  ],
+  "is_duplicate": false,
+  "content_hash": "ad3c6ba90ec7b7cc3aa42f6ceb025a03"
+}

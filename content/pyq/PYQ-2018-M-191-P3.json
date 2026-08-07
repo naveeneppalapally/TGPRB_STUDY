@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2018-M-191-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 191,
+  "question_text": "Did the person A get profit?\nIl) The person A sold § bananas out of 9 bananas for Rs. 32.\nI) GD esSaHa9 A 30 dr.o8 Fay.\nIl) Mes8Se ss SUsSSHiH A 32 Sr.wx WAT.\nRl RE ‘ -",
+  "options": [
+    "The person A purchased 9 bananas for Rs. 30.",
+    "wn 3588 exdio SQyomr?"
+  ],
+  "is_duplicate": false,
+  "content_hash": "897c58a55110cca032e0aa77206d7b2b"
+}

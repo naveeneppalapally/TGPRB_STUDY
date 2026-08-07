@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-15",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 15,
+  "question_text": "_____ uranium is _____ toxic metal. _____ uranium in Australia covers 31% of _____\nworld’s known uranium ore reserves.\n————————————————————————————————————————",
+  "options": [
+    "article not required, a, the, the",
+    "the, a, the, article not required",
+    "article not required, a, article not required, the",
+    "the, the, article not required, the"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-15",
+  "content_hash": "b0c99fb36d26063c212ca3293fd6ddd3"
+}

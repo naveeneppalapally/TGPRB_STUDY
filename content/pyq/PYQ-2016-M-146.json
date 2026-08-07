@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2016-M-146",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 146,
+  "question_text": "Who plays Volleyball ?\nVolleyball Fs™´sLRiV A≤R∂VªyLRiV?\n————————————————————————————————————————",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2015-P-146",
+  "content_hash": "d0407229af74decc0070d1735e466c27"
+}

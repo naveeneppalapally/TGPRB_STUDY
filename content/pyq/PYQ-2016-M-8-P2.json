@@ -1,0 +1,28 @@
+{
+  "id": "PYQ-2016-M-8-P2",
+  "type": "pyq",
+  "exam_section": "Telugu",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P2_Telugu.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P2",
+  "part_name": "Telugu",
+  "question_number": 8,
+  "question_text": "Which of the following heating method has maximum power factor?\ná ÁøÏ+~ yê{Ï˝À n‘·´~Ûø£ X¯øÏÔ ø±s¡ø±ìï ø£*–q y˚&ç#˚ùd |ü<ä∆‹ @~?\nP12\n5-A\nGS-1\nBooklet Code A",
+  "options": [
+    "Arc heating",
+    "Dielectric heating",
+    "Induction heating",
+    "Resistance heating",
+    "ÄsYÿ V”≤{Ï+>¥",
+    "&Ó’m\\ÅøÏºø˘ V”≤{Ï+>¥",
+    "ÇHé&Éø£¸Hé V”≤{Ï+>¥",
+    "¬sdæôdºHé‡ V”≤{Ï+>¥"
+  ],
+  "is_duplicate": false,
+  "content_hash": "b894a592485e813fbadd37d30dbe8743"
+}

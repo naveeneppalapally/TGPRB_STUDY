@@ -1,0 +1,24 @@
+{
+  "id": "PYQ-2016-M-5-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 5,
+  "question_text": "If the H.C.F of three numbers which are in the ratio 1:2:3 is 12, then the numbers are\n1:2:3 ìwüŒ‹Ô˝À ñqï eT÷&ÉT dü+K´\\ >∑.kÕ.uÛ≤ 12 nsTT‘˚ Ä dü+K´\\T\n________________________________________________________________________",
+  "options": [
+    "12, 24, 36",
+    "11, 22, 33",
+    "12, 24, 32",
+    "5, 10, 15"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5848b8a23cc54c64f3b0c0f845f4dbfb"
+}

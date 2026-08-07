@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-14-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 14,
+  "question_text": "Rs. 432, then the marked price of the article is (in rupees)\nˇø£ <äTø±D<ës¡T 10% eT]j·TT 20% es¡Tdü sêsTTr\\qT Ç#êÃ&ÉT. n‘·qT ˇø£ edüTÔe⁄qT\ns¡÷ˆˆ 432 \\≈£î n$Tà‘˚, Ä edüTÔe⁄ jÓTTø£ÿ Á|üø£{Ï‘· $\\Te (s¡÷ˆˆ\\˝À)\n________________________________________________________________________",
+  "options": [
+    "shopkeeper gives two successive discounts of 10% and 20%.  If he sells an article for",
+    "526",
+    "550",
+    "600",
+    "626"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-14-P1",
+  "content_hash": "ddf7c74a48caadf3f4484dc81b17a3e4"
+}

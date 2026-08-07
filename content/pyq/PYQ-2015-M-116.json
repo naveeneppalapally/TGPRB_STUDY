@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-116",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 116,
+  "question_text": "Assertion (A) : The Mughal emperors had complete sovereignty, not only internally but\nalso externally\nReason (R) :\nThey refused to recognise any external authority like the Caliph as their\nsuperior\nThe correct answer is:\n(A) \n\n(R) \n\n",
+  "options": [
+    "(A) and (R) are true (R) is the correct explanation of (A)",
+    "(A) and (R) are true (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is true",
+    "(A)(R) (R)(A)",
+    "(A)(R)(R) (A)",
+    "(A)(R) ",
+    "(A)(R) "
+  ],
+  "is_duplicate": false,
+  "content_hash": "1425293fa8bab2d6d23e7560629ee780"
+}

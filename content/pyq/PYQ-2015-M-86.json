@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-86",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 86,
+  "question_text": "If Red is called Yellow, Yellow is called Green, Green is called Blue, Blue is called Pink,\nthen usually leaves colour will be\n\n",
+  "options": [
+    "Green",
+    "Pink",
+    "Yellow",
+    "Blue",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "a7942a19d88de361dbffda50887faf96"
+}

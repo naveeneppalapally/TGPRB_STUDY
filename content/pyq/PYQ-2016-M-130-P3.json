@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-130-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 130,
+  "question_text": "Amit walked 30 metres towards East, took a right turn and walked 40 metres. Then he took\na left turn and walked 30 metres. The direction in which he is now with respect to the\nstarting point is\nn$T‘Y ‘·÷s¡TŒ ~X¯>± 30 MT≥s¡T¢ q&ç∫, ≈£î&çyÓ’|ü⁄ ‹]– 40 MT≥s¡T¢ q&ç#ê&ÉT. Ä ‘·sê«‘· m&ÉeTyÓ’|ü⁄≈£î\n‹]– 30 MT≥s¡T¢ q&ç#ê&ÉT. n‘·qT ãj·T\\T<˚]q _+<äTe⁄ <äècÕº´ Ç|ü&ÉT ñqï ~X¯\n________________________________________________________________________",
+  "options": [
+    "North-East",
+    "East",
+    "South-East",
+    "South",
+    "áXÊq´+",
+    "‘·÷s¡TŒ",
+    "Äπ>ïj·T+",
+    "<äøÏåD+"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-130-P1",
+  "content_hash": "1c092aba36744aff49067e4dfce642d9"
+}

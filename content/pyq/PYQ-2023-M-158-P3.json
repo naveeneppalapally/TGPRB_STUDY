@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2023-M-158-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2023_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2023,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 158,
+  "question_text": "Direction : Decide whether the data provided in the two statements given under the question is\nsufficient to answer the question or not.\nGive option:\nQuestion : How many sons does Anitha have ?\nStatements :\nI. Anitha is mother of X who is brother of Y.\nII.  Anitha's daughter Nilima has only two brothers.\nKpibigean 1 Se Ws SSS BAYS Bo BSSAPOS ad) SSrErdo © BAS SSwqPaPg, agers BASS SOE\nayowosos.\n& wgysrrA mQ0x506. ;\nESe0 SHSHo 1 6 sererbo SMG BHO Kkwgrssn aSyrdS SASBS oAy¥o (1) ©;\n4Se0 BSsso II 9 eiperto KMS SHS SSrGrddn BSNS SASBS o¥o (2) ©;\nOSiS0 I & I 689 KdPardo SON BAL Ssrqrsso axgrns SASZS oA¥o (3) od;\nWSesSo I & I Sprerto SOVT SHS Kdropisn eS yrds Sate sors £8 So (4) 9935\n-_\n. 6 eosrtoe ? ic\nBe: odSH a0 B00 \\s an \\\n(Sssaren : y ah +\nLY & Rte wond XB SY eds.\nto BEEO% SME SOM 408.\nQ\n: Te 0\nET-41524-IA-P\nassumptions numbered | ,\n> two\ne followed a nd",
+  "options": [
+    "if the data in statement I alone is sufficient to answer the question;",
+    "if the data in statement II alone is sufficient to answer the question;",
+    "if the data in both the statements I and I together is sufficient to answer the question;",
+    "if the data in both the statements I and II together is not sufficient to answer the question;",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "b81c3f338a482eb04dec704f3ee23e4c"
+}

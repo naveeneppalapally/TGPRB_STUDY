@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-160",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 160,
+  "question_text": "Assertion (A) : Tropical cyclones taking origin in South China sea is called as Typhoons.\nReason (R) :\nThe isobars of tropical cyclone are circular in shape.\nThe correct answer is\n(A) \n(R) \n\n\nP31\n35-A\nX1\nBooklet Code A",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true and (R) is false",
+    "(A) is false and (R) is true",
+    "(A)(R) (A) (R)",
+    "(A)(R)(A) (R)",
+    "(A)(R) ",
+    "(A)(R) "
+  ],
+  "is_duplicate": false,
+  "content_hash": "dfb13c22ebff530078578d869ab14db7"
+}

@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2015-M-69",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 69,
+  "question_text": "Biological oxygen demand indicates\n",
+  "options": [
+    "High level of microbial pollution",
+    "Low level of microbial pollution",
+    "Absence of any pollution",
+    "Water is highly pure",
+    "(2) ",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "793f1368e66457cbd37d5e13aaa2bede"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-189",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 189,
+  "question_text": "The National SC/ST Hub will be launched in the city\n",
+  "options": [
+    "Jaipur",
+    "Agra",
+    "Nagpur",
+    "Ludhiana",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "11961f5602bc67291e8dcd983cfd6fcd"
+}

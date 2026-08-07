@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-163",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 163,
+  "question_text": "Electronic voting machines were used in general elections of state legislative assemblies\nfor the first time in 1998 in the following states:\na)\nMadhya Pradesh, Rajasthan and Himachal Pradesh\nb)\nRajasthan, Uttar Pradesh and Bihar\nc)\nMadhya Pradesh and Kerala\nd)\nMadhya Pradesh, Rajasthan and Delhi\n1998 \n\na)\n\nb)\n\nc)\n\nd)\n",
+  "options": [
+    "d",
+    "c",
+    "b",
+    "a"
+  ],
+  "is_duplicate": false,
+  "content_hash": "8e4e5a437e0d8a9288d19460a928d81d"
+}

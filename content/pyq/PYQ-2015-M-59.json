@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-59",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 59,
+  "question_text": "was received after seven minutes. If the velocity of the signal is 3×108 m/s, then the distance\nbetween the Earth and Planet in meters is\nbeam\n\n3×108 m/s \nP31\n13-A\nX1\nBooklet Code A",
+  "options": [
+    "monochromatic radiation was beamed on a distant planet from Earth and the reflection",
+    "3.15 × 108",
+    "3 × 1010",
+    "6.3 × 1010",
+    "3.15 × 1010"
+  ],
+  "is_duplicate": false,
+  "content_hash": "27dbfb2a209690d4285b6de803c65ba9"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "PYQ-2018-M-162-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 162,
+  "question_text": "If T, = 2(n+2) , for n=1, 2, 3, ... then T, =\nn(n+",
+  "options": [],
+  "is_duplicate": false,
+  "content_hash": "aa7c1256d4033dbbc3a122b62cb5578b"
+}

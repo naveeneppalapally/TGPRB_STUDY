@@ -1,0 +1,21 @@
+{
+  "id": "PYQ-2018-M-87-P1",
+  "type": "pyq",
+  "exam_section": "English",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2018_Mains_P1_English.txt",
+  "exam": "SI",
+  "year": 2018,
+  "stage": "Mains",
+  "part_code": "P1",
+  "part_name": "English",
+  "question_number": 87,
+  "question_text": "The area of the regular hexagon of side 12 cm in square centimeters, is\n12 B0.do. haorr Ko Exo AdHS HPoso, H4dH Doh MH IS,",
+  "options": [
+    "216v3 (2). 36/3 (3) -6V3 (4) 1443"
+  ],
+  "is_duplicate": false,
+  "content_hash": "5c57e340b43cfbbb9164f71c2668187f"
+}

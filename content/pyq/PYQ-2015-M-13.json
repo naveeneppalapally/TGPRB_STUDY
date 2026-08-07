@@ -1,0 +1,22 @@
+{
+  "id": "PYQ-2015-M-13",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 13,
+  "question_text": "Choose the correct order of the following jumbled sentences into a meaningful paragraph.\n(a)\nWages will seldom rise in proportion to the rising prices\n(b)\nThe problem of food is intimately connect with population, the market is governed by\ndemand and supply\n(c)\nWithout enough food, such people lack health, strength of efficiency and they fall an\neasy prey to all sorts of diseases\n(d)\nIf too many people demand goods to go round, prices will rise and poor classes will\nstarve",
+  "options": [
+    "1-(c), 2-(d), 3-(a), 4-(b)",
+    "1-(d), 2-(c), 3-(b), 4-(a)",
+    "1-(a), 2-(c), 3-(d), 4-(b)",
+    "1-(b), 2-(d), 3-(a), 4-(c)"
+  ],
+  "is_duplicate": false,
+  "content_hash": "78407da251d2ee15682f00097a1edd1d"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2015-M-28",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 28,
+  "question_text": "You have been waiting for your friend for the past two hours, still he has not yet come. How\ndo you feel about him?\n\n",
+  "options": [
+    "He does not have time sense",
+    "He might be having some problem",
+    "If he comes, I will shout at him for the delay",
+    "Leaving me alone, he might have gone to somewhere else",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "is_duplicate": false,
+  "content_hash": "abc0e8305c19d4f6ed99fdc49faedcdc"
+}

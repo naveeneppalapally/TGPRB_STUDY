@@ -1,0 +1,25 @@
+{
+  "id": "PYQ-2016-M-69-P3",
+  "type": "pyq",
+  "exam_section": "Arithmetic",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P3_Arithmetic.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P3",
+  "part_name": "Arithmetic",
+  "question_number": 69,
+  "question_text": "The number of 5-digit even numbers that can be formed using the digits 1, 2, 7, 9, 4 without\nrepetition is\n|ü⁄qsêeè‘·+ ø±≈£î+&Ü 1, 2, 7, 9, 4 n+¬ø\\‘√ @s¡Œs¡#·>∑*π> 5 - n+¬ø\\ dü]dü+K´\\ dü+K´\n________________________________________________________________________",
+  "options": [
+    "16",
+    "36",
+    "24",
+    "48"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-69-P1",
+  "content_hash": "ce6c32e5e80c7287dc52feed4ecbae96"
+}

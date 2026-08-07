@@ -1,0 +1,23 @@
+{
+  "id": "PYQ-2015-M-50",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2015_Mains.txt",
+  "exam": "Constable",
+  "year": 2015,
+  "stage": "Mains",
+  "question_number": 50,
+  "question_text": "pass a platform of length 120 meters is (in seconds)\n8080 km/hr120\nplatform",
+  "options": [
+    "train 80  meters long is running at a speed of 80 km/hr. The time that the train will take to",
+    "6.5",
+    "8.5",
+    "9.9",
+    "9"
+  ],
+  "is_duplicate": false,
+  "content_hash": "51791ccc684dab5a9e0ab3129befb84c"
+}

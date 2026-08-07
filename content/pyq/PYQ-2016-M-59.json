@@ -1,0 +1,26 @@
+{
+  "id": "PYQ-2016-M-59",
+  "type": "pyq",
+  "exam_section": "General",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "Constable_2016_Mains.txt",
+  "exam": "Constable",
+  "year": 2016,
+  "stage": "Mains",
+  "question_number": 59,
+  "question_text": "Assertion (A) :\nWater at the foot of a water fall is always at different temperature from\nthat at the top.\nReason (R)\n:\nThe potential energy of water at the top is converted into heat energy\nduring the fall.\n˙xmsºΩFyµR∂©´s (A)\n: «¡Ã¡FyªRΩLi π∏∂VVNRP‰ FyµR∂Li ™´sµÙR∂ D©´sı ¨dsLRiV bP≈¡LRiLi ™´sµÙR∂ D©´sı ¨ds…”¡ DuÒ°˙gRiªRΩÃ¡V\nFsÃ˝¡xmsˆV≤R∂V Æ™s[LRiVgS DLi…ÿLiVV. s\nNSLRiﬂ·Li (R)\n: NTPLiµj∂NTP xms≤R∂VªRΩV©´sıxmsˆV≤R∂V bP≈¡LRiLi ™´sµÙR∂ gRiÃ¡ ¨ds…”¡ zqÛsºΩ«¡ aRPNTPÚ, DxtÒsQ aRPNTPÚgS\nLRiWFyLiªRΩLRiLi ¬ø¡LiµR∂VªRΩVLiµj∂.\n————————————————————————————————————————",
+  "options": [
+    "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+    "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+    "(A) is true but (R) is false",
+    "(A) is false but (R) is true",
+    "(A) ™´sVLji∏R∂VV (R) lLiLi≤R∂V xqsLji\\π∏∂V©´s≠s ™´sVLji∏R∂VV (A) NRPV (R) xqsLji\\π∏∂V©´s ≠s™´s-LRi·",
+    "(A) ™´sVLji∏R∂VV (R) lLiLi≤R∂V xqsLji\\π∏∂V©´s≠s, NS¨s (A) NRPV (R) xqsLji-\\π∏∂V©´s ≠s™´s-LRi· NSµR∂V",
+    "(A) xqsLji\\π∏∂V©´sµj∂, NS¨s (R) xqsLji\\π∏∂V©´sµj∂ NSµR∂V",
+    "(A) xqsLji\\π∏∂V©´sµj∂ NSµR∂V, NS¨s (R) xqsLji\\π∏∂V©´sµj∂"
+  ],
+  "is_duplicate": false,
+  "content_hash": "faa56d428369bd97d8421aa4bd7d3e68"
+}

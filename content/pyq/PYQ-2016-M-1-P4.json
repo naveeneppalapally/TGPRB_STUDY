@@ -1,0 +1,29 @@
+{
+  "id": "PYQ-2016-M-1-P4",
+  "type": "pyq",
+  "exam_section": "GS",
+  "topic": "Unassigned",
+  "subtopic": "Unassigned",
+  "related_topic_ids": [],
+  "source_file": "SI_2016_Mains_P4_GS.txt",
+  "exam": "SI",
+  "year": 2016,
+  "stage": "Mains",
+  "part_code": "P4",
+  "part_name": "GS",
+  "question_number": 1,
+  "question_text": "The correct order of steps occurring in nutrition in animals is?\n»+‘·Te⁄\\ b˛wüD˝À »]π> <äX¯\\ dü]jÓÆTq Áø£eTeTT\n________________________________________________________________________",
+  "options": [
+    "Ingestion - Digestion - Assimilation - Absorption",
+    "Digestion - Ingestion - Absorption - Assimilation",
+    "Absorption - Digestion - Assimilation - Ingestion",
+    "Ingestion - Digestion - Absorption - Assimilation",
+    "n+‘·Ås¡ZVü≤DeTT ` Js¡íÁøÏj·T ` kÕ«+^ø£s¡DeTT ` XÀwüD",
+    "Js¡íÁøÏj·T ` n+‘·Ås¡ZVü≤DeTT ` XÀwüD ` kÕ«+^ø£s¡DeTT",
+    "XÀwüD ` Js¡íÁøÏj·T ` kÕ«+^ø£s¡DeTT ` n+‘·Ås¡ZVü≤DeTT",
+    "n+‘·Ås¡ZVü≤DeTT ` Js¡íÁøÏj·T ` XÀwüD ` kÕ«+^ø£s¡DeTT"
+  ],
+  "is_duplicate": true,
+  "duplicate_of": "PYQ-2016-M-1-P2",
+  "content_hash": "3fb12036a77a1f707936b38569b55f35"
+}
