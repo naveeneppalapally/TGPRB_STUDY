@@ -60,6 +60,8 @@ export default defineNuxtConfig({
     public: {
       supabaseUrl: process.env.SUPABASE_URL || '',
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY || '',
+      // R2 public base URL - used by useMedia() composable to resolve r2:// paths
+      r2PublicUrl: process.env.R2_PUBLIC_URL || '',
     },
   },
 

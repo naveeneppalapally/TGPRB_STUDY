@@ -6,6 +6,10 @@ node_modules/
 .output/
 dist/
 
+# IMAGES MUST NEVER BE IN GIT - use R2 via scripts/upload-image.ts
+# Every image goes through that script; never commit to public/images/
+public/images/
+
 # Environment secrets - NEVER commit these
 .env
 .env.local
