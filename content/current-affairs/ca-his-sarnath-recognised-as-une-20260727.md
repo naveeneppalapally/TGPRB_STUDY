@@ -1,0 +1,11 @@
+---
+id: "CA-HIS-SARNATH-RECOGNISED-AS-UNE-20260727"
+type: "current_affair"
+exam_section: "History"
+topic: "Indian History"
+related_topic_ids:
+  - "NOTE-HIS-GENERAL"
+headline: "Sarnath recognised as UNESCO World Heritage Site: Full list of India's sites, criteria for inclusion"
+date: "2026-07-27"
+source_url: "https://news.google.com/rss/articles/CBMixAFBVV95cUxPR3hkSnhIWjk3UExWa3RUdlJvNVh4NUZkNXZjSmlpdDdLalN2bnZMOWh3aHpGM3lPb3FKVEk0eUl6UEZ3TkI4Zjk3RWRSdXNjWXY5UmdjYU41VDJJU19HcTZ3Vjd1aFN3TUlPdTFYVVFwVDNQbHBMNnNKYUUwQUtBRVZqT2lzeUZuQWpMV0FRbnRtMWRQRXdlaEN0bkhnMUZFUjFieER5bV9ObjZ1TXdqRUttT01sZVNCeTg5b2RvVjdOaVJM0gHLAUFVX3lxTE5CcEdiUGtZNlJ2SVVKQWFOQ3dLNkhIdW83V1VkMkZIUnphbFdjY3N0V1RrN2JXR2xXXy02Y3I2R3FEcmpzZHZzdXJybndoaG9jWTRla3NyZk1zWEZnWG9PWHNIdXUwWk40V1N1Z2dlejJ4MTZFbEZ6em5hMEI4YkwzRl91czR0UUpKNDhydnhJUW1Bb05FZTRUQkllVVI2aVRzbWFvQzNEeW41TDU5eGIxZ3Bic3JDVnNkRzRaaXplb1VJemt3VDl4bTM0?oc=5"
+---

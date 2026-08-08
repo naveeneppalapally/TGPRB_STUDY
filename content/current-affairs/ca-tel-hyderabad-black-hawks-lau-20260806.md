@@ -1,0 +1,11 @@
+---
+id: "CA-TEL-HYDERABAD-BLACK-HAWKS-LAU-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+headline: "Hyderabad Black Hawks launch grassroots volleyball mission across Telugu states"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxON1BDUUJOVFVabW1NbUpTQ0U3MzhUdjlCTHVwVmlRSnZzXzItWXlmczhTYi1XRWwtcTc3Q1luVmRLTWhyN1E1WlRmUkQ3VmZ6bjVfWi1sNmdWLWVhaU9IRkFoSHRCeVE2X25DYjBHRENaUlBJMGFNMGdjV1lQR2dwZEZyX1RINFh6ZXF0cEtaR0ZfNzZpRW1MZTdaQXNtZUt1dUdteWpleDJjODZSLWhkTW9NcFVJdmxMdThwYXRYaVlnTG5YWUHSAcYBQVVfeXFMTjdQQ1FCTlRVWm1tTW1KU0NFNzM4VHY5Qkx1cFZpUUp2c18yLVl5ZnM4U2ItV0VsLXE3N0NZblZkS01ocjdRNVpUZlJEN1Zmem41X1otbDZnVi1lYWlPSEZBaEh0QnlRNl9uQ2IwR0RDWlJQSTBhTTBnY1dZUEdncGRGcl9USDRYemVxdHBLWkdGXzc2aUVtTGU3WkFzbWVLdXVHbXlqZXgyYzg2Ui1oZE1vTXBVSXZsTHU4cGF0WGlZZ0xuWFlB?oc=5"
+---
