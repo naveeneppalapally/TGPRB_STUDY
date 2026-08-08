@@ -1,0 +1,12 @@
+---
+id: "CA-POL-LOK-SABHA-CLEARS-MORE-SUP-20260804"
+type: "current_affair"
+exam_section: "Polity"
+topic: "Indian Constitution"
+related_topic_ids:
+  - "NOTE-POL-CONSTITUTION"
+is_telangana_focus: false
+headline: "Lok Sabha clears more Supreme Court judges, but experts warn it may not fix India's 5-crore backlog"
+date: "2026-08-04"
+source_url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPTFlIaDFUXzdpdElvRzB2dTdLRUw1aVRWZ1JNUkM5S2YwMTZXUVllYXhZSnZFMGhwM1doX0VmcXgyRDJmdzkxeEU4R0szTTc3UXBVQVdQU0RHVFc2NXNobVpDRXY0ME9xVEpQOEVjS3pQUnMyZjhEMWo2b1BJdUN4ZTF6bG9EUmtIUjBSRTFfd1pBcTBxOHJCWmJqYTRnaHhHd2RWeW5sR1RBdU5lYmJRczd1V1ljLVlPQmFZUDJLcFdJdXd3MHhRcTY3bGpzRTM5Z2x0bk10dHM0MnZBdGtHd0J30gHnAUFVX3lxTE9jZFA5ZlYwNkNRelFBMnZmUHh0STRocVV6TWFHMHBUbGs5YTdZTGV1VzY5TEVjdU5Ibm5ydnIyczAyT0ZKWUVuWmlNUDRBeVp3cFdpOEtxSGp2cVZfUVRZOHEzNkFjVU9HRTh6c0V3QnZQTlRUTmt1RWdnZ2dMNFlZVGdyQlFYd2hVSkw2VlRmN2tsU0FLazlSQ1p1U1FZWlRiSGFBOURkc1h2cWhBYXdwMnJaN2NjWE9uaC1CbnAtWTFITWxMVW5BcUF3ZXRsTDMyYzdudXhzNzY2alJGQThXcHNHYTltVQ?oc=5"
+---

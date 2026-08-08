@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-INDIA-S-Q1-GDP-GROWTH-MAY-20260803"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "India's Q1 GDP growth may touch 7%, RBI likely to hold rates amid inflation concerns: SBI Research"
+date: "2026-08-03"
+source_url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPMlhtUUFGaGcya3M1S3JyUncwNXVpSm1ZRTFVd0FWUEN3M2JrMDdLOW96Q1RUSG0xcDZCMHFXMWc4MHdlaHVNWVY2NlZqNUFVOVp3NzhPVzJHS09HenZZVndrR2VLUURKTk9oeENxYS0wWmNkejJtQUF5aGtHTFdxNGN0bHY1RFI3dFIzVmhOME1HVnlLX0JGc181MkZYcEx5SzNWbWJfYlRpQ2pIeklWMGFtMzRGT3BJWkRTLTZDZVRMOFZ4bDFWbS0tYnI5MGoteEJmZdIB4gFBVV95cUxOdVpqRVdWNlM3ck5jeU1xZV9MbExtQ05GeVg4VDYzYkxHVnJkNVBjZ1Y0RjRUZ25rbWlSbkFqbllDRGdidU5XODQzSFFuVEdQbFY1eERRd1l6cjNFUERNZXNQbDVETzBFWVZrcVFSR3A0Y1RQZXRRaFBGUWlqd3NESFlyQVNHU0htRTZCN21LeWVURUNTQkxTR1hYdTdMWk8tOGhqOWkzakRFb2hCZGRKd2U0TTZvTWF2dVNDTW5QTUl0UXBKcFdwOUgwZ2pxS05HTFpQYTM5S240MWxqaDlkbmFB?oc=5"
+---

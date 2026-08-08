@@ -1,0 +1,12 @@
+---
+id: "CA-HIS-SARNATHS-INCLUSION-IN-UNE-20260804"
+type: "current_affair"
+exam_section: "History"
+topic: "Indian History"
+related_topic_ids:
+  - "NOTE-HIS-GENERAL"
+is_telangana_focus: false
+headline: "Sarnaths inclusion in UNESCO World Heritage List will increase tourist footfalls: Gajendra Singh Shekhawat"
+date: "2026-08-04"
+source_url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOTkhGOUF0OEFjdnlSNTlKekxvY2NKTExFUGZQZUxLbkhEckhvdHkxRWl4QWZWeC1sN0FOQnE2LThhQS1yRkhidkxWYUpqZVlHQ18xY2xHd0VEdVdTVWNZaHpVVURvV1JNWmxNUkx5aTNfanpySkFpYVZNRDRld1htaUN0a1lfV0JwWGE5Q1lVWWZhVzJpMDV3Vmktclk1SzdhY2gwdEE2bndsUWFsb3h6UG9KZnVwN3hVMEU0QW9YN3FuVW10UG11T3hzNHdsMUdrMXJN0gHXAUFVX3lxTE5ZUjhqZmtTallEZk9zZjhnTjFIOWc1cjFIbTJLNGNNS2xnaEtuSGxXc1V2SGJ4UEpMNUdIejNWZUEzU0NmOWJCeVBGbEw5bjRDeWFPWnVDRTJ6alV5c2VVY1cwcGtVVnUwbzNxV2FVcGtfWUxMa25YZjZuRXBjQ2pYb0NxU21hUTRhRkZ2QmJSay1uWTJtRlRMcUlCMEpKalRKZTF1Qi1qd2VpRU9qMTRRU1VoTHJyWFZWTWZHUVd5VHZGZmN3dFpVTkRBbUQ0aTJEZEtZcHpv?oc=5"
+---

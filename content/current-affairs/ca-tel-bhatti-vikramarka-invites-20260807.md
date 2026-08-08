@@ -1,0 +1,13 @@
+---
+id: "CA-TEL-BHATTI-VIKRAMARKA-INVITES-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: true
+headline: "Bhatti Vikramarka invites companies to invest and expand in Telangana"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQdnU4Nk45UGpGd21VbHBIcHN0WnR5eFNnRXI4cFRZMnF5TUNSd3l4U2EybGJwU1N4WkNzY042V0I4REZZUmhHVDE1XzJtUnNaY1BCWDhfYnpCQWpSY29Fbnc0WVJnMjlpQnd5OVFlYkJIdlVKdklUVGNqaHN3eXhVd1ZuQ2treG9Ob0FXN0RsS0dlX0tFaUNFWi1KRkRGVlVJTVZaSEU2bHR2dEpoaG1ZNGZ5TEcydGIyZGRZRWtMdkQwaUhsQ0swR0NvaGZmT1NrN2NWX003OXBEamvSAdsBQVVfeXFMUHZ1ODZOOVBqRndtVWxwSHBzdFp0eXhTZ0VyOHBUWTJxeU1DUnd5eFNhMmxicFNTeFpDc2NONldCOERGWVJoR1QxNV8ybVJzWmNQQlg4X2J6QkFqUmNvRW53NFlSZzI5aUJ3eTlRZWJCSHZVSnZJVFRjamhzd3l4VXdWbkNra3hvTm9BVzdEbEtHZV9LRWlDRVotSkZERlZVSU1WWkhFNmx0dnRKaGhtWTRmeUxHMnRiMmRkWUVrTHZEMGlIbENLMEdDb2hmZk9TazdjVl9NNzlwRGpr?oc=5"
+---

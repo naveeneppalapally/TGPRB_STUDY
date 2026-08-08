@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-TELANGANA-POLICE-RANK-FIR-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: true
+headline: "Telangana police rank first in tackling cybercrime nationwide"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxPQm5pLTJpM3JPYnpjYlM0MHJpc3VIT3l1SWQzdEtPM1hJUV95aXBYejdKSDFkVTJMTnQxWUZsTEt2QTZfcXVwTWxuOVFGRlJRYnFNNV94TEpoWFNieUF4WWJ2aTdzd3NfeFVTN2ZaaEtMeFI5WWhoV3NaWHE4d1NRaGFZb2hXNWdtZ1dIRkhka1lRdl9JVlVhbUJVY0c1aVZqVk5VQXpudTBhMFFkTktYQnFIUTF1Uk5fTE1PSTE3eC11c3JyOWZKVk9B0gHQAUFVX3lxTE1wcmZHRy1UakxUbzVEVUhqeV9HM01hVmVjMWdOeGN4ZHB6M1lsY29ZZnd0eHQzanVOWTV2aU5YeXYyZEIwVTIwNldUNlFxc1ZHcHNROUt2Zk9fWmVSTjgyQ0MxR1hFcENZTWdVOUxjbzJkMlhIV0JEQTVxLUQxdDJtVUZ3U0l3ZEtLNUxtdWhFNW40dkxLU0dFdkhabjRWMmV2djVkTFlCcHkxTThnejI1MzFrbkhJS2pOUklpZ1IxLUV1LW10eDBNVlJDNEtXaTQ?oc=5"
+---

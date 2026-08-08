@@ -1,0 +1,12 @@
+---
+id: "CA-HIS-TOP-10-COUNTRIES-WITH-THE-20260805"
+type: "current_affair"
+exam_section: "History"
+topic: "Indian History"
+related_topic_ids:
+  - "NOTE-HIS-GENERAL"
+is_telangana_focus: false
+headline: "Top 10 countries with the most UNESCO world heritage sites: Iran enters list, India ranks 6th"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNMGtSOGVBc1FCYmlSUk9yVWEtN1kxaG13LWZPYklCRzdZdXp0WlpwMW9WVkZGUk5DQURzU1lPOE5jWVJLSTgyTmp5bC1SYml2UlYzQ2ZMR1ZLb25IbEVJekN5Z2pJQXlzeWtQanhSVDduaDJqVlpvM2J6U1BJcFBCQy1zaWdxM3dOSERoRmxualFhM1Z4bERIR0ZMS3M2RWE3VXhhb2dmaEY5d2RETndRYTZEUDRPYzYtbmVXbXNKVFIwYVBIVDFIWnZlVWdlbkZNb0Q5VWZaN1JBbDdXOVYzVzR1RTJDaDloSkFfWG5nLXXSAfcBQVVfeXFMUDF0dGdhWE1uMkFnTFVLT3NRZzVocnR1M3lJd0gwcm92YlY3ODN5UjVBeHpTdVVzY2FfR3dMT2wzRFl3eWtsWkxBdll0Q3pkQ2xMdzJ0Q3o3WjUydUJZekJvOWMyM2tuWS0tMHkzd2JwbW1RLVVkMGhkd3Azd1FERlhCNlBrZHF5d1BFRHdTcFlpN3VfQkxBZ2xWcEp1dm1hcDFzLUdwVEhjNUxtX1BCUkhoSkRKS3ZEVEtHNUxLRXN1ME8zR1BIakZWU1RSUTZpNE01Z1RvMWpOZmdYTlB4aHdBZENHcHVCS0ZDNnpuS3h6UDZnb0x5MA?oc=5"
+---

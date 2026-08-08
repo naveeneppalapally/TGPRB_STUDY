@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-TELANGANA-ROLLS-OUT-AI-PO-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: true
+headline: "Telangana rolls out AI-powered emergency number 112, slashes response time"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdHdjbmdINWZDTGp5WE1UaVNtSUNsRVZlUzZ1VlpKblpDTTFWdGhRQlRFaFVlR3J5T1U4b2JhNV9QMnNEbmlvQnFJQ1M4eWVEbW95X1p6T1dYX3FCeDl1dThRbHV6VUYxT1F3OHJaU3UyNklGbEdfb1B2bkhrS1V2cWxiOHltV2xScWlpclIyUURpRXBNWjJwMkVWQXRDLW1sbVVILUNJSjVqY2pkOGlMRURCQXZJamhMUVZSZXBDX2xlQmFDeEFxa0pLdWRCMlBsNUlJYzAwVF9vd9IB4AFBVV95cUxNYU5sR25ZejdFQTEwUW5lOEVVMDZPYzBsZjRlVnRKLVpTR2w4ZDd2aFNVUGpPaElMRFBFN2E4bXhXaFE4TS03RGx3VjlzcW9KZGctd0ZwNm5fWm55TEFORDRPSExPUWJZeW4wVmhtdkM0Y040dnhvbFVhbXNONUczd0tDMmFKUGtPOWxfNVNud3h1Y3RIRTVtZFdvQnFxOU0wQm1MQlVfdkpIRUlmM3JNZWpKR0RGZnJEc1U5am1ZRUpybkE2bzl6QnUxYXdRU1A4NHpmRkptbGY3WGxwS2pRbQ?oc=5"
+---

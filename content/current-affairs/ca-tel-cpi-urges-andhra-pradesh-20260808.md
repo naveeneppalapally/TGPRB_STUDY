@@ -1,0 +1,13 @@
+---
+id: "CA-TEL-CPI-URGES-ANDHRA-PRADESH-20260808"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+  - "NOTE-GEO-DRAINAGE"
+is_telangana_focus: true
+headline: "CPI urges Andhra Pradesh government to stop Telangana from taking up lift irrigation project near Pulichintala"
+date: "2026-08-08"
+source_url: "https://news.google.com/rss/articles/CBMikgJBVV95cUxNM01sNkVnWnZVUG02NkJXdnBacVoybEF5N2lQbTZVWjlFYk5QUVBYODhVT0FJZnN0Nk13MTdiVXdURzVNUEFsbFlBQi00SFduTl9MMnVYbV9CRThCVTZqTm4tTU1sRGFpVlNOS2lWLURPWVRCMkdfYlhSVExQQkZZSDNxOVZtXzl1elJyTUtraTR5S1BKZ29ZbFI0MHF6THJqWUd1YktrZGtSYVg0VHhsUHJQbzhrVHFDaUxUSzY4d0xBYjI2b3RhcU1PZUNuclVjTkpHblc5R2s4aW5JZWNrLTljdG9RQTZqeTE0M05Uakd5cGlvdS1SMmtJVF9VMWhZRTQ0ZnBaZEdsUWhTMDVfSGln0gGYAkFVX3lxTE5zN3ZEQXNuOUJNZU5VbVJVZGczYVU2OUdPSEZPY2Q3Nk14czFjWE83czdrUkViSmJWalQwc0ViZVFOelVQd0hMSDZLS0pwOUVKSjgtOTR0UmdFVWpjMncwQTJYYU8yLUxCSzNld19uOTdUZV9ScDBoaElOS0JPNlQxZFlDcWxrT2V5VHo3YlZuMHFNUzRvOW1BcXdHVVQ2RkE5RnVTbnByUjJiMmdMQk1SLWhRU0wybVktZklUX3NYU05tSGx6NHk1Tm1HNmI0dG1tQmhGTkJWa2gxYU16VWg4Z2pCa09kWExTOFJpWHJEa0lXTEg4eE1FQkJsS3ROclJYSlp0a2R4SjRaTkhJZGNfY0xPNnpDejc?oc=5"
+---

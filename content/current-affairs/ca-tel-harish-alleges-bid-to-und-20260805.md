@@ -1,0 +1,13 @@
+---
+id: "CA-TEL-HARISH-ALLEGES-BID-TO-UND-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+  - "NOTE-GEO-DRAINAGE"
+is_telangana_focus: true
+headline: "Harish alleges bid to undermine Telangana water interests through GRMB agenda"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNRTA1Q2FtUVB3eHZTSnU0dHhZLTc1c3BsRnBkM0V0cTdwMGFQXzREZnJPX3JuSmkycms4YkRjOTkwWkI2OENKcGs4bmd5NllPQlJDVzJrLXV5d0tnaGJNQkxyQ1dJYk9vbUs2QXNaSGg3WkxfV3Z0Wm9Jd0M4X2ZKbG5uQi1mcDNzY3dvSmRQMllNSXJjMlQtb2I0ekl4LVFiUUhXdlZfZ3lReElmLW5JeEFZeGVpcVBYa1ViVExYQm5PdmdHN25wUnNkdGxmblBhbFoxZ1BxLTFDWXV5UF9R0gHmAUFVX3lxTE1UbjItMHdwemxmSjhIYWlMY0J1Rkk1RmRsZjI0ZzFmckIwVGNCLXo4dGFKNDJ6Rjh6VENwMzZzTHFSczNIWVdLM0toM0c4TlJ1aFpsNzFUc1ZkazBWUEdCRWcyd0pEdVBNRjZpb0Y4MWs0b2xDZjZhSDJnSGd4bnFFNmlDYXNtOG1VOFQ1ZElSYVphVldnWjZyckg0TTFnM19YWEdnWEdUVjlEWVZLZlpHeTB6UE9QVE9FaXJMMUtSYTNSNW9JeUh4M1F6WHBrRF8xSWs5OHVCQU1obi1PNEtSMlJFTGlR?oc=5"
+---

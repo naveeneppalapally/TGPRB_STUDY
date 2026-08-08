@@ -1,0 +1,13 @@
+---
+id: "CA-TEL-TELANGANA-EXTENDS-INDUSTR-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: true
+headline: "Telangana extends industrial land conversion applications under HILTP till October"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOV3BybXYzTmdjb2xCQUw4Rlh3NS1vWWU3b1oxelVRajIzTU5sRnR3MHliU3hTc2Npd3ZGTFBmTW5DUlNYcjJBLUJndGlWVmR4TkNTQkFKZExwemlWaUN4d0h0dXd5TFMybkZldGowY21iZTFtM01hbjVvRDI0MVB3alZRc3BWeFJSN2tiYWZlUkhsZnRXcHJwWmN1Q3MxeUdFM205SFhHNUFDeFgzZ3hWQXJ5bUdIZUFNOS1VeXA0NzNTZUMwbFE5Q0NwSTEtRXY5bWg5Y0NjVnROMy1EeWQ5d1prWmZyRUNreWhoSNIB7AFBVV95cUxOV3BybXYzTmdjb2xCQUw4Rlh3NS1vWWU3b1oxelVRajIzTU5sRnR3MHliU3hTc2Npd3ZGTFBmTW5DUlNYcjJBLUJndGlWVmR4TkNTQkFKZExwemlWaUN4d0h0dXd5TFMybkZldGowY21iZTFtM01hbjVvRDI0MVB3alZRc3BWeFJSN2tiYWZlUkhsZnRXcHJwWmN1Q3MxeUdFM205SFhHNUFDeFgzZ3hWQXJ5bUdIZUFNOS1VeXA0NzNTZUMwbFE5Q0NwSTEtRXY5bWg5Y0NjVnROMy1EeWQ5d1prWmZyRUNreWhoSA?oc=5"
+---

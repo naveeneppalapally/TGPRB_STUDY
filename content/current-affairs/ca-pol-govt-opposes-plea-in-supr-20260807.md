@@ -1,0 +1,12 @@
+---
+id: "CA-POL-GOVT-OPPOSES-PLEA-IN-SUPR-20260807"
+type: "current_affair"
+exam_section: "Polity"
+topic: "Indian Constitution"
+related_topic_ids:
+  - "NOTE-POL-CONSTITUTION"
+is_telangana_focus: false
+headline: "Govt opposes plea in Supreme Court on income-based quota for SC, ST and OBCs | India News"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOeEtvSTJ0VVdlWjd4VDczd1FodGNiVjdSVGNHWVpSd0NReWdwb3daM1FKcm5ZY0U2dGZSb3NIczk0dXF3bDlRUGdiTjJUakZEN3RTYjRjbHRKWkhDQnpTMFpHNGRPTEVRdURQVjRFVlhKN2NUXzFPVkhDVmRyV09iMmlISk5JZ0xKNVZOZENKdG02Q0FyLXNrWnVZNjBLWnp4VENxb3lIdmp0T3BVdGNhX294M19aNS1tTy1VNzhwNGFRNUVkd1pKNUwtMTdzYm82a3VvMlhScG1yZ9IB2gFBVV95cUxOeEtvSTJ0VVdlWjd4VDczd1FodGNiVjdSVGNHWVpSd0NReWdwb3daM1FKcm5ZY0U2dGZSb3NIczk0dXF3bDlRUGdiTjJUakZEN3RTYjRjbHRKWkhDQnpTMFpHNGRPTEVRdURQVjRFVlhKN2NUXzFPVkhDVmRyV09iMmlISk5JZ0xKNVZOZENKdG02Q0FyLXNrWnVZNjBLWnp4VENxb3lIdmp0T3BVdGNhX294M19aNS1tTy1VNzhwNGFRNUVkd1pKNUwtMTdzYm82a3VvMlhScG1yZw?oc=5"
+---
