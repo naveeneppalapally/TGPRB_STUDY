@@ -14,13 +14,22 @@
         :key="item.id"
         class="shrink-0 w-72 sm:w-80 snap-start flex flex-col gap-2 rounded-md border border-black/5 dark:border-white/5 bg-white/50 dark:bg-black/20 p-3"
       >
-        <!-- Date -->
-        <time
-          :datetime="item.meta.date"
-          class="font-mono text-[10px] uppercase tracking-[0.1em] t-lo"
-        >
-          {{ formatDate(item.meta.date) }}
-        </time>
+        <!-- Date + Telangana Focus Badge -->
+        <div class="flex items-center justify-between gap-2">
+          <time
+            :datetime="item.meta.date"
+            class="font-mono text-[10px] uppercase tracking-[0.1em] t-lo"
+          >
+            {{ formatDate(item.meta.date) }}
+          </time>
+          <span
+            v-if="item.meta.is_telangana_focus"
+            class="inline-flex items-center gap-1 rounded-full bg-saffron-500/10 dark:bg-saffron-500/20 text-saffron-600 dark:text-saffron-400 px-2 py-0.5 text-[10px] font-semibold tracking-wide border border-saffron-500/20"
+          >
+            <UIcon name="i-heroicons-map-pin" class="h-3 w-3 shrink-0" />
+            TG Focus
+          </span>
+        </div>
 
         <!-- Headline + source -->
         <div class="flex-1 flex flex-col justify-between gap-3">

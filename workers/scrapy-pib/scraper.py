@@ -60,50 +60,60 @@ def get_vertex_client():
 
 def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
     """
-    Score headlines using Gemini 3.6 Flash for TGPRB exam relevance.
-    Returns only items scoring AI_SCORE_MIN or above.
-    Falls back to keeping all items if Vertex AI unavailable.
+    Score headlines using Gemini 3.6 Flash for TGPRB exam relevance,
+    identify Telangana state focus, and map secondary topic IDs.
     """
     client = get_vertex_client()
     if not client or not items:
-        return items  # No AI - keep everything (original behavior)
+        return items
 
     headlines = "\n".join(
         f"{i+1}. {item['title']}" for i, item in enumerate(items)
     )
 
-    prompt = f"""You are an expert on Indian competitive exams (TGPRB/TSPSC Police Constable and SI).
+    prompt = f"""You are an expert evaluator for Telangana TGPRB/TSPSC Police Constable & SI Exams.
 
-Topic: {topic}
+Primary Topic: {topic}
 
-Rate each headline below from 0 to 10 for relevance to this exam topic.
-- 8-10: Directly exam-relevant (government policy, court ruling, official report, geographic fact)
-- 5-7: Somewhat relevant (general awareness, background context)
-- 0-4: Not relevant (coaching listicles, opinion, foreign news, sports, entertainment)
+Evaluate each headline below:
+1. "score": integer 0-10 for exam relevance (8-10=high policy/geography/exam fact, 5-7=general context, 0-4=coaching listicle/sports/irrelevant).
+2. "is_telangana_focus": boolean (true if the news specifically relates to Telangana state, TS schemes, TS rivers/dams like Kaleshwaram/Srisailam, TS police/governance, or TG geography).
+3. "extra_topics": array of strings. Available extra topic IDs:
+   - "NOTE-TEL-GENERAL" (if news relates to Telangana)
+   - "NOTE-GEO-DRAINAGE" (if news relates to rivers, dams, floods, water projects)
+   - "NOTE-GEO-ENVIRONMENT" (if news relates to forests, wildlife, pollution, climate)
+   - "NOTE-POL-CONSTITUTION" (if news relates to polity, courts, parliament)
+   - "NOTE-ECO-GENERAL" (if news relates to RBI, budget, economy, GST)
 
 Headlines:
 {headlines}
 
-Reply ONLY with a JSON array of integers, one score per headline, in order.
-Example: [8, 3, 7, 1, 9]"""
+Reply ONLY with a valid JSON array of objects in order.
+Example format:
+[
+  {{"score": 9, "is_telangana_focus": true, "extra_topics": ["NOTE-TEL-GENERAL", "NOTE-GEO-DRAINAGE"]}},
+  {{"score": 2, "is_telangana_focus": false, "extra_topics": []}}
+]"""
 
     try:
         response = client.generate_content(prompt)
         text = response.text.strip()
-        # Extract JSON array from response
-        match = re.search(r'\[([\d,\s]+)\]', text)
-        if not match:
-            print(f"  [AI Filter] Could not parse scores: {text[:100]}")
-            return items
-        scores = [int(s.strip()) for s in match.group(1).split(',')]
-        if len(scores) != len(items):
-            print(f"  [AI Filter] Score count mismatch ({len(scores)} vs {len(items)})")
+        # Clean potential markdown code blocks
+        if "```" in text:
+            text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
+        
+        parsed = json.loads(text)
+        if not isinstance(parsed, list) or len(parsed) != len(items):
+            print(f"  [AI Filter] JSON parsing array length mismatch ({len(parsed) if isinstance(parsed, list) else 'not list'} vs {len(items)})")
             return items
 
         filtered = []
-        for item, score in zip(items, scores):
+        for item, ai_meta in zip(items, parsed):
+            score = ai_meta.get("score", 7)
             if score >= AI_SCORE_MIN:
                 item['ai_score'] = score
+                item['is_telangana_focus'] = bool(ai_meta.get("is_telangana_focus", False))
+                item['extra_topics'] = ai_meta.get("extra_topics", [])
                 filtered.append(item)
             else:
                 print(f"  [AI Filter] Dropped (score {score}): {item['title'][:60]}")
@@ -230,8 +240,10 @@ def already_exists(slug: str) -> bool:
     return (CONTENT_DIR / f"{slug}.md").exists()
 
 
-def write_md(item_id: str, meta: dict, title: str, date_str: str, link: str) -> Path:
-    related = "\n".join(f'  - "{t}"' for t in meta["related_topic_ids"])
+def write_md(item_id: str, meta: dict, title: str, date_str: str, link: str, is_tg_focus: bool = False, extra_topics: list = None) -> Path:
+    all_topics = list(dict.fromkeys(meta["related_topic_ids"] + (extra_topics or [])))
+    related = "\n".join(f'  - "{t}"' for t in all_topics)
+    tg_focus_str = "true" if is_tg_focus else "false"
     content = f"""---
 id: "{item_id}"
 type: "current_affair"
@@ -239,6 +251,7 @@ exam_section: "{meta['exam_section']}"
 topic: "{meta['topic']}"
 related_topic_ids:
 {related}
+is_telangana_focus: {tg_focus_str}
 headline: "{title}"
 date: "{date_str}"
 source_url: "{link}"
@@ -298,9 +311,11 @@ def main():
                 skipped += 1
                 continue
 
-            path = write_md(item_id, meta, title, date_str, item["link"])
+            is_tg = item.get("is_telangana_focus", False)
+            extra_t = item.get("extra_topics", [])
+            path = write_md(item_id, meta, title, date_str, item["link"], is_tg_focus=is_tg, extra_topics=extra_t)
             added.append((meta["topic"], title, item["link"]))
-            print(f"  + {item_id}")
+            print(f"  + {item_id}{' [TG Focus]' if is_tg else ''}")
 
     # Summary
     print(f"\nDone: {len(added)} added, {skipped} skipped")
