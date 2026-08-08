@@ -34,9 +34,9 @@
 
         <!-- Entry list -->
         <div class="flex-1 overflow-y-auto px-4 py-3 space-y-3">
-          <div v-if="entries.length">
+          <div v-if="entriesInPanel.length">
             <div
-              v-for="entry in entries"
+              v-for="entry in entriesInPanel"
               :key="entry.id"
               class="rounded-md border b-line bg-sub p-3 flex flex-col gap-1.5"
               :class="entry.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : ''"
@@ -44,7 +44,7 @@
               <!-- Section + date row -->
               <div class="flex items-center justify-between gap-2 flex-wrap">
                 <div class="flex items-center gap-1.5">
-                  <span class="chip text-[10px]">{{ entry.meta?.exam_section }}</span>
+                  <span class="chip text-[10px] uppercase font-bold">{{ entry.meta?.category || 'General' }}</span>
                   <span
                     v-if="entry.meta?.is_telangana_focus"
                     class="inline-flex items-center gap-1 rounded-full bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 px-1.5 py-0.5 text-[10px] font-semibold"
@@ -56,21 +56,27 @@
                 <time class="font-mono text-[10px] t-lo">{{ formatDate(entry.meta?.date) }}</time>
               </div>
 
-              <!-- Headline -->
-              <p class="text-body-xs font-semibold leading-snug t-hi">
-                {{ entry.meta?.headline }}
-              </p>
+              <!-- Fact / Headline -->
+              <div class="flex flex-col gap-1">
+                <p class="text-body-xs font-semibold leading-snug t-hi">
+                  {{ entry.meta?.headline }}
+                </p>
+                <p v-if="entry.meta?.exam_fact" class="text-[11px] leading-snug t-mid bg-black/5 dark:bg-white/5 p-1.5 rounded border border-black/10 dark:border-white/10">
+                  <UIcon name="i-heroicons-light-bulb" class="inline-block h-3 w-3 mr-0.5 align-text-bottom text-amber-500" />
+                  {{ entry.meta.exam_fact }}
+                </p>
+              </div>
 
               <!-- Source -->
               <a
-                v-if="entry.meta?.source_url"
-                :href="entry.meta.source_url"
+                v-if="entry.meta?.source_url || entry.meta?.canonical_source_url"
+                :href="entry.meta?.canonical_source_url || entry.meta?.source_url"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="inline-flex w-fit items-center gap-1 text-[10px] t-lo hover:accent transition-colors"
               >
-                <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-2.5 w-2.5" />
-                {{ sourceDomain(entry.meta.source_url) }}
+                <UIcon :name="entry.meta?.source_type === 'official' ? 'i-heroicons-building-library' : 'i-heroicons-newspaper'" class="h-2.5 w-2.5" />
+                {{ entry.meta?.source_name || sourceDomain(entry.meta?.canonical_source_url || entry.meta?.source_url) }}
               </a>
             </div>
           </div>

@@ -1,11 +1,21 @@
 """
-TGPRB Current Affairs Scraper
-──────────────────────────────────────────────────────────────────────────────
+TGPRB Current Affairs Scraper - Exam Card Edition
+---------------------------------------------------------------------------
 Runs as a GitHub Actions cron job daily at 7am IST.
-Fetches Google News RSS for each TGPRB exam topic,
-filters headlines with Gemini 3.6 Flash (Vertex AI) for exam relevance,
-creates content/current-affairs/*.md files locally,
-and sends a Telegram summary.
+
+Pipeline:
+1. Fetch Google News RSS for PYQ-aligned categories
+2. Visit each source URL and extract the real article text
+3. Gemini reads the real article and extracts exam facts + MCQ
+4. Save as content/current-affairs/*.md exam cards
+
+Gemini is an EXTRACTION layer only - it reads real article text and
+pulls out facts. It does NOT generate or invent any information.
+
+Based on docs/current-affairs-audit.md PYQ analysis:
+- 154 CA questions across 10 papers (7.7% of exam)
+- Top categories: Appointments (14.3%), International (14.3%),
+  Economy (11.7%), Awards (10.4%), Sports (9.7%)
 """
 
 import os
@@ -15,18 +25,26 @@ import tempfile
 import requests
 from datetime import datetime, timezone
 from pathlib import Path
+from bs4 import BeautifulSoup
 
 
-# ── Config ────────────────────────────────────────────────────────────────────
-CONTENT_DIR   = Path("content/current-affairs")
-MAX_AGE_DAYS  = 365  # PYQ analysis: 85% from last 6 months, max lookback 2 years
-TELEGRAM_BOT  = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "")
-GCP_PROJECT   = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
+# -- Config -------------------------------------------------------------------
+CONTENT_DIR    = Path("content/current-affairs")
+MAX_AGE_DAYS   = 365
+TELEGRAM_BOT   = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT  = os.environ.get("TELEGRAM_CHAT_ID", "")
+GCP_PROJECT    = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
 GCP_CREDS_JSON = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON", "")
-AI_SCORE_MIN  = 6   # Drop articles scoring below this (0-10)
+AI_SCORE_MIN   = 6
 
-# ── Vertex AI setup ───────────────────────────────────────────────────────────
+# PYQ-proven categories (from audit Section A2)
+VALID_CATEGORIES = [
+    "appointments", "international", "economy", "awards", "sports",
+    "telangana", "schemes", "defence", "science", "judiciary",
+    "environment", "books",
+]
+
+# -- Vertex AI setup ----------------------------------------------------------
 _vertex_client = None
 
 def get_vertex_client():
@@ -36,11 +54,10 @@ def get_vertex_client():
         return _vertex_client
 
     if not GCP_CREDS_JSON or not GCP_PROJECT:
-        print("  [AI Filter] Vertex AI not configured - skipping AI scoring")
+        print("  [AI] Vertex AI not configured - skipping")
         return None
 
     try:
-        # Write credentials JSON to a temp file (required by google-auth)
         creds_data = json.loads(GCP_CREDS_JSON)
         tmp = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False)
         json.dump(creds_data, tmp)
@@ -49,25 +66,207 @@ def get_vertex_client():
 
         from google import genai
         _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
-        print("  [AI Filter] Vertex AI ready - using google-genai (gemini-3.6-flash)")
+        print("  [AI] Vertex AI ready - gemini-3.6-flash (extraction mode)")
         return _vertex_client
     except Exception as e:
-        print(f"  [AI Filter] Vertex AI init error: {e}")
+        print(f"  [AI] Vertex AI init error: {e}")
         return None
 
 
-def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
+# -- PYQ-aligned topic feeds --------------------------------------------------
+# Ranked by exam frequency from audit Section A2
+TOPIC_FEEDS = [
+    # Priority 1: Appointments (14.3% of CA questions, 8/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+appointed+governor+secretary+chairman+DG+chief+justice+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Polity",
+        "topic": "Appointments and Office-Holders",
+        "category": "appointments",
+        "related_topic_ids": ["NOTE-POL-CONSTITUTION"],
+    },
+    # Priority 2: International (14.3%, 8/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+summit+bilateral+agreement+G20+BRICS+UN+SCO+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Polity",
+        "topic": "International Affairs",
+        "category": "international",
+        "related_topic_ids": ["NOTE-POL-CONSTITUTION"],
+    },
+    # Priority 3: Economy (11.7%, 8/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+RBI+GDP+inflation+budget+fiscal+GST+repo+rate+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Economy",
+        "topic": "Indian Economy",
+        "category": "economy",
+        "related_topic_ids": ["NOTE-ECO-GENERAL"],
+    },
+    # Priority 4: Awards (10.4%, 8/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+Padma+Jnanpith+Nobel+Dronacharya+Arjuna+award+prize+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "General Knowledge",
+        "topic": "Awards and Honours",
+        "category": "awards",
+        "related_topic_ids": [],
+    },
+    # Priority 5: Sports (9.7%, 8/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+cricket+boxing+athletics+medal+championship+Olympics+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "General Knowledge",
+        "topic": "Sports Results",
+        "category": "sports",
+        "related_topic_ids": [],
+    },
+    # Priority 6: Telangana (9.1%, 6/10 papers) - 3 site-specific feeds
+    {
+        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+inaugurated+when:7d+site:telanganatoday.com&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Telangana",
+        "topic": "Telangana State",
+        "category": "telangana",
+        "related_topic_ids": ["NOTE-TEL-GENERAL"],
+    },
+    {
+        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+inaugurated+when:7d+site:thehansindia.com&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Telangana",
+        "topic": "Telangana State",
+        "category": "telangana",
+        "related_topic_ids": ["NOTE-TEL-GENERAL"],
+    },
+    {
+        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+inaugurated+when:7d+site:thehindu.com&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Telangana",
+        "topic": "Telangana State",
+        "category": "telangana",
+        "related_topic_ids": ["NOTE-TEL-GENERAL"],
+    },
+    # Priority 7: Government Schemes (8.4%, 7/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+scheme+launched+yojana+mission+programme+inaugurated+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Polity",
+        "topic": "Government Schemes",
+        "category": "schemes",
+        "related_topic_ids": ["NOTE-POL-CONSTITUTION"],
+    },
+    # Priority 8: Defence (6.5%, 7/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+DRDO+missile+exercise+IAF+Navy+Army+defence+procurement+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "General Knowledge",
+        "topic": "Defence and Security",
+        "category": "defence",
+        "related_topic_ids": [],
+    },
+    # Priority 9: Science/Space (3.9%, 6/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+ISRO+launch+satellite+space+SSLV+PSLV+science+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Science & Technology",
+        "topic": "Science and Space",
+        "category": "science",
+        "related_topic_ids": ["NOTE-SCI-GENERAL"],
+    },
+    # Priority 10: Judiciary (4.5%, 4/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+Supreme+Court+verdict+High+Court+commission+bench+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Polity",
+        "topic": "Judiciary and Commissions",
+        "category": "judiciary",
+        "related_topic_ids": ["NOTE-POL-CONSTITUTION"],
+    },
+    # Priority 11: Environment (2.6%, 3/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+wildlife+national+park+cyclone+climate+forest+endangered+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Geography",
+        "topic": "Environment and Ecology",
+        "category": "environment",
+        "related_topic_ids": ["NOTE-GEO-ENVIRONMENT"],
+    },
+    # Priority 12: Books (3.2%, 4/10 papers)
+    {
+        "url": "https://news.google.com/rss/search?q=India+book+author+Sahitya+Akademi+literary+prize+memoir+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "General Knowledge",
+        "topic": "Books and Literary Awards",
+        "category": "books",
+        "related_topic_ids": [],
+    },
+]
+
+MAX_ITEMS_PER_FEED = 20
+
+
+# -- Article text extraction --------------------------------------------------
+
+def fetch_article_text(url: str) -> str:
     """
-    Score headlines using Gemini 3.6 Flash for TGPRB exam relevance,
-    identify Telangana state focus, and map secondary topic IDs.
-    Batches headlines in chunks of 25 to prevent truncation on large feeds.
+    Fetch the actual article from a source URL and extract readable text.
+    This is the ground truth - Gemini will extract facts from THIS text,
+    not generate them from thin air.
+    """
+    try:
+        # Follow Google News redirects to the real article
+        resp = requests.get(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            },
+            timeout=15,
+            allow_redirects=True,
+        )
+        resp.raise_for_status()
+    except Exception as e:
+        print(f"    [Fetch] Failed: {e}")
+        return ""
+
+    try:
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Remove noise: scripts, styles, nav, ads, sidebars
+        for tag in soup(["script", "style", "nav", "footer", "aside",
+                         "iframe", "noscript", "form", "header"]):
+            tag.decompose()
+
+        # Try common article containers first
+        article = (
+            soup.find("article")
+            or soup.find("div", class_=re.compile(r"article|story|content|post", re.I))
+            or soup.find("main")
+            or soup.body
+        )
+
+        if not article:
+            return ""
+
+        # Extract text from paragraphs (most reliable for articles)
+        paragraphs = article.find_all("p")
+        text = "\n".join(p.get_text(strip=True) for p in paragraphs if p.get_text(strip=True))
+
+        # Cap at 3000 chars to keep Gemini prompt manageable
+        if len(text) > 3000:
+            text = text[:3000] + "..."
+
+        return text
+    except Exception as e:
+        print(f"    [Parse] Failed: {e}")
+        return ""
+
+
+# -- AI: Extract exam cards from real article text ----------------------------
+
+def ai_extract_exam_cards(items: list[dict], feed_meta: dict) -> list[dict]:
+    """
+    Two-phase AI pipeline:
+    Phase 1: Quick score headlines (batch of 25) - cheap, fast
+    Phase 2: For passing headlines, read article text and extract facts (1 by 1)
+
+    Gemini is EXTRACTION only. It reads real article text and pulls out
+    facts that exist in the source. It does NOT invent information.
     """
     client = get_vertex_client()
     if not client or not items:
         return items
 
+    # ── Phase 1: Quick headline scoring (batch) ──────────────────────────
+    print("  Phase 1: Scoring headlines...")
     CHUNK_SIZE = 25
-    filtered = []
+    scored = []
 
     for chunk_idx in range(0, len(items), CHUNK_SIZE):
         chunk = items[chunk_idx:chunk_idx + CHUNK_SIZE]
@@ -75,127 +274,133 @@ def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
             f"{i+1}. {item['title']}" for i, item in enumerate(chunk)
         )
 
-        prompt = f"""You are an expert evaluator for Telangana TGPRB/TSPSC Police Constable & SI Exams.
+        score_prompt = f"""You are a filter for TGPRB police exam current affairs.
+Category: {feed_meta['category']}
 
-Primary Topic: {topic}
-
-Evaluate each headline below:
-1. "score": integer 0-10 for exam relevance (8-10=high policy/geography/exam fact, 5-7=general context, 0-4=coaching listicle/sports/irrelevant).
-2. "is_telangana_focus": boolean (true if the news specifically relates to Telangana state, TS schemes, TS rivers/dams like Kaleshwaram/Srisailam, TS police/governance, or TG geography).
-3. "extra_topics": array of strings. Available extra topic IDs:
-   - "NOTE-TEL-GENERAL" (if news relates to Telangana)
-   - "NOTE-GEO-DRAINAGE" (if news relates to rivers, dams, floods, water projects)
-   - "NOTE-GEO-ENVIRONMENT" (if news relates to forests, wildlife, pollution, climate)
-   - "NOTE-POL-CONSTITUTION" (if news relates to polity, courts, parliament)
-   - "NOTE-ECO-GENERAL" (if news relates to RBI, budget, economy, GST)
+Score each headline 0-10 for TGPRB exam relevance:
+- 8-10: Direct exam question likely (appointment, award, result, summit, scheme launch)
+- 5-7: Useful context but not a direct question
+- 0-4: Irrelevant (opinion, listicle, entertainment, foreign sports, coaching ad)
 
 Headlines:
 {headlines}
 
-Reply ONLY with a valid JSON array of objects in order ({len(chunk)} items).
-Example format:
-[
-  {{"score": 9, "is_telangana_focus": true, "extra_topics": ["NOTE-TEL-GENERAL", "NOTE-GEO-DRAINAGE"]}},
-  {{"score": 2, "is_telangana_focus": false, "extra_topics": []}}
-]"""
+Reply ONLY with a JSON array of integers ({len(chunk)} scores). Example: [8, 3, 7, 2]"""
 
         try:
             response = client.models.generate_content(
                 model="gemini-3.6-flash",
-                contents=prompt,
+                contents=score_prompt,
             )
             text = response.text.strip()
             if "```" in text:
                 text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
-            
-            parsed = json.loads(text)
-            if not isinstance(parsed, list) or len(parsed) != len(chunk):
-                print(f"  [AI Filter] Chunk score length mismatch ({len(parsed) if isinstance(parsed, list) else 'not list'} vs {len(chunk)}) - keeping chunk")
-                filtered.extend(chunk)
+
+            scores = json.loads(text)
+            if isinstance(scores, list) and len(scores) == len(chunk):
+                for item, score in zip(chunk, scores):
+                    if isinstance(score, int) and score >= AI_SCORE_MIN:
+                        item['ai_score'] = score
+                        scored.append(item)
+                    else:
+                        print(f"    Dropped (score {score}): {item['title'][:55]}")
+            else:
+                scored.extend(chunk)  # Keep on parse error
+        except Exception as e:
+            print(f"    Score error: {e}")
+            scored.extend(chunk)
+
+    print(f"  Phase 1: {len(scored)}/{len(items)} passed headline filter")
+    if not scored:
+        return []
+
+    # ── Phase 2: Read real article + extract facts (one by one) ──────────
+    print("  Phase 2: Reading articles and extracting exam facts...")
+    results = []
+
+    for item in scored:
+        title = clean_title(item["title"])
+        print(f"    Reading: {title[:55]}...")
+
+        article_text = fetch_article_text(item["link"])
+        if not article_text or len(article_text) < 50:
+            print(f"    Skipped (no article text)")
+            continue
+
+        extract_prompt = f"""You are extracting exam-ready facts from a real news article for TGPRB police exam preparation.
+
+RULES:
+- Extract ONLY facts that are explicitly stated in the article text below.
+- Do NOT add any information that is not in the article.
+- Do NOT guess or assume anything.
+- If the article does not contain a clear testable fact, set exam_fact to "" and mcq to null.
+
+Category: {feed_meta['category']}
+Headline: {title}
+
+ARTICLE TEXT (from source):
+{article_text}
+
+Extract and return a single JSON object:
+{{
+  "exam_fact": "One sentence with the key testable fact from this article (name, date, number, place). MUST be directly from the article text.",
+  "summary": "2-3 sentences of exam-relevant context from the article. Only include facts stated in the article.",
+  "category": "one of {json.dumps(VALID_CATEGORIES)}",
+  "is_telangana_focus": true/false,
+  "event_date": "YYYY-MM-DD when the event happened (from the article)",
+  "event_key": "short-slug-for-dedup (e.g. rbi-repo-rate-aug-2026)",
+  "mcq": {{
+    "question": "A TGPRB-style exam question whose answer is explicitly in the article",
+    "options": ["correct answer from article", "plausible wrong 1", "plausible wrong 2", "plausible wrong 3"],
+    "answer": 0,
+    "explanation": "One sentence citing the fact from the article"
+  }},
+  "extra_topics": ["NOTE-XXX-YYY"]
+}}
+
+If the article has no clear testable fact, return:
+{{"exam_fact": "", "summary": "", "category": "{feed_meta['category']}", "is_telangana_focus": false, "event_date": "", "event_key": "", "mcq": null, "extra_topics": []}}
+
+Reply ONLY with valid JSON. No markdown."""
+
+        try:
+            response = client.models.generate_content(
+                model="gemini-3.6-flash",
+                contents=extract_prompt,
+            )
+            text = response.text.strip()
+            if "```" in text:
+                text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
+
+            ai = json.loads(text)
+
+            # Validate: must have exam_fact and mcq
+            if not ai.get("exam_fact") or not ai.get("mcq"):
+                print(f"    No testable fact found - skipped")
                 continue
 
-            for item, ai_meta in zip(chunk, parsed):
-                score = ai_meta.get("score", 7)
-                if score >= AI_SCORE_MIN:
-                    item['ai_score'] = score
-                    item['is_telangana_focus'] = bool(ai_meta.get("is_telangana_focus", False))
-                    item['extra_topics'] = ai_meta.get("extra_topics", [])
-                    filtered.append(item)
-                else:
-                    print(f"  [AI Filter] Dropped (score {score}): {item['title'][:60]}")
+            mcq = ai.get("mcq", {})
+            if not isinstance(mcq, dict) or "question" not in mcq or "options" not in mcq:
+                print(f"    Invalid MCQ - skipped")
+                continue
+
+            if len(mcq.get("options", [])) != 4:
+                print(f"    MCQ needs exactly 4 options - skipped")
+                continue
+
+            item['ai'] = ai
+            item['article_text_length'] = len(article_text)
+            results.append(item)
+            print(f"    Extracted: {ai.get('exam_fact', '')[:60]}")
 
         except Exception as e:
-            print(f"  [AI Filter] Chunk scoring error: {e}")
-            filtered.extend(chunk)
+            print(f"    Extract error: {e}")
 
-    print(f"  [AI Filter] Kept {len(filtered)}/{len(items)} after scoring")
-    return filtered
-
-
-# ── Topic feeds ───────────────────────────────────────────────────────────────
-TOPIC_FEEDS = [
-    {
-        "url": "https://news.google.com/rss/search?q=India+river+dam+flood+irrigation+Godavari+Krishna+Ganga+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Geography",
-        "topic": "Drainage System of India",
-        "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=India+constitution+parliament+supreme+court+amendment+fundamental+rights+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Polity",
-        "topic": "Indian Constitution",
-        "related_topic_ids": ["NOTE-POL-CONSTITUTION"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=India+GDP+inflation+RBI+budget+fiscal+GST+economy+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Economy",
-        "topic": "Indian Economy",
-        "related_topic_ids": ["NOTE-ECO-GENERAL"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=India+environment+wildlife+forest+climate+national+park+biodiversity+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Geography",
-        "topic": "Environment and Ecology",
-        "related_topic_ids": ["NOTE-GEO-ENVIRONMENT"],
-    },
-    # Telangana: 3 separate targeted feeds instead of 1 broad one
-    {
-        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+project+when:7d+site:telanganatoday.com&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Telangana",
-        "topic": "Telangana State",
-        "related_topic_ids": ["NOTE-TEL-GENERAL"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+project+when:7d+site:thehansindia.com&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Telangana",
-        "topic": "Telangana State",
-        "related_topic_ids": ["NOTE-TEL-GENERAL"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+project+when:7d+site:thehindu.com&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Telangana",
-        "topic": "Telangana State",
-        "related_topic_ids": ["NOTE-TEL-GENERAL"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=India+ISRO+space+missile+AI+technology+semiconductor+defence+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "Science & Technology",
-        "topic": "Science and Technology",
-        "related_topic_ids": ["NOTE-SCI-GENERAL"],
-    },
-    {
-        "url": "https://news.google.com/rss/search?q=India+history+heritage+archaeological+UNESCO+monument+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-        "exam_section": "History",
-        "topic": "Indian History",
-        "related_topic_ids": ["NOTE-HIS-GENERAL"],
-    },
-]
-
-# Max items to process per feed (prevents volume explosion)
-MAX_ITEMS_PER_FEED = 30
+    print(f"  Phase 2: {len(results)}/{len(scored)} have verified exam cards")
+    return results
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+# -- Helpers ------------------------------------------------------------------
 
 def parse_date(pub_date: str):
     for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S GMT"]:
@@ -215,16 +420,15 @@ def is_recent(pub_date: str) -> bool:
 
 
 def clean_title(raw: str) -> str:
-    # Remove " - Source Name" suffix Google News adds
     raw = re.sub(r"\s+-\s+[^-]+$", "", raw).strip()
     raw = raw.replace("&amp;", "&").replace("&quot;", '"').replace("&#39;", "'")
     return raw.replace('"', "'")
 
 
-def make_id(section: str, title: str, date_str: str) -> str:
-    sec = re.sub(r"[^A-Z]", "", section.upper())[:3]
+def make_id(category: str, title: str, date_str: str) -> str:
+    cat = re.sub(r"[^A-Z]", "", category.upper())[:3]
     slug = re.sub(r"[^A-Z0-9]+", "-", title.upper()[:25]).strip("-")
-    return f"CA-{sec}-{slug}-{date_str.replace('-', '')}"
+    return f"CA-{cat}-{slug}-{date_str.replace('-', '')}"
 
 
 def fetch_feed(url: str) -> list[dict]:
@@ -258,28 +462,131 @@ def fetch_feed(url: str) -> list[dict]:
     return items
 
 
-def already_exists(slug: str) -> bool:
+def event_key_exists(event_key: str) -> bool:
+    """Check if an event_key already exists in any CA file (dedup)."""
+    if not event_key:
+        return False
+    for path in CONTENT_DIR.glob("*.md"):
+        try:
+            content = path.read_text(encoding="utf-8")
+            if f'event_key: "{event_key}"' in content:
+                return True
+        except Exception:
+            pass
+    return False
+
+
+def slug_exists(slug: str) -> bool:
     return (CONTENT_DIR / f"{slug}.md").exists()
 
 
-def write_md(item_id: str, meta: dict, title: str, date_str: str, link: str, is_tg_focus: bool = False, extra_topics: list = None) -> Path:
-    all_topics = list(dict.fromkeys(meta["related_topic_ids"] + (extra_topics or [])))
-    related = "\n".join(f'  - "{t}"' for t in all_topics)
-    tg_focus_str = "true" if is_tg_focus else "false"
+def escape_yaml(text: str) -> str:
+    """Escape a string for safe YAML double-quoted value."""
+    if not text:
+        return ""
+    return text.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").strip()
+
+
+def write_exam_card(item: dict, feed_meta: dict) -> Path | None:
+    """Write a current-affairs exam card markdown file."""
+    ai = item.get('ai', {})
+    title = clean_title(item["title"])
+    if not title or len(title) < 10:
+        return None
+
+    dt = parse_date(item["pub_date"])
+    pub_date_str = dt.strftime("%Y-%m-%d")
+    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    category = ai.get("category", feed_meta["category"])
+    if category not in VALID_CATEGORIES:
+        category = feed_meta["category"]
+
+    event_key = ai.get("event_key", "")
+    event_date = ai.get("event_date", pub_date_str)
+    exam_fact = escape_yaml(ai.get("exam_fact", ""))
+    summary = escape_yaml(ai.get("summary", ""))
+    is_tg = bool(ai.get("is_telangana_focus", False))
+    extra_topics = ai.get("extra_topics", [])
+
+    mcq = ai.get("mcq", {})
+    mcq_question = escape_yaml(mcq.get("question", ""))
+    mcq_options = mcq.get("options", [])
+    mcq_answer = mcq.get("answer", 0)
+    mcq_explanation = escape_yaml(mcq.get("explanation", ""))
+
+    # Dedup by event_key
+    if event_key and event_key_exists(event_key):
+        print(f"  [Dedup] Skipped (same event): {event_key}")
+        return None
+
+    # Build ID and check slug
+    item_id = make_id(category, title, pub_date_str)
+    slug = item_id.lower().replace("_", "-")
+    if slug_exists(slug):
+        return None
+
+    # Merge topic IDs
+    all_topics = list(dict.fromkeys(feed_meta["related_topic_ids"] + extra_topics))
+    if all_topics:
+        related = "\n".join(f'  - "{t}"' for t in all_topics)
+    else:
+        related = '  - ""'
+
+    # MCQ options YAML
+    mcq_options_yaml = "\n".join(f'    - "{escape_yaml(opt)}"' for opt in mcq_options)
+
+    # Source info
+    source_url = item.get("link", "")
+    source_name = ""
+    try:
+        domain = re.sub(r"^www\.", "", requests.utils.urlparse(source_url).hostname or "")
+        source_map = {
+            "pib.gov.in": "PIB", "thehindu.com": "The Hindu",
+            "indianexpress.com": "Indian Express", "ndtv.com": "NDTV",
+            "telanganatoday.com": "Telangana Today", "thehansindia.com": "Hans India",
+            "business-standard.com": "Business Standard", "livemint.com": "Mint",
+            "economictimes.indiatimes.com": "Economic Times",
+            "timesofindia.indiatimes.com": "Times of India",
+            "deccanchronicle.com": "Deccan Chronicle",
+            "isro.gov.in": "ISRO", "drdo.gov.in": "DRDO",
+            "mea.gov.in": "MEA", "rbi.org.in": "RBI",
+        }
+        source_name = source_map.get(domain, domain)
+    except Exception:
+        source_name = "News"
+
+    source_type = "official" if source_name in ("PIB", "ISRO", "DRDO", "MEA", "RBI") else "news"
+
     content = f"""---
 id: "{item_id}"
 type: "current_affair"
-exam_section: "{meta['exam_section']}"
-topic: "{meta['topic']}"
+category: "{category}"
+exam_section: "{feed_meta['exam_section']}"
+topic: "{feed_meta['topic']}"
 related_topic_ids:
 {related}
-is_telangana_focus: {tg_focus_str}
-headline: "{title}"
-date: "{date_str}"
-source_url: "{link}"
+is_telangana_focus: {"true" if is_tg else "false"}
+headline: "{escape_yaml(title)}"
+exam_fact: "{exam_fact}"
+summary: "{summary}"
+event_date: "{event_date}"
+published_at: "{today_str}"
+date: "{pub_date_str}"
+source_name: "{source_name}"
+source_type: "{source_type}"
+canonical_source_url: "{source_url}"
+source_url: "{source_url}"
+event_key: "{escape_yaml(event_key)}"
+mcq:
+  question: "{mcq_question}"
+  options:
+{mcq_options_yaml}
+  answer: {mcq_answer}
+  explanation: "{mcq_explanation}"
 ---
 """
-    slug = item_id.lower().replace("_", "-")
+
     path = CONTENT_DIR / f"{slug}.md"
     path.write_text(content, encoding="utf-8")
     return path
@@ -299,64 +606,61 @@ def send_telegram(message: str):
         print(f"Telegram error: {e}")
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# -- Main --------------------------------------------------------------------
 
 def main():
     CONTENT_DIR.mkdir(parents=True, exist_ok=True)
 
-    added   = []
+    added = []
     skipped = 0
 
-    for meta in TOPIC_FEEDS:
-        print(f"\n[{meta['topic']}]")
-        items = fetch_feed(meta["url"])
-        print(f"  Fetched {len(items)} items")
+    for feed_meta in TOPIC_FEEDS:
+        print(f"\n{'='*60}")
+        print(f"[{feed_meta['category'].upper()}: {feed_meta['topic']}]")
+        items = fetch_feed(feed_meta["url"])
+        print(f"  Fetched {len(items)} items from RSS")
 
-        # Filter by date first
+        # Filter by date
         recent = [i for i in items if is_recent(i["pub_date"])]
-
-        # Cap per-feed volume to prevent explosion
         recent = recent[:MAX_ITEMS_PER_FEED]
 
-        # AI scoring - drop low-relevance headlines via Gemini 2.5 Flash
-        recent = ai_score_headlines(recent, meta["topic"])
+        # Two-phase AI: score headlines, then read articles and extract facts
+        exam_items = ai_extract_exam_cards(recent, feed_meta)
 
-        for item in recent:
-            title = clean_title(item["title"])
-            if not title or len(title) < 10:
+        for item in exam_items:
+            path = write_exam_card(item, feed_meta)
+            if path:
+                ai = item.get('ai', {})
+                cat = ai.get('category', feed_meta['category'])
+                fact = ai.get('exam_fact', '')[:50]
+                tg_flag = ' [TG]' if ai.get('is_telangana_focus') else ''
+                added.append((cat, clean_title(item['title']), item['link']))
+                print(f"  SAVED: {cat}{tg_flag} - {fact}")
+            else:
                 skipped += 1
-                continue
-
-            dt       = parse_date(item["pub_date"])
-            date_str = dt.strftime("%Y-%m-%d")
-            item_id  = make_id(meta["exam_section"], title, date_str)
-            slug     = item_id.lower().replace("_", "-")
-
-            if already_exists(slug):
-                skipped += 1
-                continue
-
-            is_tg = item.get("is_telangana_focus", False)
-            extra_t = item.get("extra_topics", [])
-            path = write_md(item_id, meta, title, date_str, item["link"], is_tg_focus=is_tg, extra_topics=extra_t)
-            added.append((meta["topic"], title, item["link"]))
-            print(f"  + {item_id}{' [TG Focus]' if is_tg else ''}")
 
     # Summary
-    print(f"\nDone: {len(added)} added, {skipped} skipped")
+    print(f"\n{'='*60}")
+    print(f"Done: {len(added)} exam cards added, {skipped} skipped/deduped")
 
     if not added:
         print("Nothing new today.")
         return
 
-    # Telegram notification
-    msg = f"<b>TGPRB StudyOS - Current Affairs ({datetime.now().strftime('%d %b %Y')})</b>\n\n"
-    msg += f"<b>{len(added)} new item(s) added:</b>\n"
-    for topic, title, link in added[:10]:  # max 10 in message
-        msg += f"\n- [{topic}] {title[:70]}\n"
-        msg += f'  <a href="{link}">Read more</a>\n'
-    if len(added) > 10:
-        msg += f"\n...and {len(added) - 10} more."
+    # Category breakdown
+    cats = {}
+    for cat, _, _ in added:
+        cats[cat] = cats.get(cat, 0) + 1
+    print("\nCategory breakdown:")
+    for cat, count in sorted(cats.items(), key=lambda x: -x[1]):
+        print(f"  {cat}: {count}")
+
+    # Telegram
+    msg = f"<b>TGPRB StudyOS - Exam Cards ({datetime.now().strftime('%d %b %Y')})</b>\n\n"
+    msg += f"<b>{len(added)} new exam card(s):</b>\n"
+    for cat, count in sorted(cats.items(), key=lambda x: -x[1]):
+        msg += f"\n<b>{cat}</b>: {count} cards"
+    msg += f"\n\nAll facts extracted from real source articles."
     msg += "\nCloudflare Pages will redeploy automatically."
     send_telegram(msg)
 

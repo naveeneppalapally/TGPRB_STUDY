@@ -101,18 +101,18 @@
       </div>
     </div>
 
-    <!-- ── Today's Brief ─────────────────────────────────────────────── -->
+    <!-- -- Current Affairs Catch-up ----------------------------------------- -->
     <section v-if="briefItems.length" class="mb-10">
       <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
         <div class="flex items-center gap-2">
-          <h2 class="font-display text-lg font-semibold tracking-tight t-hi">Today's Brief</h2>
+          <h2 class="font-display text-lg font-semibold tracking-tight t-hi">Current Affairs</h2>
           <!-- Pulsing dot if added today -->
           <span v-if="addedToday > 0" class="flex items-center gap-1.5 text-[11px] font-medium text-emerald-500">
             <span class="relative flex h-2 w-2">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            {{ addedToday }} added today
+            {{ addedToday }} new today
           </span>
         </div>
         <NuxtLink to="/current-affairs" class="eyebrow accent hover:underline flex items-center gap-1">
@@ -122,41 +122,52 @@
       </div>
 
       <div class="panel divide-y divide-[var(--line)] overflow-hidden">
-        <!-- TG Focus items first, then others -->
-        <NuxtLink
+        <div
           v-for="item in briefItems"
           :key="item.id"
-          :to="item.meta?.source_url || '#'"
-          target="_blank"
-          rel="noopener noreferrer"
           class="flex items-start gap-3 px-4 py-3 transition-colors hover:bg-sub group"
           :class="item.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : 'border-l-2 border-l-transparent'"
         >
-          <!-- Section chip -->
-          <span class="chip chip-mono shrink-0 mt-0.5 text-[10px]">
-            {{ sectionAbbr(item.meta?.exam_section) }}
+          <!-- Category chip -->
+          <span class="chip chip-mono shrink-0 mt-0.5 text-[10px] uppercase">
+            {{ (item.meta?.category || 'general').slice(0, 5) }}
           </span>
 
-          <!-- Headline -->
-          <p class="flex-1 text-[13px] font-medium leading-snug t-hi line-clamp-1 group-hover:accent">
-            <span
-              v-if="item.meta?.is_telangana_focus"
-              class="me-1.5 inline-flex items-center gap-0.5 rounded-full bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 px-1.5 py-0.5 text-[10px] font-semibold"
-            >
-              <UIcon name="i-heroicons-map-pin" class="h-2.5 w-2.5" />
-              TG
-            </span>
-            {{ item.meta?.headline }}
-          </p>
+          <!-- Exam fact (primary) or headline (fallback) -->
+          <div class="flex-1 min-w-0">
+            <p class="text-[13px] font-medium leading-snug t-hi line-clamp-1">
+              <span
+                v-if="item.meta?.is_telangana_focus"
+                class="me-1.5 inline-flex items-center gap-0.5 rounded-full bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 px-1.5 py-0.5 text-[10px] font-semibold"
+              >
+                <UIcon name="i-heroicons-map-pin" class="h-2.5 w-2.5" />
+                TG
+              </span>
+              {{ item.meta?.exam_fact || item.meta?.headline }}
+            </p>
+            <!-- Source name -->
+            <p v-if="item.meta?.source_name" class="text-[10px] t-lo mt-0.5">
+              {{ item.meta.source_name }}
+              <span v-if="item.meta?.source_type === 'official'" class="text-emerald-500 font-semibold">Official</span>
+            </p>
+          </div>
 
-          <!-- Date + external icon -->
+          <!-- Date + external link -->
           <div class="flex shrink-0 items-center gap-2 t-lo">
             <time class="font-mono text-[10px] hidden sm:block">
-              {{ formatBriefDate(item.meta?.date) }}
+              {{ formatBriefDate(item.meta?.event_date || item.meta?.date) }}
             </time>
-            <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <a
+              v-if="item.meta?.source_url"
+              :href="item.meta.source_url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="opacity-0 group-hover:opacity-100 transition-opacity"
+            >
+              <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-3.5 w-3.5" />
+            </a>
           </div>
-        </NuxtLink>
+        </div>
       </div>
     </section>
 

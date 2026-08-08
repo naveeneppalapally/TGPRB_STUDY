@@ -139,7 +139,7 @@ Do NOT include coaching sites in keywords."""
 
 # ── Step 4: Inject new TOPIC_FEEDS entry into scraper.py ─────────────────────
 
-def inject_topic_feed(note_id: str, config: dict, section: str) -> bool:
+def inject_topic_feed(note_id: str, config: dict, section: str, category: str) -> bool:
     """
     Adds a new entry to TOPIC_FEEDS list in scraper.py.
     """
@@ -148,20 +148,22 @@ def inject_topic_feed(note_id: str, config: dict, section: str) -> bool:
     # Build the new feed entry
     keywords = "+".join(config["keywords"].split())
     extra    = config.get("extra_site_filters", "").strip()
-    query    = f"{keywords}+{'+'.join(extra.split())}" if extra else keywords
+    query    = f"{keywords}+when:7d+{'+'.join(extra.split())}" if extra else f"{keywords}+when:7d"
 
     new_entry = f"""    {{
         "url": "https://news.google.com/rss/search?q={query}&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "{section}",
         "topic": "{config['topic_name']}",
+        "category": "{category}",
         "related_topic_ids": ["{note_id}"],
     }},"""
 
     # Find the end of TOPIC_FEEDS list and inject before closing ]
-    marker = "]\n\n\n# ── Helpers"
+    marker = "]\n\nMAX_ITEMS_PER_FEED"
     if marker not in content:
-        # Try alternate marker
-        marker = "]\n\n# ── Helpers"
+        marker = "]\n\n\n# --"
+    if marker not in content:
+        marker = "]\n\n# --"
     if marker not in content:
         print(f"  [Inject] Could not find TOPIC_FEEDS end marker in scraper.py")
         return False
@@ -174,19 +176,21 @@ def inject_topic_feed(note_id: str, config: dict, section: str) -> bool:
 
 # ── Step 5: Run backfill for new topic ────────────────────────────────────────
 
-def run_backfill(note_id: str, config: dict, section: str):
+def run_backfill(note_id: str, config: dict, section: str, category: str):
     """Run backfill.py for the new topic from Jan 2025 to today."""
     cmd = [
         "python3", "workers/scrapy-pib/backfill.py",
-        "--topic",    config["topic_name"],
-        "--note-id",  note_id,
+        "--category", category,
         "--section",  section,
+        "--topic",    config["topic_name"],
+        "--note-ids", note_id,
         "--keywords", config["keywords"],
         "--from",     "2025-01-01",
+        "--max",      "50",
     ]
     print(f"  [Backfill] Running: {' '.join(cmd)}")
     try:
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
         print(result.stdout[-1000:] if result.stdout else "(no output)")
         if result.returncode != 0:
             print(f"  [Backfill] Error: {result.stderr[-500:]}")
@@ -236,6 +240,13 @@ def main():
         section_code = parts[1] if len(parts) > 1 else "GEO"
         section = SECTION_MAP.get(section_code, "Geography")
 
+        # Derive category from section code
+        category_map = {
+            "GEO": "environment", "POL": "schemes", "ECO": "economy",
+            "TEL": "telangana", "SCI": "science", "HIS": "books", "ARI": "economy",
+        }
+        category = category_map.get(section_code, "schemes")
+
         # Generate feed config via Gemini
         config = generate_feed_config(note_id, vue_path, client)
         if not config:
@@ -243,15 +254,16 @@ def main():
             continue
 
         print(f"  Topic:    {config['topic_name']}")
+        print(f"  Category: {category}")
         print(f"  Keywords: {config['keywords']}")
 
         # Inject into scraper.py
-        ok = inject_topic_feed(note_id, config, section)
+        ok = inject_topic_feed(note_id, config, section, category)
         if not ok:
             continue
 
         # Run historical backfill
-        run_backfill(note_id, config, section)
+        run_backfill(note_id, config, section, category)
 
     print("\nDone. Commit scraper.py + content/current-affairs/ changes.")
 

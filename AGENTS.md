@@ -205,20 +205,23 @@ When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS), do ALL 
 **Step 2 - Run the one-time historical backfill (Jan 2025 to today):**
 ```bash
 python3 workers/scrapy-pib/backfill.py \
-  --topic "Forests of India" \
-  --note-id NOTE-GEO-FORESTS \
+  --category environment \
   --section "Geography" \
+  --topic "Forests of India" \
+  --note-ids NOTE-GEO-FORESTS \
   --keywords "India forest wildlife deforestation national park biodiversity" \
   --from 2025-01-01
 ```
-Sources: GDELT (free archive, real articles, no hallucination) + PIB direct.
+Sources: GDELT (free archive, real articles) + PIB direct.
+The scraper reads each source article and extracts exam facts from the real text. Gemini is an extraction layer only - it does not generate or invent information.
 
 **Step 3 - Add to daily scraper TOPIC_FEEDS in workers/scrapy-pib/scraper.py:**
 ```python
 {
-    "url": "https://news.google.com/rss/search?q=India+forest+wildlife+national+park+deforestation&hl=en-IN&gl=IN&ceid=IN:en",
+    "url": "https://news.google.com/rss/search?q=India+forest+wildlife+national+park+deforestation+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
     "exam_section": "Geography",
     "topic": "Forests of India",
+    "category": "environment",
     "related_topic_ids": ["NOTE-GEO-FORESTS"],
 },
 ```
