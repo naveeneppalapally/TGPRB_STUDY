@@ -1,0 +1,80 @@
+name: CA Backfill (Manual)
+
+# Manually triggered from GitHub Actions tab.
+# Runs the full historical backfill from Jan 2025 to today
+# across all 12 PYQ-aligned categories.
+# Uses Vertex AI (GCP credentials in secrets) to read real
+# article text and extract exam facts.
+#
+# How to run:
+# GitHub repo -> Actions -> CA Backfill (Manual) -> Run workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "Start date (YYYY-MM-DD)"
+        required: false
+        default: "2025-01-01"
+      category:
+        description: "Category to backfill (leave empty for all)"
+        required: false
+        default: ""
+      max_per_category:
+        description: "Max articles per category"
+        required: false
+        default: "50"
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests google-genai beautifulsoup4
+
+      - name: Run backfill (all categories)
+        if: ${{ !inputs.category }}
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
+          GOOGLE_CLOUD_PROJECT:                ${{ secrets.GOOGLE_CLOUD_PROJECT }}
+          GEMINI_API_KEY:                      ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python workers/scrapy-pib/backfill.py \
+            --all \
+            --from ${{ inputs.from_date }} \
+            --max ${{ inputs.max_per_category }}
+
+      - name: Run backfill (single category)
+        if: ${{ inputs.category }}
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
+          GOOGLE_CLOUD_PROJECT:                ${{ secrets.GOOGLE_CLOUD_PROJECT }}
+          GEMINI_API_KEY:                      ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python workers/scrapy-pib/backfill.py \
+            --category ${{ inputs.category }} \
+            --from ${{ inputs.from_date }} \
+            --max ${{ inputs.max_per_category }}
+
+      - name: Commit backfill entries
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/current-affairs/
+          git diff --cached --quiet || git commit -m "ca: backfill from ${{ inputs.from_date }} [skip ci]"
+          git push

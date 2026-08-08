@@ -37,10 +37,11 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 
-CONTENT_DIR  = Path("content/current-affairs")
-GCP_PROJECT  = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
-GCP_CREDS    = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON", "")
-AI_SCORE_MIN = 6
+CONTENT_DIR   = Path("content/current-affairs")
+GCP_PROJECT   = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
+GCP_CREDS     = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON", "")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+AI_SCORE_MIN  = 6
 
 VALID_CATEGORIES = [
     "appointments", "international", "economy", "awards", "sports",
@@ -159,21 +160,44 @@ def parse_args():
 _vertex_client = None
 
 def get_vertex_client():
+    """
+    Returns a Gemini client. Tries in order:
+    1. Plain GEMINI_API_KEY (for local runs)
+    2. Vertex AI via GCP_CREDS JSON (for GitHub Actions)
+    3. Vertex AI via Application Default Credentials (gcloud auth)
+    """
     global _vertex_client
     if _vertex_client is not None:
         return _vertex_client
-    if not GCP_CREDS or not GCP_PROJECT:
-        return None
+
     try:
-        creds_data = json.loads(GCP_CREDS)
-        tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False)
-        json.dump(creds_data, tmp)
-        tmp.flush()
-        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
         from google import genai
-        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
-        print("  [AI] Vertex AI ready - gemini-3.6-flash (extraction mode)")
-        return _vertex_client
+
+        # Option 1: plain API key (local dev)
+        if GEMINI_API_KEY:
+            _vertex_client = genai.Client(api_key=GEMINI_API_KEY)
+            print("  [AI] Gemini ready via API key")
+            return _vertex_client
+
+        # Option 2: Vertex AI via JSON credentials (GitHub Actions)
+        if GCP_CREDS and GCP_PROJECT:
+            creds_data = json.loads(GCP_CREDS)
+            tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False)
+            json.dump(creds_data, tmp)
+            tmp.flush()
+            os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
+            _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
+            print("  [AI] Vertex AI ready via service account JSON")
+            return _vertex_client
+
+        # Option 3: ADC (gcloud auth application-default login)
+        if GCP_PROJECT:
+            _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
+            print("  [AI] Vertex AI ready via ADC")
+            return _vertex_client
+
+        print("  [AI] No credentials found. Set GEMINI_API_KEY or GOOGLE_CLOUD_PROJECT.")
+        return None
     except Exception as e:
         print(f"  [AI] Init error: {e}")
         return None
