@@ -153,7 +153,7 @@ TOPIC_FEEDS = [
         "related_topic_ids": ["NOTE-GEO-ENVIRONMENT"],
     },
     {
-        "url": "https://news.google.com/rss/search?q=Telangana+government+scheme+mission+development+2026&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=Telangana+government+scheme+Hyderabad+budget+inauguration+2025+OR+2026+site:telanganatoday.com+OR+site:thehansindia.com+OR+site:ndtv.com+OR+site:thehindu.com&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Telangana",
         "topic": "Telangana State",
         "related_topic_ids": ["NOTE-TEL-GENERAL"],

@@ -74,6 +74,125 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - Current affairs are a separate content type, never edited into a note's markdown file.
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
 
+## Current Affairs system - read before building any note page
+
+### How the system works (end to end)
+
+```
+Google News RSS (7 topic feeds, daily)
+        |
+        v
+workers/scrapy-pib/scraper.py
+  - Gemini 3.6 Flash filters & scores each headline (0-10)
+  - Drops score < 6 (listicles, irrelevant, foreign sports)
+  - Detects is_telangana_focus (true/false)
+  - Maps extra topic IDs (Kaleshwaram -> Drainage + Telangana)
+        |
+        v
+content/current-affairs/*.md  (auto-committed by GitHub Actions at 7am IST)
+        |
+        v
+CurrentAffairsStrip.vue  (fetches all, filters by note-id prop)
+        |
+        v
+Note page shows relevant strip automatically
+```
+
+### Frontmatter schema for content/current-affairs/*.md
+
+```yaml
+---
+id: "CA-GEO-DRAIN-KENBETWA-20260715"
+type: "current_affair"
+exam_section: "Geography"
+topic: "Drainage System of India"
+related_topic_ids:
+  - "NOTE-GEO-DRAINAGE"
+  - "NOTE-TEL-GENERAL"       # optional - if relevant to Telangana too
+is_telangana_focus: false    # true = TG Focus badge shown on card
+headline: "Ken-Betwa River Interlinking Project Phase 1 begins"
+date: "2026-07-15"
+source_url: "https://thehindu.com/..."
+---
+```
+
+### NOTE ID convention - never deviate
+
+Every note page must have exactly one NOTE ID. Format: `NOTE-{SECTION}-{TOPIC}`
+
+| Subject | Section code | Example NOTE IDs |
+|---|---|---|
+| Geography | GEO | NOTE-GEO-DRAINAGE, NOTE-GEO-ENVIRONMENT, NOTE-GEO-MOUNTAINS |
+| Polity | POL | NOTE-POL-CONSTITUTION, NOTE-POL-PARLIAMENT |
+| Economy | ECO | NOTE-ECO-GENERAL, NOTE-ECO-BANKING |
+| Telangana | TEL | NOTE-TEL-GENERAL, NOTE-TEL-HISTORY |
+| Science & Tech | SCI | NOTE-SCI-GENERAL, NOTE-SCI-SPACE |
+| History | HIS | NOTE-HIS-GENERAL, NOTE-HIS-MODERN |
+| Arithmetic | ARI | NOTE-ARI-GENERAL |
+
+### Wiring CurrentAffairsStrip to a new note page
+
+Every Tier-1 and Tier-2 note page MUST include the strip. Add it after the closing `</header>` of the title block, before the coverage strip:
+
+```html
+<!-- Current Affairs for this note -->
+<CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" class="mb-8" />
+```
+
+Replace `NOTE-GEO-DRAINAGE` with the exact NOTE ID for that page. The component auto-filters and shows only matching entries. If no entries exist yet, it renders nothing (v-if guard).
+
+### Does the scraper cover all topics automatically?
+
+NO. The scraper only covers these 7 topics out of the box:
+
+| NOTE ID | Feed status |
+|---|---|
+| NOTE-GEO-DRAINAGE | Active |
+| NOTE-POL-CONSTITUTION | Active |
+| NOTE-ECO-GENERAL | Active |
+| NOTE-GEO-ENVIRONMENT | Active |
+| NOTE-TEL-GENERAL | Active (Telangana Today + Hans India + Hindu) |
+| NOTE-SCI-GENERAL | Active |
+| NOTE-HIS-GENERAL | Active |
+| All other NOTE-* IDs | NOT covered - only via Gemini multi-topic mapping |
+
+For new topics not listed above: the Gemini multi-topic mapper may still tag relevant articles (e.g., a story about Mountains might get tagged NOTE-GEO-MOUNTAINS if that ID exists in the prompt's extra_topics list). To add full coverage for a new topic, add a new entry to `TOPIC_FEEDS` in `workers/scrapy-pib/scraper.py` and add its NOTE ID to the Gemini prompt's extra_topics list.
+
+### News sources used - coverage assessment
+
+| Source | How reached | Covers |
+|---|---|---|
+| The Hindu | Google News RSS | Polity, Economy, Science, International |
+| PIB (pib.gov.in) | Google News RSS | Official schemes, appointments, policies |
+| Indian Express | Google News RSS | General, National |
+| NDTV | Google News RSS | Breaking, Science, Defence |
+| Telangana Today | Direct site filter in TG feed | Telangana state news |
+| Hans India | Direct site filter in TG feed | Hyderabad local events |
+| Deccan Chronicle | Google News RSS | South India, Telangana |
+| Business Standard | Google News RSS | Economy, RBI, Budget |
+| Mongabay India | Google News RSS | Environment, Wildlife |
+| Drishti IAS | Google News incidental | Exam summaries (filtered out by AI scorer) |
+
+Coverage gap: Sports results (Padma Awards, boxing, cricket) and local Hyderabad events (Formula-E, festivals) are covered only if they appear in the above sources. If a PYQ topic appears for which there is no feed, create entries manually in content/current-affairs/.
+
+### PYQ-based timeline rules (never change these without PYQ evidence)
+
+From analysis of Constable 2022, Constable 2023, SI 2022, SI 2023 papers:
+- 85% of current affairs questions = events from last 6 months before exam date
+- 10% = events from 7-12 months before exam date
+- 5% = events from 13-24 months before exam date (max lookback)
+- Events as recent as 3-4 weeks before exam date appear in questions
+- Scraper MAX_AGE_DAYS is set to 365 (1 year). Do not reduce below 180.
+
+High-yield PYQ categories (build feeds for these first if adding new ones):
+1. Telangana-specific (state budget, inaugurations, schemes, local events)
+2. National appointments (Governors, ministers, CEOs, CJI)
+3. Sports and awards (Padma, Jnanpith, boxing, cricket)
+4. ISRO / Space / Defence
+5. International summits and bilateral agreements
+6. Environment and wildlife (national parks, new species, UNESCO)
+
+
 ## Product logic - never deviate
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
 - The subject list ranks by real PYQ weightage - never a static alphabetical list.
