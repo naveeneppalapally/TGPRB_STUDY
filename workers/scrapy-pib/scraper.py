@@ -47,11 +47,9 @@ def get_vertex_client():
         tmp.flush()
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
 
-        import vertexai
-        from vertexai.generative_models import GenerativeModel
-        vertexai.init(project=GCP_PROJECT, location="us-central1")
-        _vertex_client = GenerativeModel("gemini-3.6-flash")
-        print("  [AI Filter] Vertex AI ready - using gemini-3.6-flash")
+        from google import genai
+        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="us-central1")
+        print("  [AI Filter] Vertex AI ready - using google-genai (gemini-2.5-flash)")
         return _vertex_client
     except Exception as e:
         print(f"  [AI Filter] Vertex AI init error: {e}")
@@ -60,7 +58,7 @@ def get_vertex_client():
 
 def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
     """
-    Score headlines using Gemini 3.6 Flash for TGPRB exam relevance,
+    Score headlines using Gemini 2.5 Flash for TGPRB exam relevance,
     identify Telangana state focus, and map secondary topic IDs.
     """
     client = get_vertex_client()
@@ -96,7 +94,10 @@ Example format:
 ]"""
 
     try:
-        response = client.generate_content(prompt)
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
         text = response.text.strip()
         # Clean potential markdown code blocks
         if "```" in text:

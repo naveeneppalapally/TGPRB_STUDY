@@ -66,11 +66,9 @@ def get_vertex_client():
         json.dump(creds_data, tmp)
         tmp.flush()
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
-        import vertexai
-        from vertexai.generative_models import GenerativeModel
-        vertexai.init(project=GCP_PROJECT, location="us-central1")
-        _vertex_client = GenerativeModel("gemini-3.6-flash")
-        print("  [AI] Vertex AI ready - gemini-3.6-flash")
+        from google import genai
+        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="us-central1")
+        print("  [AI] Vertex AI ready - google-genai (gemini-2.5-flash)")
         return _vertex_client
     except Exception as e:
         print(f"  [AI] Init error: {e}")
@@ -103,7 +101,10 @@ Reply ONLY with a valid JSON array, one object per headline:
 [{{"score":8,"is_telangana_focus":false,"extra_topics":[]}}]"""
 
     try:
-        resp = client.generate_content(prompt)
+        resp = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
         text = resp.text.strip()
         if "```" in text:
             text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()

@@ -79,10 +79,8 @@ def get_vertex_client():
         json.dump(creds_data, tmp)
         tmp.flush()
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
-        import vertexai
-        from vertexai.generative_models import GenerativeModel
-        vertexai.init(project=GCP_PROJECT, location="us-central1")
-        return GenerativeModel("gemini-3.6-flash")
+        from google import genai
+        return genai.Client(vertexai=True, project=GCP_PROJECT, location="us-central1")
     except Exception as e:
         print(f"  [Gemini] Init error: {e}")
         return None
@@ -126,7 +124,10 @@ Focus on keywords that will return exam-relevant news (government schemes, offic
 Do NOT include coaching sites in keywords."""
 
     try:
-        resp = client.generate_content(prompt)
+        resp = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+        )
         text = resp.text.strip()
         if "```" in text:
             text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()

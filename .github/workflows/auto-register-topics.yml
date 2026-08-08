@@ -24,7 +24,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests google-cloud-aiplatform
+        run: pip install requests google-genai
 
       - name: Auto-register new topics and run backfill
         env:
