@@ -67,8 +67,8 @@ def get_vertex_client():
         tmp.flush()
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
         from google import genai
-        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="us-central1")
-        print("  [AI] Vertex AI ready - google-genai (gemini-2.5-flash)")
+        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
+        print("  [AI] Vertex AI ready - google-genai (gemini-3.6-flash)")
         return _vertex_client
     except Exception as e:
         print(f"  [AI] Init error: {e}")
@@ -102,7 +102,7 @@ Reply ONLY with a valid JSON array, one object per headline:
 
     try:
         resp = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.6-flash",
             contents=prompt,
         )
         text = resp.text.strip()

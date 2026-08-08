@@ -48,8 +48,8 @@ def get_vertex_client():
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
 
         from google import genai
-        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="us-central1")
-        print("  [AI Filter] Vertex AI ready - using google-genai (gemini-2.5-flash)")
+        _vertex_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
+        print("  [AI Filter] Vertex AI ready - using google-genai (gemini-3.6-flash)")
         return _vertex_client
     except Exception as e:
         print(f"  [AI Filter] Vertex AI init error: {e}")
@@ -58,7 +58,7 @@ def get_vertex_client():
 
 def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
     """
-    Score headlines using Gemini 2.5 Flash for TGPRB exam relevance,
+    Score headlines using Gemini 3.6 Flash for TGPRB exam relevance,
     identify Telangana state focus, and map secondary topic IDs.
     Batches headlines in chunks of 25 to prevent truncation on large feeds.
     """
@@ -101,7 +101,7 @@ Example format:
 
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.6-flash",
                 contents=prompt,
             )
             text = response.text.strip()

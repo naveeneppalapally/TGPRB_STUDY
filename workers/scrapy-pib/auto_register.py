@@ -80,7 +80,7 @@ def get_vertex_client():
         tmp.flush()
         os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
         from google import genai
-        return genai.Client(vertexai=True, project=GCP_PROJECT, location="us-central1")
+        return genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
     except Exception as e:
         print(f"  [Gemini] Init error: {e}")
         return None
@@ -125,7 +125,7 @@ Do NOT include coaching sites in keywords."""
 
     try:
         resp = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.6-flash",
             contents=prompt,
         )
         text = resp.text.strip()
