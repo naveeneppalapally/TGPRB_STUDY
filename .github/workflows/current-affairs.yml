@@ -24,12 +24,14 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests google-cloud-aiplatform
 
       - name: Run current affairs scraper
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN:                    ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:                      ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_APPLICATION_CREDENTIALS_JSON:   ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
+          GOOGLE_CLOUD_PROJECT:                  ${{ secrets.GOOGLE_CLOUD_PROJECT }}
         run: python workers/scrapy-pib/scraper.py
 
       - name: Commit new current affairs entries

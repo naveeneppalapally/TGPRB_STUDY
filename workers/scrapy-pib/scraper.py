@@ -3,24 +3,118 @@ TGPRB Current Affairs Scraper
 ──────────────────────────────────────────────────────────────────────────────
 Runs as a GitHub Actions cron job daily at 7am IST.
 Fetches Google News RSS for each TGPRB exam topic,
+filters headlines with Gemini 3.6 Flash (Vertex AI) for exam relevance,
 creates content/current-affairs/*.md files locally,
 and sends a Telegram summary.
-
-No external dependencies except 'requests'.
 """
 
 import os
 import re
+import json
+import tempfile
 import requests
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
 from pathlib import Path
 
 
 # ── Config ────────────────────────────────────────────────────────────────────
-CONTENT_DIR  = Path("content/current-affairs")
-MAX_AGE_DAYS = 30
-TELEGRAM_BOT = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+CONTENT_DIR   = Path("content/current-affairs")
+MAX_AGE_DAYS  = 30
+TELEGRAM_BOT  = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "")
+GCP_PROJECT   = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
+GCP_CREDS_JSON = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS_JSON", "")
+AI_SCORE_MIN  = 6   # Drop articles scoring below this (0-10)
+
+# ── Vertex AI setup ───────────────────────────────────────────────────────────
+_vertex_client = None
+
+def get_vertex_client():
+    """Lazy-init Vertex AI client. Returns None if credentials not available."""
+    global _vertex_client
+    if _vertex_client is not None:
+        return _vertex_client
+
+    if not GCP_CREDS_JSON or not GCP_PROJECT:
+        print("  [AI Filter] Vertex AI not configured - skipping AI scoring")
+        return None
+
+    try:
+        # Write credentials JSON to a temp file (required by google-auth)
+        creds_data = json.loads(GCP_CREDS_JSON)
+        tmp = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False)
+        json.dump(creds_data, tmp)
+        tmp.flush()
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
+
+        import vertexai
+        from vertexai.generative_models import GenerativeModel
+        vertexai.init(project=GCP_PROJECT, location="us-central1")
+        _vertex_client = GenerativeModel("gemini-3.6-flash")
+        print("  [AI Filter] Vertex AI ready - using gemini-3.6-flash")
+        return _vertex_client
+    except Exception as e:
+        print(f"  [AI Filter] Vertex AI init error: {e}")
+        return None
+
+
+def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
+    """
+    Score headlines using Gemini 3.6 Flash for TGPRB exam relevance.
+    Returns only items scoring AI_SCORE_MIN or above.
+    Falls back to keeping all items if Vertex AI unavailable.
+    """
+    client = get_vertex_client()
+    if not client or not items:
+        return items  # No AI - keep everything (original behavior)
+
+    headlines = "\n".join(
+        f"{i+1}. {item['title']}" for i, item in enumerate(items)
+    )
+
+    prompt = f"""You are an expert on Indian competitive exams (TGPRB/TSPSC Police Constable and SI).
+
+Topic: {topic}
+
+Rate each headline below from 0 to 10 for relevance to this exam topic.
+- 8-10: Directly exam-relevant (government policy, court ruling, official report, geographic fact)
+- 5-7: Somewhat relevant (general awareness, background context)
+- 0-4: Not relevant (coaching listicles, opinion, foreign news, sports, entertainment)
+
+Headlines:
+{headlines}
+
+Reply ONLY with a JSON array of integers, one score per headline, in order.
+Example: [8, 3, 7, 1, 9]"""
+
+    try:
+        response = client.generate_content(prompt)
+        text = response.text.strip()
+        # Extract JSON array from response
+        match = re.search(r'\[([\d,\s]+)\]', text)
+        if not match:
+            print(f"  [AI Filter] Could not parse scores: {text[:100]}")
+            return items
+        scores = [int(s.strip()) for s in match.group(1).split(',')]
+        if len(scores) != len(items):
+            print(f"  [AI Filter] Score count mismatch ({len(scores)} vs {len(items)})")
+            return items
+
+        filtered = []
+        for item, score in zip(items, scores):
+            if score >= AI_SCORE_MIN:
+                item['ai_score'] = score
+                filtered.append(item)
+            else:
+                print(f"  [AI Filter] Dropped (score {score}): {item['title'][:60]}")
+
+        print(f"  [AI Filter] Kept {len(filtered)}/{len(items)} after scoring")
+        return filtered
+
+    except Exception as e:
+        print(f"  [AI Filter] Scoring error: {e}")
+        return items  # On error, keep all
+
 
 # ── Topic feeds ───────────────────────────────────────────────────────────────
 TOPIC_FEEDS = [
@@ -183,13 +277,16 @@ def main():
         items = fetch_feed(meta["url"])
         print(f"  Fetched {len(items)} items")
 
-        for item in items:
-            if not is_recent(item["pub_date"]):
-                skipped += 1
-                continue
+        # Filter by date first
+        recent = [i for i in items if is_recent(i["pub_date"])]
 
+        # AI scoring - drop low-relevance headlines via Gemini 3.6 Flash
+        recent = ai_score_headlines(recent, meta["topic"])
+
+        for item in recent:
             title = clean_title(item["title"])
             if not title or len(title) < 10:
+                skipped += 1
                 continue
 
             dt       = parse_date(item["pub_date"])
