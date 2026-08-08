@@ -135,48 +135,64 @@ Example format:
 # ── Topic feeds ───────────────────────────────────────────────────────────────
 TOPIC_FEEDS = [
     {
-        "url": "https://news.google.com/rss/search?q=India+river+dam+flood+irrigation+Godavari+Krishna+Ganga&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=India+river+dam+flood+irrigation+Godavari+Krishna+Ganga+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Geography",
         "topic": "Drainage System of India",
         "related_topic_ids": ["NOTE-GEO-DRAINAGE"],
     },
     {
-        "url": "https://news.google.com/rss/search?q=India+constitution+parliament+supreme+court+amendment+fundamental+rights&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=India+constitution+parliament+supreme+court+amendment+fundamental+rights+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Polity",
         "topic": "Indian Constitution",
         "related_topic_ids": ["NOTE-POL-CONSTITUTION"],
     },
     {
-        "url": "https://news.google.com/rss/search?q=India+GDP+inflation+RBI+repo+rate+budget+fiscal+GST+economy+2026&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=India+GDP+inflation+RBI+budget+fiscal+GST+economy+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Economy",
         "topic": "Indian Economy",
         "related_topic_ids": ["NOTE-ECO-GENERAL"],
     },
     {
-        "url": "https://news.google.com/rss/search?q=India+environment+wildlife+forest+climate+cyclone+national+park+biodiversity&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=India+environment+wildlife+forest+climate+national+park+biodiversity+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Geography",
         "topic": "Environment and Ecology",
         "related_topic_ids": ["NOTE-GEO-ENVIRONMENT"],
     },
+    # Telangana: 3 separate targeted feeds instead of 1 broad one
     {
-        "url": "https://news.google.com/rss/search?q=Telangana+government+scheme+Hyderabad+budget+inauguration+2025+OR+2026+site:telanganatoday.com+OR+site:thehansindia.com+OR+site:ndtv.com+OR+site:thehindu.com&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+project+when:7d+site:telanganatoday.com&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Telangana",
         "topic": "Telangana State",
         "related_topic_ids": ["NOTE-TEL-GENERAL"],
     },
     {
-        "url": "https://news.google.com/rss/search?q=India+ISRO+space+missile+AI+technology+semiconductor+defence&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+project+when:7d+site:thehansindia.com&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Telangana",
+        "topic": "Telangana State",
+        "related_topic_ids": ["NOTE-TEL-GENERAL"],
+    },
+    {
+        "url": "https://news.google.com/rss/search?q=Telangana+OR+Hyderabad+government+OR+scheme+OR+budget+OR+police+OR+project+when:7d+site:thehindu.com&hl=en-IN&gl=IN&ceid=IN:en",
+        "exam_section": "Telangana",
+        "topic": "Telangana State",
+        "related_topic_ids": ["NOTE-TEL-GENERAL"],
+    },
+    {
+        "url": "https://news.google.com/rss/search?q=India+ISRO+space+missile+AI+technology+semiconductor+defence+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "Science & Technology",
         "topic": "Science and Technology",
         "related_topic_ids": ["NOTE-SCI-GENERAL"],
     },
     {
-        "url": "https://news.google.com/rss/search?q=India+history+heritage+archaeological+UNESCO+monument+2026&hl=en-IN&gl=IN&ceid=IN:en",
+        "url": "https://news.google.com/rss/search?q=India+history+heritage+archaeological+UNESCO+monument+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
         "exam_section": "History",
         "topic": "Indian History",
         "related_topic_ids": ["NOTE-HIS-GENERAL"],
     },
 ]
+
+# Max items to process per feed (prevents volume explosion)
+MAX_ITEMS_PER_FEED = 30
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -299,7 +315,10 @@ def main():
         # Filter by date first
         recent = [i for i in items if is_recent(i["pub_date"])]
 
-        # AI scoring - drop low-relevance headlines via Gemini 3.6 Flash
+        # Cap per-feed volume to prevent explosion
+        recent = recent[:MAX_ITEMS_PER_FEED]
+
+        # AI scoring - drop low-relevance headlines via Gemini 2.5 Flash
         recent = ai_score_headlines(recent, meta["topic"])
 
         for item in recent:

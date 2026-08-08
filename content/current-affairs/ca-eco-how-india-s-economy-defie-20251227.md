@@ -6,7 +6,7 @@ topic: "Indian Economy"
 related_topic_ids:
   - "NOTE-ECO-GENERAL"
 is_telangana_focus: false
-headline: "How India's economy defied odds in 2025 — but external shocks left a mark"
+headline: "How India's economy defied odds in 2025 - but external shocks left a mark"
 date: "2025-12-27"
 source_url: "https://news.google.com/rss/articles/CBMi-gFBVV95cUxQNms3Y1cwc0ZkcVVMd25Ic1RpTldBV2hiaFNtejBxM01QSFRxZTJFTjI2cExuQm8zS3NjdWRyMzgwOEFvUEtDODhZM1k0c2RBNTJGVG5XamJLdWZwMUpleS13ZlQ5bnpPZ1RaWDlGVVhXOEVfbjNpcGVkcjV1aTg4ejlxMUczXzIweXJJem14UTczdm5pemI1ZG1nOEgzM0p2R09EMDN0NmRkQnVvWjRSN0RhNTAzcURpQTdkMExzdHAzLU1GVndmbnoxampOcUdfRV9fRlBYLUJhdlJkM3hoaUVTREU1Mzh3emtSbmREY0pYQ196ZWlXOG9R0gH_AUFVX3lxTE5mbi05YWhnclgxVm1pajFhWlFNMU5wcHJDR09BYm50WkszeUxpNmdaVUJjQmZqcllEM2k1ZWhwdURPeEd0MldVaFc1S0ZDVmlOa1JHV0RpdGJJU09PcTJmbXlrUHUxekRRVHlTQXY4TDVxbHdFazY0T0ctSnFLNWUzVjVWMml6ZlI2RGo5eERZVjVBUlpUbl96d2lPSGRfNDJVUkpzNHUzTjhYZndnazhEUVRFWFBMZkVYU0Q4RzJKNXk1Q0RxWnEzcjVKbzhFQ0NmcFFfWTFRWmhKcUg4bzZXMUluSFpnRHNVWngxQllsd2pmd1N1dkhyVkdXekViQQ?oc=5"
 ---
