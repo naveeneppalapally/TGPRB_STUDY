@@ -60,16 +60,22 @@ def ai_score_headlines(items: list[dict], topic: str) -> list[dict]:
     """
     Score headlines using Gemini 2.5 Flash for TGPRB exam relevance,
     identify Telangana state focus, and map secondary topic IDs.
+    Batches headlines in chunks of 25 to prevent truncation on large feeds.
     """
     client = get_vertex_client()
     if not client or not items:
         return items
 
-    headlines = "\n".join(
-        f"{i+1}. {item['title']}" for i, item in enumerate(items)
-    )
+    CHUNK_SIZE = 25
+    filtered = []
 
-    prompt = f"""You are an expert evaluator for Telangana TGPRB/TSPSC Police Constable & SI Exams.
+    for chunk_idx in range(0, len(items), CHUNK_SIZE):
+        chunk = items[chunk_idx:chunk_idx + CHUNK_SIZE]
+        headlines = "\n".join(
+            f"{i+1}. {item['title']}" for i, item in enumerate(chunk)
+        )
+
+        prompt = f"""You are an expert evaluator for Telangana TGPRB/TSPSC Police Constable & SI Exams.
 
 Primary Topic: {topic}
 
@@ -86,45 +92,44 @@ Evaluate each headline below:
 Headlines:
 {headlines}
 
-Reply ONLY with a valid JSON array of objects in order.
+Reply ONLY with a valid JSON array of objects in order ({len(chunk)} items).
 Example format:
 [
   {{"score": 9, "is_telangana_focus": true, "extra_topics": ["NOTE-TEL-GENERAL", "NOTE-GEO-DRAINAGE"]}},
   {{"score": 2, "is_telangana_focus": false, "extra_topics": []}}
 ]"""
 
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-        )
-        text = response.text.strip()
-        # Clean potential markdown code blocks
-        if "```" in text:
-            text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
-        
-        parsed = json.loads(text)
-        if not isinstance(parsed, list) or len(parsed) != len(items):
-            print(f"  [AI Filter] JSON parsing array length mismatch ({len(parsed) if isinstance(parsed, list) else 'not list'} vs {len(items)})")
-            return items
+        try:
+            response = client.models.generate_content(
+                model="gemini-2.5-flash",
+                contents=prompt,
+            )
+            text = response.text.strip()
+            if "```" in text:
+                text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
+            
+            parsed = json.loads(text)
+            if not isinstance(parsed, list) or len(parsed) != len(chunk):
+                print(f"  [AI Filter] Chunk score length mismatch ({len(parsed) if isinstance(parsed, list) else 'not list'} vs {len(chunk)}) - keeping chunk")
+                filtered.extend(chunk)
+                continue
 
-        filtered = []
-        for item, ai_meta in zip(items, parsed):
-            score = ai_meta.get("score", 7)
-            if score >= AI_SCORE_MIN:
-                item['ai_score'] = score
-                item['is_telangana_focus'] = bool(ai_meta.get("is_telangana_focus", False))
-                item['extra_topics'] = ai_meta.get("extra_topics", [])
-                filtered.append(item)
-            else:
-                print(f"  [AI Filter] Dropped (score {score}): {item['title'][:60]}")
+            for item, ai_meta in zip(chunk, parsed):
+                score = ai_meta.get("score", 7)
+                if score >= AI_SCORE_MIN:
+                    item['ai_score'] = score
+                    item['is_telangana_focus'] = bool(ai_meta.get("is_telangana_focus", False))
+                    item['extra_topics'] = ai_meta.get("extra_topics", [])
+                    filtered.append(item)
+                else:
+                    print(f"  [AI Filter] Dropped (score {score}): {item['title'][:60]}")
 
-        print(f"  [AI Filter] Kept {len(filtered)}/{len(items)} after scoring")
-        return filtered
+        except Exception as e:
+            print(f"  [AI Filter] Chunk scoring error: {e}")
+            filtered.extend(chunk)
 
-    except Exception as e:
-        print(f"  [AI Filter] Scoring error: {e}")
-        return items  # On error, keep all
+    print(f"  [AI Filter] Kept {len(filtered)}/{len(items)} after scoring")
+    return filtered
 
 
 # ── Topic feeds ───────────────────────────────────────────────────────────────
