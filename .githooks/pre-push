@@ -1,0 +1,31 @@
+#!/bin/bash
+# .githooks/pre-push
+# ─────────────────────────────────────────────────────────────────────────────
+# Runs automatically before every git push.
+#
+# Why this exists:
+#   GitHub Actions rewrites image src= URLs to Cloudinary after every push
+#   that contains images. It commits those changes back to the repo.
+#   If you push again without pulling first:
+#     - git rejects the push ("fetch first")
+#     - OR you accidentally re-push old local /images/ paths
+#
+# This hook pulls the latest remote changes (including Action commits) before
+# every push, so your local repo is always in sync.
+# ─────────────────────────────────────────────────────────────────────────────
+
+echo "pre-push: pulling latest remote changes first..."
+
+git pull --rebase origin main
+
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+  echo ""
+  echo "pre-push: git pull --rebase failed (exit $EXIT_CODE)"
+  echo "Resolve any conflicts, then push again."
+  exit 1
+fi
+
+echo "pre-push: up to date. Proceeding with push."
+exit 0

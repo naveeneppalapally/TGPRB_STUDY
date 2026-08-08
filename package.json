@@ -9,7 +9,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "nuxt prepare && git config core.hooksPath .githooks",
     "ingest": "npx tsx scripts/ingest.ts",
     "tier": "npx tsx scripts/tier.ts",
     "verify": "npx tsx scripts/verify-topics.ts"
