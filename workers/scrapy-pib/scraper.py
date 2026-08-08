@@ -19,7 +19,7 @@ from pathlib import Path
 
 # ── Config ────────────────────────────────────────────────────────────────────
 CONTENT_DIR   = Path("content/current-affairs")
-MAX_AGE_DAYS  = 30
+MAX_AGE_DAYS  = 365  # PYQ analysis: 85% from last 6 months, max lookback 2 years
 TELEGRAM_BOT  = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT = os.environ.get("TELEGRAM_CHAT_ID", "")
 GCP_PROJECT   = os.environ.get("GOOGLE_CLOUD_PROJECT", "")
