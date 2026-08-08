@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-COLOMBIA-TRUCK-BOMB-WOUND-20260802"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Colombia truck bomb wounds 14 ahead of presidential inauguration"
+date: "2026-08-02"
+source_url: "https://news.google.com/rss/articles/CBMixwFBVV95cUxOMERBYWZBZWlqLUs1cnQ3U0dHUzJwbkxtaWpkcVEyM3hsZ25JS2k1UzFkek5XZHdiMzJ1VDMyVm41QlFFbDljOFF1bHZ1djh1RmJuOGxISXlCZ3dnZWg1MEFKeWlCRzBycXVaN3FlRzlNa3V3dnpBY09kRUIwZHc0UnRIaWthem92YnZVbFlfdWFLa3VPZlBVMFBzWjZDM0k3YzlZNEhFSGx5RUc5dlZpLXF1d3I0dG9MZXFUT0J3WnBweFZDcXI40gHOAUFVX3lxTE5FYTAxeEtjS0tpMzdyOElQMEV0OUNkS1ZtbGE2SVZPdmlBOUdsMkg1akx0eFFSMlFoTHRNZGNWNDNrc1I1UFpWTDZTTExzcU4zMlVtTWMtSzBGc3ItdzZ0cnlPX1dqUzB3aVFyRHZwRHIzSlhPeHQ0X3FOcWJoeU4zSUZYVmliR1VQNlpvb3pXT05LbS00NHh6U0d2RFpGOE9kTl9TRjVmUXZ1ekZwUTRKQk9nT3lIaXZrT3ZpS3prd19vbV9SbjdaNl9WNE5n?oc=5"
+---

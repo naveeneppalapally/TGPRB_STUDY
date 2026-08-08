@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-KERALA-RAINS-MORE-HEAVY-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Kerala rains: More heavy rainfall likely in flood-hit regions as IMD sounds red alert in three districts"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPSjN6emh6TDQzXzRmd243WHB4TGVSLTRoTWRDcmNUenhGT2xjdTVfeGxfMWFtTTg0TEFiRHJjXzZsV1YwUEZmbld3YUdhSGZCU0NDWFVNOGpwZmlycFk3VjFxWlBNQm5VbkY5OWxIMDZ2OGlmUWdBQTVad3JHR0VENGNDN3Y1SUxDalNFOF93LUNuWnV4ajdIZGRvYUlhZTBWeFotVkR0TWY0S3c1UFZQT3J4SGFJM0JrYUFzQ1FmbVRTWFBwMWZsZTh6NTdMNVdZb2dUMWIwMloyRmFCT21xS3R4SDl2Zy0zVUhZSEJwaVRCeW84S0dxcWJRX2tvUdIBhAJBVV95cUxNNE5zMnRzRVVkdzdlMXkxWXY5WEJCMS03ZHNUX0ttVnFKQWFIUF9YT2dVNVVCTDVFRGVFN3EzdzYwNHZpZ1J6Z2NvblROWFFHaWJxS1A0dVZxVGg0UFg4TUtDanRuekV6eDhxN2QzNlVGYlVVSGNzbzgzaFh1ekJJdzhrX0hzNVRCMFM5bkRNWGNnY28yR3FjUWJRZDF3X2FIV2VPN3M5RFJueDRsLTB6X3FfT2FpcUl1V2tpZzdId1FkcDAzdzY4VWN0OFVHRlNlTjhmZG1sRV95eUUxZ08zakMtaWpFeEtzdjZ5bDBmUlNGSENLWW9xS2ZJTkxkY2ZDc2JaWQ?oc=5"
+---

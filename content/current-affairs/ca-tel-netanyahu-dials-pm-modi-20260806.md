@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-NETANYAHU-DIALS-PM-MODI-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Netanyahu dials PM Modi, discusses developments in West Asia"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMiugFBVV95cUxNamVuS1pfWEpKOXJxdi1rOEJ1MUZFdmZOZ0RjZ1Vhb04wVE1Ocy1JSi1Sa2lYUmxoNmticDA0aGF0U1FzV2Q3c29ObVh2MFFrdzJQNTh3dlV5YnFDR1RFRWtLUGx6OW1OdWhxNDFIRFNwQ00zYzYtSFlEOWFnX3dJSGRodVowWjlrQUs5Y0xabV9jOGtNbnpIdFNfMXZybFlLMW4yRHRIaDNaRERScVc0S3pTZmoxMlFJSEHSAcABQVVfeXFMT2w1eG1JVUlnUDdfM0tfdzdmSHRIUUZjV2JOaG8zN1otVVpWdk9kOF9GYnlGdWhZLW9zWDA5X2RUdW5xM2p3ZUFMMGlIclFiNWNCbFlmbHZ2b3JzMG9aZ1lZNFVXNkRpS3ktS0RDMFNuVTJPd0hncUNOT3IxYnc5d24zdVJJbHZ5ZHJTUUZQM1FhNm9HSC11OFNIbFJvbHVUVzk1dmNmQkVGa3hBMlJrcFZGVTBGTDlCb0NfdUVJOXRP?oc=5"
+---

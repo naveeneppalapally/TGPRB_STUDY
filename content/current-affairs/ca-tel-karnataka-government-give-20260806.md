@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-KARNATAKA-GOVERNMENT-GIVE-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Karnataka government gives NOC for Bairakuppa bridge connecting Wayanad and Kodagu"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOZVhCcVk2eF9WZGhKY0hEbXpkSXFJNWd5YmcxWEFfakl6cjhCM05DNmhVQUl4blEzZmpsTGV4amNKcjh5TUIwNjdMZW5mRWlIMHVEay02VHlkY1pzZm44cER0R3UyVkU2dnlDdVVabVFMeEdIV1RqLWt5VDl4RFA4aUx2ekg4aVZWTFZCbWpnOXVXNjJDUHdfSVhmWjl4angyZzBFVk1iOUh5LTF3NjUzSUxFeGlqTF94XzJ1SzlkYnE0YlBoVW1xRnJPVkZJekREcEc5LTBQclRGeU5ZXzBCSnB30gHoAUFVX3lxTFB5NlRJQlpJMUZDc29OWGo2dVdmUS03OUhjd1FXUHJoajhkV2R2NkRsZ1hCaWFtRUZiZkJRbGxONi1uYWpaMGw1UFduRXlqcGtqR0dDSDNRbTJmLUNaOGZmSV9DUVBuX3VpOTBvVXJrSlBaZFVIZ1ROZUIwUjlLNzhVdHczRmRvbjZnd2NySXQtVUhrOVR4YmlqWlJsS0t3MGN0Tk0xdHByaGwwbGotWU1XVzdCRW5zYnc0cUNvSE8xNFBJVlVZQnNRSW5TLVNKR09rNVlWcXVXNnNwLVBkYi1aXzJqWjBXX0s?oc=5"
+---

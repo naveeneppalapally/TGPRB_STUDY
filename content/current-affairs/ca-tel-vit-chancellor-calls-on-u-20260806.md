@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-VIT-CHANCELLOR-CALLS-ON-U-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "VIT Chancellor calls on Union Civil Aviation Minister; seeks opening of new airport in Vellore"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi9gFBVV95cUxObDgwdFpqNU1VVksySko1c3lob0l5NklobUZ5cU8tSm90SkczRWNaNmVFS0xOWnc2STVvQjJFRF93RTl1YnlMUWpNOFMzX0JncldUeFFjVnpLeXpBMGFEdVRZQXBrWm91Qm4tbllNUW9kZGFGRjVqUEV1SERXSWV5UTl4T0JKTUdEaC01THdVTUhWZFZLRkRQTG9IdGpqOUgtcnRZQVg4M3ktSkdhV0JSZDhDUVVEX1VSZmgyOEVJd3FLbjVweGtvSEUxZUIzUUxpbVF3UjJoZFRlQ3pFNHJxeWtTa3hnVm1jRGU0a014c1pCYm9KNWfSAfwBQVVfeXFMUF9JZFBpTkkwcUJfcTBJWWg5XzFXLUpTdUY2NGlyT0oyUno3ZE1Ea0ZDODdEYzNhV3lPczU0WEN0NWZXMGJGems4V2RnZWVWRkF6UGJBdmpfUWNvYzVsaWdZdktGcmxSMVBuVmhwYlNoTmdOd1YteFVrQUxNNjU1VnBQV01WWS00dmwxOHdHUXZEejBvczIwX0FyMl9sZWU4TVhNV3RuRnRSb2VrcmdJTXk0ZlMyS2RtZzdndXpUQWh5V2RGOFk5NF9WWHAyclItUVZ1U0k5dHpCZHl1c1B0RldQdmQ4dTBxSGRhRWtXV1JmU1hOY1lVYjU3V3kt?oc=5"
+---

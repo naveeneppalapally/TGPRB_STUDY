@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-IBM-CONSULTING-FUTURENOW-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "IBM Consulting FutureNow Centre now in Visakhapatnam"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcGFJbEtCb182VWY5dWc1RGxDX2tkcTJZVlBFbHBGcFU3N3BaSVREdDA3ekNSTWtrLXdwUzFMZWIwc0o1SUxmakFaak8xeDFiTXVRYTlkWWZ5YWluR0E3aHdZY0JNN3Y1cVg3cV9jeWRuX2VEeFVjN0V4NHhfY3hMNTdsY3NSTFcybXBsaVF6TDMzS3ZvdzN5R1pvWVNjZ296cmFWcDh5dm43NElRamkzN01XX3hQbmZYbWVmcVlaWHltTUVvQ1HSAcwBQVVfeXFMTUd1TGZZNW5aNHhNajJZMVpkdHAwSHUxU0ozdzFEdlg2a0JIOFc5czhrbzlaeWM5aXF6OHRXeEk4bWdJaVRzMF9jY21HOWlkbmJLQ0d3ZG0yQThXZFF1RXJHVlN1VmFNQWpoWjVQSjllRFRMbWJjelpkblVGZkJfbkE3YXFEaExpUDhkYkluSTdmZTd1eHU4VjBIZEpZUGtmVGRtNGx0ZlB0RDdiNDRKT29nZEFKbTA4OVppcC1RLWNIMHNrZ3F5eUM4Z2pR?oc=5"
+---

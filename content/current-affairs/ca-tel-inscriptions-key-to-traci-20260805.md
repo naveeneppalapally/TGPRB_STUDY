@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-INSCRIPTIONS-KEY-TO-TRACI-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Inscriptions key to tracing Karnataka’s cultural links with neighbouring states: Kannada varsity VC"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOYklzZmV4R1AzYURPbWZlbVh1WTc4WFF0WWk5bDhNZ2tocVJKZWtoMzREWjhjSDM0VWowSlFMVkEwVENiNTdxTlZDZ3VWcWhldmp2VTZMbXpFLWNFSlNrbnFmUEF2REFLb29UWFdQQVF1TjRFSkcxcERxX2UwNkhWSUdlMmk5a2ZqUGF3TWxLOFhUQzd5TG03aURnc0hmaHI0QkdpSm5xcFNPQ3N2M3BRNDFtVDNWN1ktX2tvUUdCdW1PRDA4Wk5iOFZpbnVuSTZmczRET3ducTBjLVhUdlJlc2dIemgtel9vZGhyTkRDeVVtT3RpZ0ZIQ0VR0gGAAkFVX3lxTE1KTGZIZElfQkY0N3NaeHdRYlhkdnJtMUU2WG01WlR2bHV1VXFsQ3p6c25kN1NFdWdfR2FNT0dJWDlpdmVwUGl3WFNtUGRta1A0UGVndUJhdTlVYzNiOXBuaENYRUdyM3ZkZmhDZWVYSjY3V0ljemczR2NHMXMweTJTSktQb0RneDYwQWp2ZkFucVA2MkRHSFlHXzNLOXdUZnpLUkJwSzB4eVI3NGlKbEs4Ty1EMUhTTzdGWl80V0N1VFNkdG9xclU4WWt1VXFlSEQteXVmazZXUW5oQnBydE4yNGx2V3pBanlPQUk4d0RJZTJuZEJlZUdPRlU3Z1htSWg?oc=5"
+---
