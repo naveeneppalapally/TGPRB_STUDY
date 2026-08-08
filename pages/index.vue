@@ -101,6 +101,65 @@
       </div>
     </div>
 
+    <!-- ── Today's Brief ─────────────────────────────────────────────── -->
+    <section v-if="briefItems.length" class="mb-10">
+      <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <h2 class="font-display text-lg font-semibold tracking-tight t-hi">Today's Brief</h2>
+          <!-- Pulsing dot if added today -->
+          <span v-if="addedToday > 0" class="flex items-center gap-1.5 text-[11px] font-medium text-emerald-500">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            {{ addedToday }} added today
+          </span>
+        </div>
+        <NuxtLink to="/current-affairs" class="eyebrow accent hover:underline flex items-center gap-1">
+          View all {{ totalCA }}
+          <UIcon name="i-heroicons-arrow-right" class="h-3 w-3" />
+        </NuxtLink>
+      </div>
+
+      <div class="panel divide-y divide-[var(--line)] overflow-hidden">
+        <!-- TG Focus items first, then others -->
+        <NuxtLink
+          v-for="item in briefItems"
+          :key="item.id"
+          :to="item.meta?.source_url || '#'"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-start gap-3 px-4 py-3 transition-colors hover:bg-sub group"
+          :class="item.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : 'border-l-2 border-l-transparent'"
+        >
+          <!-- Section chip -->
+          <span class="chip chip-mono shrink-0 mt-0.5 text-[10px]">
+            {{ sectionAbbr(item.meta?.exam_section) }}
+          </span>
+
+          <!-- Headline -->
+          <p class="flex-1 text-[13px] font-medium leading-snug t-hi line-clamp-1 group-hover:accent">
+            <span
+              v-if="item.meta?.is_telangana_focus"
+              class="me-1.5 inline-flex items-center gap-0.5 rounded-full bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 px-1.5 py-0.5 text-[10px] font-semibold"
+            >
+              <UIcon name="i-heroicons-map-pin" class="h-2.5 w-2.5" />
+              TG
+            </span>
+            {{ item.meta?.headline }}
+          </p>
+
+          <!-- Date + external icon -->
+          <div class="flex shrink-0 items-center gap-2 t-lo">
+            <time class="font-mono text-[10px] hidden sm:block">
+              {{ formatBriefDate(item.meta?.date) }}
+            </time>
+            <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
+        </NuxtLink>
+      </div>
+    </section>
+
     <!-- ── Subject coverage ────────────────────────────────────────────── -->
     <section>
       <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
@@ -197,6 +256,45 @@ const toast = useToast()
 
 const dueCount = ref<number | null>(null)
 const reviewedTotal = ref<number | null>(null)
+import { queryCollection } from '#imports'
+
+const { data: allCA } = await useAsyncData('dashboard-ca', () =>
+  queryCollection('current_affair').all()
+)
+
+const todayISO = new Date().toISOString().split('T')[0]
+
+// TG Focus first, then others, max 5
+const briefItems = computed(() => {
+  if (!allCA.value) return []
+  const sorted = [...allCA.value].sort(
+    (a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime()
+  )
+  const tg    = sorted.filter((e: any) => e.meta?.is_telangana_focus)
+  const other = sorted.filter((e: any) => !e.meta?.is_telangana_focus)
+  return [...tg, ...other].slice(0, 6)
+})
+
+const addedToday = computed(() =>
+  (allCA.value ?? []).filter((e: any) => (e.meta?.date ?? '') === todayISO).length
+)
+
+const totalCA = computed(() => (allCA.value ?? []).length)
+
+function sectionAbbr(section: string): string {
+  const map: Record<string, string> = {
+    'Geography': 'GEO', 'Polity': 'POL', 'Economy': 'ECO',
+    'Telangana': 'TEL', 'Science & Technology': 'SCI',
+    'History': 'HIS', 'Arithmetic': 'ARI',
+  }
+  return map[section] ?? section?.slice(0, 3).toUpperCase() ?? '?'
+}
+
+function formatBriefDate(iso: string): string {
+  if (!iso) return ''
+  return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })
+}
+
 const retention = ref<string | null>(null)
 
 const today = new Date().toLocaleDateString('en-IN', {
