@@ -1,0 +1,12 @@
+---
+id: "CA-SCI-CAN-DEFENCE-FUNDING-FINAL-20260529"
+type: "current_affair"
+exam_section: "Science & Technology"
+topic: "Science and Technology"
+related_topic_ids:
+  - "NOTE-SCI-GENERAL"
+is_telangana_focus: false
+headline: "Can defence funding finally connect India’s fragmented education-research ecosystem?"
+date: "2026-05-29"
+source_url: "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUjRVNnlLM3JFcmNVNUdRcmo0ZGhUYnhoVlM5bVNVQVlFX1lMdzlUaVBJaHA5NVZCZmpNUzZ3OEpPTUxNS0szOVd3Zk1abGpXUDMwM0ZROTFrWmVZYU5nWU9SQWxLOXFLZzJDajdxSk9YSU4wU1g1dG1vdjdYYXhzSXQ3aVhKZDRhS19pTTViSDVCRXZoNHhndXRlWS1ySFRxcEV4NHZZREVONlcyWEE2WkxKUHJzV19GTEdqMlZ3WlVZWW42SGhJZk1SREdZZkky0gHXAUFVX3lxTFBzbkFEazF0b3NoN01qal85SG9xTGtHZGJKMkVoWXpZdFd2S0NpdVhLaU5WSnJOQnE0NmJrcUloNGhYazRGdDVGbjc4VDd3elhSSXAwcGx1b3RkWVNFZFJzaEI4UlZRU2xnTV9sUGxsN29uajFXUGNZQnhTYzlPUEwtMURXVERRaU4xck9lSXlDWmYycTFhT3lzMGtHa2VhRmd0VHBLQTdPUTVfaXE0dnJ4RW9FZ3BYVWp0ZF9OTFd4eDU3TUsxYXVZV0hka3N1U0FySThJUkVJ?oc=5"
+---

@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-ONLY-ONE-OF-FOUR-BENGALUR-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Only one of four Bengaluru suburban rail corridors clears land hurdle"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNR3RWRDBRalJBSjNVODJaVGlXbmREMmpiN3hxeTJWM0VSV3ZJbm5FaVBrckhWNDBsU2xVenI1X0VLcGlQZHZldHpHQlM1SVBLS2JfM2tPdVdtN1h5MG9RSjJwb0p4ODFRM244Y25fbTE4aDljNUNJbEs0TDZaejBGWkZFTkxVblFRRFAwUy16ajg2YkpMSDRFMFlIM1l3bUlDUEQ5UF9NRl9DRXBhMkY4ajRkUGZIUzhqaTZrWDI3XzlhWG9mOUpPSUpiblRqQUFzZlHSAdgBQVVfeXFMTXlZVkNyZE9LWjliOVluMEF0TWhwU3NoQ2ptZktFb0t2TS1aM2sxYjgwYW5jMlJ6bkZrdDl4bWlPMXRESnVCbE9vT0tWX2hYNHhMSTNCRUhyRXFxdVpyZExkOEt2MkJnbkNheE5BRXg2VDFEcGNwTE13dEhXUzBoMXRfTjlTOW9WLVpZWnRMWi1vanQ3aUFMamE2VVQ3R1ZmaXMzWGtLMUZ0STFwRG16bWgwdkNYS0Zhb0lsckhEWGdCZmtSRGczRXFnVzNtWmw1Vmh5WEZHdkl3?oc=5"
+---

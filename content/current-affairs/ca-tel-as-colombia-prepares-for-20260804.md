@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-AS-COLOMBIA-PREPARES-FOR-20260804"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "As Colombia prepares for presidential inauguration, outgoing leader doubles down on fraud claims"
+date: "2026-08-04"
+source_url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQTmo0OVY4RUpreTJ0dWJhaS1ETEVrZFJ0czZ3anNBUlNwNHlvbXltRmxpdUw1TER4aDRQa0tvYjN6c285T19fU3pYZGFkMElFRzktOXZmVU9HTHRHRkVCbWlOLWFvTU5CeVU0VVEzYW50UlBtV0ZYbmFwNTdmcV9FZy02S19QSlo4c185TnJCLTRoajR6dEc2OHFIODJ4NmhpLVFNREw5dnRYVkZKNGJVYXRzd1JqWllkRTZwU3pPdHo0RjdQaHJzZGUyeWdkaDRGalRnTlY5NGV2NmJ4aF90UW5rYVdEc24wbnMzckQ1X2zSAfcBQVVfeXFMUGNUcUlwREYyU3Z1TEdBX0syeUZScDVCWnJjNlh5NkRqUjEtSmR3Y1M4V0RVU3Y3bWRvQkRZR0R4LV9BdlNtYzI4VVZVYVFyZ3RFOW95YUVZQ21NY3FfaW5MVEpKV1lBWEFLUUU0MFU0UTBxYXQ5Z0xpdjdtbHpkcDUtODZ5aFlYTklfZmlXT0prWHJSbnhUZVNmMHRXMWdyVGVlSXVTc1JKdmFkUXIyMElFM2ctcHBTRTZqMGdvODZmVlZ5RmNrTEIxYzNGNXowaXR0aTJfeGlSS09USGRmMURSai11bkhZU0lPWF9hdktKMmg2cHZvWQ?oc=5"
+---

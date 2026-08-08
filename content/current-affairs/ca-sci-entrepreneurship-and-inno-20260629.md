@@ -1,0 +1,12 @@
+---
+id: "CA-SCI-ENTREPRENEURSHIP-AND-INNO-20260629"
+type: "current_affair"
+exam_section: "Science & Technology"
+topic: "Science and Technology"
+related_topic_ids:
+  - "NOTE-SCI-GENERAL"
+is_telangana_focus: false
+headline: "Entrepreneurship and innovation: Scaling India's strategic technology ecosystem"
+date: "2026-06-29"
+source_url: "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOblk3b3F4ZUEwaTBZVHEyb0tDamFncXJjekNBazN5X2pxRHN1V2ZyTWlTTDluV0FrczdXaGEtVDFBeXozZXVOX2ZERVdKQU1wRDFDalpEbXp0ZFpNLXZZUTJGVFhGalgwcG9tbmQ0QkF3b0RONGs0MEFTM2xkOGwyaXlqakVac0ViZmZoaVBUeTJ4bmlmY0VzUXBMQURBWTdOWkhoVmpNNmlCWGRZVE5fN2FMcUNUaVU5MlR1dzc1bzRjMGFaenAwZVh2OUZ1RmxMSlhEVERlWUIxaWRqT3BjcHpsSmFSbFlCd1BuREVEMXVWbGRxUW5yaDd30gH_AUFVX3lxTE9VVzQtMmZYOVdvT1Y1TzRWcnVqcE14LWZUS2ItdDVoNWYwVjluY2M5WFQ1b2h6ZThtSkwxMzZUWjlFd0Rhc3drMnMtTzhpZEpxV0VyNDJzWVJDX0c1ZUhQVTAxNlVocloxQzVPRVNiNW94RkVKbWdTOGpHR0xzdTdURGtaTHVCdUpjNDJOcUJFc2NZRGktQUlxUjYxeDBjVUpsTF93NXdac1R2LURPXzkyTEpPZjAxTUdpekM3SkFFM3NIdDhTbWxobWFpanpjY0ZQY0tQS0RiVUNudHJ0OTVsaHN4VkFVVWJGa083ZzRoMzZyV3huTkR6S202Ukk2Zw?oc=5"
+---

@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-UNION-BUDGET-2026-SPEECH-20260201"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "Union Budget 2026 Speech PDF Download: FM Nirmala Sitharaman’s full budget text"
+date: "2026-02-01"
+source_url: "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNeGxZYlZyaG1RSDVSV1IweF96VmJlUHpISUpUTEJ4aEg3Y3RQekxGQkF2QTRLOVRLd1loUHFHQTVsTWJ6cnZZdjNCN1IzS1FabW1JRnhEa1ZodUhaMGRrVWxUQzI3M2FlOFUwU3Y1Zzk4NVBGQmVBNnFEUlRlRUEwWFBhNDljdTI2UElGQXJlOUlmbWpwelBWeU12aW50VF9WWlpUMFRxRVpDYWpNZmpmR2tpN1p0aUxSUUJYUTNxa0hMZjdRY1oxc2RMWmI4STg2N05vYU9uSdIB3AFBVV95cUxOTV9HQWpVaGt0TnJ5MV9ESWtYVXNkY3BvOTdIWldUTlE2V2VvcWxnbE1sa1gyeTQ2MVNIRUN2Ykd6UnI1eUozYXVtX01ySTFUcFVKeGlQYlVYTGdBd1loSmx1eU9obzRReHQ2QTFXdktUR3hFMURHem54UWdReXk2YTIxV3VlMkJWdkFLNjd2UlNIazZoT0FDc1FQRmh2eklEcU42ckNiclJuQklhNUJMMzJvc1hwZHFmU1pmY3RKaFBIRXNWYklKNjgxS3ZOOUd2SHFNcDdIQXpoelZR?oc=5"
+---

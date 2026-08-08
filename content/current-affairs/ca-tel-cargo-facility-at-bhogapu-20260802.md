@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-CARGO-FACILITY-AT-BHOGAPU-20260802"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Cargo facility at Bhogapuram airport to benefit pharmaceuticals, horticulture crops"
+date: "2026-08-02"
+source_url: "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPVlFmSWxVSTk1LWFmT2hFdDBtRVFyeFpsWjM2QzRza3N4cVVORWVVMlB2Y0t4WXB4d1hQN2RoTTZiSDR2SVZGbHRTTEN1czVsVk9aZ3RKN2hKSURHZl94ZHdRTTdNUXY5SVphMllsbGcwY1ZaeEFyemRFVFRLaGg1UzJKRXNUYnVDT0dSSTFjNGJwdF9UbGNPdFU2dHZNd29nc0tqRjZaV0tXd20xMjBXVEZQQ0t2Ylh5U3lDVm5OX1JRc2VYMXV5SlpYQVNoQkZMSXRDaXFIbllzSHUzRGNwTTlfS3dNQWlVcjAzZtIB8wFBVV95cUxQU2JBOHEyMl9tcG9nWTFTVFp6bU05bjBSdi1uSGJKdWIxazVZRy02MGVZYkl4bTR4MHM5aV9RUFlKcmp6aTVnQ3ZtRkZJOEkzOHc5bjFtQko1cml3d0NXZU8tcHhoaV9jMGU5R2I0SDAzckRzcFkyeUtSbWZ0SGFHcEhBakZzV1pMbl84dUszTXA3d2NCYktzSzcxYWNFUjctTGI0d0NxeWxuLW1yWXRlTW5xVnFtRlg4dEMyUWYwdlhrRF9yb2FUaWpPMnBkcmlVLUgtUmVOMVB1a3JMZ1lYdlBoeUNJZW9YVzZ0ZERDMEQyVTQ?oc=5"
+---

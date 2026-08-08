@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-VTU-ORGANISES-HIV-AIDS-AW-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "VTU organises HIV/AIDS awareness programme under AIDS Suraksha Abhiyan"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRmpvM1BIdUNkeDhzWXFQeVc5UUozRGtXUWY3Yk5USGd4RzBYR0xmMXA4UmwyVmdXcGw1U2Q3QWRZX1F1WEh3enoyb01CcUNUdHlVMEYzaWp6ZHFsYlFjU0ZqN01GdTZXU1lieXREWmg2VGhNT2t5ZGZEUGlwX1FyZUlkRWVVTlpTWmZweHhLVklYU19vSlpkNEhvU01GNU5XbjdlUmtDM2pJQnZxVDhlN3NmaEIwemExcnF0NUV3ZTZETjNoVzJFeDNlLUNVSWUwWnlZWtIB2wFBVV95cUxNQXJoQWZJNVhERGx2ZmtsMDVRZEhld2plSlRJU3d2U0xOWUNlZmpPQkhOTnRLUDY1bFhUUnJFNWwzclZ5MDd3bVhaeWRucHZ5Mndfb0RQaEZjcmlQUjRVbTBZUXY0eFVrV1dDZk5tM3hwRlZmWmM0dlFuSzFWV2gtVzU2MU5DLTVUeWtWSk5Ja3c0Z1RydTdwT1R5VWZzdkpRZkMzYW9NaGpGMFBYWmpfblp5LVlrMnZCRVBSTGhZQ0hCd3lHRmROSFZGY2trN2xNWlM2NEVLQjlJdDQ?oc=5"
+---

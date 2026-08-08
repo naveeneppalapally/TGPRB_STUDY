@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-DISTRIBUTE-WELFARE-PENSIO-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Distribute welfare pensions only through cooperative banks: Kisan Janata"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPaUtoUjJwYVJvbGZzaU5jMHZfNHl3X1VhWllIbjRWYTB1Mmg2eUVqTnNrUkVKT2t6RExQSzU3YWJoMTl3c0dKanN2dkNXWjBhX0EtNW5TWXpVc2ZjdzktLTgzNG54Yng4NmFJTUxwQU1UN3lzYWJwOE40ek1WZzlpaXhvZnlKTVozZFhodlJGY2xQVXJjaXBaVGFndTlvcGFfTEtVbFpFb2FhRVE0TEhMOElkTnFCRVpFR0E5eW93RTFkVmNGNE81TmNmZjJlYXoyamZj0gHaAUFVX3lxTE9ldHphbjlSN0daVXBnazZMcmsyMjFxc2p2MmpqT0J5MGVabGRGVlY1SFp3VzE5QzFCbmZhdUlEbE1ZdXJwWjlCcmRuVXFSMWx5NGFiaUw2MnJxMlBfQXNoaDFaVHJ2dWhkRW5nMzJSNGZ3NkRVa2pGRERTVTNRRHVETHNNeFA0ZlM2Si1Yb3YzcmR4cGpRNEcxRUdPaUNrYnZQUFRMUl9OWXlucXFoQ3o4YTNSOWVXWHAwRG10YlhXQmNjY0pRTHlLWVpSdkVLLTNqUEl2MUVvemVB?oc=5"
+---

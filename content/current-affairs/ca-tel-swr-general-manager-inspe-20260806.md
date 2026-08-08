@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-SWR-GENERAL-MANAGER-INSPE-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "SWR General Manager inspects railway infra in Mysuru division"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPT1F1Nmk5clRabnNwZlRBYl94X1pqZUpocEVoazF2QlJwNnhWNXRtb1QtVkxFVHl3SFQ2M2JaVnVIRzJ1Z1FKTEwybzBKb1hZanh2bUMtX3VFdEFUYVl6aVgwcnIxVUNXVERVbDlLNU12SmZPRnhDSHI2R3ZGRjl3WklPOWRHNHA4UE1OblFqZDBNcEFUNFlxRkp3LWZLOUI3aWUzbFhadzU0VGdscDY1Y3ZoSzdNUHc20gG_AUFVX3lxTE9PRDZ4QUUzWGZ5WGRzYmZnb3U0SnY0dEJNT3NQMktvakNaZ1BNTk04RXVjQ0FwdXVMcThOWmxqNVhnM3VIOTJMc1JKWXpRUkJyYXZITTUzTUpyb0doV2ZuZk9zUEh2VnVLb0hIcmdMb1RMUnZBTkdwR1JIVDYwaXVZb01UVlRweGI1ZnFhMmRhemFfeUpWMXVPdzYwWXYzSHY1LWlCNWVXNUo2TWJ4MlplRXpYSVVCTDRqNGNjWV9Z?oc=5"
+---

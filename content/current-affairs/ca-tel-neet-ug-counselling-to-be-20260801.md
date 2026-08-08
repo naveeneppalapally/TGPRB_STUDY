@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-NEET-UG-COUNSELLING-TO-BE-20260801"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "NEET-UG counselling to begin on August 4, academic session from September 8"
+date: "2026-08-01"
+source_url: "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQN0xwMnNZdURSRGZ4aWl1a3dGbjNmYkEzdkYtVWVIWnMya0pub2ZvSmN5TVpCdjRBU3lXWGlWUUlzNndwdE92dkNsV3pVZnBMYnlfZkFmNFdiRkpjLVZaOHZ4aFZDVkRvRnF5WkxRUWRWSTJDd3I1bWUxX3lycENZZGdMRkFVVllsQUNSelRlT2ltZEw3aGRHcmd1Q0pYRlBXNWdsUGhvX255SlBkWTZCbjdweGx3cjN3MV8tVW1jR1pUVDhOLXBJbNIBzwFBVV95cUxNZi1wWDlhZXRlVTBCUHhlYXotYWJiZ3UxRFNBeUNHVUpvNkx2MEp5S3lRRERUUmZjemlYZHFXMUdjdTVkWUhMZXdoWERXYVRHVzhUMFFja1ZHQW9aWGJyakhFOGlwX184d1NaS3FqV3B5cVlBMGtnM0tpMmQ2WmlGNGtnd2lKY3BXZkVGTUQybi15U19ZRlhMSjMwY0gyUS1GZzh6X2dnRldwYmlnNnNCRFhrOUdCSEUwcm8wNDJmUDFodzQ2R2FPNnBTX29LbVE?oc=5"
+---

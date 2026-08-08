@@ -1,0 +1,12 @@
+---
+id: "CA-POL-NCTP-REPRESENTATIVES-FILE-20260405"
+type: "current_affair"
+exam_section: "Polity"
+topic: "Indian Constitution"
+related_topic_ids:
+  - "NOTE-POL-CONSTITUTION"
+is_telangana_focus: false
+headline: "NCTP representatives file plea in SC challenging Transgender Amendment Act"
+date: "2026-04-05"
+source_url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOVVVOYWd3bFc3dmtVcEEzMU4tN3h4RVVSeVlkWnVrNlR2WllFUEdpaENxWk96N3ZlMEw1SE16WnRSN2Vyamhpc25YX2JXQ0NkNnl4YzA0alhKaWRCaVNiVkdTYndQR29KTFkyTTdSZWJseXRmSnNURkdCbERnWmxrMXZQNFkwWG5qUmFLWFN0Q2RhZXpVcFBaWUdndElBUkl5LUpZYjdkajNaX2ZERnJhREZxa1V2ZmJTSE1DWkVZOFVXcTTSAdABQVVfeXFMTkxSckdhYjQyUnN1SzIyLTRnS1JRTUw1djZIQlh4a3V2czFDVTdGT3Q0RHFBOUEtU2RZOVNrc0JUV0xFYWZpeEpBSzZ4ZDdBMURhNjlZb3FMeHBjMENubkwyMzdOVFhERThOUmZTd09wR2VvakRMUmJsOE1WeEt1VDNfUG1pNl9aMEdBWUhOdVdhalV1Mm1VamVsWlh5NTdFX3JEbTZUR285ek1MT20wWVNaRHpDOUNGSnphQXRpeGNjODZPRUhxaDVQUWtUb28tbA?oc=5"
+---

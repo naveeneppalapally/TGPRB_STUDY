@@ -1,0 +1,12 @@
+---
+id: "CA-HIS-PAK-USES-CEMENT-TO-CONSER-20260702"
+type: "current_affair"
+exam_section: "History"
+topic: "Indian History"
+related_topic_ids:
+  - "NOTE-HIS-GENERAL"
+is_telangana_focus: false
+headline: "Pak uses cement to conserve Vedic-era Taxila, gets Unesco delisting warning"
+date: "2026-07-02"
+source_url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPV2xfVlVmMmx4bHhYNVhEb1VDc1JVcS1qRllSQlExZEJhUlJQZ1h5al9lV0RWRThqOTVsNmRienprZ1gwR0dsa2o2T3FFUnpWNkh2UERHcElZZlJNQ211enN4b2FOeVpURUhqUE0zNnQtV0s3eTRFYmNwRVp1WkxpVTRhYk1DUHRTZENtbW9HTWktczd0VktXbjRVXzVROVFCTktOMV9xbmhLaDdic2Jsb29ud2haNXRwSW5CYUlPaXhzU2NCeXJodkhhMm1mczJUZDdlajdYZmIxdHfSAeABQVVfeXFMTVFmdDBMU0kzZE0wMmRaVW9LcjhJa0IxWjc0bFFrMllDUnF3cHhadVBkZURLbGZKcHFXSmlWZlVEc1IwUzUxZFRDZTdjVm1kd0NRM1BwTEFyYXpSN3ZTY2hjY1ZJSTE3Z1g5ckM3dDNtOWh3dTlfb3VYcjFQS3N6dG9KbEhfcjIxRlNYWG9qaVUxeGRWaE40SmdBTFBkVWZaNE9yR0NHdnU2V0xMN3Zhd2pJa2JzMElWZkhDeTNucDltTURSUHRZNm85b09ucG84Y25lQ2NzM0J5NjFqcHhIMXg?oc=5"
+---

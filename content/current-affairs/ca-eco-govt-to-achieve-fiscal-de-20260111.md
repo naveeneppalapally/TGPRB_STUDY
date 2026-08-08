@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-GOVT-TO-ACHIEVE-FISCAL-DE-20260111"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "Govt to achieve fiscal deficit target of 4.4% in FY26, may even better it: PwC"
+date: "2026-01-11"
+source_url: "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNb1V1UEs4STRGVGhTclZPRWZZekN1cC16VndVR05HSWd3T2xLNEZ4eTVSTnJHajJwUWwwdUZEYVpNLXV0YU9kYjhoaGQwQ2F5OF9lZkZzMzJoRzVFMml0UVlRMW5Ya0txNUpJZHUyc0JpSGM1S0dFMWtYWml6WDIwQnQ0RjU3UTA3b3VNWVBKaU1PajlHY2FMa0VzX3F2TmhoWTE3XzRxUjNVV3pqSGszMUJ1cEsyaElYUU93LWVJb1BJVEtFREc3ZEloVHF4YmQtX3E5VVFnWlFxbXA0eE92aHl3RjN4MWxk0gHuAUFVX3lxTE45TUdwNjd4N1NvanBNTEpzcUZaT3drWk90c1doc3lpdUxRUHhqWTJidEtkaFhVc0lmZHZ1cmNhR0R0RWJQNDBTelZqTHdSV2J0WEc1MUVRdHNqWW0xRmtia1NZbGU0MndCb0FkVEZFU0FaQnk4cUhKZlpPa0F5UGpBM3VydVFfaVhXQXh5QUlXbXROdmFYbHJtWnZFNnNva0M2eDFEY2JMSUxxalBadS00eHBTWldGRER2WXU5YlhOclVVdHFueTRBWkR5NENsQkFvNHJMUTkwTk9hVVVhaTVVQ19YVnpYNXpJWEUyeXc?oc=5"
+---

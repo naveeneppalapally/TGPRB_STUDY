@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-CM-VIJAY-INAUGURATES-PROJ-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "CM Vijay inaugurates projects completed in the Nilgiris"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQTmxWaENYZ0xBTFllYUY1UDNXalFNQnptVEVBRDE2OEhvbUZsdFVSYVdhMnpycVViNnJXSlFxOEExSWlFZzVCTTJ1Qk95Z1BkbmpOaVB2MUMtNzhGUHNNaHBTSWtIV0JBOGk5bk1jZ3NqMnhnWmxWdF8xRjhpZGh1aHJuNS1lUzFCdC05UFJxdEpleE95bEJoRjNONVRTVFBkdW1CamlmSFV5em5aR2hzOHZ4S3BLY3pmMEN0SkhuSC3SAccBQVVfeXFMTlppNGZBYnRIdkQ5UUw2NlVYVU9XLUV6SWNkTzl1bjYtNWJsa3BaS1ZWV1o5QnItb1VUd1hLWjZsT3BuOElCTDhzeEVOQnVRNS1zd3BwbGZIYVFDbWtYYmF3VWMtZWpGS1p3OVRsLU1LUHQxNXlBOEdTWThUeDdxcE5vVlVwZnNPbmxUN0gzNzJPaWRQMm5PSWtuR3VIVDJnS0Rqa1pfcFlIWTFYY1pSZG5ncWNzUGR5eUZ6U2hrUlBrei1WLWc4RQ?oc=5"
+---

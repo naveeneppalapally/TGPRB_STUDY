@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-TELANGANA-TO-UNVEIL-BHARA-20260804"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Telangana to unveil Bharat Future City master plan during global investor summit in December"
+date: "2026-08-04"
+source_url: "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPUjFrbUs1VE9URDZxNFRQS1djZmV2MTFYTGdfS0lnMm1LNFFSeXZ4bDBfZ3dXZUE4TjZFY0p4MUx0XzhuVkY5N1U1VVNGSUVaOVB4eWhWMjVWczJnc1hVLS1Wd0VFQjM1eG0wUW5aZHptdXFLRmI3eDktcFBXRVVtSzNlWkNEYXZhdkJJTm5SYUtnQmJJTTRSZEpWcmpmbExlNVZxdEpXeTBjVk9ZM3VhVkRFQ3pMLWlnQXk5RVFzQ3VUbnZfdkZmMU43aU1EeEN1a0FVUXJqMGpQR3g0dlVSMzk5RHF5TG1sY1l1Qk5nak5WOUXSAfoBQVVfeXFMTmlfZDVMRG9teTJpUkFpZnZZWFhGNW9CZEJzV1BZdHRDbjFVcFJTQ1VfU0FVNTVQOUhMSHphbUVCZEhnRXp6cjVfbU81emtTNXhpWkg5SHN5TFpSZnVTVWtUZTdsQnU3M2tHNnFtem9jQlJVZW5KcDZjUEtxMXBXSHpJeE96bWk2WTBaU21TWV9lNXF1VGNYOUFoR2M3M0lmLUJGaVZrbUt2RkNpdmVROUJhZjR4TkNyZ2ducU9YZ1JJM1dyNkczc2NfM3VaZjgwY2xSOV83Y3hsR2hreHhla0JCb2htcWFyS0RhOTNPNVVOUVBneW0xcDNiQQ?oc=5"
+---

@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-SUPREME-COURT-MULLS-TRANS-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Supreme Court mulls transfer of Tamil Nadu DVAC case against ED officer to Central agency"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQY290TUFlV0pISW9WMFZaNlJaQVdkamVCbm14Ukoxa1VXc3VzcUNVQnpBLXZJeE1hekhfMFdyOEdLWFUtNGZoUFdMc0toSnZjQnAzVGlSYTRFbWxpQmxZTTJuT3hvVl9pS1Fab1FtVmZiaXJHSDFOSzNpbUlQMFhkX3h6Z04tMnd0bHdSZk53M1lJOExLeDQxaWZmMFEzWjZHb3gzSVBDSVNVM3pLZUg1bWdqeldETFp6Z2FueUI2dUNER09zUHAwVmpSWDlodTVVbnZJa2FmU1c2bWtlQUtIUUF1azcxOURUMm9QYUdtZ0TSAfcBQVVfeXFMTXJGTXQzdERHOGJ6TEdMQ3pOd0FmUTY4eGNQMk15bW8yLWxpYjdKX05SYmo4OVlqclR3Z2NMOWxJd1VIbFRhV2FhYlFnM1dLeFJjVDViY3c4aURoTFVsVVhMRjhOT3cwQ3F1T3FfOVgxRkZ5RThJS1BtU3BCSGhIMl9nMkNnbGltOE03cmc2T1cxQ1poQ00yOTFUNEJqa2gxUk1tOFhKQ2VCS0tCZFQzSjJ4RUV4MlVWcy11ckZfbGRLSWFZUDQyUkhUR1RBRXZTMHRWWVNON1RHejdaT0xMajAtRmxXR01kSUFOVGZNbzhmSzZHSXE0aw?oc=5"
+---

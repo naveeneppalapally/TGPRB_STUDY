@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-CALL-FOR-CONSULTATIONS-WI-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Call for consultations with consumer organisations on Right to Services Act"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNeTQ4REZUZ0lraG1VU2xubnJfUlI4QUNBZGUtei0tMkVBX3NNaVZBMFpib3ZBaGhqRVZrYU9VN1VLeDc1VS0yYXRzV2ZqZDZ6WkZaRG5NSjlBN2M5SG1pXzN0VXJrdXVpTU5fQ1ptTVpKVnpzT2JtcnhfTTE5WGFjS1dheFpQQlFXNnE2SGppRjJYbFVmV3dfRzVpYnZ2OVNkWlNWWFpobEdQWUY5YnVaSVJvN2kwUlVNdUxqZ09XUGdRSUh1cW5CaUtZQ0NQeEhtUGF5UzBVM2lMY29td3drX9IB5wFBVV95cUxPbFlSMWhFSnRuT3dxSjdpX0FoRkZlQzJwa3NOUFZGTHEzM3EwV0RnQTBLRDN3OEtZeFU4eUNNZGFBQjRHdjNudUdmaUkzYmZJeVQ5U0ZkOFlnbC1oUjh3NGpnbmFCZ3Brd1JzQmw2aXY5eG5RR29zTlVxdjgzWS1rTU1oUjFRSEpPdWNMbUtTTndLT2p5ZFk1UERteUZmbDBNdWdXNHl6ME4tTXVGYjJ0b0xlMnFCdHZyemRwRWVYaEwwUFRTaWUxYnRXeDNwT2VHNFBjZjdHYjdzTHd4amhhbWgtbTVKdGM?oc=5"
+---

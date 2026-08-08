@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-GADAG-ELIGIBLE-FOR-DROUGH-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Gadag eligible for drought declaration as rainfall deficit touches 31%, says Minister Rayareddi"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQRjU2aGZuTVJqZ1JyTWdlWTJOeVBOdTd3ZDA5TFI4Mml4cWhvc1ptQmo3VmlZMUc4N0wwZVFvSGQyV3ZhUmhNbHM4RmhDRVV4Z2tYU0VVa21naUpacGJBT1Y3RXhBeE9xRXE3eUV3TFZKcUhyaWlpY2lZaGdoVmE4bE14VTlDMGlDNUJWRWpkOGx1bjlTUElzbmg4TFZ3Tnl5VkFNQ3cxTTNDY0JlSHRpX05OQWJOQWpuZlFTdnVBU0pvZWpPRmJYNGRFX0l6a3cteWVHa3J5ZE0zNG0zM3VCa3dCMmdMVkw5WjV0aWRhZjNQdkFa0gH7AUFVX3lxTFBRQWFMT0dyakZJVU5BQUJiandpd1ZHaXNyVkRfb1VCWnd3Z1E0aEhpOFdkSDh6QlF1Q2VkNkR6NWpnVVRPWEsxa0lGd2NnWEprYzltVS1mX090ZVpwWHdmblltMlN0V2dnUGVyM0gyNGNJTm5pcFpwMjF6d2syVUlfTVpVZFNxRkp2QlQ5ZlUxa0plcjNhVUpCVlFVQVVqeVZ6S1lSSnBDOHhVcUk5VkNiWFNIejNFYWZyRVVkM2RVTkY2a0JMemlEUUc0RDdud0RjQUhOWDlmeDlTcmFGMVVyMzd0SVUwNFpad0Y1eU5TODRIc0Z6X0VRWFdN?oc=5"
+---

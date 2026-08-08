@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-INDIA-S-GDP-PEGGED-TO-GRO-20260107"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "India's GDP pegged to grow at 7.4% for FY26 despite tariff heat"
+date: "2026-01-07"
+source_url: "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPaXhIVUxuTklCb1F3RTZva1pyVHZ2enBpS2p2X2hKVmliRXQ0SGZURFhTaU5laDdOdzRlZDh6c3lnNTJKckFFem1pUFktbGdXUnpNWjJ4bWluQ2MxdzlTa1l2QzM5dEVCM0YzRExvaDlGN0I5MFpCcHZyTWxwMmF1ZnhKZlRpclZ1R3pBZ0E2cTMya094ZGZ0cGhDSTZ2ZnV0UzZfUUw1ZFFxd2VMaTg1N3FKQ2Y4c3poNHo0T1RGdksycVl1NmNJdFMzTldHZ3k0eFHSAdcBQVVfeXFMT2dtdy1BekFVYTJyY1RUTFg3U3VyZXExenlBR2FUdUE2QjVGNk84akdYOEg0ajhQME5JaUJvS2lGWEFJQkV0Q0dnSDhhTXAxNS14Mklaa1pMTFYwemZMYlo3bWg5RHRFd08tclVvdlVTRG1zbU9SQ2RxeDZOS05TWHFrdUVwbUxvaVdoekhta0M3MHNaVXNRdG1wVVBIdXpPVzRaU1BNUlowdXQ0ajZkUkdNcUxYSXhPN0lteDdkWjcyUVB6ejlkdUdPbDU5bUlHZTgwX0JyeUk?oc=5"
+---

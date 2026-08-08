@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-STUDENTS-URGED-TO-HARNESS-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Students urged to harness technology for solutions to societal challenges"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQQko2ZElZWWY3VHlZa1Y4NTNadXhWOVFyUENtQ253dThOLTZhUGpvU2xHZ0JCMjY4SXdKX3c4NGhMTGktT1ZrS2thMVl4OU1pTXROVmpOcUczRkQ2czhMVUlqcTZrV3NwVGpjUUlQVUFqeFJaSGFsOXU1S21kTmFYQ0ZGQ0tURVZBU3ZDVFoxSC1mdkpibHBkeDI5ODJGU1hpSlc2ZExyZ1RwRXFtZ3NpUTNubU0xYUZGLUdLUUlzb01kR1d3Q1RsWXRUNWtwSHNzUnZEVU05MkFPZkhkbTRNeNIB5wFBVV95cUxNLUhwZU5YRllITGotTHlkeng0UGxSVUZ6QjNVczdsMV9oWEtOdjJLTmtLSS1oSjdraUtORkVMLVU3T3dvVm40c1lORmk1eHVzcGdfQmk3a0pFRjd2QmQ1U0lsMHJZODB2dW9lMjYwSXNFY005Z3ZWT29oQnZtQ2pmdGlzTkNvRVRuT0JCa1l3czNsdW8tUXhMb2ttVXZLQi1GQVRncDJSS0NaY2pmaE4xc2t1WWpRUmtZUGJubXVldWpaMm1RQzNENnNzZGVvYmk3b3ZwTDJtNWhDTndDTGc0elNpU0d2UVU?oc=5"
+---

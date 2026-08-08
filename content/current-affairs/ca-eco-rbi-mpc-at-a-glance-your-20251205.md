@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-RBI-MPC-AT-A-GLANCE-YOUR-20251205"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "RBI MPC at a glance: Your one-stop guide for all key decisions"
+date: "2025-12-05"
+source_url: "https://news.google.com/rss/articles/CBMi8gFBVV95cUxOc28yUGFLMzlZVzhLeFNiZmJxUEh3bTJyTm1EdTFJd2ppMjJJZHNjUktkZlVLck9pUXBvbS11MENoVGkwdnlmNFZoOTdISW1rc2JBUjAxX0ZiXzNPYk5sR3ZSSURaUF90aTl1ZEtBQWFIcjIyYmVQckMtN2dXTTZLcE5CU3JrWENOOVZhM0hzcVhiak0tQzk0TXNhQVJPTFZpM1RkbHQzSTRmMU8zOFQzLVhxTWxWekRNUlV5azB6MkNQY3A4VzliSGVNTGNfc2lkSEhVeEN4UGZNWDBSeVJOZFF1ZXo5aW90d2NaN1F5U2ljQdIB9wFBVV95cUxOb21fQWdMS2N3RUZTOVhxeVBqWG5TOWU5UmpMNmJ2R2plcXFyZHJHLWZEVThGeG84UV9nTmd6Zkd3c2xBc1ZzSDZVcklYeUhEYkFRX2pnMks0UmllQ1lJMEhlOEk5OThMV0toY1J3MVd4TEM3bGw1b2paMHlOVFRwWnFqV0hwZEpOMUVYZlBaZVhvcVNuN0lKWVFkN3NfNzlKWGdUZlVibEJfcXR1czY4cXdQejg2RWRuRlJsMlN6bncxR2Q4bnIyZGczN2xuMTAzMEM2QmV4LWl1N2V2elBZVWQyNFZPTFphLTdvUGh4SlZVekcxUnlN?oc=5"
+---

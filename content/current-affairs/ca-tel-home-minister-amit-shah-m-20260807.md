@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-HOME-MINISTER-AMIT-SHAH-M-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Home Minister Amit Shah meets Lok Sabha Speaker Birla amid House logjam"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMiygFBVV95cUxONE9RZ1RPV1JXenlyR1NEYkdKUVh0SjVaYkwzM19sRFRFNnRHbWp2UW9Sd0NMQmZEWUx3VVRMeGZtYm51MTMtdUN5MGZTQWZQeGlZcFFXa25NaDlKQldKMW9zVGpBc0QydzJuX3hQdFFjT2d4VWZxYk5FdGh6QzRURFVWV2NyR3dkRFZlaDVPYkgtSmtxb1NoelNBbThTdEZ5LVV2SklwLWwwbHhraUhVQVZzeENudkh0cVpJeDd2MjY2bkc2TVBpMW930gHQAUFVX3lxTE93QTdmOGVZSzlVWGhhRGlnWjRQQkk2X25zRGliVHlJWDkxSzFkSjVHdHljWENjVlp0SGVuTzhsNnRjdVgwX2o2MVdDNzBQcTNHYXRDMGdtV3EzeU9RX1VtcFVvWlRYN1VXVUZVQVpBbHBweERrQUZLRGlHdzVTQlJWUTRxQ1l5Z1ZKcnF3Q1JUem5vZVdIMjJ6cFRhRlFaNlNOTDYtcHNFR3IyOXlHQkpKcW9jWUVIenJxN3ZROEhsSTJVN25IRTdTNWF0RjN1cUg?oc=5"
+---

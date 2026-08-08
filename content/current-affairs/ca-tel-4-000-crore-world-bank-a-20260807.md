@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-4-000-CRORE-WORLD-BANK-A-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "₹4,000-crore World Bank-assisted TG urban transformation project gets Centre’s nod"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPblFFNnB4RXpoS2w1ZFJzeWx2SmJuLW5pUVBUY0RRamF1alE0LUk2R1BOc25LN2JSUEZtMExkbWFUNnU0WWhLd2QwbjYtTU02ejhIOFJZdkpZT2dxVDJVUDBqYnpSN21CakExR19tWVU4ZFl0cmpNYjBkV1dNVHdYelhPN1o4czB0cl81MjdfNGE1NUYwT1Vna2xlS19jbDMzUEJ3eXdnS2pPdGN5M0E0b05KX0JFSnFDZlhOai1VWUMtbjFlWDFZUnJyTGdLaTNXWjRNczBxT3h4V1BtZWpaUkNB0gHoAUFVX3lxTE43SDRINnZBdGstYmY5SUVVUmd4eXEzbnZRUkpnaDFnVGM4QnFhVXVwYm55RjhPdkhwWEhYSEZud25XNERQOHhZbjI5dEV6dUtjQ1YwUWZvZE1LN0g5YmptNDdURW5EWXdidDB4Zy1sM1BRaXFlRTkwLThHeVg5cnlONVFiWTBhMmhub0tYWDdZT2RCM25DM3ExWGpWekVXUklORXRIa2xKRWtFQVAxTDVNTVBBVEFienpQOWV2SXNPMjYzNElSN1V1eEJvMDR5V2UtQmV0SGdRNGdKdU9LYS04RHpPd3F6b0E?oc=5"
+---

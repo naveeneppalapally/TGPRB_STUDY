@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-COURT-ASKS-STATE-S-RESPON-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Court asks State’s response to plea complaining about impact of tunnel road project on Hebbal lake"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMijgJBVV95cUxPb19xSzVVVnJaWFBmanB6dEExN0lYekJFRGpMUUhxbXpRZU1Wdlc3SlBVYklockQtNEg4b196TWFPcjA3MVdaRDBIVlhGZXlnSHRqUVpyZzJBMlJOWkRJX0kyQm81dWtYczF6dDBMWHZ1alFjVGhBRGNMMDdiSjVvazZ0cWZScUs3ODBXQkY4UnpUZkFseFpvUlRvc1JJWHh6dlNJaHFKV2FxV2hVQzd1R3RzLS1VTjJ4ZVVzYkhtVXJSNW5GZ3ROOFN0RVVaaG1DZzloTVc2dDZpRmxFOFc4SGlhYW5UVnpKaDFITHg3dlNRemJISFRPX0xaSmRDTV9fSUY4dG5EMG9Wc1l6SFHSAZQCQVVfeXFMTkxFVmdIRUNDNFB5N1QxVnVOR3lFR2RmY1RRdVJfSUk1VzNPSml2TkluNmJBb1pRRV9RZ3RiSjZSQ2QzaGY0M2JIRUlhRDc1eUJfSUxlTURIRXhEUHYzTVpwbk9FdTQyMWtsd2hkUTMxMmJ1dGtrOVBjaTNwVnZlY2I0QnoxVkNCbjJ1bF9HcmpkUFV5eTFzRkk1VWVpcmo5NVBZUFRBX3BjNEFaSUhOeW1fUzBNdkpjeDdpRlpmcjN5T0hRUDRGS3JnSXRCYWZaNEk2NUVGbnBJVDZhOHA5UDFMeWZwV0lCQ2hNS0FrVW5hUmJua09HN2hhdUVIRnlMdW03Qm5SYXQwS0lrYlNVUWdGS2pw?oc=5"
+---

@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-THREE-DAY-PROPERTY-EXHIBI-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Three-day property exhibition takes off in Coimbatore"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxOV2JiQTRsMDVBUC1JbUFMbHFnRzJTSjVQT19YS2JXSXBGSm9kdHNUTW5GVlMxSU9KcVY0ZzFZN0pfeU1mZ1Z3a2hncm1VcDZxbktoa0tpZDVJRGdiTTRFem16NUxSS0tDeGpmellKUkE5V3l2X0dEanZ4eURGaVdkRWRmNWJfTjJFRlVKaXVtSUFYdU1tYmt6QUVzRlpiZnRIS19YYzJCdVltUlRoS25JVHoycDd2c0Z6dTN1dHF30gHEAUFVX3lxTFB3Vk11ZXJKZHB1TlVPS3FtMU5tcGtnOEdUbXhmeHhXeEppc2tlTEVPSzhKRC05VEpfQ0p6dXMzOTNxSkdiVXNwazczR2R1M3l6eDN2SE9tMGJYVmJOMFRnbnlwV1lBZXZOSU9GNmNVVkRRZzBvYW15TmVPVS1VNHFHT3MxMEYyal9jYjlVa3J0eUt0RHUwSHp4RTNkT05lQTlEWmE5LXYtRWQ4M1JjUTcySl9PQnFDUnRwd3U5NmxZQzFqYjQ?oc=5"
+---

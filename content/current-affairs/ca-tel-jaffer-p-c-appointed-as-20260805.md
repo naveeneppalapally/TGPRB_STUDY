@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-JAFFER-P-C-APPOINTED-AS-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Jaffer P.C. appointed as BMRCL Managing Director ahead of Pink Line partial inauguration"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOMUxia3h4ZWxvaGZLbWJIWEhSREVTN1MwYTA2LTljS3c4UExMenJjWXJiNWxGWTFDS25SZGl5cjIzczI2ek91X2V0TlpmZmxjTmgyN1JQMGlOTWwxX2c2R3JZcjJCbWp6ek1YcldpbGdNMkJGVHdkcTlPRjViRnpHM1dFU2N1dDB2Y01Zb2Fhdmh3eS11ekdDSElCRk95UV9ta0F5RGF2WE44MWJWZ3dXQ0QtSDRFV05acmViYVdsa3ozTU5xc3N5Y1JFMENVWVNGR1Nac2lzUWR2di16UDloM2NaLW5xbEpFRTVn0gHyAUFVX3lxTFBReXFUZFUtZ1JWSlVCU280NE04WV8xNGZRblBxNXhPd1pjc2NsdDNzWnRUSjBCOEFoQUNlWTJWdVVoMzZBS3JCajd1bWZBajFHOEtBeE1kMF84WE9DcHcyNzdJOWRncGswUWdQdWNVSGdoVzhsWGxYdHozTjJ4WWNDbmVqdXUwdDdweEdyNGR5NURPZ0tuaXVNYTlXOXh0SGlIU2ZmRkZzZ2E3RHpnT3QxRFpqX2pucWgwMEkzWi1JY2k3eU1RcDVocGNrbHQ1a2ZoM2VnSVZBaEpjMFhZNXQwUmdtTTdET2kwY1Fkb1Z0ZHlB?oc=5"
+---

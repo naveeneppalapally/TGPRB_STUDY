@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-GDP-GROWTH-OUTLOOK-RAISED-20260207"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "GDP growth outlook raised to 7.4%, repo rate stays at 5.25%"
+date: "2026-02-07"
+source_url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPRnRzRzZnSEJlZHJNbEh3STc5bFZaMHMwOGd3cHRDSGo3NERKTkVpR29xUWJmWDcyVVRtbmZRWmpXVVJNS0lTeHVQcldwempWTG1YQ0JDaFBIcUtXV0pVV1NONHI4Tjh4QjJ3dUw0YVg5XzB4V1VTQ01VeGFRNEtQT05YRm1ydjhsVnozYzAzMFkySWU0QUJFbEFveFpRMFhoZmZueWJOdXRoS3NaMmpkYjFpQjlGdjE5T2NMNEQ3dnZOdXdSV1FFMFVXcVdjQm56RWY1QWlfXzM1d9IB3wFBVV95cUxPVU04S29BYUJNMWRvS2RhTlhFWUNVenRVRjZtdkk1ajZmMnVteG02elgzYmZCUTlRSnNKYUJtU3AwT2FOVU1LY1FZX292TmxtdTkyU1FFOVJvb1hXREdSVXFtb1pOTFExVzJwcjk4Z2swVDcxNEdlaGlZcVZNLUF5VEVJX093TjdhY0RmN3FLMEFBQ3dSRXl0UEpscGlpd1FwM29xWEstdGlPNjJYUGNXN1NmYkc1MmNfNmJTcHo0X05neHpVZ3VNc0s0R1VBQU1NUXFIa05OQXFSTWdpYmQw?oc=5"
+---

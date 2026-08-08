@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-AGRICULTURE-STUDENTS-BLOC-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Agriculture students block gate of university campus in Shivamogga over recruitment norms"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNdzdUSk5kNVdwdDR1UlpLSjE4LXZuVm5waW5LQ0J2UmJQSldNT0xxM0IxMlBYTjBUSEtSLVlORVpqOHAtRzZsSVF2ZW52OGZZMUpvMk9DeWx5eWVrR3AtaGRvTFpxd2Z3WEFMeWNSUkw3WDY4bEdCRy00NG9zNVNybWNSRml1eFl6SFVhblVjWHA3Y2pUQnF3N1Z3bjFncUlzWFc4djg1WGFJbkdUWlEwa25CTmtTWHZTaWV1cm1aaUVBZ1hpWU4weTJocTRVNk9BYkhvNGRSOE1vbUJ0bUkyUFprSGxNYmhvNkFNWmNUNNIB9gFBVV95cUxPZmZjeHMxNS1CczF1bFpzTktqemlqdFJhUTBPMXJsMWl6ZHNjZmNwLXZXQlBxQ0d0dlpnSEgwVFBwYWQ1YTdyQXR6YVJOTWpYMW1NTi1helJYbXRLdzY4NE9MQ1RzRzNRX3RHdEpKNkk1ek9Calp3cXpkUGN4SFVmbjB6cmZfNnVLXzJTV1MwOXlDNkF4RlpIc25DXzlPSndmdm43MFNsNGxXUkhwV3hjLXBzVWc1d0VQNUJ2X3ZvYkdCOV9iU3hIbTFDU0pyREJxOEljRzVULXZqaElFVHVORHA1eFBZZzIwSjlkMTltY01Zek5GU1E?oc=5"
+---

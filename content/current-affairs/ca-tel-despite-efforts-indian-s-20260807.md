@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-DESPITE-EFFORTS-INDIAN-S-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Despite efforts, Indian seafarers missing after Black Sea drone attack couldn't be traced: Government"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQSU1xRHF3d2FwYWx5WG5kV21jWXlGSUZhTExqSjFCejUxRGFvQlNHTHNDRnY3b18zUDFWMGNuVzJFZnpILVpMZmo2eTQ5RDJTbHRJWkRFdFk3MHNKV3BxVEhMSldPR19uS1lEMkROekxxMmt4ZmZWeUs1dFc3R2lzRDdjUXU4SkEySURwVzNkSFhTc2xzU29HVjRJX1dMbEVvVl9PbGpOWHBvWVFlR3o1MWFPaUc2TW1SaEo2VWZaU25SRm9PZU1sT0dHTlNSeklsczM5VTUyT0VXRV93OG01dGhnYXVpWExfRG85Sndn0gH0AUFVX3lxTE1WcDYyd1hfZlpSd2pIQjgyQTJwRkJjZm9xNEJZNG1LSlpjTWl2N2ViWmswMmtlU0hqcTJTT2QyN2NhN3lwclp6cHFZNm9qU1RlbGNPdU1zMlItYTRmazk4N0Y3ZnAybm96dE51MUVpeF83cVVTRDh1OHZJQTF6ZzRMTWFfMEhqZ2w1dldGTk1rWUVFd2VPazVhaHJZSlV5QnpsRFVhMy11WnJpWHZVRk5UWC1DdnNjNlBSNHRteC1GNzVfeWNZQzBFS1RtZDNZbzFtU2JtbUFYdTNLRmVTbVZvTFpKeVU4U3RXSnhFTVF0eUhzVlo?oc=5"
+---

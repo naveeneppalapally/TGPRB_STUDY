@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-CENTER-S-STARTUP-SCHEME-I-20260807"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Center’s startup scheme is a boon for youngsters: CII Chairman Krishna Mohan"
+date: "2026-08-07"
+source_url: "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNb1UwY0RLWlpfYXFsMFhHdVFaUzUyTW9vd1JKN1Q0cy1vNTZCelpUWnk5aFJLUF9zeTl3RkhZdWdRR2FzLTlWeGVqbzNVdFNVeGNUSkJlSXh1aExZNlNjSUdoZWhScnhvN2Y5eHdtMUduRGRQRDRROVJxQlJUNUtXb1dXVWtRN1l5MUZWSWV3NmZ3d3loMzdRa3M5R3ExZHdRaURhbUY2cjBlRlpuejN6Znp4c3F0RVFkckhYZUFHV2hfZnh4QlVmMnZ0Qmwwc25heXFJMkgzRXhPRWk3dWx0WktB0gHoAUFVX3lxTE9hYW9iM1B3Nk1aVWMwbnVkdEpkWnh4UFd1Qm5DMFc1YXlELW9LREF1a2FRTUV6X2RGXzdnWkZGSFFTTV9YVEdPbjBvb2hsZkgxTEl3VVhDa3pCU3lvVGszSDJvTy1oTk1JbnAtbjRXTXNxTHRpdmVEM1dzZ0hNWU5CSWZaVWRnR1U4QnpWdjhlSjk4ZVRWVkFsZWtkMDA3M3RNcXdEbjJ4R1BHalZfQ3VIUHY5cmdMX3ZETFl3UFFfM3pDb09wLTlSTXhFNjlsZVMxbk5fanliMEhrRDlMaE5ZbjBXbkp3eFU?oc=5"
+---

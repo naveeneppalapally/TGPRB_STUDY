@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-INDIA-S-REAL-GDP-GROWTH-T-20251226"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "India's real GDP growth to become more broad-based in 2026: Report"
+date: "2025-12-26"
+source_url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNNktpS0JpdGxjNDduUVN3NlFOd0Y5N2JtVFU3NEltek8wNlRCOWZnNlJhcktKenpnT2o3RjVaamhNaUxiUXMtbHRVX1Myb19HWWc1UUZaYVR0aVRlN1JSb29IRnBHVWNTUjZCR2lpNlFuMGZ1OHhWakpfVFNtb3lBV0NuNTZiNE9IMkdBdWU1RjE5VHVSUUNZY1VsaDFWN0xjdS1VM1V2eTVtWHo4QU9mN0lpU1dPSE1KbHVHZmFxa3RiNHdlN3NaX2lVcXFpWjRoOGpPNl9CbDBpZ9IB3wFBVV95cUxPMG00b1o3ODJqS2FNNGhhcDRONGJaWE5fQnhPWWw0QTY2RU5OOGF6S3NIMHR4T1hyWUQ3Szh2TXE3ak5sWHpHeGk0dTAwV21yRTBPNUs2Y2hjRi1HVlhkamdhX1ZDb05EUTQ2RjZyUFVYVTlYNkV4U3VNUUNzUkoxd1FILTY2R0VOQkVFeEk5NTVvYjFsV1FLcExRbUZrWmZjNllvYlBjZGNGX2xkd3NCV0p4eDhTMGtjb1F1WmZscDZZMS1naEVkTHdxaVFHM1R2eUNuejlRWkt1dWFaOUJ3?oc=5"
+---

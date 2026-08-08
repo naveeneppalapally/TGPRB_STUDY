@@ -1,0 +1,12 @@
+---
+id: "CA-HIS-VISIT-THESE-10-LESSER-KNO-20260105"
+type: "current_affair"
+exam_section: "History"
+topic: "Indian History"
+related_topic_ids:
+  - "NOTE-HIS-GENERAL"
+is_telangana_focus: false
+headline: "Visit These 10 Lesser-Known UNESCO World Heritage Sites In India In 2026"
+date: "2026-01-05"
+source_url: "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbHBwVjF0eHdDZFFPSmIwcU5kVFVYUnZwd3JUdkVJLUdfZW12aHloR0dRT042SzJPRUNMWkcxczV1X0hVMGhOWTFJRTh2dHgtTmR5NHhOLUVOaWdySlYxUnNFeThyTlM0bDBnODdQQVEtMmVDZEZQZGlKY3Z1QkVrbi1JTE1lWGZuLVIzb2VRbVhvQ00wUTIwSTNMWnlfOWpxWTloTXl1YUhOUGhmNXAzUG9sRnY5eHhsQWtVOVJzbzFSZ9IBzwFBVV95cUxQNnZNdG9ESURuMlNia296OUlQcGlFQmtXcHh2eGRTaDVpNUQ0ZHZScDdsOGJRV3FjQU5Ua2RSWE5xWTFCMG9fY012N3VtVndiMEI1RlFkRVNtZk5pR0xKeGdPbi1XQ2dDOF9ETnpzNUxvRktYaVo2aElpVXZrb3JUVGxSblRXOXlodU5yZjYzT3RwVHUzeGgxT0NObGJkUjlSLXNsTWRoSDYzMlh6RjRMYnBvbzNjMnFKVklXcjhVQVpLSDZweXZrZ25RYmdESXM?oc=5"
+---

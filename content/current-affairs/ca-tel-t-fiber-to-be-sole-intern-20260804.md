@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-T-FIBER-TO-BE-SOLE-INTERN-20260804"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "T-Fiber to be sole internet provider for govt. offices"
+date: "2026-08-04"
+source_url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOSlBuX0NUUHFCWHBuN1NFQkVQOS1BclFMV25LS0xwZzU2WS1zZ3J6R1h4Q2NPSjg1S3Z5Ml84ZmYxN1ZaM1VOWmlKUV9JYk1laGFjUFc1d3kwY3JXV1hBWjRHbm92LTlBQVRiRW9fcE9fWHFPenZyekRad1I5d2V2RXd5NEZGZ1BGOWZGMlRRT25ZdksxRm9yS29sTXZXV2NlT0NlekZuZE1oOVRzdU9RVC00SVIyanN3QWF3Q3FpbUZaZl9yNUhYYk5uMmh2dGhzbF9obzZpNHVyOEnSAeIBQVVfeXFMTjNWZG9hSnVCMHhxTm9IdE5SUHYtSklSZEVZaERLV1ZldVlscXNRZm4zZVV3MEJFQXZWeVVFczZyNmZpOGJfclZONHpzWldTd1h2cVlPSXVQZ1M2Tm51QVg4RHNsUDBQUWduemFuNi13cEttUnFtRXJJSi1ZTXlVeDhreE5MSHQ2dDZVYXR2UnBqbjN3ZkN3dW9uUjZpbzFXbFFxcFpkN2RqZ3NYajJBWTlGd3c3VFExbkNFWHhTSmRZUWxmUml4VlpQN3k4aHY4OUhIa191VzhWMmN5b0RaZldpUQ?oc=5"
+---

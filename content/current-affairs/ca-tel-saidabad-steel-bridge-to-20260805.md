@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-SAIDABAD-STEEL-BRIDGE-TO-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Saidabad steel bridge to be inaugurated soon"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMiswFBVV95cUxQUDlldXE5VG5HNDM3SkN0SFhYWWJKNy1BbVRELVJzUUxrMmpYNzlqR1hUa3JIVzd2el9QdDZxV0dYYjlodGVyMTdOQnM4Sk04VDR4Z0FBLVZBMHBoUGRUUTYzajk1ZUZ4UTgwbHZDb0Q3QTZ4ZTA2MGpNNG5LQ0YtVHRpMWhJOVBOU2VRZmhRQWdkSVpmM2sxeS1mYnNLNERLc0dFZG83SjJjUFc4OFBiUmNMNNIBugFBVV95cUxOdkZjLWtxc3JBc2NvTjN4bGh3cXBVdE51M2RNVTExTFR3NlJ0UHh1dU51VjFNZlg5YXl4SjNTZ0M3Nzdxc0NGNzVsS1RIVEV2ZHl5U3RiV1d3TkM2aHNtQ0s3bnlKdW52UmNUYjZPd1hBRXlOS25RMjlXZjN2cjl5S2xZN3h6WjlmZld2VHJwU1hLLTZZeXdoRFMtZzhSUExJeDdzV202NHc0NGJtM3hfMkhXX2c5US1YSXc?oc=5"
+---

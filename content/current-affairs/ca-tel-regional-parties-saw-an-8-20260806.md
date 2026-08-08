@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-REGIONAL-PARTIES-SAW-AN-8-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Regional parties saw an 85% surge in number of donations above ₹20,000 in 2024-25: ADR"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPS1F3ZGMwc2pVYVpIZzJDRURESWVCellHVC1pcjNFRlZwNGROM0tzODVqaDc5dzNSTlhldUVVc05BaWNqT1BxSnV6MFdfdUJrY04wMTNEcDY3LXh2RWJzd2R4YkFoZW1PdFdaMEFsVHJ2SmlzOEZNWWdEdy1BWVVJbkRQMExhamxYVnRleVUwMW5paVhFYkRoSG9oR2lLUW9jMmVBRm5Pb0ZEQVE0cGUteHQ5VjIyelRSdVhtUDBHTDNJWDZsTEpnWFN0WDBYLTdZSGVZQTh2ZG7SAd8BQVVfeXFMTXhsTTV1dFJHckg5cml1cHBJY1hkOW1LdnRLUS1PSXVFYk1lUTFFS2xaeVBRelNjM2hjNzUtdHJpNEQwSUg3cUd3QU50VXFTbDBqUzhjOHllQnRlTUpoWkh5bHduX1dhMHVOMDhnMDE1ZGN1Mmp3dElBQ3U1WUZ5TDEzaFl2YlBOYkFJM1dzdDZtcm9PNzlEN3g3am5aWi1LY2xNbVc4TmxHcjNDV0dCR28ta1VTUTh4U296elpuNTEwODY2LXI3ZHYwWWYzaGxjUDVab2gyUVdiTVBEME00QQ?oc=5"
+---

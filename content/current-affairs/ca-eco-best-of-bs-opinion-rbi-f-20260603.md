@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-BEST-OF-BS-OPINION-RBI-F-20260603"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "Best of BS Opinion: RBI faces twin inflation risks as uncertainty swirls"
+date: "2026-06-03"
+source_url: "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNQVBpUWRqTzR2WndhSWtvT1oxNEZzYTJUVjU4eDU0VEktZ2UwMURoc3JuSXVibVVzQzhGM0Z2RDdUUTlZQ2dqNjNrODYxQUtLcVQ2VHg2ZC1kQ3lhYnZCQWNMVG4tY0JyWTVXYWFvRUstdHpObmVlSHRFbm1FVUZMR3piUERob1Q1YV8yTDV3U2tfTzNYVGtVYjFaOW5nY0NJZEFNeUVTVHZRVy1sbWU3V2FBdTMyRWFEU1Z6YWlYeExBcGFYZDlGS3hoWUtlLUx0eFhPVkYwX25ud9IB3wFBVV95cUxNTXN5WDl4WmFDRDdBXzFGdG8wazJqLUlhX3UwOWVJb1FIS2kxcGdjMFEzQkNodDVIR0NuQkVMQWh4aDhqcTZQM3FYRlpEazJCaVhkQ1Z2ZERoUHpZOGFJU191WWR5b2l1MW5ReWU3dldMbnViUHNpUFV3NEppS0NrNUNaQlhtbE9YaG12c2tjUHdoeTgtY3FRd0hpLWpzZmhOS29DT2ZpRUJvMEhZYmNiNDc1R1Zpalh1eWJwWFdZWG9ZM0VnZHhrRkFjS09CMEo2Mnp4V19fbUdwTHFPZUdz?oc=5"
+---

@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-KUDA-ADOPTS-TRANSPARENT-L-20260805"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "KUDA adopts transparent lottery system for Hagaraga housing site allotment"
+date: "2026-08-05"
+source_url: "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPa1oteHhLT0haWjFCWVlEY3hXckJpUjNWeUJTTGM4YW1HS3pmY0xIOHY5Q19DTl9nVFJKc3pkMXFYdnlaWFVFa0s2clBqekJpaVNKaVVjejdvc29uS2pESDN4YklORTk1U3FXaTkwNllMLVlMVURCYmhLbXhwUDN6UXFwcGdHdmRMSUltbEVYYzNLNzhOWjJybFdyazJfVTBTSHVaTVYtZ2VDaVZuamU4WTVHLWxuUW4wYmF4b05XSFVJbG1oUDdVYnJ4aEhkZ2Y3STV4QUMtSjIwXzDSAeIBQVVfeXFMTm9IeHMxTzZvU1puY1BkRXFSRlNPV1kwbFV2WXVtWmFnemdtODV5QWxhcTJzM3NaUDhSUFZKb3lZbkZHa2E0ODBGdTRCZ2ItY0FtZkdaWlVuVVNXbFczQUtCaWhyYlFBRmk0QjhNWGtfNVRKdHQ1aFZhQks2UXdtbElwNlFwenRyV0lpaE9KMUpaZS1IcERVNmhRdVozN2t5b0Z4dG9sWWhZcEVhTnVvTE5UbVRYZ3pTWkJjb0pydEVoNzdTekdtSTJDS3JVbjZjVkZfNUtMOVdWRmo2ZHczZENQZw?oc=5"
+---

@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-INDIA-S-GROWTH-TRAJECTORY-20260113"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "India’s growth trajectory setting the stage for Budget 2026"
+date: "2026-01-13"
+source_url: "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPejVwVmNjc0hKV01zMVpBN2oxTmNvY3d6Mld2ck5SeFZEbWdnektSTzdJb2xHUlpSQ3psWVNwU3ZNWFBBWFBRdjcwaUlFN0paWUVKUjBDd0V1TUJZWVJnYlF3MjRneWsyZ09mUUlnY3EwUTlBVHVyckV1c1QyeWNnY19rcE10Yk04ZDc1MDE4M1h0NkFGWGJmRmFmejkzbW0wZ3FxRm5qNHdUUEpkYXZzbm1xcV9IZ1d1VHppTUVScGJ4RnhtbXBnQXJMZTlaazRfbmpPYXY2YmhNQ0JLT3fSAeMBQVVfeXFMTWlMSWRnWGc4T3Z4Z0FOSFR5cmRDQlhXc2xIRXZuZnN2RGlJZmV1Q3BvajNkMVE0MWtzLVU4LVJNWkhrcDJHREwtR3hOVmlfaWxRNzBXOS0yMkZEaHlXVnliSi1tYktnU1hXd1NTbWpWLUxWaU03ZlhvRGlnaXM3Wk4xcDYxdkFUbllkOXBWc256bkxlWlJkUnQzTXlOcFBfTzZfbkV5N2dmbkg0UnliLWgyQ2VWNk9OSVFLV3BFMU82M1c0WWxLNkhwcS1XeW5pUEZpTjU1by00YXM0TmJORC0xZEE?oc=5"
+---

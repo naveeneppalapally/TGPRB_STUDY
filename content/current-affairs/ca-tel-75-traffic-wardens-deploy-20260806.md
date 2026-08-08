@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-75-TRAFFIC-WARDENS-DEPLOY-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "75 traffic wardens deployed in Kozhikode to ease congestion"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdDdveDQwbkkyQUdkRjB0Q25JMG5CMFc2eUVOOEk2U1JzM2VzcXFtT0hzbDVKeW1tckRfdUdSUkh0akRUS3FsZHRMSDg3VHlIN2ZnenNHZzBfTi1HMVNneEgycDdSVTFUdEVPRlBjYXFweWpUeUFLRUREamg1ZlRPcHpLYjR1ZWtQQnI1MTJCZy1iaEF6Q1VjdGF3cEpCZkZSYWFXS3JkaVlzSmRkTjdaa19VWlFpU0dfeDR0U3VHaGx6c2fSAcoBQVVfeXFMTlNjOGFPYXNSR1BiQmVLWElGTWF6THlMZVNTbF9WdFY4SFB5eGdmbVgzQ1hvMGdRSjFEZm1NRUxjTDR1bW1BV2d1SUpBcFR3NTRRNnFJUE1WSHhoSUgwWTVUU1NTckhBNVRwSzdPSGJXQVRhZ0NydXNKc1dwb3RBZE5pckNHazItbmpsTnVRaUhKVzE4MVAydC1JbG4xOVNjV2lYS0FVblFCRUIzb05fWm8zWFcyc0NtRW52NGpzejN1Rm9QRWJHVVhRUQ?oc=5"
+---

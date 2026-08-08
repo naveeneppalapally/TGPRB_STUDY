@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-SUPREME-COURT-ASKS-PETITI-20260806"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Supreme Court asks petitioners seeking NTA reforms to file their replies to Centre's affidavit"
+date: "2026-08-06"
+source_url: "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNZUxsUU1rU2RzZ252QlpuZWtTRDBzMGE5TTdWQTFyZmRWZ3U0bldwdlU2MGlzTFdMaGRLSnFJNGJqWm5rS2pBUnlBVzc5NTB0eWpSNEl1RlZDZ1BIREl5Zlphb3hobVVsbEd0UXhNVnJENENvaVQyTG5YMjBBbWE4VkI3TUdva051MHFVNnJ2U1BaNlBsd0hiZDJsby1HRDZ0ZklfOVoyX0dTSmdZY3hKeGdyV0ZZUEdMTTZKRjJqc01jNEVDZGoyTDZjZ3IzQlhCS01tNlhidU1NTnBIV2IxMkpoeThTaUnSAe4BQVVfeXFMTkhRRUhNT1BOeGlkOV9rYTY1V0w0dDNLWW0xRDlGQ2pLMG1fTGVsdE9jZktFVE5yT0JISWVjS3l1VGd1aUw3dExoczE1cEZZRy1hdnN2U1BlRGQxUmhNZTRwMDdoUWJRNWp2WVdQaHo1c3VFVVNfdDRDeVBYWHFDSm5lek5TdHh4UVg5SXEyUXJELXdLUDRrMkRnX0wwRnRyY2QtNjBSMlkyalJTVkR0djlJTHJ5dGx5dlVNaXpKYjAzZU9xaTlqVnQ3RjBFaHZjRUZKVnRUVTUyendCbk93T2pIWnpaU1RCbnBkOEI2dw?oc=5"
+---

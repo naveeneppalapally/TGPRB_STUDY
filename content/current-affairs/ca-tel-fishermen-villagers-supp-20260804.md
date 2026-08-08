@@ -1,0 +1,12 @@
+---
+id: "CA-TEL-FISHERMEN-VILLAGERS-SUPP-20260804"
+type: "current_affair"
+exam_section: "Telangana"
+topic: "Telangana State"
+related_topic_ids:
+  - "NOTE-TEL-GENERAL"
+is_telangana_focus: false
+headline: "Fishermen, villagers support shipbuilding yard coming up near Thoothukudi"
+date: "2026-08-04"
+source_url: "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPT0FOTTJBaThWRzgxQlVhczZzVXdVWlFfZHplV0diY01YdFA0a3NycWVyWGdaVlEzQUpPYjhPdGRIc2wwMG96SXk4VGJ2SVIzdnVPSjJ5U0VBdGpuT3llOTRLRDFTYzVJMDkxT1NfdTU2T2xxVlEzOUlzT0l4VmRydlh5cUFuWU82LUE0V0t3bnd1WWFtcVlkY0RTZ2s1T2cyMi1mNHcyU05uM3BpQ2I4QlVfWF9hZkdCdHVsNzhGMVNVRVA0UWd1QmJKbWNvdHhkVjJN0gHaAUFVX3lxTE1WalVuWW9DeGlYd3Nac2E3OHd5d2tqbExZaHdGUm1zZ2F3WG9TOFpUbVp3em56d1NnN1RmMF9SOEg2ZG1iUUtmcF9rdXh2dU9mTXJkbEpER0REMDVzNkNIOXJEMUp1REpFdFRmRFE2NXRYSzJHZ29LT1BCSjZ3RXR2dVBoVVZOVEhjWkd3WjdkZzlHbm9sQ3dyZXZVbENkNURuNEFzYlZsRHh1Z3poNU9IQnJWWVNzdTMtc3hUMm9sQzVxZ3VFaHR0VE1vVUUtZ2RBQVoxUDhWVHJn?oc=5"
+---

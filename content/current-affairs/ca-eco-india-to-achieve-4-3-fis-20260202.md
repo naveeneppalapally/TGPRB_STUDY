@@ -1,0 +1,12 @@
+---
+id: "CA-ECO-INDIA-TO-ACHIEVE-4-3-FIS-20260202"
+type: "current_affair"
+exam_section: "Economy"
+topic: "Indian Economy"
+related_topic_ids:
+  - "NOTE-ECO-GENERAL"
+is_telangana_focus: false
+headline: "India to achieve 4.3% fiscal deficit target for FY27 despite projected dip in GST receipts: S&P"
+date: "2026-02-02"
+source_url: "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPMzEyTm5RMHVaVUhrbmlXQTZaU3B6aC1iVXczY2R3Vlg3Zm45WldsUWFrc1poeWNIRVRJY2JfV2c1RE1BckhaNDFON0FWX2xuYXpWcTM0VGFGVE40RG9aMTc4b2RWdi1JM19KdVhHRHczOFV6Qnc4OGx5cDc5SU4taHp4eVZraFR5c0lueXAtbWZOMUZEYnZjVEpGRDBnYWUzQ2FtYjdQbE8xU1lleElvZk12SmxWcjNwV2NRdFhiNkZBQ0N5clJRVFloSXZNbndmaXpIX1lVVy1lcnRVanpLWFJBQXBvM21fQU9aNVFQWldXMno3MENtMG1CbF9pU1nSAYQCQVVfeXFMTm14TE1VRElwaEI1cWM5SlRKWUljOE93aUV2bm1kb2VpX3k5cktPOGczak9OcXlNZFBGajluek1ubnlHd2w0ZDVXYWhBeVVheXUxOV9WTlVyODVER1RSTDVyTXJDZkg3U21iTUpROVQwSkpNR1N4c3pHdmVyeVhpWUtCMzdWcTdIbll5a1BTZGh6WlZHbHpCQnZhbW9qMkJXZGhJb216Nk9BQVpUTFpVanZDbE1Yc2pfdjBtN3lxcmFiSFE4eEFDX1ZJSjk5dkFnQmJSUEgybkZqeDlidzQxc1g4UjQ0cW1tUDhmM0lsNjNzR1Z2cGo0eWtDbFg4LXVKLVZDMlQ?oc=5"
+---

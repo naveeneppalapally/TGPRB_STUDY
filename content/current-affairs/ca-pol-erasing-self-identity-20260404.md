@@ -1,0 +1,12 @@
+---
+id: "CA-POL-ERASING-SELF-IDENTITY-20260404"
+type: "current_affair"
+exam_section: "Polity"
+topic: "Indian Constitution"
+related_topic_ids:
+  - "NOTE-POL-CONSTITUTION"
+is_telangana_focus: false
+headline: "‘Erasing Self-Identity’: Plea In Supreme Court Against New Transgender Law Provisions"
+date: "2026-04-04"
+source_url: "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTV9ycEtoQ1l5TzQweU5tNU1IYUdydTVOTmFVZ3BpVlBMSGhwVVFkS2tjTUFsQzNVaUptNm03VXpWWHNlSkhpazRJQU1waVR2akZvR1pyMlFncWN0SFN6V3Q3Z28zMUttUk5wVzdrLVBnNWlQTTZsanZQcnVnOFA2WjNBNXE1T3RKWGFLdENaNmw5bzBHRVc0eEZxTE1jaWI1aXRfWVg1MjFBdEc2NUo4WDF5bXhRVlhNTmp0T3hR0gHDAUFVX3lxTE5QQ21jblE5a0pGNC1ocmVYQVRkWmhkSnJ1RWtIQUhQdFpDYWNiU0VMX193bklzeVphU0J6TFVWSTR0a2FSTTVSX1FkVGdYWnVsTVhMY2xBN3RxWml2bXlwRjV2c3Jwelp6ZXNvZHp3WU9mTHdXd0h4TlBHb0lWWk52QkpUNGxkTGl5VDE5LXlIWEo1Q1JYdTM1WmZjYUs2S1BMcnp2SGlLWUVHVkZ2bnJNendiRTZSckNjMDhpa0dRWVc5NA?oc=5"
+---
