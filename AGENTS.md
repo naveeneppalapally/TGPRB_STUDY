@@ -193,7 +193,54 @@ High-yield PYQ categories (build feeds for these first if adding new ones):
 6. Environment and wildlife (national parks, new species, UNESCO)
 
 
-## Product logic - never deviate
+### Per-topic current affairs checklist (run when building any new note)
+
+When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS), do ALL of these steps:
+
+**Step 1 - Wire the strip on the note page:**
+```html
+<CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" class="mb-8" />
+```
+
+**Step 2 - Run the one-time historical backfill (Jan 2025 to today):**
+```bash
+python3 workers/scrapy-pib/backfill.py \
+  --topic "Forests of India" \
+  --note-id NOTE-GEO-FORESTS \
+  --section "Geography" \
+  --keywords "India forest wildlife deforestation national park biodiversity" \
+  --from 2025-01-01
+```
+Sources: GDELT (free archive, real articles, no hallucination) + PIB direct.
+
+**Step 3 - Add to daily scraper TOPIC_FEEDS in workers/scrapy-pib/scraper.py:**
+```python
+{
+    "url": "https://news.google.com/rss/search?q=India+forest+wildlife+national+park+deforestation&hl=en-IN&gl=IN&ceid=IN:en",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+},
+```
+Without this step, only the backfill exists. No new articles will be added after today.
+
+**Step 4 - Commit everything together:**
+```bash
+git add pages/notes/.../topic.vue          # note page with CurrentAffairsStrip
+git add content/current-affairs/           # backfill output
+git add workers/scrapy-pib/scraper.py      # new TOPIC_FEEDS entry
+git commit -m "add: Forests of India note + CA backfill + daily feed"
+git push
+```
+
+**Step 5 - Verify in browser:**
+Open the note page. The CurrentAffairsStrip must render at least one card.
+A topic is not done until this is visible. If strip is empty, check:
+- note-id prop matches the related_topic_ids in the .md files exactly
+- content.config.ts has the current_affair collection defined
+- Dev server restarted after adding new .md files
+
+
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
 - The subject list ranks by real PYQ weightage - never a static alphabetical list.
 
