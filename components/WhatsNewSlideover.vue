@@ -1,0 +1,131 @@
+<template>
+  <div>
+    <!-- Bell trigger button -->
+    <UButton
+      icon="i-heroicons-bell"
+      color="gray"
+      variant="ghost"
+      class="relative"
+      aria-label="What's new"
+      @click="isOpen = true"
+    >
+      <span
+        v-if="newCount > 0"
+        class="absolute -top-1 -right-1 h-4 min-w-[1rem] rounded-full bg-saffron-500 px-1 text-[9px] font-bold text-white flex items-center justify-center"
+      >
+        {{ newCount > 99 ? '99+' : newCount }}
+      </span>
+    </UButton>
+
+    <!-- Slideover panel -->
+    <USlideover v-model="isOpen" side="right">
+      <div class="flex h-full flex-col overflow-hidden">
+        <!-- Header -->
+        <div class="flex items-center justify-between border-b b-line px-4 py-3 bg-base">
+          <div>
+            <p class="eyebrow mb-0.5 flex items-center gap-1.5">
+              <UIcon name="i-heroicons-newspaper" class="h-3 w-3" />
+              What's New
+            </p>
+            <p class="text-body-xs t-lo">Last 7 days - updated 7am IST daily</p>
+          </div>
+          <UButton icon="i-heroicons-x-mark" color="gray" variant="ghost" @click="isOpen = false" />
+        </div>
+
+        <!-- Entry list -->
+        <div class="flex-1 overflow-y-auto px-4 py-3 space-y-3">
+          <div v-if="entries.length">
+            <div
+              v-for="entry in entries"
+              :key="entry.id"
+              class="rounded-md border b-line bg-sub p-3 flex flex-col gap-1.5"
+              :class="entry.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : ''"
+            >
+              <!-- Section + date row -->
+              <div class="flex items-center justify-between gap-2 flex-wrap">
+                <div class="flex items-center gap-1.5">
+                  <span class="chip text-[10px]">{{ entry.meta?.exam_section }}</span>
+                  <span
+                    v-if="entry.meta?.is_telangana_focus"
+                    class="inline-flex items-center gap-1 rounded-full bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 px-1.5 py-0.5 text-[10px] font-semibold"
+                  >
+                    <UIcon name="i-heroicons-map-pin" class="h-2.5 w-2.5" />
+                    TG Focus
+                  </span>
+                </div>
+                <time class="font-mono text-[10px] t-lo">{{ formatDate(entry.meta?.date) }}</time>
+              </div>
+
+              <!-- Headline -->
+              <p class="text-body-xs font-semibold leading-snug t-hi">
+                {{ entry.meta?.headline }}
+              </p>
+
+              <!-- Source -->
+              <a
+                v-if="entry.meta?.source_url"
+                :href="entry.meta.source_url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex w-fit items-center gap-1 text-[10px] t-lo hover:accent transition-colors"
+              >
+                <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-2.5 w-2.5" />
+                {{ sourceDomain(entry.meta.source_url) }}
+              </a>
+            </div>
+          </div>
+
+          <!-- Empty state -->
+          <div v-else class="py-12 text-center">
+            <UIcon name="i-heroicons-check-circle" class="h-8 w-8 t-lo mx-auto mb-2" />
+            <p class="text-body-xs t-lo">No new entries in the last 7 days.</p>
+          </div>
+        </div>
+
+        <!-- Footer link -->
+        <div class="border-t b-line px-4 py-3">
+          <NuxtLink
+            to="/current-affairs"
+            class="block w-full text-center text-body-xs accent font-medium hover:underline"
+            @click="isOpen = false"
+          >
+            View all current affairs
+          </NuxtLink>
+        </div>
+      </div>
+    </USlideover>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { queryCollection } from '#imports'
+
+const isOpen = ref(false)
+
+const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
+  .toISOString().split('T')[0]
+
+const { data: entries } = await useAsyncData('whats-new-panel', () =>
+  queryCollection('current_affair').all()
+)
+
+const recent = computed(() =>
+  (entries.value ?? []).filter((e: any) => (e.meta?.date ?? '') >= cutoff)
+    .sort((a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime())
+)
+
+// expose just recent in template
+const newCount = computed(() => recent.value.length)
+
+// Override entries in template to show only recent
+const entriesInPanel = computed(() => recent.value)
+
+function formatDate(iso: string): string {
+  if (!iso) return ''
+  return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+}
+function sourceDomain(url: string): string {
+  try { return new URL(url).hostname.replace(/^www\./, '') }
+  catch { return url }
+}
+</script>

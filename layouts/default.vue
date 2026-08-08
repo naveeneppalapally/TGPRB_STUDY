@@ -153,9 +153,15 @@
           />
         </div>
 
-        <!-- Right Section: Badges & Theme Toggle -->
-        <div class="flex items-center gap-3">
+        <!-- Right Section: Badges, Bell & Theme Toggle -->
+        <div class="flex items-center gap-2">
           <span class="eyebrow hidden md:block">TGPRB · Constable / SI</span>
+
+          <!-- What's New bell -->
+          <ClientOnly>
+            <WhatsNewSlideover />
+            <template #fallback><div class="h-8 w-8" /></template>
+          </ClientOnly>
 
           <UTooltip :text="colorMode.value === 'dark' ? 'Switch to light' : 'Switch to dark'">
             <ClientOnly>
@@ -257,7 +263,7 @@ const subjects = [
   { name: 'Telangana',       icon: 'i-heroicons-map-pin' },
   { name: 'Ethics',          icon: 'i-heroicons-scale' },
   { name: 'English',         icon: 'i-heroicons-language' },
-  { name: 'Current Affairs', icon: 'i-heroicons-newspaper' },
+  { name: 'Current Affairs', icon: 'i-heroicons-newspaper', to: '/current-affairs' },
 ]
 
 const subjectLinks = subjects.map(s =>
@@ -282,6 +288,7 @@ const paletteGroups = computed(() => [
     commands: [
       { id: 'dash',     label: 'Dashboard',                icon: 'i-heroicons-squares-2x2',     to: '/' },
       { id: 'review',   label: 'Review Queue',             icon: 'i-heroicons-rectangle-stack', to: '/review' },
+      { id: 'ca',       label: 'Current Affairs',          icon: 'i-heroicons-newspaper',       to: '/current-affairs', suffix: 'Updated 7am daily' },
       { id: 'geo',      label: 'Geography - all topics',   icon: 'i-heroicons-map',             to: '/notes/geography' },
       { id: 'drainage', label: 'Drainage System of India', icon: 'i-heroicons-book-open',       to: '/notes/geography/drainage-system-of-india', suffix: 'Latest note' },
     ],
