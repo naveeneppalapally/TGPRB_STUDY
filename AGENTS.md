@@ -1,6 +1,6 @@
 # AGENTS.md - TSLPRB StudyOS
 
-Persistent rules for every agent working in this repo. Read this before any task. The full build spec (schema, tier template, build order) lives in `docs/build-prompt.md` - reference it, don't restate it.
+Persistent rules for every agent working in this repo. Read this before any task. The full build spec (schema, tier template, build order) lives in `docs/build-prompt.md` - reference it, don't restate it. The current affairs strategy, PYQ evidence, source priorities and UX requirements live in `docs/current-affairs-audit.md` - read it before touching anything in the CA pipeline.
 
 ## Architecture - never substitute
 - Nuxt 3 + Nuxt Content. Never Astro, Next.js/Nextra.
