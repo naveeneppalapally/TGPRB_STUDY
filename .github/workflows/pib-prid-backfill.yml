@@ -3,12 +3,20 @@ name: PIB PRID Backfill (Historical)
 on:
   workflow_dispatch:
     inputs:
+      from_date:
+        description: "Start date YYYY-MM-DD (overrides from_year_month if set)"
+        required: false
+        default: ""
+      to_date:
+        description: "End date YYYY-MM-DD (overrides to_year_month if set)"
+        required: false
+        default: ""
       from_year_month:
-        description: "Start month (YYYY-MM), default: 2025-01"
+        description: "Start month YYYY-MM (used if from_date is blank)"
         required: false
         default: "2025-01"
       to_year_month:
-        description: "End month (YYYY-MM), default: 2026-08"
+        description: "End month YYYY-MM (used if to_date is blank)"
         required: false
         default: "2026-08"
       max_per_day:
@@ -29,19 +37,27 @@ jobs:
       - name: Generate month list
         id: set-matrix
         run: |
-          from="${{ github.event.inputs.from_year_month || '2025-01' }}"
-          to="${{ github.event.inputs.to_year_month || '2026-08' }}"
+          # If specific dates given, use them directly as a single "month" entry
+          FROM_DATE="${{ github.event.inputs.from_date }}"
+          TO_DATE="${{ github.event.inputs.to_date }}"
 
-          months=()
-          current="$from"
-          while [[ "$current" <= "$to" ]]; do
-            months+=("$current")
-            current=$(date -d "${current}-01 +1 month" +%Y-%m)
-          done
+          if [[ -n "$FROM_DATE" && -n "$TO_DATE" ]]; then
+            # Single range mode - encode as "from|to" in one matrix entry
+            json="[\"${FROM_DATE}|${TO_DATE}\"]"
+          else
+            from="${{ github.event.inputs.from_year_month || '2025-01' }}"
+            to="${{ github.event.inputs.to_year_month || '2026-08' }}"
+            months=()
+            current="$from"
+            while [[ "$current" <= "$to" ]]; do
+              months+=("$current")
+              current=$(date -d "${current}-01 +1 month" +%Y-%m)
+            done
+            json=$(printf '%s\n' "${months[@]}" | jq -R . | jq -sc .)
+          fi
 
-          json=$(printf '%s\n' "${months[@]}" | jq -R . | jq -sc .)
           echo "months=$json" >> $GITHUB_OUTPUT
-          echo "Months: $json"
+          echo "Matrix: $json"
 
   backfill-month:
     needs: generate-matrix
@@ -50,7 +66,7 @@ jobs:
     strategy:
       matrix:
         month: ${{ fromJson(needs.generate-matrix.outputs.months) }}
-      max-parallel: 4   # 4 months in parallel, polite to PIB
+      max-parallel: 4
 
     steps:
       - uses: actions/checkout@v4
@@ -63,17 +79,23 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 google-genai
 
-      - name: Compute date range for month
+      - name: Compute date range
         id: dates
         run: |
-          month="${{ matrix.month }}"
-          from_date="${month}-01"
-          to_date=$(date -d "${from_date} +1 month -1 day" +%Y-%m-%d)
-          echo "from_date=$from_date" >> $GITHUB_OUTPUT
-          echo "to_date=$to_date"     >> $GITHUB_OUTPUT
-          echo "Processing $from_date to $to_date"
+          MONTH="${{ matrix.month }}"
+          # Check if it's a direct date range (contains |)
+          if [[ "$MONTH" == *"|"* ]]; then
+            FROM_DATE="${MONTH%%|*}"
+            TO_DATE="${MONTH##*|}"
+          else
+            FROM_DATE="${MONTH}-01"
+            TO_DATE=$(date -d "${FROM_DATE} +1 month -1 day" +%Y-%m-%d)
+          fi
+          echo "from_date=$FROM_DATE" >> $GITHUB_OUTPUT
+          echo "to_date=$TO_DATE"     >> $GITHUB_OUTPUT
+          echo "Processing $FROM_DATE to $TO_DATE"
 
-      - name: Run PRID backfill for ${{ matrix.month }}
+      - name: Run PRID backfill
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_CLOUD_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT }}
@@ -91,7 +113,7 @@ jobs:
         run: |
           count=$(git status --short content/current-affairs/ | grep "^?" | wc -l)
           echo "new_files=$count" >> $GITHUB_OUTPUT
-          echo "${{ matrix.month }}: $count new cards"
+          echo "${{ steps.dates.outputs.from_date }} - ${{ steps.dates.outputs.to_date }}: $count new cards"
 
       - name: Commit and push
         if: steps.count.outputs.new_files != '0'
@@ -99,5 +121,6 @@ jobs:
           git config user.name  "PIB PRID Backfill Bot"
           git config user.email "actions@github.com"
           git add content/current-affairs/
-          git commit -m "add: PIB PRID backfill ${{ matrix.month }} (${{ steps.count.outputs.new_files }} cards) [skip ci]"
+          git commit -m "add: PIB backfill ${{ steps.dates.outputs.from_date }} to ${{ steps.dates.outputs.to_date }} (${{ steps.count.outputs.new_files }} cards) [skip ci]"
           git push
+
