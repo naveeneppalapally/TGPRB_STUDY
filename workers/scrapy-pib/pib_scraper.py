@@ -416,36 +416,81 @@ You will receive the FULL TEXT of an official PIB (Press Information Bureau) pre
 Your job is to extract one testable exam fact from this actual text.
 
 STRICT RULES:
-1. Extract facts ONLY from the provided text. NEVER generate or invent information.
-2. If the text contains no clear testable fact for a police exam, return null.
-3. The exam tests: appointments, awards, defence facts, ISRO/space, schemes, 
-   economy figures, international summits, judiciary, sports results.
-4. Ignore ceremonial openings, condolence messages, administrative circulars,
-   tender notices, and pure procedural government orders.
+
+STEP 1 - REJECT immediately (return null) if the release is:
+- A tender, e-auction, procurement notice, or bid invitation
+- A condolence or obituary message
+- A ceremonial greeting (Republic Day, Independence Day wishes)
+- A generic administrative circular with no specific fact
+- A "Year End Review" or "achievements" compilation (too broad)
+- A pure procedural government order with no testable fact
+- A press conference notice or schedule announcement
+
+STEP 2 - CHECK if this has a PYQ-proven testable fact. TGPRB exams test these categories (PYQ frequency rank):
+  1. appointments     - Who was appointed as what post (Governors, Secretaries, DGs, CJI, judges, RBI Governor, ISRO chief)
+  2. international    - India-linked summit outcomes, bilateral agreements, India's position in international bodies
+  3. economy          - RBI repo rate, GDP figures, inflation data, index rankings, budget amounts
+  4. awards           - Padma awards, Jnanpith, Nobel, Dronacharya, Arjuna, Khel Ratna - awardee + category + year
+  5. sports           - Winner, medal, trophy, championship result - especially India/Telangana athletes
+  6. telangana        - TG schemes, budgets, inaugurations, Telangana police facts, TG appointments
+  7. schemes          - Scheme name, launch date, launch location, nodal ministry, key benefit
+  8. defence          - Named exercise, missile system, new induction, decommission, DRDO achievement
+  9. science          - ISRO mission name + vehicle + payload + date, DRDO tech, biotech milestones
+  10. judiciary       - Supreme Court judgment, new High Court, commission appointment, NJAC-type events
+  11. environment     - New national park, species discovery, cyclone name + state, UNESCO listing
+  12. books           - Book title + author, literary award + awardee
+
+If the release has NONE of the above clearly, return null.
+
+STEP 3 - EXTRACT one card. Rules:
+- exam_fact: One precise, cloze-ready sentence. Mirror TGPRB PYQ style:
+    GOOD: "Tushar Mehta was appointed as Solicitor General of India on 30 June 2022."
+    GOOD: "India's Small Satellite Launch Vehicle (SSLV) achieved its first successful launch in February 2023."
+    GOOD: "Zakir Hussain was awarded the Padma Vibhushan in 2023 in the field of Art."
+    BAD:  "The government has taken several steps to improve space technology." (too vague)
+- difficulty: "F" if famous/easy (World Cup winner, PM-level), "M" if needs preparation, "O" if obscure (exact figure, committee head)
+- exam_depth: "constable" if it tests direct recognition (winner, place, scheme name), "si" if it tests exact detail (report figure, portfolio match, commission tenure), "both" if fits both
+- MCQ wrong options MUST be same TYPE as correct answer:
+    If answer is a person's name -> wrong options = other plausible real names in same domain
+    If answer is a country -> wrong options = other real countries
+    If answer is a number/rank -> wrong options = nearby plausible numbers
+    If answer is a state -> wrong options = other Indian states
+    NEVER use generic filler like "None of the above" as an option
+- extra_topics: list of NOTE-IDs this article is ALSO relevant to (beyond the primary category's default):
+    - If about Kaleshwaram dam -> add "NOTE-GEO-DRAINAGE", "NOTE-TEL-GENERAL"
+    - If about TG Governor appointment -> add "NOTE-TEL-GENERAL", "NOTE-POL-CONSTITUTION"
+    - If about ISRO launch -> add "NOTE-SCI-GENERAL", "NOTE-SCI-SPACE"
+    - If about Padma award to a Telangana person -> add "NOTE-TEL-GENERAL"
+    - Otherwise leave as empty array []
+- is_telangana_focus: true ONLY if the event is primarily about Telangana state/Hyderabad city
+
+STRICT RULE: Extract facts ONLY from the provided text. NEVER generate or invent names, figures, or dates.
 
 Press release text:
 ---
 {article_text}
 ---
 
-If this contains a testable exam fact, return ONLY this JSON (no markdown):
+If testable fact found, return ONLY this JSON (no markdown fences, no extra text):
 {{
-  "exam_fact": "One precise, testable sentence. E.g.: 'Tushar Mehta was appointed as Solicitor General of India.' or 'India's SSLV rocket achieved first successful launch in February 2023.'",
-  "summary": "2-3 sentence context explaining the significance for the exam.",
-  "event_date": "YYYY-MM-DD (the date the event happened, from the text)",
-  "category": "one of: appointments|international|economy|awards|sports|telangana|schemes|defence|science|judiciary|environment|books",
+  "exam_fact": "One precise testable sentence from the actual text.",
+  "summary": "2-3 sentences: what happened, why it matters for the exam, what TGPRB typically asks from this type of event.",
+  "event_date": "YYYY-MM-DD",
+  "category": "appointments|international|economy|awards|sports|telangana|schemes|defence|science|judiciary|environment|books",
+  "difficulty": "F|M|O",
+  "exam_depth": "constable|si|both",
   "is_telangana_focus": false,
-  "event_key": "SHORT-UNIQUE-KEY like TUSHAR-MEHTA-SG-2023 or SSLV-LAUNCH-FEB2023",
+  "event_key": "VERB-NOUN-YEAR like ZAKIR-PADMA-VIB-2023 or SSLV-FIRST-LAUNCH-2023 or TUSHAR-SG-2022",
   "extra_topics": [],
   "mcq": {{
-    "question": "Direct question testable from this fact. E.g.: 'Who was appointed as Solicitor General of India?'",
-    "options": ["Correct answer", "Plausible wrong A", "Plausible wrong B", "Plausible wrong C"],
+    "question": "Short direct question. E.g.: 'Who was awarded the Padma Vibhushan in 2023 in the field of Art?'",
+    "options": ["Correct answer (always index 0)", "Plausible wrong - same type", "Plausible wrong - same type", "Plausible wrong - same type"],
     "answer": 0,
-    "explanation": "One sentence explaining the correct answer using only facts from the article."
+    "explanation": "One sentence from the article text confirming the correct answer."
   }}
 }}
 
-If no testable fact exists, return exactly: null"""
+If no testable fact, return exactly: null"""
 
 
 def extract_exam_fact(article_text: str, title: str, client) -> dict | None:
@@ -553,6 +598,9 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     )
     is_tg = bool(ai.get("is_telangana_focus", False))
 
+    difficulty  = ai.get("difficulty", "M")
+    exam_depth  = ai.get("exam_depth", "both")
+
     content = f"""---
 id: "{item_id}"
 type: "current_affair"
@@ -562,6 +610,8 @@ topic: "{_category_to_topic(category)}"
 related_topic_ids:
 {related}
 is_telangana_focus: {"true" if is_tg else "false"}
+difficulty: "{difficulty}"
+exam_depth: "{exam_depth}"
 headline: "{escape_yaml(title)}"
 exam_fact: "{escape_yaml(ai.get('exam_fact', ''))}"
 summary: "{escape_yaml(ai.get('summary', ''))}"
