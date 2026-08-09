@@ -125,3 +125,38 @@ CREATE TRIGGER trigger_review_cards_updated_at
   BEFORE UPDATE ON review_cards
   FOR EACH ROW
   EXECUTE FUNCTION update_updated_at();
+
+-- ---------------------------------------------------------------------------
+-- Topic visits — tracks when each user last marked a topic's CA as "caught up"
+-- Used by useTopicVisits.ts for cross-device "new since last visit" sync.
+-- Layer 1: localStorage (instant, offline)
+-- Layer 2: This table (cloud backup, synced when logged in)
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS topic_visits (
+  id           UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id      UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  note_id      TEXT NOT NULL,          -- e.g. "NOTE-GEO-FORESTS"
+  last_seen_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at   TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+  -- One row per user per topic
+  UNIQUE(user_id, note_id)
+);
+
+-- Index for fast per-user lookups
+CREATE INDEX IF NOT EXISTS idx_topic_visits_user
+  ON topic_visits(user_id, note_id);
+
+-- RLS: each user only sees and writes their own rows
+ALTER TABLE topic_visits ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Users manage own topic visits"
+  ON topic_visits FOR ALL
+  USING (auth.uid() = user_id)
+  WITH CHECK (auth.uid() = user_id);
+
+-- Auto-update updated_at on topic_visits
+CREATE TRIGGER trigger_topic_visits_updated_at
+  BEFORE UPDATE ON topic_visits
+  FOR EACH ROW
+  EXECUTE FUNCTION update_updated_at();
