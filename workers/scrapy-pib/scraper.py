@@ -212,16 +212,82 @@ MAX_ITEMS_PER_FEED = 20
 
 # -- Article text extraction --------------------------------------------------
 
+def resolve_google_news_url(url: str) -> str:
+    """
+    Google News RSS links are news.google.com/articles/... which redirect via JS.
+    Two strategies to get the real article URL:
+    1. If the RSS item had a <source url="..."> attribute, use that directly.
+    2. Parse the Google News page for the canonical link header or meta redirect.
+    3. Use the gnews.io decode trick (free, no auth needed).
+    """
+    if not url or "news.google.com" not in url:
+        return url  # Already a real URL
+
+    # Strategy: fetch the Google News page and look for canonical/redirect
+    try:
+        resp = requests.get(
+            url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept-Language": "en-US,en;q=0.9",
+            },
+            timeout=10,
+            allow_redirects=True,
+        )
+        # After redirects the final URL may already be the real article
+        final_url = resp.url
+        if "news.google.com" not in final_url:
+            return final_url
+
+        # Try to find the real URL in the response
+        soup = BeautifulSoup(resp.text, "html.parser")
+
+        # Look for <link rel="canonical">
+        canonical = soup.find("link", rel="canonical")
+        if canonical and canonical.get("href") and "news.google.com" not in canonical["href"]:
+            return canonical["href"]
+
+        # Look for <meta http-equiv="refresh">
+        meta_refresh = soup.find("meta", attrs={"http-equiv": re.compile("refresh", re.I)})
+        if meta_refresh:
+            content = meta_refresh.get("content", "")
+            match = re.search(r"url=(.+)", content, re.I)
+            if match and "news.google.com" not in match.group(1):
+                return match.group(1).strip().strip("'\"")
+
+        # Look for JS redirect pattern: window.location = "..."
+        scripts = soup.find_all("script")
+        for script in scripts:
+            text = script.get_text()
+            match = re.search(r'window\.location\s*=\s*["\']([^"\']+)["\']', text)
+            if match and "news.google.com" not in match.group(1):
+                return match.group(1)
+
+        # Find any prominent external links in the page
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if href.startswith("http") and "news.google.com" not in href and "google.com" not in href:
+                return href
+
+    except Exception:
+        pass
+
+    return url  # Give up, return original
+
+
 def fetch_article_text(url: str) -> str:
     """
     Fetch the actual article from a source URL and extract readable text.
     This is the ground truth - Gemini will extract facts from THIS text,
     not generate them from thin air.
     """
+    # Resolve Google News redirect to real article URL first
+    real_url = resolve_google_news_url(url)
+
     try:
-        # Follow Google News redirects to the real article
         resp = requests.get(
-            url,
+            real_url,
             headers={
                 "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                               "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -231,7 +297,7 @@ def fetch_article_text(url: str) -> str:
         )
         resp.raise_for_status()
     except Exception as e:
-        print(f"    [Fetch] Failed: {e}")
+        print(f"    [Fetch] Failed ({real_url[:60]}): {e}")
         return ""
 
     try:

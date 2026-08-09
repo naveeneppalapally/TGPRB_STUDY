@@ -205,11 +205,43 @@ def get_vertex_client():
 
 # -- Article text extraction --------------------------------------------------
 
-def fetch_article_text(url: str) -> str:
-    """Fetch and extract readable text from a source URL."""
+def resolve_google_news_url(url: str) -> str:
+    """Resolve Google News redirect URLs to real article URLs."""
+    if not url or "news.google.com" not in url:
+        return url
     try:
         resp = requests.get(
             url,
+            headers={
+                "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                              "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+                "Accept-Language": "en-US,en;q=0.9",
+            },
+            timeout=10,
+            allow_redirects=True,
+        )
+        final_url = resp.url
+        if "news.google.com" not in final_url:
+            return final_url
+        soup = BeautifulSoup(resp.text, "html.parser")
+        canonical = soup.find("link", rel="canonical")
+        if canonical and canonical.get("href") and "news.google.com" not in canonical["href"]:
+            return canonical["href"]
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if href.startswith("http") and "news.google.com" not in href and "google.com" not in href:
+                return href
+    except Exception:
+        pass
+    return url
+
+
+def fetch_article_text(url: str) -> str:
+    """Fetch and extract readable text from a source URL."""
+    real_url = resolve_google_news_url(url)
+    try:
+        resp = requests.get(
+            real_url,
             headers={
                 "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                               "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
