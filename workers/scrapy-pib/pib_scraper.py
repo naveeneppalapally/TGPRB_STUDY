@@ -167,6 +167,158 @@ CATEGORY_NOTE_IDS = {
 
 
 # ---------------------------------------------------------------------------
+# Auto-discovery: scan pages/notes/**/*.vue for CurrentAffairsStrip note-ids
+# Runs once at startup. No manual editing needed when a new topic is built.
+# ---------------------------------------------------------------------------
+
+# NOTE-ID segment → plain English keywords for Gemini prompt
+# e.g. "FORESTS" → "forests deforestation national park tree cover wildlife"
+_SEGMENT_KEYWORDS: dict[str, str] = {
+    "DRAINAGE":     "rivers drainage basin dams tributaries Godavari Krishna Ganga",
+    "ENVIRONMENT":  "environment pollution climate UNESCO wildlife species",
+    "FORESTS":      "forests deforestation national park tree cover wildlife sanctuary",
+    "MOUNTAINS":    "mountains Himalayas peaks glaciers passes altitude",
+    "GEOGRAPHY":    "geography physical features landforms soil",
+    "CLIMATE":      "climate monsoon rainfall drought flood cyclone",
+    "CONSTITUTION": "constitution parliament law amendment fundamental rights",
+    "PARLIAMENT":   "parliament Lok Sabha Rajya Sabha speaker session",
+    "FEDERALISM":   "federalism states centre concurrent list",
+    "JUDICIARY":    "Supreme Court High Court judgment CJI constitution bench",
+    "POLITY":       "polity governance parliament election commission",
+    "BANKING":      "banking RBI repo rate inflation monetary policy",
+    "GENERAL":      "economy GDP budget finance scheme",
+    "ECO":          "economy GDP finance budget trade",
+    "SPACE":        "ISRO space satellite launch vehicle mission",
+    "SCI":          "science technology ISRO DRDO research innovation",
+    "HISTORY":      "history ancient medieval modern India freedom struggle",
+    "MODERN":       "modern history freedom struggle independence 1857",
+    "TEL":          "Telangana Hyderabad state government scheme TG police",
+    "SPORTS":       "sports cricket boxing kabaddi athletics medal championship",
+    "DEFENCE":      "defence army navy air force missile exercise DRDO",
+    "AWARDS":       "awards Padma Nobel Jnanpith Dronacharya Arjuna honour",
+    "INTERNATIONAL":"summit bilateral agreement UN MEA foreign affairs",
+    "ARITHMETIC":   "",  # no CA relevance
+    "ARI":          "",
+}
+
+# Category → list of NOTE-IDs that all articles in that category should get
+# This gets EXTENDED at startup by _discover_note_registry()
+_EXTRA_CATEGORY_NOTE_IDS: dict[str, list[str]] = {}
+
+
+def _note_id_to_keywords(note_id: str) -> str:
+    """
+    Derive search keywords from a NOTE-ID.
+    NOTE-GEO-FORESTS → 'forests deforestation national park tree cover wildlife sanctuary'
+    NOTE-TEL-GENERAL → 'Telangana Hyderabad state government scheme TG police'
+    """
+    parts = note_id.replace("NOTE-", "").split("-")
+    keywords: list[str] = []
+    for part in parts:
+        kw = _SEGMENT_KEYWORDS.get(part.upper(), "")
+        if kw:
+            keywords.append(kw)
+        else:
+            # Fallback: use the segment itself as a keyword
+            keywords.append(part.lower())
+    return " ".join(keywords)
+
+
+def _note_id_to_category(note_id: str) -> str:
+    """
+    Map a NOTE-ID to the most relevant CA category.
+    NOTE-GEO-FORESTS → 'environment'
+    NOTE-POL-CONSTITUTION → 'schemes' (default for polity)
+    NOTE-SCI-SPACE → 'science'
+    """
+    upper = note_id.upper()
+    if "GEO-DRAINAGE" in upper or "GEO-RIVERS" in upper:
+        return "environment"
+    if "GEO" in upper:
+        return "environment"
+    if "TEL" in upper:
+        return "telangana"
+    if "POL" in upper or "CONST" in upper or "PARL" in upper:
+        return "schemes"
+    if "ECO" in upper:
+        return "economy"
+    if "SCI" in upper or "SPACE" in upper:
+        return "science"
+    if "HIS" in upper:
+        return "schemes"
+    return "schemes"
+
+
+def discover_note_registry() -> dict[str, dict]:
+    """
+    Scans pages/notes/**/*.vue for <CurrentAffairsStrip note-id="NOTE-XXX" />
+    Returns: { "NOTE-GEO-FORESTS": { "keywords": "...", "category": "environment" } }
+
+    Called once at startup. Automatically picks up every new topic page
+    the AI builds - no manual config needed.
+    """
+    registry: dict[str, dict] = {}
+    pages_dir = Path("pages/notes")
+
+    if not pages_dir.exists():
+        return registry
+
+    pattern = re.compile(r'note-id=["\']([\w-]+)["\']')
+
+    for vue_file in pages_dir.rglob("*.vue"):
+        try:
+            text = vue_file.read_text(encoding="utf-8")
+            for match in pattern.finditer(text):
+                note_id = match.group(1)
+                if note_id.startswith("NOTE-") and note_id not in registry:
+                    registry[note_id] = {
+                        "keywords": _note_id_to_keywords(note_id),
+                        "category": _note_id_to_category(note_id),
+                        "source_file": str(vue_file),
+                    }
+        except Exception:
+            continue
+
+    return registry
+
+
+def build_dynamic_prompt_section(registry: dict[str, dict]) -> str:
+    """
+    Builds the extra_topics guidance block for the Gemini prompt
+    from the auto-discovered registry.
+
+    Example output:
+      - If about forests, deforestation, national park -> add "NOTE-GEO-FORESTS"
+      - If about rivers, drainage, dams, tributaries   -> add "NOTE-GEO-DRAINAGE"
+    """
+    if not registry:
+        return "    - Otherwise leave as empty array []"
+
+    lines = []
+    for note_id, meta in sorted(registry.items()):
+        kw = meta.get("keywords", "").strip()
+        if kw:
+            lines.append(f'    - If about {kw[:60]} -> add "{note_id}"')
+    lines.append("    - Otherwise leave as empty array []")
+    return "\n".join(lines)
+
+
+def apply_registry_to_category_note_ids(registry: dict[str, dict]) -> None:
+    """
+    Merges discovered NOTE-IDs into CATEGORY_NOTE_IDS so that
+    when Gemini assigns a category, the card is also tagged with
+    the relevant specific topic NOTE-IDs automatically.
+    """
+    for note_id, meta in registry.items():
+        cat = meta["category"]
+        if cat in CATEGORY_NOTE_IDS:
+            if note_id not in CATEGORY_NOTE_IDS[cat]:
+                CATEGORY_NOTE_IDS[cat].append(note_id)
+        else:
+            CATEGORY_NOTE_IDS[cat] = [note_id]
+
+
+# ---------------------------------------------------------------------------
 # Gemini client - extraction only, never generates facts
 # ---------------------------------------------------------------------------
 _gemini_client = None
@@ -456,12 +608,10 @@ STEP 3 - EXTRACT one card. Rules:
     If answer is a number/rank -> wrong options = nearby plausible numbers
     If answer is a state -> wrong options = other Indian states
     NEVER use generic filler like "None of the above" as an option
-- extra_topics: list of NOTE-IDs this article is ALSO relevant to (beyond the primary category's default):
-    - If about Kaleshwaram dam -> add "NOTE-GEO-DRAINAGE", "NOTE-TEL-GENERAL"
-    - If about TG Governor appointment -> add "NOTE-TEL-GENERAL", "NOTE-POL-CONSTITUTION"
-    - If about ISRO launch -> add "NOTE-SCI-GENERAL", "NOTE-SCI-SPACE"
-    - If about Padma award to a Telangana person -> add "NOTE-TEL-GENERAL"
-    - Otherwise leave as empty array []
+- extra_topics: list of NOTE-IDs this article is ALSO relevant to (beyond the primary category's default).
+  Use the list below - these are ALL the topic pages that currently exist in the app.
+  Match based on the article content:
+{extra_topics_guidance}
 - is_telangana_focus: true ONLY if the event is primarily about Telangana state/Hyderabad city
 
 STRICT RULE: Extract facts ONLY from the provided text. NEVER generate or invent names, figures, or dates.
@@ -493,16 +643,21 @@ If testable fact found, return ONLY this JSON (no markdown fences, no extra text
 If no testable fact, return exactly: null"""
 
 
-def extract_exam_fact(article_text: str, title: str, client) -> dict | None:
+def extract_exam_fact(article_text: str, title: str, client,
+                      extra_topics_guidance: str = "    - Otherwise leave as empty array []") -> dict | None:
     """
     Use Gemini to extract an exam fact from the real PIB article text.
     Gemini reads actual text and extracts - never generates.
+    extra_topics_guidance: auto-built from discover_note_registry() at startup.
     """
     if not client or not article_text.strip():
         return None
 
     try:
-        prompt = EXTRACT_PROMPT.format(article_text=article_text[:4000])
+        prompt = EXTRACT_PROMPT.format(
+            article_text=article_text[:4000],
+            extra_topics_guidance=extra_topics_guidance,
+        )
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=prompt,
@@ -706,6 +861,16 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
     Scrape PIB press releases for every date in range.
     Returns stats: {total_fetched, total_saved, total_skipped}
     """
+    # ── Auto-discover all NOTE-IDs from pages/notes/**/*.vue ──────────────
+    # Every topic the AI builds gets picked up here automatically.
+    # No manual editing of pib_scraper.py needed when a new topic is added.
+    note_registry = discover_note_registry()
+    apply_registry_to_category_note_ids(note_registry)
+    extra_topics_guidance = build_dynamic_prompt_section(note_registry)
+
+    print(f"[Registry] Found {len(note_registry)} topic pages: {', '.join(sorted(note_registry.keys()))}")
+    # ─────────────────────────────────────────────────────────────────────
+
     client = get_gemini_client()
     if not client and not dry_run:
         print("[WARN] No Gemini client. Run with --dry-run or set GEMINI_API_KEY.")
@@ -758,7 +923,8 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
 
             # Extract exam fact via Gemini (extraction only, not generation)
             if client:
-                ai = extract_exam_fact(article_text, title, client)
+                ai = extract_exam_fact(article_text, title, client,
+                                       extra_topics_guidance=extra_topics_guidance)
             else:
                 ai = None
 
