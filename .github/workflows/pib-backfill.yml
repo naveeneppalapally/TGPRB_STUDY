@@ -1,0 +1,69 @@
+name: PIB Backfill (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "Start date (YYYY-MM-DD)"
+        required: true
+        default: "2025-01-01"
+      to_date:
+        description: "End date (YYYY-MM-DD, default: today)"
+        required: false
+        default: ""
+      max_per_day:
+        description: "Max releases per day (default: 30)"
+        required: false
+        default: "30"
+
+jobs:
+  pib-backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 google-genai
+
+      - name: Determine end date
+        id: dates
+        run: |
+          if [ -z "${{ github.event.inputs.to_date }}" ]; then
+            echo "to_date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          else
+            echo "to_date=${{ github.event.inputs.to_date }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run PIB backfill
+        env:
+          GOOGLE_CLOUD_PROJECT:               ${{ secrets.GOOGLE_CLOUD_PROJECT }}
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SA_KEY }}
+          GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 workers/scrapy-pib/pib_scraper.py \
+            --from "${{ github.event.inputs.from_date }}" \
+            --to   "${{ steps.dates.outputs.to_date }}" \
+            --max-per-day "${{ github.event.inputs.max_per_day }}"
+
+      - name: Count new files
+        id: count
+        run: |
+          count=$(git status --short content/current-affairs/ | grep "^?" | wc -l)
+          echo "new_files=$count" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.count.outputs.new_files != '0'
+        run: |
+          git config user.name  "PIB Backfill Bot"
+          git config user.email "actions@github.com"
+          git add content/current-affairs/
+          git commit -m "add: PIB backfill ${{ github.event.inputs.from_date }} to ${{ steps.dates.outputs.to_date }} (${{ steps.count.outputs.new_files }} cards) [skip ci]"
+          git push
