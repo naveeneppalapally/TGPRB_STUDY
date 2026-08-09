@@ -34,7 +34,7 @@
       {{ item.meta.headline }}
     </h3>
 
-    <!-- Exam fact highlight -->
+    <!-- Exam fact highlight (from first MCQ) -->
     <p class="text-sm font-medium text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30 p-2 rounded-md border border-emerald-100 dark:border-emerald-900/50">
       <UIcon name="i-heroicons-light-bulb" class="inline-block h-4 w-4 mr-1 align-text-bottom" />
       {{ item.meta.exam_fact }}
@@ -62,45 +62,101 @@
       </a>
 
       <UButton
-        v-if="item.meta.mcq"
+        v-if="mcqs.length > 0"
         size="xs"
         color="white"
         variant="solid"
         icon="i-heroicons-academic-cap"
         @click="toggleMCQ"
       >
-        Test yourself
+        {{ showMCQ ? 'Hide' : `Test yourself${mcqs.length > 1 ? ` (${mcqs.length} Qs)` : ''}` }}
       </UButton>
     </div>
 
-    <!-- MCQ panel -->
+    <!-- Multi-MCQ panel -->
     <div
-      v-if="item.meta.mcq && showMCQ"
-      class="p-3 rounded-md bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm"
+      v-if="mcqs.length > 0 && showMCQ"
+      class="rounded-md bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-sm overflow-hidden"
     >
-      <p class="font-medium t-hi mb-3">{{ item.meta.mcq.question }}</p>
-      <div class="flex flex-col gap-2">
-        <UButton
-          v-for="(option, idx) in item.meta.mcq.options"
-          :key="idx"
-          size="sm"
-          :color="mcqButtonColor(idx)"
-          :variant="selectedOption !== undefined ? 'solid' : 'soft'"
-          class="justify-start text-left whitespace-normal h-auto py-2"
-          :disabled="selectedOption !== undefined"
-          @click="selectOption(idx)"
-        >
-          {{ String.fromCharCode(65 + idx) }}. {{ option }}
-        </UButton>
+      <!-- Question navigator (only shown when >1 question) -->
+      <div v-if="mcqs.length > 1" class="flex items-center justify-between px-3 py-2 border-b border-black/10 dark:border-white/10">
+        <span class="text-[11px] font-semibold t-lo uppercase tracking-wider">
+          Question {{ currentQ + 1 }} of {{ mcqs.length }}
+        </span>
+        <div class="flex items-center gap-1">
+          <!-- Progress dots -->
+          <button
+            v-for="(_, i) in mcqs"
+            :key="i"
+            class="h-2 w-2 rounded-full transition-colors"
+            :class="i === currentQ
+              ? 'bg-emerald-500'
+              : answers[i] !== undefined
+                ? (answers[i] === mcqs[i].answer ? 'bg-green-400' : 'bg-red-400')
+                : 'bg-black/20 dark:bg-white/20'"
+            @click="goToQ(i)"
+          />
+        </div>
+        <div class="flex gap-1">
+          <UButton
+            size="xs" variant="ghost" color="gray"
+            icon="i-heroicons-chevron-left"
+            :disabled="currentQ === 0"
+            @click="goToQ(currentQ - 1)"
+          />
+          <UButton
+            size="xs" variant="ghost" color="gray"
+            icon="i-heroicons-chevron-right"
+            :disabled="currentQ === mcqs.length - 1"
+            @click="goToQ(currentQ + 1)"
+          />
+        </div>
       </div>
-      <div v-if="selectedOption !== undefined" class="mt-3 p-2 rounded bg-black/5 dark:bg-white/5 text-xs t-mid">
-        <p
-          class="font-semibold mb-1"
-          :class="isCorrect ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'"
-        >
-          {{ isCorrect ? 'Correct!' : 'Incorrect.' }}
-        </p>
-        <p>{{ item.meta.mcq.explanation }}</p>
+
+      <!-- Current question -->
+      <div class="p-3">
+        <p class="font-medium t-hi mb-3">{{ currentMCQ.question }}</p>
+        <div class="flex flex-col gap-2">
+          <UButton
+            v-for="(option, idx) in currentMCQ.options"
+            :key="idx"
+            size="sm"
+            :color="optionColor(idx)"
+            :variant="currentAnswer !== undefined ? 'solid' : 'soft'"
+            class="justify-start text-left whitespace-normal h-auto py-2"
+            :disabled="currentAnswer !== undefined"
+            @click="selectOption(idx)"
+          >
+            {{ String.fromCharCode(65 + idx) }}. {{ option }}
+          </UButton>
+        </div>
+
+        <!-- Feedback -->
+        <div v-if="currentAnswer !== undefined" class="mt-3 p-2 rounded bg-black/5 dark:bg-white/5 text-xs t-mid">
+          <p
+            class="font-semibold mb-1"
+            :class="isCorrect ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'"
+          >
+            {{ isCorrect ? 'Correct!' : `Incorrect. Correct answer: ${String.fromCharCode(65 + currentMCQ.answer)}` }}
+          </p>
+          <p>{{ currentMCQ.explanation }}</p>
+
+          <!-- Auto-advance to next question -->
+          <UButton
+            v-if="currentQ < mcqs.length - 1"
+            size="xs"
+            color="gray"
+            variant="soft"
+            class="mt-2"
+            icon="i-heroicons-arrow-right"
+            @click="goToQ(currentQ + 1)"
+          >
+            Next question
+          </UButton>
+          <p v-else-if="allAnswered" class="mt-2 text-emerald-600 dark:text-emerald-400 font-semibold">
+            All {{ mcqs.length }} questions answered! Score: {{ score }}/{{ mcqs.length }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -113,27 +169,51 @@ const props = defineProps<{
   item: any
 }>()
 
+// Normalise: support both new mcqs array and legacy single mcq
+const mcqs = computed<any[]>(() => {
+  const meta = props.item.meta
+  if (Array.isArray(meta.mcqs) && meta.mcqs.length > 0) return meta.mcqs
+  if (meta.mcq && meta.mcq.question) return [meta.mcq]
+  return []
+})
+
 // MCQ state
 const showMCQ = ref(false)
-const selectedOption = ref<number | undefined>(undefined)
+const currentQ = ref(0)
+// answers[i] = selected option index for question i, undefined if not answered
+const answers = ref<(number | undefined)[]>([])
 
 function toggleMCQ() {
   showMCQ.value = !showMCQ.value
+  if (showMCQ.value) {
+    currentQ.value = 0
+    answers.value = mcqs.value.map(() => undefined)
+  }
+}
+
+function goToQ(i: number) {
+  if (i >= 0 && i < mcqs.value.length) currentQ.value = i
 }
 
 function selectOption(idx: number) {
-  if (selectedOption.value !== undefined) return
-  selectedOption.value = idx
+  if (answers.value[currentQ.value] !== undefined) return
+  const updated = [...answers.value]
+  updated[currentQ.value] = idx
+  answers.value = updated
 }
 
-const isCorrect = computed(() =>
-  selectedOption.value === props.item.meta.mcq?.answer,
+const currentMCQ = computed(() => mcqs.value[currentQ.value] ?? {})
+const currentAnswer = computed(() => answers.value[currentQ.value])
+const isCorrect = computed(() => currentAnswer.value === currentMCQ.value?.answer)
+const allAnswered = computed(() => answers.value.every(a => a !== undefined))
+const score = computed(() =>
+  answers.value.filter((a, i) => a === mcqs.value[i]?.answer).length
 )
 
-function mcqButtonColor(idx: number) {
-  if (selectedOption.value === undefined) return 'gray'
-  if (idx === props.item.meta.mcq?.answer) return 'green'
-  if (idx === selectedOption.value) return 'red'
+function optionColor(idx: number) {
+  if (currentAnswer.value === undefined) return 'gray'
+  if (idx === currentMCQ.value?.answer) return 'green'
+  if (idx === currentAnswer.value) return 'red'
   return 'gray'
 }
 

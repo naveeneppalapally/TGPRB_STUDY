@@ -675,9 +675,9 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
         paragraphs = content.find_all("p")
         text = "\n".join(p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 20)
 
-        # Cap at 4000 chars - PIB releases can be long
-        if len(text) > 4000:
-            text = text[:4000] + "..."
+        # Cap at 12000 chars - long articles (award lists, reports) need room
+        if len(text) > 12000:
+            text = text[:12000] + "..."
 
         return text, ministry, real_date
 
@@ -693,7 +693,7 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
 EXTRACT_PROMPT = """You are an exam-card extractor for TGPRB (Telangana Police Recruitment Board) exams.
 
 You will receive the FULL TEXT of an official PIB (Press Information Bureau) press release.
-Your job is to extract one testable exam fact from this actual text.
+Your job is to extract up to 3 distinct, testable exam facts from this text.
 
 STRICT RULES:
 
@@ -722,14 +722,20 @@ STEP 2 - CHECK if this has a PYQ-proven testable fact. TGPRB exams test these ca
 
 If the release has NONE of the above clearly, return null.
 
-STEP 3 - EXTRACT one card. Rules:
-- exam_fact: One precise, cloze-ready sentence. Mirror TGPRB PYQ style:
+STEP 3 - EXTRACT up to 3 MCQs. Rules:
+- Each MCQ must test a DIFFERENT, INDEPENDENT fact. Do not create two questions that test the same relationship.
+  BAD pair: "Who received the Arjuna Award?" + "What award did Anitha Rao receive?" (same fact, inverted)
+  GOOD pair: "Who received the Arjuna Award?" + "What was the budget allocated for the scheme?"
+- If the article has only one testable fact, return exactly 1 MCQ. Never pad with weak questions.
+- For award lists: extract the 2-3 most important/famous awardees, not all of them.
+- exam_fact per MCQ: One precise, cloze-ready sentence. Mirror TGPRB PYQ style:
     GOOD: "Tushar Mehta was appointed as Solicitor General of India on 30 June 2022."
-    GOOD: "India's Small Satellite Launch Vehicle (SSLV) achieved its first successful launch in February 2023."
-    GOOD: "Zakir Hussain was awarded the Padma Vibhushan in 2023 in the field of Art."
+    GOOD: "India's SSLV achieved its first successful launch in February 2023."
     BAD:  "The government has taken several steps to improve space technology." (too vague)
 - difficulty: "F" if famous/easy (World Cup winner, PM-level), "M" if needs preparation, "O" if obscure (exact figure, committee head)
 - exam_depth: "constable" if it tests direct recognition (winner, place, scheme name), "si" if it tests exact detail (report figure, portfolio match, commission tenure), "both" if fits both
+- ANSWER POSITION: Place the correct answer at a RANDOM position (0, 1, 2, or 3). Do NOT always put it at index 0.
+  Vary it across questions. Set "answer" to the index of the correct option.
 - MCQ wrong options MUST be same TYPE as correct answer:
     If answer is a person's name -> wrong options = other plausible real names in same domain
     If answer is a country -> wrong options = other real countries
@@ -749,23 +755,25 @@ Press release text:
 {article_text}
 ---
 
-If testable fact found, return ONLY this JSON (no markdown fences, no extra text):
+If testable facts found, return ONLY this JSON (no markdown fences, no extra text):
 {{
-  "exam_fact": "One precise testable sentence from the actual text.",
-  "summary": "2-3 sentences: what happened, why it matters for the exam, what TGPRB typically asks from this type of event.",
+  "summary": "2-3 sentences: what happened, why it matters for the exam.",
   "event_date": "YYYY-MM-DD",
   "category": "appointments|international|economy|awards|sports|telangana|schemes|defence|science|judiciary|environment|books",
   "difficulty": "F|M|O",
   "exam_depth": "constable|si|both",
   "is_telangana_focus": false,
-  "event_key": "VERB-NOUN-YEAR like ZAKIR-PADMA-VIB-2023 or SSLV-FIRST-LAUNCH-2023 or TUSHAR-SG-2022",
+  "event_key": "VERB-NOUN-YEAR like ZAKIR-PADMA-VIB-2023 or SSLV-FIRST-LAUNCH-2023",
   "extra_topics": [],
-  "mcq": {{
-    "question": "Short direct question. E.g.: 'Who was awarded the Padma Vibhushan in 2023 in the field of Art?'",
-    "options": ["Correct answer (always index 0)", "Plausible wrong - same type", "Plausible wrong - same type", "Plausible wrong - same type"],
-    "answer": 0,
-    "explanation": "One sentence from the article text confirming the correct answer."
-  }}
+  "mcqs": [
+    {{
+      "exam_fact": "One precise testable sentence from the actual text.",
+      "question": "Short direct question?",
+      "options": ["Option A", "Option B", "Option C", "Option D"],
+      "answer": 2,
+      "explanation": "One sentence from the article text confirming the correct answer."
+    }}
+  ]
 }}
 
 If no testable fact, return exactly: null"""
@@ -774,7 +782,7 @@ If no testable fact, return exactly: null"""
 def extract_exam_fact(article_text: str, title: str, client,
                       extra_topics_guidance: str = "    - Otherwise leave as empty array []") -> dict | None:
     """
-    Use Gemini to extract an exam fact from the real PIB article text.
+    Use Gemini to extract exam facts (up to 3 MCQs) from the real PIB article text.
     Gemini reads actual text and extracts - never generates.
     extra_topics_guidance: auto-built from discover_note_registry() at startup.
     """
@@ -783,7 +791,7 @@ def extract_exam_fact(article_text: str, title: str, client,
 
     try:
         prompt = EXTRACT_PROMPT.format(
-            article_text=article_text[:4000],
+            article_text=article_text[:12000],
             extra_topics_guidance=extra_topics_guidance,
         )
         model_name = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
@@ -802,13 +810,38 @@ def extract_exam_fact(article_text: str, title: str, client,
 
         ai = json.loads(text)
 
-        # Validate required fields
-        if not ai.get("exam_fact") or not ai.get("mcq"):
+        # Backward compat: wrap legacy single mcq into mcqs array
+        if "mcq" in ai and "mcqs" not in ai:
+            legacy_mcq = ai.pop("mcq")
+            legacy_mcq["exam_fact"] = ai.get("exam_fact", "")
+            ai["mcqs"] = [legacy_mcq]
+
+        # Validate mcqs array
+        mcqs = ai.get("mcqs")
+        if not mcqs or not isinstance(mcqs, list):
             return None
 
-        mcq = ai.get("mcq", {})
-        if not isinstance(mcq, dict) or len(mcq.get("options", [])) != 4:
+        # Validate each MCQ in the array
+        valid_mcqs = []
+        for mcq in mcqs[:3]:  # cap at 3
+            if not isinstance(mcq, dict):
+                continue
+            if not mcq.get("question") or len(mcq.get("options", [])) != 4:
+                continue
+            if not mcq.get("exam_fact"):
+                continue
+            # Ensure answer index is valid
+            answer = mcq.get("answer", 0)
+            if not isinstance(answer, int) or answer < 0 or answer > 3:
+                mcq["answer"] = 0
+            valid_mcqs.append(mcq)
+
+        if not valid_mcqs:
             return None
+
+        ai["mcqs"] = valid_mcqs
+        # Set top-level exam_fact from first MCQ for backward compat
+        ai["exam_fact"] = valid_mcqs[0].get("exam_fact", "")
 
         # Validate category
         if ai.get("category") not in VALID_CATEGORIES:
@@ -852,7 +885,7 @@ def event_key_exists(event_key: str) -> bool:
 
 
 def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
-    """Write a single exam card markdown file."""
+    """Write a single exam card markdown file with up to 3 MCQs."""
     title = release["title"].strip()
     if not title or len(title) < 10:
         return None
@@ -860,6 +893,13 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     category = ai.get("category", DEFAULT_CATEGORY)
     note_ids = CATEGORY_NOTE_IDS.get(category, [])
     event_key = ai.get("event_key", "")
+
+    # Merge extra_topics from AI response into note_ids
+    extra = ai.get("extra_topics", [])
+    if isinstance(extra, list):
+        for t in extra:
+            if t and t not in note_ids:
+                note_ids.append(t)
 
     # Deduplication by event_key
     if event_key and event_key_exists(event_key):
@@ -876,14 +916,26 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     item_id = f"CA-PIB-{slug.upper().replace('-', '_')[:40]}"
     related = "\n".join(f'  - "{t}"' for t in note_ids) if note_ids else '  - ""'
 
-    mcq = ai.get("mcq", {})
-    mcq_options = "\n".join(
-        f'    - "{escape_yaml(opt)}"' for opt in mcq.get("options", [])
-    )
     is_tg = bool(ai.get("is_telangana_focus", False))
-
     difficulty  = ai.get("difficulty", "M")
     exam_depth  = ai.get("exam_depth", "both")
+
+    # Build mcqs YAML block
+    mcqs = ai.get("mcqs", [])
+    mcqs_yaml_parts = []
+    for mcq in mcqs:
+        opts = "\n".join(f'      - "{escape_yaml(o)}"' for o in mcq.get("options", []))
+        mcqs_yaml_parts.append(
+            f'  - exam_fact: "{escape_yaml(mcq.get("exam_fact", ""))}"\n'
+            f'    question: "{escape_yaml(mcq.get("question", ""))}"\n'
+            f'    options:\n{opts}\n'
+            f'    answer: {mcq.get("answer", 0)}\n'
+            f'    explanation: "{escape_yaml(mcq.get("explanation", ""))}"'
+        )
+    mcqs_yaml = "\n".join(mcqs_yaml_parts)
+
+    # Top-level exam_fact from first MCQ for backward compat
+    top_exam_fact = escape_yaml(mcqs[0].get("exam_fact", "")) if mcqs else ""
 
     content = f"""---
 id: "{item_id}"
@@ -897,7 +949,7 @@ is_telangana_focus: {"true" if is_tg else "false"}
 difficulty: "{difficulty}"
 exam_depth: "{exam_depth}"
 headline: "{escape_yaml(title)}"
-exam_fact: "{escape_yaml(ai.get('exam_fact', ''))}"
+exam_fact: "{top_exam_fact}"
 summary: "{escape_yaml(ai.get('summary', ''))}"
 event_date: "{date_str}"
 published_at: "{release['date_iso']}"
@@ -908,12 +960,8 @@ ministry: "{escape_yaml(ministry or '')}"
 canonical_source_url: "{release['url']}"
 source_url: "{release['url']}"
 event_key: "{escape_yaml(event_key)}"
-mcq:
-  question: "{escape_yaml(mcq.get('question', ''))}"
-  options:
-{mcq_options}
-  answer: {mcq.get('answer', 0)}
-  explanation: "{escape_yaml(mcq.get('explanation', ''))}"
+mcqs:
+{mcqs_yaml}
 ---
 """
     CONTENT_DIR.mkdir(parents=True, exist_ok=True)
