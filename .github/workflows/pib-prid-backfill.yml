@@ -37,19 +37,17 @@ jobs:
       - name: Generate month list
         id: set-matrix
         run: |
-          # If specific dates given, use them directly as a single "month" entry
           FROM_DATE="${{ github.event.inputs.from_date }}"
           TO_DATE="${{ github.event.inputs.to_date }}"
 
-          if [[ -n "$FROM_DATE" && -n "$TO_DATE" ]]; then
-            # Single range mode - encode as "from|to" in one matrix entry
+          if [ -n "$FROM_DATE" ] && [ -n "$TO_DATE" ]; then
             json="[\"${FROM_DATE}|${TO_DATE}\"]"
           else
             from="${{ github.event.inputs.from_year_month || '2025-01' }}"
             to="${{ github.event.inputs.to_year_month || '2026-08' }}"
             months=()
             current="$from"
-            while [[ "$current" <= "$to" ]]; do
+            while [ "$current" \<= "$to" ]; do
               months+=("$current")
               current=$(date -d "${current}-01 +1 month" +%Y-%m)
             done
