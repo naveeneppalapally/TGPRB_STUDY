@@ -658,8 +658,9 @@ def extract_exam_fact(article_text: str, title: str, client,
             article_text=article_text[:4000],
             extra_topics_guidance=extra_topics_guidance,
         )
+        model_name = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model=model_name,
             contents=prompt,
         )
         text = response.text.strip()
