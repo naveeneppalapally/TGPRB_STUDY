@@ -382,82 +382,191 @@ Reply ONLY with valid JSON."""
         return None
 
 
-# -- GDELT source -------------------------------------------------------------
+# -- RSS sources (replaces GDELT which rate-limits heavily) -------------------
+#
+# Each category gets direct RSS feeds from real sources.
+# Real article URLs - no Google News redirect issues.
+# No rate limits. Reliable.
+#
+# Per-category RSS feeds ranked by source quality for TGPRB exam:
+CATEGORY_FEEDS = {
+    "appointments": [
+        "https://www.thehindu.com/news/national/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "international": [
+        "https://www.thehindu.com/news/international/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://indianexpress.com/section/india/feed/",
+    ],
+    "economy": [
+        "https://www.thehindu.com/business/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "awards": [
+        "https://www.thehindu.com/news/national/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "sports": [
+        "https://www.thehindu.com/sport/feeder/default.rss",
+        "https://feeds.feedburner.com/ndtv/sports",
+        "https://indianexpress.com/section/sports/feed/",
+    ],
+    "telangana": [
+        "https://telanganatoday.com/feed",
+        "https://www.thehansindia.com/feed",
+        "https://www.thehindu.com/news/national/telangana/feeder/default.rss",
+    ],
+    "schemes": [
+        "https://pib.gov.in/rss.aspx",
+        "https://www.thehindu.com/news/national/feeder/default.rss",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "defence": [
+        "https://pib.gov.in/rss.aspx",
+        "https://www.thehindu.com/news/national/feeder/default.rss",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "science": [
+        "https://www.thehindu.com/sci-tech/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "judiciary": [
+        "https://www.thehindu.com/news/national/feeder/default.rss",
+        "https://indianexpress.com/section/india/feed/",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "environment": [
+        "https://www.thehindu.com/sci-tech/energy-and-environment/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+    "books": [
+        "https://www.thehindu.com/books/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+        "https://feeds.feedburner.com/ndtv/Ldjw",
+    ],
+}
 
-def fetch_gdelt(keywords: str, from_date: str, to_date: str) -> list[dict]:
-    start = from_date.replace("-", "") + "000000"
-    end   = to_date.replace("-", "") + "235959"
-    query = "+".join(keywords.split())
+# Domain -> source name map for URL labeling
+SOURCE_NAME_MAP = {
+    "thehindu.com": "The Hindu",
+    "indianexpress.com": "Indian Express",
+    "ndtv.com": "NDTV",
+    "pib.gov.in": "PIB",
+    "telanganatoday.com": "Telangana Today",
+    "thehansindia.com": "Hans India",
+    "isro.gov.in": "ISRO",
+    "drdo.gov.in": "DRDO",
+    "mea.gov.in": "MEA",
+    "rbi.org.in": "RBI",
+    "timesofindia.com": "Times of India",
+    "hindustantimes.com": "Hindustan Times",
+    "theprint.in": "The Print",
+}
 
-    url = (
-        f"https://api.gdeltproject.org/api/v2/doc/doc"
-        f"?query={query}+sourcelang:english+sourcecountry:IN"
-        f"&mode=ArtList"
-        f"&startdatetime={start}"
-        f"&enddatetime={end}"
-        f"&maxrecords=250"
-        f"&format=json"
-    )
 
-    print(f"  [GDELT] {from_date} to {to_date}...")
+def parse_rss_date(raw: str) -> str:
+    """Convert RSS pubDate string to YYYY-MM-DD."""
+    for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S GMT",
+                "%Y-%m-%dT%H:%M:%S%z", "%Y-%m-%dT%H:%M:%SZ"]:
+        try:
+            return datetime.strptime(raw.strip(), fmt).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return date.today().isoformat()
+
+
+def fetch_rss(url: str, from_date: str, to_date: str) -> list[dict]:
+    """
+    Fetch a real RSS feed and return articles in date range.
+    These are direct article URLs - no Google News redirect needed.
+    """
+    import xml.etree.ElementTree as ET
     try:
-        resp = requests.get(url, timeout=20, headers={"User-Agent": "TGPRBStudyBot/1.0"})
+        resp = requests.get(
+            url, timeout=15,
+            headers={"User-Agent": "Mozilla/5.0 TGPRBStudyBot/2.0"}
+        )
         resp.raise_for_status()
-        data = resp.json()
-        articles = data.get("articles", [])
-        print(f"  [GDELT] {len(articles)} articles")
-        results = []
-        for a in articles:
-            raw_date = a.get("seendate", "")[:8]
-            results.append({
-                "title": a.get("title", "").strip(),
-                "link":  a.get("url", "").strip(),
-                "pub_date": f"{raw_date[:4]}-{raw_date[4:6]}-{raw_date[6:8]}" if len(raw_date) >= 8 else date.today().isoformat(),
-                "source": a.get("domain", ""),
-            })
-        return results
-    except Exception as e:
-        print(f"  [GDELT] Error: {e}")
-        return []
-
-
-# -- PIB source ---------------------------------------------------------------
-
-def fetch_pib(keywords: str, from_date: str, to_date: str) -> list[dict]:
-    query = "+".join(keywords.split())
-    url = (
-        f"https://news.google.com/rss/search"
-        f"?q={query}+site:pib.gov.in"
-        f"&hl=en-IN&gl=IN&ceid=IN:en"
-        f"&after={from_date}&before={to_date}"
-    )
-    print(f"  [PIB] Querying via Google News site:pib.gov.in...")
-    try:
-        resp = requests.get(url, timeout=15, headers={"User-Agent": "TGPRBStudyBot/1.0"})
-        resp.raise_for_status()
-        import xml.etree.ElementTree as ET
         root = ET.fromstring(resp.content)
-        items = []
-        for item in root.findall(".//item"):
-            raw = item.findtext("pubDate", "").strip()
-            pub_date = date.today().isoformat()
-            for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S GMT"]:
-                try:
-                    pub_date = datetime.strptime(raw, fmt).strftime("%Y-%m-%d")
-                    break
-                except ValueError:
-                    continue
-            items.append({
-                "title": item.findtext("title", "").strip(),
-                "link": item.findtext("link", "").strip(),
-                "pub_date": pub_date,
-                "source": "pib.gov.in",
-            })
-        print(f"  [PIB] {len(items)} articles")
-        return items
     except Exception as e:
-        print(f"  [PIB] Error: {e}")
+        print(f"    [RSS] {url[:50]}... Error: {e}")
         return []
+
+    from_dt = datetime.strptime(from_date, "%Y-%m-%d").date()
+    to_dt   = datetime.strptime(to_date,   "%Y-%m-%d").date()
+
+    items = []
+    for item in root.findall(".//item"):
+        title = item.findtext("title", "").strip()
+        link  = item.findtext("link",  "").strip()
+        # RSS <link> can be CDATA or a text node
+        if not link:
+            link_el = item.find("link")
+            if link_el is not None:
+                link = (link_el.text or "").strip()
+        raw_date = item.findtext("pubDate", "") or item.findtext("{http://purl.org/dc/elements/1.1/}date", "")
+        pub_date = parse_rss_date(raw_date.strip()) if raw_date else date.today().isoformat()
+
+        # Date filter
+        try:
+            item_dt = datetime.strptime(pub_date, "%Y-%m-%d").date()
+            if item_dt < from_dt or item_dt > to_dt:
+                continue
+        except Exception:
+            pass
+
+        if title and link:
+            # Get domain for source name
+            try:
+                domain = re.sub(r"^www\.", "", requests.utils.urlparse(link).hostname or "")
+            except Exception:
+                domain = ""
+            items.append({
+                "title":    title,
+                "link":     link,
+                "pub_date": pub_date,
+                "source":   domain,
+            })
+
+    return items
+
+
+def fetch_all_sources(category: str, keywords: str, from_date: str, to_date: str) -> list[dict]:
+    """
+    Fetch articles from all RSS sources for this category,
+    then keyword-filter to keep relevant ones.
+    Falls back to Google News RSS if category has no dedicated feeds.
+    """
+    feeds = CATEGORY_FEEDS.get(category, [
+        "https://www.thehindu.com/news/national/feeder/default.rss",
+        "https://pib.gov.in/rss.aspx",
+    ])
+
+    kw_list = [k.lower() for k in keywords.split() if len(k) > 3]
+    all_items = []
+
+    for feed_url in feeds:
+        print(f"  [RSS] {feed_url[:55]}...")
+        items = fetch_rss(feed_url, from_date, to_date)
+        print(f"        -> {len(items)} in date range")
+        all_items.extend(items)
+        time.sleep(0.5)  # Be polite
+
+    # Keyword relevance filter (at least 1 keyword must match title)
+    relevant = []
+    for item in all_items:
+        title_lower = item["title"].lower()
+        if any(kw in title_lower for kw in kw_list):
+            relevant.append(item)
+
+    print(f"  Keyword-matched: {len(relevant)} / {len(all_items)}")
+    return relevant
 
 
 # -- Output -------------------------------------------------------------------
@@ -584,30 +693,10 @@ def backfill_category(cat_config: dict, from_date: str, to_date: str,
     print(f"\n{'='*60}")
     print(f"Backfilling: {category.upper()} - {topic}")
     print(f"Period: {from_date} to {to_date}")
+    print(f"Sources: Direct RSS (The Hindu, PIB, NDTV, Indian Express, etc.)")
 
-    # Collect articles from GDELT + PIB
-    start = datetime.strptime(from_date, "%Y-%m-%d").date()
-    end   = datetime.strptime(to_date,   "%Y-%m-%d").date()
-
-    all_items = []
-
-    # GDELT month by month
-    current = start
-    while current <= end:
-        month_end = min(
-            date(current.year, current.month % 12 + 1, 1) - timedelta(days=1)
-            if current.month < 12
-            else date(current.year + 1, 1, 1) - timedelta(days=1),
-            end
-        )
-        items = fetch_gdelt(keywords, current.isoformat(), month_end.isoformat())
-        all_items.extend(items)
-        current = month_end + timedelta(days=1)
-        time.sleep(1)
-
-    # PIB
-    pib_items = fetch_pib(keywords, from_date, to_date)
-    all_items.extend(pib_items)
+    # Fetch from real RSS feeds - no GDELT, no rate limits
+    all_items = fetch_all_sources(category, keywords, from_date, to_date)
 
     print(f"  Total raw: {len(all_items)}")
 
