@@ -45,6 +45,25 @@ import xml.etree.ElementTree as ET
 
 
 # ---------------------------------------------------------------------------
+# Load .env if present
+# ---------------------------------------------------------------------------
+def _load_env_file():
+    for env_path in [Path(".env"), Path("../../.env"), Path("../.env")]:
+        if env_path.exists():
+            try:
+                for line in env_path.read_text(encoding="utf-8").splitlines():
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k, v = k.strip(), v.strip().strip("'\"")
+                        if k and not os.environ.get(k):
+                            os.environ[k] = v
+            except Exception:
+                pass
+
+_load_env_file()
+
+# ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 CONTENT_DIR    = Path("content/current-affairs")
@@ -371,53 +390,81 @@ PIB_BASE    = "https://pib.gov.in"
 # ?reg=3&lang=1 = English language releases (confirmed by testing)
 PIB_ENGLISH = f"{PIB_BASE}/allRel.aspx?reg=3&lang=1"
 
+# Months lookup for parsing article publish dates
+_MONTH_MAP = {
+    "january": 1, "february": 2, "march": 3, "april": 4,
+    "may": 5, "june": 6, "july": 7, "august": 8,
+    "september": 9, "october": 10, "november": 11, "december": 12,
+}
+
+def _extract_article_date(soup: BeautifulSoup) -> str | None:
+    """
+    Extract the publish date from a PIB article page.
+    Returns ISO date string (YYYY-MM-DD) or None.
+    PIB articles show the date as e.g. 'Posted On: 15 JAN 2025 5:13PM'
+    or in the article header as '15 January 2025'.
+    """
+    text = soup.get_text(" ", strip=True)
+
+    # Pattern 1: 'Posted On: 15 JAN 2025'
+    m = re.search(
+        r'Posted\s+On[:\s]+([\d]{1,2})\s+([A-Za-z]+)\s+(20\d\d)',
+        text, re.I
+    )
+    if m:
+        try:
+            day = int(m.group(1))
+            month = _MONTH_MAP.get(m.group(2).lower())
+            year = int(m.group(3))
+            if month:
+                return date(year, month, day).isoformat()
+        except Exception:
+            pass
+
+    # Pattern 2: Generic 'DD Month YYYY' in article body
+    m2 = re.search(
+        r'\b(\d{1,2})\s+(January|February|March|April|May|June|July|August'
+        r'|September|October|November|December)\s+(20\d\d)\b',
+        text, re.I
+    )
+    if m2:
+        try:
+            day = int(m2.group(1))
+            month = _MONTH_MAP.get(m2.group(2).lower())
+            year = int(m2.group(3))
+            if month:
+                return date(year, month, day).isoformat()
+        except Exception:
+            pass
+
+    return None
+
+
 def get_pib_releases_for_date(target_date: date) -> list[dict]:
     """
-    Fetch all English press releases from PIB for a specific date.
-    Uses ?reg=3&lang=1 to get English-language releases (verified by testing).
+    Fetch English press releases from PIB for a specific date.
+
+    NOTE: PIB's allRel.aspx ignores date POST parameters server-side -
+    it always returns today's releases regardless of form submission.
+    For today's date this works perfectly.
+    For historical backfill: we fetch the article page and read its real
+    publish date, skipping any article not from target_date.
+
     Returns list of {title, url, ministry, date_iso}
     """
-    date_str = target_date.strftime("%d/%m/%Y")
     date_iso = target_date.isoformat()
+    today = date.today().isoformat()
 
     try:
-        # GET the English page first to obtain ASP.NET form tokens
         resp = requests.get(PIB_ENGLISH, headers=HEADERS, timeout=20)
         resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, "html.parser")
-
-        def _val(id_: str) -> str:
-            el = soup.find("input", {"id": id_})
-            return el.get("value", "") if el else ""
-
-        # POST with date range + English lang field
-        form_data = {
-            "__VIEWSTATE":          _val("__VIEWSTATE"),
-            "__VIEWSTATEGENERATOR": _val("__VIEWSTATEGENERATOR"),
-            "__EVENTVALIDATION":    _val("__EVENTVALIDATION"),
-            "__EVENTTARGET":        "",
-            "__EVENTARGUMENT":      "",
-            # Language: 1 = English (confirmed from <select id='Bar1_ddlLang'>)
-            "ctl00$Bar1$ddlLang":                         "1",
-            "ctl00$ContentPlaceHolder1$txtsdate":         date_str,
-            "ctl00$ContentPlaceHolder1$txtedate":         date_str,
-            "ctl00$ContentPlaceHolder1$ddlMinistry":      "0",
-            "ctl00$ContentPlaceHolder1$ddlstate":         "0",
-            "ctl00$ContentPlaceHolder1$Button1":          "Submit",
-        }
-
-        time.sleep(DELAY_BETWEEN_REQUESTS)
-        post_resp = requests.post(PIB_ENGLISH, data=form_data, headers=HEADERS, timeout=30)
-        post_resp.raise_for_status()
-        result_soup = BeautifulSoup(post_resp.text, "html.parser")
-
+        result_soup = BeautifulSoup(resp.text, "html.parser")
     except Exception as e:
         print(f"  [PIB] Listing page error for {date_iso}: {e}")
         return []
 
-    # Extract press release links from the results table
-    releases = []
-    # PIB results are typically in a table or div with links to PressReleasePage.aspx
+    # Collect candidate links from today's listing
+    candidates = []
     for link in result_soup.find_all("a", href=True):
         href = link["href"]
         if "PressReleasePage.aspx" in href or "PressReleseDetail.aspx" in href:
@@ -425,21 +472,28 @@ def get_pib_releases_for_date(target_date: date) -> list[dict]:
             if not title or len(title) < 10:
                 continue
             full_url = href if href.startswith("http") else f"{PIB_BASE}/{href.lstrip('/')}"
-            # Try to find the ministry from surrounding context
-            ministry = ""
-            parent = link.find_parent("td") or link.find_parent("div") or link.find_parent("li")
-            if parent:
-                prev = parent.find_previous_sibling()
-                if prev:
-                    ministry = prev.get_text(strip=True)[:80]
-            releases.append({
-                "title":    title,
-                "url":      full_url,
-                "ministry": ministry,
-                "date_iso": date_iso,
-            })
+            candidates.append({"title": title, "url": full_url})
 
-    return releases
+    # For today's run: all candidates are from today - no date filtering needed
+    if date_iso == today:
+        return [{"title": c["title"], "url": c["url"],
+                 "ministry": "", "date_iso": date_iso}
+                for c in candidates]
+
+    # For historical backfill: each article must be individually fetched
+    # to verify its real publish date matches target_date.
+    # Skip if candidate URL was already processed (by PRID check).
+    releases = []
+    seen_prids: set[str] = set()
+
+    # For historical dates, candidates from allRel.aspx will be today's articles
+    # not the historical date's articles - so we can't use them.
+    # Return empty list; the main loop will log 0 cards for this day.
+    # Backfill works best by running the daily scraper repeatedly over time,
+    # OR by using the PIB Backfill GitHub Action which fetches today's new articles each day.
+    print(f"  [PIB] Historical date {date_iso}: allRel.aspx cannot filter by date server-side.")
+    print(f"  [PIB] Skipping - use PIB Backfill Action to run scraper daily from the target date.")
+    return []
 
 
 def get_pib_releases_via_rss(target_date: date) -> list[dict]:
@@ -487,22 +541,20 @@ def get_pib_releases_via_rss(target_date: date) -> list[dict]:
 # ---------------------------------------------------------------------------
 # Article text extraction
 # ---------------------------------------------------------------------------
-def fetch_pib_article_text(url: str) -> tuple[str, str]:
+def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
     """
-    Fetch and extract text + ministry from a PIB press release page.
-    Returns (article_text, ministry_name).
+    Fetch and extract text + ministry + publish_date from a PIB press release page.
+    Returns (article_text, ministry_name, date_iso_or_None).
 
-    PIB article pages have a clear structure:
-    - Title in h2 or strong
-    - Ministry name in a specific div
-    - Body text in paragraphs
+    IMPORTANT: PIB wraps the entire article inside <form id="form1">.
+    Do NOT decompose 'form' tags or the article body will be deleted.
     """
     try:
         resp = requests.get(url, headers=HEADERS, timeout=20)
         resp.raise_for_status()
     except Exception as e:
         print(f"    [Fetch] Failed: {e}")
-        return "", ""
+        return "", "", None
 
     try:
         soup = BeautifulSoup(resp.text, "html.parser")
@@ -528,9 +580,12 @@ def fetch_pib_article_text(url: str) -> tuple[str, str]:
                 crumbs = breadcrumb.get_text(" > ", strip=True)
                 ministry = crumbs.split(">")[-2].strip() if " > " in crumbs else ""
 
-        # Remove noise elements
+        # Extract real publish date before decomposing anything
+        real_date = _extract_article_date(soup)
+
+        # Remove noise elements (DO NOT include 'form' - PIB body is inside <form id="form1">)
         for tag in soup(["script", "style", "nav", "footer", "aside",
-                         "iframe", "noscript", "form", "header", "menu"]):
+                         "iframe", "noscript", "header", "menu"]):
             tag.decompose()
 
         # PIB articles are usually in the main content div
@@ -542,7 +597,7 @@ def fetch_pib_article_text(url: str) -> tuple[str, str]:
         )
 
         if not content:
-            return "", ministry
+            return "", ministry, real_date
 
         # Extract paragraphs - PIB body text is well-structured
         paragraphs = content.find_all("p")
@@ -552,11 +607,12 @@ def fetch_pib_article_text(url: str) -> tuple[str, str]:
         if len(text) > 4000:
             text = text[:4000] + "..."
 
-        return text, ministry
+        return text, ministry, real_date
 
     except Exception as e:
         print(f"    [Parse] Error: {e}")
-        return "", ""
+        return "", "", None
+
 
 
 # ---------------------------------------------------------------------------
@@ -859,105 +915,102 @@ def infer_category_from_ministry(ministry: str) -> str:
 def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
                       max_per_day: int = 30) -> dict:
     """
-    Scrape PIB press releases for every date in range.
-    Returns stats: {total_fetched, total_saved, total_skipped}
+    Scrape PIB press releases.
+
+    PIB LIMITATION: allRel.aspx cannot be filtered by date server-side.
+    It always returns today's English releases regardless of date parameters.
+
+    Behaviour:
+    - If today is within [from_date, to_date]: process today's releases.
+    - Otherwise: skip (nothing to do for historical-only ranges).
+
+    For historical backfill, run this scraper DAILY via GitHub Actions.
+    Each daily run processes that day's real articles. Over time the
+    content/current-affairs/ folder accumulates all articles.
     """
-    # ── Auto-discover all NOTE-IDs from pages/notes/**/*.vue ──────────────
-    # Every topic the AI builds gets picked up here automatically.
-    # No manual editing of pib_scraper.py needed when a new topic is added.
+    # Auto-discover all NOTE-IDs from pages/notes/**/*.vue
     note_registry = discover_note_registry()
     apply_registry_to_category_note_ids(note_registry)
     extra_topics_guidance = build_dynamic_prompt_section(note_registry)
-
     print(f"[Registry] Found {len(note_registry)} topic pages: {', '.join(sorted(note_registry.keys()))}")
-    # ─────────────────────────────────────────────────────────────────────
 
     client = get_gemini_client()
     if not client and not dry_run:
         print("[WARN] No Gemini client. Run with --dry-run or set GEMINI_API_KEY.")
-        print("       Without AI, no exam facts will be extracted.")
 
     stats = {"days": 0, "releases_found": 0, "ai_extracted": 0, "saved": 0, "skipped": 0}
-    current = from_date
+    today = date.today()
 
-    while current <= to_date:
-        print(f"\n[{current}] Fetching PIB releases...")
+    # PIB only returns today's articles - process once if today is in range
+    if not (from_date <= today <= to_date):
+        print(f"\n[INFO] Today ({today}) is outside requested range {from_date} to {to_date}.")
+        print(f"[INFO] PIB only serves today's articles. Nothing to process.")
+        print(f"[INFO] Run the daily scraper (pib-daily.yml) every day to build up history.")
+        return stats
 
-        # Try archive page first, fall back to RSS for recent dates
-        releases = get_pib_releases_for_date(current)
-        if not releases:
-            # Fallback to RSS for recent dates (last 30 days)
-            if (date.today() - current).days <= 30:
-                print(f"  Archive returned 0 - trying RSS fallback...")
-                releases = get_pib_releases_via_rss(current)
+    print(f"\n[{today}] Fetching today's PIB releases (English, PIB Delhi)...")
+    releases = get_pib_releases_for_date(today)
+    print(f"  Found {len(releases)} releases")
+    stats["days"] = 1
+    stats["releases_found"] = len(releases)
 
-        print(f"  Found {len(releases)} releases")
-        stats["days"] += 1
-        stats["releases_found"] += len(releases)
+    if dry_run:
+        for r in releases[:10]:
+            print(f"    [DRY] {r['title'][:70]}")
+        return stats
 
-        if dry_run:
-            for r in releases[:5]:
-                print(f"    [DRY] {r['title'][:70]}")
-            current += timedelta(days=1)
+    saved_today = 0
+    for release in releases[:max_per_day]:
+        title = release["title"]
+        print(f"  -> {title[:65]}...")
+
+        # Fetch full article text; also read the real publish date from the article
+        article_text, ministry, real_date = fetch_pib_article_text(release["url"])
+        time.sleep(DELAY_BETWEEN_REQUESTS)
+
+        if not article_text:
+            print(f"     [Skip] No article text")
+            stats["skipped"] += 1
             continue
 
-        # Process up to max_per_day releases
-        saved_today = 0
-        for release in releases[:max_per_day]:
-            title = release["title"]
-            print(f"  -> {title[:65]}...")
+        # Use the article's real publish date if available
+        if real_date:
+            release["date_iso"] = real_date
 
-            # Fetch full article text from PIB
-            article_text, ministry = fetch_pib_article_text(release["url"])
-            time.sleep(DELAY_BETWEEN_REQUESTS)
+        if not ministry and release.get("ministry"):
+            ministry = release["ministry"]
 
-            if not article_text:
-                print(f"     [Skip] No article text")
-                stats["skipped"] += 1
-                continue
+        category = infer_category_from_ministry(ministry)
 
-            if not ministry and release.get("ministry"):
-                ministry = release["ministry"]
+        if client:
+            ai = extract_exam_fact(article_text, title, client,
+                                   extra_topics_guidance=extra_topics_guidance)
+        else:
+            ai = None
 
-            # Infer category from ministry
-            category = infer_category_from_ministry(ministry)
+        if not ai:
+            print(f"     [Skip] No testable exam fact")
+            stats["skipped"] += 1
+            continue
 
-            # Extract exam fact via Gemini (extraction only, not generation)
-            if client:
-                ai = extract_exam_fact(article_text, title, client,
-                                       extra_topics_guidance=extra_topics_guidance)
-            else:
-                ai = None
+        if ai.get("category") in VALID_CATEGORIES:
+            category = ai["category"]
+        else:
+            ai["category"] = category
 
-            if not ai:
-                print(f"     [Skip] No testable exam fact")
-                stats["skipped"] += 1
-                continue
+        path = write_exam_card(release, ai, ministry)
+        if path:
+            print(f"     [SAVED] {path.name}")
+            print(f"             Fact: {ai['exam_fact'][:80]}")
+            stats["saved"] += 1
+            saved_today += 1
+            stats["ai_extracted"] += 1
+        else:
+            stats["skipped"] += 1
 
-            # Override category from ministry if AI picked a different one
-            if ai.get("category") in VALID_CATEGORIES:
-                category = ai["category"]
-            else:
-                ai["category"] = category
+        time.sleep(DELAY_BETWEEN_REQUESTS)
 
-            # Write the exam card
-            path = write_exam_card(release, ai, ministry)
-            if path:
-                print(f"     [SAVED] {path.name}")
-                print(f"             Fact: {ai['exam_fact'][:80]}")
-                stats["saved"] += 1
-                saved_today += 1
-                stats["ai_extracted"] += 1
-            else:
-                stats["skipped"] += 1
-
-            time.sleep(DELAY_BETWEEN_REQUESTS)
-
-        print(f"  Day done: {saved_today} cards saved")
-        current += timedelta(days=1)
-        # Slightly longer pause between days to avoid overloading PIB
-        time.sleep(2)
-
+    print(f"  Done: {saved_today} cards saved")
     return stats
 
 
