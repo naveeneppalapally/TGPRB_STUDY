@@ -1,0 +1,58 @@
+name: Daily PIB Current Affairs Scraper
+
+on:
+  schedule:
+    # Runs daily at 01:30 UTC (7:00 AM IST)
+    - cron: '30 1 * * *'
+  workflow_dispatch:
+
+jobs:
+  pib-daily-scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 google-genai
+
+      - name: Calculate dates (yesterday to today)
+        id: dates
+        run: |
+          YESTERDAY=$(date -d "1 day ago" +%Y-%m-%d)
+          TODAY=$(date +%Y-%m-%d)
+          echo "from_date=$YESTERDAY" >> $GITHUB_OUTPUT
+          echo "to_date=$TODAY" >> $GITHUB_OUTPUT
+
+      - name: Run PIB Daily Scraper
+        env:
+          GOOGLE_CLOUD_PROJECT:               ${{ secrets.GOOGLE_CLOUD_PROJECT }}
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SA_KEY }}
+          GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 workers/scrapy-pib/pib_scraper.py \
+            --from "${{ steps.dates.outputs.from_date }}" \
+            --to "${{ steps.dates.outputs.to_date }}" \
+            --max-per-day 30
+
+      - name: Count new files
+        id: count
+        run: |
+          count=$(git status --short content/current-affairs/ | grep "^?" | wc -l)
+          echo "new_files=$count" >> $GITHUB_OUTPUT
+
+      - name: Commit and push new exam cards
+        if: steps.count.outputs.new_files != '0'
+        run: |
+          git config user.name  "PIB Daily Bot"
+          git config user.email "actions@github.com"
+          git add content/current-affairs/
+          git commit -m "add: daily PIB current affairs updates (${{ steps.count.outputs.new_files }} cards) [skip ci]"
+          git push
