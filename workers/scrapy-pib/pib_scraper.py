@@ -758,7 +758,6 @@ Press release text:
 If testable facts found, return ONLY this JSON (no markdown fences, no extra text):
 {{
   "summary": "2-3 sentences: what happened, why it matters for the exam.",
-  "event_date": "YYYY-MM-DD",
   "category": "appointments|international|economy|awards|sports|telangana|schemes|defence|science|judiciary|environment|books",
   "difficulty": "F|M|O",
   "exam_depth": "constable|si|both",
@@ -906,7 +905,9 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
         print(f"    [Skip] Duplicate event_key: {event_key}")
         return None
 
-    date_str = ai.get("event_date") or release["date_iso"]
+    # Always use PIB publication date - never trust Gemini's extracted event_date
+    # (Gemini often pulls a date mentioned inside the article body, not the pub date)
+    date_str = release["date_iso"]
     slug = make_slug(category, title, date_str)
     out_path = CONTENT_DIR / f"{slug}.md"
 
