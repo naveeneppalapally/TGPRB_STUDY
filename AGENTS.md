@@ -143,37 +143,36 @@ Replace `NOTE-GEO-DRAINAGE` with the exact NOTE ID for that page. The component 
 
 ### Does the scraper cover all topics automatically?
 
-NO. The scraper only covers these 7 topics out of the box:
+The primary source is **PIB** (`workers/scrapy-pib/pib_scraper.py`), which covers all topics in one run because it scrapes PIB date-by-date across all ministries - no per-topic feed needed.
 
-| NOTE ID | Feed status |
+| NOTE ID | PIB coverage |
 |---|---|
-| NOTE-GEO-DRAINAGE | Active |
-| NOTE-POL-CONSTITUTION | Active |
-| NOTE-ECO-GENERAL | Active |
-| NOTE-GEO-ENVIRONMENT | Active |
-| NOTE-TEL-GENERAL | Active (Telangana Today + Hans India + Hindu) |
-| NOTE-SCI-GENERAL | Active |
-| NOTE-HIS-GENERAL | Active |
-| All other NOTE-* IDs | NOT covered - only via Gemini multi-topic mapping |
+| NOTE-POL-CONSTITUTION | Yes - appointments, schemes, law, judiciary |
+| NOTE-ECO-GENERAL | Yes - Finance Ministry, RBI, MoSPI press releases |
+| NOTE-TEL-GENERAL | Partial - Telangana-specific news not on PIB; use Telangana Today |
+| NOTE-SCI-GENERAL | Yes - ISRO, DST, DRDO press releases |
+| NOTE-HIS-GENERAL | Rarely - use manually created entries |
+| NOTE-GEO-DRAINAGE | Rarely - use manually created entries |
+| NOTE-GEO-ENVIRONMENT | Partial - MoEFCC and NTCA press releases |
+| All other NOTE-* IDs | Via Gemini multi-topic mapping in pib_scraper.py |
 
-For new topics not listed above: the Gemini multi-topic mapper may still tag relevant articles (e.g., a story about Mountains might get tagged NOTE-GEO-MOUNTAINS if that ID exists in the prompt's extra_topics list). To add full coverage for a new topic, add a new entry to `TOPIC_FEEDS` in `workers/scrapy-pib/scraper.py` and add its NOTE ID to the Gemini prompt's extra_topics list.
+For Telangana-specific events (budget, local inaugurations, TG police, sports) not covered by PIB, create entries manually in `content/current-affairs/`.
 
-### News sources used - coverage assessment
+### News sources used - source hierarchy (never invert)
 
-| Source | How reached | Covers |
-|---|---|---|
-| The Hindu | Google News RSS | Polity, Economy, Science, International |
-| PIB (pib.gov.in) | Google News RSS | Official schemes, appointments, policies |
-| Indian Express | Google News RSS | General, National |
-| NDTV | Google News RSS | Breaking, Science, Defence |
-| Telangana Today | Direct site filter in TG feed | Telangana state news |
-| Hans India | Direct site filter in TG feed | Hyderabad local events |
-| Deccan Chronicle | Google News RSS | South India, Telangana |
-| Business Standard | Google News RSS | Economy, RBI, Budget |
-| Mongabay India | Google News RSS | Environment, Wildlife |
-| Drishti IAS | Google News incidental | Exam summaries (filtered out by AI scorer) |
+| Priority | Source | File | Covers |
+|---|---|---|---|
+| 1 (primary) | PIB (pib.gov.in) | `pib_scraper.py` | Appointments, awards, defence, ISRO, schemes, economy - ~65% of PYQ CA |
+| 2 (supplemental) | Direct RSS feeds | `scraper.py` | The Hindu, NDTV, Indian Express, Telangana Today, Hans India |
+| 3 (manual only) | Telangana official | Manual entries | TG budget, local inaugurations, TGPRB notices, TG police |
 
-Coverage gap: Sports results (Padma Awards, boxing, cricket) and local Hyderabad events (Formula-E, festivals) are covered only if they appear in the above sources. If a PYQ topic appears for which there is no feed, create entries manually in content/current-affairs/.
+**Why PIB first:** PYQ analysis of 10 papers shows PIB-sourced content covers appointments (22 questions), awards (16), defence (10), science (6), schemes (13) - all verifiable to official press releases. PIB copyright permits reproduction for educational use.
+
+**Why not GDELT:** GDELT API rate-limits after 1-2 requests (429 errors) when queried month-by-month. Removed permanently.
+
+**Why not Google News RSS for PIB:** Returns only 7 stale archived articles. PIB has its own archive at `pib.gov.in/allRel.aspx?reg=3&lang=1` that gives full date-wise English releases.
+
+Coverage gap: Sports results (boxing, cricket) and local Hyderabad events (Formula-E, festivals) are NOT on PIB. Create these entries manually or from Telangana Today.
 
 ### PYQ-based timeline rules (never change these without PYQ evidence)
 
@@ -202,41 +201,21 @@ When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS), do ALL 
 <CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" class="mb-8" />
 ```
 
-**Step 2 - Run the one-time historical backfill (Jan 2025 to today):**
+**Step 2 - Run the PIB historical backfill (Jan 2025 to today):**
+
+Go to GitHub Actions -> PIB Backfill (Manual) -> Run workflow:
+- `from_date`: 2025-01-01
+- `to_date`: (leave blank, defaults to today)
+- `max_per_day`: 30
+
+Or run locally (requires GEMINI_API_KEY):
 ```bash
-python3 workers/scrapy-pib/backfill.py \
-  --category environment \
-  --section "Geography" \
-  --topic "Forests of India" \
-  --note-ids NOTE-GEO-FORESTS \
-  --keywords "India forest wildlife deforestation national park biodiversity" \
-  --from 2025-01-01
+python3 workers/scrapy-pib/pib_scraper.py --from 2025-01-01
 ```
-Sources: GDELT (free archive, real articles) + PIB direct.
-The scraper reads each source article and extracts exam facts from the real text. Gemini is an extraction layer only - it does not generate or invent information.
+Sources: PIB official archive only (`pib.gov.in/allRel.aspx?reg=3&lang=1`).
+Gemini reads each real article text and extracts exam facts. It does not generate or invent information.
 
-**Step 3 - Add to daily scraper TOPIC_FEEDS in workers/scrapy-pib/scraper.py:**
-```python
-{
-    "url": "https://news.google.com/rss/search?q=India+forest+wildlife+national+park+deforestation+when:7d&hl=en-IN&gl=IN&ceid=IN:en",
-    "exam_section": "Geography",
-    "topic": "Forests of India",
-    "category": "environment",
-    "related_topic_ids": ["NOTE-GEO-FORESTS"],
-},
-```
-Without this step, only the backfill exists. No new articles will be added after today.
-
-**Step 4 - Commit everything together:**
-```bash
-git add pages/notes/.../topic.vue          # note page with CurrentAffairsStrip
-git add content/current-affairs/           # backfill output
-git add workers/scrapy-pib/scraper.py      # new TOPIC_FEEDS entry
-git commit -m "add: Forests of India note + CA backfill + daily feed"
-git push
-```
-
-**Step 5 - Verify in browser:**
+**Step 3 - Verify in browser:**
 Open the note page. The CurrentAffairsStrip must render at least one card.
 A topic is not done until this is visible. If strip is empty, check:
 - note-id prop matches the related_topic_ids in the .md files exactly
