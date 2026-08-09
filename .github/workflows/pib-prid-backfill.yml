@@ -1,0 +1,103 @@
+name: PIB PRID Backfill (Historical)
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_year_month:
+        description: "Start month (YYYY-MM), default: 2025-01"
+        required: false
+        default: "2025-01"
+      to_year_month:
+        description: "End month (YYYY-MM), default: 2026-08"
+        required: false
+        default: "2026-08"
+      max_per_day:
+        description: "Max cards per day (default: 30)"
+        required: false
+        default: "30"
+      coarse_step:
+        description: "PRID coarse scan step (default: 100)"
+        required: false
+        default: "100"
+
+jobs:
+  generate-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      months: ${{ steps.set-matrix.outputs.months }}
+    steps:
+      - name: Generate month list
+        id: set-matrix
+        run: |
+          from="${{ github.event.inputs.from_year_month || '2025-01' }}"
+          to="${{ github.event.inputs.to_year_month || '2026-08' }}"
+
+          months=()
+          current="$from"
+          while [[ "$current" <= "$to" ]]; do
+            months+=("$current")
+            current=$(date -d "${current}-01 +1 month" +%Y-%m)
+          done
+
+          json=$(printf '%s\n' "${months[@]}" | jq -R . | jq -sc .)
+          echo "months=$json" >> $GITHUB_OUTPUT
+          echo "Months: $json"
+
+  backfill-month:
+    needs: generate-matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      matrix:
+        month: ${{ fromJson(needs.generate-matrix.outputs.months) }}
+      max-parallel: 4   # 4 months in parallel, polite to PIB
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 google-genai
+
+      - name: Compute date range for month
+        id: dates
+        run: |
+          month="${{ matrix.month }}"
+          from_date="${month}-01"
+          to_date=$(date -d "${from_date} +1 month -1 day" +%Y-%m-%d)
+          echo "from_date=$from_date" >> $GITHUB_OUTPUT
+          echo "to_date=$to_date"     >> $GITHUB_OUTPUT
+          echo "Processing $from_date to $to_date"
+
+      - name: Run PRID backfill for ${{ matrix.month }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_CLOUD_PROJECT: ${{ secrets.GOOGLE_CLOUD_PROJECT }}
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          python3 workers/scrapy-pib/pib_backfill_prid.py \
+            --from "${{ steps.dates.outputs.from_date }}" \
+            --to   "${{ steps.dates.outputs.to_date }}" \
+            --max-per-day "${{ github.event.inputs.max_per_day || '30' }}" \
+            --coarse-step "${{ github.event.inputs.coarse_step || '100' }}" \
+            --delay 1.0
+
+      - name: Count new files
+        id: count
+        run: |
+          count=$(git status --short content/current-affairs/ | grep "^?" | wc -l)
+          echo "new_files=$count" >> $GITHUB_OUTPUT
+          echo "${{ matrix.month }}: $count new cards"
+
+      - name: Commit and push
+        if: steps.count.outputs.new_files != '0'
+        run: |
+          git config user.name  "PIB PRID Backfill Bot"
+          git config user.email "actions@github.com"
+          git add content/current-affairs/
+          git commit -m "add: PIB PRID backfill ${{ matrix.month }} (${{ steps.count.outputs.new_files }} cards) [skip ci]"
+          git push
