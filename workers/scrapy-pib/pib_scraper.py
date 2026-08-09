@@ -659,7 +659,7 @@ def extract_exam_fact(article_text: str, title: str, client,
             extra_topics_guidance=extra_topics_guidance,
         )
         response = client.models.generate_content(
-            model="gemini-2.0-flash",
+            model="gemini-2.5-flash",
             contents=prompt,
         )
         text = response.text.strip()
