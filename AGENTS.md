@@ -79,20 +79,25 @@ During local development, put a temporary copy in `public/images/subject/name.we
 ### How the system works (end to end)
 
 ```
-Google News RSS (7 topic feeds, daily)
+PIB archive (pib.gov.in/allRel.aspx?reg=3&lang=1)
         |
         v
-workers/scrapy-pib/scraper.py
-  - Gemini 3.6 Flash filters & scores each headline (0-10)
-  - Drops score < 6 (listicles, irrelevant, foreign sports)
-  - Detects is_telangana_focus (true/false)
-  - Maps extra topic IDs (Kaleshwaram -> Drainage + Telangana)
+workers/scrapy-pib/pib_scraper.py
+  - Fetches every English press release date-by-date
+  - Gemini reads full article text (extraction only, never generates)
+  - Step 1: Rejects tenders, condolences, ceremonial, Year-End Reviews
+  - Step 2: Checks against 12 PYQ-proven categories
+  - Step 3: Extracts exam_fact, mcq, difficulty (F/M/O), exam_depth
+  - Auto-discovers all NOTE-IDs from pages/notes/**/*.vue at startup
+  - Tags each card with matching NOTE-IDs automatically
         |
         v
-content/current-affairs/*.md  (auto-committed by GitHub Actions at 7am IST)
+content/current-affairs/*.md  (committed by GitHub Actions daily at 7am IST)
         |
         v
 CurrentAffairsStrip.vue  (fetches all, filters by note-id prop)
+  - Splits into "New since last visit" vs "Earlier"
+  - useTopicVisits: localStorage (instant) + Supabase (cloud sync)
         |
         v
 Note page shows relevant strip automatically
@@ -102,17 +107,34 @@ Note page shows relevant strip automatically
 
 ```yaml
 ---
-id: "CA-GEO-DRAIN-KENBETWA-20260715"
+id: "CA-ENV-INDIA-FOREST-COVER-20260809"
 type: "current_affair"
+category: "environment"                      # one of 12 PYQ categories
 exam_section: "Geography"
-topic: "Drainage System of India"
+topic: "Forests of India"
 related_topic_ids:
-  - "NOTE-GEO-DRAINAGE"
-  - "NOTE-TEL-GENERAL"       # optional - if relevant to Telangana too
-is_telangana_focus: false    # true = TG Focus badge shown on card
-headline: "Ken-Betwa River Interlinking Project Phase 1 begins"
-date: "2026-07-15"
-source_url: "https://thehindu.com/..."
+  - "NOTE-GEO-ENVIRONMENT"
+  - "NOTE-GEO-FORESTS"                       # auto-tagged by pib_scraper.py
+is_telangana_focus: false
+difficulty: "M"                              # F=Easy, M=Medium, O=Hard
+exam_depth: "both"                           # constable | si | both
+headline: "India's forest cover increased by 1,445 sq km in 2023"
+exam_fact: "India's total forest cover stood at 7,15,343 sq km as per FSI 2023."
+summary: "Forest Survey of India 2023 report key finding..."
+event_date: "2026-01-15"
+published_at: "2026-08-09T07:30:00+05:30"
+date: "2026-08-09"
+source_name: "PIB"
+source_type: "official"
+ministry: "Ministry of Environment Forest and Climate Change"
+canonical_source_url: "https://pib.gov.in/..."
+source_url: "https://pib.gov.in/..."
+event_key: "FSI-FOREST-COVER-2023"
+mcq:
+  question: "What was India's total forest cover according to FSI 2023?"
+  options: ["7,15,343 sq km", "6,98,150 sq km", "7,28,000 sq km", "7,10,000 sq km"]
+  answer: 0
+  explanation: "FSI 2023 report placed total forest cover at 7,15,343 sq km."
 ---
 ```
 
@@ -143,18 +165,13 @@ Replace `NOTE-GEO-DRAINAGE` with the exact NOTE ID for that page. The component 
 
 ### Does the scraper cover all topics automatically?
 
-The primary source is **PIB** (`workers/scrapy-pib/pib_scraper.py`), which covers all topics in one run because it scrapes PIB date-by-date across all ministries - no per-topic feed needed.
+**Yes - via auto-discovery.** `pib_scraper.py` scans `pages/notes/**/*.vue` at startup and finds every `<CurrentAffairsStrip note-id="NOTE-XXX" />`. No manual config needed when a new topic is built.
 
-| NOTE ID | PIB coverage |
-|---|---|
-| NOTE-POL-CONSTITUTION | Yes - appointments, schemes, law, judiciary |
-| NOTE-ECO-GENERAL | Yes - Finance Ministry, RBI, MoSPI press releases |
-| NOTE-TEL-GENERAL | Partial - Telangana-specific news not on PIB; use Telangana Today |
-| NOTE-SCI-GENERAL | Yes - ISRO, DST, DRDO press releases |
-| NOTE-HIS-GENERAL | Rarely - use manually created entries |
-| NOTE-GEO-DRAINAGE | Rarely - use manually created entries |
-| NOTE-GEO-ENVIRONMENT | Partial - MoEFCC and NTCA press releases |
-| All other NOTE-* IDs | Via Gemini multi-topic mapping in pib_scraper.py |
+How it works:
+1. `discover_note_registry()` scans all note pages, builds `{NOTE-ID: keywords}` map
+2. `apply_registry_to_category_note_ids()` adds discovered IDs to the category routing table
+3. `build_dynamic_prompt_section()` injects the full NOTE-ID list into Gemini's prompt
+4. Gemini reads the article and tags it with matching NOTE-IDs from the list
 
 For Telangana-specific events (budget, local inaugurations, TG police, sports) not covered by PIB, create entries manually in `content/current-affairs/`.
 
@@ -163,16 +180,13 @@ For Telangana-specific events (budget, local inaugurations, TG police, sports) n
 | Priority | Source | File | Covers |
 |---|---|---|---|
 | 1 (primary) | PIB (pib.gov.in) | `pib_scraper.py` | Appointments, awards, defence, ISRO, schemes, economy - ~65% of PYQ CA |
-| 2 (supplemental) | Direct RSS feeds | `scraper.py` | The Hindu, NDTV, Indian Express, Telangana Today, Hans India |
-| 3 (manual only) | Telangana official | Manual entries | TG budget, local inaugurations, TGPRB notices, TG police |
+| 2 (manual only) | Telangana official | Manual entries | TG budget, local inaugurations, TGPRB notices, TG police |
 
 **Why PIB first:** PYQ analysis of 10 papers shows PIB-sourced content covers appointments (22 questions), awards (16), defence (10), science (6), schemes (13) - all verifiable to official press releases. PIB copyright permits reproduction for educational use.
 
-**Why not GDELT:** GDELT API rate-limits after 1-2 requests (429 errors) when queried month-by-month. Removed permanently.
+**Why not GDELT or Google News RSS:** GDELT rate-limits after 1-2 requests (429 errors). Google News RSS returns only 7 stale articles for PIB. Both removed permanently. PIB has its own date-wise archive at `pib.gov.in/allRel.aspx?reg=3&lang=1`.
 
-**Why not Google News RSS for PIB:** Returns only 7 stale archived articles. PIB has its own archive at `pib.gov.in/allRel.aspx?reg=3&lang=1` that gives full date-wise English releases.
-
-Coverage gap: Sports results (boxing, cricket) and local Hyderabad events (Formula-E, festivals) are NOT on PIB. Create these entries manually or from Telangana Today.
+Coverage gap: Sports results (boxing, cricket) and local Hyderabad events are NOT on PIB. Create these entries manually or from Telangana Today.
 
 ### PYQ-based timeline rules (never change these without PYQ evidence)
 
@@ -194,12 +208,13 @@ High-yield PYQ categories (build feeds for these first if adding new ones):
 
 ### Per-topic current affairs checklist (run when building any new note)
 
-When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS), do ALL of these steps:
+When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS):
 
 **Step 1 - Wire the strip on the note page:**
 ```html
 <CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" class="mb-8" />
 ```
+That is all the scraper needs. It auto-discovers this NOTE-ID on the next run.
 
 **Step 2 - Run the PIB historical backfill (Jan 2025 to today):**
 
@@ -208,12 +223,9 @@ Go to GitHub Actions -> PIB Backfill (Manual) -> Run workflow:
 - `to_date`: (leave blank, defaults to today)
 - `max_per_day`: 30
 
-Or run locally (requires GEMINI_API_KEY):
-```bash
-python3 workers/scrapy-pib/pib_scraper.py --from 2025-01-01
-```
-Sources: PIB official archive only (`pib.gov.in/allRel.aspx?reg=3&lang=1`).
-Gemini reads each real article text and extracts exam facts. It does not generate or invent information.
+The scraper auto-discovers NOTE-GEO-FORESTS from the Vue file and tags matching articles automatically. No editing of `pib_scraper.py` needed.
+
+After this: the daily scraper (`pib-daily.yml`, runs 7am IST) keeps the strip updated forever.
 
 **Step 3 - Verify in browser:**
 Open the note page. The CurrentAffairsStrip must render at least one card.
@@ -221,6 +233,14 @@ A topic is not done until this is visible. If strip is empty, check:
 - note-id prop matches the related_topic_ids in the .md files exactly
 - content.config.ts has the current_affair collection defined
 - Dev server restarted after adding new .md files
+
+### New-since-last-visit tracking
+
+`useTopicVisits` composable tracks per-user last-seen timestamps:
+- Layer 1: localStorage (instant, offline, no auth needed)
+- Layer 2: Supabase `topic_visits` table (cloud sync when logged in)
+
+Cards split automatically into "New since last visit" (saffron highlight) and "Earlier" (collapsed). First visit shows all cards under "Earlier" - never floods with backlog.
 
 
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
