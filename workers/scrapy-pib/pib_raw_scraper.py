@@ -43,7 +43,7 @@ USER_AGENTS = [
 
 PRID_ANCHOR_START_DATE = date(2025, 1, 1);  PRID_ANCHOR_START = 2_090_000
 PRID_ANCHOR_END_DATE   = date(2026, 8, 9);  PRID_ANCHOR_END   = 2_296_000
-PRID_PADDING   = 3_000
+PRID_PADDING   = 10_000   # Must be large enough to cover interpolation error (~5k mid-range)
 MAX_TEXT_CHARS = 12_000
 
 MONTHS = {"jan":1,"january":1,"feb":2,"february":2,"mar":3,"march":3,"apr":4,"april":4,"may":5,
