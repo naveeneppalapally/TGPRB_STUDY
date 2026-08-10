@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
 """
-PIB Raw Article Scraper - stores ALL PIB articles into a local SQLite database.
+PIB Raw Article Scraper - Rate-Limit Proof Multi-Threaded Scraper
 
-Multi-threaded raw scraper (NO Gemini, NO API costs).
-Stores every English PIB Delhi article:
-  prid, title, pub_date, ministry, office, full_text, url, word_count
-
-Resumable: already-scraped PRIDs are skipped on re-run.
+Features:
+  - User-Agent Rotation (Chrome, Firefox, Safari, Edge)
+  - Token Bucket Rate Limiting (prevents server bans)
+  - Exponential Backoff + Jitter on HTTP 429/503/Timeouts
+  - Auto-Cooldown Pause on Consecutive Errors
+  - SQLite storage (resumable)
 
 Usage:
   python3 workers/scrapy-pib/pib_raw_scraper.py                        # full 20 months
-  python3 workers/scrapy-pib/pib_raw_scraper.py --from 2025-01-01 --to 2025-06-30 --workers 15
+  python3 workers/scrapy-pib/pib_raw_scraper.py --from 2025-01-01 --to 2025-06-30 --workers 10 --rps 12
   python3 workers/scrapy-pib/pib_raw_scraper.py --stats
   python3 workers/scrapy-pib/pib_raw_scraper.py --export pib_raw.csv
 
-Output: workers/scrapy-pib/pib_raw.db  (SQLite, ~500MB for 20 months)
+Output: workers/scrapy-pib/pib_raw.db (SQLite)
 """
 from __future__ import annotations
-import argparse, csv, re, sqlite3, time, unicodedata
+import argparse, csv, random, re, sqlite3, threading, time, unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -30,7 +31,15 @@ DB_PATH    = SCRIPT_DIR / "pib_raw.db"
 
 PIB_BASE    = "https://pib.gov.in"
 ARTICLE_URL = f"{PIB_BASE}/PressReleasePage.aspx?PRID={{}}&reg=3&lang=1"
-HEADERS     = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/124.0", "Accept-Language": "en-US,en;q=0.9"}
+
+USER_AGENTS = [
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+    "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0",
+]
 
 PRID_ANCHOR_START_DATE = date(2025, 1, 1);  PRID_ANCHOR_START = 2_090_000
 PRID_ANCHOR_END_DATE   = date(2026, 8, 9);  PRID_ANCHOR_END   = 2_296_000
@@ -66,6 +75,37 @@ class ArticleRecord:
     prid: int; title: str; pub_date: date
     ministry: str; office: str; full_text: str; url: str
 
+
+class RateLimiter:
+    """Thread-safe Token Bucket Rate Limiter to prevent rate-limiting bans."""
+    def __init__(self, max_rps: float):
+        self.interval = 1.0 / max_rps if max_rps > 0 else 0
+        self.lock = threading.Lock()
+        self.last_call = time.time()
+        self.consecutive_errors = 0
+
+    def wait(self):
+        if self.interval <= 0: return
+        with self.lock:
+            now = time.time()
+            elapsed = now - self.last_call
+            if elapsed < self.interval:
+                time.sleep(self.interval - elapsed)
+            self.last_call = time.time()
+
+    def record_error(self):
+        with self.lock:
+            self.consecutive_errors += 1
+            if self.consecutive_errors >= 5:
+                print("\n  [!] Rate limit / network pressure detected. Cooling down for 8 seconds...", flush=True)
+                time.sleep(8.0)
+                self.consecutive_errors = 0
+
+    def record_success(self):
+        with self.lock:
+            self.consecutive_errors = max(0, self.consecutive_errors - 1)
+
+
 def open_db():
     con = sqlite3.connect(DB_PATH, timeout=30.0)
     con.executescript(SCHEMA)
@@ -86,15 +126,31 @@ def latin_ratio(text):
     letters = [c for c in text if c.isalpha()]
     return 0.0 if not letters else sum(unicodedata.name(c,"").startswith("LATIN") for c in letters)/len(letters)
 
-def fetch_prid(session: requests.Session, prid: int) -> tuple[int, BeautifulSoup | None, str]:
+def fetch_prid(session: requests.Session, prid: int, rate_limiter: RateLimiter, max_retries: int = 3) -> tuple[int, BeautifulSoup | None, str]:
     url = ARTICLE_URL.format(prid)
-    try:
-        resp = session.get(url, timeout=15)
-        if resp.status_code != 200:
-            return prid, None, url
-        return prid, BeautifulSoup(resp.text, "lxml"), url
-    except Exception:
-        return prid, None, url
+    headers = {"User-Agent": random.choice(USER_AGENTS), "Accept-Language": "en-US,en;q=0.9"}
+
+    for attempt in range(max_retries):
+        rate_limiter.wait()
+        try:
+            resp = session.get(url, headers=headers, timeout=12)
+            if resp.status_code == 429 or resp.status_code == 503:
+                rate_limiter.record_error()
+                backoff = (2 ** attempt) + random.uniform(0.5, 1.5)
+                time.sleep(backoff)
+                continue
+            if resp.status_code != 200:
+                return prid, None, url
+
+            rate_limiter.record_success()
+            return prid, BeautifulSoup(resp.text, "lxml"), url
+        except Exception:
+            rate_limiter.record_error()
+            if attempt < max_retries - 1:
+                backoff = (1.5 ** attempt) + random.uniform(0.3, 1.0)
+                time.sleep(backoff)
+
+    return prid, None, url
 
 def extract_date_only(soup: BeautifulSoup) -> date | None:
     if not soup: return None
@@ -155,11 +211,12 @@ def estimate_prid(target: date) -> int:
     total_prids = PRID_ANCHOR_END - PRID_ANCHOR_START
     return PRID_ANCHOR_START + round((target - PRID_ANCHOR_START_DATE).days * total_prids / total_days)
 
-def scan_and_store(from_date: date, to_date: date, workers: int, coarse_step: int, con: sqlite3.Connection):
+def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coarse_step: int, con: sqlite3.Connection):
     start_prid = max(1, estimate_prid(from_date) - PRID_PADDING)
     end_prid   = estimate_prid(to_date) + PRID_PADDING
+    rate_limiter = RateLimiter(max_rps=rps)
 
-    print(f"\n{'='*60}\nPIB Multi-Threaded Raw Scraper ({workers} workers)\n{'='*60}")
+    print(f"\n{'='*60}\nPIB Rate-Limit Proof Raw Scraper ({workers} workers, max {rps} req/sec)\n{'='*60}")
     print(f"Dates      : {from_date} to {to_date}")
     print(f"PRIDs      : {start_prid} to {end_prid}")
     print(f"Coarse step: {coarse_step}")
@@ -171,9 +228,9 @@ def scan_and_store(from_date: date, to_date: date, workers: int, coarse_step: in
     coarse_prids = list(range(start_prid, end_prid + 1, coarse_step))
     date_clusters: dict[date, list[int]] = {}
 
-    session = requests.Session(); session.headers.update(HEADERS)
+    session = requests.Session()
     with ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(fetch_prid, session, p): p for p in coarse_prids}
+        futures = {executor.submit(fetch_prid, session, p, rate_limiter): p for p in coarse_prids}
         for fut in as_completed(futures):
             stats["probes"] += 1
             prid, soup, _ = fut.result()
@@ -195,10 +252,10 @@ def scan_and_store(from_date: date, to_date: date, workers: int, coarse_step: in
             if not already_scraped(con, p) and p not in to_scan:
                 to_scan.append(p)
 
-    print(f"[Dense] Scanning {len(to_scan)} candidate PRIDs using {workers} threads...", flush=True)
+    print(f"[Dense] Scanning {len(to_scan)} candidate PRIDs...", flush=True)
 
     with ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(fetch_prid, session, p): p for p in to_scan}
+        futures = {executor.submit(fetch_prid, session, p, rate_limiter): p for p in to_scan}
         for fut in as_completed(futures):
             stats["probes"] += 1
             prid, soup, url = fut.result()
@@ -228,10 +285,11 @@ def cmd_export(con, out_path):
     print(f"Exported {len(rows):,} articles to {out_path}")
 
 def main():
-    parser = argparse.ArgumentParser(description="PIB multi-threaded raw scraper -> SQLite")
+    parser = argparse.ArgumentParser(description="PIB rate-limit proof raw scraper -> SQLite")
     parser.add_argument("--from",  dest="from_date", default="2025-01-01")
     parser.add_argument("--to",    dest="to_date",   default=datetime.now().strftime("%Y-%m-%d"))
-    parser.add_argument("--workers", type=int, default=15, help="Concurrent worker threads (default: 15)")
+    parser.add_argument("--workers", type=int, default=10, help="Concurrent worker threads (default: 10)")
+    parser.add_argument("--rps",     type=float, default=15.0, help="Max requests per second (default: 15)")
     parser.add_argument("--coarse-step", type=int, default=80)
     parser.add_argument("--stats",  action="store_true")
     parser.add_argument("--export", metavar="FILE")
@@ -243,7 +301,7 @@ def main():
 
     from_date = datetime.strptime(args.from_date, "%Y-%m-%d").date()
     to_date   = datetime.strptime(args.to_date,   "%Y-%m-%d").date()
-    stats = scan_and_store(from_date, to_date, args.workers, args.coarse_step, con)
+    stats = scan_and_store(from_date, to_date, args.workers, args.rps, args.coarse_step, con)
     print(f"\n{'='*60}\nDONE\nProbes : {stats['probes']}\nSaved  : {stats['saved']}\n{'='*60}")
     cmd_stats(con)
 
