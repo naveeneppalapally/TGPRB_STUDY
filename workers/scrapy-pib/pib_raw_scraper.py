@@ -211,13 +211,16 @@ def estimate_prid(target: date) -> int:
     total_prids = PRID_ANCHOR_END - PRID_ANCHOR_START
     return PRID_ANCHOR_START + round((target - PRID_ANCHOR_START_DATE).days * total_prids / total_days)
 
-def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coarse_step: int, con: sqlite3.Connection):
-    start_prid = max(1, estimate_prid(from_date) - PRID_PADDING)
+def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coarse_step: int, con: sqlite3.Connection, scan_from: date | None = None):
+    # scan_from controls PRID estimation (wider net); from_date controls what gets SAVED
+    prid_start_date = scan_from if scan_from else from_date
+    start_prid = max(1, estimate_prid(prid_start_date) - PRID_PADDING)
     end_prid   = estimate_prid(to_date) + PRID_PADDING
     rate_limiter = RateLimiter(max_rps=rps)
 
     print(f"\n{'='*60}\nPIB Rate-Limit Proof Raw Scraper ({workers} workers, max {rps} req/sec)\n{'='*60}")
-    print(f"Dates      : {from_date} to {to_date}")
+    print(f"Save range : {from_date} to {to_date}")
+    print(f"Scan from  : {prid_start_date} (PRID estimation anchor)")
     print(f"PRIDs      : {start_prid} to {end_prid}")
     print(f"Coarse step: {coarse_step}")
     print(f"Output DB  : {DB_PATH}\n{'='*60}", flush=True)
@@ -225,6 +228,7 @@ def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coa
     stats = {"saved": 0, "skipped_db": 0, "probes": 0}
 
     # STEP 1: Fast multi-threaded coarse scan
+    # Search for ANY date in prid_start_date→to_date window to build clusters
     coarse_prids = list(range(start_prid, end_prid + 1, coarse_step))
     date_clusters: dict[date, list[int]] = {}
 
@@ -236,7 +240,8 @@ def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coa
             prid, soup, _ = fut.result()
             if soup:
                 pub_date = extract_date_only(soup)
-                if pub_date and from_date <= pub_date <= to_date:
+                # Collect clusters for the full scan window (not just save window)
+                if pub_date and prid_start_date <= pub_date <= to_date:
                     date_clusters.setdefault(pub_date, []).append(prid)
 
     print(f"\n[Coarse] Found {len(date_clusters)} date clusters across {len(coarse_prids)} probes", flush=True)
@@ -286,11 +291,17 @@ def cmd_export(con, out_path):
 
 def main():
     parser = argparse.ArgumentParser(description="PIB rate-limit proof raw scraper -> SQLite")
-    parser.add_argument("--from",  dest="from_date", default="2025-01-01")
-    parser.add_argument("--to",    dest="to_date",   default=datetime.now().strftime("%Y-%m-%d"))
-    parser.add_argument("--workers", type=int, default=10, help="Concurrent worker threads (default: 10)")
-    parser.add_argument("--rps",     type=float, default=20.0, help="Max requests per second (default: 20)")
-    parser.add_argument("--coarse-step", type=int, default=80)
+    parser.add_argument("--from",      dest="from_date",  default="2025-01-01",
+                        help="Start date to SAVE (YYYY-MM-DD)")
+    parser.add_argument("--to",        dest="to_date",    default=datetime.now().strftime("%Y-%m-%d"),
+                        help="End date to SAVE (YYYY-MM-DD)")
+    parser.add_argument("--scan-from", dest="scan_from",  default=None,
+                        help="Earlier date for PRID scan start (YYYY-MM-DD). "
+                             "Set 1 month before --from to guarantee full month coverage. "
+                             "Saves only articles in --from..--to range.")
+    parser.add_argument("--workers",     type=int,   default=10)
+    parser.add_argument("--rps",         type=float, default=20.0)
+    parser.add_argument("--coarse-step", type=int,   default=80)
     parser.add_argument("--stats",  action="store_true")
     parser.add_argument("--export", metavar="FILE")
     args = parser.parse_args()
@@ -301,7 +312,8 @@ def main():
 
     from_date = datetime.strptime(args.from_date, "%Y-%m-%d").date()
     to_date   = datetime.strptime(args.to_date,   "%Y-%m-%d").date()
-    stats = scan_and_store(from_date, to_date, args.workers, args.rps, args.coarse_step, con)
+    scan_from = datetime.strptime(args.scan_from,  "%Y-%m-%d").date() if args.scan_from else None
+    stats = scan_and_store(from_date, to_date, args.workers, args.rps, args.coarse_step, con, scan_from=scan_from)
     print(f"\n{'='*60}\nDONE\nProbes : {stats['probes']}\nSaved  : {stats['saved']}\n{'='*60}")
     cmd_stats(con)
 

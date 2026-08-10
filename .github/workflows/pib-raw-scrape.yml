@@ -2,15 +2,6 @@ name: PIB Raw Articles Scraper (Full Data Engine)
 
 on:
   workflow_dispatch:
-    inputs:
-      from_date:
-        description: "Override start date YYYY-MM-DD (leave blank to run all 20 months)"
-        required: false
-        default: ""
-      to_date:
-        description: "Override end date YYYY-MM-DD (leave blank to run all 20 months)"
-        required: false
-        default: ""
 
 jobs:
   scrape-chunks:
@@ -22,26 +13,28 @@ jobs:
       max-parallel: 20
       matrix:
         chunk:
-          - { name: "2025-01", from: "2025-01-01", to: "2025-01-31" }
-          - { name: "2025-02", from: "2025-02-01", to: "2025-02-28" }
-          - { name: "2025-03", from: "2025-03-01", to: "2025-03-31" }
-          - { name: "2025-04", from: "2025-04-01", to: "2025-04-30" }
-          - { name: "2025-05", from: "2025-05-01", to: "2025-05-31" }
-          - { name: "2025-06", from: "2025-06-01", to: "2025-06-30" }
-          - { name: "2025-07", from: "2025-07-01", to: "2025-07-31" }
-          - { name: "2025-08", from: "2025-08-01", to: "2025-08-31" }
-          - { name: "2025-09", from: "2025-09-01", to: "2025-09-30" }
-          - { name: "2025-10", from: "2025-10-01", to: "2025-10-31" }
-          - { name: "2025-11", from: "2025-11-01", to: "2025-11-30" }
-          - { name: "2025-12", from: "2025-12-01", to: "2025-12-31" }
-          - { name: "2026-01", from: "2026-01-01", to: "2026-01-31" }
-          - { name: "2026-02", from: "2026-02-01", to: "2026-02-28" }
-          - { name: "2026-03", from: "2026-03-01", to: "2026-03-31" }
-          - { name: "2026-04", from: "2026-04-01", to: "2026-04-30" }
-          - { name: "2026-05", from: "2026-05-01", to: "2026-05-31" }
-          - { name: "2026-06", from: "2026-06-01", to: "2026-06-30" }
-          - { name: "2026-07", from: "2026-07-01", to: "2026-07-31" }
-          - { name: "2026-08", from: "2026-08-01", to: "2026-08-10" }
+          # --from/--to  = exact save window (1 full month)
+          # --scan-from  = 1 month earlier so PRID estimation always starts before month day 1
+          - { name: "2025-01", from: "2025-01-01", to: "2025-01-31", scan_from: "2024-12-01" }
+          - { name: "2025-02", from: "2025-02-01", to: "2025-02-28", scan_from: "2025-01-01" }
+          - { name: "2025-03", from: "2025-03-01", to: "2025-03-31", scan_from: "2025-02-01" }
+          - { name: "2025-04", from: "2025-04-01", to: "2025-04-30", scan_from: "2025-03-01" }
+          - { name: "2025-05", from: "2025-05-01", to: "2025-05-31", scan_from: "2025-04-01" }
+          - { name: "2025-06", from: "2025-06-01", to: "2025-06-30", scan_from: "2025-05-01" }
+          - { name: "2025-07", from: "2025-07-01", to: "2025-07-31", scan_from: "2025-06-01" }
+          - { name: "2025-08", from: "2025-08-01", to: "2025-08-31", scan_from: "2025-07-01" }
+          - { name: "2025-09", from: "2025-09-01", to: "2025-09-30", scan_from: "2025-08-01" }
+          - { name: "2025-10", from: "2025-10-01", to: "2025-10-31", scan_from: "2025-09-01" }
+          - { name: "2025-11", from: "2025-11-01", to: "2025-11-30", scan_from: "2025-10-01" }
+          - { name: "2025-12", from: "2025-12-01", to: "2025-12-31", scan_from: "2025-11-01" }
+          - { name: "2026-01", from: "2026-01-01", to: "2026-01-31", scan_from: "2025-12-01" }
+          - { name: "2026-02", from: "2026-02-01", to: "2026-02-28", scan_from: "2026-01-01" }
+          - { name: "2026-03", from: "2026-03-01", to: "2026-03-31", scan_from: "2026-02-01" }
+          - { name: "2026-04", from: "2026-04-01", to: "2026-04-30", scan_from: "2026-03-01" }
+          - { name: "2026-05", from: "2026-05-01", to: "2026-05-31", scan_from: "2026-04-01" }
+          - { name: "2026-06", from: "2026-06-01", to: "2026-06-30", scan_from: "2026-05-01" }
+          - { name: "2026-07", from: "2026-07-01", to: "2026-07-31", scan_from: "2026-06-01" }
+          - { name: "2026-08", from: "2026-08-01", to: "2026-08-10", scan_from: "2026-07-01" }
 
     steps:
       - name: Checkout repository
@@ -59,15 +52,11 @@ jobs:
         env:
           PYTHONUNBUFFERED: "1"
         run: |
-          FROM="${{ github.event.inputs.from_date }}"
-          TO="${{ github.event.inputs.to_date }}"
-          # Use matrix dates unless user overrode them
-          FROM=${FROM:-"${{ matrix.chunk.from }}"}
-          TO=${TO:-"${{ matrix.chunk.to }}"}
           python3 workers/scrapy-pib/pib_raw_scraper.py \
-            --from "$FROM" \
-            --to   "$TO"   \
-            --workers 20   \
+            --from      "${{ matrix.chunk.from }}"      \
+            --to        "${{ matrix.chunk.to }}"        \
+            --scan-from "${{ matrix.chunk.scan_from }}" \
+            --workers 20 \
             --rps 20.0
 
       - name: Show results
@@ -110,7 +99,7 @@ jobs:
       - name: Merge all CSVs → master SQLite + CSV
         run: |
           python3 - << 'EOF'
-          import csv, glob, sqlite3, os, sys
+          import csv, glob, sqlite3, os
 
           DB_OUT  = "pib_master_2025_2026.db"
           CSV_OUT = "pib_master_2025_2026.csv"
@@ -155,13 +144,12 @@ jobs:
           con.commit()
           db_mb  = os.path.getsize(DB_OUT)  / (1024*1024)
           csv_mb = os.path.getsize(CSV_OUT) / (1024*1024)
-          print(f"\n✅ DONE: {total:,} total articles")
-          print(f"   SQLite DB : {DB_OUT}  ({db_mb:.1f} MB)")
-          print(f"   CSV       : {CSV_OUT} ({csv_mb:.1f} MB)")
+          print(f"\nDONE: {total:,} total articles")
+          print(f"  SQLite: {DB_OUT} ({db_mb:.1f} MB)")
+          print(f"  CSV   : {CSV_OUT} ({csv_mb:.1f} MB)")
 
-          # Quick stats
           rows = con.execute("SELECT MIN(pub_date), MAX(pub_date), COUNT(*) FROM articles").fetchone()
-          print(f"   Date range: {rows[0]} to {rows[1]} ({rows[2]:,} articles)")
+          print(f"  Range : {rows[0]} to {rows[1]} ({rows[2]:,} unique articles)")
           print("\nTop ministries:")
           for m, c in con.execute("SELECT ministry, COUNT(*) n FROM articles WHERE ministry!='' GROUP BY ministry ORDER BY n DESC LIMIT 10"):
               print(f"  {c:5d}  {m}")
