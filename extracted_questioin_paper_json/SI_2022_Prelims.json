@@ -1,0 +1,2420 @@
+[
+  {
+    "q_no": 1,
+    "question": "A person invested an amount of ₹ X at the rate of 18% simple interest per annum and an amount of ₹ Y at the rate of 12% simple interest per annum. He received an interest of ₹4,320/- at the end of the year. Had he interchanged the amounts invested, he would have received an interest of ₹4,680/-. Then |X-Y|=",
+    "options": [
+      "₹9,500/-",
+      "₹8,000/-",
+      "₹7,500/-",
+      "₹6,000/-"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 2,
+    "question": "The ratio of a principal and the total amount with r% simple interest rate on that principal after 1 year is a : b then value of r in terms of a, b is",
+    "options": [
+      "(b-a)/a ×100",
+      "(b-a)/b ×100",
+      "(b-a)/(b+a) ×100",
+      "(b+a)/(b-a) ×100"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 3,
+    "question": "A person invested ₹18,000 at the rate of 20% compound interest per annum. Then the interest he gets after completing the duration of two years is",
+    "options": [
+      "₹7,920",
+      "₹4,320",
+      "₹6,750",
+      "₹8,670"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 4,
+    "question": "A building of initial value Rs. 31,25,000 depreciates in its value every year at the rate of 4% on its value at the beginning of the year. If Rs. x is the value of the building at the end of 3 years and Rs. y is the value of the land which appreciates at the rate of 5% compoundingly and the value of the land initially is Rs 32,00,000 then y - x =",
+    "options": [
+      "609700",
+      "939600",
+      "600000",
+      "508900"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 5,
+    "question": "If T_n = T_{n-1} + T_{n-2} ∀n≥3 and T_1 = T_2 = 1 then T_1 + T_2 + ... + T_{10} =",
+    "options": [
+      "T_{11} + 4",
+      "T_{12} - 1",
+      "T_{12} + 1",
+      "T_9 + T_{11}"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 6,
+    "question": "Certain amount 'x' is distributed to three persons A, B, C. A gets 25% share of x. Twice the difference of B and C is equal to the share of A. Then the ratio in which A, B, C get the amounts is",
+    "options": [
+      "26:72:59",
+      "4:7:5",
+      "8:13:9",
+      "2:7:6"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 7,
+    "question": "The averages of 3 different data D₁, D₂, D₃ are 30, 40, 50 respectively. If the average of D₁ and D₂ together is 38 and that of D₂ and D₃ together is 42, then the average of the three data D₁, D₂ and D₃ together is",
+    "options": [
+      "44.53",
+      "42",
+      "43.12",
+      "40"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 8,
+    "question": "In a police battalion of 600 police, the average height is 150 cm. Later it is discovered that for x policemen heights are copied wrongly as 160 cm instead of 190 cm. By taking the Correct heights, the average is increased to 155 cm. Then x =",
+    "options": [
+      "120",
+      "100",
+      "180",
+      "150"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 9,
+    "question": "The marked price of a newly arrived article shows an increase of 15% on its cost price. Later this marked price was decreased by 20% as the article is outdated. If the cost price of the article is ₹1,200 then the profit or loss for the shopkeeper with the current selling price is",
+    "options": [
+      "5% loss",
+      "8% loss",
+      "10% gain",
+      "7% gain"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 10,
+    "question": "A sum of ₹ 5,600 is distributed among 12 people consisting of men, women and children. The ratio of the total amounts given to all men, all women and all children is 9:4:1. But the ratio of the amounts received by each man, woman and child is 3: 2: 1. Then the amount received by each women is",
+    "options": [
+      "₹250",
+      "₹300",
+      "₹400",
+      "₹450"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 11,
+    "question": "A shopkeeper sells his goods at 30% profit on cost price. Due to an error in weighing machine, it weighs 20% more than what it displays on its screen. Then the profit or loss he gets is",
+    "options": [
+      "8 1/3 % profit",
+      "10% profit",
+      "10% loss",
+      "8 1/3 % loss"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 12,
+    "question": "A Shopkeeper sells an article by offering 24% discount on the marked price and there by gets a loss of 5%. If he does not offer the discount, then the gain/loss he gets is",
+    "options": [
+      "20% gain",
+      "29% loss",
+      "25% gain",
+      "21% loss"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 13,
+    "question": "A can complete a piece of work in 18 days and B can complete the same work in 12 days. Both begin the work together but after some days, B leaves the work. If A finishes the remaining work in 3 days, then the number of days B worked is",
+    "options": [
+      "5",
+      "8",
+      "4",
+      "6"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 14,
+    "question": "14 men can do a work in 18 days. 15 women can do the same work in 24 days. If 14 men work for first 3 days and 10 women work after that for 3 days, then the ratio of the time taken by 7 men alone and the time taken by 5 women alone to complete the remaining work is",
+    "options": [
+      "2:3",
+      "3:4",
+      "1:3",
+      "1:2"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 15,
+    "question": "A alone can do a piece of work in 10 days and B alone can do the same work in 15 days. A and B agreed to complete the work for ₹30,000. With the help of C, they completed the work in 5 days. Then the amount to be paid to C is",
+    "options": [
+      "1/3 of the amount to be paid to B.",
+      "Equal to the amount to be paid to B.",
+      "1/2 of the amount to be paid to A.",
+      "1/3 of the amount to be paid to A."
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 16,
+    "question": "If 22 1/2 % increase of a number is 98, then 22 1/2 % decrease of that number is",
+    "options": [
+      "49",
+      "53",
+      "62",
+      "45"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 17,
+    "question": "A man started 10 minutes late from his home to his office. He travelled at a speed of 1 1/4 times of his usual speed and reached his office in time. Then the time taken by the man to reach his office at his usual speed is (in minutes)",
+    "options": [
+      "50",
+      "60",
+      "45",
+      "75"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 18,
+    "question": "Two persons P and Q started travelling towards each other at two places A and B respectively at 7 AM. The speeds of P and Q are in the ratio 4: 5. Somewhere between A and B they met at C and spent some time together. From C at 8.07 AM P and Q started travelling towards B and A respectively. If P reaches B by 9.12 AM, the time they spent at C together is",
+    "options": [
+      "12 min",
+      "15 min",
+      "17 min",
+      "20 min"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 19,
+    "question": "The time between 7 and 8 O'clock when the minute hand is 5 minutes behind the hour hand is",
+    "options": [
+      "30 2/11 min. past 7 O'clock",
+      "32 8/11 min. past 7 O'clock",
+      "43 7/11 min. past 7 O'clock",
+      "31 3/11 min. past 7 O'clock"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 20,
+    "question": "If m and n are the number of rotations of hour-hand and minute hand of a clock respectively in 72 hours, then n-m=",
+    "options": [
+      "66",
+      "72",
+      "24",
+      "56"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 21,
+    "question": "Three persons X, Y and Z are employed to do a piece of work. X and Y together completed 21/25 part of the work. Y and Z together completed 8/25 part of the work. If all the 3 agreed to complete the work for ₹3,250, then the amount X receives more than that of Z is",
+    "options": [
+      "2,210",
+      "520",
+      "1,690",
+      "1,170"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 22,
+    "question": "In 2022 August 15th is on Monday. Then the day of the week on which Republic day will be celebrated in the year 2024 is",
+    "options": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 23,
+    "question": "A person P started a business with ₹5,00,000. After 3 months, another person Q joined P with ₹4,00,000 in the business. At the end of the year, out of the total profit Q received a total of 50,000 including 20% of the profit for managing the business. Then the amount P received is",
+    "options": [
+      "₹45,000",
+      "₹55,000",
+      "₹60,000",
+      "₹50,000"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 24,
+    "question": "A, B, and C started a business with investments of ₹4,200, ₹8,400, ₹5,400 respectively. At the end of the year they got a profit of ₹6,000 and they reinvested their profits in the business. At the end of next year the ratio in which they get their profits is",
+    "options": [
+      "7:14:9",
+      "8:11:17",
+      "23:54:69",
+      "29:56:36"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 25,
+    "question": "A rectangular plot of dimensions 210 meters × 120 meters is divided into 4 equal parts by two roads each of width 12 meters running in the middle of it, one parallel to the length and the other parallel to the breadth. Then the area of each part is (in Sq. meters)",
+    "options": [
+      "10,692",
+      "6,300",
+      "3,816",
+      "5,346"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 26,
+    "question": "For a square, the lengths of its side and diagonal are equal to the diameters of two unequal circles; The ratio of the areas of the smaller circle and larger circle is",
+    "options": [
+      "2:3",
+      "1:3",
+      "1:2",
+      "2:5"
+    ],
+    "has_image": true,
+    "source_page": 8,
+    "image_file": "images/SI_2022_Prelims/q_26_page_8.png"
+  },
+  {
+    "q_no": 27,
+    "question": "After 2022, the next immediate calendar year which will be same as 2022 is",
+    "options": [
+      "2032",
+      "2033",
+      "2026",
+      "2028"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 28,
+    "question": "A solid cone is melted and with that entire material a sphere is made having volume of 38,808 cm³. If the radius of the cone and sphere are equal, then height of the cone (in centimeters) is",
+    "options": [
+      "42",
+      "25",
+      "84",
+      "36"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 29,
+    "question": "Pipe A can fill a tank in 30 minutes and Pipe B can fill it in 45 minutes. But third Pipe C can empty a full tank in 15 minutes. A and B are kept open for 15 minutes in the beginning and then C is also opened. Since then the time required (in minutes) to empty the tank is",
+    "options": [
+      "15",
+      "45",
+      "75",
+      "90"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 30,
+    "question": "Two inlet pipes A and B working together for 4 hours fill 72 units of water in a tank having capacity 160 units. If A alone can fill the tank in 20 hours, the time taken by B alone to fill the tank is",
+    "options": [
+      "25 hours",
+      "15 hours",
+      "21 hours",
+      "16 hours"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 31,
+    "question": "Two trains run on parallel tracks at 126 kmph and 108 kmph. When they are running in opposite directions they cross each other completely in 5 seconds and when they are running in the same direction a passenger sitting in the faster train sees that the other train passes completely in 30 seconds. Then the length of the faster train is (in meters)",
+    "options": [
+      "150",
+      "200",
+      "175",
+      "225"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 32,
+    "question": "A train of 450 meters long moving with a speed of 65 km/hr crosses a man travelling in some direction of the train in 27 seconds. Then the speed with which the man moving and his direction is",
+    "options": [
+      "15 kmph; Same direction",
+      "15 kmph; Opposite direction",
+      "5 kmph; Same direction",
+      "5 kmph; Opposite direction"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 33,
+    "question": "Two cubes, each of volume 4,096 c.c., are joined to form a cuboid. Then the difference between the surface area of the cuboid and the total surface area of the two cubes is (in sq.cm)",
+    "options": [
+      "512",
+      "256",
+      "1,024",
+      "1,536"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 34,
+    "question": "In a mixture of acid and water, if 1 liter of water is added, then the new mixture contains 20% acid. When 1 liter of acid is added to the new mixture, the acid in the resulting mixture is 33 1/3%. The percentage of acid in the original mixture is",
+    "options": [
+      "50",
+      "22 1/2",
+      "25",
+      "37 1/2"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 35,
+    "question": "The speed of a motor boat in still water is 50kmph. If the motor boat travels 60 km against the stream in 1hr 30 minutes, then the time taken by the boat to cover 100 km along the stream is (in minutes)",
+    "options": [
+      "130",
+      "110",
+      "135",
+      "100"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 36,
+    "question": "A Motor Boat travelled to a point B from A and returned to A. The speed of the stream is 3 km/hr. If distance between A and B is 2 km and total time taken to the round trip is 30 minutes, then speed of the motor boat in still water is",
+    "options": [
+      "8 km/hr",
+      "1 km/hr",
+      "9 km/hr",
+      "6 km/hr"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 37,
+    "question": "In a race of 1200 meters, A can beat B by 120 meters and in a race of 800 meters B can beat C by 40 meter. In a race of 400 meters by how many meters can A beat C?",
+    "options": [
+      "58",
+      "42",
+      "60",
+      "54"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 38,
+    "question": "In three different vessels A, B and C, a syrup and water are mixed in the ratios of 2:3, 3:5 and 5:7 respectively. 15 liters of mixture taken from A, 16 liters of mixture taken from B and x liters of mixture taken from C are mixed in a new vessel to have the ratio of syrup and water as 2:3 then x =",
+    "options": [
+      "24",
+      "20",
+      "18",
+      "17"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 39,
+    "question": "The present age of A is twice the age of B. 15 years ago the age of A was thrice the age of B. Then 25 years ago the age of A was",
+    "options": [
+      "7 times the age of B.",
+      "6 times the age of B.",
+      "5 times the age of B.",
+      "4 times the age of B."
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 40,
+    "question": "The ratio of ages of Ram and Rahim after 5 years from now is 11: 10. The ratio of their ages 4 years ago was 8: 7. The ratio of their present ages is",
+    "options": [
+      "19:17",
+      "1:1",
+      "28:25",
+      "21:25"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 41,
+    "question": "The cost price of an article B is 25% more than that of an article A. Articles A and B are marked up by 30% and 20% respectively. Article A is sold at a discount of 10% and article B is sold at a discount of 5%. If the selling price of article A is ₹51 less than the selling price of article B, then the cost price of article B is",
+    "options": [
+      "₹200",
+      "₹250",
+      "₹260",
+      "₹300"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 42,
+    "question": "The cost price of an article is 64% of the marked price. If the article is sold for 12% discount on the marked price, then the profit percent is",
+    "options": [
+      "48",
+      "28.5",
+      "37.5",
+      "25"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 43,
+    "question": "In one kilometre race, A can give B a start of 100 m and can give C a start of 200 meter B can give 20 min to C over a race of 200 metres. The time taken by B to run 200 meters",
+    "options": [
+      "10/4 min",
+      "1/4 min",
+      "90/4 min",
+      "25/4 min"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 44,
+    "question": "A 25 digit number is such that its extreme digits are same and all other 23 digits are same but different from extreme digits. If that number is divisible by 11, then end digit can't be",
+    "options": [
+      "9",
+      "8",
+      "5",
+      "4"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 45,
+    "question": "Let G be the GCD of three numbers 3,780, 3,465 and 3,003 and L be the LCM of 3,465 and 3,003. Then L / 33G =",
+    "options": [
+      "65",
+      "780",
+      "455",
+      "429"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 46,
+    "question": "If the sum of the fractions 12 1/3, 10 5/6 is x and the sum of the fractions 7 2/3, 1 4/7 is y then x - y =",
+    "options": [
+      "14 1/4",
+      "13 13/14",
+      "13 11/14",
+      "14 3/14"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 47,
+    "question": "If the digit in the units place of the square of an integer is x, then the sum of all possible distinct values of x is",
+    "options": [
+      "25",
+      "27",
+      "28",
+      "32"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 48,
+    "question": "³√-2197 × ³√-125 ÷ ³√(27/512) + 3 =",
+    "options": [
+      "174",
+      "³√131",
+      "7/3",
+      "12³√3"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 49,
+    "question": "If x is an integer satisfying the equation 9x^(2/3) + 9x^(-2/3) = 82 then √12+2√x =",
+    "options": [
+      "1+√11",
+      "3+√3",
+      "√3+√5",
+      "2+√8"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 50,
+    "question": "The set of all perfect numbers and twin primes among the numbers 1, 2, 3, 4, 5, 6, 7, 8, 9 is",
+    "options": [
+      "{1,2,3,4,5,7,9}",
+      "{1,3,4,5,7,9}",
+      "{3,4,5,7,9}",
+      "{3,5,6,7}"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 1,
+    "question": "Identify the venn diagram which best represent the relation between triangles, right angled triangles, isosceles triangles.",
+    "options": [
+      "Option (1) Venn Diagram",
+      "Option (2) Venn Diagram",
+      "Option (3) Venn Diagram",
+      "Option (4) Venn Diagram"
+    ],
+    "has_image": true,
+    "source_page": 13,
+    "image_file": "images/SI_2022_Prelims/q_1_page_13.png"
+  },
+  {
+    "q_no": 52,
+    "question": "A ranks 13th from the top and B ranks 17th from the bottom in a class. If the rank of C is 5 ranks below A and 5 ranks above B, then the number of students of the class is",
+    "options": [
+      "39",
+      "29",
+      "19",
+      "30"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 53,
+    "question": "In the following diagram, if triangle represents Cricket players, circle represents Football players, rectangle represents Hockey players and rhombus represents Tennis players, then the difference between the number of players who can play all the games except Hockey and the number of players who can play all the four games is equal to",
+    "options": [
+      "Number of players who can play all the games except Tennis.",
+      "Number of players who can play only Tennis.",
+      "Number of players who can play only Hockey.",
+      "Number of players who can play all the games except Football."
+    ],
+    "has_image": true,
+    "source_page": 13,
+    "image_file": "images/SI_2022_Prelims/q_53_page_13.png"
+  },
+  {
+    "q_no": 54,
+    "question": "A, B, C, D, E, F are sitting around a circular table in a park. A and F are facing the centre of the table and the remaining are facing the direction opposite to the centre. D is sitting second to the left of B. F is sitting second to the right of A. There is only one person between B and C. Then the person sitting to immediate right of F is",
+    "options": [
+      "D",
+      "B",
+      "A",
+      "C"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 55,
+    "question": "5 persons A, B, C, D, E are sitting at the corners of square shaped garden and one is at the centre. A is adjacent to C; B, E, D are not on a line; A and D are equidistant from C; A, E, D are not on a line. Then the persons sitting at the corners are",
+    "options": [
+      "A, C, D, E",
+      "A, B, C, D",
+      "B, C, D, E",
+      "B, A, D, E"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 56,
+    "question": "A goes 500 meters straight from his house. He turns to his left and walks 1 km. He then goes 1 1/2 km after turning to his right to reach his office. If his office is located in North-East direction from his house, then the direction in which A started moving initially from his house and the shortest distance from his house to his office is",
+    "options": [
+      "South-East, 2 km",
+      "North, 2 km",
+      "East, √5 km",
+      "West, √5 km"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 57,
+    "question": "6 Students S1, S2, S3, S4, S5, S6 wrote an entrance exam and the following is the information regarding their marks. Sum of the marks of all is 1000. S3 got more marks than S4 but less than S2. S6 got the least marks among them. 400 marks is the highest mark and 60 marks is the least mark among these six students. The position of the student having highest marks is 1 and the position of the student having least mark is 6. If S1 got 400 marks, S5's position in the list is 2nd from the last, the average marks of last 3 students is 95, then the total marks of S2 and S3 is",
+    "options": [
+      "225",
+      "185",
+      "315",
+      "200"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 58,
+    "question": "Each statement is followed by two arguments numbered I and II. Decide which of the arguments is a strong argument and which is a weak argument. Statement: Should there be blended learning in education system? Arguments: I. Yes. This method allows students to work at their own pace, ensuring that they fully understand new concepts. II. No. Possession of electronic gadgets in classroom and access to social media diverts most of the students from the actual concepts and lessons.",
+    "options": [
+      "Only I is strong.",
+      "Only II is strong.",
+      "Both I and II are strong.",
+      "Both I and II are weak."
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 59,
+    "question": "Each statement is followed by two arguments numbered I and II. Decide which of the arguments is a strong argument and which is a weak argument. Statement: Should there be high level of violence in films in the name of entertainment? Arguments: I. No. Exposure to high level of violence causes behavioural changes in human attitude particularly in children and youth there by developing criminal thoughts in mind. II. Yes. When the story demands the film makers have no other go",
+    "options": [
+      "Only I is strong.",
+      "Only II is strong.",
+      "Both I and II are strong.",
+      "Both I and II are weak."
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 60,
+    "question": "A Person facing West moves 30 meters towards West and then moves a distance of 80 meters North and later moves 30 meters towards West again. The distance of its final position from the starting point is",
+    "options": [
+      "90 m",
+      "85 m",
+      "100 m",
+      "105 m"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 61,
+    "question": "In this question, a statement which is to be taken as true is given and it is followed by two assumptions numbered I & II. Decide which of the assumption (s) is (are) implicit of the statement. Statement: An instruction on the hall ticket for a competitive examination is \"Every candidate has to be in the examination hall before the examination commences. Not even a late by 1 min is allowed.\" Assumptions: I. If not mentioned in hall ticket, candidates may come to the exam at any time as per their wish. II. In a Competitive examination, every candidate should be given equal chance of writing the exam so as to filter the meritorious students.",
+    "options": [
+      "Only assumption I is implicit.",
+      "Only assumption II is implicit.",
+      "Both assumptions I & II are implicit.",
+      "Neither I nor II is implicit."
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 62,
+    "question": "In this question, a statement which is to be taken as true is given and it is followed by two assumptions numbered I & II. Decide which of the assumption (s) is (are) implicit of the statement. Statement: The national education policy brings major changes in the education system. Assumptions: I. Present education system is not supporting the needs of the nation. II. Present education system is teacher centric.",
+    "options": [
+      "Only assumption I is implicit.",
+      "Only assumption II is implicit.",
+      "Both I & II are implicit.",
+      "Neither I nor II is implicit."
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 63,
+    "question": "Directions: In this question a statement is given followed by two conclusions that can be derived from the statement either directly or indirectly or may not be derived. Which conclusion (s) follow (s) from the statement?\nStatement: One of the prime ministers of India said, \"Wastage of anything is crime. Wastage of food is double crime.\"\nConclusions: I. The issue of food wastage is of high importance to fight hunger, raise income and improve food security in India.\nII. Food wastage is morally wrong because there are many people who are hungry simply because they have no food.",
+    "options": [
+      "only I follows.",
+      "only II follows.",
+      "Both I & II follows.",
+      "Neither I nor II follows."
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 64,
+    "question": "Directions: In this question a statement is given followed by two conclusions that can be derived from the statement either directly or indirectly or may not be derived. Which conclusion (s) follow (s) from the statement?\nStatement: 'Marriages are made in Heaven.'\nConclusions: I. It is a divine power that ultimately decides who should marry whom.\nII. Marriages are made in heaven before the couple even meet on earth.",
+    "options": [
+      "Only I follows.",
+      "Only II follows.",
+      "Both I & II follows.",
+      "Neither I nor II follows."
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 65,
+    "question": "Is the product xy an irrational number?\nI: x is an irrational number.\nII: y is an irrational number.",
+    "options": [
+      "if the data in statement I alone is sufficient to answer the question;",
+      "if the data in statement II alone is sufficient to answer the question;",
+      "if the data in both the statements I & II together is sufficient to answer the question;",
+      "if the data in both the statements I & II together is not sufficient to answer the question."
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 66,
+    "question": "What is the perimeter of the circle?\nI. The centre (0,0) of the circle is at a distance of 5 units from the point P (3,4)\nII. The images of P with respect to both x-axis and y-axis lie on the circle",
+    "options": [
+      "if the data in statement I alone is sufficient to answer the question;",
+      "if the data in statement II alone is sufficient to answer the question;",
+      "if the data in both the statements I & II together is sufficient to answer the question;",
+      "if the data in both the statements I & II together is not sufficient to answer the question."
+    ],
+    "has_image": true,
+    "source_page": 18,
+    "image_file": "images/SI_2022_Prelims/q_66_page_18.png"
+  },
+  {
+    "q_no": 67,
+    "question": "Directions: Consider the following information and answer the question given below\nFor the selection of a manager in a company, the following are the conditions to be satisfied.\nA Candidate\n(a) must be a graduate with a minimum of 60% marks\n(b) as on 1st July 2022, must have less than 30 years\n(c) must have at least 50% marks in X class\n(d) must have a diploma/degree / P.G degree in management\n(e) must have minimum 1 year work experience. /\nIn case a Candidate satisfies all the above conditions, except\nI. (e) above, he must have 60% and above at X class and P.G degree in management\nII. (a) above, he must have minimum 2 years of work experience.\nIf any information is not known, then such case will be referred to CEO.\nMr. X was born on 15th August 1995, and has graduation and P.G degree in management. He\nhas 1 2 years of work experience. During his academic career from XI standard he got 75% marks. Then Mr. X",
+    "options": [
+      "Can be recruited as manager",
+      "Can not be recruited since only one condition is not satisfied",
+      "Can not be recruited because he does not have minimum 2 years work experience",
+      "Will be referred to CEO"
+    ],
+    "has_image": true,
+    "source_page": 19,
+    "image_file": "images/SI_2022_Prelims/q_67_page_19.png"
+  },
+  {
+    "q_no": 68,
+    "question": "Directions: Consider the following information and answer the question given below :\nFor the selection of a manager in a company, the following are the conditions to be satisfied.\nA Candidate\n(a) must be a graduate with a minimum of 60% marks\n(b) as on 1st July 2022, must have less than 30 years\n(c) must have at least 50% marks in X class\n(d) must have a diploma / degree / P.G degree in management\n(e) must have minimum 1 year work experience.\nIn case a Candidate satisfies all the above conditions, except\nI. (e) above, he must have 60% and above at X class and P.G degree in management\nII. (a) above, he must have minimum 2 years of work experience.\nIf any information is not known, then such case will be referred to CEO.\nMr. Y was a 1st class student throught his academic career and completed his 25th birth day on\n2nd September 2017. Prior to applying for this post of manager, he worked as assistant\nmanager from 1st July 2018 to 3rd August 2019. He had a diploma in management from IIM.\nThen Mr. Y",
+    "options": [
+      "Can be appointed as manager",
+      "Can not be appointed as he is above 30 years of age",
+      "Can not be appointed as he does not have 2 years work experience",
+      "Can be refered to CEO"
+    ],
+    "has_image": true,
+    "source_page": 20,
+    "image_file": "images/SI_2022_Prelims/q_68_page_20.png"
+  },
+  {
+    "q_no": 69,
+    "question": "Study the following information carefully and answer the questions given below. There is a family of 8 members A, B, C, D, E, F, G, H. D is the grand-son of F. G is the son-in-law of C. F is the mother of B. A is the wife of B. H is the daughter of C and mother of D. E is the daughter of A. Who is the father of D?",
+    "options": [
+      "C",
+      "B",
+      "D",
+      "G"
+    ],
+    "has_image": true,
+    "source_page": 21,
+    "image_file": "images/SI_2022_Prelims/q_69_page_21.png"
+  },
+  {
+    "q_no": 70,
+    "question": "Assertion (A): Antibiotics do not treat the Corona infection. Reason (R) : Corona is a virus; not a bacteria. Choose the correct option from the following:",
+    "options": [
+      "(A) is true. (R) is true and (R) is the correct explanation of (A)",
+      "(A) is true. (R) is true but (R) is not the correct explanation of (AY",
+      "(A) is True but (R) is False",
+      "(A) is False but (R) is True"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 71,
+    "question": "Six persons P1, P2, P3, P4, Ps and P, live one on each floor in a building having six floors numbered from bottom to top. P, lives in a floor immediately below the floor of P₁. Ps lives in the floor immediately below the floor of P₁. Three people live between the floors of P and Ps. (P₂ does not live in the top most floor. P, does not show interest to live on any floor below the floor of P. Ps and P live on the even numbered floors. Then the persons P, and Parespectively live in the floors.",
+    "options": [
+      "5&1",
+      "3&5",
+      "2&5",
+      "4&5"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 72,
+    "question": "Read the statements and mark the correct answer. Statement I: The prices of petrol products have increased substantially during the past few months in India Statement II: The prices of many goods in India are increasing now-a-days These statements may have a cause and effect relationship or may have independent causes",
+    "options": [
+      "(1) I is cause and II is effect",
+      "(2) II is cause and I is effect",
+      "(3) I, II are effects of independent causes",
+      "(4) I, II are causes of independent effects"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 73,
+    "question": "If the English alphabet is coded with numbers from 1 to 26 starting from the last letter to the first letter. A meaningful word is hidden in the codes given in the following options. That code is",
+    "options": [
+      "(1) 8-18-22-14-11-15",
+      "(2) 11-12-13-23-2-26",
+      "(3) 8-7-9-14-22-26",
+      "(4) 8-18-14-11-15-22"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 74,
+    "question": "Assertion (A): Now-a-days, knee pain is a common complaint. Knee replacement is a boon for such sufferers. Reason (R): Necessity is the mother of invention. Choose the correct option from the following:",
+    "options": [
+      "(1) (A) is true, (R) is true and (R) is the correct explanation of (A)",
+      "(2) (A) is true, (R) is true but (R) is not the correct explanation of (A)",
+      "(3) (A) is True but (R) is False",
+      "(4) (A) is False but (R) is True"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 75,
+    "question": "In a code language, 'Mathematics improves Reasoning' is coded as 'du mu vu'; 'Reasoning improves logical thinking' is coded as 'vu lu du ya' and 'Logical thinking improves common sense' is coded as 'ma ya du lu ta' then in the same code language 'Mathematics improves logical thinking' is coded as",
+    "options": [
+      "vu lu mu ya",
+      "ta ya mu lu",
+      "du mu ya lu",
+      "mu ya du vu"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 76,
+    "question": "In a certain code \"Write exam well\" is written as 'lm rs ek'. \"All is well\" is written as 'ek jp pm'. \"Exam is easy\" is written as 'rs jp wk'. Then using this code \"All write exam well\" is written as",
+    "options": [
+      "ek rs jp pm",
+      "ek rs lm pm",
+      "wk jp rs pm",
+      "ek rs jp wk"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 77,
+    "question": "Choose the correct alternative from the given ones that will complete the series. CX, FU, _____, LO",
+    "options": [
+      "HS",
+      "JR",
+      "IQ",
+      "IR"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 78,
+    "question": "The letters of the English alphabet are coded as follows: k^th letter of the alphabet is coded as (i) (k+17)^th letter when 1 <= k <= 9 (ii) (k-1)^th letter when 10 <= k <= 18 (iii) (k-18)^th letter when 19 <= k <= 26 For decoding reverse process is used. The word that is coded as GAURD is",
+    "options": [
+      "YRCQU",
+      "YSDAV",
+      "XRDVPV",
+      "YSDNA"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 79,
+    "question": "What should come in the place of question mark (?) in the following alpha-numeric series? B3E, C5G, E7K, G11M,?",
+    "options": [
+      "M15Q",
+      "K130",
+      "K13Q",
+      "K15S"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 80,
+    "question": "Choose the correct option which contains the letters that are to be placed in order in the blank places to have a complete series ZWTONKH B SF DE",
+    "options": [
+      "X.R, E",
+      "W,R.E",
+      "W.Q.E",
+      "X.Q.E"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 81,
+    "question": "Pointing to a man in the photograph, A said, \"His daugther's mother is the daughter-in-law of my father\". How is A related to the man?",
+    "options": [
+      "Sister-in-law",
+      "Brother-in-law",
+      "Spouse",
+      "Sibling"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 82,
+    "question": "A is only daughter of B. C is husband of B, D is father of C and E is wife of D, then A is related to Eas",
+    "options": [
+      "Grand Son",
+      "Daughter-in-law",
+      "Uncle",
+      "Grand Daughter"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 83,
+    "question": "If 'B' means'+', 'D' means 'x', 'Q' means '+' and 'R' means '-' then 23Q19R24B2D3=",
+    "options": [
+      "22",
+      "6",
+      "12",
+      "17"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 84,
+    "question": "The symbols used to represent <, 7, >, >, < and = are respectively A, B, C, D, E and F. Consider the statements PAQ, QFR and SER. The correct implications from given statements are",
+    "options": [
+      "PDS, RCP",
+      "PES, RBF",
+      "RBQ. PFS",
+      "PAS, PCR"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 85,
+    "question": "A series of fractions that follow a definite pattern is given below. Fill the blank space by the correct answer from the given 4 options to complete the series without breaking the pattern. (8)/2, 27/5, (64)/10, 125/17, _, 216/37",
+    "options": [
+      "125/26",
+      "81/23",
+      "125/3",
+      "121/36"
+    ],
+    "has_image": true,
+    "source_page": 24,
+    "image_file": "images/SI_2022_Prelims/q_85_page_24.png"
+  },
+  {
+    "q_no": 86,
+    "question": "Choose a term which bears the same relationship with the third term as the first two terms bear. Stag: Hind :: Ram :",
+    "options": [
+      "Ewe",
+      "Hart",
+      "Earl",
+      "Heifer"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 87,
+    "question": "Choose a term which bears the same relationship with the third term as the first two terms bear. OPQ: PRT :: FGH:",
+    "options": [
+      "GIR",
+      "GIL",
+      "GIK",
+      "EDC"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 88,
+    "question": "Select the related number from the given alternatives. 444:21:: 964:",
+    "options": [
+      "31",
+      "41",
+      "24",
+      "29"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 89,
+    "question": "Four pairs of words are given in the options below in which three pairs are alike in a certain way and one is odd (different). Choose the odd pair.",
+    "options": [
+      "Short: long",
+      "Light: Heavy",
+      "Crime: Blame",
+      "Poor: Rich"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 90,
+    "question": "Among the given numbers 131,151,161,181,191, one is different from the others in one way. It is",
+    "options": [
+      "131",
+      "181",
+      "161",
+      "191"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 91,
+    "question": "Choose the odd one out of the four options given below.",
+    "options": [
+      "V21T",
+      "N15L",
+      "I8G",
+      "E4C"
+    ],
+    "has_image": true,
+    "source_page": 25,
+    "image_file": "images/SI_2022_Prelims/q_91_page_25.png"
+  },
+  {
+    "q_no": 92,
+    "question": "Choose the odd one out of the four options given below.",
+    "options": [
+      "Earth",
+      "Water",
+      "Fire",
+      "Environment"
+    ],
+    "has_image": true,
+    "source_page": 25,
+    "image_file": "images/SI_2022_Prelims/q_92_page_25.png"
+  },
+  {
+    "q_no": 93,
+    "question": "Choose the correct option whose group numbers follow the same pattern as that of the pattern in two groups of numbers given in the question 11:121:110:: 15:225:210 ::",
+    "options": [
+      "9:81:70",
+      "19:361:342",
+      "17:288:272",
+      "16:225:239"
+    ],
+    "has_image": true,
+    "source_page": 25,
+    "image_file": "images/SI_2022_Prelims/q_93_page_25.png"
+  },
+  {
+    "q_no": 94,
+    "question": "If a cuboid of length 81cm, breadth 27 cm and height 9 cm is cut into 729 smaller identical cubes, then the length of the edge of each smaller cube is",
+    "options": [
+      "1 cm",
+      "3 cm",
+      "9 cm",
+      "27 cm"
+    ],
+    "has_image": true,
+    "source_page": 26,
+    "image_file": "images/SI_2022_Prelims/q_94_page_26.png"
+  },
+  {
+    "q_no": 95,
+    "question": "A Solid cube of 4 inches edge has been painted with red, green and yellow colours such that each colour appears on a pair of opposite faces. It has been cut into one inch cubes. The number of small one inch cubes that have only one face painted with red colour is",
+    "options": [
+      "16",
+      "24",
+      "8",
+      "32"
+    ],
+    "has_image": true,
+    "source_page": 26,
+    "image_file": "images/SI_2022_Prelims/q_95_page_26.png"
+  },
+  {
+    "q_no": 96,
+    "question": "Select the pair from the options that has a relationship similar to that in the pair labelled (A).",
+    "options": [
+      "Pentagon, Triangle",
+      "Hexagon, Hexagon",
+      "Square, Pentagon",
+      "Pentagon, Circle"
+    ],
+    "has_image": true,
+    "source_page": 26,
+    "image_file": "images/SI_2022_Prelims/q_96_page_26.png"
+  },
+  {
+    "q_no": 97,
+    "question": "All the faces of a cube are labelled with I, II, III, IV, V, VI one on each. The 3 positions of a cube are shown below. The face opposite to face containing I contains:",
+    "options": [
+      "VI",
+      "IV",
+      "II",
+      "V"
+    ],
+    "has_image": true,
+    "source_page": 26,
+    "image_file": "images/SI_2022_Prelims/q_97_page_26.png"
+  },
+  {
+    "q_no": 98,
+    "question": "Figure (A) is given below. One part of this figure is missing. Choose the missing part from the given four options.",
+    "options": [
+      "Image (1)",
+      "Image (2)",
+      "Image (3)",
+      "Image (4)"
+    ],
+    "has_image": true,
+    "source_page": 27,
+    "image_file": "images/SI_2022_Prelims/q_98_page_27.png"
+  },
+  {
+    "q_no": 99,
+    "question": "The total number of squares in the figure given below is",
+    "options": [
+      "32",
+      "42",
+      "35",
+      "45"
+    ],
+    "has_image": true,
+    "source_page": 27,
+    "image_file": "images/SI_2022_Prelims/q_99_page_27.png"
+  },
+  {
+    "q_no": 100,
+    "question": "In the question figure, assume a mirror is placed on the line MN, then the option among the answer figure that shows the correct image is",
+    "options": [
+      "Image (1)",
+      "Image (2)",
+      "Image (3)",
+      "Image (4)"
+    ],
+    "has_image": true,
+    "source_page": 27,
+    "image_file": "images/SI_2022_Prelims/q_100_page_27.png"
+  },
+  {
+    "q_no": 101,
+    "question": "is expected to host the summit meeting of Shanghai Cooperation Organization in 2023.",
+    "options": [
+      "China",
+      "India",
+      "Kazakhistan",
+      "Russia"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 102,
+    "question": "The Election commission has announced polls for Rajya sabha seats that fell vacant between June and August 2022.",
+    "options": [
+      "47",
+      "52",
+      "57",
+      "62"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 103,
+    "question": "measures output in sectors like electricity, mining and manufacturing.",
+    "options": [
+      "Gross domestic product",
+      "Index of industrial production",
+      "Current account balance",
+      "Fiscal surplus / deficit"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 104,
+    "question": "As the American automobile company Ford exits India, its manufacturing unit in Gujarat has been taken over by",
+    "options": [
+      "Mahindra",
+      "Suzuki",
+      "Tata",
+      "Hyundai"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 105,
+    "question": "Recently, the International Labour Organization (ILO) directed that there should be no barriers to people with different sexual orientations. They should be described as",
+    "options": [
+      "LGBTIQ Peoples",
+      "Hijras",
+      "Gay People",
+      "Trans genders"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 106,
+    "question": "The Indian army plans to create an integrated battle group combining strike formation on northern border and",
+    "options": [
+      "Hold formation on western border",
+      "Push formation on northern border",
+      "Hold formation on northern border",
+      "Strike formation on western border"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 107,
+    "question": "The Southwest monsoon sets in first in ______ state.",
+    "options": [
+      "Tamil Nadu",
+      "Kerala",
+      "Karnataka",
+      "Maharashtra"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 108,
+    "question": "The Supreme Court of India suspended ______ covering sedition",
+    "options": [
+      "Section 120(B) of IPC",
+      "Section 124(A) of IPC",
+      "Section 128 of IPC",
+      "Section 132 of IPC"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 109,
+    "question": "TSRTC filed a ______ case against Rapido organization over an advertisement",
+    "options": [
+      "Defamation",
+      "Copyright",
+      "Cheating",
+      "Conspiracy"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 110,
+    "question": "Russia has overtaken which country to become India's second biggest supplier of oil?",
+    "options": [
+      "Qatar",
+      "Iran",
+      "Saudi Arabia",
+      "Ukraine"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 111,
+    "question": "Which country become the 4th new member of the New Development Bank 2021?",
+    "options": [
+      "Bangladesh",
+      "Myanmar",
+      "Uruguay",
+      "Egypt"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 112,
+    "question": "The Human Development Index is an indication of ______",
+    "options": [
+      "Income, Health, Education",
+      "Income, Health, Trade",
+      "Health, Education, Nutrition",
+      "Income, Health, Imports"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 113,
+    "question": "Cyclone Asani, which formed in the month of May 2022 affected ______ state",
+    "options": [
+      "Andhra Pradesh",
+      "Tamil Nadu",
+      "Kerala",
+      "Karnataka"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 114,
+    "question": "All the countries of ______ continent are members of G-77.",
+    "options": [
+      "Africa",
+      "Asia",
+      "Europe",
+      "South America"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 115,
+    "question": "Thomson Reuters is ______",
+    "options": [
+      "Canada based",
+      "UK based",
+      "USA based",
+      "Australia based"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 116,
+    "question": "The Kruger National Park is in ______",
+    "options": [
+      "Greece",
+      "Russia",
+      "South Africa",
+      "Singapore"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 117,
+    "question": "Match List I with List-II and select the correct answer List - I (Kingdom) (a) Vatsa (b) Avanti (c) Kosala (d) Chedi List-II (Rulers) (i) Udayana (ii) Prasenajit (iii) Sishupala (iv) Pradyota",
+    "options": [
+      "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "(a)-(i), (b)-(iv), (c)-(ii), (d)-(iii)",
+      "(a)-(i), (b)-(iii), (c)-(iv), (d)-(ii)",
+      "(a)-(i), (b)-(ii), (c)-(iv), (d)-(iii)"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 118,
+    "question": "What is the expansion of NASA?",
+    "options": [
+      "National Agency of Space Administration",
+      "National Aeronautics and Space Administration",
+      "National Air and Space Agency",
+      "Navigational, Aeronautical & Space Agency"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 119,
+    "question": "Which one of the following statements is not correct about Ashoka and Mauryas?",
+    "options": [
+      "Dhamma-Mahamatras were a new cadre of officials created by Ashoka to spread Dhamma all over the empire.",
+      "According to Mauryan sources Pradeshika, Rajuka and Yukta were important officers at the district level.",
+      "Pativedaka and Pulasani, were responsible for maintenance of Treasury and accounts.",
+      "According to Dipavamsa and Mahavamsa Ashoka killed 99 of his brothers and succeeded to the throne."
+    ],
+    "has_image": false,
+    "source_page": 31
+  },
+  {
+    "q_no": 120,
+    "question": "Who among the following composed the Mandasor Inscription?",
+    "options": [
+      "Vatsabhatti",
+      "Chitradatta",
+      "Parnadatta",
+      "Chakra palita"
+    ],
+    "has_image": false,
+    "source_page": 31
+  },
+  {
+    "q_no": 121,
+    "question": "Which one of the following statements is not correct about Jainism?",
+    "options": [
+      "According to Jaina tradition, at the time of Mahabharatha war, Jaina order led by Neminatha, who is recognized as the twenty second Tirthankara.",
+      "Jaina monks were found on the banks of Sindhu river at the time of Alexander's invasion of India.",
+      "The famous Gomateshwara statue was erected at Sravanabelgola by Chamundaraya, the king of Gangas in 11th century.",
+      "Mahaveera preached in the mixed dialect called Ardha-Magadi and his teachings were classified into tweleve books called 'Srutangas'."
+    ],
+    "has_image": false,
+    "source_page": 31
+  },
+  {
+    "q_no": 122,
+    "question": "Assertion (A): Balban could not raise the numerical strength of the army to the level which it reached later at the time of Allauddin Khilji. Reason (R): Balban insisted upon high birth as an essential qualification for appointment to higher civil and military posts. Choose the correct option from the following:",
+    "options": [
+      "(A) is true, (R) is true and (R) is the correct explanation of (A)",
+      "(A) is true, (R) is true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 32
+  },
+  {
+    "q_no": 123,
+    "question": "Match List I with List-II and select the correct answer List-I (Texts) (a) Kumarapalacharita (b) Vikaramankadevacharitra (c) Rajatarangini (d) Pruthviraj Raso List-II (Authors) (i) Chandbardai (ii) Kalhana (iii) Bilhana (iv) Hemachandra",
+    "options": [
+      "(a) (i), (b) (ii), (c) (iii), (d) (iv)",
+      "(a) (ii), (b) (i), (c) (iv), (d) (iii)",
+      "(a) (iv), (b) (iii), (c) (ii), (d) (i)",
+      "(a) (iii), (b) (iv), (c) (ii), (d) (i)"
+    ],
+    "has_image": false,
+    "source_page": 32
+  },
+  {
+    "q_no": 124,
+    "question": "Match the following.\nList - I\n(Dynasties)\n(a) Nizam Shahis\n(b) Imad Shahis\n(c) Adil Shahis\n(d) Qutub Shahis\n(e) Barid Shahis\nList-II\n(Kingdoms)\n(i) Bidar\n(ii) Golkonda\n(iii) Berar\n(iv) Ahmednagar\n(v) Bijapur",
+    "options": [
+      "(1) (iii) (i) (iv) (ii) (v)",
+      "(2) (i) (iii) (iv) (ii) (v)",
+      "(3) (v) (iv) (iii) (ii) (i)",
+      "(4) (iv) (iii) (v) (ii) (i)"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 125,
+    "question": "Which one the following statements is not correct about Bahamani Kingdom?",
+    "options": [
+      "(1) Bahamani sultanate was founded by Allauddin Hasan Bahaman Shah in the year 1327 A.D.",
+      "(2) Among all the Bahamani rulers Shihab-uddin-Mahmud's was the longest rule.",
+      "(3) Mahmud Gawan was appointed as Prime Minister of Bahamani Kingdom at the time of Muhammad Shah III.",
+      "(4) Kalamullah Shah was the last ruler of Bahamani Kingdom."
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 126,
+    "question": "Name the Afghan who played an important role in forming Rajput confederacy against Babur at the Battle of Khanwa in 1527.",
+    "options": [
+      "Alam Khan of Kalpi",
+      "Hasan Khan Mewati",
+      "Nizam Khan of Bayana",
+      "Tatar Khan Sarangkhan of Gwalior"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 127,
+    "question": "Which one the following statements is not correct about Shivaji Coronation Ceremony?",
+    "options": [
+      "It was conducted by 'Vishweshwar' a Pundit from Benaras.",
+      "Balam Bhatta was a family priest of Shivaji",
+      "On 10th June 1674, Shivaji re-married his four surviving wives according to Kshatriya rites.",
+      "Shivaji was obliged to undergo a second coronation ceremony on the suggestion of a well-known tantric priest, Nishchal Puri Goswami."
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 128,
+    "question": "Arrange the following Bhakti leaders according to their year of Birth. (a) Sant Tukaram (b) Chaitanya Mahaprabhu (c) Guru Nanak (d) Kabir",
+    "options": [
+      "(a) (b) (c) (d)",
+      "(b) (d) (c) (a)",
+      "(c) (a) (d) (b)",
+      "(d) (c) (b) (a)"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 129,
+    "question": "Which one of the following statements is not correct about Raja Ram Mohan Roy?",
+    "options": [
+      "He condemned the idol worship and Brahmanical rituals.",
+      "He propagated Monothesim and stated that religion and divine worship mere personal matters of an individual and unjustly controlled by Priests.",
+      "To support his arguments, he depended upon Vedic and Puranic Literature.",
+      "He wrote a pamphlet 'Anusthan' prescribing the mode of worship to be followed in the Samaj."
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 130,
+    "question": "Which one of the following statements is not correct about Portuguese presence in India?",
+    "options": [
+      "In 1498 Vasco-da-gama reached Calicut on the Malabar coast where he was received cordially by the Hindu Raja Zamorin.",
+      "Francisco de Almeida, the first governor of the Portuguese in India followed a policy known as Blue Water Policy.",
+      "Portuguese conquered Goa from Mysore rulers in 1510 and made it their capital.",
+      "Alfonso de Albuquerque was the second Governor of Portuguese in India who tried to introduce reforms in the Hindu society by legally abolishing Sati."
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 131,
+    "question": "Arrange the following Political Associations chronologically based on their inception.\n(a) Indian Association\n(c) Madras Mahajana Sabha\n(b) Poona Sarvajanik Sabha\n(d) Bombay Presidency Association",
+    "options": [
+      "(a) (b) (c) (d)",
+      "(b) (a) (c) (d)",
+      "(c) (d) (b) (a)",
+      "(d) (c) (a) (b)"
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 132,
+    "question": "Who among the following is not associated with defence of the 'Indian National Army' prisoners in the Year 1945-46?",
+    "options": [
+      "Bhulabhai Desai",
+      "Jawaharlal Nehru",
+      "Mahadev Desai",
+      "Asaf Ali"
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 133,
+    "question": "Arrange the following important events chronologically based on the Muslim separatist politics.\n(a) Deliverence Day\n(c) Direct Action day\n(b) Lucknow Pact\n(d) Establishment of 'All India Muslim League'",
+    "options": [
+      "(d) (a) (b) (c)",
+      "(d) (b) (a) (c)",
+      "(d) (b) (c) (a)",
+      "(d) (c) (b) (a)"
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 134,
+    "question": "Which one of the following opinions on the nature of 1857 Mutiny is not correct?",
+    "options": [
+      "John Seeley: “The Revolt of 1857 as a wholly unpatriotic and selfish sepoy mutiny with no native leadership and no popular support\".",
+      "James Outram & W. Tayler: “The outbreak of 1857 mutiny as a result of Hindu - Muslim conspiracy\".",
+      "R.C. Majumdar: “1857 Sepoy mutiny was not a war of Independence. There is nothing in the conduct or behaviour of the sepoys which would justify us in the belief or assumption, that they were inspired by love for their country or fought against the British with the definite idea of freeing their motherland\".",
+      "William Darlymple: “It is a conflict between civilization and Barbarism\"."
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 135,
+    "question": "Tropical monsoon forests are normally",
+    "options": [
+      "Evergreen forests",
+      "Deciduous forests",
+      "Temperate forests",
+      "Mangrove forests"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 136,
+    "question": "The predominant vegetation of hot deserts is",
+    "options": [
+      "Xerophytes",
+      "Mosophytes",
+      "Hygrophytes",
+      "Hydrophytes"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 137,
+    "question": "The hot & dry wind which originates in Sahara is",
+    "options": [
+      "Sirocco",
+      "Leveche",
+      "Chili",
+      "Loo"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 138,
+    "question": "The Mediterranean lands are also known as",
+    "options": [
+      "Orchard lands",
+      "Dry grass lands",
+      "Evergreen lands",
+      "Nomadic lands"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 139,
+    "question": "The planet that takes 88 days to make one revolution of the sun is",
+    "options": [
+      "Jupiter",
+      "Mars",
+      "Mercury",
+      "Saturn"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 140,
+    "question": "Which one of the following is the source region for the formation of air masses?",
+    "options": [
+      "The Himalayas",
+      "The Equatorial forest",
+      "The Deccan plateau",
+      "The Siberian plain"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 141,
+    "question": "Sub-tropical high pressure belts are also referred as",
+    "options": [
+      "Doldrums",
+      "Wind convergence",
+      "Horse latitudes",
+      "Frontal rains"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 142,
+    "question": "Which is the largest Physiographic division of India?",
+    "options": [
+      "Greater Himalayas",
+      "Greater Northern plains",
+      "Greater Indian plateau",
+      "The Coastal plains"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 143,
+    "question": "In India Multi Mode Transport System (MMTS) was started on the",
+    "options": [
+      "9th July 2003",
+      "9th August 2003",
+      "9th September 2003",
+      "9th October 2003"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 144,
+    "question": "Karewa Soil is known for the cultivation of",
+    "options": [
+      "Citrus Fruits",
+      "Floriculture",
+      "Coarse grains",
+      "Saffron"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 145,
+    "question": "Namchik Coal Mine is situated on",
+    "options": [
+      "Meghalaya",
+      "Assam",
+      "Arunachal Pradesh",
+      "Tripura"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 146,
+    "question": "The Konkan Railway transportation was started on",
+    "options": [
+      "15th August 1996",
+      "15th August 1997",
+      "15th August 1998",
+      "15th August 1999"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 147,
+    "question": "The boundary between India and Pakistan is an example of",
+    "options": [
+      "Super imposed boundary",
+      "Subsequent boundary",
+      "Antecedent boundary",
+      "Relict boundary"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 148,
+    "question": "Which one of the following is the most urbanized state in India?",
+    "options": [
+      "Punjab",
+      "Gujarat",
+      "Karnataka",
+      "Tamil Nadu"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 149,
+    "question": "Centre for Arid Zone Research Institute is located at",
+    "options": [
+      "Bangalore",
+      "Ranchi",
+      "Jodhpur",
+      "Jaipur"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 150,
+    "question": "Which one of the following state has the lowest Human Development Index?",
+    "options": [
+      "Bihar",
+      "Haryana",
+      "Himachal Pradesh",
+      "Punjab"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 151,
+    "question": "Which part of the Constitution deals with Amendments?",
+    "options": [
+      "XXI",
+      "XXII",
+      "XX",
+      "IX"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 152,
+    "question": "Equal Justice and free legal aid are parts of",
+    "options": [
+      "Directive Principles of State Policy",
+      "Fundamental Rights",
+      "Fundamental Duties",
+      "Citizenship"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 153,
+    "question": "Which one of the following is not correctly matched?",
+    "options": [
+      "Lanakla",
+      "Bomdila",
+      "Manapass",
+      "Shipkila"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 154,
+    "question": "\"The citizens, men and women equally, have the right to an adequate means of livelihood\" was mentioned in",
+    "options": [
+      "Directive Principles of State Policy",
+      "Centre-State Relations",
+      "Federal Policy",
+      "Fundamental Duties"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 155,
+    "question": "Parliament means",
+    "options": [
+      "The Lok Sabha",
+      "The Rajya Sabha",
+      "The President",
+      "All the above"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 156,
+    "question": "\"A body consisting of persons registered in the electoral rolls relating to a village comprised within the area of panchayat at the village level\" is called",
+    "options": [
+      "District",
+      "Gram Sabha",
+      "Panchayat Area",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 157,
+    "question": "In the format of Party competition, which model is currently working in India?",
+    "options": [
+      "One Party dominance",
+      "Bipolar competition",
+      "Two-plus competition",
+      "Multiparty competition"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 158,
+    "question": "\"The state shall provide free and compulsory education to all children of the age of six to fourteen years in such a manner as the state may, by law, determine\" is part of",
+    "options": [
+      "Right to Equality",
+      "Right against Exploitation",
+      "Right to Freedom of Religion",
+      "Right to Freedom"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 159,
+    "question": "\"Deen Dayal Upadhyaya Grameen Kaushalaya Yojana\" is part of",
+    "options": [
+      "Ministry of Rural Development",
+      "Ministry of Social Justice and Empowerment",
+      "Ministry of Communication",
+      "Ministry of Micro, Small and Medium Enterprises"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 160,
+    "question": "During which five-year plan was phase of heavy industrialization initiated?",
+    "options": [
+      "Second Five-Year Plan",
+      "First Five-Year Plan",
+      "Third Five-Year Plan",
+      "Sixth Five-Year Plan"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 161,
+    "question": "Which sector does contribute the most to Indian Economy?",
+    "options": [
+      "Service sector",
+      "Manufacturing sector",
+      "Agricultural sector",
+      "Small Scale Industrial sector"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 162,
+    "question": "Which type of unemployment has the marginal productivity of the workers is zero ?",
+    "options": [
+      "Seasonal unemployment.",
+      "Involuntary unemployment.",
+      "Disguised unemployment.",
+      "Structural unemployment."
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 163,
+    "question": "Identify the Non-Constitutional Body.",
+    "options": [
+      "National Human Rights Commission",
+      "Election Commission of India",
+      "National Commission for SCs",
+      "National Commission for STs"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 164,
+    "question": "What is meant by Monetary Policy?",
+    "options": [
+      "The process by which the Parliament controls the Money supply",
+      "The process by which Central Bank of a country controls the supply of Money",
+      "The process by which IMF controls the Money supply",
+      "The process by which World Bank controls the money supply"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 165,
+    "question": "If the Balance of Payments of a country is adverse, then which institution will help that country?",
+    "options": [
+      "World Bank",
+      "WTO",
+      "IMF",
+      "Asian Development Bank"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 166,
+    "question": "Which of the following are called the Twins of Bretton Woods?",
+    "options": [
+      "IMF & IBRD",
+      "IMF & WTO",
+      "IBRD & WHO",
+      "ADB & WHO"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 167,
+    "question": "Who was the founder of 'Hyderabad Protection Samithi'?",
+    "options": [
+      "Boorgula Narsing Rao",
+      "Hayagreevachari",
+      "Ramachary",
+      "Mandumula Narsinga Rao"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 168,
+    "question": "The Gentle men's agreement at Delhi was signed on:",
+    "options": [
+      "16th February, 1956",
+      "18th February, 1956",
+      "19th February, 1956",
+      "20th February, 1956"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 169,
+    "question": "When was the first Industrial Policy of India launched?",
+    "options": [
+      "1956",
+      "1948",
+      "1951",
+      "1965"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 170,
+    "question": "Who organized democratic Telangana conference in December, 1997 in the banner of 'All India People Resistance Forum'?",
+    "options": [
+      "Marrichenna Reddy",
+      "K. Jaya Shankar",
+      "Kaloji Narayan Rao",
+      "Veda Kumar"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 171,
+    "question": "Identify the commission appointed by Telugu Desham government in June, 2001",
+    "options": [
+      "Bhargava Commission",
+      "J.M. Girglani Commission",
+      "Non-Mulki Protection Commission",
+      "Telangana Mulki Commission"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 172,
+    "question": "What is the historical importance of the day 27th April, 2001 in the Final phase of Telangana Movement?",
+    "options": [
+      "Formation of Telangana Elites Forum",
+      "Foundation Telangana Jana Sabha",
+      "'Bongiri' Declaration",
+      "Foundation of Telangana Rastra Samithi"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 173,
+    "question": "'Nizam Subjects League' was founded by few educated elites of Hyderabad State in the year.",
+    "options": [
+      "1929",
+      "1930",
+      "1932",
+      "1934"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 174,
+    "question": "Who was the 'Home Minister of India' on the historic occasion of signing of 'Gentlemen's Agreement' by Andhra & Telangana leaders in1956 ?",
+    "options": [
+      "Sardar Patel",
+      "Govind Vallabh Pant",
+      "Morarji Desai",
+      "Moulana Abdul Kalam Azad"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 175,
+    "question": "How many seats were won by 'Telangana Prajasamithi' in the 1971 General Elections in Andhra Pradesh?",
+    "options": [
+      "12",
+      "11",
+      "14",
+      "10"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 176,
+    "question": "Who was the editor of 'imroz' a popular paper in Hyderabad State during the period of Osman Ali Khan?",
+    "options": [
+      "Md. Arif Khan",
+      "Md. Iqbal",
+      "Shoebullah Khan",
+      "Raza Ali Khan"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 177,
+    "question": "Arrange the following events related to Telangana Movement in Chronological order : (a) Telangana Vidrohadinam (b) Bhuvanagiri Declaration (c) Namaste Telangana daily was launched (d) Sagaraharam",
+    "options": [
+      "a, c, d, b",
+      "b, c, d, a",
+      "a, b, c, d",
+      "d, b, a, c"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 178,
+    "question": "Who described the post of Deputy Chief Minister as 'sixth finger to a hand' ?",
+    "options": [
+      "M. Chenna Reddy",
+      "Neelam Sanjeeva Reddy",
+      "B. Ramakrishna Reddy",
+      "K. Brahmananda Reddy"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 179,
+    "question": "Identify the leader from Andhra region who was not a member, who signed on the 'Gentlemen's Agreement' in 1956",
+    "options": [
+      "Damodaram Sanjeevaiah",
+      "N. Sanjeeva Reddy",
+      "Gauthu Lachanna",
+      "B. Gopal Reddy"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 180,
+    "question": "Justice 'Srikrishna Committee' submitted its report to UPA government on",
+    "options": [
+      "30th Nov, 2011",
+      "3rd Feb, 2010",
+      "31st Dec, 2011",
+      "23rd Dec, 2009"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 181,
+    "question": "Arrange the following events connected with the Second phase of Telangana Movement in chronological order:\n(a) Appoinment of Justice Sri Krishna Committee\n(b) Rail Bandh\n(c) Million March\n(d) Submission of resignation to Chief Minister post by N. Kiran Kumar Reddy",
+    "options": [
+      "a, b, c, d",
+      "b, d, c, a",
+      "d, b, c, a",
+      "b, c, a, d"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 182,
+    "question": "The students of Telangana conducted 'Telangana Vidyarthi Garjana' in Osmania University, on",
+    "options": [
+      "14th June, 2013",
+      "3rd January, 2010",
+      "3rd January, 2012",
+      "10th April, 2011"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 183,
+    "question": "Identify the person who brought the illegal appointment of non-locals in Kothagudem thermal power station for the first-time into public?",
+    "options": [
+      "A. Ramadas",
+      "A. Ravindranath",
+      "Sree Ramadas",
+      "I. Kiran Nath"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 184,
+    "question": "What is the impact of “Climate Change” on troposphere ?",
+    "options": [
+      "Increased CO₂ levels increases C₃ plants productivity",
+      "Increased CO₂ levels increases C₄ plants productivity",
+      "Precipitation increases throughout the earth",
+      "Temperature decreases throughout the earth"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 185,
+    "question": "Which of the following radio active elements is used to make nuclear fission reaction ?",
+    "options": [
+      "Thorium",
+      "Uranium",
+      "Barium",
+      "Actinium"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 186,
+    "question": "Satellite communication uses the following electro magnetic waves",
+    "options": [
+      "Visible Light",
+      "X - Rays",
+      "Micro Waves",
+      "Radio Waves"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 187,
+    "question": "What is the code name used for first Indian nuclear test ?",
+    "options": [
+      "Chargi",
+      "Pokhran",
+      "Smiling Buddha",
+      "Pinaka"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 188,
+    "question": "Speed of internet is measured in",
+    "options": [
+      "GHZ",
+      "GB",
+      "Dpi",
+      "GBPS"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 189,
+    "question": "The common components of photo chemical smog are",
+    "options": [
+      "Ozone and SO₂",
+      "NO₂ and SO₂",
+      "Formaldehyde and PAN",
+      "Ozone, Formaldehyde and PAN"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 190,
+    "question": "The first patent was issued on a human gene sequence is located on which chromosome and what kind of health risk is caused due to its mutation?",
+    "options": [
+      "4 and Huntingtin",
+      "23 and Hemophilia",
+      "7 and Cystic fibriosis",
+      "17 and Cancer"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 191,
+    "question": "What is the reason for increasing sea level in some coastal areas ?",
+    "options": [
+      "Decrease of CO2 in Troposphere",
+      "Increase of O3 layer in stratosphere",
+      "CH4 trapped beneath frozen soil of Alaska",
+      "Aforrestation"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 192,
+    "question": "Which of the following plant has high levels of Protein and rich in thiamin in its seeds?",
+    "options": [
+      "Brassica rapa",
+      "Arachis hypogaea",
+      "Linum usitatissimum",
+      "Pennisetum glaucum"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 193,
+    "question": "The main reason of ozone layer depletion is due to the release of",
+    "options": [
+      "CO from vehicles",
+      "SO2 from fuels",
+      "Chloro Fluoro Carbon compounds",
+      "Methane gas in atmosphere"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 194,
+    "question": "What is the function of a modem?",
+    "options": [
+      "Encryption and decryption",
+      "Voice to data conversion and data to voice conversion",
+      "Convert from analog signals to digital and from digital to analog singlas",
+      "Check for virus"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 195,
+    "question": "A Kind of injury or damage that results in the damage of premature death of all the near by cells in a tissue or an organ through autolysis is known as",
+    "options": [
+      "Neurosis",
+      "Necrosis",
+      "Apoptosis",
+      "Cellular selnescene"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 196,
+    "question": "Arrange the following events of \"biogeny theory\" in a sequence.\nA. Formation of coacervates\nB. Aerobic organisms came to existence\nC. Heterotropic organisms began to form\nD. Mycoplasmas are first formed cells",
+    "options": [
+      "A, D, C, B",
+      "A, C, D, B",
+      "B, A, C, D",
+      "A, B, C, D"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 197,
+    "question": "In fiber optic communication the source of Light used is",
+    "options": [
+      "Light Emitting Diode (LED)",
+      "Compact Fluorescent Lamp (CFL)",
+      "Diode",
+      "Semi conductor laser"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 198,
+    "question": "The size of quantum nano dots is around",
+    "options": [
+      "300 nm",
+      "200 nm",
+      "100 nm",
+      "10 nm"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 199,
+    "question": "Data scientists require the following skills.",
+    "options": [
+      "Data visualization only",
+      "Machine learning only",
+      "Statistics only",
+      "All the above"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 200,
+    "question": "Increasing blood clotting time is due to the deficiency of which of the following vitamin?",
+    "options": [
+      "Vitamin K",
+      "Vitamin B₁",
+      "Vitamin A",
+      "Vitamin C"
+    ],
+    "has_image": false,
+    "source_page": 48
+  }
+]

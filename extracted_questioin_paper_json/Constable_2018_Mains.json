@@ -1,0 +1,2411 @@
+[
+  {
+    "q_no": 1,
+    "question": "Which of the following statements is incorrect regarding the usage of the article?",
+    "options": [
+      "(1) Eight-year-old Roxy Getter is the youngest girl who climbed the Mount Kilimanjaro in 2017.",
+      "(2) Raj: Have you got a cold? Raghu : No, I've got the flu.",
+      "(3) What a lovely dress!",
+      "(4) Dr. Kalam was elected President in 2002."
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 2,
+    "question": "Fill in the blanks using the correct preposition:\nWhere did you come _______ ?",
+    "options": [
+      "(1) for",
+      "(2) from",
+      "(3) above",
+      "(4) into"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 3,
+    "question": "Fill in the blank with the appropriate verb form given below :\nRaghu _______ cricket when his friend went home yesterday.",
+    "options": [
+      "(1) has played",
+      "(2) is playing",
+      "(3) is played",
+      "(4) was playing"
+    ],
+    "source_page": 4,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_3_page_4.png"
+  },
+  {
+    "q_no": 4,
+    "question": "Fill in the blank with the correct verb form.\nI _______ French too well.",
+    "options": [
+      "(1) am not understanding",
+      "(2) do not understand",
+      "(3) am not understand",
+      "(4) do not understanding"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 5,
+    "question": "Choose the grammatically correct sentence from the options given below :",
+    "options": [
+      "(1) Neither the teacher nor the students was present in the class.",
+      "(2) Neither the teacher nor the students were present in the class.",
+      "(3) Neither the teacher nor the students has present in the class.",
+      "(4) Neither the teacher nor the students is present in the class."
+    ],
+    "source_page": 4,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_5_page_4.png"
+  },
+  {
+    "q_no": 6,
+    "question": "Which of the following sentences has a subject that does not agree with the verb ?",
+    "options": [
+      "(1) Every shirt, tie and coat is marked for reduction sale.",
+      "(2) Neither our Accounts Department nor our Head Office have a record of the transaction.",
+      "(3) Excessive absences were the reason for his failure.",
+      "(4) The committee has agreed to submit its report on Friday."
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 7,
+    "question": "Pick the one word that gives the meaning of the following:\nA large system consisting of many similar parts that are connected together.",
+    "options": [
+      "(1) NETWORK",
+      "(2) DISTRIBUTION",
+      "(3) COMPUTER",
+      "(4) COMMUNICATION"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 8,
+    "question": "Identify the correct passive form of the following sentence from the options given below : 'We would have painted the walls green.'",
+    "options": [
+      "The walls would have been painted green by us.",
+      "The green walls would have been painted by us.",
+      "The walls in green would be painted by us.",
+      "The green walls will have been painted by us."
+    ],
+    "source_page": 5,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_8_page_5.png"
+  },
+  {
+    "q_no": 9,
+    "question": "Pick the option that gives the correct indirect form of the following sentence : Direct : The politician said, “It gives me great pleasure to be here, this morning.” Indirect :",
+    "options": [
+      "The politician said that it gave him great pleasure to be there that morning.",
+      "The politician said it gives me great pleasure to be there that morning.",
+      "The politician said that it gave him great pleasure to be here this morning.",
+      "The politician said it gives me great pleasure to be there this morning."
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 10,
+    "question": "The following sentence is in Direct Speech. Choose the correct option which expresses the same sentence in Indirect Speech : The spectators said, “Bravo ! Well played, Sachin”.",
+    "options": [
+      "The spectators called Sachin, bravo because he had played well.",
+      "The spectators said that Sachin has played well.",
+      "The spectators encouraged Sachin saying that he played well.",
+      "The spectators applauded Sachin saying that he had played well."
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 11,
+    "question": "In the following question, there are six sentences of a paragraph marked S1, S6, P, Q, R, S. The positions of S1 and S6 are fixed. You are required to choose the most logical sequence of the sentences that form the paragraph : S1 : Proverbs contain homely but universal truths. P : Some of them point out the incongruities of situations in life. Q : Naturally, they are translatable from one language to another. R : Therefore, their appeal is direct to anyone. S : Many of them had their birth in folk literature. S6 : They are everyman’s philosophy.",
+    "options": [
+      "QPRS",
+      "QSPR",
+      "PSRQ",
+      "SPQR"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 12,
+    "question": "Choose the correct option which expresses the following sentence in passive voice : Do you imitate others ?",
+    "options": [
+      "Are others imitated by you ?",
+      "Are others being imitated by you ?",
+      "Were others imitated by you ?",
+      "Have others are imitated by you ?"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 13,
+    "question": "In the following question, there are six sentences of a paragraph marked S1, S6, P, Q, R, S. The positions of S1 and S6 are fixed. You are required to choose the most logical sequence of the sentences that form the paragraph: S1: There are divergent theories of education. P: There is still another which holds that education has to be considered rather in relation to community than to the other. Q: Yet, again some believe that a right proportion of all the theories should go into every system. R: The other holds that the purpose of education is to impart culture. S: The first considers that the sole purpose of education is to provide opportunities for growth. S6: No actual education proceeds wholly and completely on any one of the theories.",
+    "options": [
+      "PQRS",
+      "PQSR",
+      "RPQ",
+      "SQPR"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 14,
+    "question": "The author mentions the work of Darwin and Fabre in order to",
+    "options": [
+      "provide experimental evidence of the inflexibility of one kind of insect behaviour.",
+      "contradict the conventional wisdom about \"typical\" wasp behaviour.",
+      "illustrate the strength of the wasp's maternal affection.",
+      "explore the logical implications of the thesis articulated earlier."
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 15,
+    "question": "Which of the following statements is not true according to the passage?",
+    "options": [
+      "Darwin restrains the grasshopper while the wasp attempts to drag it by its antennae, which subsequently break off.",
+      "Darwin releases the grasshopper but the wasp ignores it.",
+      "The wasp takes significant time to retrieve the grasshopper, then re-inspects the burrow.",
+      "The wasp instantly brings the grasshopper and moves into the burrow."
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 16,
+    "question": "The primary purpose of the passage is to",
+    "options": [
+      "argue that insects are not unique in their dependence on rigid routines.",
+      "argue that insect behaviour relies on rigid routines which appear to be unconscious.",
+      "analyze the maternal behaviour of wasps.",
+      "compare and contrast the work of Darwin and Fabre."
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 17,
+    "question": "Which of the following is the antonym of the underlined word in the sentence 'I made some success, and the students had a predilection for me.'?",
+    "options": [
+      "Fondness",
+      "Inclination",
+      "Disinclination",
+      "Predisposition"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 18,
+    "question": "Which of the following words is correctly spelt?",
+    "options": [
+      "Liason",
+      "Irresistable",
+      "Fluorescent",
+      "Farenheit"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 19,
+    "question": "What is the best explanation of the expression \"It's raining cats and dogs\"? It means that",
+    "options": [
+      "cats and dogs do not enjoy rain.",
+      "it can never rain cats and dogs",
+      "cats and dogs enjoy the rain",
+      "it is raining heavily"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 20,
+    "question": "Choose the correct option that conveys the same meaning as the underlined word in the following sentence: Many cities were incinerated during the war.",
+    "options": [
+      "traumatized",
+      "burnt",
+      "shocked",
+      "prohibited"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 21,
+    "question": "Consider the following statements: (A) The number of ordered pairs of positive integers (m, n) such that m + n = 648 and g.c.d. of (m, n) = 27 is 8. (B) If the number x is of the form x = 48m + 39 for some positive integer m, then the remainder when x is divided by 8 is 1. Select the correct option among the following:",
+    "options": [
+      "Both (A) and (B) are true.",
+      "Only (A) is true.",
+      "Only (B) is true.",
+      "Both (A) and (B) are false."
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 22,
+    "question": "The radius 'r' of a circle and the side a of the square are such that r : a = 3 : 2√p. If s is the area of the square then the area of the circle is",
+    "options": [
+      "2s√p",
+      "9/4 s",
+      "2s",
+      "s/2"
+    ],
+    "source_page": 8,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_22_page_8.png"
+  },
+  {
+    "q_no": 23,
+    "question": "If 3x = 2y + 5z and 3y = 4x + z, then x : y : z =",
+    "options": [
+      "17 : 13 : 11",
+      "23 : 17 : 1",
+      "11 : 13 : 17",
+      "17 : 23 : 1"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 24,
+    "question": "If 8% of 7% of 5% of x is 105 then the value of x in lakhs is",
+    "options": [
+      "3.75",
+      "0.375",
+      "0.0375",
+      "0.00375"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 25,
+    "question": "2 + √2 + 1/(2 + √2) + 1/(√2 - 2) + ³√(12/125) =",
+    "options": [
+      "0.36",
+      "3.6",
+      "(28 + 5√2)/5",
+      "(18 + 10√2)/5"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 26,
+    "question": "The average age of a group of x students is 16 years. If m students each of age 15 years is added to this group then the new average is 15.8 years. Then what percent of x is m ?",
+    "options": [
+      "15",
+      "20",
+      "25",
+      "30"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 27,
+    "question": "The average height of 25 students out of 40 students in a class is 163 cm and the average height of the remaining students is 169 cm. Then the average height of the students in that class, in cm, is",
+    "options": [
+      "164.75",
+      "165.25",
+      "165.75",
+      "166.25"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 28,
+    "question": "If a person purchases pens at the rate of 16 pens for ₹ 200 and sells them at the rate of 12 pens for ₹ 160, then the profit/loss percent is",
+    "options": [
+      "6⅔% profit",
+      "13⅓% profit",
+      "6⅔% loss",
+      "13⅓% loss"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 29,
+    "question": "The rate of income tax is reduced to 14½% from 19%. If a person's taxable income is ₹ 3,20,000, then the tax benefit, in rupees, is",
+    "options": [
+      "14,400",
+      "1,440",
+      "16,000",
+      "1,600"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 30,
+    "question": "10 men and 15 women can complete a work in 6 days. 12 men and 27 women can complete the same work in 4 days. Then the number of days required for 2 men and 12 women to complete the same work is",
+    "options": [
+      "12",
+      "10",
+      "9",
+      "8"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 31,
+    "question": "4 men and 5 women in 6 days can earn ₹ 10,650 while 6 men and 4 women in 4 days can earn ₹ 8,200. Then the amount (in rupees) earned by 5 men and 10 women in 3 days, is",
+    "options": [
+      "8,750",
+      "16,900",
+      "8,625",
+      "16,225"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 32,
+    "question": "Suppose some principal amount P is given at r% simple interest per annum for a period of 12 years to get an amount A. Match the following:\nList – I (Amount) (A):\ni. 2P\nii. 5P/4\niii. 3P/2\niv. 7P/4\nList – II (Rate of Interest) (r):\na. 2 1/12\nb. 6 1/4\nc. 8 1/3\nd. 4 1/6",
+    "options": [
+      "i-c, ii-d, iii-b, iv-a",
+      "i-c, ii-d, iii-a, iv-b",
+      "i-c, ii-a, iii-d, iv-b",
+      "i-c, ii-b, iii-d, iv-a"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 33,
+    "question": "The graph given below, shows the production of wheat in different years in millions of tons. The percentage increase of production of wheat in the year 2017 over the year 2015 is",
+    "options": [
+      "14 2/7",
+      "22 2/9",
+      "28 4/7",
+      "11 1/9"
+    ],
+    "source_page": 11,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_33_page_11.png"
+  },
+  {
+    "q_no": 34,
+    "question": "If the number 6653A321 is divisible by 11 then A =",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "4"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 35,
+    "question": "P and Q started a business together with an initial investment in the ratio 3 : 2. P invested for 8 months but Q for less time. They shared their profits in the ratio 2 : 1. Then for how many months did Q invest?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "7"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 36,
+    "question": "5 trains A, B, C, D, E respectively running with speeds 50 kmph, 45 kmph, 40 kmph, 35 kmph, 30 kmph have to travel 120 km, 105 km, 100 km, 85 km, 80 km to reach their destinations respectively. Then the train that takes least time to reach its destination is",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 37,
+    "question": "If 25% of x is equal to 15% of y as well as 10% of z then x : y : z =",
+    "options": [
+      "6 : 10 : 15",
+      "3 : 5 : 15",
+      "12 : 10 : 15",
+      "6 : 10 : 5"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 38,
+    "question": "By selling an article for ₹ 1,403, a trader gets a profit of 15%. The cost price of the article, in rupees, is",
+    "options": [
+      "1350",
+      "1310",
+      "1270",
+      "1220"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 39,
+    "question": "If the cost price of 24 pens is equal to the selling price of 20 pens of the same kind, then the outcome of this transaction is",
+    "options": [
+      "24% profit",
+      "24% loss",
+      "20% profit",
+      "20% loss"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 40,
+    "question": "A person A, can complete a piece of work in x days and another person B requires 2x days to finish the same work. If both work together they can finish the work in 14 days, then x =",
+    "options": [
+      "18",
+      "20",
+      "21",
+      "24"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 41,
+    "question": "The following table gives the number of students who appeared and qualified in the Mathematics Olympiad in the southern states : Then the state with the highest percentage of qualified candidates is",
+    "options": [
+      "Karnataka",
+      "Telangana",
+      "Kerala",
+      "Tamil Nadu"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 42,
+    "question": "Two numbers when divided by d leave respective remainders 4 and 3. If their sum is divided by d the remainder is 1, then d =",
+    "options": [
+      "7",
+      "6",
+      "5",
+      "1"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 43,
+    "question": "In the decimal representation of 121/185 the digit in 1000th decimal place is",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "0"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 44,
+    "question": "If a = 5/4, b = 3/8, then match the following: List - I A. 1/a + 1/b = B. a²+b² = C. 1/a²+1/b² = D. a/b + b/a = List - II P. 1744/225 Q. 52/15 R. 109/30 S. 109/64",
+    "options": [
+      "A-P, B-S, C-Q, D-R",
+      "A-Q, B-R, C-S, D-P",
+      "A-P, B-R, C-S, D-Q",
+      "A-Q, B-S, C-P, D-R"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 45,
+    "question": "If 397246 is divided by K the quotient is 865 and the remainder is 211 then K =",
+    "options": [
+      "363",
+      "379",
+      "437",
+      "459"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 46,
+    "question": "Read the following statements:\na. Biofertilizers synthesize nutrients from environment and soil.\nb. Deep litter is an example of concentrated organic manure.\nc. Application of potassium to crops enhances resistance towards disease causing pests.\nWhich of the above statements is/are correct?",
+    "options": [
+      "a and b",
+      "b and c",
+      "a and c",
+      "b only"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 47,
+    "question": "Match the following food materials with the predominant organic acids they contain:\nList-I\n(Food Material)\na. Apple fruit\nb. Spinach leaves\nc. Tamarind fruit\nd. Amla fruit\nList - II\n(Predominant carboxylic acid)\ni. Tartaric acid\nii. Ascorbic acid\niii. Malic acid\niv. oxalic acid\nThe correct answer is :",
+    "options": [
+      "a-iv, b-iii, c-i, d-ii",
+      "a-iii, b-i, c-iv, d-ii",
+      "a-ii, b-iii, c-iv, d-i",
+      "a-iii, b-iv, c-i, d-ii"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 48,
+    "question": "Indicate the alkaloid employed to control high blood pressure :",
+    "options": [
+      "Quinine",
+      "Caffeine",
+      "Reserpine",
+      "Nicotine"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 49,
+    "question": "Light regulates the pattern of growth in plants. If a potted plant is placed in a window after few days, it exhibits a bending towards the direction where sunlight is present during day. This pattern of growth is called as:",
+    "options": [
+      "Phototropic movement",
+      "Phototactic movement",
+      "Photonastic movement",
+      "Photoperiodism"
+    ],
+    "source_page": 15,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_49_page_15.png"
+  },
+  {
+    "q_no": 50,
+    "question": "Name the acid present in vinegar which is widely used as preservative in pickles :",
+    "options": [
+      "Acetic acid",
+      "Lactic acid",
+      "Formic acid",
+      "Tartaric acid"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 51,
+    "question": "Kidney transplantation is the best solution for acute renal failure. The first kidney transplantation was done in India at which of the following hospitals?",
+    "options": [
+      "AIIMS, New Delhi",
+      "CMC, Vellore",
+      "NIMS, Hyderabad",
+      "Jaslok Hospital, Mumbai"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 52,
+    "question": "Match the following:\nList-I\na. Shrillness of Sound\nb. Audible limit\nc. Amplitude\nd. Unit of sound energy\nList - II\ni. Intensity\nii. Decibel\niii. 20 Hz - 20000 Hz\niv. Pitch\nThe correct answer is :",
+    "options": [
+      "a-iii, b-iv, c-ii, d-i",
+      "a-iv, b-iii, c-i, d-ii",
+      "a-i, b-ii, c-iii, d-iv",
+      "a-ii, b-i, c-iv, d-iii"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 53,
+    "question": "Assertion (A): When a carpet is beaten with a stick, dust comes out.\nReason (R): Inertia is a property of matter that resists changes in its state of motion or rest.\nThe correct answer is :",
+    "options": [
+      "Both (A) and (R) are correct and (R) is the correct explanation of (A).",
+      "Both (A) and (R) are correct but (R) is not the correct explanation of (A).",
+      "(A) is correct but (R) is not correct.",
+      "(A) is not correct but (R) is correct."
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 54,
+    "question": "The energy possessed by a body by virtue of motion is",
+    "options": [
+      "Potential energy",
+      "Kinetic energy",
+      "Attractive energy",
+      "Gravitational energy"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 55,
+    "question": "The mirror used by a dentist is:",
+    "options": [
+      "Plane mirror",
+      "Convex mirror",
+      "Concave mirror",
+      "Cylindrical mirror"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 56,
+    "question": "Biodegradable polymer among the following is",
+    "options": [
+      "Nylon 6",
+      "Terylene",
+      "Nylon 6, 6",
+      "PHBV"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 57,
+    "question": "Mirage is the best example for which of the following phenomenon ?",
+    "options": [
+      "Reflection",
+      "Refraction",
+      "Total internal reflection",
+      "Multiple reflection"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 58,
+    "question": "Which one of the following is used predominantly in making aeroplanes?",
+    "options": [
+      "Duralumin",
+      "German Silver",
+      "Gun metal",
+      "Invar"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 59,
+    "question": "The bulbs used in green houses are made of:",
+    "options": [
+      "Neon",
+      "Nitrogen",
+      "Xenon",
+      "Krypton"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 60,
+    "question": "The property of metals by which they can be beaten into thin sheets is called",
+    "options": [
+      "Malleability",
+      "Ductility",
+      "Conductivity",
+      "Sonorous Property"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 61,
+    "question": "The gas used as fire extinguisher is",
+    "options": [
+      "Carbon dioxide",
+      "Carbon monoxide",
+      "Nitric oxide",
+      "Sulphur dioxide"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 62,
+    "question": "Due to its very low solubility in blood, which one of the following is mixed with 20% oxygen and supplied to deep sea divers :",
+    "options": [
+      "nitrogen",
+      "helium",
+      "hydrogen",
+      "argon"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 63,
+    "question": "Read the following statements :\na. Membrane bound nucleus is absent in cyanobacteria.\nb. Ribosomes are associated with photorespiration.\nc. Nerve cells do not have the ability to regenerate\nWhich of the above statements is/are correct?",
+    "options": [
+      "a and b",
+      "a and c",
+      "b and c",
+      "c only"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 64,
+    "question": "Read the following statements :\na. Plants require zinc as micronutrient.\nb. Sunhemp is an example of green manure.\nc. The process in which one crop is followed by another crop on an agricultural field is called ' mixed cropping'.\nWhich of the above statements is/are correct?",
+    "options": [
+      "a and b",
+      "b and c",
+      "a and c",
+      "c only"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 65,
+    "question": "A flower having calyx, corolla, androecium and gynoecium is called 'complete flower'. If any of these whorls is missing, then such flower is regarded as 'incomplete flower'. Identify from the following an incomplete flower :",
+    "options": [
+      "Hibiscus",
+      "Datura",
+      "Papaya",
+      "Cotton"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 66,
+    "question": "Which movement during freedom struggle came to a sudden end with the Chauri Chaura incident ?",
+    "options": [
+      "Home Rule Agitation",
+      "Non-Co-operation Movement",
+      "Salt Satyagraha",
+      "Quit India Movement"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 67,
+    "question": "Dharmapala, the head of the famous Nalanda University during the period of the Guptas, hailed from which of the following cities ?",
+    "options": [
+      "Benaras",
+      "Mathura",
+      "Nasik",
+      "Kanchipuram"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 68,
+    "question": "Match the following ancient scientists with their works :\nList-I (Ancient Scientists)\na. Palakapya\nb. Patanjali\nc. Vagbhatta\nd. Varahamihira\nList-II (Works)\ni. Brihatsamhita\nii. Hastyayurveda\niii. Yogasutra\niv. Ashtanga Samgraha",
+    "options": [
+      "a-iv, b-ii, c-i, d-iii",
+      "a-ii, b-iii, c-i, d-iv",
+      "a-ii, b-iii, c-iv, d-i",
+      "a-iii, b-iv, c-i, d-ii"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 69,
+    "question": "In which of the following movements, Annie Besant actively participated ?",
+    "options": [
+      "Non-Co-operation Movement",
+      "Salt Satyagraha",
+      "Home Rule Agitation",
+      "Quit India Movement"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 70,
+    "question": "Match the following dynasties with their capitals.\nList-I (dynasties)\na. Imad Shahis\nb. Adil Shahis\nc. Barid Shahis\nd. Qutub Shahis\ne. Nizam Shahis\nList-II (Capitals)\ni. Bijapur\nii. Golconda\niii. Berar\niv. Bidar\nv. Ahmadnagar",
+    "options": [
+      "a-iii, b-i, c-iv, d-ii, e-v",
+      "a-iii, b-v, c-i, d-iv, e-ii",
+      "a-v, b-iii, c-iv, d-i, e-ii",
+      "a-iii, b-iv, c-ii, d-v, e-j"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 71,
+    "question": "Name the Chinese traveller who visited India during the period of Chandra Gupta II.",
+    "options": [
+      "Huien Tsang",
+      "Itsing",
+      "Fa Hien",
+      "La Ping"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 72,
+    "question": "Who among the following was the founder of the Mohammadan Anglo Oriental College in Aligarh ?",
+    "options": [
+      "Muhammad Ali Jinnah",
+      "Maulvi Chirag Ali",
+      "Sir Syed Ahmed Khan",
+      "Mirza Ghulam Ahmed"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 73,
+    "question": "Assertion (A): After the Revolt of 1857 was put down, the British were particularly hard on the Muslims. Reason (R): The British came to the conclusion that the Great Revolt was led by Muslims and that they were mainly responsible for it. Correct answer is :",
+    "options": [
+      "Both A and R are true and R is the correct explanation for A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 74,
+    "question": "Name the Governor - General who for the first time introduced Civil Services in India.",
+    "options": [
+      "Warren Hastings",
+      "Lord Cornwallis",
+      "Lord Wellesley",
+      "Lord Dalhousie"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 75,
+    "question": "Which among the following animals was not represented in the Ashokan Pillar ?",
+    "options": [
+      "Horse",
+      "Bull",
+      "Elephant",
+      "Deer"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 76,
+    "question": "Which Delhi Sultan was the first to participate in the celebrations of Holi Festival?",
+    "options": [
+      "Ghiyasuddin Tughlaq",
+      "Mohammad Bin Tughlaq",
+      "Firoz Shah Tughlaq",
+      "Mahmud Tughlaq"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 77,
+    "question": "Who among the following does not belong to the Bhakti movement?",
+    "options": [
+      "Sankaracharya",
+      "Ramanujacharya",
+      "Vallabhacharya",
+      "Srikantacharya"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 78,
+    "question": "The famous Sanskrit scholar Max Muller who translated Vedas into English belonged to which country by birth?",
+    "options": [
+      "England",
+      "Germany",
+      "France",
+      "United States of America"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 79,
+    "question": "Who among the following had started 'Sharada Sadan' a school for widows?",
+    "options": [
+      "Kandukuri Veeresalingam",
+      "Pandita Rama Bai",
+      "D.K. Karve",
+      "Savitri Bai Phule"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 80,
+    "question": "Arrange the following Delhi Sultanate dynasties in their chronological order :",
+    "options": [
+      "c, a, b, d",
+      "c, b, d, a",
+      "a, d, b, c",
+      "d, c, a, b"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 81,
+    "question": "Who among the following leaders raised the slogan 'Inquilab Zindabad' ?",
+    "options": [
+      "Chandra Sekhar Azad",
+      "Bhagat Singh",
+      "Subhash Chandra Bose",
+      "Sukh Dev"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 82,
+    "question": "During whose reign, the Persian envoy Abdur Razak visited Vijayanagar empire ?",
+    "options": [
+      "Sri Krishna Deva Raya",
+      "Deva Raya II",
+      "Saluva Narasimha",
+      "Sadasiva Rayalu"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 83,
+    "question": "Who was designated as Sadr-us-Sudur during Mughal administration?",
+    "options": [
+      "The chief of the army",
+      "The chief letter writer",
+      "The chief civil judge",
+      "The seal keeper"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 84,
+    "question": "Who among the following introduced the Dual government in Bengal ?",
+    "options": [
+      "Warren Hastings",
+      "Robert Clive",
+      "Wellesley",
+      "Cornwallis"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 85,
+    "question": "Name the Delhi sultan who introduced the system of Sijda (prostration) and Paibos (kissing the feet of the monarch).",
+    "options": [
+      "Ala-ud-din Khilji",
+      "Muhammad-bin-Tughlaq",
+      "Ibrahim Lodi",
+      "Ghias-ud-din Balban"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 86,
+    "question": "The new alluvium soil of the Gangetic Plain is called as:",
+    "options": [
+      "Tarai",
+      "Bhabar",
+      "Bhangar",
+      "Khadar"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 87,
+    "question": "Which one of the following states has the highest concentration of laterite soils ?",
+    "options": [
+      "Gujarat",
+      "Rajasthan",
+      "Odisha",
+      "Jammu & Kashmir"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 88,
+    "question": "The Human Development Index (HDI) rank of India for the year 2016 and 2017 respectively as per UNDP.",
+    "options": [
+      "132 and 133",
+      "129 and 130",
+      "132 and 130",
+      "131 and 130"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 89,
+    "question": "Matatilla Project was built on which of the following rivers?",
+    "options": [
+      "Mahanadi",
+      "Kosi",
+      "Betwa",
+      "Damodar"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 90,
+    "question": "Identify the correct descending order of density of the population of below given states as per 2011 Census.",
+    "options": [
+      "Bihar, Kerala, West Bengal, U.P.",
+      "West Bengal, Bihar, Kerala, U.P.",
+      "Bihar, Kerala, U.P., West Bengal",
+      "Bihar, West Bengal, Kerala, U.P."
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 91,
+    "question": "Which state in India first introduced the Midday Meal Scheme for Government School children ?",
+    "options": [
+      "Maharashtra",
+      "Tamil Nadu",
+      "Kerala",
+      "Andhra Pradesh"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 92,
+    "question": "Which one of the following is not included in the Right to Equality under the constitution?",
+    "options": [
+      "Social equality",
+      "Abolition of titles",
+      "Abolition of untouchability",
+      "Economic equality"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 93,
+    "question": "Which of the following district falls under Central Telangana Agro-climatic zone ?",
+    "options": [
+      "Khammam",
+      "Kamareddy",
+      "Vikarabad",
+      "Yadadri - Bhuvanagiri"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 94,
+    "question": "Which one of the following statements is correct?",
+    "options": [
+      "Bihar has 40 Lok Sabha constituencies.",
+      "Goa has one Lok Sabha constituency.",
+      "Madhya Pradesh has twenty eight Lok Sabha constituencies.",
+      "Meghalaya has three Lok Sabha constituencies."
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 95,
+    "question": "Which one of the following is not correct statement with regard to Inter-State Council ?",
+    "options": [
+      "It's Chairman is Prime Minister.",
+      "All Chief Ministers are it's members.",
+      "It was constituted on the recommendation of Justice J.S. Verma Committee report.",
+      "Administrators of Union Territories not having Legislative Assembly are its members."
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 96,
+    "question": "Match the period of the following governments with the number of Lok Sabha concerned : List - I (Government) a. National Front b. Janata Party c. United Front d. Congress Party List - II (Lok Sabha) i. Tenth ii. Ninth iii. Sixth iv. Eleventh The correct answer is :",
+    "options": [
+      "ii iii i iv",
+      "iii ii iv i",
+      "ii iii iv i",
+      "i iv ii iii"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 97,
+    "question": "Match the following states with their Chief Minister as on 20th Feb, 2019:\nList – I (States)\na. Uttarakhand\nb. Himachal Pradesh\nc. Tripura\nd. Puducherry\nList – II (Chief Ministers)\ni. Biplab Kumar Deb\nii. Trivendra Singh Rawat\niii. V. Narayana Swamy\niv. Jai Ram Thakur\nThe correct answer is:",
+    "options": [
+      "a-iii, b-ii, c-i, d-iv",
+      "a-ii, b-i, c-iii, d-iv",
+      "a-ii, b-iv, c-i, d-iii",
+      "a-ii, b-iv, c-i, d-iii"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 98,
+    "question": "'Casting Vote' to the Speaker of Lok Sabha is given in which Article of the Constitution?",
+    "options": [
+      "Article 100",
+      "Article 101",
+      "Article 102",
+      "Article 103"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 99,
+    "question": "Which of the following statements are true?\ni. The Indian Council Act, of 1909 introduced the principle of election for the first time.\nii. The Government of India Act, 1919 gave separate electorates to Sikhs.\niii. The Government of India Act, 1935 gave separate representation to Indian Christians.\niv. The Indian Councils Act, 1892 decreased the functions of Legislative Council\nChoose the correct answer:",
+    "options": [
+      "i, ii & iv",
+      "ii & iii",
+      "i & iv",
+      "iii & iv"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 100,
+    "question": "Which one of the following statements is not correct with regard to sources of revenue to Municipalities?",
+    "options": [
+      "Grants-in-aid from contingency fund of India.",
+      "Grants-in-aid from consolidated fund of India.",
+      "Taxes collected by Municipalities authorized by the State Legislature by law.",
+      "Taxes collected by state but are assigned to Municipality."
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 101,
+    "question": "Consider the following statements about price index:\na. GDP (Gross Domestic Product) deflator measures the price level of a basket of consumer goods.\nb. The Consumer Price Index (CPI) measures the overall price level of goods and services.\nThe correct answer is:",
+    "options": [
+      "Both a and b are correct.",
+      "Both a and b are not correct.",
+      "a only is correct.",
+      "b only is correct."
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 102,
+    "question": "Who has the power to prescribe the number of judges in Supreme Court?",
+    "options": [
+      "President in consultation with Prime Minister",
+      "President in consultation with Chief Justice of India",
+      "Rajya Sabha by passing a law",
+      "Parliament by passing a law"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 103,
+    "question": "The canon of equality taxation as proposed by Adam Smith, satisfies one of the following:",
+    "options": [
+      "Lumpsum tax",
+      "Regressive taxation",
+      "Proportional taxation",
+      "Progressive taxation"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 104,
+    "question": "Read the following statements:\na. National Food Security Act came into force with effect from July 5, 2013.\nb. The Act gives legal entitlement to 50 percent of rural and 50 percent of the urban population.\nThe correct answer is:",
+    "options": [
+      "a only is correct.",
+      "b only is correct.",
+      "Both a and b are correct.",
+      "Both a and b are not correct."
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 105,
+    "question": "In which of the following Five Year Plans, India's growth rate of agriculture exceeded the targeted growth rate ?",
+    "options": [
+      "Eighth Five Year Plan",
+      "Ninth Five Year Plan",
+      "Tenth Five Year Plan",
+      "Eleventh Five Year Plan"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 106,
+    "question": "Under full capital account convertibility, if an economy does not perform well : a. There will be a massive capital outflows from the economy. b. There will be a massive capital inflow into the economy. c. Few individual investors lose, the country would gain. d. Few individual investors would benefit, the country would lose. Which of the above statements is/are true?",
+    "options": [
+      "a and b only",
+      "a and c only",
+      "a and d only",
+      "b and d only"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 107,
+    "question": "Compilation of General Agreement on Tariff and Trade (GATT) Uruguay round (Eighth round) negotiations is popularly known as:",
+    "options": [
+      "Sutherland Proposals",
+      "Dunkel Proposals",
+      "Mike Moore proposal",
+      "Oliver Long proposal"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 108,
+    "question": "Read the following statements :\na. M. Vishweshwarayya formulated a plan and published it in his book \"The Planned Economy of India\" in 1934.\nb. Jayaprakash Narayan formulated 'Sarvodaya Plan' in 1950.\nc. Sriman Narayan Agarwal formulated 'The Gandhian Plan' in 1945.\nd. M.N. Roy formulated 'The People's Plan' in 1944.\nWhich of the statements is/are correct?",
+    "options": [
+      "a and b only",
+      "a and c only",
+      "b and c only",
+      "a and d only"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 109,
+    "question": "What is the prime objective of Special Economic Zones (SEZ) in India?",
+    "options": [
+      "To enhance foreign investment and hassle free environment for exports.",
+      "To encourage free capital inflows and hassle free environment for imports.",
+      "To encourage startups for five years.",
+      "To provide employment for rural youth and encourage rural innovations."
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 110,
+    "question": "From which Union Budget onwards, the classification of Plan and Non-Plan expenditures are replaced with Capital and Revenue expenditures?",
+    "options": [
+      "2014-15 Union Budget",
+      "2015-16 Union Budget",
+      "2016-17 Union Budget",
+      "2017-18 Union Budget"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 111,
+    "question": "Fiscal Responsibility and Budget Management (FRBM) Review Committee, appointed by the Government of India in 2016, submitted its report in Jan-2017. Which of the following suggestions of this Committee is/are correct?\na. To bring down the debt - GDP ratio to 40 percent by 2023.\nb. The central government should target a fiscal deficit to 2.5 percent of GDP by 2023.\nc. The centre should replace the existing FRBM Act, 2003 with a new law.",
+    "options": [
+      "a only is correct.",
+      "a and b only are correct.",
+      "b and c only are correct.",
+      "a and c only are correct."
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 112,
+    "question": "Which of the following river/s is/are not a tributary of the river Krishna? (a) Panchganga (b) Malaprabha (c) Purna (d) Pravara",
+    "options": [
+      "(a) only",
+      "(c) only",
+      "(c) and (d) only",
+      "(c) and (a) only"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 113,
+    "question": "Which one of the following is an Indian Satellite sensor ?",
+    "options": [
+      "LISS - II",
+      "MSS",
+      "LANDSAT",
+      "Geo Eye"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 114,
+    "question": "Consider the following ranges in Himalayas and find out the correct sequence from North to South: (a) Zaskar range (b) Pirpanjal range (c) Shivalik range (d) Ladakh range",
+    "options": [
+      "d-a-b-c",
+      "a-d-b-c",
+      "b-d-c-a",
+      "b-c-a-d"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 115,
+    "question": "Where is the headquarters of the East Central Railways located?",
+    "options": [
+      "Kolkata",
+      "Hajipur",
+      "Allahabad",
+      "Bilaspur"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 116,
+    "question": "Read the following pairs about the 'International Day of the Girl Child':\na. The day is to be celebrated on : October 11\nb. The organisation which declared the day to be celebrated : UNESCO\nThe correct answer is:",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 117,
+    "question": "The following countries are the major importers of liquified petroleum gas (LPG) during 2018-19 :\na. Japan\nb. India\nc. China\nChoose them in the descending order based on their quantity of imports :",
+    "options": [
+      "a, b and c",
+      "c, b and a",
+      "b, a and c",
+      "c, a and b"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 118,
+    "question": "Read the following statements about the 'World Sustainable Development Summit 2019':\na. The summit was held in February 2019 in New Delhi.\nb. The theme of the 2019 summit was 'Institutional Framework for Sustainable Development'.\nChoose the correct answer :",
+    "options": [
+      "Only a is correct",
+      "Only b is correct",
+      "Both a and b are correct",
+      "Both a and b are not correct"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 119,
+    "question": "As per the 'World Employment and Social Outlook Trends 2019' report published by the ILO in February 2019, the global unemployment rate in 2018 was:",
+    "options": [
+      "5.6%",
+      "5.0%",
+      "4.6%",
+      "4.0%"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 120,
+    "question": "Who among the following was honoured in February 2019 with the 'Freedom of the city of London' award in recognition of contributing to promote bilateral relations ?",
+    "options": [
+      "Amarthya Sen",
+      "John Paul Preston",
+      "Noel Byrne",
+      "Sanjiv Chadha"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 121,
+    "question": "Read the following pairs: Book Author a. Changing India : Dr. Manmohan Singh b. I Do What I Do : Dr. Urjit Patel The correct answer is :",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 122,
+    "question": "Read the following statements about the Astronomical Society of India :\na. Dr. G.C. Anupama became the first female president of Astronomical Society of India.\nb. She was elected to the post for the biennium 2019-21.\nChoose the correct answer:",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 123,
+    "question": "Read the following pairs:\na. National Girl Child Day: 11th October\nb. Theme of the National Girl Child Day 2019: Empowering Girls for a Brighter Tomorrow\nChoose the correct answer:",
+    "options": [
+      "Only a is correct",
+      "Only b is correct",
+      "Both a and b are correct",
+      "Both a and b are not correct"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 124,
+    "question": "Assertion (A): A disaster relief exercise, 'Exercise Rahat' was demonstrated in Rajasthan in February 2019. Reason (R): Exercise Rahat was organised to synergise efforts for humanitarian assistance and disaster relief operations. The correct answer is :",
+    "options": [
+      "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+      "(A) is true, but (R) is false.",
+      "(A) is false, but (R) is true."
+    ],
+    "source_page": 39,
+    "has_image": false
+  },
+  {
+    "q_no": 125,
+    "question": "Read the following statements: a. Abhinandan Varthaman is the Indian Air Force (IAF) Air Commodore. b. He is the first recipient of the 'Bhagwan Mahavir Ahimsa Puraskar'. c. The award carries a cash prize of ₹ 5 lakh. Which of the statements is/are not correct?",
+    "options": [
+      "a, b and c",
+      "a and b only",
+      "b only",
+      "a and c only"
+    ],
+    "source_page": 39,
+    "has_image": false
+  },
+  {
+    "q_no": 126,
+    "question": "The government-funded health insurance scheme, the 'Pradhan Mantri Jan Arogya Yojana' was launched in September 2018 by the Prime Minister of India in :",
+    "options": [
+      "Gandhinagar",
+      "Varanasi",
+      "Ranchi",
+      "Pune"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 127,
+    "question": "Match the following central agencies with their Directors General :\nCentral Agencies\na. Border Security Force\nb. Council of Scientific and Industrial Research (CSIR)\nc. Indo-Tibetan Border Police\nDirectors-General\ni. Rajni Kant Mishra\nii. S.S. Deswal\niii. Jalaj Srivastava\niv. Shekar C. Mande",
+    "options": [
+      "iii i ii",
+      "ii iv i",
+      "i iv ii",
+      "i iii iv"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 128,
+    "question": "Read the following statements about High Courts in India :\na. A separate High Court for the state of Andhra Pradesh was constituted by the President of India with effect from January 1, 2019.\nb. With the creation of this new High Court, India has 27 High Courts as on March 1, 2019.\nChoose the correct answer:",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 129,
+    "question": "Match the following:\nAward\nAwardee\na. Ashok Chakra (2019)\ni. Narendra Modi\nb. Carnot Prize (2018)\nii. Pranab Mukherjee\nc. Padma Bhushan (2019)\niii. Piyush Goyal\nd. First-ever Philip Kotler Presidential Award\niv. Nazir Ahmad Wani\nv. Sukhdev Singh Dhindsa\nChoose the correct answer :",
+    "options": [
+      "iv i iii ii",
+      "ii iii iv v",
+      "v ii iv i",
+      "iv iii v i"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 130,
+    "question": "India's heaviest communication satellite GSAT-11 was launched successfully in December 2018 from:",
+    "options": [
+      "Sriharikota in AP",
+      "French Guiana",
+      "Devanagere in Karnataka",
+      "Hasan in Karnataka"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 131,
+    "question": "Aero India 2019 was opened in",
+    "options": [
+      "Hyderabad",
+      "Chennai",
+      "Bengaluru",
+      "Goa"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 132,
+    "question": "The 'Corruption Perceptions Index 2018' of the Transparency International ranked India at",
+    "options": [
+      "81 in 180 countries",
+      "78 in 180 countries",
+      "79 in 180 countries",
+      "80 in 178 countries"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 133,
+    "question": "Read the following pairs:\na. 1* LAWASIA Human Rights Conference 2019: New Delhi, India\nb. World Governments Summit: Hyderabad, India\nChoose the correct answer:",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 134,
+    "question": "Read the following statements:\na. The Chairman of the Defence Research and Development Organisation (DRDO) is Dr. G. Satheesh Reddy.\nb. Dr. G. Satheesh Reddy is the secretary of India's Department of Defence R & D.\nc. One of the winners of the '2019 Missile Systems Award' is Dr. G. Satheesh Reddy.\nThe correct statements are:",
+    "options": [
+      "a and b only",
+      "b and c only",
+      "a and c only",
+      "a, b and c"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 135,
+    "question": "Read the following statements about the Australian Open Tennis Men's singles final match held in 2019:\na. Novak Djokovic defeated Rafael Nadal in straight sets in the final singles title.\nb. Novak Djokovic won the men's singles title for a record ninth time.\nChoose the correct answer:",
+    "options": [
+      "Only a is correct",
+      "Only b is correct",
+      "Both a and b are correct",
+      "Both a and b are not correct"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 136,
+    "question": "The number of triangles in the following figure is",
+    "options": [
+      "9",
+      "11",
+      "13",
+      "15"
+    ],
+    "source_page": 44,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_136_page_44.png"
+  },
+  {
+    "q_no": 137,
+    "question": "Observe the following sequence and find the missing term among the given options. 0,3, 6, 15, 24, ____ 54",
+    "options": [
+      "29",
+      "30",
+      "39",
+      "41"
+    ],
+    "source_page": 44,
+    "has_image": false
+  },
+  {
+    "q_no": 138,
+    "question": "Observe the following sequence and find the missing term among the given options: 8, 12, 24, ____ 60",
+    "options": [
+      "23",
+      "29",
+      "31",
+      "36"
+    ],
+    "source_page": 44,
+    "has_image": false
+  },
+  {
+    "q_no": 139,
+    "question": "Select the cube among options (1), (2), (3), (4) that cannot be made by folding the following unfolded cube:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "source_page": 44,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_139_page_44.png"
+  },
+  {
+    "q_no": 140,
+    "question": "Match the following : List - I (Sequence) a. 0, 7, 26, 63, __ b. 1, 9, 25, 49, 81, __ c. 14, 20, 28, 38, __ d. 3840, 384, 48, 8, __ List - II (Missing term) i. 2 ii. 50 iii. 121 iv. 124 The correct answer is :",
+    "options": [
+      "a iv b iii c i d ii",
+      "a iv b iii c ii d i",
+      "a iii b iv c ii d i",
+      "a iii b iv c i d ii"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 141,
+    "question": "Read the following statements: If the radius of base of a cylinder is 5 cm and its height is 6 cm then its a. Total surface area is 110 π sq.cm b. Curved surface area is 25 π sq.cm c. Volume is 150 π cu.cm The correct answer is :",
+    "options": [
+      "Then a and b are true",
+      "b and c are true",
+      "a and c are true",
+      "a, b and c are true"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 142,
+    "question": "Observe the following sequence and find the missing term among the given options. 5, 6, 6, 8, 16, 19, 57, __, 244, 249",
+    "options": [
+      "154",
+      "121",
+      "91",
+      "61"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 143,
+    "question": "The length (in meters) of a rectangular canvas of 2 m width required to cover a conical tent of base radius 14 meters and height 48 meters is (in meters)",
+    "options": [
+      "1100",
+      "1060",
+      "960",
+      "880"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 144,
+    "question": "The area of a field in the shape of a trapezium is 7200 square meters. If the length of one of the parallel sides is 80 meters and the distance between the parallel sides is 60 meters, then the length (in meters) of the other parallel side is",
+    "options": [
+      "240",
+      "200",
+      "160",
+      "150"
+    ],
+    "source_page": 46,
+    "has_image": true,
+    "image_file": "images/Constable_2018_Mains/q_144_page_46.png"
+  },
+  {
+    "q_no": 145,
+    "question": "49:121 :: 169 :",
+    "options": [
+      "225",
+      "256",
+      "289",
+      "324"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 146,
+    "question": "LOSE : NRWJ :: GAIN :",
+    "options": [
+      "IDLP",
+      "HCLP",
+      "IDMS",
+      "HCMS"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 147,
+    "question": "9:343::12:",
+    "options": [
+      "512",
+      "1331",
+      "729",
+      "1000"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 148,
+    "question": "The number of elements in the set (A ∩ B') ∪ (A' ∩ C) is, where A' and B' denote the complements of A and B respectively",
+    "options": [
+      "16",
+      "20",
+      "21",
+      "14"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 149,
+    "question": "The number of elements in the set A ∩ (B ∪ C) is",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 150,
+    "question": "Pick the odd thing:",
+    "options": [
+      "Goat",
+      "Hen",
+      "Cow",
+      "Horse"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 151,
+    "question": "Choose the odd thing :",
+    "options": [
+      "Arithmetic Mean",
+      "Variance",
+      "Mode",
+      "Median"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 152,
+    "question": "A committee of 4 girls and 3 boys is to be selected out of 6 girls and 5 boys. The number of ways of forming the committee if two particular boys refuse to be in the same committee is",
+    "options": [
+      "150",
+      "135",
+      "120",
+      "105"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 153,
+    "question": "What is the average of a, b and c ?\nI. a, b and c are in an arithmetic progression.\nII. a, b and c are in a geometric progression.",
+    "options": [
+      "If the statement I alone answers the question.",
+      "If the statement II alone answers the question.",
+      "If the statements I and II together only answers the question",
+      "If the statements I and II together also can't answer the question."
+    ],
+    "source_page": 48,
+    "has_image": false
+  },
+  {
+    "q_no": 154,
+    "question": "Is a > b?\nI. a² > b²\nII. |a| > |b|",
+    "options": [
+      "If the statement I alone answers the question.",
+      "If the statement II alone answers the question.",
+      "If the statements I and II together only answers the question",
+      "If the statements I and II together also can't answer the question."
+    ],
+    "source_page": 48,
+    "has_image": false
+  },
+  {
+    "q_no": 155,
+    "question": "Is the quadrilateral ABCD cyclic ?\nI. AB is parallel to CD\nII. ∠ABC + ∠ADC = 180°",
+    "options": [
+      "If the statement I alone answers the question.",
+      "If the statement II alone answers the question.",
+      "If the statements I and II together only answers the question",
+      "If the statements I and II together also can't answer the question."
+    ],
+    "source_page": 48,
+    "has_image": false
+  },
+  {
+    "q_no": 156,
+    "question": "In a certain coding process, the word TIGER is coded as TIJOW and the word BLIND is coded as GQOND, then the code for the word SWING in the same code is",
+    "options": [
+      "SWOYV",
+      "JQOYV",
+      "JQONG",
+      "SWONV"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 157,
+    "question": "P, Q, R, S, T are five persons sitting at a round table facing its centre. P sits between T and Q. S sits at immediate left of R. If Q sits between P and S, then the person sitting immediate left to T is",
+    "options": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 158,
+    "question": "40 boys are seated in 40 chairs arranged in a row. Ravi is seated in the 8th chair from left. Raju is seated in the 19th chair from the right. Ram is seated exactly in the middle chair between Ravi and Raju. Then from left the number of the chair that Ram is sitting, is",
+    "options": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 159,
+    "question": "If A is son of husband of daughter of husband of B, then B is A's",
+    "options": [
+      "Grandfather",
+      "Grandmother",
+      "Great grandfather",
+      "Great grandmother"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 160,
+    "question": "In a code language SMILE is written as UKKJG. Then in the same code language FRUIT is coded as",
+    "options": [
+      "HKVHW",
+      "HPWGV",
+      "GRIUW",
+      "FLWKV"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 161,
+    "question": "Read the following statements :\na. Values do not guide us to live ethically.\nb. Good values help us in feeling at peace from within.\nc. Values and beliefs do not have any bearing on our attitudes.\nd. Values guide us to take the right directions and act appropriately.\nWhich of the above statement(s) is/are correct?",
+    "options": [
+      "a, b and c",
+      "b and c",
+      "c and d",
+      "b and d"
+    ],
+    "source_page": 50,
+    "has_image": false
+  },
+  {
+    "q_no": 162,
+    "question": "Read the following statements:\na. Openness is a desirable virtue in professionals.\nb. One can take unfair advantage of the situation in work place.\nc. One should develop a sense of belongingness with the organization where he/she works.\nd. One should avoid situations that might lead to conflicts.\nWhich of the above statements are ethically correct?",
+    "options": [
+      "a and c",
+      "a, c and d",
+      "b and d",
+      "a, b and c"
+    ],
+    "source_page": 50,
+    "has_image": false
+  },
+  {
+    "q_no": 163,
+    "question": "Who among the following National Leaders opined that women should be treated equally and should get equal remuneration for equal work?",
+    "options": [
+      "Bal Gangadhara Tilak",
+      "Lala Lajpat Rai",
+      "Mahatma Gandhi",
+      "Motilal Nehru"
+    ],
+    "source_page": 51,
+    "has_image": false
+  },
+  {
+    "q_no": 164,
+    "question": "In India, women, particularly lower class and lower caste, have been suffering due to many reasons because \"women's problems\" are not treated as",
+    "options": [
+      "\"Family problems\"",
+      "\"Political party problems\"",
+      "\"Societal problems\"",
+      "\"Nature problems\""
+    ],
+    "source_page": 51,
+    "has_image": false
+  },
+  {
+    "q_no": 165,
+    "question": "Who made this statement, \"One is not born, but rather becomes a woman\"?",
+    "options": [
+      "Simone de Beauvoir",
+      "B.R. Ambedkar",
+      "John Keats",
+      "Flora Nwapa"
+    ],
+    "source_page": 51,
+    "has_image": false
+  },
+  {
+    "q_no": 166,
+    "question": "Who among the following is reported to have said: \"The country and that nation which did not respect women have never become great nor will ever in future\"?",
+    "options": [
+      "Swami Vivekananda",
+      "Saint Paul",
+      "George Bush",
+      "Sarvepalli Radhakrishnan"
+    ],
+    "source_page": 51,
+    "has_image": false
+  },
+  {
+    "q_no": 167,
+    "question": "Read the following statements :\na. Tribals are very commonly referred to as \"Adivasis\".\nb. M.K. Gandhiji popularized the word \"Girijans\".\nc. Tribes are also known as \"Dalits\" in India.\nd. International Labour Organization (ILO) used the expression \"Indigenous people\" to refer to upper castes.\nWhich of the above statement(s) is/are correct?",
+    "options": [
+      "b, c and d",
+      "a, b and d",
+      "a and b",
+      "a and d"
+    ],
+    "source_page": 52,
+    "has_image": false
+  },
+  {
+    "q_no": 168,
+    "question": "Who is remembered as the person who started Telangana Armed Struggle between 1946 and 1951?",
+    "options": [
+      "Shanthi Soundarajan",
+      "Chityala Ailamma",
+      "Varala Pochamma",
+      "Devaki Yashoda"
+    ],
+    "source_page": 52,
+    "has_image": false
+  },
+  {
+    "q_no": 169,
+    "question": "Reservations as per 73rd and 74th Constitutional Amendment have facilitated",
+    "options": [
+      "Women's appointments in all top positions",
+      "Women entering Gram Panchayats and Municipalities",
+      "Establishing small shops by many women",
+      "Increasing women labour in Agriculture"
+    ],
+    "source_page": 53,
+    "has_image": false
+  },
+  {
+    "q_no": 170,
+    "question": "Sampurnanand Committee (1961) suggested Reorganization of curriculum at various levels - Primary, Secondary, College and University level to promote",
+    "options": [
+      "Language skills",
+      "Employment",
+      "Good impression",
+      "National Integration"
+    ],
+    "source_page": 53,
+    "has_image": false
+  },
+  {
+    "q_no": 171,
+    "question": "India's National Anthem is an expression of",
+    "options": [
+      "Unity of India",
+      "the integration of rivers",
+      "diversity in the implementation of rules",
+      "Geographical Description"
+    ],
+    "source_page": 53,
+    "has_image": false
+  },
+  {
+    "q_no": 172,
+    "question": "Who argued that Dalits were Mool Bharatis (Original inhabitants of India) and builders of the Harappan civilization?",
+    "options": [
+      "B. Shyam Sunder",
+      "A. Yellaiah Goud",
+      "C. Jagannatham",
+      "M. Krishnaiah"
+    ],
+    "source_page": 53,
+    "has_image": false
+  },
+  {
+    "q_no": 173,
+    "question": "Match the following Environment Movements in India with their objectives:\nList-A:\na. Chipko Movement\nb. Narmada Bachao Andolan\nc. Baliyapal Movement\nd. Protest against Cogentrix company\nList-B:\ni. It is a fight against establishing a Hundred Mega Watt Thermal Power Project in Nadikoor village near Mangalore.\nii. Struggle against deforestation in 1973 at Mandal Village, Chemeli District, U.P.\niii. It was against taking over of the thickly populated land for testing missiles.\niv. It was led by Baba Amte and Medha Patkar.",
+    "options": [
+      "a-ii, b-iv, c-iii, d-i",
+      "a-ii, b-iii, c-iv, d-i",
+      "a-i, b-iv, c-iii, d-ii",
+      "a-ii, b-iv, c-i, d-iii"
+    ],
+    "source_page": 54,
+    "has_image": false
+  },
+  {
+    "q_no": 174,
+    "question": "Who is the author of the book, \"Emotional Intelligence: Why it Can Matter More Than IQ\"?",
+    "options": [
+      "George Mayer",
+      "Guilford",
+      "Daniel Goleman",
+      "Spearman"
+    ],
+    "source_page": 55,
+    "has_image": false
+  },
+  {
+    "q_no": 175,
+    "question": "Who among the following quoted this statement: \"It is not the strongest of the species that survives, or the most intelligent, but the one most responsive/adaptive to change\"?",
+    "options": [
+      "Ronald Coase",
+      "M.A. Levy",
+      "Charles Darwin",
+      "John Miller"
+    ],
+    "source_page": 55,
+    "has_image": false
+  },
+  {
+    "q_no": 176,
+    "question": "American Sociologist P.A. Sorokin distinguishes between two types of social mobility. They are :",
+    "options": [
+      "Equal Social Mobility and Cultural Social Mobility.",
+      "Developed Social Mobility and Underdeveloped Social Mobility.",
+      "Vertical Social Mobility and Horizontal Social Mobility.",
+      "Parallel Social Mobility and Rectangular Social Mobility."
+    ],
+    "source_page": 55,
+    "has_image": false
+  },
+  {
+    "q_no": 177,
+    "question": "What are the six universal emotions?",
+    "options": [
+      "painting, dancing, singing, drawing, writing and teaching",
+      "anger, happiness, surprise, sadness, disgust and fear",
+      "hunger, love, hate, contentment, powerless and powerful",
+      "greediness, jealousy, astonishment, enthusiasm, disinterest and courage"
+    ],
+    "source_page": 56,
+    "has_image": false
+  },
+  {
+    "q_no": 178,
+    "question": "Read the following statements :\n(a) I get severely offended when people criticize my actions.\n(b) I have inferiority complex and no belief in myself.\n(c) I am very sensitive in nature.\n(d) I can continue to do what I believe in even under severe criticism.\nWhich of the above statements is/are related to having 'Emotional Intelligence' ?",
+    "options": [
+      "(a) only",
+      "(a) and (b)",
+      "(c) and (d)",
+      "(d) only"
+    ],
+    "source_page": 56,
+    "has_image": false
+  },
+  {
+    "q_no": 179,
+    "question": "\"Ignorance of what is the correct thing to do in a given situation\" is generally referred to as :",
+    "options": [
+      "Humility",
+      "Uncompromising nature",
+      "Stubbornness",
+      "Moral Dilemma"
+    ],
+    "source_page": 57,
+    "has_image": false
+  },
+  {
+    "q_no": 180,
+    "question": "Match the words in List - A with their definitions given in List - B.\nList-A\na. Competition\nb. Accountability\nc. Adaptability\nd. Co-operation\nList-B\ni. It works on the basis of collective wisdom.\nii. It disintegrates the work force.\niii. Living at the same time.\niv. A finished product which is objectively verifiable.\nv. Changing myself to suit new environments and needs.",
+    "options": [
+      "ii v iii i",
+      "iii iv v ii",
+      "i ii iii v",
+      "ii iv v i"
+    ],
+    "source_page": 57,
+    "has_image": false
+  },
+  {
+    "q_no": 181,
+    "question": "Which among the following land tenure was introduced by Salar Jung - I?",
+    "options": [
+      "Sarbasta",
+      "Shikimdari",
+      "Watandari",
+      "Ijara"
+    ],
+    "source_page": 58,
+    "has_image": false
+  },
+  {
+    "q_no": 182,
+    "question": "By what name the High Court was called during the Asaf Jahi period ?",
+    "options": [
+      "Majlis-i-Murafa",
+      "Buzung",
+      "Mahakama-i-Sadar",
+      "Diwan-i-Adalat"
+    ],
+    "source_page": 58,
+    "has_image": false
+  },
+  {
+    "q_no": 183,
+    "question": "When the Indian Army entered Hyderabad under Major General. J.N. Choudhary in September 1948, who among the following was the General Officer commanding of Southern command?",
+    "options": [
+      "Lieutenant General Maharaj Singh",
+      "Major General Rudra",
+      "Lieutenant General Rajendra Singh",
+      "Agent General K.M. Munshi"
+    ],
+    "source_page": 58,
+    "has_image": false
+  },
+  {
+    "q_no": 184,
+    "question": "The warrior who tried to liberate Telangana from the Mughal rule after the defeat of Golconda by making Khilaspur as the centre of activities was:",
+    "options": [
+      "Rustum dil Khan",
+      "Sarvai Papanna",
+      "Addanki Rajanna",
+      "Soma Gauda"
+    ],
+    "source_page": 58,
+    "has_image": false
+  },
+  {
+    "q_no": 185,
+    "question": "Assertion (A): The relationship of the students and the Telangana agitation has been inseparable. Reason (R): On 28 November 2009, the police officials reached North Telangana Bhavan in Karimnagar to arrest K.C.R. The correct answer is:",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "source_page": 59,
+    "has_image": false
+  },
+  {
+    "q_no": 186,
+    "question": "After Operation Polo, Hyderabad armies surrendered to the Indian Union on 17 September, 1948. Who among the following was the Chief of Nizam's forces at that time?",
+    "options": [
+      "General J.N. Choudhuri",
+      "Osman Ali Khan",
+      "El. Edroos",
+      "Philip M. Taylor"
+    ],
+    "source_page": 59,
+    "has_image": false
+  },
+  {
+    "q_no": 187,
+    "question": "Who among the following was not connected with Telangana peasants armed struggle ?",
+    "options": [
+      "Arutla Ramacandra Reddy",
+      "Chandra Rajeswara Rao",
+      "Konda Venkat Ranga Reddy",
+      "Devulapalli Venkateswara Rao"
+    ],
+    "source_page": 59,
+    "has_image": false
+  },
+  {
+    "q_no": 188,
+    "question": "As there was a great demand from the Legislative Assembly of Telangana region for the implementation of G.O. 610, the government under Chief Minister Chandra Babu Naidu appointed a commission in 2001. What was this commission known as ?",
+    "options": [
+      "Justice Bhargava Commission",
+      "J.P.L. Gwin Commission",
+      "Girglani Commission",
+      "K. Achyut Reddy Commission"
+    ],
+    "source_page": 60,
+    "has_image": false
+  },
+  {
+    "q_no": 189,
+    "question": "In April 1969 the government appointed a committee to make suitable recommendations for constitutional amendments to continue Mulki rules. Who was the Chairman of that committee ?",
+    "options": [
+      "Pingali Jaganmohan Reddy",
+      "Kumar Lalith",
+      "G.N. Waghre",
+      "K.N. Wanchoo"
+    ],
+    "source_page": 60,
+    "has_image": false
+  },
+  {
+    "q_no": 190,
+    "question": "Who among the following Telangana leaders undertook Satyagraha at Jantar Mantar in Delhi in 2012?",
+    "options": [
+      "K. Chandra Sekhar Rao",
+      "Kishan Reddy",
+      "Konda Laxman Bapuji",
+      "Kodanda Ram"
+    ],
+    "source_page": 60,
+    "has_image": false
+  },
+  {
+    "q_no": 191,
+    "question": "Assertion (A): The seeds of the Telangana movement were sown at the time of the formation of Andhara Pradesh in 1956 itself.\nReason (R): The political domination of Andhra ruling class gradually reduced the people of Telangana to passive recipients.\nThe correct answer is:",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "source_page": 61,
+    "has_image": false
+  },
+  {
+    "q_no": 192,
+    "question": "Telangana poets, artists, teachers and journalists formed the \"Sahithi Mitra Mandali\" (SMM) and conducted a huge meeting in March 1997. Where was this meeting held ?",
+    "options": [
+      "Warangal",
+      "Karimnagar",
+      "Bhuvanagiri",
+      "Khammam"
+    ],
+    "source_page": 61,
+    "has_image": false
+  },
+  {
+    "q_no": 193,
+    "question": "Match the following famous tanks with those who built them during the Kakatiya period.\nList-I (Tanks)\na. Kesamudram\nb. Ramappa Cheruvu\nc. Ghanapur tank\nd. Bayyaram tank\nList-II (Builders)\ni. Mailamba\nii. Prolaraju I\niii. Ganapathi Deva\niv. Recherla Rudra\nThe correct answer is :",
+    "options": [
+      "ii iv i iii",
+      "ii i iv iii",
+      "i ii iv iii",
+      "ii iv iii i"
+    ],
+    "source_page": 62,
+    "has_image": false
+  },
+  {
+    "q_no": 194,
+    "question": "Which of the following was not a part of the six point formula that was signed in September 1973 ?",
+    "options": [
+      "A state level Planning Board to be constituted.",
+      "A Central University to be established in Hyderabad.",
+      "Two separate High Courts to be established, one for Andhra another for Telangana.",
+      "Local candidates to be given preference in appointments and promotions."
+    ],
+    "source_page": 62,
+    "has_image": false
+  },
+  {
+    "q_no": 195,
+    "question": "Match the following organisations with the names of the founders.",
+    "options": [
+      "a-i, b-iii, c-iv, d-ii",
+      "a-iv, b-iii, c-i, d-ii",
+      "a-iii, b-iv, c-ii, d-i",
+      "a-iv, b-i, c-iii, d-ii"
+    ],
+    "source_page": 63,
+    "has_image": false
+  },
+  {
+    "q_no": 196,
+    "question": "Match the following Jataras with their places.",
+    "options": [
+      "a-iv, b-iii, c-ii, d-i",
+      "a-ii, b-iv, c-iii, d-i",
+      "a-iii, b-ii, c-i, d-iv",
+      "a-iv, b-i, c-ii, d-iii"
+    ],
+    "source_page": 63,
+    "has_image": false
+  },
+  {
+    "q_no": 197,
+    "question": "Who is the presiding deity in the thousand pillar temple at Hanumakonda ?",
+    "options": [
+      "Nameswara",
+      "Someswara",
+      "Rudreswara",
+      "Bhimeswara"
+    ],
+    "source_page": 64,
+    "has_image": false
+  },
+  {
+    "q_no": 198,
+    "question": "During the Kakatiya period, lands were of several divisions. What were the 'Acchu Kattu lands'?",
+    "options": [
+      "Dry lands",
+      "Irrigated lands",
+      "Garden lands",
+      "Pasture lands"
+    ],
+    "source_page": 64,
+    "has_image": false
+  },
+  {
+    "q_no": 199,
+    "question": "Which among the following places was famous for diamond polishing during the Qutub Shahi period?",
+    "options": [
+      "Karwan",
+      "Kurnool",
+      "Guntur",
+      "Masulipatnam"
+    ],
+    "source_page": 64,
+    "has_image": false
+  },
+  {
+    "q_no": 200,
+    "question": "The inscriptions issued by Naganika speak of the Aswamedha and Rajasuya sacrifices conducted by a Sathavahana king. Who among the following was that king?",
+    "options": [
+      "Simukha",
+      "Sathakarni I",
+      "Apilaka",
+      "Hala"
+    ],
+    "source_page": 64,
+    "has_image": false
+  }
+]

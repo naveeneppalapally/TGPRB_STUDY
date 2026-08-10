@@ -1,0 +1,2394 @@
+[
+  {
+    "q_no": 1,
+    "question": "If the total annual income of 3 persons A, B, C is ₹ 14,20,000. A, B and C respectively save 30%, 25%, 20% of their incomes. If the annual savings of A, B, C are in the ratio 12: 13: 10, then the annual income of A (in rupees) is",
+    "options": [
+      "4,20,000",
+      "5,20,000",
+      "5,00,000",
+      "4,00,000"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 2,
+    "question": "If a/b = c/d, then (3a+b)/(c+3d) =",
+    "options": [
+      "((3c+d)b^2)/((a+3b)d^2)",
+      "(3a+b)/(3c+d)",
+      "(a+3bd)/(b+3ac)",
+      "(3c+d)/(3a+b)"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 3,
+    "question": "LCM of 2 1/2, 4 1/4, 5 1/8 is a/b and GCD of a, b is 1 then ab =",
+    "options": [
+      "3485",
+      "6970",
+      "9670",
+      "7690"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 4,
+    "question": "A buys an article with marked price ₹ 900 at 33 1/3% discount. In order to make a profit of 33 1/3%, A should sell the article for rupees",
+    "options": [
+      "1,200",
+      "900",
+      "800",
+      "1,000"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 5,
+    "question": "(2√7 + 4√3 + 2√12 + 6√3) / (2√12 - 6√3 - 2√7 - 4√3) =",
+    "options": [
+      "3",
+      "3(2^2√3)",
+      "2^3",
+      "√3"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 6,
+    "question": "√142 + 116 ÷ √841 – ³√2197 × (125)¹/³ =",
+    "options": [
+      "25",
+      "16",
+      "9",
+      "4"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 7,
+    "question": "The incomes of A, B, C in the last year were in the ratio 6: 5:4. The ratio of A's income of last year to the income of this year is 3: 4. For B this ratio is 3: 5 and for C this ratio is 4: 5. If the sum of their incomes this year is ₹ 12,80,000, then the increase in the income of C this year over his income last year (in rupees) is",
+    "options": [
+      "2,00,000",
+      "1,20,000",
+      "60,000",
+      "1,00,000"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 8,
+    "question": "If the remainders obtained when 4n is divided by 7 and 9 are 2 and 7 respectively, then the least possible value of n which is a prime number is",
+    "options": [
+      "2",
+      "5",
+      "3",
+      "7"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 9,
+    "question": "Two persons X and Y are at two diametrically opposite points on a circular track. X started running in anticlockwise direction with speed v and Y started running in clockwise direction with speed 2v at the same time. They crossed each other first time in 2 minutes. Then the time (in minutes) required to pass each other second time when the time is counted from the commencement of their running is",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "6"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 10,
+    "question": "A man took a loan of ₹ x from a bank at the rate of 10% compound interest per annum for 2 years and he repaid the whole amount of the loan including the interest by paying ₹ 80,000 at the end of the first year and ₹ 33,000 at the end of the 2nd year. Then x=",
+    "options": [
+      "80,000",
+      "90,000",
+      "1,21,000",
+      "1,00,000"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 11,
+    "question": "P started travelling from A to B and Q started travelling from B to A at 8 a.m on the same day. They both met each other at 2 p.m on their way on the same day. From this time P reached B, 3 1/2 hr before Q reached A. Then the time at which Q reached A is",
+    "options": [
+      "10 p.m",
+      "9 p.m",
+      "8 p.m",
+      "7 p.m"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 12,
+    "question": "There is a group of persons in which each person has the same efficiency. A work is done with this group as follows : first day only one person worked, second day only two persons worked, third day only three persons worked and this pattern is followed for the next following days. Following this pattern in this way, K persons worked on Kth day. Using this rule, they have completed the work in 15 days. Then the number of days required to complete the work if 15 persons work together everyday is",
+    "options": [
+      "10",
+      "9",
+      "6",
+      "8"
+    ],
+    "has_image": true,
+    "source_page": 8,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_12_page_8.png"
+  },
+  {
+    "q_no": 13,
+    "question": "A Student scored 72% marks in all the three subjects A, B, C together. Maximum marks in each subject is 75. He got 63 marks in A. He scored 64% marks in B. Then his score in C is",
+    "options": [
+      "68%",
+      "51%",
+      "66%",
+      "62%"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 14,
+    "question": "2 men and 7 boys can do a piece of work in 14 days. 3 men and 8 boys can do the same work in 11 days. The days needed to complete the same work by 8 men and 6 boys is y. If the daily wages of a man is thrice the daily wages of a boy then the total wages to be paid for these y days is equal to",
+    "options": [
+      "the wages of a boy for 210 days",
+      "the wages of a boy for 70 days",
+      "the wages of a man for 39 days",
+      "the wages of a boy for 13 days"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 15,
+    "question": "A person has ₹ 25,000 to invest. There are two schemes in a bank. In scheme A, rate of interest is 12% per annum. In scheme B, rate of interest is 16% per annum. In scheme A interest is compounded annually where as in scheme B simple interest is given. How long (in years) should that person invest his money in scheme B, so as to get the amount equal to the amount he receives by investing his money in scheme A for 2 years ?",
+    "options": [
+      "1.59",
+      "2.15",
+      "1.73",
+      "2.05"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 16,
+    "question": "If 3x+1-3x=162 then x²-2x-8=",
+    "options": [
+      "0",
+      "8",
+      "3",
+      "15"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 17,
+    "question": "The work done by a man is 1 1/2 times the work done by a woman in a day. The work done by a child is 3/4 of the work done by women in a day. 45 people are engaged to complete a work where the ratio of men, women & children is 6 : 5 : 4. An amount of ₹ 61,200 is paid at the end of the 3rd day. If the wages are proportional to the amount of work done by an individual, then the daily wages of a women (in rupees) is",
+    "options": [
+      "500",
+      "400",
+      "600",
+      "450"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 18,
+    "question": "If x, 4, 5(x < 4); 6, y, 10(6 < y < 10); 12, 16, z(z > 16) represent sides of three right angled triangles respectively and LCM of x², y², z² is P₁^α P₂^β P₃^γ where P₁, P₂, P₃ are prime numbers then HCF of α, β, γ is",
+    "options": [
+      "6",
+      "8",
+      "2",
+      "1"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 19,
+    "question": "The average cost of n items is ₹ 25 and the average cost of other m items is ₹ 19. If the average cost of these (n + m) items is ₹ 23 then n : m =",
+    "options": [
+      "1:3",
+      "5:1",
+      "2:1",
+      "1:2"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 20,
+    "question": "10 kgs of adulterated rice has 4% stones in it and the rest is rice. Half of the stones were removed. Now the approximate percentage of stones in it is",
+    "options": [
+      "0.98",
+      "1.02",
+      "2.04",
+      "1.98"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 21,
+    "question": "The income tax department is collecting tax out of the total annual income for the first 2 lakhs at the rate of R% and (R+12)% for the income exceeding 2 lakhs. A person paid (R+5)% of the annual income towards the total tax. If the tax on the annual income beyond 2 lakhs is ₹ 20,000 for him then the total tax he paid (in Rupees) is",
+    "options": [
+      "32,000",
+      "24,000",
+      "25,000",
+      "26,000"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 22,
+    "question": "Which of the following exactly divides 881280 ?",
+    "options": [
+      "7",
+      "13",
+      "19",
+      "17"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 23,
+    "question": "A person invests 1/6th of his total capital at 12% per annum, 1/4th at 10% per annum and the remaining part at 8% per annum. If his total annual interest from all these investments is ₹ 33,000, then the amount invested at 8% per annum (in rupees) is",
+    "options": [
+      "3,60,000",
+      "2,10,000",
+      "60,000",
+      "90,000"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 24,
+    "question": "In an Arithmetic progression, if 10th term is -14, 31st term is -119 then the sum of 6th term and 8th term is",
+    "options": [
+      "2",
+      "-5",
+      "31",
+      "0"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 25,
+    "question": "Σ (from x=1 to 100) 1 / (√(x-1) + √x) =",
+    "options": [
+      "9",
+      "10",
+      "√99",
+      "√100 - √9"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 26,
+    "question": "A shopkeeper bought an article for ₹ 1,200 and sold it with a profit of 10% on credit basis such that the amount has to be repaid after 4 years with simple interest at the rate of 10%. Then the amount (in rupees) received by the shopkeeper at the end of the 4th year is",
+    "options": [
+      "1,320",
+      "1,848",
+      "1,550",
+      "1,448"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 27,
+    "question": "The marked price of an article is 15% more than its cost price. It is sold to a customer at a discount of 20% but 5% GST was also charged on discounted price. The customer gave this article to his neighbour for ₹ 5796 thereby earning 20% profit. Then the selling price of the article to the customer excluding GST (in rupees) is",
+    "options": [
+      "5,000",
+      "4,930",
+      "4,600",
+      "4,830"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 28,
+    "question": "If the fraction 1/2, 2/3, 4/5, 7/8, 5/9 are arranged in descending order of their values from left to right then the sum of the 4th term from the left and fifth term from the right is",
+    "options": [
+      "13/10",
+      "61/45",
+      "37/24",
+      "103/72"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 29,
+    "question": "If a:b=3:5, c:d=4:7, b:c=2:3 then d:c:b:a =",
+    "options": [
+      "24:40:60:105",
+      "7:4:3:5",
+      "5:3:4:7",
+      "105:60:40:24"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 30,
+    "question": "If x is the least positive integer such that √814968 ×x is a positive integer, then x=",
+    "options": [
+      "231",
+      "154",
+      "924",
+      "462"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 31,
+    "question": "The sum of 4 consecutive even numbers is 21500. If the smallest number among them is 68 × K then K=",
+    "options": [
+      "79",
+      "69",
+      "89",
+      "59"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 32,
+    "question": "₹ 1,29,000 is lent out in three parts for simple interest as follows. The first part is lent at 10% per annum for 6 years, the second part at 12% per annum for 4 years and the third part at 15% per annum for 3 years. If the total interest earned on each part is same, then sum of the first part and the third part (in rupees) is",
+    "options": [
+      "84,000",
+      "81,000",
+      "93,000",
+      "89,000"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 33,
+    "question": "A Shopkeeper fixed the marked price of all his articles 25% more than their cost price. He then sold the articles by offering a discount of 10% on the marked price. If the cost price of an article is ₹ 3,000 then the selling price of it (in rupees) is",
+    "options": [
+      "3,450",
+      "3,360",
+      "3,900",
+      "3,375"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 34,
+    "question": "Five positive numbers are written in a fixed order. The average of first three numbers is 12. The average of middle three numbers is 15. The average of last three numbers is 18. Then the average of first, third and fifth numbers is",
+    "options": [
+      "21",
+      "9",
+      "15",
+      "16"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 35,
+    "question": "If the difference between the compound interest and the simple interest on a certain sum at 15% p.a. rate of interest for 3 years is ₹ 567, then the difference of the amounts (in rupees) accumulated at the end of 2nd year is",
+    "options": [
+      "189",
+      "120",
+      "180",
+      "175"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 36,
+    "question": "If 10 persons working for 18 hours a day can complete a work in 16 days, then to complete that work in 18 days by working 8 hours a day, the number of persons required is",
+    "options": [
+      "15",
+      "18",
+      "16",
+      "20"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 37,
+    "question": "If the sum of first n terms of a progression is (n + 1)(n + 2)(n + 3) – 6 / 3, then 4th term in that progression is",
+    "options": [
+      "20",
+      "30",
+      "40",
+      "50"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 38,
+    "question": "9 men can finish a work in 10 days. 12 women can finish the same work in 18 days. 15 children can finish the same work in 24 days. 6 women and 9 children started that work. They worked for 12 days and then left. Then the number of days required for 6 men and 9 children to complete the remaining work is",
+    "options": [
+      "16 days",
+      "18 days",
+      "12 days",
+      "4 days"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 39,
+    "question": "If x-2, x and x + 2 are three prime numbers lying between 1 to 100 then 3x =",
+    "options": [
+      "9",
+      "21",
+      "27",
+      "15"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 40,
+    "question": "A and B can do a work independently in 10 days and 15 days respectively. They worked together for 3 days and after that B is replaced with C. The work is finished by A and C in further 4 days. The sum of the daily wages of A, B, C is ₹460. If they are paid their daily wages proportional to their individual work, the total amount received by A in completing the work is (in rupees)",
+    "options": [
+      "420",
+      "1,120",
+      "1,680",
+      "960"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 41,
+    "question": "The average of 10 consecutive odd numbers is 64 and the average of 8 consecutive even numbers is 49. Then the average of the extreme values among the odd numbers and the extreme values among the even numbers is",
+    "options": [
+      "56.5",
+      "56",
+      "54",
+      "54.5"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 42,
+    "question": "If the profit gained by selling an article is x% of its selling price and its cost price is y% of its selling price then x+y=",
+    "options": [
+      "50",
+      "xy",
+      "100",
+      "x/y"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 43,
+    "question": "Ram on his birthday received ₹ 8,500 as gift from his relatives. To encourage Ram towards saving the money, his grandfather asked him to lend his money to him at 20% simple interest per annum. Ram's father prepared to lend money from Ram at 15% simple interest per annum. His elder brother is also interested to lend any amount of money from Ram at 10% simple interest per annum. But his grandfather is interested to take only ₹ 5,000 and his father is interested to take the entire money but not any part of it. If Ram lent all the gifted amount, then by his next birthday the maximum possible amount he gets is",
+    "options": [
+      "10,000",
+      "9,775",
+      "9,850",
+      "9,950"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 44,
+    "question": "A team of 5 examiners can evaluate x number of answer booklets in 7 days working for 8 hours a day. For how many hours in a day would 6 examiners have to work in order to evaluate 3x number of booklets, if the work is completed in 14 days ?",
+    "options": [
+      "9",
+      "7",
+      "10",
+      "8"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 45,
+    "question": "The average age of 35 students in a class was 20 years. 5 students each of age 25 years have joined the class and 5 other students left the class. Now the average age of the class is 21. If the average age of 3 particular students among the 5 students left is 15 years then the sum of the ages of the remaining two students left is",
+    "options": [
+      "90",
+      "45",
+      "50",
+      "44"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 46,
+    "question": "A man used to spend 75% of his income. Later his expenditure increased by 24% and his income increased by 15%. Then his percentage decrease in savings is",
+    "options": [
+      "22 3/4%",
+      "12%",
+      "20%",
+      "19 3/5%"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 47,
+    "question": "A can complete a work in 10 days. B can complete the same work in 15 days and C can complete the same work in 20 days. They have completed the work along with a fourth person D in 4 days and were paid ₹ 30,000 for the whole work. The share of D (in rupees) is",
+    "options": [
+      "4,000",
+      "16,000",
+      "7,500",
+      "1,000"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 48,
+    "question": "Certain amount was invested for 7 years in Bank A which has offered simple interest at the rate of 7% per annum. After 7 years, the total amount received from Bank A was reinvested for 2 years in Bank B which has offered an interest at the rate of 8% per annum compounded annually. If the interest received from Bank B was ₹ 15,496, then the sum invested initially (in rupees) was",
+    "options": [
+      "57,500",
+      "60,000",
+      "62,500",
+      "52,500"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 49,
+    "question": "3 (2/5 of 5/7) + (5 ÷ 2/9 × 6/5 + 1)^-1 / √289 =",
+    "options": [
+      "3/17",
+      "2/7",
+      "13/17",
+      "12/7"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 50,
+    "question": "If x and y are the LCM and HCF of 2 1/10 and 1 16/35 respectively, then x/y =",
+    "options": [
+      "238",
+      "1071",
+      "1666",
+      "735"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 51,
+    "question": "The speed of an express train is 90 kmph and the speed of a passenger train is 45 kmph. Express train stops for 2 min. after travelling a distance of 81 km every time and the passenger train stops for 3 min. after travelling a distance of 39 km every time. If both the trains start at the same time, the number of kilometers the passenger train travels by the time the express train covers 450 km is",
+    "options": [
+      "225",
+      "221.25",
+      "222.75",
+      "220.25"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 52,
+    "question": "A wall clock gains 4 minutes in 12 hours and another wall clock loses 2 minutes in 24 hours. Both are set right at 8 a.m on a particular day. Choose the correct time when these two clocks show exactly the same time in the immediate future.",
+    "options": [
+      "10 a.m after 84 days",
+      "9 a.m after 60 days",
+      "8 a.m after 72 days",
+      "8 p.m after 75 days"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 53,
+    "question": "A, B and C started a business with investments ₹ 1,25,000, ₹ 1,50,000 and ₹ 2,00,000 respectively. Four months later, A further invested ₹ 75,000. After 6 months from the commencement of the business B and C invested certain amounts additionally which are in the ratio 3: 2. The annual profit received is ₹ 1,20,000 and A's share in the profit is ₹ 28,000. Then the additional amount invested by B (in rupees) is",
+    "options": [
+      "1,80,000",
+      "2,70,000",
+      "2,10,000",
+      "1,50,000"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 54,
+    "question": "A train from station A started at 8 a.m and travelled towards station B which is at a distance of 390 km. This train travelled with a speed of 65 kmph for the first hour and rest of the time travelled with a speed of 50 kmph. Another train started from station B towards A at 9 a.m with a speed of 35 kmph for the first hour and with a speed of 50 kmph for rest of the journey. Then the time at which they meet each other is",
+    "options": [
+      "12.40 p.m",
+      "11.40 a.m",
+      "12.24 p.m",
+      "11.24 a.m"
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 55,
+    "question": "The age of wife is 6 years less than the age of her husband. The age of wife at the time of her 2nd delivery is equal to the age of her husband at the time of her 1st delivery. The ratio of their ages when they were married is 15 : 12. Second child was born after 8 years of their marriage. Then the ratio of their ages when they had their 1st child is",
+    "options": [
+      "10 : 7",
+      "14 : 11",
+      "19 : 16",
+      "16 : 13"
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 56,
+    "question": "The ratio of the capacities of 3 containers is 3 : 2 : 1. Each container upto their maximum capacity is filled with a mixture of milk and water. The ratios of milk and water in the mixtures of 3 containers are 7 : 5, 5 : 3, 1 : 3 respectively. One liter of mixture from each of the three containers is taken out and they are mixed in a new container. Let the ratio of the milk and water in new mixture is x : y. If entire mixture from each of the containers with fullest capacities is mixed in another new container then the ratio of milk and water is p : q. Then xp : yq =",
+    "options": [
+      "455 : 481",
+      "455 : 407",
+      "385 : 481",
+      "257 : 352"
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 57,
+    "question": "The average age of A and his wife B is 41 at present. Three years ago, the average of the ages of A, B and their son C at that time was 26. After two years, the age of B will be 6 times the age of C at that time. Then the present age of A (in years) is",
+    "options": [
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 58,
+    "question": "Three persons started a business with investment of 50 lakhs, 90 lakhs and 60 lakhs. At the end of the first year they got a loss in the business. They continued the business and at the end of the 2nd year, they got a profit. They shared loss or profit in the same ratio of their original investment. Then the loss that occurred at the end of 1st year if the share of loss to C is 6 lakhs is",
+    "options": [
+      "20 lakhs",
+      "25 lakhs",
+      "18 lakhs",
+      "15 lakhs"
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 59,
+    "question": "Let C be the centre of a circle of radius 8 cm. Let A, B be two points on the circle such that |ACB = π/4. The smaller sector ACB is removed from the circle and from the remaining sector a maximum cone is formed. The volume of the cone (in cubic cm) is",
+    "options": [
+      "154√(5/3)",
+      "(1/3)154√5",
+      "(1/√3)154√15",
+      "154√15"
+    ],
+    "has_image": true,
+    "source_page": 17,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_59_page_17.png"
+  },
+  {
+    "q_no": 60,
+    "question": "The speed of the stream is 5 kmph and the speed of the boat in still water is 30 kmph. The time taken by the boat to travel from A to B downstream is 24 min less than the time taken by the same boat to travel from B to C upstream. If the distance from A to B is 4 km more than the distance from B to C then the distance from B to C (in km) is",
+    "options": [
+      "42",
+      "41",
+      "45",
+      "49"
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 61,
+    "question": "In a 1000 meter race A wins by 19 seconds if he gives B a start of 40 meters. In the same race if A gives B a start of 30 seconds, then B wins by 40 meters. Then the time (in minutes) taken by B to run 5 km is",
+    "options": [
+      "10",
+      "12",
+      "10.5",
+      "12.5"
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 62,
+    "question": "Water is filled in a tank in such a manner that the volume of the part filled doubles after every 3 minutes. If it takes 27 minutes to fill the empty tank then the time (in min) required to fill one-eighth part of the tank is",
+    "options": [
+      "15",
+      "18",
+      "21",
+      "12"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 63,
+    "question": "If the calendar of the month of January, exactly coincides with the calendar of another month X in the same year if it is a leap year or with the calendar of another month Y in the same year if it is a non-leap year, then X, Y are respectively",
+    "options": [
+      "July, October",
+      "April, November",
+      "March, December",
+      "May, July"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 64,
+    "question": "Let r and h be respectively radius and height of a hollow Cylindrical pipe. Two maximum solid cones of height 'h' each are placed in the cylinder such that the centres of the two circular faces of the cylinder lie on each of the base circles of the two cones. Then the ratio of the volume of the complete cylinder to the volume of the empty space in the cylinder is",
+    "options": [
+      "35 : 12",
+      "24 : 23",
+      "6 : 5",
+      "4 : 3"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 65,
+    "question": "The circumference of a circle is equal to the perimeter of a square whose area is 1089 sq. units length of side (other than its hypotenuse) of an isosceles right angled triangle is equal to the length of the diameter of the given circle then the area of the triangle is (in sq.units)",
+    "options": [
+      "882",
+      "441/2",
+      "441",
+      "363"
+    ],
+    "has_image": true,
+    "source_page": 18,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_65_page_18.png"
+  },
+  {
+    "q_no": 66,
+    "question": "A shopkeeper marks the price of an article in such a way that after giving two successive discounts of 10% each he gets a profit of 10%. If the cost price of that article is ₹ 16,200 then the marked price (in Rupees) is",
+    "options": [
+      "19,200",
+      "21,562.20",
+      "22,000",
+      "22,124.60"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 67,
+    "question": "In a race of 4 km, A beats B by 400 m or 2 minutes. Then A's time over the course (in minutes) is",
+    "options": [
+      "20",
+      "16",
+      "22",
+      "18"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 68,
+    "question": "A and B walk around a 2000 m circular track at the speed of 125 m/min and 100 m/min respectively. If both start from same point simultaneously and walk in the same direction, when will they be together again for the first time and together again at the starting point for the first time",
+    "options": [
+      "60 min & 80 min",
+      "80 min & 100 min",
+      "80 min & 80 min",
+      "60 min & 100 min"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 69,
+    "question": "A can beat S by 20 meters in a 200 meters race. S can beat V by 10 meters in a 250 meters race. In a race of 1000 meters, A beats V by (in meters)",
+    "options": [
+      "125",
+      "200",
+      "216",
+      "136"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 70,
+    "question": "A train overtakes a person who is walking at the rate of 6 kmph in the direction opposite to that of the train in 15 seconds and another person who is walking at the rate of 8 kmph in the direction of the train in 18 seconds. Then the speed of the train in kmph is",
+    "options": [
+      "78",
+      "75",
+      "80",
+      "100"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 71,
+    "question": "The speed of a boat in still water is 5 times the speed of the current of the water in a river. This boat can travel 10.2 km upstream in that river in 51 minutes. In 3/4 of an hour, the distance (in km) travelled by the boat in downstream in the same river is",
+    "options": [
+      "14.4",
+      "13.5",
+      "12",
+      "11"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 72,
+    "question": "A solid metallic cylinder of height 4 ft and radius 3 ft is melted and converted into a solid sphere. Then the ratio of the lateral surface area of the cylinder and the surface area of the sphere is",
+    "options": [
+      "1:2",
+      "3:4",
+      "2:3",
+      "3:5"
+    ],
+    "has_image": false,
+    "source_page": 20
+  },
+  {
+    "q_no": 73,
+    "question": "Milk and water are mixed in a container in the ratio 5: 3. Then 16 ltr of mixture was drawn out and replaced by same quantity of milk. Now the present ratio of milk and water in the new mixture is 7: 1. If 8 ltr of the mixture is again taken out from the container, then the quantity of milk in the mixture remaining is",
+    "options": [
+      "14 liters",
+      "12 liters",
+      "10 liters",
+      "7 liters"
+    ],
+    "has_image": false,
+    "source_page": 20
+  },
+  {
+    "q_no": 74,
+    "question": "A boat covers a distance of 66 km along the stream in 90 min and the same distance against the stream in 110 min. The speed of the boat in still water is same in both the directions. Then the time required for the boat moving with the same speed to cover the same distance in still water (in minutes) is",
+    "options": [
+      "96",
+      "93",
+      "105",
+      "99"
+    ],
+    "has_image": false,
+    "source_page": 20
+  },
+  {
+    "q_no": 75,
+    "question": "A Copper wire is bent in the form of an equilateral triangle. The area of this triangle is 4356√3 sq. cm. and if the same wire is rebent into a semi circular shape, then its area (in sq. cm) is",
+    "options": [
+      "176",
+      "9317",
+      "1331",
+      "7545"
+    ],
+    "has_image": true,
+    "source_page": 20,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_75_page_20.png"
+  },
+  {
+    "q_no": 76,
+    "question": "Two taps A and B can fill an empty tank in 32 min and 36 min respectively. A and B are partially opened simultaneously such that A allows only 4/5th part of water and B allows only 3/5th part of water. Then the total time required to fill the empty tank (in minutes) is",
+    "options": [
+      "25",
+      "35",
+      "38",
+      "24"
+    ],
+    "has_image": false,
+    "source_page": 20
+  },
+  {
+    "q_no": 77,
+    "question": "The speed of car A is 6/5 times the speed of car B. If car B covers a distance of 225 km in 3 hours, then how much time car A will take to cover the same distance ?",
+    "options": [
+      "2 hours",
+      "2 hours 30 min.",
+      "2 hours 15 min.",
+      "2 hours 45 min."
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 78,
+    "question": "Two trains X and Y are running in opposite direction with same speeds. Both the trains are of equal length and they cross each other in 10 seconds. If the train X doubles its speed and Y triplesits speed and travel in the same direction, the time taken to cross each other is (in seconds)",
+    "options": [
+      "10",
+      "12",
+      "15",
+      "20"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 79,
+    "question": "The ages of two children A and B are such that the sum of the values of two times the age of A and 5 times the age of B is six less than the sum of the values of five times the age of A and 2 times the age of B. If the difference of the squares of their ages is 36, then product of their ages is",
+    "options": [
+      "70",
+      "63",
+      "80",
+      "24"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 80,
+    "question": "A has started a business by investing certain amount. B joined A after 2 months from the commencement of the business by investing 4/3 times A's investment. 2 months after the join of B in the business, C joined A and B by investing 2/3 of A's investment. After giving 8% of the profit to A for managing the business as working partner, the rest of the profit amount is distributed among A, B and C according to their investment proportion. If the total profit at the end of the year is ₹ 25,000, then the total amount received by A from the annual profit (in rupees) is",
+    "options": [
+      "11,000",
+      "10,000",
+      "9,000",
+      "4,000"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 81,
+    "question": "A Shopkeeper allows 20% discount on the marked price of every article and gains 16% profit on selling each article. Then how much percent above the cost price is marked on each article?",
+    "options": [
+      "45%",
+      "48%",
+      "42%",
+      "40%"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 82,
+    "question": "The day of the week on 12th January, 1863 was",
+    "options": [
+      "Tuesday",
+      "Saturday",
+      "Sunday",
+      "Monday"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 83,
+    "question": "Let C be centre of a circle of radius 5 cm. Let A and B be two points on the circle. If length of the arc AB is 15 cm, and the area between arc AB and chord AB is K sq. cm, then 2/25 K + sin 3 =",
+    "options": [
+      "0",
+      "3",
+      "3.5",
+      "2.5"
+    ],
+    "has_image": true,
+    "source_page": 22,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_83_page_22.png"
+  },
+  {
+    "q_no": 84,
+    "question": "An empty tank can be filled by pipe A in 4 hours, pipe B in 12 hours and pipe C in 6 hours. All the three pipes are opened as follows. Pipe C is opened at 6 a.m, pipe A at 7 a.m and pipe B at 8 a.m. If the tank was empty at 6 a.m, then the time at which the tank will be filled is",
+    "options": [
+      "9 a.m",
+      "8.45 a.m",
+      "8.50 a.m",
+      "9.10 a.m"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 85,
+    "question": "If 13th December 1990 was Thursday, then the day of the week on 23rd May 1987 was",
+    "options": [
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 86,
+    "question": "A set A of 10 pipes can fill an empty tank in 10 minutes, a set B of 5 pipes can fill the same tank in 8 minutes when the tank is empty. A set C of 10 pipes can empty the same tank in 20 minutes when it is full. One pipe each is added to set A and set B. Two pipes are added to the set C. If all these pipes are opened simultaneously, then the time (in min) in which the empty tank will be filled is",
+    "options": [
+      "5",
+      "9",
+      "12",
+      "N/A"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 87,
+    "question": "A faulty digital clock counts 10 seconds of a normal clock as 1 min. of it and 60 such minutes of itself as 1 hour of it. This clock displays time and day of the week. On Monday at 12 noon it was on par with the normal clock. On the same day when the normal clock shows 4 p.m, then the display on the digital clock is",
+    "options": [
+      "Monday, 12 Noon",
+      "Tuesday, 6 a.m",
+      "Monday, 2 a.m",
+      "Tuesday, 12 Noon"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 88,
+    "question": "A person with a speed of 12 kmph reached the bus station 10 minutes after the scheduled time of a bus in which he is supposed to travel. Next day he travelled with a speed of 15 kmph and reached the bus station 10 minutes earlier than the scheduled time of the bus. The speed with which he has to travel so as to reach the station on the scheduled time of the bus is",
+    "options": [
+      "40/3 kmph",
+      "14 kmph",
+      "25/2 kmph",
+      "57/4 kmph"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 89,
+    "question": "A and B started a business with ₹ 16,000 and x respectively as their investments. After three months A has withdrawn ₹ 5,000 and B invested ₹ 6,000 more. At the end of the year if the share of A in the total profit is equal to the difference of the shares of A and B in the total profit then x =",
+    "options": [
+      "12,400",
+      "13,000",
+      "20,000",
+      "10,500"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 90,
+    "question": "B is the wife of A. P and Q are the daughters of A and B. The present ages of B and P are in the ratio 5: 3. The present age of A is twice the present age of Q. 15 years ago, the age of A was thrice the age of Q at that time. P is 3 years elder than Q. Then the present age of B (in years) is",
+    "options": [
+      "50",
+      "55",
+      "45",
+      "48"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 91,
+    "question": "If a discount of 15% is allowed on the marked price of an article, then a customer gets 15 more articles for ₹1,700 than the number of articles he gets when the discount is not allowed. Then the marked price of each article (in Rupees) is",
+    "options": [
+      "25",
+      "20",
+      "36",
+      "48"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 92,
+    "question": "A book seller gives a discount of 20% on the marked price if it is a cash purchase and a discount of 10% on the marked price if it is a credit purchase. If a person bought 70% of the books by cash and 30% by credit, then the net discount got by him is",
+    "options": [
+      "15%",
+      "16%",
+      "17%",
+      "18%"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 93,
+    "question": "Gold is 17 times as heavy as Aluminum and Copper is 7 times as heavy as Aluminum. The ratio in which Gold and Copper are to be mixed so that the mixture is 15 times as heavy as Aluminum is",
+    "options": [
+      "8:17",
+      "2:1",
+      "4:1",
+      "4:3"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 94,
+    "question": "A ladder of length 65 meters is resting against a wall and ground. Initially the bottom of the ladder is 25 meters away from the wall. If the end of the ladder on the wall slips down by 8 meters and the other end on the floor moves away by x meters from its initial position, then the area of the triangle having dimensions 3x, 4x, 5x (In sq. meters) is",
+    "options": [
+      "1176",
+      "1074",
+      "1254",
+      "938"
+    ],
+    "has_image": true,
+    "source_page": 24,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_94_page_24.png"
+  },
+  {
+    "q_no": 95,
+    "question": "Two solid metallic spheres of radius 4 inches and 5 inches are melted together to make a solid cube. If 63 cu. inches of metal is wasted in the process of making the cube, then the total surface area of the cube (in square inches) is",
+    "options": [
+      "792",
+      "729",
+      "563",
+      "486"
+    ],
+    "has_image": true,
+    "source_page": 24,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_95_page_24.png"
+  },
+  {
+    "q_no": 96,
+    "question": "A liquid in a vessel has 8 parts water and 12 parts milk. Then the part of the mixture that has to be drawn out and replaced by water so that the new mixture contains water and milk in the ratio 7:3 is",
+    "options": [
+      "6/5",
+      "1/2",
+      "3/4",
+      "4/5"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 97,
+    "question": "At what time between 8'O clock and 9'O clock will both hands of a clock be at right angles for the first time?",
+    "options": [
+      "28 3/11 min past 8",
+      "26 9/11 min past 8",
+      "29 1/11 min past 8",
+      "27 3/11 min past 8"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 98,
+    "question": "A clock loses 5 minutes per day. If that clock is set to start on Monday at 12 noon, then on which day after how many days it shows 11 A.M ?",
+    "options": [
+      "Friday, 12th day",
+      "Tuesday, 15th day",
+      "Wednesday, 15th day",
+      "Saturday, 12th day"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 99,
+    "question": "If a man is celebrating his 100th birthday on Thursday, the 15th September 2022, then the day of the week on which he was born was",
+    "options": [
+      "Saturday",
+      "Thursday",
+      "Friday",
+      "Wednesday"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 100,
+    "question": "The speed of a boat in still water and the speed of the current are in the ratio 5: 1. The distance travelled by the boat in 4 hours from a point A to B downstream is 24 km more than the distance covered from B to C upstream in 4 hours. Then the time (in hours) taken by the boat to travel from C to B downstream is",
+    "options": [
+      "8/3",
+      "9/4",
+      "6/5",
+      "7/2"
+    ],
+    "has_image": false,
+    "source_page": 26
+  },
+  {
+    "q_no": 101,
+    "question": "Eight persons A, B, C, D, E, F, G, H are sitting in a straight line facing North. They have different ages 12, 18, 27, 32, 34, 49, 55, and 63 not necessarily in the same order. B is sitting second to the left of the one having 49 years. Between B and D there are two persons and D is right of B. The person second to the right of D has age 32 and he is at the right end. There is one person between the persons having age 32 and 18. A is sitting second to the left of E. A is sitting immediate left of D. The one who is 63 years old is sitting to the immediate left of B. Difference between ages of B and G is 7 years. Both are not sitting together. One who is 27 years old is sitting at the left end. C is 6 years younger to D. The one who is 55 years old and H are immediate neighbours. The number of persons between H and the one having age 34 years is equal to the number of persons between F and the one having age 55 years. The persons between B and D are",
+    "options": [
+      "G, H",
+      "A, C",
+      "E, G",
+      "F, H"
+    ],
+    "has_image": false,
+    "source_page": 26
+  },
+  {
+    "q_no": 102,
+    "question": "Choose a term from the alternatives given which bears the same relationship with the third term as the relationship the first two terms mentioned before the sign : : bear. TALENT: LATENT:: SYSTEM: ?",
+    "options": [
+      "SESTYM",
+      "SYSTEM",
+      "SWIVEL",
+      "METHOD"
+    ],
+    "has_image": false,
+    "source_page": 26
+  },
+  {
+    "q_no": 103,
+    "question": "A, B, C, D, E are five persons. A is South-West of B. B is North of C. C is North-East of D. D is West of E. AB = BC = CD = DE = 1 km. Then the direction of E from A is",
+    "options": [
+      "South-East",
+      "South",
+      "North-West",
+      "West"
+    ],
+    "has_image": false,
+    "source_page": 27
+  },
+  {
+    "q_no": 104,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "REY",
+      "CPA",
+      "QUD",
+      "TIQ"
+    ],
+    "has_image": true,
+    "source_page": 27,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_104_page_27.png"
+  },
+  {
+    "q_no": 105,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "Granite",
+      "Bronze",
+      "Brass",
+      "Steel"
+    ],
+    "has_image": true,
+    "source_page": 27,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_105_page_27.png"
+  },
+  {
+    "q_no": 106,
+    "question": "Find the suitable figure from the answer figures which will complete the pattern of the given question figure.",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "has_image": true,
+    "source_page": 27,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_106_page_27.png"
+  },
+  {
+    "q_no": 107,
+    "question": "P started from his home to meet his friend who is at a distance of 15 m towards West from him. But he reached Q via meeting his friends S, T, R at their houses. S is 5 m towards North from P. T is 3 meters West from S, R is 5 meters South from T. From T if P reaches Q without visiting R, the distance he saves is",
+    "options": [
+      "5",
+      "3",
+      "4",
+      "12"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 108,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "XTIKM",
+      "SODFH",
+      "YUJLN",
+      "RMCEG"
+    ],
+    "has_image": true,
+    "source_page": 28,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_108_page_28.png"
+  },
+  {
+    "q_no": 109,
+    "question": "In the figure shown below, A person started from A at 6 A.M and finally reached B by 7 A.M. The shadow of the person at B is falling towards the side of A. The direction of A from B and distance between A and B (in meters) when Q is below BR at a perpendicular distance of 4 m is",
+    "options": [
+      "South-west and 4",
+      "North-east and 4",
+      "North-east and 9√2",
+      "North-west and 9√2"
+    ],
+    "has_image": true,
+    "source_page": 28,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_109_page_28.png"
+  },
+  {
+    "q_no": 110,
+    "question": "Choose a figure from the alternatives which bears the same relationship with the third figure as the relationship the first two figures mentioned before the sign : : bear.",
+    "options": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)"
+    ],
+    "has_image": true,
+    "source_page": 29,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_110_page_29.png"
+  },
+  {
+    "q_no": 111,
+    "question": "Count the number parallelograms in the given figure.",
+    "options": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "has_image": true,
+    "source_page": 29,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_111_page_29.png"
+  },
+  {
+    "q_no": 112,
+    "question": "The salary slips of 7 employees A, B, C, D, E, F, G are placed one above the other in the descending order of their salary. G's salary is more than that of F and D. Lowest salary is not for D. Salary of A is less than that of G, and G is not the highest salaried person. ₹ 30,000 is the second highest salary. Third lowest salary is 21,000. F is not the third highest salaried person. E's salary is less than that of F but more than that of D. C's salary is 15,000. If any two successive salaries are differed by ₹ 3,000, then the sum of the salaries of F and A is",
+    "options": [
+      "45,000",
+      "42,000",
+      "51,000",
+      "48,000"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 113,
+    "question": "Choose a number from the alternatives given below which bears the same relationship with the first number as the relationship the last two numbers mentioned after the sign : : bear. 64:?::72:53",
+    "options": [
+      "44",
+      "70",
+      "52",
+      "48"
+    ],
+    "has_image": true,
+    "source_page": 30,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_113_page_30.png"
+  },
+  {
+    "q_no": 114,
+    "question": "The following Venn diagram shows the details of 1000 students who obtained minimum marks in the subjects General Studies (GS), Logical Ability (LA) and Numerical Ability (NA) The number of students who obtained minimum marks either in none or in all is",
+    "options": [
+      "193",
+      "893",
+      "182",
+      "184"
+    ],
+    "has_image": true,
+    "source_page": 30,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_114_page_30.png"
+  },
+  {
+    "q_no": 115,
+    "question": "In a row of men and women seated facing North, Lakshmi is 6th from the right and Vishnu is 12th from the right. Among the women Lakshmi is 4th from right and 6th from the left. Among men Vishnu is 7th from right and 24th from left. If Lakshmi and Vishnu interchange their positions, the rank of Vishnu from left among men is",
+    "options": [
+      "27",
+      "30",
+      "28",
+      "29"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 116,
+    "question": "On each face of cube there is one among 4 dots or 5 dots or 6 dots or 7 dots or 8 dots or 9 dots such that the difference of the dots on the opposite faces is 3. Which of the following figures is correct ?",
+    "options": [
+      "Image of a die with faces showing 6, 5, 8 dots",
+      "Image of a die with faces showing 6, 5, 9 dots",
+      "Image of a die with faces showing 6, 5, 8 dots",
+      "Image of a die with faces showing 6, 5, 9 dots"
+    ],
+    "has_image": true,
+    "source_page": 31,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_116_page_31.png"
+  },
+  {
+    "q_no": 117,
+    "question": "The water image of the given below figure is :",
+    "options": [
+      "Image of a house",
+      "Image of a house",
+      "Image of a house",
+      "Image of a house"
+    ],
+    "has_image": true,
+    "source_page": 31,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_117_page_31.png"
+  },
+  {
+    "q_no": 118,
+    "question": "Choose a term from the alternatives given which bears the same relationship with the third term as the relationship the first two terms mentioned before the sign : : bear. SUM: 53:: TEN: ?",
+    "options": [
+      "42",
+      "64",
+      "35",
+      "39"
+    ],
+    "has_image": false,
+    "source_page": 31
+  },
+  {
+    "q_no": 119,
+    "question": "If 24 cm, 18 cm and 12 cm are the dimensions of a cuboid whose faces are all painted blue and 8 cm³ is the volume of each cube obtained by cutting the cuboid into small cubes then the number of small cubes having only one face painted is",
+    "options": [
+      "3x (number of small cubes having 2 faces painted) + 20",
+      "(number of small cubes having no face painted) -4",
+      "3x(number of small cubes having 2 faces painted) - 20",
+      "(number of small cubes having no face painted) +4"
+    ],
+    "has_image": true,
+    "source_page": 32,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_119_page_32.png"
+  },
+  {
+    "q_no": 120,
+    "question": "Eight persons A, B, C, D, E, F, G, H are sitting around a table as follows\n(i) A, B, C, D are facing the centre of the table\n(ii) E, F, G, H are facing against the centre\n(iii) C is to the right of A\n(iv) F is to the left of C\n(v) H is to the left of F\n(vi) A is to the left of G and to the right of F\n(vii) G is to the right of B\n(viii) E is the only person between H and B\n(ix) D is the only person between A and G\nThen the persons sitting between B and C are",
+    "options": [
+      "F & H",
+      "E & G",
+      "H & E",
+      "A & D"
+    ],
+    "has_image": false,
+    "source_page": 32
+  },
+  {
+    "q_no": 121,
+    "question": "Consider the following Venn diagram The difference between the number of Graduated Athletes and the number of non Athlete, non graduates is equal to",
+    "options": [
+      "Number of graduate boy Athletes",
+      "Number of graduate, non Athlete boys",
+      "Number of non graduate Athlete girls",
+      "Number of non graduate Athletes"
+    ],
+    "has_image": true,
+    "source_page": 33,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_121_page_33.png"
+  },
+  {
+    "q_no": 122,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "4913",
+      "3375",
+      "2197",
+      "2916"
+    ],
+    "has_image": true,
+    "source_page": 33,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_122_page_33.png"
+  },
+  {
+    "q_no": 123,
+    "question": "Station B is 2 km to the North of station A. Station C is 2 km to the west of B. Station D is 3 km to the North of C. Station E is 6 km to the East of D. Then the direction of E from B and the shortest distance from B to E are",
+    "options": [
+      "North-East, 5 km",
+      "South-East, 5 km",
+      "North-East, 3√2 km",
+      "South-East, 3√2 km"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 124,
+    "question": "Given below Question figure is an unfolded dice. Select the correct figure from the answer figures which is the folded shape of the dice given in Question figure.",
+    "options": [
+      "Figure (1) showing a dice with faces 4, 1, 3",
+      "Figure (2) showing a dice with faces 1, 3, 5",
+      "Figure (3) showing a dice with faces 4, 6, 1",
+      "Figure (4) showing a dice with faces 5, 6, 2"
+    ],
+    "has_image": true,
+    "source_page": 34,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_124_page_34.png"
+  },
+  {
+    "q_no": 125,
+    "question": "An examination is conducted in a class and ranks are allotted to the students according to their marks obtained in the examination. It is observed that the rank of a student A is 20th from the top and 23rd from the bottom. The rank of another student B among the passed students is 10th from the top and 19th from the bottom. Then the total number of students who passed in the examination is",
+    "options": [
+      "equal to the total number of students who failed in the examination",
+      "thrice the total number of students who failed in the examination",
+      "half times the total number of students who failed in the examination",
+      "twice the total number of students who failed in the examination"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 126,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "heart",
+      "kidney",
+      "femur",
+      "liver"
+    ],
+    "has_image": true,
+    "source_page": 35,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_126_page_35.png"
+  },
+  {
+    "q_no": 127,
+    "question": "Select the triplet of numbers amongst the four alternatives which has similar relation among the numbers of triplet (8, 56, 72) is",
+    "options": [
+      "(5, 35, 40)",
+      "(3, 15, 21)",
+      "(7, 49, 63)",
+      "(7, 49, 56)"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 128,
+    "question": "Below a statement is followed by two arguments numbered I and II. Decide which of the arguments is a 'strong' argument and which is a 'weak' argument. Statement : Should the determination of the gender of the fetus before birth be completely banned in India? Arguments : I. No. There is no such Prenatal Diagnostic Techniques Act in many countries, became people have a right to know the gender of their unborn child. II. Yes. This helps to prevent the female child foeticide and to narrow down the growing gender gap in many states of India.",
+    "options": [
+      "Only I is strong",
+      "Only II is strong",
+      "I and II are strong",
+      "Neither I nor II is strong"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 129,
+    "question": "Below a statement is followed by two arguments numbered I and II. Decide which of the arguments is a 'strong' argument and which is a 'weak' argument. Statement: Should the M.D. of the company X be removed owing to his consistent failures in earning of profits for the company ? Arguments : I. Yes. Because all the competitors are consistently growing and making profits. II. No. one more chance is to be given to M.D.",
+    "options": [
+      "Only I is strong",
+      "Only II is strong",
+      "I and II are strong",
+      "Neither I nor II is strong"
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 130,
+    "question": "Choose the figure from the alternatives, which bears the same relationship with the third figure of the question figure as the relationship the first two figures bear.",
+    "options": [
+      "Circle with Y in top-left segment and $ in bottom-right segment",
+      "Circle with Y in top-left segment and $ in bottom-right segment",
+      "Circle with Y in top-left segment and $ in bottom-right segment",
+      "Circle with $ in top-left segment and Y in bottom-right segment"
+    ],
+    "has_image": true,
+    "source_page": 36,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_130_page_36.png"
+  },
+  {
+    "q_no": 131,
+    "question": "The water image of the mirror image of the word ‘MIRROR' if the mirror is kept on the right side of the given word is",
+    "options": [
+      "ЯОЯЯІМ",
+      "МІЯЯОЯ",
+      "WIRROR",
+      "ЯОЯЯІМ"
+    ],
+    "has_image": true,
+    "source_page": 36,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_131_page_36.png"
+  },
+  {
+    "q_no": 132,
+    "question": "The total number of squares in the following diagram is",
+    "options": [
+      "10",
+      "12",
+      "8",
+      "0"
+    ],
+    "has_image": true,
+    "source_page": 37,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_132_page_37.png"
+  },
+  {
+    "q_no": 133,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "Suspense",
+      "Fiction",
+      "Thriller",
+      "Literature"
+    ],
+    "has_image": true,
+    "source_page": 37,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_133_page_37.png"
+  },
+  {
+    "q_no": 134,
+    "question": "Twelve persons are sitting in two rows containing six persons each. A, B, C, D, E, F are sitting in row-1 facing west and P, Q, R, S, T, U are sitting in row-2 facing East. There is an equal distance between adjacent persons and every person in row-1 is exactly opposite to some person in row-2. Three persons are sitting between S and R. R is not sitting at any extreme end. S is to the left of R. P is not in between S and R. U and T are the immediate neighbours of Q. Only one person is sitting between P and T. B and C are exactly opposite to S and P respectively. A is the third person to the left of B and D is the third person to right of C. F is immediate neighbour of C. Then the person sitting exactly opposite to E is",
+    "options": [
+      "T",
+      "U",
+      "Q",
+      "R"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 135,
+    "question": "A paper sheet is folded and cut as shown in the following figure (A). If that is unfolded then it looks like",
+    "options": [
+      "Image option 1",
+      "Image option 2",
+      "Image option 3",
+      "Image option 4"
+    ],
+    "has_image": true,
+    "source_page": 38,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_135_page_38.png"
+  },
+  {
+    "q_no": 136,
+    "question": "In the following figure triangle stands for housewives, Square students for women employees, circle stands for mothers and rectangle stands for women graduates. Then the number of graduate women employees having children is",
+    "options": [
+      "1",
+      "8",
+      "5",
+      "7"
+    ],
+    "has_image": true,
+    "source_page": 38,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_136_page_38.png"
+  },
+  {
+    "q_no": 137,
+    "question": "The Venn diagram which depicts the men having only daughters, only sons, both daughters and sons and no children is",
+    "options": [
+      "Image option 1",
+      "Image option 2",
+      "Image option 3",
+      "Image option 4"
+    ],
+    "has_image": true,
+    "source_page": 38,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_137_page_38.png"
+  },
+  {
+    "q_no": 138,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "8",
+      "1331",
+      "343",
+      "729"
+    ],
+    "has_image": true,
+    "source_page": 39,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_138_page_39.png"
+  },
+  {
+    "q_no": 139,
+    "question": "Below a statement is followed by two arguments numbered I and II. Decide which of the arguments is a 'strong' argument and which is a 'weak' argument. Statement: Should there be a university in every district ? Arguments : I. Yes. The students who are financially weak and residing in remote villages will have access to Universities to pursue their higher education. II. No. The quality of education will be lost and unemployment problem increases.",
+    "options": [
+      "Only I is strong",
+      "Only II is strong",
+      "I and II are strong",
+      "Neither I nor II is strong"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 140,
+    "question": "Choose the pair from the alternatives that has the same relationship as the first pair mentioned before:: has. Pulp: Paper ::",
+    "options": [
+      "Flax: Linen",
+      "Duke: Duchess",
+      "Stallion : Colt",
+      "Another : Books"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 141,
+    "question": "Two positions of a dice are given below If 3 is at the bottom, the number on the top face will be",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "has_image": true,
+    "source_page": 39,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_141_page_39.png"
+  },
+  {
+    "q_no": 142,
+    "question": "All the faces of a cube of 24 cm edge are painted with red colour and then it is cut into smaller cubes of 3 cm edge. Then the difference of the number of cubes having no face painted and the number of cubes having exactly one face painted is",
+    "options": [
+      "0",
+      "152",
+      "125",
+      "36"
+    ],
+    "has_image": true,
+    "source_page": 40,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_142_page_40.png"
+  },
+  {
+    "q_no": 143,
+    "question": "The six faces of a cube are coloured with 6 different colours one on each face. The face coloured with red is opposite to the face coloured Black. The Blue coloured face is adjacent to white coloured face. The Brown coloured face is adjacent to Blue coloured face. One of the faces has Yellow colour. The colour of the face opposite to the face coloured Yellow is",
+    "options": [
+      "Brown",
+      "White",
+      "Blue",
+      "Black"
+    ],
+    "has_image": true,
+    "source_page": 40,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_143_page_40.png"
+  },
+  {
+    "q_no": 144,
+    "question": "Choose a number from the alternatives given below which bears the same relationship with the third number as the relationship the first two terms mentioned before the sign : : bear. 125 : 243 : : 64 : ?",
+    "options": [
+      "27",
+      "512",
+      "81",
+      "625"
+    ],
+    "has_image": true,
+    "source_page": 40,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_144_page_40.png"
+  },
+  {
+    "q_no": 145,
+    "question": "3 of the 4 alternatives given below are related in a certain way and so form a group. Find the alternative which does not belong to that group.",
+    "options": [
+      "G",
+      "K",
+      "M",
+      "V"
+    ],
+    "has_image": true,
+    "source_page": 40,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_145_page_40.png"
+  },
+  {
+    "q_no": 146,
+    "question": "Choose a term from the alternatives given below which bears the same relationship with the first term as the relationship the last two terms mentioned after the sign : : bear. APOC : ? : : ITSK : MVUN",
+    "options": [
+      "ERQF",
+      "WNMZ",
+      "EQRH",
+      "WRMK"
+    ],
+    "has_image": true,
+    "source_page": 40,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_146_page_40.png"
+  },
+  {
+    "q_no": 151,
+    "question": "Below a statement followed by two conclusions I and II are given. These conclusions can be derived from the statement either directly or indirectly or may not be derived. Decide which of the conclusion(s) follow(s) from the statement.\nStatement: Experts say excessive work load leads to heart attacks. But some celebrities say that they find work as an antidote to stress.\nConclusions:\nI. Some celebrities are overloaded by work.\nII. Work leads to stress.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II are follows",
+      "Neither I nor II is follows"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 152,
+    "question": "Directions: Decide whether the data provided in the two statements given under the question is sufficient to answer the question or not.\nGive option:\nQuestion: How many girls are there in the row of girls facing North?\nStatements:\nI. Radha is third from the left end of the row and 3rd to the left of Hema.\nII. Renuka is 5th from the right end of the row and is 3rd to the right of Hema.",
+    "options": [
+      "if the data in statement I alone is sufficient to answer the question;",
+      "if the data in statement II alone is sufficient to answer the question;",
+      "if the data in both the statements I and II together is sufficient to answer the question;",
+      "if the data in both the statements I and II together is not sufficient to answer the question;"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 153,
+    "question": "Below a statement followed by two conclusions I and II are given. These conclusions can be derived from the statement either directly or indirectly or may not be derived. Decide which of the conclusion(s) follow(s) from the statement. Statement : Now a days the common problem in every family is the child's smart phone addiction. Conclusions : I. The parents are so busy that they are unable to look after their children. II. Children don't like to play outdoor games.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II are follows",
+      "Neither I nor II is follows"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 154,
+    "question": "Below a statement which is to be taken as true followed by two assumptions numbered I and II are given. Decide which of the given assumption(s) is(are) implicit in the statement. Statement: A asked her husband, \"Why don't you invite your brother to the festival\" ? Assumptions: I. Unless invited, the brother of A's husband will not attend the festival. II. The presence of the brother of A's husband for the festival is required.",
+    "options": [
+      "Only I is implicit",
+      "Only II is implicit",
+      "Both I and II are implicit",
+      "Neither I nor II is implicit"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 155,
+    "question": "Decide whether the data provided in the two statements given under the question is sufficient to answer the question or not. Question: How is C related to E? Statements: I. A is the mother of B and C. II. B is the father of D and D is sister of E.",
+    "options": [
+      "if the data in statement I alone is sufficient to answer the question;",
+      "if the data in statement II alone is sufficient to answer the question;",
+      "if the data in both the statements I and II together is sufficient to answer the question;",
+      "if the data in both the statements I and II together is not sufficient to answer the question;"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 156,
+    "question": "Below a statement which is to be taken as true followed by two assumptions numbered I and II are given. Decide which of the given assumption(s) is(are) implicit in the statement. Statement : A company has announced good amount of bonus for their employees. Assumptions: I. Most of the employees don't leave the company. II. Employees work more efficiently than before.",
+    "options": [
+      "Only I is implicit",
+      "Only II is implicit",
+      "Both I and II are implicit",
+      "Neither I nor II is implicit"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 157,
+    "question": "Below a statement which is to be taken as true followed by two assumptions numbered I and II are given. Decide which of the given assumption(s) is(are) implicit in the statement. Statement : P says to Q. 'If you want to buy a Refrigerator, buy the 'X' brand Refrigerator'. Assumptions : I. Q wants to buy a Refrigerator. II. 'X' brand Refrigerators are good.",
+    "options": [
+      "Only I is implicit",
+      "Only II is implicit",
+      "Both I and II are implicit",
+      "Neither I nor II is implicit"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 158,
+    "question": "Direction : Decide whether the data provided in the two statements given under the question is sufficient to answer the question or not. Give option : (1) if the data in statement I alone is sufficient to answer the question; (2) if the data in statement II alone is sufficient to answer the question; (3) if the data in both the statements I and II together is sufficient to answer the question; (4) if the data in both the statements I and II together is not sufficient to answer the question; Question : How many sons does Anitha have ? Statements : I. Anitha is mother of X who is brother of Y. II. Anitha's daughter Nilima has only two brothers.",
+    "options": [
+      "if the data in statement I alone is sufficient to answer the question;",
+      "if the data in statement II alone is sufficient to answer the question;",
+      "if the data in both the statements I and II together is sufficient to answer the question;",
+      "if the data in both the statements I and II together is not sufficient to answer the question;"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 159,
+    "question": "Below a statement which is to be taken as true followed by two assumptions numbered I and given. Decide which of the given assumption(s) is(are) implicit in the statement. Statement: Today a reader, tomorrow a leader. Assumptions: I. Those who do not read books cannot become leaders. II. One cannot become a leader without learning from others and that requires reading.",
+    "options": [
+      "Only I is implicit",
+      "Only II is implicit",
+      "Both I and II are implicit",
+      "Neither I nor II is implicit"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 160,
+    "question": "Below a statement followed by two conclusions I and II are given. These conclusions can be derived from the statement either directly or indirectly or may not be derived. Decide which of the conclusion(s) follow(s) from the statement. Statement : Religion is regarded by the common people as true, by the wise as false and by the rulers as useful. Conclusions : I. Common people will have lot of faith in religion. II. Rulers make use of religion to rule the people.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II are follows",
+      "Neither I nor II is follows"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 161,
+    "question": "Direction: Decide whether the data provided in the two statements given under the question is sufficient to answer the question or not. Question: What is the age of A ? Statements : I. The age of A is twice the age of B and the age of C is 4 times the age of B. II. The age of D is 60 years and 1 1/2 times the age of C.",
+    "options": [
+      "if the data in statement I alone is sufficient to answer the question;",
+      "if the data in statement II alone is sufficient to answer the question;",
+      "if the data in both the statements I and II together is sufficient to answer the question;",
+      "if the data in both the statements I and II together is not sufficient to answer the question;"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 162,
+    "question": "Below a statement followed by two conclusions I and II are given. These conclusions can be derived from the statement either directly or indirectly or may not be derived. Decide which of the conclusion(s) follow(s) from the statement. Statement : To achieve economic development, people should work hard. Conclusions : I. Economic development leads people to work hard. II. Making all the people to work hard is impossible.",
+    "options": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II are follows",
+      "Neither I nor II is follows"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 163,
+    "question": "Mr. Y was born on 3rd May 1995. He has secured 71% in graduate degree and 58% in S.S.C. He has got 46% in screening test. Then Mr. Y",
+    "options": [
+      "Can be recruited as Senior clerk",
+      "Can be recruited as Junior clerk",
+      "Can be recruited as Head clerk",
+      "Cannot be recruited"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 164,
+    "question": "Mr. X was born on 4th August, 1994 and completed the Microsoft office course. He has secured 60% in screening test and 62% in S.S.C. He has completed his graduate degree with 56% marks. He has worked as a clerk in a company for 11 months. Then Mr. X",
+    "options": [
+      "Can be recruited as Senior clerk",
+      "Can be recruited as Junior clerk",
+      "Can be recruited as Head clerk",
+      "Cannot be recruited"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 165,
+    "question": "Choose the correct option that continues the series AZY, BYX, CXW, DWV, EVU, ____",
+    "options": [
+      "(1) FWT",
+      "(2) FTU",
+      "(3) FUV",
+      "(4) FUT"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 166,
+    "question": "The codes for few letters are given in below table. The code of a letter not in the tables is itself. The code of a word is obtained by replacing the letters of the word subject to the conditions (a) If both the ends of a word are vowels then write the codes of these two letters as codes of the immediate next consonants. (b) If first letter is consonant and last letter is vowel interchange the codes of these two letters. (c) If first letter is vowel and last letter is consonant then both are to be coded as the code for that consonant. The codes for the words 'DRAG' and 'PRAVEDI' are respectively",
+    "options": [
+      "(1) 534%, ©3145$*",
+      "(2) 543%, *341$5©",
+      "(3) 534%, 341$5*",
+      "(4) %435, *5$143©"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 167,
+    "question": "In a certain code BFKKT VP is code for the word JEALOUS, then the word having code BFIQOFU is (The word need not have a meaning)",
+    "options": [
+      "(1) HEARTEN",
+      "(2) JGCPVGP",
+      "(3) AEHRNET",
+      "(4) CGJPPGV"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 168,
+    "question": "A, B, C, D, E, F respectively stands for <, ≠, >, >, <, = The implication of the two statements 4 yF 3 x and 3 xF 6 Z where x, y, z are any three positive real numbers is",
+    "options": [
+      "(1) zE y; xDy",
+      "(2) zD y; xEy",
+      "(3) xF yF z",
+      "(4) xFy Bz"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 169,
+    "question": "Which of the following alternatives contains the signs such that the interchange of signs would make the given equation meaningful ? 18+12-6×4÷2=24",
+    "options": [
+      "÷ &+",
+      "+ & x",
+      "-&x",
+      "÷&-"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 170,
+    "question": "Choose the correct option that continues the series G119Q, K253W, M39C, Q153I,",
+    "options": [
+      "B45W",
+      "C56S",
+      "G90M",
+      "S2850"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 171,
+    "question": "In a certain code, VERBAL is coded as 22-22-18-25-1-15 and REASON is coded as 18-22-1-8-15-13. The code of CUBOID is",
+    "options": [
+      "3-6-2-12-9-23",
+      "24-6-25-12-18-4",
+      "3-21-2-15-9-4",
+      "24-6-25-12-18-23"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 172,
+    "question": "What should come in the place of question mark(?) in the following letter sequence ? BYDW, CXFU, EVJQ, GTNM, ?",
+    "options": [
+      "HSPK",
+      "KPVE",
+      "JQTG",
+      "IRRJ"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 173,
+    "question": "Assertion (A): In 1 minute, the minute hand of a clock gains 5 1°/2 over hour hand. Reason (R) : In one hour minute hand gains 55 minute spaces over the hour hand and angle made by minute hand in 1 minute is equal to 6°.",
+    "options": [
+      "both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 174,
+    "question": "Among A, B, C one is a doctor, one is a teacher and one is an engineer. D, E, F are their wives (need not be in the same order). E marries an engineer. Husband of F is not a doctor. B is a teacher. D married C who is not an engineer. then",
+    "options": [
+      "Husband of F is a doctor",
+      "C is the husband of E",
+      "E is the wife of B",
+      "C is a Doctor"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 175,
+    "question": "In a certain code, ORDER NOW FOR PROFIT is written as \"oh aj ey ag\" NOW RIGHT FOR HIM is written as \"ag aj ev es\" FOR PROFIT PLACE ORDER is written as \"oh ey ib ag\" IN RIGHT ORDER ONLY is written as \"ev hd ey oz\" Code for PLACE HIM ORDER is",
+    "options": [
+      "es ib ag",
+      "oz ev aj",
+      "es ey ib",
+      "oz ev ag"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 176,
+    "question": "The missing term of the series 1, 3, 6, 11, 18, ?, 42, 59 is",
+    "options": [
+      "26",
+      "27",
+      "29",
+      "31"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 177,
+    "question": "Study the following arrangement carefully and then answer the following question. C6Q3$FJ©E\\7R%9K X 2 G H V 4 *8TI #UA If the 5th element from the left and 4th element from the right are interchanged, then the number of consonants which appear immediately after a number is",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "7"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 178,
+    "question": "Observe the following data flow diagram which displays the sequence of activities in a process of getting admission in a college. If a student submits all the valid documents, then the possible reason would be for not getting admission is",
+    "options": [
+      "His required branch is not available",
+      "He has one document invalid",
+      "No funds available for fee",
+      "Forget to take the receipt for fee payment"
+    ],
+    "has_image": true,
+    "source_page": 52,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_178_page_52.png"
+  },
+  {
+    "q_no": 179,
+    "question": "Study the following information carefully and answer the question given below.\n(i) A * B means A is nephew of B\n(ii) A @ B means A is mother of B\n(iii) A & B means A is grandfather of B\n(iv) A $ B means A is husband of B\n(v) A # B means A is father of B\nWhich one of the following relations is true from the expression P & Q$ R @ S * T # U, if U is a male member?",
+    "options": [
+      "T # R",
+      "U * Q",
+      "R @ U",
+      "S $ U"
+    ],
+    "has_image": true,
+    "source_page": 53,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_179_page_53.png"
+  },
+  {
+    "q_no": 180,
+    "question": "Below two statements I and II are given. These may have a cause and effect relationship or may have independent causes or be the effects of independent causes.\nI. The Prime Minister's security has been tightened further.\nII. The Residence welfare Association of defense colony has decided to tighten the security and arrange more number of CCTV cameras to the residential campus.\nThen the relationship between the above statements is",
+    "options": [
+      "I is Effect, II is Cause",
+      "II is Effect, I is Cause",
+      "Both I and II are the Effects of a common Cause",
+      "Both I and II are the Effects of independent Causes"
+    ],
+    "has_image": false,
+    "source_page": 53
+  },
+  {
+    "q_no": 181,
+    "question": "Pointing to a woman, A said \"she is the sister of my father's mother's only child's son\" How is the women related to A's wife ?",
+    "options": [
+      "Sister",
+      "Sister-in-Law",
+      "Mother",
+      "Aunt"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 182,
+    "question": "Choose the correct option that continues the series BY2, CX3, EV5, GT7 _______.",
+    "options": [
+      "JS8",
+      "KP11",
+      "DW4",
+      "MN12"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 183,
+    "question": "If +, -, ÷, ×, =, >, and < are respectively denoted by ∧, V, Δ, $, E, G, and L. Which of the following is true ?",
+    "options": [
+      "13∧7V6Δ2L3$4",
+      "9V5∧4E18Δ9∧16",
+      "9V3V2∧1G8$2",
+      "28Δ4$2L6$4Δ2"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 184,
+    "question": "Assertion (A) : The area of the triangle whose sides are of length 5, 7, 10 units is √66 square units. Reason (R) : If 'b' is the base and 'h' is the height of a triangle then its area = 1/2 bh sq.units.",
+    "options": [
+      "both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": true,
+    "source_page": 54,
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_184_page_54.png"
+  },
+  {
+    "q_no": 185,
+    "question": "A, B, C, D, and E are 5 brand names of an item X and P, Q, R are 3 brand names of an item Y. A is heaviest among A, B, C, D, E and R is the lightest among P, Q, R. Brand C is costlier than D and Q but cheaper than B. Among 5 branded items of X, A is not the costliest. D is cheaper than E and there is no item of X whose cost lies between the cost of these two. E is heavier than three of the 5 branded items of X and all branded items of Y. Q is costlier than R but cheaper than P which is heavier than Q. If B and C are heavier than D, then lightest among the 5 branded items of X is",
+    "options": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 186,
+    "question": "Effect: There is a lot of demand for the courses of Computer Science and Engineering. Which of the following can be a strong cause of the above effect ?",
+    "options": [
+      "Worldwide the need for software personnel is increasing enormously day by day and the emoluments for these jobs are very high",
+      "It is very easy to complete these courses and get employment",
+      "The other branches of engineering are very difficult",
+      "There are no job opportunities for the graduates from other branches of engineering"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 187,
+    "question": "If THERAPY is coded as GSVIZKB then the code of the word BIOGRAPHY is",
+    "options": [
+      "YRMTIZKSB",
+      "YRLTJZKSB",
+      "YRLSIZKTB",
+      "YRLTIZKSB"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 188,
+    "question": "Choose the letter series from the alternatives in which the number of letters between two successive letters taken from left to right increase every time by 1",
+    "options": [
+      "OMKIG",
+      "OIGDC",
+      "ONLKJ",
+      "OMJFA"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 189,
+    "question": "Choose the correct option that continues the series 132, 182, 306, 380, 552, 870, ____",
+    "options": [
+      "1020",
+      "1148",
+      "947",
+      "992"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 190,
+    "question": "Assertion (A): Appearances are always deceptive.\nReason (R) : All that glitters is not gold.",
+    "options": [
+      "both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 191,
+    "question": "In a certain code language, 'CUB' is written as '7 @ 4', and 'RELATION' is written as '1*5$3 # & 9' and CELEBRATION is written as 7 * 5 * 4 1 $ 3 # & 9 then in the same language 'AUTOCRAT' is written as",
+    "options": [
+      "$ @ 5 & 71 $5",
+      "$ # 3 & 71 $3",
+      "$ & 3 @ 71 $3",
+      "$ @ 3 & 71 $3"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 192,
+    "question": "In a certain language, code for 'KNIFE' is 5 # % 3 $ and code for 'LAKE' is @ 7 5 $ and code for 'FLANK' is 3 @ 7 # 5, then the code for 'LIFE IN FAIL' is",
+    "options": [
+      "@ % 3 $ % # 37 % @",
+      "73 % $ # % 73 % 7",
+      "5 % 3 $ % # @ # % 5",
+      "% 53 $ # % # @ 5 %"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 193,
+    "question": "Read the following information and answer the question.\n(i) A $ B means A and B are of same age\n(ii) A * B means A is younger than B\n(iii) A @ B means A is elder than B\nThen P * Q @ R $ S means",
+    "options": [
+      "P is the youngest among all",
+      "R is the youngest among all",
+      "Q is the eldest among all",
+      "S is the youngest among all"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 194,
+    "question": "Atleast two men out of A, B, C and D and atleast two women out of P, Q, R, S have to be chosen to from a committee of five. Along with Q either A or C should not be placed. Along with B either P or S should not be placed. Q and R should not be together. Which of the following is a possible acceptable committee ?",
+    "options": [
+      "A, P, Q, R, C",
+      "A, B, D, P, R",
+      "B, C, Q, R, S",
+      "P, R, S, A, D"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 195,
+    "question": "The letters of English alphabet except Y and Z are coded with the digits 1, 2, 3, 4, 5, 6, 7, 8 as follows. Letters A, D, G J, M, P S, V, B E, H, K N, Q, T W, C, F I, L, O R, U, X Code 8 7 6 5 4 3 2 1 With this code, 'BILL' is coded as '6222'. Similarly the sentence 'SUBJECT OF THE COURSE' is coded as",
+    "options": [
+      "6168534 23 455 322165",
+      "6167634 23 455 321166",
+      "6167534 23 455 321165",
+      "6116534 23 455 321165"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 196,
+    "question": "A, B, C, D, E and F are six members of a family. A is mother of B who is husband of D. F is the brother of one of the parents of C. D is daughter-in-Law of E and has no siblings. C is son of D. The number of males and females in the family are respectively",
+    "options": [
+      "3, 3",
+      "4, 2",
+      "2, 4",
+      "5, 1"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 197,
+    "question": "Statements: No white is black; No black is red. What is the decision that can be taken based on above statements ?",
+    "options": [
+      "Some white are red",
+      "Some white are not red",
+      "No white is red",
+      "No decision can be taken"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 198,
+    "question": "A, B, C, J, M, N, P, R, S, V are 10 members of a family. N is the grandfather of A. M is the daughter of P. S, J, C are brothers-in-law of R. B is the son of J. V is the mother of C. R is the Son-in-law of N. A is the sister of M. P is the paternal aunt of B. Then which one of the following is not true?",
+    "options": [
+      "R is the father of M",
+      "J is the maternal uncle of A",
+      "B is the nephew of P",
+      "A is the niece of R"
+    ],
+    "has_image": false,
+    "source_page": 58
+  },
+  {
+    "q_no": 199,
+    "question": "A, B, C, D, E are five students. P, Q, R, S, T are five authors, each of them wrote exactly one book on the subjects Mathematics, Physics, Chemistry, Botany and Zoology need not be in the same order. Each student owns only one book. R is the author of Chemistry which is not owned by B or E. A owns Mathematics book. B owns the book written by T but not Physics. D owns Zoology book written by P. Physics book is not written by S. then Physics book is",
+    "options": [
+      "Written by S and owned by C",
+      "Written by Q and owned by C",
+      "Written by P and owned by E",
+      "Written by Q and owned by E"
+    ],
+    "has_image": false,
+    "source_page": 58
+  },
+  {
+    "q_no": 200,
+    "question": "Assertion (A): In a non leap year 1st January and 31st December fall on the same day of the week. Reason (R) : There will be two odd days in a leap year beyond 52 weeks.",
+    "options": [
+      "both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 58
+  }
+]

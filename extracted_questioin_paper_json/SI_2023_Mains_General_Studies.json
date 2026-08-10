@@ -1,0 +1,2402 @@
+[
+  {
+    "q_no": 1,
+    "question": "Identify the mammal/mammals from the following.",
+    "options": [
+      "Cat only",
+      "Bat only",
+      "Rat only",
+      "All of the above"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 2,
+    "question": "Which of the following vitamin/mineral deficiency causes mental disorder in children ?",
+    "options": [
+      "Vitamin B12",
+      "Vitamin A",
+      "Vitamin C",
+      "Iron"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 3,
+    "question": "China is reportedly building a new dam on Mabja Zangbo river in Tibet at the trijunction with India and Nepal, the other side of the state _____ ",
+    "options": [
+      "Ladakh",
+      "Uttarakhand",
+      "Sikkim",
+      "Arunachal Pradesh"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 4,
+    "question": "The process of separating grains from the stalks is called _____ ",
+    "options": [
+      "Threshing",
+      "Winnowing",
+      "Hand picking",
+      "Sieving"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 5,
+    "question": "ITC Ltd. Company opened a new unit in January, 2023 to produce biscuits, chips and noodles at _____ in Telangana.",
+    "options": [
+      "Katedan (Hyderabad)",
+      "Manoharabad (Medak)",
+      "Kamkol (Sanga Reddy)",
+      "Nampally (Vemulawada)"
+    ],
+    "has_image": false,
+    "source_page": 4
+  },
+  {
+    "q_no": 6,
+    "question": "Which village in Telangana has been selected as one of the best tourism village by the UN World Tourism Organization (UNWTO) for the year 2021 ?",
+    "options": [
+      "Anantagiri",
+      "Pochampally",
+      "Nagarjunasagar",
+      "Kawal"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 7,
+    "question": "Which of the following element/elements is found in DNA ?",
+    "options": [
+      "Oxygen only",
+      "Nitrogen only",
+      "Carbon only",
+      "All of the above"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 8,
+    "question": "The Chinese strategy of grabbing land inch-by-inch is described as",
+    "options": [
+      "Salami Slicing",
+      "Guerilla Warfare",
+      "Strategic Hold",
+      "Disproportionate Force"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 9,
+    "question": "Russia has withdrawn from its last nuclear arms control pact with the United States in February, 2023. What is the name of the pact ?",
+    "options": [
+      "New START",
+      "SALT",
+      "SALT-II",
+      "START-II"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 10,
+    "question": "Which of the following is organically formed rock ?",
+    "options": [
+      "Lignite",
+      "Gypsum",
+      "Gravel",
+      "Sand Stone"
+    ],
+    "has_image": false,
+    "source_page": 5
+  },
+  {
+    "q_no": 11,
+    "question": "Which of the following is least reactive metal in its chemical properties ?",
+    "options": [
+      "Silver (Ag)",
+      "Magnesium (Mg)",
+      "Lead (Fb)",
+      "Iron (Fe)"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 12,
+    "question": "To mankind, the disease that results from vitamin C deficiency is",
+    "options": [
+      "Beriberi",
+      "Scurvy",
+      "Rickets",
+      "Goiter"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 13,
+    "question": "Which of the following River is also known as 'Iravati'?",
+    "options": [
+      "Jhelum",
+      "Chenab",
+      "Ravi",
+      "Beas"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 14,
+    "question": "The bacteria which causes typhoid fever in human beings is",
+    "options": [
+      "Salmonella typhi",
+      "Typhoid Mary",
+      "Haemophilus influenzae",
+      "Streptococcus pneumonia"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 15,
+    "question": "Which of the following gases is not responsible for the greenhouse effect ?",
+    "options": [
+      "Nitrous oxide",
+      "Carbon dioxide",
+      "Oxygen",
+      "Methane"
+    ],
+    "has_image": false,
+    "source_page": 6
+  },
+  {
+    "q_no": 16,
+    "question": "Who is the Union Environmental Secretary of India ?",
+    "options": [
+      "S. Jai Shankar",
+      "Leena Nandan",
+      "Govind Mohan",
+      "Shailesh Kumar Singh"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 17,
+    "question": "In February 2023, ISRO carried out the first successful launch using its new rocket.",
+    "options": [
+      "Small Satellite Launch Vehicle",
+      "Geo Synchronous Satellite Launch Vehicle",
+      "Polar Satellite Launch Vehicle",
+      "Scramjet Engine-TD"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 18,
+    "question": "Sunlight can be turned directly into electricity by using _______.",
+    "options": [
+      "Fuel cells",
+      "Galvanic cells",
+      "Electrolytic cells",
+      "Photovoltaic cells"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 19,
+    "question": "The temperature at which gold melts is _______",
+    "options": [
+      "1064° C",
+      "1063° C",
+      "328° F",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 7
+  },
+  {
+    "q_no": 20,
+    "question": "The income of the Life Sciences sector in Telangana was worth around ______ in 2022.",
+    "options": [
+      "$ 80 billion",
+      "$ 50 billion",
+      "$ 100 billion",
+      "$ 120 billion"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 21,
+    "question": "Who was the last Nizam of Hyderabad, who passed away in January,2023?",
+    "options": [
+      "Mir Barket Ali Mukarram Jah",
+      "Mir Osman Ali Khan",
+      "Mir Mahboob Ali Khan",
+      "Mir Tahniyath Ali Khan"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 22,
+    "question": "Saffron is obtained from which parts of the flower ?",
+    "options": [
+      "Stigma",
+      "Petals",
+      "Stem",
+      "Leaves"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 23,
+    "question": "Identify the term which is not a type of pollination.",
+    "options": [
+      "Autogamy",
+      "Geitonogamy",
+      "Xenogamy",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 8
+  },
+  {
+    "q_no": 24,
+    "question": "Which of the following statements is TRUE related to Deforestation?",
+    "options": [
+      "It converts agricultural areas to forest areas",
+      "It causes loss of biodiversity",
+      "It does not affect soil erosion",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 25,
+    "question": "Who won the 2023 Border-Gavaskar trophy (Cricket)?",
+    "options": [
+      "India",
+      "Australia",
+      "New Zealand",
+      "South Africa"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 26,
+    "question": "Which of the following activities does a human brain perform?",
+    "options": [
+      "Thinking and communication only",
+      "Balancing the body only",
+      "Regulating heart beat only",
+      "All of the above"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 27,
+    "question": "Who among the following was awarded the Padma Vibhushan Award for the year 2023?",
+    "options": [
+      "Kumar Mangalam Birla",
+      "Vani Jayaram",
+      "Swami China Jeeyar",
+      "Zakir Hussain"
+    ],
+    "has_image": false,
+    "source_page": 9
+  },
+  {
+    "q_no": 28,
+    "question": "Which of the following is a computer network that is confined to a single building?",
+    "options": [
+      "(1) Local Area Network (LAN)",
+      "(2) Metropolitan Area Network (MAN)",
+      "(3) Wide Area Network (WAN)",
+      "(4) Personal Area Network (PAN)"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 29,
+    "question": "Volodymyr Zelenskiy is the president of _________.",
+    "options": [
+      "(1) Ukraine",
+      "(2) Georgia",
+      "(3) Poland",
+      "(4) Slovenia"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 30,
+    "question": "India won the first ICC under-19 Women's world cup in Cricket by defeating _________.",
+    "options": [
+      "(1) Australia",
+      "(2) New Zealand",
+      "(3) Sri Lanka",
+      "(4) England"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 31,
+    "question": "NABARD stands for _________.",
+    "options": [
+      "(1) National Bank for Agriculture and River Department",
+      "(2) National Bank for Agriculture and Rural Development",
+      "(3) National Block for Agriculture and Rural Development",
+      "(4) National Bank for Agriculture and Rural Department"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 32,
+    "question": "In human beings excretory products are removed by the _________ in the kidneys.",
+    "options": [
+      "(1) Pancreas",
+      "(2) Palate",
+      "(3) Nephrons",
+      "(4) Neurons"
+    ],
+    "has_image": false,
+    "source_page": 10
+  },
+  {
+    "q_no": 33,
+    "question": "Tooth decay starts when the pH value of the mouth is _____.",
+    "options": [
+      "Lower than 5.5",
+      "Greater than 5.5",
+      "Between 5.5 to 7.5",
+      "Greater than 7.5"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 34,
+    "question": "What is the target inflation rate set by the Reserve Bank of India for the financial year 2022-23?",
+    "options": [
+      "3%",
+      "4%",
+      "5%",
+      "6%"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 35,
+    "question": "Which acid is released by the ant during the ant bite ?",
+    "options": [
+      "Formic acid",
+      "Sulphuric acid",
+      "Citric acid",
+      "Oxalic acid"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 36,
+    "question": "Which state has the highest urban population in India ?",
+    "options": [
+      "West Bengal",
+      "Telangana",
+      "Tamil Nadu",
+      "Maharashtra"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 37,
+    "question": "Which of the following acids is present in spinach ?",
+    "options": [
+      "Acetic acid",
+      "Citric acid",
+      "Lactic acid",
+      "Oxalic acid"
+    ],
+    "has_image": false,
+    "source_page": 11
+  },
+  {
+    "q_no": 38,
+    "question": "Indian Start-ups received a funding of around ________ in 2022, according to PWC.",
+    "options": [
+      "$ 12 billion",
+      "$ 24 billion",
+      "$ 36 billion",
+      "$ 48 billion"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 39,
+    "question": "Angkor Wat, a 12th century Hindu temple is in ________",
+    "options": [
+      "Indonesia",
+      "Malaysia",
+      "Cambodia",
+      "Nepal"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 40,
+    "question": "United States of America (USA) has banned export of advanced semiconductors to ________ country.",
+    "options": [
+      "China",
+      "Russia",
+      "Japan",
+      "South Korea"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 41,
+    "question": "Smoking increases the following in the blood.",
+    "options": [
+      "Oxygen",
+      "Nitric oxide",
+      "Carbon monoxide",
+      "Carbon dioxide"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 42,
+    "question": "In India, Name the present Chairperson of Rajya Sabha.",
+    "options": [
+      "Venkaiah Naidu",
+      "Jagdeep Dhankar",
+      "Draupadi Murmu",
+      "Tamilisai Soundararajan"
+    ],
+    "has_image": false,
+    "source_page": 12
+  },
+  {
+    "q_no": 43,
+    "question": "The term diapause defines which of the following :",
+    "options": [
+      "Migration of animals and birds",
+      "Changing body temperature based on climate temperature",
+      "Suspending embryonic development temporarily",
+      "Stopping food due to health issues"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 44,
+    "question": "In the e-mail address field, to send a message to multiple recipients, “BCC” is used, which stands for",
+    "options": [
+      "Before Carbon Copy",
+      "Bi Communication Copy",
+      "Blind Carbon Copy",
+      "Best Communication Copies"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 45,
+    "question": "Sound cannot travel through",
+    "options": [
+      "Gases",
+      "Vacuum",
+      "Liquid",
+      "Solids"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 46,
+    "question": "Which State has the largest irrigated area ?",
+    "options": [
+      "Haryana",
+      "Punjab",
+      "Uttar Pradesh",
+      "West Bengal"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 47,
+    "question": "A thin membrane through which light enters the human eye is called",
+    "options": [
+      "Retina",
+      "Pupil",
+      "Cornea",
+      "Iris"
+    ],
+    "has_image": false,
+    "source_page": 13
+  },
+  {
+    "q_no": 48,
+    "question": "Which of the following country's President was the Chief Guest at the Indian Republic Day Celebrations held in 2023?",
+    "options": [
+      "Egypt",
+      "France",
+      "Hungary",
+      "Israel"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 49,
+    "question": "The author of the Book ‘Panchasiddhantika' is",
+    "options": [
+      "Aryabhata",
+      "Varahamihira",
+      "Brahmagupta",
+      "Bhaskara"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 50,
+    "question": "India's Unified Payments Interface (UPI) payment system has been linked with ________ country's 'Pay Now' system in February, 2023.",
+    "options": [
+      "United States of America (USA)",
+      "United Arab Emirates (UAE)",
+      "Singapore",
+      "Canada"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 51,
+    "question": "According to tradition, people felt that the Bahamani ruler who had miracle powers and was supposed to have brought rains to the people of the Deccan. This earned him the title of wali(saint). Who was he?",
+    "options": [
+      "Ala-ud Din Bahaman Shah",
+      "Mujahid Shah",
+      "Ahmed Shah I",
+      "Muhammad Shah I"
+    ],
+    "has_image": false,
+    "source_page": 14
+  },
+  {
+    "q_no": 52,
+    "question": "Most of the following Indus Valley civilization sites are found on the river banks. Arrange the following sites related to the rivers.\nGroup-I\n(Sites)\n(a) Harappa\n(b) Mohenjodaro\n(c) Kalibangan\n(d) Banwali\nGroup-II\n(Rivers)\n(i) Sindh\n(ii) Ravi\n(iii) Rangoi\n(iv) Ghaggar",
+    "options": [
+      "(1) (i) (ii) (iii) (iv)",
+      "(2) (iii) (iv) (ii) (i)",
+      "(3) (iv) (iii) (i) (ii)",
+      "(4) (ii) (i) (iv) (iii)"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 53,
+    "question": "Chronologically arrange the following important events at the time of Muhammad Bin Tughlaq.\n(a) Introduction of Token (Copper) currency.\n(b) Shifting of capital from Delhi to Daulatabad.\n(c) Increase of Revenue in Ganga-Yamuna Doab.\n(d) The Khurasan expedition.",
+    "options": [
+      "(1) (a), (c), (d), (b)",
+      "(2) (c), (a), (b), (d)",
+      "(3) (a), (d), (b), (c)",
+      "(4) (c), (b), (a), (d)"
+    ],
+    "has_image": false,
+    "source_page": 15
+  },
+  {
+    "q_no": 54,
+    "question": "Monsoon forests falls in the zone of",
+    "options": [
+      "Dry",
+      "Humid",
+      "Very dry",
+      "Semi-Humid"
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 55,
+    "question": "Which one of the following statements is not correct about Peshwas?",
+    "options": [
+      "Chattrapati Shahu appointed Balaji Vishwanath as a Peshwa in the Year 1713.",
+      "Baji Rao became Peshwa after the death of his father in 1720 and continued till his death in 1750.",
+      "During the tenure of Peshwa Balaji Baji Rao, the Chattrapati Ram Raja delegated many powers and virtually with this the Peshwa became real ruler of Maratha state.",
+      "Peshwa Baji Rao popularized the slogan 'Hindu-pad-padshahi' or Hindu empire."
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 56,
+    "question": "Which one of the following statements is not correct about Rig-veda ?",
+    "options": [
+      "Rig-veda does not mention temples or the worship of images of deities.",
+      "'Rudra' is most frequently invoked God in the Rig-veda.",
+      "'Ushas', the goddess of the dawn, is mentioned 300 times.",
+      "As for as funerary practices are concerned Rigveda refers to the both cremation and burial."
+    ],
+    "has_image": false,
+    "source_page": 16
+  },
+  {
+    "q_no": 57,
+    "question": "Which one of the following statements is not correct about Guptas ?",
+    "options": [
+      "Guptas used the symbol of ‘Garuda' on their seals.",
+      "Allahabad Prashasti was written in kharoshthi script.",
+      "Kumara gupta coins have representations of the god Kartikeya.",
+      "Decentralization of administrative authority was an important feature of Gupta rule."
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 58,
+    "question": "Match the following.\nGroup-I\n(Social Reformers)\n(a) Raja Ram Mohan Roy\n(b) Bal Shastri Jambekar\n(c) Shivanath Shastri\n(d) Devendranath Tagore\nGroup-II\n(Papers and Magazines)\n(i) Tattvabodhini\n(ii) Mukul\n(iii) Sambad Kaumudi\n(iv) Darpan",
+    "options": [
+      "(iii) (ii) (iv) (i)",
+      "(iii) (iv) (ii) (i)",
+      "(i) (ii) (iii) (iv)",
+      "(iii) (i) (iv) (ii)"
+    ],
+    "has_image": false,
+    "source_page": 17
+  },
+  {
+    "q_no": 59,
+    "question": "EL-NINO is also called as",
+    "options": [
+      "Hail",
+      "Southern Oscillation",
+      "Tornado",
+      "Jet Stream"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 60,
+    "question": "The longitudinal valleys also called Duns/Doons are found in :",
+    "options": [
+      "Greater Himalayas",
+      "Trans- Himalayas",
+      "Lesser- Himalayas",
+      "Shiwalik Hills"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 61,
+    "question": "Ramgarh coal fields are found in the state of",
+    "options": [
+      "Odisha",
+      "Karnataka",
+      "Jharkhand",
+      "West Bengal"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 62,
+    "question": "What was the capital of Sind at the time of Arab invasion?",
+    "options": [
+      "Deval",
+      "Multan",
+      "Bhatinda",
+      "Alor"
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 63,
+    "question": "The essential constituents of a state saptanga are discussed in the Arthashastra. They are:",
+    "options": [
+      "King, Capital, Treasury, Territory, Administration, Danda and Allies.",
+      "King, Ministers, Military, Capital, Treasury, Danda and Allies.",
+      "King, Purohita, Military, Capital, Treasury, Justice and Danda.",
+      "King, Purohita, Capital, Territory, Administration, Danda and Justice."
+    ],
+    "has_image": false,
+    "source_page": 18
+  },
+  {
+    "q_no": 64,
+    "question": "The Coriolis force is absent along the",
+    "options": [
+      "Equator",
+      "Tropic of Cancer",
+      "Tropic of Capricorn",
+      "Poles"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 65,
+    "question": "The state with lowest Human Development Index (HDI) in south India is",
+    "options": [
+      "Karnataka",
+      "Kerala",
+      "Telangana",
+      "Andhra Pradesh"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 66,
+    "question": "\"Gandhi's religious and moral views are admirable; but found it difficult to understand his practice of them in politics\"- the Name of the Viceroy who commented on Gandhi's views.",
+    "options": [
+      "Lord Reading",
+      "Lord Irwin",
+      "Lord Willingdon",
+      "Lord Chelmsford"
+    ],
+    "has_image": false,
+    "source_page": 19
+  },
+  {
+    "q_no": 67,
+    "question": "Sathavahana period marked with growth of Industrial and Agricultural development. In this context many professional groups emerged during this period. Arrange following professional groups with their work.\nGroup-I (Groups): (a) Kolikas, (b) Kularikas, (c) Vadhikas, (d) Vasakaras\nGroup-II (Professions): (i) Potters, (ii) Weavers, (iii) Bamboo workers, (iv) Carpenters",
+    "options": [
+      "(1) (iv) (iii) (ii) (i)",
+      "(2) (ii) (i) (iv) (iii)",
+      "(3) (i) (ii) (iii) (iv)",
+      "(4) (iii) (iv) (i) (ii)"
+    ],
+    "has_image": false,
+    "source_page": 20
+  },
+  {
+    "q_no": 68,
+    "question": "Along which latitude the sub-tropical High-Pressure belts occur?",
+    "options": [
+      "(1) 45° North & South",
+      "(2) 30° North & South",
+      "(3) 90° North & South",
+      "(4) 5° North & South"
+    ],
+    "has_image": false,
+    "source_page": 20
+  },
+  {
+    "q_no": 69,
+    "question": "Typhoons occur mainly in regions between :",
+    "options": [
+      "6° & 20° North & South of equator",
+      "Along 30° North & South of equator",
+      "45° to 50° North & South of equator",
+      "At 60° North & South of equator"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 70,
+    "question": "Who won the Hyderabad E-Prix Formula-E car race in February 2023 ?",
+    "options": [
+      "Lucas di Grassi",
+      "Mitch Evans",
+      "Antonio Felix da Costa",
+      "Jean-Eric-Vergne"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 71,
+    "question": "Mahavira, the founder of Jainism died at pava in Bihar at the age of 72, traditionally in 527 B.C. This occasion was celebrated as a lamp festival by people of the two kingdoms of the region. According to Jaina tradition, the present day Dipavali. the Hindu festival is a continuation of this. Identify the two local kingdoms who celebrated this.",
+    "options": [
+      "Haryankas and Sakyas",
+      "Chedi and Videhas",
+      "Mallakis and Licchavis",
+      "Ugaras and Bhogas"
+    ],
+    "has_image": false,
+    "source_page": 21
+  },
+  {
+    "q_no": 72,
+    "question": "Which one of the following is not result of 1857 Sepoy Mutiny ?",
+    "options": [
+      "The control of Indian Administration was transferred from the East India company to the crown.",
+      "The Taluqdars of Oudh who had joined in large numbers in the rebellion were reinstated and confirmed in their estates.",
+      "Revolt of 1857 was the lack of contact between ruler and the ruled. Hence it paved for the introduction of 1861 Indian Councils Act.",
+      "The entry of muslims into Indian Army banned temporarily."
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 73,
+    "question": "Which of the following place is not a part of Karewa soil ?",
+    "options": [
+      "Pulwama",
+      "Kulgam",
+      "Gulmarg",
+      "Palampur"
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 74,
+    "question": "Which one of the following statement is not correct about Gupta administration?",
+    "options": [
+      "Gupta administration was more decentralized.",
+      "'Ayuktaka' and 'Vishayapati' are the officers in-charge of the districts.",
+      "Gupta kingdom was divided into Aharas (provinces) and Aharas were devided into Pradesha or Vishaya (Districts).",
+      "Village was the last administrative unit under Guptas. During this period various categories of villages, i.e., grama, palli, gulma and khetaka are to be found."
+    ],
+    "has_image": false,
+    "source_page": 22
+  },
+  {
+    "q_no": 75,
+    "question": "During Swadeshi movement in Bengal, number of organizations established in favour of Swadeshi and Boycott. Match the following persons with organizations.\nGroup-I\n(Organization)\n(a) Dawn Society\n(b) Swadeshi Bandhav Samithi\n(c) Anti-Circular Society\n(d) (Dhaka) Decca Anushilan Samithi\nGroup-II\n(Persons)\n(i) Krishna Kumar Mitra\n(ii) Pulin Das\n(iii) Aswin Kumar Dutt\n(iv) Satish Chandra Mukerji",
+    "options": [
+      "(1) (i) (ii) (iii) (iv)",
+      "(2) (ii) (iii) (iv) (i)",
+      "(3) (iii) (i) (iv) (ii)",
+      "(4) (iv) (iii) (i) (ii)"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 76,
+    "question": "Name the ruler of Gwalior who fought like a true Rajput on the side of Ibrahim Lodi in the First war of Panipat in 1526.",
+    "options": [
+      "Raja Vikramjit",
+      "Raja Indhrajit",
+      "Raja Hemraj",
+      "Raja Medini Rai"
+    ],
+    "has_image": false,
+    "source_page": 23
+  },
+  {
+    "q_no": 77,
+    "question": "Assertion(A): Hinayanists believed in individual salvation through self-discipline and meditation. Reason (R): Mahayanists believed in the salvation of all with help and grace of the Buddha.",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 78,
+    "question": "Assertion(A): Firoj Shah Tughlaq imposed Jiziya on Brahmans, the priest community of Hindus also. Reason (R): Firoj shah Tughlaq believed all human beings are equal and no body is superior to another.",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 24
+  },
+  {
+    "q_no": 79,
+    "question": "The stupa represented many things in the Buddhist tradition. Most of the major stupa complexes were located on the outskirts of the great cities of the time. In this context which pair is not correct ?",
+    "options": [
+      "Mrigdava stupa - Madura",
+      "Dharmarajika stupa - Taxila",
+      "Sanchi stupa - Vidisha",
+      "Amaravati stupa - Dharanikota"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 80,
+    "question": "Which state of India leads in sheep rearing ?",
+    "options": [
+      "Andhra Pradesh",
+      "Telangana",
+      "Karnataka",
+      "Maharashtra"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 81,
+    "question": "Which of the following planet is also known as earth's twin?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Venus",
+      "Neptune"
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 82,
+    "question": "Which one of the following statements is not correct about Akbar ?",
+    "options": [
+      "Akbar believed in Divine worship of monarchs.",
+      "He introduced 'Jharokha-i-darshan' early at sunrise to his subjects.",
+      "By 1580, Akbar introduced 'Ain-i-Dahsala', a new assessment of land revenue.",
+      "Akbar built three important forts at Lahore, Agra and Delhi."
+    ],
+    "has_image": false,
+    "source_page": 25
+  },
+  {
+    "q_no": 83,
+    "question": "Which one of the following statements is not true about Emperor Ashoka ?",
+    "options": [
+      "(1) The epigraphs of Ashoka refers to southern peoples such as the Cholas, Pandyas, Satyaputras and Keralaputras.",
+      "(2) One of the Ashokan Inscriptions mention Antiochus theos of Syria, Ptolemy III Philadelphus of Egypt, Antigonus Gonatus of Macedonia, magas of Cyrene and Alexander of Epirus-all kings of the contemporary with whom exchanged missions.",
+      "(3) The king Meghavarna of Ceylon was contemporary of Ashoka.",
+      "(4) Ashoka does not mention in his inscriptions the great event i.e, organization of third Buddhist council which was held at Pataliputra under the presidentship of Moggaliputtatissa."
+    ],
+    "has_image": false,
+    "source_page": 26
+  },
+  {
+    "q_no": 84,
+    "question": "Identify the wrong pair.",
+    "options": [
+      "(1) Anumakonda Inscription - Ganapatideva",
+      "(2) Bayyaram Tank Inscription - Mailamba",
+      "(3) Chandupatla Inscription - Puvvula Mummidi",
+      "(4) Draksharama Inscription - Malyala Hemadri"
+    ],
+    "has_image": false,
+    "source_page": 26
+  },
+  {
+    "q_no": 85,
+    "question": "Which State has the largest deposits of copper-ore?",
+    "options": [
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Jharkhand",
+      "West-Bengal"
+    ],
+    "has_image": false,
+    "source_page": 27
+  },
+  {
+    "q_no": 86,
+    "question": "India's best and largest coal deposits are found in",
+    "options": [
+      "Gondwana system",
+      "Deccan Trap",
+      "Vindhyan system",
+      "Cuddapah system"
+    ],
+    "has_image": false,
+    "source_page": 27
+  },
+  {
+    "q_no": 87,
+    "question": "The Mongolo-Dravidians are mostly found in:",
+    "options": [
+      "Odisha",
+      "Telangana",
+      "Karnataka",
+      "Gujarat"
+    ],
+    "has_image": false,
+    "source_page": 27
+  },
+  {
+    "q_no": 88,
+    "question": "Name the current Solicitor General of India.",
+    "options": [
+      "Mukul Rohatgi",
+      "Gopal Subramaniam",
+      "Tushar Mehta",
+      "K.K.Venugopal"
+    ],
+    "has_image": false,
+    "source_page": 27
+  },
+  {
+    "q_no": 89,
+    "question": "Speed of the wind is measured by :",
+    "options": [
+      "Anemometer",
+      "Hygrometer",
+      "Thermometer",
+      "Wind vane"
+    ],
+    "has_image": false,
+    "source_page": 27
+  },
+  {
+    "q_no": 90,
+    "question": "The diesel engines locomotives are produced at ____",
+    "options": [
+      "Varanasi",
+      "Chennai",
+      "Hyderabad",
+      "Mumbai"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 91,
+    "question": "Which of the following desert is the driest desert in the world?",
+    "options": [
+      "Peruvian desert",
+      "Mexican desert",
+      "Gobi desert",
+      "Kalahari desert"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 92,
+    "question": "Shersha had four ministers looking after various duties. Arrange following ministers with their duties. Group-I (a) Diwan-i-Ariz (b) Diwan-i-Wizarat (c) Diwan-i-Risalat (d) Diwan-i-Insha Group-II (i) Minister of Revenue and Finances (ii) Drafting and Dispatching of Royal proclamations (iii) Army minister (iv) Foreign minister",
+    "options": [
+      "(1) (i) (ii) (iii) (iv)",
+      "(2) (iv) (i) (ii) (iii)",
+      "(3) (ii) (iv) (iii) (i)",
+      "(4) (iii) (i) (iv) (ii)"
+    ],
+    "has_image": false,
+    "source_page": 28
+  },
+  {
+    "q_no": 93,
+    "question": "Match the following.\nGroup-I (Kings):\n(a) Kanishka\n(b) Menandar\n(c) Gondophernes\n(d) Maos\nGroup-II (Dynasties):\n(i) Parthians\n(ii) Shakas\n(iii) Kushans\n(iv) Indo-Greeks",
+    "options": [
+      "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+      "(a)-(iii), (b)-(i), (c)-(ii), (d)-(iv)",
+      "(a)-(iii), (b)-(ii), (c)-(iv), (d)-(i)",
+      "(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)"
+    ],
+    "has_image": false,
+    "source_page": 29
+  },
+  {
+    "q_no": 94,
+    "question": "Assertion(A): Gandhi's technique of satyagraha was based on the twin concepts of truth (Satya) and non-violence (Ahimsa). Reason (R): The literal meaning of satyagraha is holding on to truth. Choose the correct answer :",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 95,
+    "question": "In which Year Aurangajeb imposed Jijiya tax on Hindu subjects ?",
+    "options": [
+      "1658 A.D",
+      "1675 A.D",
+      "1679 A.D",
+      "1680 A.D"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 96,
+    "question": "Which state has the maximum Bauxite reserves in India ?",
+    "options": [
+      "Jharkhand",
+      "Maharashtra",
+      "Odisha",
+      "Gujarat"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 97,
+    "question": "Khirganga National park is located in ______ State.",
+    "options": [
+      "Haryana",
+      "West Bengal",
+      "Uttar Pradesh",
+      "Himachal Pradesh"
+    ],
+    "has_image": false,
+    "source_page": 30
+  },
+  {
+    "q_no": 98,
+    "question": "Which one of the following statements is not correct about Kabir?",
+    "options": [
+      "He strongly denounced idol worship.",
+      "He condemned the caste system and believed all are equal.",
+      "His teachings are mostly in Urdu language.",
+      "His followers were called as Kabir Panthis."
+    ],
+    "has_image": false,
+    "source_page": 31
+  },
+  {
+    "q_no": 99,
+    "question": "The Royal priest occupied a conspicuous position during Vijayanagaras. In this context match the important Royal priests with Rulers.\nGroup-I\n(Royal priests)\n(a) Krishnashakti Acharya\n(b) Narasihmacharya\n(c) Ranganatha Dikshita\n(d) Tatacharya\nGroup-II\n(Rulers)\n(i) Devaraya II\n(ii) Harihara Raya II\n(iii) Rama Raya\n(iv) Krishnadevaraya",
+    "options": [
+      "(1) (i) (ii) (iii) (iv)",
+      "(2) (ii) (i) (iv) (iii)",
+      "(3) (iii) (iv) (i) (ii)",
+      "(4) (i) (ii) (iv) (iii)"
+    ],
+    "has_image": false,
+    "source_page": 31
+  },
+  {
+    "q_no": 100,
+    "question": "Match the following. Group-I (Temples): (a) Raja Rajeshwara Temple-Tanjore, (b) Sun Temple-Konark, (c) Vijayanarayana Temple- Belur, (d) Vaikuntha Perumal Temple- Kanchi. Group-II (Builders): (i) Nandivarman, (ii) Arumolivarman, (iii) Narsihmadeva I, (iv) Bittideva and Vishnuvardhana.",
+    "options": [
+      "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)",
+      "(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)",
+      "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)"
+    ],
+    "has_image": false,
+    "source_page": 32
+  },
+  {
+    "q_no": 101,
+    "question": "Which among the following was headed by Justice Ajith Prakash Shah on electoral reforms?",
+    "options": [
+      "Law Commission of India (1999)",
+      "The Second Administrative Reforms Commission (2008)",
+      "National Commission to Review the Working of Law Constitution (2001)",
+      "Law Commission of India (2014)"
+    ],
+    "has_image": false,
+    "source_page": 32
+  },
+  {
+    "q_no": 102,
+    "question": "Gosainthan peak is situated in :",
+    "options": [
+      "Trans-Himalayas",
+      "Greater-Himalayas",
+      "Lesser-Himalayas",
+      "Shiwalik Hills"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 103,
+    "question": "Which among the following is not an agro-based industry?",
+    "options": [
+      "Cotton",
+      "Iron",
+      "Jute",
+      "Silk"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 104,
+    "question": "Mixed Economy refers to",
+    "options": [
+      "Coexistence of Small and Large Industries",
+      "Coexistence of Agriculture and Industry",
+      "Coexistence of Private and Public Sector",
+      "Coexistence of Domestic and Foreign Enterprises"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 105,
+    "question": "Which of the following planets is the outermost planet in the solar family?",
+    "options": [
+      "Uranus",
+      "Saturn",
+      "Neptune",
+      "Mars"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 106,
+    "question": "Which organization is responsible for regulating the financial sector in India?",
+    "options": [
+      "Reserve Bank of India",
+      "Planning Commission of India",
+      "Banking ombudsman",
+      "Ministry of finance"
+    ],
+    "has_image": false,
+    "source_page": 33
+  },
+  {
+    "q_no": 107,
+    "question": "In India, PMJDY is a central scheme, its expansion is",
+    "options": [
+      "Pradhan Mantri Jan Dhan Yojana",
+      "Pradhan Mantri Jeevan Dhan Yojana",
+      "Pradhan Mantri Jyoti Dhan Yojana",
+      "Pradhan Mantri Jaagruthl Dhan Yojana"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 108,
+    "question": "The Constituent Assembly was formulated by",
+    "options": [
+      "Indian Independence Act, 1947",
+      "Government of India Act 1935",
+      "Cabinet Mission Plan, 1946",
+      "Government of India Act, 1919"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 109,
+    "question": "Willy-Willies occur along :",
+    "options": [
+      "China",
+      "India",
+      "Australia",
+      "West Africa"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 110,
+    "question": "Which one of the following programmes is not a part of the poverty alleviation programmes in India ?",
+    "options": [
+      "Integrated Rural Development Programme",
+      "Deendayal Antyodaya Yojana",
+      "Ayushman Bharat Yojana",
+      "National Family Benefit Scheme"
+    ],
+    "has_image": false,
+    "source_page": 34
+  },
+  {
+    "q_no": 111,
+    "question": "Reh and Kallar soils are part of :",
+    "options": [
+      "Black Soils",
+      "Red Soils",
+      "Alluvial Soils",
+      "Desert Soils"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 112,
+    "question": "In India who appoints the Governors for states ?",
+    "options": [
+      "Prime minister",
+      "President of India",
+      "Supreme Court Chief Justice",
+      "Lok Sabha Speaker"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 113,
+    "question": "'State to secure a special order for the promotion of welfare of the people' is mentioned in:",
+    "options": [
+      "Fundamental Rights",
+      "Fundamental Duties",
+      "Directive Principles of State Policy",
+      "Amendments"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 114,
+    "question": "Srinagar is situated on the bank of which river?",
+    "options": [
+      "Ravi",
+      "Jhelum",
+      "Beas",
+      "Satlej"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 115,
+    "question": "The Indian sub-Schemes 'Shishu', 'Kishore' and 'Tarun' are under :",
+    "options": [
+      "Atal Pension Yojana",
+      "Pradhan Mantri Mudra Yojana",
+      "Standup India Scheme",
+      "Pradhan Mantri Vinaya Vandana Yojana"
+    ],
+    "has_image": false,
+    "source_page": 35
+  },
+  {
+    "q_no": 116,
+    "question": "The practice of keeping more than one crop in a field is called",
+    "options": [
+      "Crop Rotation",
+      "Mixed Farming",
+      "Mixed Cropping",
+      "Shifting Cultivation"
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 117,
+    "question": "Magnolia tree belongs to :",
+    "options": [
+      "Eastern Himalayan Region",
+      "Western Himalayan Region",
+      "Nilgiri's Region",
+      "Northern Himalayan Region"
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 118,
+    "question": "In India, Rastriya Madhyamika Shiksha Abhiyan was launched with a vision of:",
+    "options": [
+      "'Malling secondary education of good quality available, accessible and affordable to all young persons in the age group of 15-16 years'.",
+      "'Raising the overall states of the girl-child and bringing about a positive change in the family and community attitudes'.",
+      "To provide vocational training to non-literates as well as school drop-outs in rural regions by identifying skills that have a relevant market in the region'.",
+      "An overarching program for the school education sector extending from pre-school to class 12 has been, therefore prepared with a broader goal of improving school education measured in terms of equal opportunities for schooling and equitable learning out comes."
+    ],
+    "has_image": false,
+    "source_page": 36
+  },
+  {
+    "q_no": 119,
+    "question": "Deletion of regular wear and tear capital from the value of gross investment is called",
+    "options": [
+      "Investment",
+      "Depreciation",
+      "Loss",
+      "Profit"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 120,
+    "question": "Identify the Indian Constitutional Body among the following.",
+    "options": [
+      "Central Council of Indian Medicine",
+      "Special Officer for Linguistic Minorities",
+      "Central Council of Homeotherapy",
+      "Transport Development Council"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 121,
+    "question": "Which of the following is a plateau desert ?",
+    "options": [
+      "Atacama Desert",
+      "Gobi Desert",
+      "Thar Desert",
+      "Namib Desert"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 122,
+    "question": "_______ helps find solutions to the conflicts between men and women.",
+    "options": [
+      "Gender awareness",
+      "Gender roles",
+      "Gender prejudice",
+      "Gender stereotyping"
+    ],
+    "has_image": false,
+    "source_page": 37
+  },
+  {
+    "q_no": 123,
+    "question": "In the context of Indian New Economic Policy, LPG stands for",
+    "options": [
+      "Liberalisation, Privatisation and Globalisation",
+      "Liberalisation, Performance and Globalisation",
+      "Liberalisation, Privatisation and Growth",
+      "Liberalisation, Performance and Growth"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 124,
+    "question": "Ethical behaviour is a matter of",
+    "options": [
+      "Juggling with business standards and needs",
+      "Conflicting the rules of the system",
+      "Acting on a considered judgement",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 125,
+    "question": "Murrah, Bhadwari and Rohtak are the breeds of:",
+    "options": [
+      "Goats",
+      "Sheep",
+      "Buffalos",
+      "Horses"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 126,
+    "question": "In Indian constitution, 'There shall be a council of ministers with prime minister at the head to aid and advice the President' is mentioned in ______ article.",
+    "options": [
+      "73",
+      "74",
+      "75",
+      "76"
+    ],
+    "has_image": false,
+    "source_page": 38
+  },
+  {
+    "q_no": 127,
+    "question": "Articles 25-28 of Constitution of India belong to which category of Fundamental Rights ?",
+    "options": [
+      "Cultural and Educational Right",
+      "Right to freedom of Religion",
+      "Right against Exploitation",
+      "Right to Freedom"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 128,
+    "question": "What is the primary objective of a Self Help Group (SHG) In India ?",
+    "options": [
+      "To Provide micro-finance to groups",
+      "To improve technology of farming",
+      "To provide high quality of seeds",
+      "To provide education needs"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 129,
+    "question": "Amazon forests are also known as ________",
+    "options": [
+      "Selvas",
+      "Prairies",
+      "Steppes",
+      "Velds"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 130,
+    "question": "Aliabet oilfield is located in ________",
+    "options": [
+      "Maharashtra",
+      "Assam",
+      "Gujarat",
+      "Andhra Pradesh"
+    ],
+    "has_image": false,
+    "source_page": 39
+  },
+  {
+    "q_no": 131,
+    "question": "Article 15 of Indian Constitution deals with",
+    "options": [
+      "Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth",
+      "Equality before Law",
+      "Equality of opportunity in matters of Public Employment",
+      "Abolition of Untouchability"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 132,
+    "question": "India's National income was first measured by:",
+    "options": [
+      "William Cary",
+      "Dadabhai Navroji",
+      "P.C. Mahalanobis",
+      "V.K.R.V. Rao"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 133,
+    "question": "The anti-defection law is part of which schedule of Indian Constitution ?",
+    "options": [
+      "II Schedule",
+      "VI Schedule",
+      "VII Schedule",
+      "X Schedule"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 134,
+    "question": "Monsoon forests lies in which climatic zone ?",
+    "options": [
+      "Equatorial zone",
+      "Hot zone",
+      "Warm temperate zone",
+      "Cold zone"
+    ],
+    "has_image": false,
+    "source_page": 40
+  },
+  {
+    "q_no": 135,
+    "question": "From the following, ______ are called as fixed capital.",
+    "options": [
+      "Buildings only",
+      "Machines only",
+      "Computers only",
+      "All of the above"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 136,
+    "question": "Which part of the Indian Constitution deals with State Legislature ?",
+    "options": [
+      "Part -VII",
+      "Part - V",
+      "Part - IV",
+      "Part - VI"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 137,
+    "question": "Sankalp se Siddhi, a Village and Digital Connect Drive is under which ministry?",
+    "options": [
+      "Ministry of Tribal Affairs",
+      "Ministry of Home Affairs",
+      "Ministry of Education",
+      "Ministry of Civil Aviation"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 138,
+    "question": "Part -IX has been added to the Constitution of India through ______",
+    "options": [
+      "104th Constitutional Amendment Act",
+      "86th Constitutional Amendment Act",
+      "73rd Constitutional Amendment Act",
+      "74th Constitutional Amendment Act"
+    ],
+    "has_image": false,
+    "source_page": 41
+  },
+  {
+    "q_no": 139,
+    "question": "Identify the Constitutional body of India among the following.",
+    "options": [
+      "Inter-State Council",
+      "Planning Commission",
+      "Central Vigilance Commission",
+      "Central Information Commission"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 140,
+    "question": "Peninsular India has an isolyte of ______ cm along Konkan and Malabar coasts.",
+    "options": [
+      "100",
+      "60",
+      "150",
+      "20"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 141,
+    "question": "Which of the following is an example of dry winds?",
+    "options": [
+      "Fohn",
+      "Monsoons",
+      "Sirocco",
+      "Bora"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 142,
+    "question": "Karewas of Kashmir are generally found along the lower slopes of:",
+    "options": [
+      "Pir Panjal",
+      "Dhauladhar",
+      "Karol",
+      "Kathmandu valley"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 143,
+    "question": "______ are not an informal credit sector in India.",
+    "options": [
+      "Banks",
+      "Money Lenders",
+      "Employees",
+      "Relatives"
+    ],
+    "has_image": false,
+    "source_page": 42
+  },
+  {
+    "q_no": 144,
+    "question": "Indian Council Act of 1909 is also called as:",
+    "options": [
+      "Morley-Minto Reforms",
+      "Montague – Chelmsford Reforms",
+      "Charter Act",
+      "Act of Good Government"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 145,
+    "question": "In India, which Scheme is aimed at empowering the citizens in rural areas by training them to operate computers or digital access devices ?",
+    "options": [
+      "Pradhan Mantri Kaushal Vikas Yojana",
+      "Deen Dayal Upadhyay Grameen Kaushal Yojana",
+      "Pradhan Mantri Grameen Digital Saksharata Abhiyan",
+      "National Rural Livelihood Mission"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 146,
+    "question": "_______ is called when people of all genders have equal rights, responsibilities and opportunities.",
+    "options": [
+      "Gender disparity",
+      "Gender sensitization",
+      "Gender equality",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 43
+  },
+  {
+    "q_no": 147,
+    "question": "Which of the following organizations calculates the National Income of India?",
+    "options": [
+      "Central Statistical Organisation",
+      "Ministry of Commerce and Industry",
+      "Indian Statistical Institute",
+      "Reserve Bank of India"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 148,
+    "question": "National Highway 48 connects",
+    "options": [
+      "Srinagar-Kanyakumari",
+      "Delhi-Chennai",
+      "Pannel-Kanyakumari",
+      "Hisar-Hubli"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 149,
+    "question": "In India, the conduct of election to Panchayats is vested under:",
+    "options": [
+      "State Election Commissioner",
+      "District Election Commissioner",
+      "Chief Election Commissioner",
+      "Chief Minister of the State"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 150,
+    "question": "Uralis of Tamil Nadu belong to :",
+    "options": [
+      "Mongoloids",
+      "Negritoes",
+      "Proto-Australoids",
+      "Nordics"
+    ],
+    "has_image": false,
+    "source_page": 44
+  },
+  {
+    "q_no": 151,
+    "question": "Which of the following are skills of Emotional intelligence?",
+    "options": [
+      "Recognizing emotions only",
+      "Understanding and Labeling emotions only",
+      "Expressing and Regulating emotions only",
+      "All of the above"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 152,
+    "question": "Demonstrating empathy and ________ are key abilities of social awareness.",
+    "options": [
+      "Unconscientiousness",
+      "Selfishness",
+      "Compassion",
+      "Perseverance"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 153,
+    "question": "Social awareness requires understanding in areas such as ________ and empathy.",
+    "options": [
+      "Emotional intelligence",
+      "Sympathy",
+      "Equality",
+      "Intolerance"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 154,
+    "question": "Identify the association founded by Kondalaxman Bapuji after submitting his resignation to his Ministership.",
+    "options": [
+      "Telangana People's Samithi",
+      "Telangana Congress Samithi",
+      "Telangana Convention",
+      "People's party of Telangana"
+    ],
+    "has_image": false,
+    "source_page": 45
+  },
+  {
+    "q_no": 155,
+    "question": "Which association was formed in the year 1997 to speed up the separation movement in the second phase ?",
+    "options": [
+      "Telangana students forum",
+      "Telangana Aikya vedika",
+      "Telangana Intellectuals forum",
+      "Telangana journalist guild"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 156,
+    "question": "Emotionally intelligent people are found to be skilled in",
+    "options": [
+      "Problem solving only",
+      "Conflict transformation only",
+      "Both (1) and (2)",
+      "None"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 157,
+    "question": "Which is the first UNESCO world heritage site recognized in Telangana ?",
+    "options": [
+      "Ramappa Temple",
+      "Yadadri Temple",
+      "Vemulawada Temple",
+      "Dharmapuri Temple"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 158,
+    "question": "Identify the village where famous 'Herman Durf the eminent Anthropologist resided, after his appointment as advisor to VIIth Nizam Mir-Osman Ali-Khan to study the condition of Gonds in the Adilabad region.",
+    "options": [
+      "Jodeghat",
+      "Utnoor",
+      "Marlavayi",
+      "Asifabad"
+    ],
+    "has_image": false,
+    "source_page": 46
+  },
+  {
+    "q_no": 159,
+    "question": "Which of the following International Organisations has the widest geographical spread?",
+    "options": [
+      "BRICS",
+      "SAARC",
+      "ASEAN",
+      "UNO"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 160,
+    "question": "Identify the date of the appointment of Justice Srikrishna Committee to study the separate Telangana issue.",
+    "options": [
+      "February 2, 2010",
+      "February 4, 2010",
+      "February 3, 2010",
+      "None of the Above"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 161,
+    "question": "Match the following Books with the corresponding Authors.\n(Books)\n(a) The 7 Habits of Highly Effective People\n(b) The 5 AM club\n(c) You can win\n(d) Believe in Yourself\n(Authors)\n(i) Robin Sharma\n(ii) Shiv Khera\n(iii) Dr. Joseph Murphy\n(iv) Stephen R Covey",
+    "options": [
+      "(iii) (ii) (i) (iv)",
+      "(ii) (iii) (iv) (i)",
+      "(iv) (i) (ii) (iii)",
+      "(iv) (ii) (iii) (i)"
+    ],
+    "has_image": false,
+    "source_page": 47
+  },
+  {
+    "q_no": 162,
+    "question": "Who was the founder President of Telangana Praja Samithi founded in 1969 ?",
+    "options": [
+      "Ananthula Madan Mohan",
+      "K. Jayashankar",
+      "Konda Laxman Bapuji",
+      "M. Chenna Reddy"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 163,
+    "question": "Identify the communist party leader who extended and announced his party's support to 'Separate Telangana' movement in January, 2010.",
+    "options": [
+      "Brinda Karat",
+      "Gurudass Gupta",
+      "Sitaram Yechuri",
+      "P.R. Natarajan"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 164,
+    "question": "Who served for the longest period as the Prime Minister of India ?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Indira Gandhi",
+      "Dr. Manmohan Singh",
+      "Atal Bihari Vajpayee"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 165,
+    "question": "The Telangana Joint Action Committee was formed with an objective of :",
+    "options": [
+      "Extending support to TRS party",
+      "Spreading Telangana movement in the rural areas",
+      "To unite all the organisations, associations founded to achieve separate Telangana",
+      "To spread Anti-Andhra feeling"
+    ],
+    "has_image": false,
+    "source_page": 48
+  },
+  {
+    "q_no": 166,
+    "question": "Who was the first Home Minister of Telangana State ?",
+    "options": [
+      "Mahamood Ali",
+      "T. Harish Rao",
+      "Nayini Narasimha Reddy",
+      "P. Sabitha Indra Reddy"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 167,
+    "question": "Who was the first recipient of Param Vir Chakra in Indian Army?",
+    "options": [
+      "Rifleman Sanjay Kumar",
+      "Major Ramaswamy Parameshwaran",
+      "Lance Naik Albert Ekka",
+      "Major Somnath Sharma"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 168,
+    "question": "Identify the women leader who presided over the Nizam Andhra Mahila Sabha session held at Khammam in the year 1934.",
+    "options": [
+      "Padmaja Naidu",
+      "Yellapragada Sita Kumari",
+      "Vimlabai",
+      "Sangam Laxmibai"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 169,
+    "question": "Which of the following is the Coal-town in Telangana State ?",
+    "options": [
+      "Kothagudem",
+      "Karimnagar",
+      "Warangal",
+      "Godavarikhani"
+    ],
+    "has_image": false,
+    "source_page": 49
+  },
+  {
+    "q_no": 170,
+    "question": "Which of the following is true?\n(A) Changes in the REPO rate affect the flow of money in the markets\n(B) Inflation refers to changes overtime in the overall level prices of goods and services throughout the economy\n(C) The financial crisis is when financial instruments and assets decrease significantly in value",
+    "options": [
+      "(A) & (B) only",
+      "(B) & (C) only",
+      "(A) & (C) only",
+      "(A), (B) & (C)"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 171,
+    "question": "Match the following organisations according to the year of their foundation.\n(A) Centre for Telangana studies\n(B) Telangana Prajasamithi\n(C) Telangana Students Forum\n(D) Telangana Forum\n(i) August, 1997\n(ii) Nov, 1996\n(iii) 1989\n(iv) 1991",
+    "options": [
+      "(A)-(iv), (B)-(iii), (C)-(i), (D)-(ii)",
+      "(A)-(iii), (B)-(i), (C)-(iv), (D)-(ii)",
+      "(A)-(iv), (B)-(i), (C)-(iii), (D)-(ii)",
+      "(A)-(i), (B)-(ii), (C)-(iii), (D)-(iv)"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 172,
+    "question": "During the Final phase of separate Telangana agitation ‘Rail Rokhoʻ was held on :",
+    "options": [
+      "October 16, 2011",
+      "October 11, 2011",
+      "October 15, 2011",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 50
+  },
+  {
+    "q_no": 173,
+    "question": "The value of Information Technology and ITeS exports from Telangana for the Financial Year 2022-2023 is about",
+    "options": [
+      "Rs. 80,000 Crores",
+      "Rs. 2.5 Lakh Crores",
+      "Rs. 1.82 Lakh Crores",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 174,
+    "question": "For the Financial Year 2023-24, Budget of Telangana State is",
+    "options": [
+      "Rs. 1.5 lakh crore",
+      "Rs. 2.9 lakh crore",
+      "Rs. 3.9 lakh crore",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 175,
+    "question": "What does 'Epigraphy' mean?",
+    "options": [
+      "Study of inscriptions",
+      "Study of coins",
+      "Sea-Ports construction related study",
+      "Study of disease resistance in Horses"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 176,
+    "question": "Identify the Economic/Financial capital of India.",
+    "options": [
+      "Mumbai",
+      "Delhi",
+      "Kolkata",
+      "Hyderabad"
+    ],
+    "has_image": false,
+    "source_page": 51
+  },
+  {
+    "q_no": 177,
+    "question": "Name the Karnataka village where all the residents speak Sanskrit for day to day communication.",
+    "options": [
+      "Mattur",
+      "Keradi",
+      "Tumkur",
+      "Kundapura"
+    ],
+    "has_image": false,
+    "source_page": 52
+  },
+  {
+    "q_no": 178,
+    "question": "Name the Chief Executive Officer (CEO) of Abu Dhabi National Oil Company who has been appointed as President of next UN Climate Summit's COP - 28.",
+    "options": [
+      "Sultan al-Jaber",
+      "Sameh Showkry",
+      "Alok Sharma",
+      "Carolina Schmidt"
+    ],
+    "has_image": false,
+    "source_page": 52
+  },
+  {
+    "q_no": 179,
+    "question": "Name the former international athlete and coach who chaired the proceedings in the Rajya Sabha in 2023.",
+    "options": [
+      "P.T. Usha",
+      "Ashwini Nachappa",
+      "Sania Mirza",
+      "None of the Above"
+    ],
+    "has_image": false,
+    "source_page": 52
+  },
+  {
+    "q_no": 180,
+    "question": "Who is the Father of the Indian Army?",
+    "options": [
+      "Major Stringer Lawrence",
+      "Ranjit Singh",
+      "Zorawar Singh",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 52
+  },
+  {
+    "q_no": 181,
+    "question": "In which city does the state level Telangana Mahila Joint Action Samithi meeting was conducted in January, 2010?",
+    "options": [
+      "Warangal",
+      "Karimnagar",
+      "Adilabad",
+      "Hyderabad"
+    ],
+    "has_image": false,
+    "source_page": 52
+  },
+  {
+    "q_no": 182,
+    "question": "Name the Mughal ruler who boar the title Ghazi.",
+    "options": [
+      "Babur",
+      "Humayun",
+      "Jahangir",
+      "Shajahan"
+    ],
+    "has_image": false,
+    "source_page": 53
+  },
+  {
+    "q_no": 183,
+    "question": "The Press Council of India has chosen ______ for the Raja Rammohan Roy award for Excellence in Journalism in 2023.",
+    "options": [
+      "C.H. Ramoji Rao",
+      "Allam Narayana",
+      "Anne Bhavani Koteswara Prasad",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 53
+  },
+  {
+    "q_no": 184,
+    "question": "Telangana Convention' was started by",
+    "options": [
+      "M. Chenna Reddy",
+      "Manzoor Alam",
+      "Jaffery",
+      "Madan Mohan"
+    ],
+    "has_image": false,
+    "source_page": 53
+  },
+  {
+    "q_no": 185,
+    "question": "Who was the Chief Secretary of ‘Telangana Safe-guards Agitation Association'?",
+    "options": [
+      "T. Purushottam Rao",
+      "S. Ravinarayan",
+      "K. S. Shankar",
+      "M. Satyanarayana"
+    ],
+    "has_image": false,
+    "source_page": 53
+  },
+  {
+    "q_no": 186,
+    "question": "Who was the founder of 'Hyderabad-Hitarakshana samithi'?",
+    "options": [
+      "Ramachari",
+      "Kishnam Raju",
+      "C. H. Wagray",
+      "Kuppaunaidu"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 187,
+    "question": "Who received the first Bharat Ratna Award ?",
+    "options": [
+      "C. Rajagopalachari only",
+      "Dr. Sarvepalli Radhakrishnan only",
+      "Dr.C.V. Raman only",
+      "All of the above"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 188,
+    "question": "Identify the largest district in Telangana State from its area point of view.",
+    "options": [
+      "Adilabad",
+      "Mancheriyal",
+      "Hyderabad",
+      "Bhadradhri Kothagudem"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 189,
+    "question": "When was the Godavari Water Disputes Tribunal headed by Justice Bachawat constituted by the central Government of India?",
+    "options": [
+      "April, 1969",
+      "October, 1969",
+      "June, 1969",
+      "December, 1969"
+    ],
+    "has_image": false,
+    "source_page": 54
+  },
+  {
+    "q_no": 190,
+    "question": "Match the following Companies with the Chief Executive Officer (CEOs).\n(Comapanies)\n(a) Microsoft\n(b) Google\n(c) IBM\n(d) Adobe Inc.\n(CEOS)\n(i) Sunder Pichai\n(ii) Shantanu Narayen\n(iii) Sathya Nadella\n(iv) Arvind Krishna",
+    "options": [
+      "(1) (iii) (iv) (i) (ii)",
+      "(2) (iii) (i) (iv) (ii)",
+      "(3) (i) (ii) (iii) (iv)",
+      "(4) (ii) (iv) (iii) (i)"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 191,
+    "question": "_______ helps students understand peers' perspective and incorporate those perspectives into decision making.",
+    "options": [
+      "(1) Empathy",
+      "(2) Cooperative Learning",
+      "(3) Classroom participation",
+      "(4) Leadership"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 192,
+    "question": "Who presided over the 'Officers Committee' in 1986 ?",
+    "options": [
+      "(1) Jayabharat Reddy",
+      "(2) Sridhar Naik",
+      "(3) J.K. Dubey",
+      "(4) S.K. Mishra"
+    ],
+    "has_image": false,
+    "source_page": 55
+  },
+  {
+    "q_no": 193,
+    "question": "Arrange the following events connected with Telangana movement in chronologic order from First to last.\n(A) Ravindranath started indefinite strike at Palvancha\n(B) Indira Gandhi Announced 8 points Formula\n(C) M. Chenna Reddy's announcement of the postponement of Jai Telangana movement\n(D) Announcement of six points formula by Central Govt. in September, 1973.",
+    "options": [
+      "(B), (D), (A), (C)",
+      "(D), (A), (B), (C)",
+      "(A), (B), (C), (D)",
+      "(B), (C), (A), (D)"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 194,
+    "question": "Arrange the following events connected with Telangana movement in chronological order as per their occurance.\n(A) 1997 Suryapet declaration.\n(B) 1998 Telangana Jana sabha meeting at Hyderabad.\n(C) Formation of Telangana 'Aikhya Vedika' in 1997.\n(D) Warangal Sabha 1997.",
+    "options": [
+      "(A), (B), (C), (D)",
+      "(A), (C), (B), (D)",
+      "(B), (C), (A), (D)",
+      "(A), (C), (D), (B)"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 195,
+    "question": "Who presided over the 'Bhongir Sabha' held from 8th to 9th March, 1997?",
+    "options": [
+      "Mallaiah Mudiraj",
+      "Srisailam Yadav",
+      "Jaini Mallaiah Gupta",
+      "K. Jayashankar"
+    ],
+    "has_image": false,
+    "source_page": 56
+  },
+  {
+    "q_no": 196,
+    "question": "The 23rd Mobile Biodiversity Festival focused on cultivation and consumption of millets was held in ________.",
+    "options": [
+      "Machnoor",
+      "Pochampally",
+      "Pyararam",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 197,
+    "question": "Identify the British VICEROY during the time of independence of India.",
+    "options": [
+      "Lord Mountbatten",
+      "Lord Canning",
+      "Lord Curzon",
+      "Lord Harding II"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 198,
+    "question": "Who is the first visually challenged (blind) IAS Officer in India ?",
+    "options": [
+      "Pranjal Patil",
+      "Susmita Patil",
+      "Raagini sen",
+      "None of the above"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 199,
+    "question": "Which City in India earned a Unique place for having three National parks ?",
+    "options": [
+      "Warangal",
+      "Hyderabad",
+      "Hanmakonda",
+      "Vijayawada"
+    ],
+    "has_image": false,
+    "source_page": 57
+  },
+  {
+    "q_no": 200,
+    "question": "The Indian Government on 17th September, 1948 conducted which military operation to bring Hyderabad state into the Indian Union?",
+    "options": [
+      "Operation Logo",
+      "Operation Code",
+      "Operation Polo",
+      "Operation Vijay"
+    ],
+    "has_image": false,
+    "source_page": 57
+  }
+]

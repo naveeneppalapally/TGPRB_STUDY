@@ -1,0 +1,2410 @@
+[
+  {
+    "q_no": 1,
+    "question": "What is the synonym of 'amenable' in 'Both parties were amenable to a peaceful settlement of the land dispute'.?",
+    "options": [
+      "Doubtful",
+      "Unwilling",
+      "Responsive",
+      "Disagreeable"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 2,
+    "question": "What is the synonym of 'antidote' in 'Jogging is considered an antidote to mental stress'.?",
+    "options": [
+      "Poisonous",
+      "Remedy",
+      "Equivalent",
+      "Dangerous"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 3,
+    "question": "What is the antonym of 'transperant' in ‘The window-glass is transperant'?",
+    "options": [
+      "Opaque",
+      "Translucent",
+      "Susceptible",
+      "Fragile"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 4,
+    "question": "What is the antonym of 'unanimous' in 'It was a unanimous decision'?",
+    "options": [
+      "United",
+      "Partial",
+      "Compatible",
+      "Harmonious"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 5,
+    "question": "His mother was __________ American though his father was __________ European.",
+    "options": [
+      "a, a",
+      "a, an",
+      "an, a",
+      "an, an"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 6,
+    "question": "The coordinator was asked to attend __________ the issue and resolve it immediately.",
+    "options": [
+      "by",
+      "in",
+      "to",
+      "No preposition required"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 7,
+    "question": "Either of the roads __________ to Vasantha Nagar.",
+    "options": [
+      "lead",
+      "leads",
+      "have led",
+      "are led"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 8,
+    "question": "Please don't disturb me, I __________ the coins now.",
+    "options": [
+      "have been counting",
+      "count",
+      "was counting",
+      "am counting"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 9,
+    "question": "Rishi __________ his engineering course by the end of 2017.",
+    "options": [
+      "will completed",
+      "complete",
+      "will have completed",
+      "was completed"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 10,
+    "question": "Choose the correctly spelt word from the options given below.",
+    "options": [
+      "occasional",
+      "occassional",
+      "ocasional",
+      "occational"
+    ],
+    "source_page": 5,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_10_page_5.png"
+  },
+  {
+    "q_no": 11,
+    "question": "What is the meaning of underlined idiom in \"We would be glad to put you up for a few days if you would like to stay\"?",
+    "options": [
+      "tolerate someone",
+      "build something",
+      "provide accommodation",
+      "contribute something"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 12,
+    "question": "What is the meaning of the underlined phrase in 'How did you wolf down that pizza so quickly'?",
+    "options": [
+      "To eat gently",
+      "To eat hungrily",
+      "To eat slowly",
+      "To swallow slowly"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 13,
+    "question": "Choose the correct order of the following jumbled sentences into a meaningful paragraph.\n(a) Wages will seldom rise in proportion to the rising prices\n(b) The problem of food is intimately connect with population, the market is governed by demand and supply\n(c) Without enough food, such people lack health, strength of efficiency and they fall an easy prey to all sorts of diseases\n(d) If too many people demand goods to go round, prices will rise and poor classes will starve",
+    "options": [
+      "1-(c), 2-(d), 3-(a), 4-(b)",
+      "1-(d), 2-(c), 3-(b), 4-(a)",
+      "1-(a), 2-(c), 3-(d), 4-(b)",
+      "1-(b), 2-(d), 3-(a), 4-(c)"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 14,
+    "question": "Choose the correct order of the following jumbled sentences to make it a meaningful paragraph.\n(a) A dove, perched on a nearby tree, saw the ant's danger and dropped a leaf into the water\n(b) Once, an ant who had come to drink at a stream fell into the water and was carried away by the swift current\n(c) He was about to fire when the ant, who was nearby, crawled forward and bit him sharply on the ankle\n(d) Sometime after this, a hunter, creeping through the bushes, saw the dove asleep, and took a careful aim with his gun",
+    "options": [
+      "1-(d), 2-(c), 3-(b), 4-(a)",
+      "1-(c), 2-(d), 3-(a), 4-(b)",
+      "1-(b), 2-(a), 3-(d), 4-(c)",
+      "1-(a), 2-(c), 3-(d), 4-(b)"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 15,
+    "question": "Fill in the blank:\nManoj played cricket for two days, ______ he?",
+    "options": [
+      "did",
+      "didn't",
+      "wasn't",
+      "wouldn't"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 16,
+    "question": "Fill in the blank:\nJohnson has not prepared for tomorrow's exam, ______ he?",
+    "options": [
+      "isn't",
+      "hasn't",
+      "has",
+      "does"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 17,
+    "question": "How did most people regard early motor cars?",
+    "options": [
+      "Not better than horse-driven engines",
+      "A mere joke, or as rather dangerous playthings",
+      "A mere scientific experiment",
+      "A cumbersome vehicle"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 18,
+    "question": "What were all early motor cars?",
+    "options": [
+      "A plaything or toy meant for engineers",
+      "A vehicle better than horse-driven vehicle",
+      "Noisy, clumsy, queer-looking things",
+      "Dangerous but beautiful"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 19,
+    "question": "What made the English inventors handicapped?",
+    "options": [
+      "The general public did not welcome the invention",
+      "The quaint old law that forbade any such vehicle to attain a greater than four miles an hour",
+      "Non-availability of adequate fuel power the engine",
+      "Availability of micro-air vehicles"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 20,
+    "question": "What is incorrect about the internal combustion engine?",
+    "options": [
+      "fuel burnt in it as waste",
+      "light in weight",
+      "noisy and clumsy",
+      "small in size"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 21,
+    "question": "When you watch India Vs Pakistan Cricket Match Finals, your younger brother asks you to clear his doubts in Mathematics. How do you respond?",
+    "options": [
+      "You clear his doubts patiently",
+      "You shout at him for not asking before",
+      "You switch off TV and go away",
+      "You feel irritated"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 22,
+    "question": "When you see a child facing a problem in understanding an important concept for a long time, you advise him to ________",
+    "options": [
+      "stop reading the subject",
+      "leave that subject forever",
+      "take a break and read it once again",
+      "by heart the concept"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 23,
+    "question": "It somebody tries to hurt you intentionally, you should",
+    "options": [
+      "Retort",
+      "Cry",
+      "Complain to police",
+      "Ignore"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 24,
+    "question": "If your friend tells you about his personal problems thinking that you are trustworthy person, you should ________",
+    "options": [
+      "Share it with everyone",
+      "Feel happy about it",
+      "Maintain confidentiality",
+      "Look at him with contempt"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 25,
+    "question": "Do you produce a wrong evidence to your parents regarding your performance in Exams?",
+    "options": [
+      "I do",
+      "No",
+      "Sometimes",
+      "Depending upon the situation"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 26,
+    "question": "According to you, ‘Gender Equality” means ________",
+    "options": [
+      "Having women reservations",
+      "Women are superior to men",
+      "Men are superior to women",
+      "Having equal opportunities to both men and women"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 27,
+    "question": "What does it mean by “Weaker Sections”?",
+    "options": [
+      "Physically weak",
+      "Financially weak",
+      "Handicapped people",
+      "People who can't fight for their rights"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 28,
+    "question": "You have been waiting for your friend for the past two hours, still he has not yet come. How do you feel about him?",
+    "options": [
+      "He does not have time sense",
+      "He might be having some problem",
+      "If he comes, I will shout at him for the delay",
+      "Leaving me alone, he might have gone to somewhere else"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 29,
+    "question": "Do you return the money to the owner, when it fell down from his/her pocket?",
+    "options": [
+      "Yes, always",
+      "No, I can't",
+      "Sometimes",
+      "Most of the times"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 30,
+    "question": "When two persons are quarrelling with each other, you will",
+    "options": [
+      "Run away from there",
+      "Join one side",
+      "Pacify two persons",
+      "Call police"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 31,
+    "question": "(1-1/2)(1-1/3)(1-1/4)...(1-1/n)=",
+    "options": [
+      "1 / n(n+1)",
+      "n+1 / n",
+      "2 / n",
+      "1 / n"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 32,
+    "question": "The ratio of two numbers is 3:5 and their H.C.F is 5. Then, their L.C.M is",
+    "options": [
+      "45",
+      "35",
+      "150",
+      "75"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 33,
+    "question": "The smallest number which when subtracted by 11 is divisible by 16, 18, 21, 24 and 28 is",
+    "options": [
+      "1109",
+      "1119",
+      "1019",
+      "1214"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 34,
+    "question": "The ages of A and B are in the ratio 3:5. Ten years later, the ratio of their ages will be 31:45. Their present ages are (in years)",
+    "options": [
+      "21,35",
+      "24,40",
+      "18,30",
+      "27,45"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 35,
+    "question": "Silver and copper are mixed in the ratios 2:5 and 4:7 to prepare two alloys A and B. Equal quantities of these alloys A and B are mixed to prepare a third alloy C. The ratio of silver and copper in C is",
+    "options": [
+      "3:5",
+      "25:52",
+      "25:49",
+      "15:27"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 36,
+    "question": "A shop keeper reduced the price of sugar by 10%. A person can buy 2 kg more sugar for Rs.900. The difference between the original price and the reduced price, per kg, is (in rupees)",
+    "options": [
+      "5",
+      "6",
+      "4",
+      "3"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 37,
+    "question": "In an election between two candidates 80% of the enrolled voters voted. Of these votes, 5% votes were declared invalid. The winning candidate got 32490 votes which is 60% of the valid votes. The total number of voters enrolled in the election is",
+    "options": [
+      "75850",
+      "64750",
+      "82500",
+      "71250"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 38,
+    "question": "A person A started a business with investment of Rs.3,00,000. A second person B joined A afterwards with contribution of Rs.4,00,000. If the profit at the end of the year is shared equally by A and B, after how many months did B join A?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 39,
+    "question": "Three individuals A, B, C start a company and contribute a total of Rs.P towards its running. A contributes Rs.50,000 more than B and B contributes Rs.50,000 more than C. If the contributions of A, B and C are in the ratio 8:7:6, then P (in rupees) is",
+    "options": [
+      "10,50,000",
+      "12,00,000",
+      "13,50,000",
+      "14,00,000"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 40,
+    "question": "The average of four consecutive numbers A, B, C, D is 55.5. Then, the product BC =",
+    "options": [
+      "2580",
+      "3060",
+      "3080",
+      "3660"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 41,
+    "question": "A cricketer's bowling average is 9.5 runs per wicket. In the next match, he takes 3 wickets for 19 runs. His bowling average after this match decreases by 0.1 runs. The number of wickets taken by him before this match is",
+    "options": [
+      "96",
+      "92",
+      "90",
+      "84"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 42,
+    "question": "A person sold 2/3rd of his articles at a profit of 35%. The rest of his articles were sold at a profit of 23%. The overall percentage of his profit is",
+    "options": [
+      "27%",
+      "29%",
+      "30%",
+      "31%"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 43,
+    "question": "The profit earned by selling an article for Rs.950 is double the loss incurred when the same article is sold for Rs.650. At what price should the article be sold to make 30% profit?",
+    "options": [
+      "875",
+      "920",
+      "975",
+      "1025"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 44,
+    "question": "The simple interest on a sum of money P is 1/50 of the principal amount P and the number of years is 1/2 of the rate of interest per annum. The interest rate per annum is",
+    "options": [
+      "6%",
+      "5%",
+      "4%",
+      "2%"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 45,
+    "question": "A Bank lends Rs. 3,00,000 to a person A at simple interest 8% and Rs. 2,00,000 to another person B at simple interest 10% for T years. If the Bank receives an interest of Rs. 1,76,000 at the end of the period, then T = (in years)",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 46,
+    "question": "The amount deposited in a bank for 3 years at the rate of 10% per annum, compounded yearly is given in List I. In List II, compound interest is given. Match them\nList - I\n(a) 20000\n(b) 15000\n(c) 10000\nList - II\n(i) 7850\n(ii) 3310\n(iii) 4865\n(iv) 4965\n(v) 6620\nCorrect match is",
+    "options": [
+      "a-v, b-iii, c-ii",
+      "a-i, b-iv, c-ii",
+      "a-v, b-iv, c-ii",
+      "a-i, b-iv, c-iii"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 47,
+    "question": "6 men and 8 women can do a work in 40 days. 8 men and 16 women finish the same work in 24 days. In how many days can 10 men and 8 women finish the same work?",
+    "options": [
+      "16",
+      "24",
+      "28",
+      "30"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 48,
+    "question": "A person A can paint a house in 30 days. A second person B can paint the same house in 36 days. Both A and B work together for 15 days. Then, A goes away. The number of days that B takes to complete the painting is (in days)",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 49,
+    "question": "A person left a city P to go to city Q at 6.30 a.m. He travelled at a speed of 90 km/hr for 2 hours and 30 minutes. After that, the speed was reduced to 50 km/hr. If the distance between the cities is 345 km, at what time did he reach the city Q?",
+    "options": [
+      "10.25 a.m",
+      "11.15 a.m",
+      "11.24 a.m",
+      "11.50 a.m"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 50,
+    "question": "A train 80 meters long is running at a speed of 80 km/hr. The time that the train will take to pass a platform of length 120 meters is (in seconds)",
+    "options": [
+      "6.5",
+      "8.5",
+      "9.9",
+      "9"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 51,
+    "question": "α and β are the roots of the quadratic equation px^2 + qx + r = 0. Match the items in List I and List II\nList - I\n(a) 1/α + 1/β\n(b) α/β + β/α\n(c) α^2 + β^2\nList - II\n(i) (q^2 - 2pr) / p^2\n(ii) (q^2 + 2pr) / pr\n(iii) (q^2 - 2pr) / pr\n(iv) -q / r",
+    "options": [
+      "a-iv, b-iii, c-i",
+      "a-iv, b-ii, c-iii",
+      "a-i, b-iii, c-iv",
+      "a-ii, b-iv, c-iii"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 52,
+    "question": "Three cubes with sides in the ratio 3:4:5 are melted to form a single cube whose diagonal is 18√3 cm. The sides of the cubes are (in cm)",
+    "options": [
+      "3,4,5",
+      "6,8,10",
+      "9, 12, 15",
+      "12, 16, 20"
+    ],
+    "source_page": 13,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_52_page_13.png"
+  },
+  {
+    "q_no": 53,
+    "question": "A ladder which is touching the top of a pole makes an angle 60° with the floor. Its lower end is at a distance of 4 meters from the pole. The length of the ladder is (in meters)",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "10"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 54,
+    "question": "√1225 + √0.0615 + x = 35.25⇒ x =",
+    "options": [
+      "0.001",
+      "0.0001",
+      "0.02",
+      "0.01"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 55,
+    "question": "If 2a = 3b = 4c and a + b + c = 26√61, then √a² + b² + c² =",
+    "options": [
+      "144",
+      "361",
+      "104",
+      "122"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 56,
+    "question": "The dimensions of kinetic energy is same as that of",
+    "options": [
+      "Force",
+      "Work",
+      "Momentum",
+      "Velocity"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 57,
+    "question": "The instrument used to measure sounds under water is",
+    "options": [
+      "Hygrometer",
+      "Hydrophone",
+      "Hypsometer",
+      "Gramaphone"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 58,
+    "question": "Convert 10 inches into kilometers",
+    "options": [
+      "254 × 10-3",
+      "2.54 × 10–4",
+      "2.54 × 104",
+      "25.4 × 10–4"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 59,
+    "question": "A monochromatic radiation was beamed on a distant planet from Earth and the reflection was received after seven minutes. If the velocity of the signal is 3×108 m/s, then the distance between the Earth and Planet in meters is",
+    "options": [
+      "3.15 × 108",
+      "3 × 1010",
+      "6.3 × 1010",
+      "3.15 × 1010"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 60,
+    "question": "The value of Planck's constant in SI units is",
+    "options": [
+      "6.62 × 10⁻³⁴ Js",
+      "6 × 10²³ Js",
+      "10 × 10⁶ M⁻¹",
+      "8.314 × 10⁻⁷ J"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 61,
+    "question": "Which of the following is not an antibiotic",
+    "options": [
+      "Erythromycin",
+      "Tetracycline",
+      "Oxytocin",
+      "Ofloxacin"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 62,
+    "question": "Chemical name of Dry Ice is",
+    "options": [
+      "Solid H₂O",
+      "Solid O₃",
+      "Solid CaCO₃",
+      "Solid CO₂"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 63,
+    "question": "Which one of the following atmospheric layers help in radio communications",
+    "options": [
+      "Troposphere",
+      "Ionosphere",
+      "Stratosphere",
+      "Mesosphere"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 64,
+    "question": "Among the elements given below, which one has the highest electronegativity",
+    "options": [
+      "Cl",
+      "Br",
+      "O",
+      "N"
+    ],
+    "source_page": 14,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_64_page_14.png"
+  },
+  {
+    "q_no": 65,
+    "question": "For an endothermic reaction where ΔH respresent the enthalpy of the reaction, the minimum value of the activation energy will be",
+    "options": [
+      "< ΔH",
+      "= ΔH",
+      "> ΔH",
+      "Zero"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 66,
+    "question": "Arrange the following atmospheric layers in the correct order from bottom to top A) Exosphere B) Troposphere C) Stratosphere D) Mesosphere",
+    "options": [
+      "A, B, C, D",
+      "B, C, D, A",
+      "C, D, A, B",
+      "D, A, B, C"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 67,
+    "question": "The term “Dark Fermentation” means",
+    "options": [
+      "a method to reduce CO₂ in the atmosphere",
+      "a method to produce hydrogen as fuel from waste water",
+      "a method to dispose nuclear waste",
+      "a method to produce methane from organic waste"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 68,
+    "question": "Which of the following is correct for Carbon Monoxide\nA) It is produced in the human body\nB) It helps in treating sickle cell anaemia\nC) It acts as a neurotransmitter",
+    "options": [
+      "A, B and C",
+      "A only",
+      "A and C",
+      "C only"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 69,
+    "question": "Biological oxygen demand indicates",
+    "options": [
+      "High level of microbial pollution",
+      "Low level of microbial pollution",
+      "Absence of any pollution",
+      "Water is highly pure"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 70,
+    "question": "Carbon credit is",
+    "options": [
+      "the difference between the carbon emission allowed and actually emitted",
+      "a loan given by a Bank",
+      "a measure of high quality of living standard",
+      "the amount of carbon in water"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 71,
+    "question": "Which hormone is responsible for stress, anger and high BP",
+    "options": [
+      "Oxytocin",
+      "Thyroxin",
+      "Adrenaline",
+      "Galanin"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 72,
+    "question": "Which of the following is known as animal starch",
+    "options": [
+      "Cellulose",
+      "Glycogen",
+      "Chitin",
+      "Pectin"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 73,
+    "question": "In RNA, nucleotides are attached by",
+    "options": [
+      "Peptide bonds",
+      "Hydrogen bonds",
+      "Ionic bonds",
+      "Phosphodiester bonds"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 74,
+    "question": "The universal acceptor blood group is",
+    "options": [
+      "O⁻",
+      "A⁻",
+      "B⁺",
+      "AB⁺"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 75,
+    "question": "The largest organ in human body is",
+    "options": [
+      "Brain",
+      "Heart",
+      "Skin",
+      "Liver"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 76,
+    "question": "Find the next number in the series 0, 3, 8, 15, 24, _____ ",
+    "options": [
+      "36",
+      "35",
+      "34",
+      "33"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 77,
+    "question": "Find the number in the place of question mark (?)",
+    "options": [
+      "21",
+      "22",
+      "29",
+      "20"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 78,
+    "question": "Find the next number in the series 1, 1, 2, 3, 5, 8, ____",
+    "options": [
+      "13",
+      "15",
+      "19",
+      "21"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 79,
+    "question": "Find the missing number in the series 9, 25, 49, ____ , 169",
+    "options": [
+      "100",
+      "121",
+      "64",
+      "144"
+    ],
+    "source_page": 17,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_79_page_17.png"
+  },
+  {
+    "q_no": 80,
+    "question": "Observe the figures given below. Fill the place with question mark (?) with suitable number",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "9"
+    ],
+    "source_page": 17,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_80_page_17.png"
+  },
+  {
+    "q_no": 81,
+    "question": "Observe the following figures and find out the values of P, Q",
+    "options": [
+      "4,8",
+      "5,7",
+      "5,6",
+      "4,7"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 82,
+    "question": "Find the next number in the series 3, 10, 24, 45, ____",
+    "options": [
+      "60",
+      "84",
+      "73",
+      "76"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 83,
+    "question": "How many families watch Telugu channels?",
+    "options": [
+      "6",
+      "8",
+      "12",
+      "14"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 84,
+    "question": "How many families watch English channels?",
+    "options": [
+      "14",
+      "21",
+      "17",
+      "7"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 85,
+    "question": "How many families watch both Hindi and Telugu channels?",
+    "options": [
+      "6",
+      "4",
+      "7",
+      "17"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 86,
+    "question": "If Red is called Yellow, Yellow is called Green, Green is called Blue, Blue is called Pink, then usually leaves colour will be",
+    "options": [
+      "Green",
+      "Pink",
+      "Yellow",
+      "Blue"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 87,
+    "question": "If UMBRELLA is coded as VLCQFKMZ, then JUSTICE is coded as",
+    "options": [
+      "KSSTJBF",
+      "KTTSICF",
+      "KTTSJBF",
+      "KTSSJAF"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 88,
+    "question": "If TBDIJO is coded for SACHIN, then which of the following words is coded as IZVOEBJ",
+    "options": [
+      "SAMURAI",
+      "MARUTHI",
+      "HYUNDAI",
+      "CRICKET"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 89,
+    "question": "If TEN, GANG and MEAT are coded as 439, 6596 and 1354 respectively, then how is MANAGEMENT coded?",
+    "options": [
+      "1595363194",
+      "1595313694",
+      "1595361934",
+      "1595631394"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 90,
+    "question": "If 1st April of year falls on Sunday, what is the day on 15th August of the same year?",
+    "options": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 91,
+    "question": "15th August, 2016 falls on Monday, what is the day on 15th August, 2017?",
+    "options": [
+      "Monday",
+      "Wednesday",
+      "Sunday",
+      "Tuesday"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 92,
+    "question": "Secretary has arrived at 10.10 am, 30 minutes before chairperson. Chairperson arrived 10 minutes late to the scheduled meeting. When is meeting scheduled?",
+    "options": [
+      "10.40 am",
+      "10.10 am",
+      "10.30 am",
+      "10.20 am"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 93,
+    "question": "Shankar is 8th from top and 24th from last in his class. How many students should be added to make the strength 40?",
+    "options": [
+      "8",
+      "9",
+      "10",
+      "16"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 94,
+    "question": "A Girl travels 6 km and takes left, further travels 8 km. What is the straight distance to that position, from the starting point?",
+    "options": [
+      "12 km",
+      "10 km",
+      "9 km",
+      "14 km"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 95,
+    "question": "When a clock is showing 10 ‘O’ clock, the hours hand is showing north direction. At what time does the hours hand show ‘southwest’?",
+    "options": [
+      "5:15",
+      "5:30",
+      "4:00",
+      "4:30"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 96,
+    "question": "Observe the sequence given and find out how many letters are immediately followed by a number and preceded by a symbol? M * K 5.L * N 3 X ? P 4 * L M % N 4",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 97,
+    "question": "Three engineers P, Q, R are designing a project. Can we find out in how much time all the three engineers will complete the designing, observing the following statements?\nI. P & Q can complete the design in 2 months\nII. Q & R can complete the design in 1½ months\nIII. P & R can complete the design in 3 months.",
+    "options": [
+      "I & II are sufficient",
+      "I, II & III are sufficient",
+      "I, II & III are insufficient",
+      "I & III are sufficient"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 98,
+    "question": "Who sits exactly opposite to E?",
+    "options": [
+      "D",
+      "C",
+      "B",
+      "A"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 99,
+    "question": "Who are the two immediate neighbours of ‘B’?",
+    "options": [
+      "E and D",
+      "F and E",
+      "C and B",
+      "A and D"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 100,
+    "question": "Who is sitting on the side exactly opposite to ‘D' ?",
+    "options": [
+      "F",
+      "B",
+      "A",
+      "C"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 101,
+    "question": "At which Indus valley site maximum wells were discovered?",
+    "options": [
+      "Harappa",
+      "Mohenjodaro",
+      "Dholavira",
+      "Kalibangan"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 102,
+    "question": "Given below are two statements one labelled as Assertion (A) and other labelled as Reason (R):\nAssertion (A): Iron technology played a crucial role in the expansion of the Aryans into the Gangetic Valley.\nReason (R): The Gangetic valley had thick vegetation which could be cleared only by implements of strong metal\nThe correct answer is :",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true, but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "source_page": 21,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_102_page_21.png"
+  },
+  {
+    "q_no": 103,
+    "question": "Read the following and identify the wrong one.",
+    "options": [
+      "Buddha gave his first sermon on deliverance from suffering to his five former companions in a deer park near Benaras",
+      "The ultimate goal of the Buddha's teachings were the attainment of 'Nibbana' i.e, liberation from the cycle of birth and death",
+      "Buddhist nuns strictly avoid following; theft, sexual activity, lying, use of intoxicants, eating after midday, attending entertainments, use of perfumes and jewellery",
+      "Buddhist texts reflect revolutionary ideas about women and stressed that women should have freedom to shape her life and personality"
+    ],
+    "source_page": 21,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_103_page_21.png"
+  },
+  {
+    "q_no": 104,
+    "question": "Which of the following text does not come under Sruti literature",
+    "options": [
+      "Brahmanas",
+      "Vedangas",
+      "Aranyakas",
+      "Upanishads"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 105,
+    "question": "Match the following List - I (Ashoka's minor rock edicts) (a) Rajula Mandagiri (b) Brahmagiri (c) Nittur (d) Rupnath List - II (Its present location) (i) Chitradurga district, Karnataka (ii) Bellary district, Karnataka (iii) Jabalpur district, Madhya Pradesh (iv) Kurnool district, Andhra Pradesh",
+    "options": [
+      "(a) i (b) ii (c) iii (d) iv",
+      "(a) ii (b) i (c) iii (d) iv",
+      "(a) iii (b) iv (c) i (d) ii",
+      "(a) iv (b) i (c) ii (d) iii"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 106,
+    "question": "Match the following List - I (Authors) (a) ILangovadigal (b) Sattanar (c) Tiruvalluvar (d) Nathamuni List - II (Texts) (i) Manimeklai (ii) Silappadikaram (iii) Nalayira Divya Prabandam (iv) Tirukkural",
+    "options": [
+      "(a) ii (b) i (c) iii (d) iv",
+      "(a) i (b) ii (c) iii (d) iv",
+      "(a) iv (b) iii (c) i (d) ii",
+      "(a) ii (b) i (c) iv (d) iii"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 107,
+    "question": "Identify the wrong pair",
+    "options": [
+      "(1) Chera-Bow",
+      "(2) Chola-Tiger",
+      "(3) Pandya-Fish",
+      "(4) Pallava-Peacock"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 108,
+    "question": "Arrange the following Ayurvedic doctors in a chronological order according to their existence\na) Jivaka b) Vagbhata c) Sushruta d) Charaka",
+    "options": [
+      "(1) dabc",
+      "(2) cbda",
+      "(3) acdb",
+      "(4) bdac"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 109,
+    "question": "The early Sathavahana coins were discovered at",
+    "options": [
+      "(1) Kotilingala",
+      "(2) Paithan",
+      "(3) Nashik",
+      "(4) Dulikatta"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 110,
+    "question": "In which language many Kanishka coins and inscriptions are available",
+    "options": [
+      "(1) Prakrita language",
+      "(2) Bactrian language",
+      "(3) Greek language",
+      "(4) Afghani language"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 111,
+    "question": "Match the following\nList - I\n(wars)\n(a) First Tarain war\n(b) Khanua war\n(c) Talikota war\n(d) Haldighati war\nList - II\n(year)\n(i) 1191\n(ii) 1576\n(iii) 1565\n(iv) 1527\nThe correct answer is",
+    "options": [
+      "(1) (a) ii (b) i (c) iv (d) iii",
+      "(2) (a) i (b) iv (c) iii (d) ii",
+      "(3) (a) iii (b) ii (c) i (d) iv",
+      "(4) (a) iv (b) iii (c) ii (d) i"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 112,
+    "question": "Which one of the following statement is not correct about Vijayanagara period?",
+    "options": [
+      "Abdur Razak, a Persian traveller observed about city of Vijaynagar “the city of ‘Beejanagaur’ is such that the eyes has not seen nor the ear heard of any place resembles it in the whole world”.",
+      "Krishnadevaraya though a follower of Vaishnavism, treated shaivites, Jains, Christians and Jews with kindness and compassion",
+      "Irugappa, the general and minister of Harihara II authored ‘Nanapatharatnamala’",
+      "According to ‘Rayavachakamu’ there are five kinds of forts in Vijayanagara kindom: giridurga, staladurga, Jaladurga, vanadurga and parvatadurga"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 113,
+    "question": "Match the following List - I (Kingdom) (a) Ahmednagar (b) Berar (c) Bijapur (d) Golkonda List - II (Ruling Dynasty) (i) Adil shahis (ii) Nizam shahis (iii) Imad shahis (iv) Qutub shahis",
+    "options": [
+      "(a)-i, (b)-ii, (c)-iii, (d)-iv",
+      "(a)-iv, (b)-i, (c)-ii, (d)-iii",
+      "(a)-ii, (b)-iii, (c)-i, (d)-iv",
+      "(a)-iii, (b)-ii, (c)-i, (d)-iv"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 114,
+    "question": "Name the Medieval Sultan who imposed a ban on ‘Sati’ condemning it as an unfair practice",
+    "options": [
+      "Balban",
+      "Alauddin Khilji",
+      "Muhammad bin Tughlaq",
+      "Firuz shah Tughlaq"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 115,
+    "question": "Which one of the following temple have erotic sculptures in large number",
+    "options": [
+      "Ramappa Temple",
+      "Konark Temple",
+      "Pattadikal Virupaksha Temple",
+      "Brihadishvara Temple"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 116,
+    "question": "Assertion (A) : The Mughal emperors had complete sovereignty, not only internally but also externally\nReason (R) : They refused to recognise any external authority like the Caliph as their superior\nThe correct answer is:",
+    "options": [
+      "(A) and (R) are true (R) is the correct explanation of (A)",
+      "(A) and (R) are true (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 117,
+    "question": "Which one of the following fort was not conquered by Shivaji from Bijapur",
+    "options": [
+      "Raigarh",
+      "Javali",
+      "Kondana",
+      "Torna"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 118,
+    "question": "The first telegraphic line introduced by Lord Dalhousie in 1853 ran between",
+    "options": [
+      "Bombay and Thana",
+      "Calcutta and Madras",
+      "Bombay and Madras",
+      "Calcutta and Agra"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 119,
+    "question": "After observing the early Indian National Congress activities who said that \"The Congress is nothing but a three day thamasha\"",
+    "options": [
+      "Dadabai Naoroji",
+      "Ashwini Kumar Datta",
+      "Lala Lajpat Rai",
+      "Aurobindo Ghosh"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 120,
+    "question": "Which one of the following statements is wrong about 'satyagraha'",
+    "options": [
+      "Satyagraha considered as 'Love Force' and 'Soul force'",
+      "Satyagraha conceived as a weapons of the weak",
+      "Satyagraha conceived as a weapons of the strong",
+      "The aim of the satyagraha is the conversion of the opponent by self suffering"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 121,
+    "question": "What is the original name of Bodhan",
+    "options": [
+      "Indur",
+      "Andhaka",
+      "Mulaka",
+      "Podana"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 122,
+    "question": "Match the following\n(a) Halika\n(b) Kolika\n(c) Kularika\n(d) Vadhika\n(i) Carpenter\n(ii) Cultivator\n(iii) Weaver\n(iv) Potter",
+    "options": [
+      "a-ii, b-iii, c-iv, d-i",
+      "a-i, b-ii, c-iii, d-iv",
+      "a-iii, b-iv, c-ii, d-i",
+      "a-iv, b-i, c-iii, d-ii"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 123,
+    "question": "At which place in Telangana large number of Roman coins were found.",
+    "options": [
+      "Keesara",
+      "Chaitanyapuri",
+      "Gutiparthi",
+      "Saleshwaram"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 124,
+    "question": "In Ancient period which one of the following Rivers was called 'Telivaha'",
+    "options": [
+      "Krishna",
+      "Godavari",
+      "Manjira",
+      "Musi"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 125,
+    "question": "Who was the author of the text “Kavijanashrayam”?",
+    "options": [
+      "Somadeva Suri",
+      "Pampa",
+      "Malliya Rechana",
+      "Satyasraya"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 126,
+    "question": "Bawari from NorthernTelangana was converted to Buddhism and he was the earliest to propagate it. Which one of the following text mentions about him?",
+    "options": [
+      "Suttanipata",
+      "Kalachakra",
+      "Gadhasaptasati",
+      "Kathasarithasagara"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 127,
+    "question": "Which one of the following was called Sultanpur during the medieval period?",
+    "options": [
+      "Karimnagar",
+      "Warangal",
+      "Nizamabad",
+      "Medak"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 128,
+    "question": "Which one of the following Dynasty introduced the Ayagar System in Village Administration?",
+    "options": [
+      "Satavahanas",
+      "Vishnukudis",
+      "Ikshvakus",
+      "Kakatiyas"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 129,
+    "question": "Where did the Battle between the Kakatiya armies and Jampanna, the son of Sarakka took place?",
+    "options": [
+      "Dayyalamadugu",
+      "Muzzampalli",
+      "Manchukonda",
+      "Dharmaram"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 130,
+    "question": "Match the following :\n(a) Rela Dance\n(b) Gusadi Dance\n(c) Mutyampeta\n(d) Bhimgal\n(i) Kondagattujatara\n(ii) Limbadrigutta\n(iii) Koyas\n(iv) Gonds",
+    "options": [
+      "a-i, b-ii, c-iii, d-iv",
+      "a-ii, b-i, c-iv, d-iii",
+      "a-iii, b-iv, c-i, d-ii",
+      "a-iv, b-iii, c-ii, d-i"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 131,
+    "question": "According to which inscription ‘Rudraveda' was called as ‘vinayabushana'",
+    "options": [
+      "Hanumakonda Inscription",
+      "Mallapur Inscription",
+      "Tripurantakam Inscription",
+      "Draksharama Inscription"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 132,
+    "question": "The Perini dance performed by women for the pleasure of man was known as",
+    "options": [
+      "Lasyam",
+      "Ramyam",
+      "Bhogam",
+      "Rasamayam"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 133,
+    "question": "Match the following :\n(a) Bayyaram Tank\n(b) Pakala Tank\n(c) Kesamudram Tank\n(d) Nagasamudram Tank\n(i) Jagadala Mummada\n(ii) Prolaraju I\n(iii) Mailamba\n(iv) Nagambika",
+    "options": [
+      "a-i, b-ii, c-iii, d-iv",
+      "a-ii, b-i, c-iv, d-iii",
+      "a-iii, b-i, c-ii, d-iv",
+      "a-iv, b-iii, c-i, d-ii"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 134,
+    "question": "Which of the following Diamond Mine locations is wrongly Matched",
+    "options": [
+      "Kolluru - Guntur District",
+      "Paritala - Krishna District",
+      "Vajrakarur - Chittoor District",
+      "Gandikota - Kadapa"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 135,
+    "question": "During the Qutub Shahi period which of the following place was famous for Indigo production",
+    "options": [
+      "Kolar",
+      "Nagulavancha",
+      "Nizamabad",
+      "Mantena"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 136,
+    "question": "Match the following :\n(a) Sivadevayya\n(b) Ekamranatha\n(c) Manchana\n(d) Shakalya malla\n(i) Pratapacharitramu\n(ii) Nirostya Ramayanam\n(iii) Purushartasaram\n(iv) Keyurabahu Charitra\nThe correct answer is",
+    "options": [
+      "a-ii, b-iii, c-i, d-iv",
+      "a-iv, b-ii, c-iii, d-i",
+      "a-iii, b-i, c-iv, d-ii",
+      "a-iii, b-ii, c-i, d-iv"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 137,
+    "question": "Arrange the following in chronological order\n(a) Sikander Jah\n(c) Nasiruddaula\n(b) Mir Mahabub Ali Khan\n(d) Nizam Ali",
+    "options": [
+      "d, a, c, b",
+      "a, b, c, d",
+      "b, c, d, a",
+      "a, d, c, b"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 138,
+    "question": "Which one of the following was the first Yakashaganam in Telugu",
+    "options": [
+      "Yayaticharitra",
+      "Sugrivavijayam",
+      "Tapati Samharanopakhyanam",
+      "Kridabhiramam"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 139,
+    "question": "Which one of the following recite the stories of the ancestors of Lambadas",
+    "options": [
+      "Bhats",
+      "Ranjus",
+      "Pardans",
+      "Bikshus"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 140,
+    "question": "The Yanadi Bhagavatam is also known as",
+    "options": [
+      "Garudachala Bhagvatam",
+      "Ankamma Bhagvatam",
+      "Ellamma Bhagvatam",
+      "Pochamma Bhagvatam"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 141,
+    "question": "The Akkanna-Madanna Temple in Hyderabad is located at",
+    "options": [
+      "Bahadurpura",
+      "Shalibanda",
+      "Golkonda",
+      "Karavan"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 142,
+    "question": "Who among the following Jagirdar helped the British to suppress the 1857 mutiny in Hyderabad state.",
+    "options": [
+      "Raja Rameshwar Rao of Wanaparthy",
+      "Raja Venkata Laxman Rao of Jataprole",
+      "Raja Rambupal Rao of Gadwal",
+      "Raja Venkataraya Nayak Rao of Palwancha"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 143,
+    "question": "The Shivaram Wildlife Sanctuary is located in which of the following districts of Telangana",
+    "options": [
+      "Adilabad - Nizamabad",
+      "Mahabubnagar - Medak",
+      "Karimnagar - Warangal",
+      "Adilabad - Karimnagar"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 144,
+    "question": "The Police Action against the Hyderabad State was also known as",
+    "options": [
+      "Goddard plan",
+      "Razakar plan",
+      "Jai Hyderabad plan",
+      "Choudari plan"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 145,
+    "question": "Who among the following Lambada leader fought against the ‘Visnuru dora' during Telangana Armed struggle.",
+    "options": [
+      "Jatoth Tanu Naik",
+      "Bhallu Naik",
+      "Tejavat Dasunaik",
+      "Bhukya Balya"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 146,
+    "question": "One of the following was not associated with designing of 'Telangana Talli' statue",
+    "options": [
+      "B.S. Ramulu",
+      "Bhoopathy Krishnamurthy",
+      "Prof. Gangadhar",
+      "Pasunuri Dayakar"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 147,
+    "question": "The Commission investigated the incidents related to 1952 Mulki Movement in Hyderabad was headed by whom of the following",
+    "options": [
+      "Vaman Naik",
+      "Akbar Hyderi",
+      "Jagan Mohan Reddy",
+      "Ramachari"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 148,
+    "question": "Who among the following undertook the indefinite fast during 1969 Jai Telangana Movement?",
+    "options": [
+      "Kolisetti Ramdas",
+      "T. Purshotham Rao",
+      "Potu Krishnamurthy",
+      "Annabathula Ravindranath"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 149,
+    "question": "Arrange the following in chronological order (a) Eight point formula (b) Six point formula (c) Five point formula (d) The Presidential order",
+    "options": [
+      "a, c, b, d",
+      "a, b, c, d",
+      "d, b, c, a",
+      "b, a, d, c"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 150,
+    "question": "Match the following : List - I (a) Telangana Information Trust (b) Telangana Students Forum (c) Telangana Ikya Vedica (d) Telangana Janasabha List - II (i) 1997 (ii) 1998 (iii) 1991 (iv) 1986 The correct answer is",
+    "options": [
+      "a-i, b-ii, c-iii, d-iv",
+      "a-iv, b-iii, c-i, d-ii",
+      "a-ii, b-i, c-iv, d-iii",
+      "a-iii, b-iv, c-ii, d-i"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 151,
+    "question": "Arrange the following in chronological order (a) Sakala janaula samme (b) Million March (c) Sagaraharam (d) Sadak Bandh",
+    "options": [
+      "b, c, d, a",
+      "a, d, c, b",
+      "a, b, d, c",
+      "b, a, d, c"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 152,
+    "question": "Who was the convener of Telangana State Advocate Joint Action Committee",
+    "options": [
+      "M. Rajender Reddy",
+      "Tanneru Sriranga Rao",
+      "Gandra Mohan Rao",
+      "P. Govardan Reddy"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 153,
+    "question": "Which one of the following is not correctly matched.",
+    "options": [
+      "Bellaiah Naik - Lambadi Hakkula Porata Samithi",
+      "Dubbagatla Narsing Rao - Munnuru Kapu Hakkula Porata Samithi",
+      "Belli Krishna - Golla, Kuruma Hakkula Porata Samithi",
+      "Valigi Prabhakar - Erukala Hakkula Porata Samithi"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 154,
+    "question": "The Sakala Janula Samme was organised by which one of the following",
+    "options": [
+      "Telangana Joint Action Committee",
+      "Telangana Vidyavantula Vedica",
+      "Telangana Rashtra Samiti",
+      "Telangana Ikya Vedika"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 155,
+    "question": "When was the A.P. State Reorganisation Bill introduced in Lok Sabha by Home Minister Sushil Kumar Shinde",
+    "options": [
+      "February 3, 2014",
+      "February 13, 2014",
+      "February 20, 2014",
+      "March 1, 2014"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 156,
+    "question": "Assertion (A): During summer season Intertropical Convergenic Zone (ITCZ) is located to the north of Equator. Reason (R): The northward shift of ITCZ over India leads to onset of monsoon. The correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true and (R) is false",
+      "(A) is false and (R) is true"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 157,
+    "question": "Match the following:\nList - I\n(a) Autotrophs\n(b) Hetrotrophs\n(c) Tropic structure\n(d) Food chain\nList - II\n(i) Transfer of energy from one level to another\n(ii) Hierarchical arrangement of organisms\n(iii) Depends on other organisms for their food\n(iv) Prepare the food themselves\nThe correct answer is",
+    "options": [
+      "(1) (a) iv (b) iii (c) ii (d) i",
+      "(2) (a) iii (b) iv (c) i (d) ii",
+      "(3) (a) i (b) ii (c) iii (d) iv",
+      "(4) (a) ii (b) iii (c) i (d) iv"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 158,
+    "question": "Match the following:\nList - I\n(a) Guru Shikhar Peak\n(b) Dhuadhar waterfall\n(c) Thalghat gap\n(d) Coral reefs\nList - II\n(i) Lakshadweep islands\n(ii) Western ghats\n(iii) Narmada river\n(iv) Aravallis",
+    "options": [
+      "(1) (a) iv (b) iii (c) ii (d) i",
+      "(2) (a) iii (b) iv (c) i (d) ii",
+      "(3) (a) i (b) ii (c) iii (d) iv",
+      "(4) (a) ii (b) iii (c) i (d) iv"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 159,
+    "question": "Match the following:\nList - I\n(a) Kalpakkam\n(b) Narora\n(c) Kaiga\n(d) Kakrapara\nList - II\n(i) Gujarat\n(ii) Karnataka\n(iii) UP\n(iv) Tamil Nadu",
+    "options": [
+      "(1) iv iii ii i",
+      "(2) iii iv i ii",
+      "(3) i ii iii iv",
+      "(4) ii iii i iv"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 160,
+    "question": "Assertion (A): Tropical cyclones taking origin in South China sea is called as Typhoons.\nReason (R): The isobars of tropical cyclone are circular in shape.",
+    "options": [
+      "(1) Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "(2) Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(3) (A) is true and (R) is false",
+      "(4) (A) is false and (R) is true"
+    ],
+    "source_page": 35,
+    "has_image": true,
+    "image_file": "images/Constable_2023_Set_A/q_160_page_35.png"
+  },
+  {
+    "q_no": 161,
+    "question": "Assertion (A): Global warming is caused due to increasing presence of green house gases and ozone layer depletion.\nReason (R): Global warming is responsible for lowering of sea level.\nThe correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true and (R) is false",
+      "(A) is false and (R) is true"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 162,
+    "question": "Read the following statements:\na) National Advisory Council was established by NDA Government\nb) The chair person of National Advisory Council was Sonia Gandhi\nc) National Advisory Council advises Union and State Governments\nd) Prime Minister is the Chairman of National Advisory Council\nChoose the correct statements:",
+    "options": [
+      "a&d",
+      "b only",
+      "a, b & c",
+      "b&d"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 163,
+    "question": "Electronic voting machines were used in general elections of state legislative assemblies for the first time in 1998 in the following states:",
+    "options": [
+      "Madhya Pradesh, Rajasthan and Himachal Pradesh",
+      "Rajasthan, Uttar Pradesh and Bihar",
+      "Madhya Pradesh and Kerala",
+      "Madhya Pradesh, Rajasthan and Delhi"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 164,
+    "question": "Assertion (A): The Parliament can legislate matters in State List in national interest. Reason (R): Rajya Sabha is part of Parliament. The correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation of (A)",
+      "(A) is true and (R) is false",
+      "(A) is false and (R) is true"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 165,
+    "question": "Read the following statements:\na) Arun Jaitley is the leader of the house in Rajya Sabha\nb) Narendra Modi is the leader of the house in Lok Sabha\nc) Venkaiah Naidu is the leader of the house in Rajya Sabha\nd) Rajnath Singh is the leader of the house in Lok Sabha\nChoose the correct statements:",
+    "options": [
+      "a&d",
+      "b & c",
+      "c & d",
+      "a&b"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 166,
+    "question": "Assertion (A) : India is a Republic\nReason (R): India has universal adult franchise system\nThe correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true and (R) is false",
+      "(A) is false and (R) is true"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 167,
+    "question": "Assertion (A): Collective responsibility of cabinet signifies unity and coordination among\nmembers of the council of ministers\nReason (R) : It is the prerogative of the Prime Minister to select or drop a member of\nthe cabinet\nThe correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true and (R) is false",
+      "(A) is false and (R) is true"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 168,
+    "question": "Read the following statements:\na) Shanmuganathan is appointed as Governor of Meghalaya\nb) Draupadi Murmu is appointed as Governor of Jharkhand\nc) Tathagata Roy is appointed as Governor of Arunachal Pradesh\nd) Najma Heptullah is appointed as Governor of Mizoram\nChoose the correct statements :",
+    "options": [
+      "a &c",
+      "a & b",
+      "b & d",
+      "a & d"
+    ],
+    "source_page": 39,
+    "has_image": false
+  },
+  {
+    "q_no": 169,
+    "question": "The two major components of 'inclusive growth' in India include\nA) Providing economic benefits to hitherto neglected marginalised sections\nB) Exporting manufacturing goods\nC) Poverty reduction and employment generation\nD) Environmental degradation",
+    "options": [
+      "A & C only",
+      "B & D only",
+      "A & B only",
+      "B & C only"
+    ],
+    "source_page": 39,
+    "has_image": false
+  },
+  {
+    "q_no": 170,
+    "question": "Which one of the following statements is correct with regard to population explosion?",
+    "options": [
+      "Both birth and death rates are high.",
+      "Both birth and death rates are low.",
+      "Birth rate will be high and death rate decreases very fast.",
+      "Birth rate will be low and death rate increases moderately."
+    ],
+    "source_page": 39,
+    "has_image": false
+  },
+  {
+    "q_no": 171,
+    "question": "Nobel Prize in Economics was awarded to one of the following :",
+    "options": [
+      "Sir C.V. Raman",
+      "Amarthya Sen",
+      "Ch. Hanumantha Rao",
+      "C. Rangarajan"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 172,
+    "question": "Which of the following statements about poverty are correct?\nA) Poverty is a socio-economic phenomenon in which a section of the society is unable to fulfill even its basic necessities of life.\nB) The poverty gap measures the transfer that would bring the income of every poor person exactly upto the poverty line.\nC) A person whose income or expenditure is so meagre that he lives below the subsistence level is called as ‘relative poverty'.",
+    "options": [
+      "A and B only",
+      "B and C only",
+      "C and A only",
+      "A, B and C"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 173,
+    "question": "Which among the following are the two major economic indicators of regional imbalances?\nA) Inclusive growth\nB) Poverty level\nC) Per capita income of states\nD) Social justice",
+    "options": [
+      "A and B only",
+      "B and C only",
+      "C and D only",
+      "D and A only"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 174,
+    "question": "Which of the following are the spheres of environment? A) Atmosphere B) Biosphere C) Hydrosphere D) Lithosphere",
+    "options": [
+      "A and B only",
+      "A, B and C only",
+      "A, B and D only",
+      "A, B, C and D"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 175,
+    "question": "Which of the following decades was declared by the UNO as a ‘Decade of Education for Sustainable Development’?",
+    "options": [
+      "2000-10",
+      "2005-15",
+      "2010-20",
+      "2015-25"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 176,
+    "question": "Match the following: Organisation: (a) Border Security Force, (b) Indo-Tibetan Border Police, (c) Sashastra Seema Bal, (d) Coast Guard. Year of establishment: (i) 1963, (ii) 1965, (iii) 1978, (iv) 1962.",
+    "options": [
+      "a-ii, b-iv, c-i, d-iii",
+      "a-ii, b-iv, c-iii, d-i",
+      "a-iv, b-ii, c-i, d-iii",
+      "a-iii, b-i, c-ii, d-iv"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 177,
+    "question": "Choose the incorrect statement/s from the following:\na) The National Physical Laboratory is situated in Lucknow.\nb) Indian Research Station ‘Himadri' is located in Arctic region.\nc) Central Food Technological Research Institute is located in Mysore.\nd) Central Rice Research Institute is located in Bhubaneswar.",
+    "options": [
+      "a & c",
+      "b & c",
+      "a&d",
+      "b&d"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 178,
+    "question": "Read the following statements:\nA) Commonwealth Games, 2014 were held in Kaulalampur\nB) Kabaddi World cup, 2016 will be held in Ahmedabad\nC) National Games, 2015 were held in Kerala\nChoose the correct statements:",
+    "options": [
+      "A & B",
+      "B & C",
+      "C & A",
+      "A, B & C"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 179,
+    "question": "Highest bridge in India is",
+    "options": [
+      "Sevoke bridge",
+      "Naini bridge",
+      "Chambal bridge",
+      "Ellis bridge"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 180,
+    "question": "Mahatma Gandhi Peace Prize for the year 2014 was given to",
+    "options": [
+      "ISRO",
+      "Chandi Prasad Bhatt",
+      "Desmond Tutu",
+      "Missionaries of Charity"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 181,
+    "question": "Match the following:\nList - I (Day)\na) Earth Day\nb) International Tigers Day\nc) World Oceans Day\nd) National Sports Day\nList - II (Date)\n(i) 22nd April\n(ii) 8th June\n(iii) 29th July\n(iv) 29th August\nThe correct answer is",
+    "options": [
+      "a-(iii), b-(i), c-(iv), d-(ii)",
+      "a-(iv), b-(ii), c-(i), d-(iii)",
+      "a-(ii), b-(iv), c-(iii), d-(i)",
+      "a-(i), b-(iii), c-(ii), d-(iv)"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 182,
+    "question": "Read the following statements:\nA) The first state in the country to draft its own internal security legislation is Maharashtra.\nB) The city to host Bharatiya Pravas Divas in 2017 will be Hyderabad\nC) The first island district that emerged recently in India is Majuli\nChoose the correct statements:",
+    "options": [
+      "A&B",
+      "B & C",
+      "C&A",
+      "A, B & C"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 183,
+    "question": "Sex ratio means (from among the following)",
+    "options": [
+      "Number of males per 1,000 females",
+      "Number of males per 100 females",
+      "Number of females per 1,000 males",
+      "Number of females per 100 males"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 184,
+    "question": "Choose the correct match",
+    "options": [
+      "Army: Captain, Navy: Sub-Lientenant, Airforce: Flight Lientenant",
+      "Army: Major, Navy: Commander, Airforce: Squadron header",
+      "Army: Colonel, Navy: Commodore, Airforce: Air commodore",
+      "Army: Major-general, Navy: Rear Admiral, Airforce: Air vice Marshal"
+    ],
+    "source_page": 44,
+    "has_image": false
+  },
+  {
+    "q_no": 185,
+    "question": "Assertion (A): Urban center with more than one million population in India is called as metropolitan city Reason (R): According to 2011 census there are only 12 metropolitan cities in India The correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) if false",
+      "(A) is false but (R) is true"
+    ],
+    "source_page": 44,
+    "has_image": false
+  },
+  {
+    "q_no": 186,
+    "question": "Read the following statements:\nA) The DWCRA aimed at providing self-employment to women of BPL families.\nB) The NREP was launched in 1980.\nC) The NSS organisation gave three concepts of employment to measure its status-usual status, current weekly status and current daily status\nD) The PMRY aimed at providing wage employment in rural areas\nWhich of the statements given above are correct?",
+    "options": [
+      "A, B and C only",
+      "B, C and D only",
+      "A, C and D only",
+      "A, B and D only"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 187,
+    "question": "The present Indian permanent representative to UNO is",
+    "options": [
+      "Nirupama Sen",
+      "Syed Akbaruddin",
+      "A.K. Mukerji",
+      "H.S. Puri"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 188,
+    "question": "Which of the following are the three major forms of pollution?\nA) Air pollution\nB) Water pollution\nC) Noise pollution\nD) Land pollution\nThe correct answer is",
+    "options": [
+      "A, B & C only",
+      "B, C & D only",
+      "C, D & A only",
+      "D, A & B only"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 189,
+    "question": "The National SC/ST Hub will be launched in the city",
+    "options": [
+      "Jaipur",
+      "Agra",
+      "Nagpur",
+      "Ludhiana"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 190,
+    "question": "The world's largest solar power plant is installed in the state",
+    "options": [
+      "Rajasthan",
+      "Tamilnadu",
+      "Andhra Pradesh",
+      "Haryana"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 191,
+    "question": "Smallest parliamentary constituency in terms of number of electors is",
+    "options": [
+      "Ladak",
+      "Daman and Diu",
+      "Lakshadweep",
+      "Andaman and Nicobar island"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 192,
+    "question": "Match the following:\nDay (Significance)\na) World Kidney Day\nb) World Cancer Day\nc) World Tuberculosis Day\nd) World Disabled Day\nMonth\ni) Feb, 4\nii) March, 24\niii) March, 10\niv) December, 3\nThe correct answer is",
+    "options": [
+      "a-ii, b-iv, c-iii, d-i",
+      "a-iv, b-ii, c-i, d-iii",
+      "a-iii, b-ii, c-iv, d-i",
+      "a-iii, b-i, c-ii, d-iv"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 193,
+    "question": "The first sponge iron plant was established in",
+    "options": [
+      "Telangana",
+      "Andhra",
+      "Rayalaseema",
+      "Bundelkhand"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 194,
+    "question": "Choose the incorrect pair from the following: Stadium Location (1) Keenan stadium Jamshedpur (2) Shivaji stadium Pune (3) Ranji stadium Kolkata (4) D.Y. Patil stadium Navi Mumbai",
+    "options": [
+      "(1) Keenan stadium Jamshedpur",
+      "(2) Shivaji stadium Pune",
+      "(3) Ranji stadium Kolkata",
+      "(4) D.Y. Patil stadium Navi Mumbai"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 195,
+    "question": "Match the following: Day Date a) National Science Day i) October, 8 b) Air Force Day ii) February, 28 c) Navy Day iii) May, 21 d) Anti Terrorism day iv) December, 4 The correct answer is",
+    "options": [
+      "(1) a-iii, b-i, c-iv, d-ii",
+      "(2) a-i, b-iii, c-iv, d-ii",
+      "(3) a-ii, b-i, c-iv, d-iii",
+      "(4) a-iv, b-ii, c-iii, d-i"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 196,
+    "question": "Consider the following statements a) Supreme Court Constituted Social Justice Bench in the year 2015. b) The Social Justice Bench of Supreme Court was set up by the Chief Justice of India, H.L. Dattu. c) The Social Justice Bench sits every Friday to hear the cases. Choose the correct statement/s :",
+    "options": [
+      "(1) a&b",
+      "(2) c & a",
+      "(3) b&c",
+      "(4) a"
+    ],
+    "source_page": 47,
+    "has_image": false
+  },
+  {
+    "q_no": 197,
+    "question": "The Chairman of Commission on De-Notified and Nomadic Tribes is",
+    "options": [
+      "Shravan Singh Rathore",
+      "Bhiku Ram",
+      "Karia Munda",
+      "Babulal Marandi"
+    ],
+    "source_page": 48,
+    "has_image": false
+  },
+  {
+    "q_no": 198,
+    "question": "Bharat Nepal Maitri bus service runs between",
+    "options": [
+      "Delhi to Kathmandu",
+      "Varanasi to Kathmandu",
+      "Allahabad to Kathmandu",
+      "Gaya to Kathmandu"
+    ],
+    "source_page": 48,
+    "has_image": false
+  },
+  {
+    "q_no": 199,
+    "question": "Consider the following statements:\na) Operation Rahat, 2015 was commanded by Gen V.K. Singh.\nb) Operation Rahat is a rescue mission to evacuate Indian civilians from Syria.\nc) INS Sumitra was deployed in Operation Rahat\nChoose the correct statements:",
+    "options": [
+      "a&c",
+      "a&b",
+      "b&c",
+      "a,b&c"
+    ],
+    "source_page": 48,
+    "has_image": false
+  },
+  {
+    "q_no": 200,
+    "question": "Match the following:\nMinister\n(a) H.M. Patel\n(b) Indrajit Gupta\n(c) Madhu Dandavate\n(d) George Fernandes\nUnion Government\n(i) Finance Minister, NF Government\n(ii) Defence Minister, NDA-I\n(iii) Finance Minister, Janata Government\n(iv) Home Minister, UF Government\nThe correct answer is",
+    "options": [
+      "a-ii, b-iv, c-i, d-iii",
+      "a-iv, b-iii, c-i, d-ii",
+      "a-iv, b-ii, c-i, d-iii",
+      "a-iii, b-iv, c-i, d-ii"
+    ],
+    "source_page": 48,
+    "has_image": false
+  }
+]

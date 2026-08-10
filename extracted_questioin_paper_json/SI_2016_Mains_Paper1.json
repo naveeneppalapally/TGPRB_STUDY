@@ -1,0 +1,2425 @@
+[
+  {
+    "q_no": 1,
+    "question": "The digit in the place of * so that the number 223*431 is divisible by 9 is",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 2,
+    "question": "The number of terms in the sequence 2, 4, 8, 16, ...., 1024",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 3,
+    "question": "If one third of the one fourth of a number is 15, then one tenth of that number is",
+    "options": [
+      "12",
+      "16",
+      "18",
+      "22"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 4,
+    "question": "The largest four - digit number exactly divisible by 88 is",
+    "options": [
+      "9944",
+      "9768",
+      "9988",
+      "8888"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 5,
+    "question": "If the H.C.F of three numbers which are in the ratio 1:2:3 is 12, then the numbers are",
+    "options": [
+      "12, 24, 36",
+      "11, 22, 33",
+      "12, 24, 32",
+      "5, 10, 15"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 6,
+    "question": "The remainder when 6799 is divided by 7 is",
+    "options": [
+      "4",
+      "6",
+      "1",
+      "2"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 7,
+    "question": "The number which does not suit in the sequence 8, 12, 18, 26, 38, 48, 62 is",
+    "options": [
+      "18",
+      "26",
+      "38",
+      "48"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 8,
+    "question": "If 1/12 × (44339 + x²) = 3879, then the value of x is",
+    "options": [
+      "43",
+      "57",
+      "37",
+      "47"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 9,
+    "question": "The L.C.M. of two numbers is 495 and their HCF is 5. If the sum of the two numbers is 100 then their difference is",
+    "options": [
+      "10",
+      "46",
+      "70",
+      "90"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 10,
+    "question": "√5 = 2.2361, √3 = 1.7321 ⇒ 1/(√5 - √3) =",
+    "options": [
+      "1.984",
+      "1.9841",
+      "1.98",
+      "2"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 11,
+    "question": "A sum of Rs. 7,200 amounts to Rs. 9,360 in 6 years at a certain rate of simple interest. The amount, if the rate of interest is increased by 4% is (in rupees)",
+    "options": [
+      "10,080",
+      "10,880",
+      "11,088",
+      "12,880"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 12,
+    "question": "The present worth of Rs. 132 due in two years at 5% simple interest per annum (in rupees) is",
+    "options": [
+      "120",
+      "122",
+      "112",
+      "118.80"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 13,
+    "question": "A person borrowed a sum of money with simple interest as given below:\n(i) 6% per annum for the first three years\n(ii) 8% per annum for the next five years\n(iii) 12% per annum for the next four years\nIf he paid a total interest of Rs. 4,240, the money he borrowed (in rupees) is",
+    "options": [
+      "3,000",
+      "3,500",
+      "4,000",
+      "4,050"
+    ],
+    "source_page": 6,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_13_page_6.png"
+  },
+  {
+    "q_no": 14,
+    "question": "A shopkeeper gives two successive discounts of 10% and 20%. If he sells an article for Rs. 432, then the marked price of the article is (in rupees)",
+    "options": [
+      "526",
+      "550",
+      "600",
+      "626"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 15,
+    "question": "Two equal sums of money were invested, one at 4% and the other at 4 1/2%. At the end of 7 years, if the simple interest received from the later exceeds that received from the former by Rs. 94.50, then each sum was (in rupees)",
+    "options": [
+      "2,600",
+      "2,700",
+      "2,700.50",
+      "2,685"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 16,
+    "question": "The simple interest on a sum of money is 9/4 of the principal and the number of years is equal to the rate percent per annum. Then the rate per annum is",
+    "options": [
+      "10%",
+      "12%",
+      "13%",
+      "15%"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 17,
+    "question": "The difference between the compound interest and simple interest at the rate of 14% per annum on Rs. 5,000 for two years will be (in rupees)",
+    "options": [
+      "98",
+      "86",
+      "72",
+      "88"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 18,
+    "question": "A person borrows Rs. 3,200 to be paid back with compound interest at the rate of 5% per annum by the end of 2 years in two equal yearly instalments. Then each instalment (in rupees) is",
+    "options": [
+      "1,764",
+      "1,880",
+      "1,894",
+      "1,924"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 19,
+    "question": "A tree increases annually by 1/5 th of its height. If it stands today at 125 cm., then its height after 2 years is (in cms.)",
+    "options": [
+      "160",
+      "170",
+      "180",
+      "185"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 20,
+    "question": "If a certain sum of money at compound interest grows upto Rs. 12,960 in 2 years and upto Rs. 13,176 in 3 years, then the rate of interest per annum is",
+    "options": [
+      "2 1/3%",
+      "2 2/3%",
+      "1 1/3%",
+      "1 2/3%"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 21,
+    "question": "The time for Rs. 1,000 to amount to Rs. 1,331 at 20% per annum, compounded half - yearly is (in years)",
+    "options": [
+      "1 1/2",
+      "1",
+      "2",
+      "2 1/2"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 22,
+    "question": "Two numbers are in the ratio of 11:13. If 12 is subtracted from each, the ratio becomes 7:9. The smaller number them is",
+    "options": [
+      "11",
+      "22",
+      "33",
+      "39"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 23,
+    "question": "The sum of three numbers is 186. If the ratio between the first and second is 2:3 and that between the second and third is 7:9, then the second number is",
+    "options": [
+      "53",
+      "63",
+      "58",
+      "68"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 24,
+    "question": "The price of a scooter and a television set are in the ratio 3:2. If a scooter costs Rs. 10,000 more than the television set, then the price of the scooter is (in rupees)",
+    "options": [
+      "30,000",
+      "40,000",
+      "45,000",
+      "50,000"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 25,
+    "question": "When 30 percent of a number is added to another number, the second number increases by 20 percent. Then the ratio between the first and second number is",
+    "options": [
+      "3:2",
+      "2:3",
+      "2:5",
+      "3:5"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 26,
+    "question": "If x : y = 3 : 4, then (7x + 3y) : (7x – 3y) =",
+    "options": [
+      "5:2",
+      "4:3",
+      "11:3",
+      "37:19"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 27,
+    "question": "The students in three classes are in the ratio 2: 3: 5. If 40 students are increased in each class, the ratio changes to 4 : 5:7. Originally, the total number of students is",
+    "options": [
+      "100",
+      "180",
+      "200",
+      "400"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 28,
+    "question": "If a:b = c:d = e:f = 1:2, then (pa + qc + re) : (pb + qd + rf) =",
+    "options": [
+      "1:3",
+      "1:2",
+      "2:3",
+      "3:2"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 29,
+    "question": "A pipe of diameter 'd' can drain a water tank in 40 minutes. The time taken by a pipe of diameter '2d' for doing the same job is (in minutes)",
+    "options": [
+      "5",
+      "10",
+      "20",
+      "50"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 30,
+    "question": "A pump can fill a tank with water in 2 hours. Because of a leakage it took 2 1/3 hours to fill the tank. The time taken to empty the full tank due to leakage (in hours) is",
+    "options": [
+      "8",
+      "7",
+      "10",
+      "14"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 31,
+    "question": "A water tank is 2/5 th full. Pipe A can fill the tank in 10 minutes and pipe B can empty it in 6 minutes. If both the pipes are open, the time taken to empty or fill the tank completely is",
+    "options": [
+      "6 minutes to empty",
+      "6 minutes to fill",
+      "9 minutes to empty",
+      "9 minutes to fill"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 32,
+    "question": "The average price of 16 different books is Rs. 18. While the average price of 14 of these books is Rs. 16.50 and of the remaining two books, if the price of one is 50% of the other, then the price of these two books is (in rupees)",
+    "options": [
+      "13, 26",
+      "17, 34",
+      "19, 38",
+      "21, 42"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 33,
+    "question": "If the average of x and 1/x (x ≠ 0) is M, then the average of x² and 1/x² is",
+    "options": [
+      "1-M²",
+      "1-2M",
+      "2M²-1",
+      "2M² + 1"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 34,
+    "question": "The average age of 28 students of a class is 12 years. If their teacher's age is included the average age increases by one year. Then the age of the teacher (in years) is",
+    "options": [
+      "41",
+      "40",
+      "39",
+      "38"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 35,
+    "question": "A batsman in his 12th innings, makes a score of 63 runs and thereby increased his average score by 2 runs. The average of his score after 12th innings is",
+    "options": [
+      "42",
+      "41",
+      "35",
+      "34"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 36,
+    "question": "The average of 9 numbers is 30. If the average of first 5 numbers is 25 and that of the last 3 numbers is 35 Then the 6th number is",
+    "options": [
+      "20",
+      "30",
+      "40",
+      "50"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 37,
+    "question": "Out of three numbers, the first is twice the second and is half of the third. If the average of the three numbers is 56, then the difference of the first and third numbers is",
+    "options": [
+      "12",
+      "20",
+      "24",
+      "48"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 38,
+    "question": "In an examination it is required to get 40% of the aggregate marks to pass. A student gets 142 marks and is declared failed by 18 marks. The maximum marks of the examination is",
+    "options": [
+      "600",
+      "400",
+      "460",
+      "520"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 39,
+    "question": "The population of a town is 1,54,000. It increases by 5% during the first year. During the second year it decreases by 10% and increases by 10% during the third year. Then the population of the town after 3 years is",
+    "options": [
+      "1,61,700",
+      "1,60,700",
+      "1,60,083",
+      "1,70,062"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 40,
+    "question": "A number x is increased by 30% and then decreased by 30%, then the number x",
+    "options": [
+      "Does not change",
+      "Decreases by 6%",
+      "Increases by 6%",
+      "Decreases by 9%"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 41,
+    "question": "One side of a square is increased by 20%. To maintain the same area the other side will have to be decreased by",
+    "options": [
+      "16 2/3 %",
+      "14 2/3 %",
+      "11 1/3 %",
+      "14 1/3 %"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 42,
+    "question": "Two numbers are in the ratio 5:4. If 40% of the first number is 120, then 60% of the second number is equal to",
+    "options": [
+      "124",
+      "134",
+      "144",
+      "156"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 43,
+    "question": "In an examination there were 640 boys and 360 girls. If 60% of boys and 70% of girls were successful, the percentage of failure was",
+    "options": [
+      "36.4%",
+      "35.4%",
+      "32.8%",
+      "35.6%"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 44,
+    "question": "A person gave 20% of his income to his elder son, 30% of the remaining to the younger son and 10% of the balance he donated to a trust. If he is left with Rs. 10,080. His income (in rupees)",
+    "options": [
+      "50,000",
+      "40,000",
+      "30,000",
+      "20,000"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 45,
+    "question": "The difference between a discount of 35% and two successive discounts of 20% and 20% on a certain bill is Rs. 22. Then the amount of the bill (in rupees) is",
+    "options": [
+      "1,100",
+      "2,000",
+      "2,200",
+      "2,640"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 46,
+    "question": "A sells a house to B at a profit of 12%. B sells it to C at a loss of 10% and C sells it to D for Rs. 21,44,520 making a profit of 15%. The cost of the house for A (in rupees) is",
+    "options": [
+      "20,00,000",
+      "18,50,000",
+      "25,00,000",
+      "22,50,000"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 47,
+    "question": "A trader sells an article at a profit of 30%. Had he sold it for Rs. 352 less, he would have gained 20% only. The cost price of the article is (in rupees)",
+    "options": [
+      "3,520",
+      "3,580",
+      "1,560",
+      "1,700"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 48,
+    "question": "A man bought 6 apples for Rs. 24 and sold them at 4 apples for Rs. 20. His profit percentage is",
+    "options": [
+      "25",
+      "30",
+      "40",
+      "50"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 49,
+    "question": "A shopkeeper sold two pressure cookers for Rs. 1,800 each. On one he gains 30% and on the other he loses 25%. His gain or loss percent in the whole transaction is",
+    "options": [
+      "4.88% Loss",
+      "4.88% Gain",
+      "3.74% Loss",
+      "3.74% Gain"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 50,
+    "question": "The profit earned by selling an article for Rs.832 is equal to the loss incurred, when the same article is sold for Rs. 448. Then the sale price of the article for making 50% profit should be (in rupees)",
+    "options": [
+      "920",
+      "960",
+      "1,060",
+      "1,200"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 51,
+    "question": "If gross profit is 34% of the selling price of an item and x percentage of its selling price is equal to 25 percentage of its cost price, then x =",
+    "options": [
+      "15.4",
+      "16.5",
+      "17",
+      "18.3"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 52,
+    "question": "A sells a pillow to B at a profit of 20%. B sells it to C at a profit of 25%. If C pays Rs. 243 for it, the cost price of the pillow for A (in Rupees) is",
+    "options": [
+      "150",
+      "160",
+      "162",
+      "173"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 53,
+    "question": "In a class having 40 boys and some girls, the average ages of boys and girls are 13.5 years and 13 years respectively. The average age of the whole class is 13.4 years. Then the number of girls in the class is",
+    "options": [
+      "10",
+      "11",
+      "13",
+      "20"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 54,
+    "question": "Ratio of present ages of P and Q are 7:3. After four years their ages will be in the ratio 2:1. Then the present age of P (in years) is",
+    "options": [
+      "24",
+      "28",
+      "30",
+      "32"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 55,
+    "question": "The product of two positive numbers A and B is 240. If twice of B is more than A by 4, then B is",
+    "options": [
+      "12",
+      "20",
+      "10",
+      "14"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 56,
+    "question": "Four persons can reep 12 acres in 10 days by working for 9 hours a day. The number of hours in a day that five persons have to work in order to reap 16 acres in 8 days is",
+    "options": [
+      "12",
+      "10",
+      "9",
+      "8"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 57,
+    "question": "A can do a piece of work in 4 hours. B and C together take 3 hours, A and C together take 2 hours to do it. The time taken for B to complete the work is (in hours)",
+    "options": [
+      "10",
+      "12",
+      "8",
+      "9"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 58,
+    "question": "A contractor undertook to finish a certain work in 124 days and employed 120 men on it. After 64 days, he found that he had already done 2/3 of the work. The number of men he can discharge now so that the work may finish in time is",
+    "options": [
+      "24",
+      "56",
+      "64",
+      "80"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 59,
+    "question": "A and B undertook to do a piece of work for Rs. 4,500. A alone could do it in 8 days and B alone in 12 days. With the assistance of C they finished the work in 4 days. Then C's share of money is (in rupees)",
+    "options": [
+      "2,250",
+      "1,500",
+      "750",
+      "375"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 60,
+    "question": "Seven young men and four boys can complete a work in 6 days. A young man completes double the work than a boy in a day. The number of days that five men and four boys require to complete the work is",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "54/7"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 61,
+    "question": "A circular wire of radius 21 cm is cut and bent in the form of a rectangle whose sides are in the ratio of 6:5. Assuming π = 22/7, the area enclosed by the rectangle (in sq. cms) is",
+    "options": [
+      "540",
+      "1080",
+      "2160",
+      "4320"
+    ],
+    "source_page": 15,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_61_page_15.png"
+  },
+  {
+    "q_no": 62,
+    "question": "A rectangular paper, when folded into two congruent parts had a perimeter of 34 cm for each part folded along one set of sides and same is 38 cm when folded along the other set of sides. The area of the paper is (in sq. cms)",
+    "options": [
+      "140",
+      "240",
+      "560",
+      "360"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 63,
+    "question": "The side and one of the diagonals of a rhombus are 13 cm and 24 cm respectively. Its area (in sq. cm) is",
+    "options": [
+      "156",
+      "240",
+      "120",
+      "130"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 64,
+    "question": "The sides of a triangle are 3 cm, 4 cm and 5 cm. The area (in cm²) of the triangle formed by joining the mid-points of the sides of this triangle is",
+    "options": [
+      "6",
+      "3",
+      "3/2",
+      "3/4"
+    ],
+    "source_page": 16,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_64_page_16.png"
+  },
+  {
+    "q_no": 65,
+    "question": "Two persons undertake to do a piece of work for Rs. 1,200. One alone could do it in 6 days and the other in 8 days. With the assistance of a boy they finish it in 3 days. The difference between the shares of the two persons (in rupees) is",
+    "options": [
+      "150",
+      "200",
+      "250",
+      "300"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 66,
+    "question": "Two men undertake to do a piece of work for Rs. 5,600. First man alone can do this work in 7 days while the second man alone can do this work in 8 days. If they work together and complete this work in 3 days with the help of a boy, then the amount the two men together get is (in rupees)",
+    "options": [
+      "4,000",
+      "4,500",
+      "4,580",
+      "4,600"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 67,
+    "question": "If the wages of 6 men for 15 days be Rs. 700, then the wages of 9 men for 12 days will be (in rupees)",
+    "options": [
+      "840",
+      "848",
+      "1050",
+      "900"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 68,
+    "question": "8 men can do a work in 12 days. After 6 days of work, 4 more men were engaged to finish the work. The number of days required to complete the remaining work is",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 69,
+    "question": "The number of 5-digit even numbers that can be formed using the digits 1, 2, 7, 9, 4 without repetition is",
+    "options": [
+      "16",
+      "36",
+      "24",
+      "48"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 70,
+    "question": "From a group of 6 men and 4 women a committee of 4 persons is to be formed. The number of different ways in which it can be done so that the committee has at least one women is",
+    "options": [
+      "210",
+      "225",
+      "195",
+      "185"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 71,
+    "question": "To complete a work A takes 6 days and B takes 12 days. After A and B worked for two days, C joined them and they completed the work on the 3rd day. The number of days C alone takes to complete the same work is",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "8"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 72,
+    "question": "There are five men and four ladies to dine at a round table. The number of ways they can seat themselves so that no two ladies are together is",
+    "options": [
+      "3280",
+      "3180",
+      "3080",
+      "2880"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 73,
+    "question": "A class starts at 9:15 am and lasts till 12:38 pm. Four periods are held during this interval. After every period, 5 minutes are given free to the students. The exact duration of each period (in minutes) is",
+    "options": [
+      "51",
+      "50",
+      "48",
+      "47"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 74,
+    "question": "Two trains of lengths 200 m and 180 m run on parallel tracks. When running in the same direction the faster train crosses the slower one in 38 sec. When running in opposite directions at the speeds same as their earlier speeds, they pass each other completely in 5 sec. The speed of the faster train is (in m/sec.)",
+    "options": [
+      "43",
+      "45",
+      "50",
+      "60"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 75,
+    "question": "A train 135 m long is running with a speed of 50 km/hr. The time taken by it to pass a man who is walking at 4 km/hr in the opposite direction (in seconds) is",
+    "options": [
+      "10",
+      "9",
+      "11",
+      "8"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 76,
+    "question": "The distance between P and Q is 27 kms. Two men A and B walk from P to Q at rates 4 and 5 km an hour, respectively. B reaches Q and returns immediately and meets A at R. The distance from P to R is (in kms)",
+    "options": [
+      "20",
+      "21",
+      "23",
+      "24"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 77,
+    "question": "A train passes a telegraph post in 8 sec. and a 264 m long bridge in 20 sec. Then the length of the train is (in mts.)",
+    "options": [
+      "180",
+      "176",
+      "164",
+      "158"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 78,
+    "question": "A can go round a circular path 8 times in 40 min. If the diameter of the circle is increased to 10 times, the time required by A to go round the new path once, travelling at the same speed as before is (in mins)",
+    "options": [
+      "25",
+      "20",
+      "50",
+      "100"
+    ],
+    "source_page": 19,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_78_page_19.png"
+  },
+  {
+    "q_no": 79,
+    "question": "A man is watching from the top of a tower, a boat speeding away from the tower. The boat makes an angle of depression of 45° with the man's eye when it is at a distance of 60 m from the tower. After 5 sec, the angle of depression becomes 30°. The approximate speed of the boat, assuming it is running in still water (in kmph) (Take √3 = 1.732)",
+    "options": [
+      "31.62",
+      "36",
+      "37.26",
+      "40"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 80,
+    "question": "If 1² + 2² + 3² + ... + x² = x(x+1)(2x+1)/6, then 1² + 3² + 5² + ... + 19² =",
+    "options": [
+      "1330",
+      "2100",
+      "2485",
+      "2500"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 81,
+    "question": "The sum of the series 2/5 + 3/5² + 2/5³ + 3/5⁴ +....∞ is",
+    "options": [
+      "17/24",
+      "15/24",
+      "13/24",
+      "11/24"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 82,
+    "question": "If a body falls 16 m in the 1st second of its motion, 48 m in the 2nd, 80 m in the 3rd, 112 m in the 4th and so on, then the distance it fall during the 11th second of its motion is (in meters)",
+    "options": [
+      "338",
+      "340",
+      "334",
+      "336"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 83,
+    "question": "If it was a Sunday on Jan 1, 2006. The day of the week on Jan 1, 2010 is",
+    "options": [
+      "Sunday",
+      "Saturday",
+      "Friday",
+      "Wednesday"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 84,
+    "question": "The dates of April 2001 on which Wednesdays fall are",
+    "options": [
+      "1, 8, 15, 22, 29",
+      "2, 9, 16, 23, 30",
+      "3, 10, 17, 24",
+      "4, 11, 18, 25"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 85,
+    "question": "The calender for the year 2007 will be the same as for the year",
+    "options": [
+      "2014",
+      "2016",
+      "2017",
+      "2018"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 86,
+    "question": "Which of the following is not a leap year?",
+    "options": [
+      "700",
+      "800",
+      "1600",
+      "2000"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 87,
+    "question": "How many times do the two hands of the clock coincide in a day?",
+    "options": [
+      "22",
+      "24",
+      "20",
+      "21"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 88,
+    "question": "The time a watch loses per day, if its two hands coincide every 64 minutes (in mins.) is",
+    "options": [
+      "96",
+      "80",
+      "38 5/11",
+      "32 8/11"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 89,
+    "question": "The time between 7 and 8 O'clock when the two hands of a clock will be in the same straight line but not together is",
+    "options": [
+      "5 min past 7",
+      "5 2/11 min past 7",
+      "5 3/11 min past 7",
+      "5 5/11 min past 7"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 90,
+    "question": "The angle between the two hands of a clock when the time is 8:30 is",
+    "options": [
+      "80°",
+      "75°",
+      "60°",
+      "105°"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 91,
+    "question": "A starts business with Rs. 3,500 and after 5 months, B joins A with some capital. After a year, if the profit is divided in the ratio 2:3. Then B's contribution in the total capital is (in rupees)",
+    "options": [
+      "9,000",
+      "7,000",
+      "5,000",
+      "4,000"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 92,
+    "question": "A, B and C invested Rs. 8,000, Rs. 4,000 and Rs. 8,000 respectively in a business. A left it after six months and at the end of eighth month, there was a gain of Rs. 4,005. Then the share of B in it is (in rupees)",
+    "options": [
+      "690",
+      "790",
+      "890",
+      "990"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 93,
+    "question": "In business, A and C invested amounts in the ratio 2:1, whereas the ratio between amounts invested by A and B was 3:2. If Rs. 1,57,300 was their profit, the share of B in it (in rupees) is",
+    "options": [
+      "48,000",
+      "47,000",
+      "48,400",
+      "47,400"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 94,
+    "question": "A and B are partners in a business. A contributes 1/4 of the capital for 15 months and B received 1/4 of the profit. The time that B's money was used is",
+    "options": [
+      "1 year",
+      "9 months",
+      "6 months",
+      "10 months"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 95,
+    "question": "The number of bricks, each measuring 25 cm x 15 cm × 8 cm required to construct a wall of dimensions 10 m × 4 m × 5 m when 10% of its volume is occupied by mortar is",
+    "options": [
+      "40,000",
+      "80,000",
+      "70,000",
+      "60,000"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 96,
+    "question": "The radii of two cylinders are in the ratio 3:4 and their heights are in the ratio 5:2. The ratio of their volume is",
+    "options": [
+      "45:32",
+      "27:20",
+      "35:32",
+      "32:45"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 97,
+    "question": "If base radii of a cone is increased by 30% and its slant height is made double, then the percentage increase in the curved surface area is",
+    "options": [
+      "140",
+      "150",
+      "160",
+      "170"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 98,
+    "question": "A hemisphere and a cone have equal bases. If their heights are also equal, the ratio of the areas of their curved surfaces will be",
+    "options": [
+      "1:√2",
+      "√2:1",
+      "1:2",
+      "2:1"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 99,
+    "question": "The height of a conical tent is 14 feet and the radius of its base is 6 feet. If 12 persons sleep in this tent, the average cubic feet of air available to each person (in cubic feet) is",
+    "options": [
+      "30",
+      "33",
+      "36",
+      "44"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 100,
+    "question": "The metallic solid cone is melted and converted into the shape of solid cylinder of equal radius. If the height of the cylinder is 6 m, the height of the cone is (in mts)",
+    "options": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "source_page": 23,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_100_page_23.png"
+  },
+  {
+    "q_no": 101,
+    "question": "The missing term in the sequence 1, 3, 3, 6, 7, 9, ____, 12, 21 is",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 102,
+    "question": "The term that comes next in the arrangement of letters given below is. YEB, WFD, UHG, SKI, ____ is",
+    "options": [
+      "QGL",
+      "QOL",
+      "TOL",
+      "QNL"
+    ],
+    "source_page": 23,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_102_page_23.png"
+  },
+  {
+    "q_no": 103,
+    "question": "The missing term in the following sequence is 4, 9, 25, ____, 121, 169, 289, 361",
+    "options": [
+      "49",
+      "64",
+      "81",
+      "87"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 104,
+    "question": "The 21st term in the sequence 3, 9, 15, 21, ... is",
+    "options": [
+      "117",
+      "123",
+      "121",
+      "119"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 105,
+    "question": "Which term of the sequence 5, 10, 20, 40, ... is 1280?",
+    "options": [
+      "Eighth term",
+      "Ninth term",
+      "Tenth term",
+      "Seventh term"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 106,
+    "question": "7528 is related to 5306, in the same way as 4673 is related to _____.",
+    "options": [
+      "2367",
+      "2451",
+      "2531",
+      "2641"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 107,
+    "question": "25 : 125 :: 49 : _____.",
+    "options": [
+      "206",
+      "180",
+      "216",
+      "343"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 108,
+    "question": "'BELOW' is related to 'OBWEL' in a certain way. The pair among the following having same relationship is",
+    "options": [
+      "REPLY : LRYPE",
+      "ALONG : NAOLG",
+      "DRAFT : FDTRA",
+      "YEARS : RESYA"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 109,
+    "question": "The pair among the following that has the same relationship as OFTEN : FOTNE is",
+    "options": [
+      "HEART : TRAHE",
+      "RISKY : IRSYK",
+      "OPENS : SNEOP",
+      "LUNGS : UNLGS"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 110,
+    "question": "The pair among the following that has the same relationship as that of ROCK : CROK?",
+    "options": [
+      "BALE : ELAB",
+      "MIND : DINM",
+      "MEAN : AEMN",
+      "HAND : NHAD"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 111,
+    "question": "34 : 12 :: 59 : _____.",
+    "options": [
+      "14",
+      "47",
+      "38",
+      "45"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 112,
+    "question": "If PAPER is coded as QCSIW then in that code EXAMPLE is written as",
+    "options": [
+      "FZDUQRL",
+      "FZQDURL",
+      "FZDQURL",
+      "FZQUDRL"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 113,
+    "question": "If LARSEQ is the code word for MASTER, then the code word STEAM is",
+    "options": [
+      "RSEAL",
+      "SREAL",
+      "SREAM",
+      "SRAEL"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 114,
+    "question": "Precaution : Accident :: : Diseases",
+    "options": [
+      "Doctor",
+      "Patient",
+      "Sanitation",
+      "Medicine"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 115,
+    "question": "MP : HK::WZ:",
+    "options": [
+      "QS",
+      "PS",
+      "RU",
+      "RV"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 116,
+    "question": "If AIRTEL is coded as CKTVGN then RELIANCE is coded as",
+    "options": [
+      "TGKNCPEG",
+      "TGNKCPEG",
+      "TGNKPCEG",
+      "TGNKCPGE"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 117,
+    "question": "If CAR, TIN and BOAT are coded as 364, 182 and 7561 respectively, then CONTRACTOR is coded as",
+    "options": [
+      "3521643154",
+      "3521463154",
+      "3524163154",
+      "3521634154"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 118,
+    "question": "The odd thing out of 338, 158, 639, 543, 449 is",
+    "options": [
+      "449",
+      "639",
+      "543",
+      "158"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 119,
+    "question": "In the letter-number sequence ZG 13, , VM 17, TP 19 the correct letter-number that fills the blank is",
+    "options": [
+      "XJ 15",
+      "YI 17",
+      "YI 15",
+      "RS 15"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 120,
+    "question": "The next term in the sequence of letter arrangements is AD, FC, HK, MJ,",
+    "options": [
+      "NQ",
+      "OQ",
+      "MP",
+      "OR"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 121,
+    "question": "A woman going with a boy is asked by another woman about the relationship between them. The woman replied, “My maternal uncle and the uncle of his maternal uncle is the same”. The relationship between the lady and boy is",
+    "options": [
+      "Meternal Grandmother and Grandson",
+      "Mother and Son",
+      "Aunt and Nephew",
+      "Paternal Grandmother and Grandson"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 122,
+    "question": "Pointing to G a person D said, “His only brother is the father of my daughter's father\". Then G is related to D as",
+    "options": [
+      "Grandfather",
+      "Father",
+      "Brother-in-law",
+      "Paternal Uncle"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 123,
+    "question": "Examine the following relationships among members of a family of six persons - A, B, C, D, E and F\n(i) The number of males equals to that of the females\n(ii) A and E are sons of F\n(iii) D is the mother of two, one boy and one girl\n(iv) B is the son of A\n(v) There is one married couple in the family at present\nAn inference that can be drawn from the above information is",
+    "options": [
+      "A, B and C are all females",
+      "A is the husband of D",
+      "D is the grand daughter of F",
+      "E and F are children of D"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 124,
+    "question": "One among 17, 19, 23, 27 and 29 is different from the other four. The one which is different is",
+    "options": [
+      "17",
+      "19",
+      "27",
+      "29"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 125,
+    "question": "K is the brother of N and X. Y is the mother of N and Z is the father of K. The statements among the following that is not definitely true is",
+    "options": [
+      "K is the son of Z",
+      "Y is the wife of Z",
+      "K is the son of Y",
+      "N is the brother of X"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 126,
+    "question": "Anthropology : Man :: Anthology : ?",
+    "options": [
+      "Nature",
+      "Trees",
+      "Apes",
+      "Poems"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 127,
+    "question": "A man stands facing West. He turns 45° in the clockwise direction and then another 180° in the same direction and then 270° in the anticlockwise direction. The direction he is facing now is",
+    "options": [
+      "South",
+      "North-West",
+      "West",
+      "South-West"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 128,
+    "question": "A man walks in the directions given below:\n(i) 50 m to East\n(ii) then 50 m to South\n(iii) and then 120 m to West\n(iv) later 25 m to North\n(v) and finally 70 m to East\nThen the distance (in meters) between the starting point and the last point is",
+    "options": [
+      "25",
+      "30",
+      "40",
+      "50"
+    ],
+    "source_page": 27,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_128_page_27.png"
+  },
+  {
+    "q_no": 129,
+    "question": "Rohan walked 40 metres towards North, took a left turn and walked 20 metres. He again took a left turn and walked 40 metres. The distance and the direction in which he is from the starting point is",
+    "options": [
+      "20 metres East",
+      "20 metres North",
+      "20 metres West",
+      "100 metres South"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 130,
+    "question": "Amit walked 30 metres towards East, took a right turn and walked 40 metres. Then he took a left turn and walked 30 metres. The direction in which he is now with respect to the starting point is",
+    "options": [
+      "North-East",
+      "East",
+      "South-East",
+      "South"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 131,
+    "question": "A, B, C, D, E, F, G and H are sitting around a round table in the same order, for group discussion at equal distances. Their positions are clockwise. If G sits in the North, then D sits in the direction",
+    "options": [
+      "East",
+      "South-East",
+      "South",
+      "South-West"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": "132",
+    "question": "In a dinner party both fish and meat were served. Some took only fish and some only meat. There were some vegetarians who did not accept either. The rest accepted both fish and meat. The correct diagrams that reflects this situation is",
+    "options": [
+      "Two overlapping circles and one separate circle",
+      "One large circle containing a smaller circle, and one separate circle",
+      "Three overlapping circles (Venn diagram style)",
+      "One circle with a concentric smaller circle inside"
+    ],
+    "source_page": 29,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_132_page_29.png"
+  },
+  {
+    "q_no": "133",
+    "question": "Some of the cricket players are tennis players, some tennis players are hockey players and no cricket player is a hockey player. The diagrams that correctly represent the above statements is",
+    "options": [
+      "Three overlapping circles (Venn diagram style)",
+      "Two overlapping circles and one separate circle",
+      "Three circles in a row, each touching the next",
+      "One large circle containing a smaller circle, and one separate circle"
+    ],
+    "source_page": 29,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_133_page_29.png"
+  },
+  {
+    "q_no": "134",
+    "question": "The number that is in all the geometrical figures is",
+    "options": [
+      "4",
+      "5",
+      "8",
+      "3"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 135,
+    "question": "In the set of real numbers the equation 2x + 3y = 5 has",
+    "options": [
+      "no solution",
+      "only one solution",
+      "infinite number of solutions",
+      "finite number of solutions"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 136,
+    "question": "The number with the second, the fifth and the eighth digits in that order of the number 31549786, is a perfect square of a two-digit number x. The units digit of x is",
+    "options": [
+      "1",
+      "6",
+      "4",
+      "2"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 137,
+    "question": "In a row of boys, K is fifth from the left and R is sixth from the right. If they exchange their positions, K becomes the thirteen from the left. Then the position of R from the right is",
+    "options": [
+      "Seventh",
+      "Eleventh",
+      "Fourteenth",
+      "Eighteenth"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 138,
+    "question": "If Rohan ranks seventh from the top and twenty-sixth from the bottom in a class, then the number of students in the class is",
+    "options": [
+      "31",
+      "32",
+      "33",
+      "34"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 139,
+    "question": "If L stands for +, M stands for –, N stands for x, P stands for ÷, then [(14N10)L(42P2)]M8 =",
+    "options": [
+      "153",
+      "216",
+      "248",
+      "251"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 140,
+    "question": "If 20 – 10 means 200, 8 ÷ 4 means 12, 6 × 2 means 4, then [(100 – 10) × (1000 ÷ 1000)] ÷ (100 × 10) =",
+    "options": [
+      "20",
+      "1090",
+      "1900",
+      "0"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 141,
+    "question": "Square : Cube :: Area :",
+    "options": [
+      "Side",
+      "Diagonal",
+      "Volume",
+      "Perimeter"
+    ],
+    "source_page": 31,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_141_page_31.png"
+  },
+  {
+    "q_no": 142,
+    "question": "There are some benches in a classroom. If four students sit on each bench, then three benches are left unoccupied. However, if three students sit on each bench, three students are left standing. The number of students in the class is",
+    "options": [
+      "36",
+      "48",
+      "56",
+      "64"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 143,
+    "question": "In an examination, a student scores 4 marks for every correct answer and loses 1 mark for every wrong answer. If the student attempts all 60 questions and scores 130 marks, the number of questions correctly answered is",
+    "options": [
+      "35",
+      "38",
+      "40",
+      "42"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 144,
+    "question": "K is twice as old as R. Three years ago, K was three times as old as R. The present age of K (in years) is",
+    "options": [
+      "7",
+      "8",
+      "12",
+      "6"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 145,
+    "question": "Age of the father is twice that of the elder son. Ten years hence the age of the father will be three times that of the younger son. If the difference of the ages of the two sons is 15 years, the age (in years) of the father is",
+    "options": [
+      "50",
+      "55",
+      "60",
+      "70"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 146,
+    "question": "Five hundred students appeared in an examination comprising English, Hindi and Mathematics. The diagram gives the number of candidates who failed in different subjects. The percentage of candidates who failed in at least two subjects is",
+    "options": [
+      "0.078",
+      "1.8",
+      "6.8",
+      "7.8"
+    ],
+    "source_page": 32,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_146_page_32.png"
+  },
+  {
+    "q_no": 147,
+    "question": "Given a = 1.10101, b = 1.01010, c = 1.110110 and d = 1.001001. The ascending order of these numbers is",
+    "options": [
+      "d, c, a, b",
+      "d, b, a, c",
+      "c, a, b, d",
+      "b, a, c, d"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 148,
+    "question": "At the end of a meeting all the ten people present shake hands with each other once. The number of handshakes altogether is",
+    "options": [
+      "20",
+      "45",
+      "55",
+      "90"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 149,
+    "question": "In a group of cows and hens if the number of legs are 14 more than twice the number of heads. Then the number of cows is",
+    "options": [
+      "5",
+      "7",
+      "10",
+      "12"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 150,
+    "question": "If 13 times a number added to itself gives 112, then the number is",
+    "options": [
+      "8",
+      "7",
+      "9",
+      "11"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 151,
+    "question": "Manish has passed B.Sc (Botany) with 58% marks and has done a PG Diploma in computer applications. His date of birth is 14th August 1994. He has cleared the computer skill test with 58% marks.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "V"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 152,
+    "question": "Amit Sharma passed BCA examination in 2012 of the age of 22 years with 80% marks. After working for two years she enrolled for PG in Computer Applications. She has secured 55% marks in Computer Skill Test.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 153,
+    "question": "Rajat Batra has passed BCA as well as MCA with 73% marks. He has cleared the Computer Skill Test with 79% marks. His date of birth is 5th August 1986.",
+    "options": [
+      "I",
+      "III",
+      "V",
+      "IV"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 154,
+    "question": "Praveen Kumar has passed BA with 68% marks and PG Diploma in Computer Applications with 70% marks. He has secured 70% marks in Computer Skill Test. His date of birth is 08.02.1992.",
+    "options": [
+      "I",
+      "II",
+      "IV",
+      "V"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 155,
+    "question": "Sukumar passed PGDCA in 2012 at the age of 28 years with 66% marks. After working for three years in Information Technology he enrolled for PG degree in computer applications last year. He has secured 85% marks in his graduation as well as in Computer Skill Test.",
+    "options": [
+      "I",
+      "I",
+      "III",
+      "V"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 156,
+    "question": "Prakash has obtained engineering degree in Computer Science with 66% marks and MCA with 61% marks. He has secured 82% marks in Computer Skill Test. He completes 26 years of age by May 2017.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 157,
+    "question": "Suji has done B.Sc (Physics) and PG Diploma in Computer Applications with 69% marks and 56% marks respectively. She has secured 76% marks in Computer Skill Test. Her date of birth is 10.03.1993",
+    "options": [
+      "I",
+      "I",
+      "II",
+      "IV"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 158,
+    "question": "Monica Sharma has obtained PG diploma in Computer Applications from a reputed institute. She has cleared the Computer Skill Test with 56% marks. She will be completing 27 years of age in July 2017.",
+    "options": [
+      "I",
+      "III",
+      "II",
+      "IV"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 159,
+    "question": "Amar is a science graduate with 61% marks. He has done MCA with 65% marks and 5 years of experience in the area of IT. He has secured 60% marks in Computer Skill Test. His date of birth is 01.01.1987",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 160,
+    "question": "Fatima has passed B.Sc (Honours) and MCA with 73% and 78% marks respectively. She has cleared the Computer Skill Test with 79% marks. Her date of birth is 16.06.1991",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 161,
+    "question": "Shekhar has secured 58% and 85% in XII standard and in the entrance test respectively. He was born on 11th January 1998. He can pay Rs. 20,000/- at the time of admission.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "V"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 162,
+    "question": "Sheela has secured 75% and 80% marks in the XII standard and in the entrance test respectively. She can pay Rs.10,000/- at the time of admission and was born on 15th June 1998.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 163,
+    "question": "Ashok was born on 17th January 1998. He has secured 65% and 75% in XII and in the entrance test respectively. He can pay Rs.15,000/- at the time of admission.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "V"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 164,
+    "question": "Aruna can pay Rs. 20,000/- at the time of admission and has secured 60% and 70% in graduation and in the entrance test respectively. She was born on 5th April 1997.",
+    "options": [
+      "I",
+      "III",
+      "V",
+      "IV"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 165,
+    "question": "Rita was born on 12th June 1996. She can pay Rs. 20,000/- at the time of admission. She has secured 45% and 85% marks in XII and in the entrance test respectively.",
+    "options": [
+      "V",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 166,
+    "question": "Sunil has secured 55% and 75% in XII standard and in the entrance test respectively. He was born on 10th November 1998. He can pay Rs. 20,000/- at the time of admission.",
+    "options": [
+      "II",
+      "III",
+      "IV",
+      "V"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 167,
+    "question": "Prabhat has secured 80% and 60% in the entrance test and XII standard respectively. He can pay Rs. 20,000/- at the time of admission. He was the oldest in his class.",
+    "options": [
+      "V",
+      "I",
+      "III",
+      "IV"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 168,
+    "question": "Akhil was born on 9th July 1997. He can pay Rs. 20,000/- at the time of admission. He has secured 60% and 80% in XII and in the entrance test respectively.",
+    "options": [
+      "I",
+      "V",
+      "IV",
+      "III"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 169,
+    "question": "Arun has secured 55% and 65% in XII standard and in the entrance test respectively. He was born on 19th May 1997. He can pay Rs. 20,000/- at the time of admission.",
+    "options": [
+      "I",
+      "V",
+      "III",
+      "IV"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 170,
+    "question": "Kamala has secured 50% and 55% in XII standard and in the entrance test respectively. She was 16 years 5 months old as on 1st May 2014. She can pay Rs. 20,000/- at the time of admission.",
+    "options": [
+      "I",
+      "III",
+      "I",
+      "V"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 171,
+    "question": "Statement : While hundreds of childless couples are waiting to have a child for adoption, children are sold by some agencies to foreigners for huge sums of money. The agencies source children from poor sections of society illegally.\nCourses of actions:\n(I) A committee should be constituted to look into this matter.\n(II) A law should be enacted to make it mandatory for all nursing homes and hospitals to record births and deaths and to admit abandoned children in specified homes.\n(III) Adoption by foreigners should be completely banned.",
+    "options": [
+      "only I and II",
+      "only II and III",
+      "only I and III",
+      "I, II and III"
+    ],
+    "source_page": 39,
+    "has_image": false
+  },
+  {
+    "q_no": 172,
+    "question": "Although strict vigilance by the police has brought down the rate of night crimes, daylight robberies and chain-snatching etc have only increased.\nCourses of action:\n(I) The police should be asked to stop its vigilance programme during nights.\n(II) The police should be given powers to kill criminals involved in daylight robberies and chain-snatching.\n(III) The police should be directed to reorient its strategy so that daylight crimes are not ignored.",
+    "options": [
+      "I and II",
+      "only III",
+      "only I",
+      "II and III"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 173,
+    "question": "The bank employees have decided to go on a strike again.\n(I) The employees demands should be accepted\n(II) The employees going on strike should be sacked\n(III) The demands made by the employees should be sympathetically considered.",
+    "options": [
+      "I or II",
+      "I or III",
+      "II or III",
+      "Only III"
+    ],
+    "source_page": 40,
+    "has_image": false
+  },
+  {
+    "q_no": 174,
+    "question": "Candidates who appeared for an examination are agitating that several questions are out of syllabus.\n(I) A committee may be constituted to look into the matter.\n(II) The examination may be cancelled.\n(III) Re examination may be conducted if the committee recommends so.",
+    "options": [
+      "I",
+      "II",
+      "I and II",
+      "I and III"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 175,
+    "question": "Many students of the school fell ill for the fourth time in a row in the last six months after consuming food prepared by the school canteen.\n(I) School management should immediately terminate the contract of the canteen and ask for compensation.\n(II) The school management should advise all the students not to eat food articles from the canteen.\n(III) The owner of the canteen should immediately be arrested for negligence.",
+    "options": [
+      "only II",
+      "only III",
+      "only I and II",
+      "only II and III"
+    ],
+    "source_page": 41,
+    "has_image": false
+  },
+  {
+    "q_no": 176,
+    "question": "The number of dropouts from the municipal schools has significantly increased after the withdrawal of mid-day meal scheme.\n(I) The Government should reconsider its decision of withdrawal of mid-day meal scheme.\n(II) The Governmentt should close down some of the municipal schools.\n(III) The Government should carry out a detailed study to find out the reasons for school dropouts.",
+    "options": [
+      "II",
+      "only I",
+      "only I and III",
+      "only II and III"
+    ],
+    "source_page": 42,
+    "has_image": false
+  },
+  {
+    "q_no": 177,
+    "question": "Statement: Increasing levels of air pollution is creating health hazards for people living in the cities. Courses of action: (A) All industries should be shifted to the outskirts of the cities. (B) Transport authorities should take steps for converting all public transport vehicles to run on CNG.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 178,
+    "question": "Statement : Despite good economic progress of the country, significant number of undernourished children has been observed in the rural parts of the country. Courses of action: (A) Govt should increase Wealth Tax/Income Tax and use that money for upliftment of the deprived class. (B) Govt should introduce schemes like free meals in primary schools and make primary education compulsory.",
+    "options": [
+      "V",
+      "IV",
+      "III",
+      "II"
+    ],
+    "source_page": 43,
+    "has_image": false
+  },
+  {
+    "q_no": 179,
+    "question": "Statement: A university librarian reported increased cases of theft of books from the library. Courses of action: (A) Stricter security arrangements should be put in place in order to prevent such incidents. (B) All the students in the university should be made to pay a hefty fine in order to replace the lost books.",
+    "options": [
+      "III",
+      "II",
+      "I",
+      "V"
+    ],
+    "source_page": 44,
+    "has_image": false
+  },
+  {
+    "q_no": 180,
+    "question": "Statement : At least five students were killed due to a stampede in one city school as the students tried to leave the school building, fearing short circuit. Courses of action: (A) The principal of the school should be arrested immediately. (B) The Govt should immediately order closure of the school permanently.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 44,
+    "has_image": false
+  },
+  {
+    "q_no": 181,
+    "question": "Two positions of dice are shown below. The number of points that appear on the face opposite to the face containing 5 points is",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "source_page": 44,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_181_page_44.png"
+  },
+  {
+    "q_no": 182,
+    "question": "P has arrived at 3:30 pm, 40 minutes later than Q. Q was present 15 minutes before the scheduled time of the meeting. The meeting was scheduled at",
+    "options": [
+      "2:55 pm",
+      "3:00 pm",
+      "3:05 pm",
+      "3:10 pm"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 183,
+    "question": "If xyz represents a number written in the decimal system, then the suitable value of x in the equation 5x2+2x5 = 887 is",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 184,
+    "question": "The mirror image of TERMINATE is",
+    "options": [
+      "ТЭЯМІЙАТЭ",
+      "ЗТАЙIWEET",
+      "ЭТАЙІМЯНТ",
+      "ЕТАИІМЯНТ"
+    ],
+    "source_page": 45,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_184_page_45.png"
+  },
+  {
+    "q_no": 185,
+    "question": "The number of triangles in the given figure is",
+    "options": [
+      "12",
+      "18",
+      "22",
+      "26"
+    ],
+    "source_page": 45,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_185_page_45.png"
+  },
+  {
+    "q_no": 186,
+    "question": "Yard : Inch : : Quart :",
+    "options": [
+      "Gallon",
+      "Ounce",
+      "Milk",
+      "Liquid"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 187,
+    "question": "11 : 123 :: 23:",
+    "options": [
+      "531",
+      "529",
+      "527",
+      "523"
+    ],
+    "source_page": 45,
+    "has_image": false
+  },
+  {
+    "q_no": 188,
+    "question": "A, B, C, D and E are sitting on a bench. A is sitting next to B, C is sitting next to D, D is not sitting with E who is on the left end of the bench. C is on the second position from the right. A is to the right of B and E. A and C are sitting together. Then the persons on either side of A are",
+    "options": [
+      "B,D",
+      "B,C",
+      "E,D",
+      "C,E"
+    ],
+    "source_page": 46,
+    "has_image": false
+  },
+  {
+    "q_no": 189,
+    "question": "In the figure below the number in the blank space _________ is",
+    "options": [
+      "1",
+      "4",
+      "3",
+      "6"
+    ],
+    "source_page": 46,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_189_page_46.png"
+  },
+  {
+    "q_no": 190,
+    "question": "In the figure below, the number that fits at the symbol '?' is",
+    "options": [
+      "18",
+      "12",
+      "9",
+      "6"
+    ],
+    "source_page": 46,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_190_page_46.png"
+  },
+  {
+    "q_no": 191,
+    "question": "In the figure below, the number that should be at the symbol '?' is",
+    "options": [
+      "0",
+      "2",
+      "11",
+      "12"
+    ],
+    "source_page": 46,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_191_page_46.png"
+  },
+  {
+    "q_no": 192,
+    "question": "In the figure below, the number at the symbol '?' is",
+    "options": [
+      "64",
+      "144",
+      "169",
+      "25"
+    ],
+    "source_page": 47,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_192_page_47.png"
+  },
+  {
+    "q_no": 193,
+    "question": "In the figure below, the number that fits at '?' is",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "6"
+    ],
+    "source_page": 47,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_193_page_47.png"
+  },
+  {
+    "q_no": 194,
+    "question": "In the figure below, the number that should be at the symbol '?' is",
+    "options": [
+      "94",
+      "76",
+      "16",
+      "73"
+    ],
+    "source_page": 47,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_194_page_47.png"
+  },
+  {
+    "q_no": 195,
+    "question": "The number of triangles in the given figure below",
+    "options": [
+      "18",
+      "20",
+      "24",
+      "27"
+    ],
+    "source_page": 48,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_195_page_48.png"
+  },
+  {
+    "q_no": 196,
+    "question": "The correct choice for '?' in figure A from figure B.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 48,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_196_page_48.png"
+  },
+  {
+    "q_no": 197,
+    "question": "The correct choice for ? in figure A from figure B.",
+    "options": [
+      "I",
+      "II",
+      "III",
+      "IV"
+    ],
+    "source_page": 48,
+    "has_image": true,
+    "image_file": "images/SI_2016_Mains_Paper1/q_197_page_48.png"
+  },
+  {
+    "q_no": 198,
+    "question": "If the digits of the number 5726489 are arranged in ascending order, the number of digits that remain at the same position is",
+    "options": [
+      "none",
+      "one",
+      "two",
+      "three"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 199,
+    "question": "In the number 3276158, if the digits were arranged in ascending order, the digit in the ten-thousands place is",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "source_page": 49,
+    "has_image": false
+  },
+  {
+    "q_no": 200,
+    "question": "The digit that should come next in the number sequence is 987654321876543217654321",
+    "options": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "source_page": 49,
+    "has_image": false
+  }
+]

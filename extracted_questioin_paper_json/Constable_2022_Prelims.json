@@ -1,0 +1,2405 @@
+[
+  {
+    "q_no": 1,
+    "question": "A pair of socks ________ been missing from my room.",
+    "options": [
+      "has",
+      "have",
+      "is",
+      "are"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 2,
+    "question": "I always listen to great speeches carefully so that I ________ implement them in every walk of my life.",
+    "options": [
+      "had",
+      "was",
+      "am",
+      "can"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 3,
+    "question": "The teacher ________ completed this chapter.",
+    "options": [
+      "are",
+      "is",
+      "have",
+      "has"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 4,
+    "question": "My mother ________ the newspaper in the morning.",
+    "options": [
+      "is reading",
+      "was reading",
+      "reads",
+      "will be reading"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 5,
+    "question": "India is ________ country. Every Indian is ________ icon in helping the poor people.",
+    "options": [
+      "a, an",
+      "an, a",
+      "a, the",
+      "of, the"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 6,
+    "question": "The synonym of \"hard\" is",
+    "options": [
+      "beautiful",
+      "firm",
+      "soft",
+      "weak"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 7,
+    "question": "I ________ an appointment with the doctor soon.",
+    "options": [
+      "will make",
+      "had made",
+      "am making",
+      "was making"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 8,
+    "question": "People often ________ games for sports and sports for games.",
+    "options": [
+      "mistaken",
+      "mistaking",
+      "mistake",
+      "mistook"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 9,
+    "question": "Rahul and his friends ________ invited to the party by me.",
+    "options": [
+      "is",
+      "have been",
+      "was",
+      "had"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 10,
+    "question": "The antonym of \"opaque\" is",
+    "options": [
+      "Fragile",
+      "Partial",
+      "Transparent",
+      "Broken"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 11,
+    "question": "If you study history, you ________ that all stories of success are also stories of great failures.",
+    "options": [
+      "see",
+      "think",
+      "will find",
+      "know"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 12,
+    "question": "Back in my native place, we ________ good internet.",
+    "options": [
+      "does not have",
+      "was not have",
+      "did not have",
+      "had not have"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 13,
+    "question": "The police ________ arrested the thieves.",
+    "options": [
+      "has",
+      "have",
+      "is",
+      "are"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 14,
+    "question": "Either of the foot paths ________ to Superintendent's house.",
+    "options": [
+      "lead",
+      "leads",
+      "have led",
+      "is led"
+    ],
+    "source_page": 2,
+    "has_image": false
+  },
+  {
+    "q_no": 15,
+    "question": "I have done a ________ deal of work.",
+    "options": [
+      "big",
+      "great",
+      "huge",
+      "enormous"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 16,
+    "question": "I never feel that I am superior ________ anyone.",
+    "options": [
+      "than",
+      "to",
+      "for",
+      "on"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 17,
+    "question": "Radha and Rima ________ business partners.",
+    "options": [
+      "are",
+      "is",
+      "was",
+      "had been"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 18,
+    "question": "She ________ I cannot disturb her now.",
+    "options": [
+      "has been resting",
+      "had been resting",
+      "is resting",
+      "was resting"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 19,
+    "question": "We ________ two daughters.",
+    "options": [
+      "will have",
+      "has",
+      "have",
+      "having"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 20,
+    "question": "Either Maya or her friend Manju ________ responsible for the picnic plan.",
+    "options": [
+      "are",
+      "was",
+      "is",
+      "were"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 21,
+    "question": "The US dropped ________ on Hiroshima.",
+    "options": [
+      "one bomb",
+      "two bombs",
+      "three bombs",
+      "four bombs"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 22,
+    "question": "________ people were killed instantly after the nuclear bomb blast.",
+    "options": [
+      "Only 1,40,000",
+      "More than 1,40,000",
+      "Less than 1,40,000",
+      "None of the above"
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 23,
+    "question": "Japan Confederation of A & H Bomb Sufferers is made up of the ________",
+    "options": [
+      "survivors of the nuclear bomb blast.",
+      "dead in the nuclear bomb blast.",
+      "children of the people dead in the nuclear bomb blast.",
+      "relatives of the people dead in the nuclear bomb blast."
+    ],
+    "source_page": 3,
+    "has_image": false
+  },
+  {
+    "q_no": 24,
+    "question": "Japan was forced to surrender after the bomb.",
+    "options": [
+      "first",
+      "second",
+      "third",
+      "fourth"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 25,
+    "question": "Victims of the atom bomb blast in Japan continue to die of",
+    "options": [
+      "Cancer.",
+      "Radiation-linked diseases.",
+      "Both cancer and radiation linked diseases.",
+      "Neither cancer nor radiation linked diseases."
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 26,
+    "question": "A wire of length 17 meters is cut into two parts. With one part a square and with another part an equilateral triangle are made. If the area of the square is A Sq. meters and Perimeter is B meters such that B = 2A, then the ratio of the areas of the square and triangle is",
+    "options": [
+      "8:9",
+      "16√3:27",
+      "12:13",
+      "16:12√3"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 27,
+    "question": "If 15th August 2022 is Monday, then the date on Monday which immediately comes after 15th August 2024 is",
+    "options": [
+      "20",
+      "17",
+      "18",
+      "19"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 28,
+    "question": "If 123 more articles can be bought by spending a certain amount when the price of an article is decreased by 33 1/3 %, then the number of articles one could have been bought without discount for the same amount is",
+    "options": [
+      "369",
+      "246",
+      "123",
+      "492"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 29,
+    "question": "45(2/3 of 5/6 + 6 - 1/2 x 3/7 ÷ 15/14) =",
+    "options": [
+      "286",
+      "572",
+      "352",
+      "248"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 30,
+    "question": "If LCM and HCF of two numbers x and y are L and H respectively, then",
+    "options": [
+      "x/H = L/y",
+      "xy=L+H",
+      "x+L=y+H",
+      "xy=LH"
+    ],
+    "source_page": 4,
+    "has_image": false
+  },
+  {
+    "q_no": 31,
+    "question": "The average weight of a group of men is 77.5 kgs. The average weight of a group of women is 70 kgs. The average weight of all the persons of both groups is 74 kgs. The ratio of the number of men and women in the two groups is",
+    "options": [
+      "5 : 6",
+      "8 : 7",
+      "12 : 17",
+      "10 : 13"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 32,
+    "question": "A and B enter into a partnership by investing Rs. 24,000 each. But B has borrowed his investment amount from A at the rate of 10% per annum. To look after the business, B will be paid Rs. 120 per month as salary. At the end of the year, if B's income is half of the income of A, then the total profit is",
+    "options": [
+      "10,080",
+      "9,660",
+      "12,000",
+      "12,060"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 33,
+    "question": "The wages of 3 boys are equal to the wages of 2 men. The amount of work done by 3 men is equal to the amount of work done by 5 boys. If 40 boys and 15 men worked for 8 weeks to complete a work and the total wages they got are equal to Rs.12,600 then the wages 20 boys and 20 men get to complete that work is (in rupees)",
+    "options": [
+      "12,285",
+      "12,730",
+      "24,570",
+      "12,570"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 34,
+    "question": "Ratio of A's last year salary and current year salary is 4 : 5, whereas the ratio of the similar type of salaries of A & B is 3 : 4. The ratio of the last year salaries of A & B is 3 : 4. If B's present salary is Rs. 25,600, then A's last year salary is (in Rupees)",
+    "options": [
+      "12,800",
+      "16,000",
+      "15,480",
+      "10,800"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 35,
+    "question": "The ratios of the ages of two persons before 6 years and after 6 years are 3 : 8 and 7 : 12 respectively. Their present ages respectively are",
+    "options": [
+      "10, 30",
+      "20, 35",
+      "15, 30",
+      "12, 25"
+    ],
+    "source_page": 5,
+    "has_image": false
+  },
+  {
+    "q_no": 36,
+    "question": "In a cylindrical vessel of height 14 cm and radius 5 cm, seven spheres of radius 3 cm were kept. The amount of water that fills the cylindrical vessel is (in cubic cm)",
+    "options": [
+      "308",
+      "452",
+      "336",
+      "412"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 37,
+    "question": "In the given four digit number 3x57 and in the number formed by writing the digits of the given number in reverse order, the difference of the place values of x is",
+    "options": [
+      "1000",
+      "190",
+      "90",
+      "10"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 38,
+    "question": "A shopkeeper bought each packet of 12 articles for Rs.51 and sold them as a packet of 15 articles, each for Rs. 71.25. If he gets a profit of Rs.90, the number of articles he sold is",
+    "options": [
+      "90",
+      "270",
+      "180",
+      "120"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 39,
+    "question": "A is thrice efficient than B. To finish a job independently, the difference of the days they take is 60. If both of them work together and complete 1/3rd of the work and remaining work is done by B alone, the total number of days they took to complete the work is",
+    "options": [
+      "75",
+      "70",
+      "67.5",
+      "72.5"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 40,
+    "question": "The fraction equivalent to 2.57 is",
+    "options": [
+      "232/99",
+      "232/90",
+      "257/90",
+      "257/99"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 41,
+    "question": "Two cyclists start at two points A, B which are separated by 300 meters and moves towards each other with speeds 10 kmph and 5 kmph respectively. From A one travels a distance of x meters and then both of them interchanged their speeds to 5 kmph & 10 kmph respectively. If both of them meet each other exactly at the center, then x =",
+    "options": [
+      "50",
+      "100",
+      "75",
+      "47.5"
+    ],
+    "source_page": 6,
+    "has_image": false
+  },
+  {
+    "q_no": 42,
+    "question": "Pipe A alone can fill a tank in 24 minutes. Pipe B alone can fill the same tank in 36 minutes. Pipe A alone is opened for x minutes and Pipe B alone is opened for y minutes to fill the tank in 30 minutes. Then |x - y| = (in minutes)",
+    "options": [
+      "12",
+      "10",
+      "8",
+      "6"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 43,
+    "question": "In a day the number of times both the hands of a clock coincide is",
+    "options": [
+      "24",
+      "23",
+      "11",
+      "22"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 44,
+    "question": "A train is crossing a platform of length 200 meters in 45 seconds and man standing on the platform in 25 seconds. If a man moves in the direction of the train with a speed of 2 meters per second, then the time taken by the train to cross him is",
+    "options": [
+      "20 5/6 seconds",
+      "31 1/4 seconds",
+      "33 1/3 seconds",
+      "19 2/5 seconds"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 45,
+    "question": "Certain amount is lent for 30%, 20% & 10% compound interest successively for 3 years. When the same amount is lent for simple interest at the rate equal to the average of the above mentioned percentages for three years, the difference of the compound interest and simple interest is Rs. 580. Then the principal amount is (in rupees)",
+    "options": [
+      "5,000",
+      "6,000",
+      "6,500",
+      "5,500"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 46,
+    "question": "2 (3/2 √11 + 5 × 15/√32) =",
+    "options": [
+      "10",
+      "15",
+      "20",
+      "25"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 47,
+    "question": "On a certain principal amount at the rate of 2% per quarter of an year the simple interest after 24 months is Rs. 960. Then the principal amount is",
+    "options": [
+      "Rs. 7,000",
+      "Rs. 5,000",
+      "Rs. 6,000",
+      "Rs. 8,000"
+    ],
+    "source_page": 7,
+    "has_image": false
+  },
+  {
+    "q_no": 48,
+    "question": "If (256)^2.5 × (16)^4.5 ÷ (64)^1.6 = 4^K, then 5K + 4 =",
+    "options": [
+      "70",
+      "65",
+      "75",
+      "100"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 49,
+    "question": "The marked price of an article is Rs. 800 and a customer buys it for Rs. 612 after two successive discounts. If the discount offered at the second time is 15%, then the discount offered at first is",
+    "options": [
+      "12%",
+      "11%",
+      "20%",
+      "10%"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 50,
+    "question": "If the 5 digit number 57xy4 is divisible by 11, then number of such possible numbers is",
+    "options": [
+      "8",
+      "9",
+      "12",
+      "Infinitely many"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 51,
+    "question": "Match the following lists. List - I (Bio fortification) (A) Vitamin C (B) Mineral (C) Protein (D) Vitamin A List - II (Available in) (I) Maize (II) Wheat (III) Pumpkin (IV) Spinach (V) Bitter gourd The correct answer is /",
+    "options": [
+      "(A) (B) (C) (D)\n(1) (II) (IV) (III) (I)",
+      "(A) (B) (C) (D)\n(2) (V) (IV) (III) (II)",
+      "(A) (B) (C) (D)\n(3) (V) (IV) (II) (III)",
+      "(A) (B) (C) (D)\n(4) (IV) (II) (III) (I)"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 52,
+    "question": "The force between charged particles is called",
+    "options": [
+      "Electron Magnetic Force",
+      "Strong Nuclear Force",
+      "Gravitational Force",
+      "Weak Nuclear Force"
+    ],
+    "source_page": 8,
+    "has_image": false
+  },
+  {
+    "q_no": 53,
+    "question": "Match the following items in List-I with corresponding items in List-II and choose the answer. List-I (Names of the Scientists) (A) Albert Einstein (B) C.V. Raman (C) J.J. Thomson (D) S.N. Bose List-II (Major contribution) (I) Discovery of Electron (II) Quantum Statistics (III) Theory of Relativity (IV) Inelastic scattering of light by molecules",
+    "options": [
+      "(1) (A) - (III), (B) - (IV), (C) - (II), (D) - (I)",
+      "(2) (A) - (IV), (B) - (I), (C) – (III), (D) – (II)",
+      "(3) (A) - (III), (B) – (IV), (C) – (I), (D) – (II)",
+      "(4) (A) - (I), (B) - (II), (C) - (III), (D) – (IV)"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 54,
+    "question": "Unburnt carbon particles cause the following problem",
+    "options": [
+      "(1) Cardiac problems",
+      "(2) Skin infection",
+      "(3) Throat infection",
+      "(4) Respiratory problems"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 55,
+    "question": "Boiling Point of Water in Kelvin Scale is",
+    "options": [
+      "(1) 100",
+      "(2) 273.15",
+      "(3) 0",
+      "(4) 373.15"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 56,
+    "question": "Which of the following gases is released into the air by automobile exhaust ?",
+    "options": [
+      "(1) CO",
+      "(2) CO2",
+      "(3) SO2",
+      "(4) NO2"
+    ],
+    "source_page": 9,
+    "has_image": false
+  },
+  {
+    "q_no": 57,
+    "question": "Which type of ecological adaptations are present in plants those grow in conditions where temperature is 25°C and rainfall is less than 25 cm/year ? (A) Reduced leaf lamina (B) Deep rooted root system (C) Thin cuticle (D) Well developed mechanical tissue (E) Root pockets present (F) Well developed aerenchyma (G) Single layered epidermis",
+    "options": [
+      "(B), (F), (G)",
+      "(D), (E), (G)",
+      "(A), (B), (D)",
+      "(A), (C), (E)"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 58,
+    "question": "By consuming in large quantities, which of the following alcohol causes blindness and even death?",
+    "options": [
+      "Ethanol",
+      "Methanol",
+      "Propanol",
+      "Butanol"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 59,
+    "question": "Match the following lists. List I (Ministers) (A) Dr. Virendra Kumar (B) Dr. Mahendra Nath Pandey (C) Dr. Jitendra Singh (D) Dr. Subrahmanyam Jaishankar List II (Portfolio) (I) Heavy Industries (II) Social Justice and empowerment (III) Science and Technology (IV) External Affairs The correct answer/",
+    "options": [
+      "(A) - (II), (B) - (IV), (C) - (I), (D) - (III)",
+      "(A) - (I), (B) - (II), (C) - (III), (D) - (IV)",
+      "(A) - (III), (B) - (I), (C) - (II), (D) - (IV)",
+      "(A) - (II), (B) - (I), (C) - (III), (D) - (IV)"
+    ],
+    "source_page": 10,
+    "has_image": false
+  },
+  {
+    "q_no": 60,
+    "question": "Match the following lists. List 1 (A) Chandrayan (B) Mangalyan (C) Astrosat List II (I) India's first lunar probe (II) India's first inter planetary mission (III) India's first space observatory The correct answer is",
+    "options": [
+      "(1) (A) - (I), (B) - (III), (C) - (II)",
+      "(2) (A) - (I), (B) - (II), (C) - (III)",
+      "(3) (A) - (III), (B) - (I), (C) - (II)",
+      "(4) (A) - (II), (B) - (I), (C) - (III)"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 61,
+    "question": "Which gas leaked during Bhopal gas tragedy in 1984?",
+    "options": [
+      "(1) Methane",
+      "(2) Ethane",
+      "(3) Methyl Isocyanate(MIC)",
+      "(4) Ethyl Alcohol"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 62,
+    "question": "The mosquito repellent used at the home in the form of a coil, liquid etc. is",
+    "options": [
+      "(1) Sedative",
+      "(2) Pesticide",
+      "(3) Insecticide",
+      "(4) Fertilizer"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 63,
+    "question": "What happens to the chemical constituents in leaves before leaf falls ?",
+    "options": [
+      "(1) 'Ca' is mobilized to other parts of the plant",
+      "(2) 'S' is always transported to other plant parts in organic form",
+      "(3) 'P' is mobilized to younger parts of the plant through phloem or xylem",
+      "(4) 'N2' in the form of amino acids is carried to other plant parts through xylem"
+    ],
+    "source_page": 11,
+    "has_image": false
+  },
+  {
+    "q_no": 64,
+    "question": "In which of the following cities is the National Cyber Forensic Laboratory (NCFL) located?",
+    "options": [
+      "Chandigarh",
+      "Bangalore",
+      "Chennai",
+      "Hyderabad"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 65,
+    "question": "How many pillars were identified under Digital India Program?",
+    "options": [
+      "3",
+      "9",
+      "11",
+      "5"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 66,
+    "question": "Match the following lists. List - I (A mineral component of) (A) Ferredoxin (B) Plastocyanin (C) Middle lamellae (D) Chlorophyll List - II (Mineral function) (I) Redox reactions (II) Maintains ribosome structure (III) Stabilizes protein structure (IV) Formation of mitotic spindle The correct answer is /",
+    "options": [
+      "(A) (B) (C) (D)\n(III) (IV) (II) (I)",
+      "(A) (B) (C) (D)\n(III) (I) (IV) (II)",
+      "(A) (B) (C) (D)\n(IV) (I) (III) (II)",
+      "(A) (B) (C) (D)\n(I) (III) (IV) (II)"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 67,
+    "question": "An electron moving in a straight line enters into a non-zero magnetic field and goes undeviated. The angle between the direction of its motion and magnetic field is",
+    "options": [
+      "0°",
+      "30°",
+      "45°",
+      "90°"
+    ],
+    "source_page": 12,
+    "has_image": false
+  },
+  {
+    "q_no": 68,
+    "question": "Which of the following compound is present in bacterial cell, plant cell and also in animal cell ?",
+    "options": [
+      "Cellulose",
+      "Histones",
+      "Non-histone proteins",
+      "Phospholids"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 69,
+    "question": "Which of the following contains CFC ?",
+    "options": [
+      "Varnish",
+      "Wall paint",
+      "Refrigerant",
+      "Aerated drink"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 70,
+    "question": "World energy needs are rising mainly due to",
+    "options": [
+      "Deforestation",
+      "Increasing population and industrialization",
+      "Inflation",
+      "Natural calamities"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 71,
+    "question": "Natural Disaster Management Authority (NDMA) is headed by the",
+    "options": [
+      "Health Minister",
+      "Finance Minister",
+      "Home Minister",
+      "Prime Minister"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 72,
+    "question": "The Constituents of German Silver (Alloy) are",
+    "options": [
+      "Cu, Ag and Zn",
+      "Ag, Ni and Fe",
+      "Fe, Au and Ni",
+      "Cu, Zn and Ni"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 73,
+    "question": "Which of the following fields does not have the Nobel Prize ?",
+    "options": [
+      "Economics",
+      "Literature",
+      "Physics",
+      "Mathematics"
+    ],
+    "source_page": 13,
+    "has_image": false
+  },
+  {
+    "q_no": 74,
+    "question": "The escape velocity on the surface of the earth is",
+    "options": [
+      "9.8 km/s",
+      "11.2 km/s",
+      "19.6 km/s",
+      "4.9 km/s"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 75,
+    "question": "Which of the following is an operating system?",
+    "options": [
+      "Oracle",
+      "Java",
+      "Win runner",
+      "Linux"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 76,
+    "question": "Which of the following has 5 time zones ?",
+    "options": [
+      "Canada",
+      "Sweden",
+      "India",
+      "China"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 77,
+    "question": "India's rank in the World Competitiveness Index 2022 is",
+    "options": [
+      "43",
+      "37",
+      "40",
+      "39"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 78,
+    "question": "Smallpox is caused by _________",
+    "options": [
+      "Ebola virus",
+      "Variola virus",
+      "Herpes Simplex virus",
+      "Influenza virus"
+    ],
+    "source_page": 14,
+    "has_image": false
+  },
+  {
+    "q_no": 79,
+    "question": "The Venn diagram represents Drivers of motor vehicles, Drivers of 3 wheelers, drivers of 4 wheelers, Drivers of the school van",
+    "options": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)"
+    ],
+    "source_page": 14,
+    "has_image": true,
+    "image_file": "images/Constable_2022_Prelims/q_79_cropped.png"
+  },
+  {
+    "q_no": 80,
+    "question": "Which of the following is a finer sedimentary material?",
+    "options": [
+      "Gravel",
+      "Sand",
+      "Slate",
+      "Clay"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 81,
+    "question": "Who discovered rock art sites at Bhimbetka?",
+    "options": [
+      "A.C.L. Carlleye",
+      "V.S. Wakankar",
+      "H.D. Sankalia",
+      "M.L.K. Murthy"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 82,
+    "question": "The First attempt of entering Indian territory was made in 711 A.D. by the Arabs. Who was the Caliph at that time ?",
+    "options": [
+      "Al-Hajaj",
+      "Al-Walid",
+      "Al-Bakar",
+      "Al-Qadir"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 83,
+    "question": "Identify the Asafjahi ruler who ceded Kadapa, Kurnool, Bellari and Anantapur to East India Company.",
+    "options": [
+      "Nizam - ul - Mulk",
+      "Nizam - Ali - Khan",
+      "Sikander - Jha",
+      "Afzal - ud - daula"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 84,
+    "question": "Select the one of the alternatives, which is different from the other three alternatives.",
+    "options": [
+      "DHLP",
+      "EIMQ",
+      "LPTX",
+      "AEIO"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 85,
+    "question": "_______ ship was decommissioned at Naval Dockyard in Mumbai.",
+    "options": [
+      "INS Vikrant",
+      "INS Parakram",
+      "INS Rainbow",
+      "INS Gomati"
+    ],
+    "source_page": 15,
+    "has_image": false
+  },
+  {
+    "q_no": 86,
+    "question": "Which one of the pairs is not correctly matched ? (Artist) (Dance Form)",
+    "options": [
+      "Kunchu Kurup - Kathakali",
+      "Rukmini Devi - Bharatanatyam",
+      "Kelucharan Mahapatra - Manipuri",
+      "Birju Maharaj - Kathak"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 87,
+    "question": "_______ leads in sugar exports in the world.",
+    "options": [
+      "India",
+      "Brazil",
+      "Egypt",
+      "Thailand"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 88,
+    "question": "Which one of the following is the largest site of Indus valley (Harappa) civilization?",
+    "options": [
+      "Mohenjo-Daro",
+      "Harappa",
+      "Dholavira",
+      "Kalibangan"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 89,
+    "question": "Which of the following mountains are formed due to stress?",
+    "options": [
+      "Himalayas",
+      "Black forest",
+      "Vosges",
+      "Mt. Cotopaxi"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 90,
+    "question": "Identify the States, whose integration with Indian union became a serious problem.",
+    "options": [
+      "Bhopal, Travancore, Bikaneer",
+      "Hyderabad, Junagadh, Kashmir",
+      "Hyderabad, Junagadh, Nawanagar",
+      "Kashmir, Hyderabad, Mysore"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 91,
+    "question": "Who received 57th Jnanpith Award ?",
+    "options": [
+      "Nilmani Phookan Jr",
+      "Akkitham Achuthan Namboothiri",
+      "Damodar Mauzo",
+      "Amitav Ghosh"
+    ],
+    "source_page": 16,
+    "has_image": false
+  },
+  {
+    "q_no": 92,
+    "question": "Who was the author of \"Shiva Yoga Saram\" a famous book of Kakatiya age?",
+    "options": [
+      "Vidyanatha",
+      "Jayapasenani",
+      "Kolanu Ganapatideva",
+      "Baddenna"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 93,
+    "question": "Two entities are given to the left of :: and these are related in some way. One entity and '?' are given to the right of ::. Select a suitable alternative to replace'?' so as to keep the analogy. PEN: 35:: RAN:?",
+    "options": [
+      "35",
+      "32",
+      "33",
+      "36"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 94,
+    "question": "Select the suitable alternative to replace the blank space to complete the following series. B19N, E14P,, K7T, N5V",
+    "options": [
+      "H10R",
+      "J10S",
+      "19P",
+      "H9R"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 95,
+    "question": "Three different views of a cube having the labels A, B, C, D, E, F on its faces are given below. If this cube is unfolded, it looks like",
+    "options": [
+      "(1)",
+      "(2)",
+      "(3)",
+      "(4)"
+    ],
+    "source_page": 17,
+    "has_image": true,
+    "image_file": "images/Constable_2022_Prelims/q_95_cropped.png"
+  },
+  {
+    "q_no": 96,
+    "question": "On which day Lok Sabha accepted the separate Telangana State Bill ?",
+    "options": [
+      "16th February, 2014",
+      "18th March, 2014",
+      "18th February, 2014",
+      "20th February, 2014"
+    ],
+    "source_page": 17,
+    "has_image": false
+  },
+  {
+    "q_no": 97,
+    "question": "Arrange the following in Chronological order\n(a) Second Carnatic war\n(b) Battle of Buxar\n(c) Third Anglo-Mysore war\n(d) First Anglo-Maratha war",
+    "options": [
+      "(a), (b), (c), (d)",
+      "(a), (c), (b), (d)",
+      "(a), (b), (d), (c)",
+      "(b), (a), (c), (d)"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 98,
+    "question": "Match the List - I with List - II and select the correct answer.\nList - I\n(Texts)\n(a) Kesavasuta\n(b) Adipurana\n(c) Durgeshnandini\n(d) Pancali Sabdam\nList - II\n(Languages)\n(i) Bengali\n(ii) Tamil\n(iii) Marathi\n(iv) Kannada",
+    "options": [
+      "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+      "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)",
+      "(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 99,
+    "question": "Kartarpur Sahib corridor connects Gurudwara Darbar Sahib in Pakistan with ________ in India.",
+    "options": [
+      "Dera Baba Nanak shrine in Gurdaspur",
+      "Golden temple in Amritsar",
+      "Nankana Sahib",
+      "Wagah"
+    ],
+    "source_page": 18,
+    "has_image": false
+  },
+  {
+    "q_no": 100,
+    "question": "A person starts at a point A and travelled 13 meters towards North-East and then travelled 12 meters towards South and from there again travelled 13 meters towards North-East. From there he travelled a distance of 10 meters towards West and reached the final position B. Then the direction of A from B and distance of B from A are respectively",
+    "options": [
+      "South and 12 meters",
+      "North and 12 meters",
+      "South-East and 15 meters",
+      "North-West and 15 meters"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 101,
+    "question": "Which state is the largest producer of Chilli in India?",
+    "options": [
+      "Karnataka",
+      "Gujarat",
+      "Kerala",
+      "Andhra Pradesh"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 102,
+    "question": "Identify the Inscription of Kakatiyas which describes the declaration of Sovereign Power in the year 1163 CE by Rudradeva.",
+    "options": [
+      "Anumakonda Thousand Temple Pillar epigraph",
+      "Bayyam Tank epigraph",
+      "Warangal fort epigraph",
+      "Srisailam epigraph"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 103,
+    "question": "Where did the 'Mahboob-Shahi Mills' founded in 1884 located?",
+    "options": [
+      "Hyderabad",
+      "Gulbarga",
+      "Nanded",
+      "Warangal"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 104,
+    "question": "Select the suitable alternative to replace '?' which completes the following series. 2, 4, 7, 12, 19, 30, ?",
+    "options": [
+      "43",
+      "39",
+      "35",
+      "45"
+    ],
+    "source_page": 19,
+    "has_image": false
+  },
+  {
+    "q_no": 105,
+    "question": "What is the vaccine given usually to children in the age group of 5 to 15?",
+    "options": [
+      "Malaria",
+      "Measles-Rubella",
+      "Intravenous Polio Vaccine",
+      "Diphtheria"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 106,
+    "question": "Which one of the following statements is not correct about growth of English Education in India?",
+    "options": [
+      "The 1813 Charter Act allocated Rs 1,00,000 (one lakh) towards promoting the knowledge of modern sciences and improvement of literature.",
+      "Babington Macaulay issued his famous minute on English Education on 2nd February 1835.",
+      "The famous Woods Dispatch of 1854 was another important step in the development of Education in India.",
+      "In 1864 Hunter Committee was appointed to review the growth of Higher Education in India."
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 107,
+    "question": "Who is the first woman combat pilot in Indian Army ?",
+    "options": [
+      "Captain Abhilasha Barak",
+      "Captain Shashikala",
+      "Captain Vinodini Sharma",
+      "Captain Vir Bala"
+    ],
+    "source_page": 20,
+    "has_image": false
+  },
+  {
+    "q_no": 108,
+    "question": "In a code language 'fortune favour the brave' is written as '5e 3e 6r 7e'; 'Ram is brave leader' is written as '3m 2s 5e 6d'; 'Leader favour the follower' is written as '8r 3e 6r 6d'; 'favour the Ram' is written as '3m 3e 6r'. In the same language 'Ram is fortune leader' is coded as :",
+    "options": [
+      "6d 7e 2s 3m",
+      "6r 7e 3e 3m",
+      "6r 8r 3e 6d",
+      "6d 7e 3m 8r"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 109,
+    "question": "P.K. Sinha recently stepped down from which position ?",
+    "options": [
+      "Economic Affairs Secretary",
+      "Principal Advisor to Prime Minister",
+      "Education Secretary",
+      "NITI Aayog CEO"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 110,
+    "question": "In which year does 'Ramji Gond' Revolted against Nizam of Hyderabad ?",
+    "options": [
+      "1854",
+      "1855",
+      "1860",
+      "1862"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 111,
+    "question": "Navneet Kaur, the player in recent news is associated with",
+    "options": [
+      "Football",
+      "Hockey",
+      "Wrestling",
+      "Tennis"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 112,
+    "question": "Which place in Telangana Region became a prominent Military Camp during Kalyani Chalukyas ?",
+    "options": [
+      "Patancheru",
+      "Kalyani",
+      "Vemulawada",
+      "Sanigaram"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 113,
+    "question": "Which among the following is India's deepest landlocked and protected port ?",
+    "options": [
+      "Chennai",
+      "Kandla",
+      "Paradeep",
+      "Vishakhapatnam"
+    ],
+    "source_page": 21,
+    "has_image": false
+  },
+  {
+    "q_no": 114,
+    "question": "On which line does the date change by exactly one day when it is crossed?",
+    "options": [
+      "Equator",
+      "Prime meridian",
+      "International Date Line",
+      "Tropic of cancer"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 115,
+    "question": "Let A=B≠C=D≤E<F. Which of the following is correct?",
+    "options": [
+      "A>C",
+      "D > B",
+      "A>C⇒D> B",
+      "D > B ⇒ A < C"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 116,
+    "question": "Which of the following states or Union Territories is home to the Pir Panjal range?",
+    "options": [
+      "Arunachal Pradesh",
+      "Uttar Pradesh",
+      "Uttarakhand",
+      "Jammu & Kashmir"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 117,
+    "question": "Who appoints the Supreme Court judges?",
+    "options": [
+      "Prime Minister",
+      "Attorney General",
+      "Vice President",
+      "President"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 118,
+    "question": "A recent mega merger of a bank and a non-banking finance company involved",
+    "options": [
+      "HDFC and HDFC bank",
+      "DHFL and HDFC bank",
+      "IDFC and ICICI bank",
+      "Indiabulls and SBI"
+    ],
+    "source_page": 22,
+    "has_image": false
+  },
+  {
+    "q_no": 119,
+    "question": "Danish Siddiqui, the Pulitzer Prize winner for feature photography, worked for",
+    "options": [
+      "AFP",
+      "Reuters",
+      "TASS",
+      "Xinhua"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 120,
+    "question": "M is son of A, R is daughter of V, S is sister of M and R. B is married to S and K is son of B. M is only brother of S and R. L is daughter of R. Then L is related to A as",
+    "options": [
+      "Daughter-in-law",
+      "Daughter",
+      "Grand daughter",
+      "Aunt"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 121,
+    "question": "According to a popular view of scholars in which diamond mine does the World famous 'Kohinoor Diamond' found ?",
+    "options": [
+      "Kollur",
+      "Samarlakota",
+      "Vajrakarur",
+      "Kolar"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 122,
+    "question": "Who among the following persons wrote “Nitisara” in Sanskrit?",
+    "options": [
+      "King Rudradeva",
+      "Jayapa Senani",
+      "Manavalli Ramakrishna",
+      "None of the above"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 123,
+    "question": "In a certain code language if GAME = 30, RAT = 42, then GREAT will be equal to",
+    "options": [
+      "46",
+      "64",
+      "59",
+      "56"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 124,
+    "question": "How many schedules are there in the Indian Constitution ?",
+    "options": [
+      "12",
+      "10",
+      "11",
+      "9"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 125,
+    "question": "Identify the Velama ruler who has shifted the capital city from a Amanagallu to Rachakonda.",
+    "options": [
+      "Singama Nayaka-I",
+      "Betha Nayaka",
+      "Anapota Nayaka-I",
+      "Kumara Singama Nayaka"
+    ],
+    "source_page": 23,
+    "has_image": false
+  },
+  {
+    "q_no": 126,
+    "question": "Select the suitable alternative to replace '?' in the following so as to keep the analogy as is there in the two sets of numbers given left to '?' mark\n7:49:56::5:25:30::?",
+    "options": [
+      "4:16:64",
+      "3:9:12",
+      "8:16:24",
+      "5:30:35"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 127,
+    "question": "Which one of the language-culture groups represent the oldest speech family of India ?",
+    "options": [
+      "Aryan",
+      "Dravidian",
+      "Austric",
+      "Sino-Tibetan"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 128,
+    "question": "Identify the wrong pair.\n(Newspaper) (Persons)",
+    "options": [
+      "Amrit Bazar Patrika - Motilal Ghosh",
+      "Bengalee - Surendranath Benerjee",
+      "Yugantar - Arabindo Ghosh",
+      "Sandhya - Brahmabandhav Upadhyay"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 129,
+    "question": "\"Dakshinapatapathi\" was title of Satavahana King",
+    "options": [
+      "Satakarni I",
+      "Pulomavi II",
+      "Gautamiputra Satakarni",
+      "Yagna sree satakarni"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 130,
+    "question": "Gandhiji was not associated with one of the following news papers",
+    "options": [
+      "Navajeevan",
+      "Satyagrahi",
+      "Harijan",
+      "Young India"
+    ],
+    "source_page": 24,
+    "has_image": false
+  },
+  {
+    "q_no": 131,
+    "question": "Who was the First Indian to have dissected a dead body in modern time?",
+    "options": [
+      "U.N. Brahmachari",
+      "U.N. Dutt",
+      "K.N. Das",
+      "Madusudan Gupta"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 132,
+    "question": "The group of seven (G7) held its 47th summit in",
+    "options": [
+      "England",
+      "Washington",
+      "Oslo",
+      "Cuba"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 133,
+    "question": "In which Qutub Shahi Sultan court Addanki Gangadhara Kavi was in",
+    "options": [
+      "Ibrahim-Quli-Qutubshah",
+      "Muhammad-Quli-Qutubshah",
+      "Muhammad-Qutubshah",
+      "Abdullah Qutubshah"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 134,
+    "question": "What is the old name of Secunderabad ?",
+    "options": [
+      "Mohalla",
+      "Lashkar",
+      "Patnam",
+      "Dewdi"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 135,
+    "question": "Who married “Rudrabhattarika\" the daughter of Saka King Rudrasena ?",
+    "options": [
+      "Santamula I",
+      "Mahariputra Virapurushadatta",
+      "Ehuvala Santamula",
+      "Rudrapurusha Datta"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 136,
+    "question": "Which state of India first implemented the Right to Information Act (RTI) ?",
+    "options": [
+      "Tamil Nadu",
+      "Telangana",
+      "Madhya Pradesh",
+      "Bihar"
+    ],
+    "source_page": 25,
+    "has_image": false
+  },
+  {
+    "q_no": 137,
+    "question": "Which Qutub Shahi Sultan was murdered in the year 1543 CE by his own son Jamsheed?",
+    "options": [
+      "Sultan Quli Qutub-ul-Mulk",
+      "Ibrahim - Quli",
+      "Muhammad - Quli",
+      "Taneshah"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 138,
+    "question": "The famous 'Siddeshwara Temple' centered at Hanumakonda was constructed by",
+    "options": [
+      "Rudradeva I",
+      "Prola Raja I",
+      "Rudramadevi",
+      "Achitendra"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 139,
+    "question": "Identify the Shankarachrya's four headquarters of monasteries.",
+    "options": [
+      "Kanchi, Sringeri, Dwaraka and Puri",
+      "Puri, Badrinarayana, Kanchi and Sringeri",
+      "Puri, Kanchi, Sringeri and Dwaraka",
+      "Dwaraka, Badrinarayana, Sringeri, and Puri"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 140,
+    "question": "Elysee Palace is the official residence of the President of",
+    "options": [
+      "United Kingdom",
+      "Srilanka",
+      "France",
+      "Singapore"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 141,
+    "question": "Pointing to a photograph covered with a curtain a man said to his brother-in-law that \"she is mother of my father's daughter\". Then the person in the photograph is related to brother-in-law of that man as",
+    "options": [
+      "Mother-in-law",
+      "Daughter-in-law",
+      "Sister",
+      "Mother"
+    ],
+    "source_page": 26,
+    "has_image": false
+  },
+  {
+    "q_no": 142,
+    "question": "In the below series select the suitable number and letter from the alternatives to replace the two blank spaces. Z, X, 22, 20, R, P, 14, 12, J, _____, _____.",
+    "options": [
+      "H, F",
+      "8, 6",
+      "H, 6",
+      "8, F"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 143,
+    "question": "Which of the following is in the Island of Andaman & Nicobar?",
+    "options": [
+      "Guindy National Park",
+      "Kaziranga National Park",
+      "Mahatma Gandhi Marine National Park",
+      "Bison National Park"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 144,
+    "question": "Buddhavanam, a Buddhist heritage theme park, was inaugurated recently at",
+    "options": [
+      "Hyderabad",
+      "Bhuvanagiri",
+      "Nagarjunakonda",
+      "Sarangapur"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 145,
+    "question": "Which one of the following is not correctly matched?",
+    "options": [
+      "Muchiri - Port of Chera Kingdom",
+      "Madurai - Capital of Pandya Kingdom",
+      "Korkai - Capital of Chera Kingdom",
+      "Uraiyur - Capital of early Cholas"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 146,
+    "question": "Identify the place where famous Jain scholar \"Rishbanatha\" lived after escaping the torture of Eastern Chalukyan King Raja Raja Narendra in Telangana.",
+    "options": [
+      "Warangal",
+      "Hanumakonda",
+      "Patancheru",
+      "Kotilingala"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 147,
+    "question": "From the given alternatives, select the one which is different from the other three alternatives.",
+    "options": [
+      "49",
+      "81",
+      "25",
+      "64"
+    ],
+    "source_page": 27,
+    "has_image": false
+  },
+  {
+    "q_no": 148,
+    "question": "The Council of Ministers of Government of India is controlled by",
+    "options": [
+      "Rajya Sabha only",
+      "Lok Sabha only",
+      "Both Rajya Sabha and Lok Sabha",
+      "None of the above"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 149,
+    "question": "Nikhat Jareen won a Goldmedal at the 2022 IBS Women's World Boxing championship in",
+    "options": [
+      "Antalya",
+      "Tokyo",
+      "Poland",
+      "Turkey"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 150,
+    "question": "Which Commission was appointed by the British Government to enquire in to Indian expenditure?",
+    "options": [
+      "Welby Commission",
+      "Andrews Commission",
+      "Elliot Commission",
+      "Strachy Commission"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 151,
+    "question": "Which one of the following pairs is not correctly matched ? (Associations) (Reformers)",
+    "options": [
+      "Atmiya Sabha - Raja Ram Mohan Roy",
+      "Dharma Sabha - Prasanna Kumar Tagore",
+      "Tatvabodhini Sabha - Devendranath Tagore",
+      "Goodwill Fraternity - Keshava Chandrasen"
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 152,
+    "question": "Which one of the following statement is not correct regarding Delhi Sultanate ?",
+    "options": [
+      "Alauddin Khilji separated religion from politics.",
+      "Mohd. Bin Tughlaq imposed a ban on 'Sati' condemning it as an unfair practice.",
+      "Firozshah Tughlaq imposed 'Jizya' even on Brahmans.",
+      "Sikinder Lodi exempted the collection of Jizya on Hindus."
+    ],
+    "source_page": 28,
+    "has_image": false
+  },
+  {
+    "q_no": 153,
+    "question": "Identify the wrong pair. (Teachers) (Seth that follow different paths)",
+    "options": [
+      "Purana Kassapa - Sceptics",
+      "Pakuda Katyayana - Anuvadins",
+      "Makkhali Gosala - Ajivikas",
+      "Ajita Kesakamblin - Charvaka"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 154,
+    "question": "India is a Sovereign Socialist ______ country.",
+    "options": [
+      "Secular",
+      "Democratic",
+      "Republic",
+      "All the above"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 155,
+    "question": "Identify the capital city of Rastrakutas",
+    "options": [
+      "Badami",
+      "Vengi",
+      "Pattadakal",
+      "Manyakheta"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 156,
+    "question": "In a certain code, table is ball, ball is glass, glass is chair, chair is computer, computer is pencil and pencil is book. Then according to this code language the instrument to draw figures is",
+    "options": [
+      "Pencil",
+      "Table",
+      "Computer",
+      "Book"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 157,
+    "question": "Identify the duration of the months for the 'Kharif Cropping Season in India'",
+    "options": [
+      "October - March",
+      "April - June",
+      "June - September",
+      "None of the above"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 158,
+    "question": "The environment clearance granted by the Union Ministry of Environment is for ______ years.",
+    "options": [
+      "10",
+      "8",
+      "5",
+      "3"
+    ],
+    "source_page": 29,
+    "has_image": false
+  },
+  {
+    "q_no": 159,
+    "question": "Identify the Stretch for which the National Waterway 1 of India (NW 1) was setup",
+    "options": [
+      "Allahabad - Haldia stretch",
+      "Sadiya - Dhubri stretch",
+      "Kottapuram - Kollam stretch",
+      "None of the above"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 160,
+    "question": "Who described Sarvai Papanna's revolt as \"Robin-hood-like\" event?",
+    "options": [
+      "Barbara & Thomas Metcalf",
+      "Irvin & Munroe",
+      "Richards & Cohen",
+      "Sherwani & Yazdani"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 161,
+    "question": "A1, A2, A3, A4, A5, A6, A7 and A8 are sitting around a circular table facing the direction opposite to that of the Centre. A8 is fourth to the left of A2 and second to the right of A6. A1 is third to the left of A3, who is not an immediate neighbour of A6. A7 is second to the left of A1. A4 is second to the right of A5. The person fifth to the left of A6 is",
+    "options": [
+      "A4",
+      "A2",
+      "A5",
+      "A3"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 162,
+    "question": "Which of the following is the largest plateau in India?",
+    "options": [
+      "Malwa plateau",
+      "Vindhyachal plateau",
+      "Deccan plateau",
+      "Chota Nagpur plateau"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": 163,
+    "question": "Where is the International Court of Justice located?",
+    "options": [
+      "New York city",
+      "Hague",
+      "Geneva",
+      "Hyderabad"
+    ],
+    "source_page": 30,
+    "has_image": false
+  },
+  {
+    "q_no": "164",
+    "question": "Which of the following statements is not correct about Arthasastra ?",
+    "options": [
+      "It opens with the auspicious symbol of 'om'.",
+      "A pandit of Tanjore district handed over manuscript of Arthasastra to R. Shamasastry, the librarian of Mysore Government oriental library in 1905.",
+      "It does not contain any reference to Mauryas, their empire, Chandragupta or Pataliputra.",
+      "It consists of 16 books (Adhikaranas)."
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": "165",
+    "question": "Two entities are given to the left of :: and these are related in some way. One entity and '? are given to the right of :: . Select a suitable alternative to replace'?'so as to keep the analogy. FLAME: UOZNV : : BRING:?",
+    "options": [
+      "YIRMT",
+      "YIQOS",
+      "YJRNU",
+      "YJQMS"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": "166",
+    "question": "The number of triangles that can be identified from the figure given below is",
+    "options": [
+      "12",
+      "16",
+      "17",
+      "20"
+    ],
+    "source_page": 31,
+    "has_image": true,
+    "image_file": "images/Constable_2022_Prelims/q_166_cropped.png"
+  },
+  {
+    "q_no": "167",
+    "question": "Chandragupta II is the son of",
+    "options": [
+      "Samudragupta and Dattadevi",
+      "Samudragupta and Kumaradevi",
+      "Samudragupta and Dhruvadevi",
+      "Samudragupta and Prabhavatidevi"
+    ],
+    "source_page": 31,
+    "has_image": false
+  },
+  {
+    "q_no": 168,
+    "question": "When was the First Industrial Policy of India launched ?",
+    "options": [
+      "1951",
+      "1965",
+      "1948",
+      "1981"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 169,
+    "question": "Match the following. (Freedom Fighters) (a) Jayanarayan Vyas (b) K. C. Reddy (c) Premnath Bazaz (d) Ramananda Tirtha (Native States) (i) Kashmir (ii) Hyderabad (iii) Mysore (iv) Jodhpur The correct answer is / (a) (b) (c) (d)",
+    "options": [
+      "(i) (ii) (iii) (iv)",
+      "(iv) (ii) (i) (iii)",
+      "(iv) (i) (iii) (ii)",
+      "(iv) (iii) (i) (ii)"
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 170,
+    "question": "Which one of the following statements is not correct about Jinnah, the Muslim League Leader?",
+    "options": [
+      "Jinnah played a very important role in the conclusion of Lucknow pact in 1916.",
+      "In 1929, Jinnah formulated fourteen points and made it clear that it was only on its basis the unity between the Hindus and Muslims would be possible in future.",
+      "He has nothing to do with the inception of Muslim league in 1906.",
+      "Under the leadership of Jinnah the All India Muslim league passed a resolution at Lahore for the separate nation for Muslims in 1944."
+    ],
+    "source_page": 32,
+    "has_image": false
+  },
+  {
+    "q_no": 171,
+    "question": "Which of the following is not a function of Parliament?",
+    "options": [
+      "Distribution of revenues between the Union and the States",
+      "Distribution of Legislative powers",
+      "Disputes relating to Water",
+      "Coordination between States"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 172,
+    "question": "The Farman of founding the Osmania University was issued by Osman - Ali - Khan on",
+    "options": [
+      "24th April, 1917",
+      "26th April, 1917",
+      "29th August, 1917",
+      "17th Sep., 1918"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 173,
+    "question": "The Luni river, which originates in the pushkar valley of the Aravalli range, ends in which among the following?",
+    "options": [
+      "As a tributary to Sabarmati",
+      "Rann of Kutch",
+      "Arabian sea",
+      "Mt. Abu"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 174,
+    "question": "In a row n number of boys are sitting facing north. A boy X is twenty second from the left and another boy Y is thirty three from the right. A boy Z is third to right of X and sixth to the left of Y in that row. Then n =",
+    "options": [
+      "65",
+      "64",
+      "62",
+      "63"
+    ],
+    "source_page": 33,
+    "has_image": false
+  },
+  {
+    "q_no": 175,
+    "question": "Using this notation A⊕B means A ÷ B A⊖B means A + B A⊗B means A – B A⊚B means A × B A△B means B^A (57⊕3⊖6⊗9⊚3)△2=",
+    "options": [
+      "1⊕4",
+      "1△4",
+      "1⊕4",
+      "4⊕1"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 176,
+    "question": "Where is Sardar Vallabhbhai Patel National Police Academy located?",
+    "options": [
+      "Mussoorie",
+      "Nagpur",
+      "Hyderabad",
+      "Chandigarh"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 177,
+    "question": "Which of the following is the cold desert of India?",
+    "options": [
+      "Thar Desert",
+      "Ladakh Desert",
+      "Rann of Kutch Desert",
+      "Jaisalmer Desert"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 178,
+    "question": "Which of the following is an example of extrusive Igneous rock?",
+    "options": [
+      "Coal",
+      "Graphite",
+      "Fossils",
+      "Basalt"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 179,
+    "question": "Where were “Roman Coins” found in Telangana?",
+    "options": [
+      "Nustulapur",
+      "Medak",
+      "Nalgonda",
+      "Adilabad"
+    ],
+    "source_page": 34,
+    "has_image": false
+  },
+  {
+    "q_no": 180,
+    "question": "The total sanctioned strength of the Rajya Sabha is _________ members.",
+    "options": [
+      "210",
+      "230",
+      "250",
+      "280"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 181,
+    "question": "The North Atlantic Treaty Organization (NATO) is an alliance of countries from",
+    "options": [
+      "Europe and North America",
+      "Europe",
+      "Europe and South America",
+      "Baltic States"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 182,
+    "question": "Which Prime Minister of India launched the MGNREGA?",
+    "options": [
+      "Rajeev Gandhi",
+      "Jawaharlal Nehru",
+      "Man Mohan Singh",
+      "Deve Gowda"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 183,
+    "question": "Two entities are given to the left of :: and these are related in some way. One entity and '?' are given to the right of :: . Select a suitable alternative to replace '?'so as to keep the analogy. CIL: BIG:: DAY:?",
+    "options": [
+      "BAT",
+      "CAT",
+      "EAT",
+      "PAY"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 184,
+    "question": "Equality before law is part of",
+    "options": [
+      "Right to Freedom",
+      "Right against Exploitation",
+      "Right to Equality",
+      "Right to Constitutional Remedies"
+    ],
+    "source_page": 35,
+    "has_image": false
+  },
+  {
+    "q_no": 185,
+    "question": "\"Communal harmony could not be permanently established in our country so long as highly distorted versions of history were taught in her schools and colleges, through the history text books.\" Who among the following said this?",
+    "options": [
+      "Ravindranath Tagore",
+      "Mahatma Gandhi",
+      "Dr. Sarvepalli Radhakrishnan",
+      "Jawaharlal Nehru"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 186,
+    "question": "What is not a characteristic of Indian Economy ?",
+    "options": [
+      "Low per capita income",
+      "Excessive dependence on Agriculture",
+      "High rate of population growth",
+      "High per capita income"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 187,
+    "question": "Identify the Buddhist work which referred about \"ASMAKA\" Janapada ?",
+    "options": [
+      "Vinaya Pitaka",
+      "Sutta Pitaka",
+      "AbhiDhamma Pitaka",
+      "Anguttara Nikaya"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 188,
+    "question": "Which Qutub Shahi General donated 'Sreekurmam' village to Lord Sreekurmanatha ?",
+    "options": [
+      "Amit Kumar",
+      "Ashwa Rao",
+      "Manikchand",
+      "Raman Rao"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 189,
+    "question": "Select the one from the following alternatives which is different from the other three alternatives.",
+    "options": [
+      "Fly",
+      "Walk",
+      "Run",
+      "Static"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 190,
+    "question": "Ghughua Fossil Park is located in",
+    "options": [
+      "Tamil Nadu",
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Chhattisgarh"
+    ],
+    "source_page": 36,
+    "has_image": false
+  },
+  {
+    "q_no": 191,
+    "question": "In a certain code language 'DOMAIN' is written as 'ALJXFK'. Then in the same code language 'RATION' is coded as",
+    "options": [
+      "OXQFLK",
+      "OXPELK",
+      "KLFQXO",
+      "KLEPXO"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 192,
+    "question": "Ukai dam is situated across which of the following rivers?",
+    "options": [
+      "Tapi",
+      "Narmada",
+      "Kaveri",
+      "Chambal"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 193,
+    "question": "Which Velama Royal Family Women constructed the “Nagasamudram Tank”?",
+    "options": [
+      "Nagamallika",
+      "Nagaladevi",
+      "Nagambika",
+      "Nagasree"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 194,
+    "question": "Which one of the statements is not correct about revolutionaries of Bengal?",
+    "options": [
+      "The first swadeshi dacoity to raise funds was organized in Chittagong in 1906.",
+      "A bomb manufacturing centre was setup at Maniktala in Calcutta.",
+      "Maniktala bomb conspiracy case accused Aurobindo Ghosh and his brother Barindra Kumar Ghosh were arrested.",
+      "C.R. Das was defense counsel for Aurobindo Ghosh."
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 195,
+    "question": "The word (may not have any meaning) to be filled in the blank space in the following series is A, CD, GHI, _____, UVWXY, EFGHIJ",
+    "options": [
+      "LMNO",
+      "KLMN",
+      "NOPQ",
+      "MNOP"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 196,
+    "question": "India signed an agreement to sell Brahmos supersonic cruise missile to __________ recently.",
+    "options": [
+      "Ukraine",
+      "Srilanka",
+      "Philippines",
+      "Myanmar"
+    ],
+    "source_page": 37,
+    "has_image": false
+  },
+  {
+    "q_no": 197,
+    "question": "The recently restored 200-year-old heritage building in Osmania University College for women was originally a",
+    "options": [
+      "British Residency",
+      "Nizam's guest house",
+      "Military headquarters",
+      "Royal polo grounds"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 198,
+    "question": "Which of the following statements is not correct about reign of Akbar ?",
+    "options": [
+      "Raja Todarmal, a Rajput noble became Akbar's revenue minister.",
+      "Raja Birbal, a Brahmin rose to high position and became Diwan.",
+      "Raja Mansingh, brother-in-law of Akbar was made the commander of the military forces.",
+      "Promoulgation of a new religious philosophy called the Din-I-Illahi in 1582 by Akbar."
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 199,
+    "question": "Who constructed the “Bhimeshwara Temple” at Vemulawada?",
+    "options": [
+      "Baddega",
+      "Arikesari-I",
+      "Yuddhamalla-I",
+      "Yuddhamalla-II"
+    ],
+    "source_page": 38,
+    "has_image": false
+  },
+  {
+    "q_no": 200,
+    "question": "What is Metaverse ?",
+    "options": [
+      "Video Game",
+      "Piece of puzzle",
+      "Virtual World for people's interaction",
+      "Low Connectivity"
+    ],
+    "source_page": 38,
+    "has_image": false
+  }
+]
