@@ -117,8 +117,7 @@
       "occational"
     ],
     "source_page": 6,
-    "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_10_page_6.png"
+    "has_image": false
   },
   {
     "q_no": 11,
@@ -622,8 +621,7 @@
       "12, 16, 20"
     ],
     "source_page": 14,
-    "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_52_page_14.png"
+    "has_image": false
   },
   {
     "q_no": 53,
@@ -767,8 +765,7 @@
       "N"
     ],
     "source_page": 15,
-    "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_64_page_15.png"
+    "has_image": false
   },
   {
     "q_no": 65,
@@ -949,7 +946,7 @@
     ],
     "source_page": 18,
     "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_79_page_18.png"
+    "image_file": "images/Constable_2015_Mains/q_79_cropped.png"
   },
   {
     "q_no": 80,
@@ -962,7 +959,7 @@
     ],
     "source_page": 18,
     "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_80_page_18.png"
+    "image_file": "images/Constable_2015_Mains/q_80_cropped.png"
   },
   {
     "q_no": 81,
@@ -1226,8 +1223,7 @@
       "(A) is false but (R) is true"
     ],
     "source_page": 22,
-    "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_102_page_22.png"
+    "has_image": false
   },
   {
     "q_no": 103,
@@ -1239,8 +1235,7 @@
       "Buddhist texts reflect revolutionary ideas about women and stressed that women should have freedom to shape her life and personality"
     ],
     "source_page": 22,
-    "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_103_page_22.png"
+    "has_image": false
   },
   {
     "q_no": 104,
@@ -1925,7 +1920,7 @@
     ],
     "source_page": 36,
     "has_image": true,
-    "image_file": "images/Constable_2015_Mains/q_160_page_36.png"
+    "image_file": "images/Constable_2015_Mains/q_160_cropped.png"
   },
   {
     "q_no": 161,

@@ -188,9 +188,8 @@
       "256",
       "128"
     ],
-    "has_image": true,
-    "source_page": 4,
-    "image_file": "images/SI_2016_Prelims_Paper/q_16_page_4.png"
+    "has_image": false,
+    "source_page": 4
   },
   {
     "q_no": 17,
@@ -549,9 +548,8 @@
       "(3) (a) (iv), (b) (iii), (c) (ii), (d) (i)",
       "(4) (a) (ii), (b) (i), (c) (iv), (d) (iii)"
     ],
-    "has_image": true,
-    "source_page": 13,
-    "image_file": "images/SI_2016_Prelims_Paper/q_46_page_13.png"
+    "has_image": false,
+    "source_page": 13
   },
   {
     "q_no": 47,
@@ -562,9 +560,8 @@
       "(3) (a) (iii), (b) (i), (c) (iv), (d) (ii)",
       "(4) (a) (ii), (b) (iii), (c) (i), (d) (iv)"
     ],
-    "has_image": true,
-    "source_page": 13,
-    "image_file": "images/SI_2016_Prelims_Paper/q_47_page_13.png"
+    "has_image": false,
+    "source_page": 13
   },
   {
     "q_no": 48,
@@ -577,7 +574,7 @@
     ],
     "has_image": true,
     "source_page": 14,
-    "image_file": "images/SI_2016_Prelims_Paper/q_48_page_14.png"
+    "image_file": "images/SI_2016_Prelims_Paper/q_48_cropped.png"
   },
   {
     "q_no": 49,
@@ -612,9 +609,8 @@
       "(a), (b) and (c)",
       "(a) only"
     ],
-    "has_image": true,
-    "source_page": 15,
-    "image_file": "images/SI_2016_Prelims_Paper/q_51_page_15.png"
+    "has_image": false,
+    "source_page": 15
   },
   {
     "q_no": 52,
@@ -649,9 +645,8 @@
       "16",
       "36"
     ],
-    "has_image": true,
-    "source_page": 16,
-    "image_file": "images/SI_2016_Prelims_Paper/q_54_page_16.png"
+    "has_image": false,
+    "source_page": 16
   },
   {
     "q_no": 55,
@@ -962,9 +957,8 @@
       "30",
       "144"
     ],
-    "has_image": true,
-    "source_page": 20,
-    "image_file": "images/SI_2016_Prelims_Paper/q_84_page_20.png"
+    "has_image": false,
+    "source_page": 20
   },
   {
     "q_no": 85,
@@ -1023,9 +1017,8 @@
       "39",
       "40"
     ],
-    "has_image": true,
-    "source_page": 22,
-    "image_file": "images/SI_2016_Prelims_Paper/q_89_page_22.png"
+    "has_image": false,
+    "source_page": 22
   },
   {
     "q_no": 90,
@@ -1086,7 +1079,7 @@
     ],
     "has_image": true,
     "source_page": 24,
-    "image_file": "images/SI_2016_Prelims_Paper/q_94_page_24.png"
+    "image_file": "images/SI_2016_Prelims_Paper/q_94_cropped.png"
   },
   {
     "q_no": 95,
@@ -1099,7 +1092,7 @@
     ],
     "has_image": true,
     "source_page": 24,
-    "image_file": "images/SI_2016_Prelims_Paper/q_95_page_24.png"
+    "image_file": "images/SI_2016_Prelims_Paper/q_95_cropped.png"
   },
   {
     "q_no": 96,
@@ -1136,7 +1129,7 @@
     ],
     "has_image": true,
     "source_page": 24,
-    "image_file": "images/SI_2016_Prelims_Paper/q_98_page_24.png"
+    "image_file": "images/SI_2016_Prelims_Paper/q_98_cropped.png"
   },
   {
     "q_no": 99,
@@ -1149,7 +1142,7 @@
     ],
     "has_image": true,
     "source_page": 25,
-    "image_file": "images/SI_2016_Prelims_Paper/q_99_page_25.png"
+    "image_file": "images/SI_2016_Prelims_Paper/q_99_cropped.png"
   },
   {
     "q_no": 100,
@@ -1162,7 +1155,7 @@
     ],
     "has_image": true,
     "source_page": 25,
-    "image_file": "images/SI_2016_Prelims_Paper/q_100_page_25.png"
+    "image_file": "images/SI_2016_Prelims_Paper/q_100_cropped.png"
   },
   {
     "q_no": 101,
@@ -1569,9 +1562,8 @@
       "Tiger",
       "Rhino"
     ],
-    "has_image": true,
-    "source_page": 36,
-    "image_file": "images/SI_2016_Prelims_Paper/q_134_page_36.png"
+    "has_image": false,
+    "source_page": 36
   },
   {
     "q_no": 135,

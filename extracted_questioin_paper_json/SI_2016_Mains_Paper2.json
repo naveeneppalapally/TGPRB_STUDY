@@ -1364,9 +1364,8 @@
       "a & c",
       "a"
     ],
-    "has_image": true,
-    "source_page": 39,
-    "image_file": "images/SI_2016_Mains_Paper2/q_114_page_39.png"
+    "has_image": false,
+    "source_page": 39
   },
   {
     "q_no": 115,

@@ -308,9 +308,8 @@
       "1:2",
       "2:5"
     ],
-    "has_image": true,
-    "source_page": 8,
-    "image_file": "images/SI_2022_Prelims/q_26_page_8.png"
+    "has_image": false,
+    "source_page": 8
   },
   {
     "q_no": 27,
@@ -611,7 +610,7 @@
     ],
     "has_image": true,
     "source_page": 13,
-    "image_file": "images/SI_2022_Prelims/q_1_page_13.png"
+    "image_file": "images/SI_2022_Prelims/q_1_cropped.png"
   },
   {
     "q_no": 52,
@@ -636,7 +635,7 @@
     ],
     "has_image": true,
     "source_page": 13,
-    "image_file": "images/SI_2022_Prelims/q_53_page_13.png"
+    "image_file": "images/SI_2022_Prelims/q_53_cropped.png"
   },
   {
     "q_no": 54,
@@ -791,9 +790,8 @@
       "if the data in both the statements I & II together is sufficient to answer the question;",
       "if the data in both the statements I & II together is not sufficient to answer the question."
     ],
-    "has_image": true,
-    "source_page": 18,
-    "image_file": "images/SI_2022_Prelims/q_66_page_18.png"
+    "has_image": false,
+    "source_page": 18
   },
   {
     "q_no": 67,
@@ -804,9 +802,8 @@
       "Can not be recruited because he does not have minimum 2 years work experience",
       "Will be referred to CEO"
     ],
-    "has_image": true,
-    "source_page": 19,
-    "image_file": "images/SI_2022_Prelims/q_67_page_19.png"
+    "has_image": false,
+    "source_page": 19
   },
   {
     "q_no": 68,
@@ -817,9 +814,8 @@
       "Can not be appointed as he does not have 2 years work experience",
       "Can be refered to CEO"
     ],
-    "has_image": true,
-    "source_page": 20,
-    "image_file": "images/SI_2022_Prelims/q_68_page_20.png"
+    "has_image": false,
+    "source_page": 20
   },
   {
     "q_no": 69,
@@ -830,9 +826,8 @@
       "D",
       "G"
     ],
-    "has_image": true,
-    "source_page": 21,
-    "image_file": "images/SI_2022_Prelims/q_69_page_21.png"
+    "has_image": false,
+    "source_page": 21
   },
   {
     "q_no": 70,
@@ -1023,9 +1018,8 @@
       "125/3",
       "121/36"
     ],
-    "has_image": true,
-    "source_page": 24,
-    "image_file": "images/SI_2022_Prelims/q_85_page_24.png"
+    "has_image": false,
+    "source_page": 24
   },
   {
     "q_no": 86,
@@ -1096,9 +1090,8 @@
       "I8G",
       "E4C"
     ],
-    "has_image": true,
-    "source_page": 25,
-    "image_file": "images/SI_2022_Prelims/q_91_page_25.png"
+    "has_image": false,
+    "source_page": 25
   },
   {
     "q_no": 92,
@@ -1109,9 +1102,8 @@
       "Fire",
       "Environment"
     ],
-    "has_image": true,
-    "source_page": 25,
-    "image_file": "images/SI_2022_Prelims/q_92_page_25.png"
+    "has_image": false,
+    "source_page": 25
   },
   {
     "q_no": 93,
@@ -1122,9 +1114,8 @@
       "17:288:272",
       "16:225:239"
     ],
-    "has_image": true,
-    "source_page": 25,
-    "image_file": "images/SI_2022_Prelims/q_93_page_25.png"
+    "has_image": false,
+    "source_page": 25
   },
   {
     "q_no": 94,
@@ -1137,7 +1128,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2022_Prelims/q_94_page_26.png"
+    "image_file": "images/SI_2022_Prelims/q_94_cropped.png"
   },
   {
     "q_no": 95,
@@ -1150,7 +1141,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2022_Prelims/q_95_page_26.png"
+    "image_file": "images/SI_2022_Prelims/q_95_cropped.png"
   },
   {
     "q_no": 96,
@@ -1163,7 +1154,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2022_Prelims/q_96_page_26.png"
+    "image_file": "images/SI_2022_Prelims/q_96_cropped.png"
   },
   {
     "q_no": 97,
@@ -1176,7 +1167,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2022_Prelims/q_97_page_26.png"
+    "image_file": "images/SI_2022_Prelims/q_97_cropped.png"
   },
   {
     "q_no": 98,
@@ -1189,7 +1180,7 @@
     ],
     "has_image": true,
     "source_page": 27,
-    "image_file": "images/SI_2022_Prelims/q_98_page_27.png"
+    "image_file": "images/SI_2022_Prelims/q_98_cropped.png"
   },
   {
     "q_no": 99,
@@ -1202,7 +1193,7 @@
     ],
     "has_image": true,
     "source_page": 27,
-    "image_file": "images/SI_2022_Prelims/q_99_page_27.png"
+    "image_file": "images/SI_2022_Prelims/q_99_cropped.png"
   },
   {
     "q_no": 100,
@@ -1215,7 +1206,7 @@
     ],
     "has_image": true,
     "source_page": 27,
-    "image_file": "images/SI_2022_Prelims/q_100_page_27.png"
+    "image_file": "images/SI_2022_Prelims/q_100_cropped.png"
   },
   {
     "q_no": 101,

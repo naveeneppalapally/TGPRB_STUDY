@@ -153,8 +153,7 @@
       "4,050"
     ],
     "source_page": 4,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_13_page_4.png"
+    "has_image": false
   },
   {
     "q_no": 14,
@@ -730,8 +729,7 @@
       "4320"
     ],
     "source_page": 13,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_61_page_13.png"
+    "has_image": false
   },
   {
     "q_no": 62,
@@ -767,8 +765,7 @@
       "3/4"
     ],
     "source_page": 14,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_64_page_14.png"
+    "has_image": false
   },
   {
     "q_no": 65,
@@ -936,8 +933,7 @@
       "100"
     ],
     "source_page": 17,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_78_page_17.png"
+    "has_image": false
   },
   {
     "q_no": 79,
@@ -1201,8 +1197,7 @@
       "18"
     ],
     "source_page": 21,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_100_page_21.png"
+    "has_image": false
   },
   {
     "q_no": 101,
@@ -1226,8 +1221,7 @@
       "QNL"
     ],
     "source_page": 21,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_102_page_21.png"
+    "has_image": false
   },
   {
     "q_no": 103,
@@ -1539,8 +1533,7 @@
       "50"
     ],
     "source_page": 25,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_128_page_25.png"
+    "has_image": false
   },
   {
     "q_no": 129,
@@ -1589,7 +1582,7 @@
     ],
     "source_page": 27,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_132_page_27.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_132_cropped.png"
   },
   {
     "q_no": 133,
@@ -1602,7 +1595,7 @@
     ],
     "source_page": 27,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_133_page_27.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_133_cropped.png"
   },
   {
     "q_no": 134,
@@ -1698,8 +1691,7 @@
       "Perimeter"
     ],
     "source_page": 29,
-    "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_141_page_29.png"
+    "has_image": false
   },
   {
     "q_no": 142,
@@ -1760,7 +1752,7 @@
     ],
     "source_page": 30,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_146_page_30.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_146_cropped.png"
   },
   {
     "q_no": 147,
@@ -2181,7 +2173,7 @@
     ],
     "source_page": 42,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_181_page_42.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_181_cropped.png"
   },
   {
     "q_no": 182,
@@ -2218,7 +2210,7 @@
     ],
     "source_page": 43,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_184_page_43.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_184_cropped.png"
   },
   {
     "q_no": 185,
@@ -2231,7 +2223,7 @@
     ],
     "source_page": 43,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_185_page_43.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_185_cropped.png"
   },
   {
     "q_no": 186,
@@ -2280,7 +2272,7 @@
     ],
     "source_page": 44,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_189_page_44.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_189_cropped.png"
   },
   {
     "q_no": 190,
@@ -2293,7 +2285,7 @@
     ],
     "source_page": 44,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_190_page_44.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_190_cropped.png"
   },
   {
     "q_no": 191,
@@ -2306,7 +2298,7 @@
     ],
     "source_page": 44,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_191_page_44.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_191_cropped.png"
   },
   {
     "q_no": 192,
@@ -2319,7 +2311,7 @@
     ],
     "source_page": 45,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_192_page_45.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_192_cropped.png"
   },
   {
     "q_no": 193,
@@ -2332,7 +2324,7 @@
     ],
     "source_page": 45,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_193_page_45.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_193_cropped.png"
   },
   {
     "q_no": 194,
@@ -2345,7 +2337,7 @@
     ],
     "source_page": 45,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_194_page_45.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_194_cropped.png"
   },
   {
     "q_no": 195,
@@ -2358,7 +2350,7 @@
     ],
     "source_page": 46,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_195_page_46.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_195_cropped.png"
   },
   {
     "q_no": 196,
@@ -2371,7 +2363,7 @@
     ],
     "source_page": 46,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_196_page_46.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_196_cropped.png"
   },
   {
     "q_no": 197,
@@ -2384,7 +2376,7 @@
     ],
     "source_page": 46,
     "has_image": true,
-    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_197_page_46.png"
+    "image_file": "images/SI_2016_Final_Arithmetic_Paper/q_197_cropped.png"
   },
   {
     "q_no": 198,

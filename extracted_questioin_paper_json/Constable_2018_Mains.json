@@ -33,8 +33,7 @@
       "(4) was playing"
     ],
     "source_page": 4,
-    "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_3_page_4.png"
+    "has_image": false
   },
   {
     "q_no": 4,
@@ -58,8 +57,7 @@
       "(4) Neither the teacher nor the students is present in the class."
     ],
     "source_page": 4,
-    "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_5_page_4.png"
+    "has_image": false
   },
   {
     "q_no": 6,
@@ -95,8 +93,7 @@
       "The green walls will have been painted by us."
     ],
     "source_page": 5,
-    "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_8_page_5.png"
+    "has_image": false
   },
   {
     "q_no": 9,
@@ -264,8 +261,7 @@
       "s/2"
     ],
     "source_page": 8,
-    "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_22_page_8.png"
+    "has_image": false
   },
   {
     "q_no": 23,
@@ -398,7 +394,7 @@
     ],
     "source_page": 11,
     "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_33_page_11.png"
+    "image_file": "images/Constable_2018_Mains/q_33_cropped.png"
   },
   {
     "q_no": 34,
@@ -590,8 +586,7 @@
       "Photoperiodism"
     ],
     "source_page": 15,
-    "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_49_page_15.png"
+    "has_image": false
   },
   {
     "q_no": 50,
@@ -1636,7 +1631,7 @@
     ],
     "source_page": 44,
     "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_136_page_44.png"
+    "image_file": "images/Constable_2018_Mains/q_136_cropped.png"
   },
   {
     "q_no": 137,
@@ -1673,7 +1668,7 @@
     ],
     "source_page": 44,
     "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_139_page_44.png"
+    "image_file": "images/Constable_2018_Mains/q_139_cropped.png"
   },
   {
     "q_no": 140,
@@ -1733,8 +1728,7 @@
       "150"
     ],
     "source_page": 46,
-    "has_image": true,
-    "image_file": "images/Constable_2018_Mains/q_144_page_46.png"
+    "has_image": false
   },
   {
     "q_no": 145,

@@ -140,9 +140,8 @@
       "6",
       "8"
     ],
-    "has_image": true,
-    "source_page": 8,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_12_page_8.png"
+    "has_image": false,
+    "source_page": 8
   },
   {
     "q_no": 13,
@@ -705,9 +704,8 @@
       "(1/√3)154√15",
       "154√15"
     ],
-    "has_image": true,
-    "source_page": 17,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_59_page_17.png"
+    "has_image": false,
+    "source_page": 17
   },
   {
     "q_no": 60,
@@ -778,9 +776,8 @@
       "441",
       "363"
     ],
-    "has_image": true,
-    "source_page": 18,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_65_page_18.png"
+    "has_image": false,
+    "source_page": 18
   },
   {
     "q_no": 66,
@@ -899,9 +896,8 @@
       "1331",
       "7545"
     ],
-    "has_image": true,
-    "source_page": 20,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_75_page_20.png"
+    "has_image": false,
+    "source_page": 20
   },
   {
     "q_no": 76,
@@ -996,9 +992,8 @@
       "3.5",
       "2.5"
     ],
-    "has_image": true,
-    "source_page": 22,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_83_page_22.png"
+    "has_image": false,
+    "source_page": 22
   },
   {
     "q_no": 84,
@@ -1129,9 +1124,8 @@
       "1254",
       "938"
     ],
-    "has_image": true,
-    "source_page": 24,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_94_page_24.png"
+    "has_image": false,
+    "source_page": 24
   },
   {
     "q_no": 95,
@@ -1142,9 +1136,8 @@
       "563",
       "486"
     ],
-    "has_image": true,
-    "source_page": 24,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_95_page_24.png"
+    "has_image": false,
+    "source_page": 24
   },
   {
     "q_no": 96,
@@ -1253,7 +1246,7 @@
     ],
     "has_image": true,
     "source_page": 27,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_104_page_27.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_104_cropped.png"
   },
   {
     "q_no": 105,
@@ -1266,7 +1259,7 @@
     ],
     "has_image": true,
     "source_page": 27,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_105_page_27.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_105_cropped.png"
   },
   {
     "q_no": 106,
@@ -1279,7 +1272,7 @@
     ],
     "has_image": true,
     "source_page": 27,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_106_page_27.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_106_cropped.png"
   },
   {
     "q_no": 107,
@@ -1304,7 +1297,7 @@
     ],
     "has_image": true,
     "source_page": 28,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_108_page_28.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_108_cropped.png"
   },
   {
     "q_no": 109,
@@ -1317,7 +1310,7 @@
     ],
     "has_image": true,
     "source_page": 28,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_109_page_28.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_109_cropped.png"
   },
   {
     "q_no": 110,
@@ -1343,7 +1336,7 @@
     ],
     "has_image": true,
     "source_page": 29,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_111_page_29.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_111_cropped.png"
   },
   {
     "q_no": 112,
@@ -1368,7 +1361,7 @@
     ],
     "has_image": true,
     "source_page": 30,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_113_page_30.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_113_cropped.png"
   },
   {
     "q_no": 114,
@@ -1381,7 +1374,7 @@
     ],
     "has_image": true,
     "source_page": 30,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_114_page_30.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_114_cropped.png"
   },
   {
     "q_no": 115,
@@ -1406,7 +1399,7 @@
     ],
     "has_image": true,
     "source_page": 31,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_116_page_31.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_116_cropped.png"
   },
   {
     "q_no": 117,
@@ -1419,7 +1412,7 @@
     ],
     "has_image": true,
     "source_page": 31,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_117_page_31.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_117_cropped.png"
   },
   {
     "q_no": 118,
@@ -1442,9 +1435,8 @@
       "3x(number of small cubes having 2 faces painted) - 20",
       "(number of small cubes having no face painted) +4"
     ],
-    "has_image": true,
-    "source_page": 32,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_119_page_32.png"
+    "has_image": false,
+    "source_page": 32
   },
   {
     "q_no": 120,
@@ -1469,7 +1461,7 @@
     ],
     "has_image": true,
     "source_page": 33,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_121_page_33.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_121_cropped.png"
   },
   {
     "q_no": 122,
@@ -1482,7 +1474,7 @@
     ],
     "has_image": true,
     "source_page": 33,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_122_page_33.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_122_cropped.png"
   },
   {
     "q_no": 123,
@@ -1507,7 +1499,7 @@
     ],
     "has_image": true,
     "source_page": 34,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_124_page_34.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_124_cropped.png"
   },
   {
     "q_no": 125,
@@ -1530,9 +1522,8 @@
       "femur",
       "liver"
     ],
-    "has_image": true,
-    "source_page": 35,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_126_page_35.png"
+    "has_image": false,
+    "source_page": 35
   },
   {
     "q_no": 127,
@@ -1581,7 +1572,7 @@
     ],
     "has_image": true,
     "source_page": 36,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_130_page_36.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_130_cropped.png"
   },
   {
     "q_no": 131,
@@ -1594,7 +1585,7 @@
     ],
     "has_image": true,
     "source_page": 36,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_131_page_36.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_131_cropped.png"
   },
   {
     "q_no": 132,
@@ -1607,7 +1598,7 @@
     ],
     "has_image": true,
     "source_page": 37,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_132_page_37.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_132_cropped.png"
   },
   {
     "q_no": 133,
@@ -1620,7 +1611,7 @@
     ],
     "has_image": true,
     "source_page": 37,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_133_page_37.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_133_cropped.png"
   },
   {
     "q_no": 134,
@@ -1645,7 +1636,7 @@
     ],
     "has_image": true,
     "source_page": 38,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_135_page_38.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_135_cropped.png"
   },
   {
     "q_no": 136,
@@ -1658,7 +1649,7 @@
     ],
     "has_image": true,
     "source_page": 38,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_136_page_38.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_136_cropped.png"
   },
   {
     "q_no": 137,
@@ -1671,7 +1662,7 @@
     ],
     "has_image": true,
     "source_page": 38,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_137_page_38.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_137_cropped.png"
   },
   {
     "q_no": 138,
@@ -1684,7 +1675,7 @@
     ],
     "has_image": true,
     "source_page": 39,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_138_page_39.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_138_cropped.png"
   },
   {
     "q_no": 139,
@@ -1721,7 +1712,7 @@
     ],
     "has_image": true,
     "source_page": 39,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_141_page_39.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_141_cropped.png"
   },
   {
     "q_no": 142,
@@ -1732,9 +1723,8 @@
       "125",
       "36"
     ],
-    "has_image": true,
-    "source_page": 40,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_142_page_40.png"
+    "has_image": false,
+    "source_page": 40
   },
   {
     "q_no": 143,
@@ -1745,9 +1735,8 @@
       "Blue",
       "Black"
     ],
-    "has_image": true,
-    "source_page": 40,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_143_page_40.png"
+    "has_image": false,
+    "source_page": 40
   },
   {
     "q_no": 144,
@@ -1758,9 +1747,8 @@
       "81",
       "625"
     ],
-    "has_image": true,
-    "source_page": 40,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_144_page_40.png"
+    "has_image": false,
+    "source_page": 40
   },
   {
     "q_no": 145,
@@ -1771,9 +1759,8 @@
       "M",
       "V"
     ],
-    "has_image": true,
-    "source_page": 40,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_145_page_40.png"
+    "has_image": false,
+    "source_page": 40
   },
   {
     "q_no": 146,
@@ -1784,9 +1771,8 @@
       "EQRH",
       "WRMK"
     ],
-    "has_image": true,
-    "source_page": 40,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_146_page_40.png"
+    "has_image": false,
+    "source_page": 40
   },
   {
     "q_no": 151,
@@ -2123,7 +2109,7 @@
     ],
     "has_image": true,
     "source_page": 52,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_178_page_52.png"
+    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_178_cropped.png"
   },
   {
     "q_no": 179,
@@ -2134,9 +2120,8 @@
       "R @ U",
       "S $ U"
     ],
-    "has_image": true,
-    "source_page": 53,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_179_page_53.png"
+    "has_image": false,
+    "source_page": 53
   },
   {
     "q_no": 180,
@@ -2195,9 +2180,8 @@
       "(A) is true but (R) is false",
       "(A) is false but (R) is true"
     ],
-    "has_image": true,
-    "source_page": 54,
-    "image_file": "images/SI_2023_Mains_Arithmetic_Reasoning/q_184_page_54.png"
+    "has_image": false,
+    "source_page": 54
   },
   {
     "q_no": 185,

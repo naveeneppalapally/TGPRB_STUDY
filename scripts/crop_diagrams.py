@@ -47,25 +47,31 @@ Output ONLY a JSON object:
 }
 """
 
+import time
+
 def get_crop_box(img_bytes):
-    try:
-        response = client.models.generate_content(
-            model='gemini-2.5-flash',
-            contents=[
-                types.Part.from_bytes(data=img_bytes, mime_type='image/png'),
-                crop_prompt
-            ],
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                temperature=0.0
+    for attempt in range(3):
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=[
+                    types.Part.from_bytes(data=img_bytes, mime_type='image/png'),
+                    crop_prompt
+                ],
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.0
+                )
             )
-        )
-        data = json.loads(response.text.strip())
-        # If Gemini successfully returns null or box
-        return data.get("box")
-    except Exception as e:
-        print(f"⚠️ Gemini crop box detection failed: {e}")
-        return False # Return False to signify API error, distinct from None (successful null box)
+            data = json.loads(response.text.strip())
+            return data.get("box")
+        except Exception as e:
+            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
+                time.sleep(2 * (attempt + 1))
+                continue
+            print(f"⚠️ Gemini crop box detection failed: {e}")
+            return False
+    return False
 
 # Find all JSON files
 json_files = glob.glob(os.path.join(json_dir, "*.json"))

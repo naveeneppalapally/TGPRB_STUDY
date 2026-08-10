@@ -572,9 +572,8 @@
       "423",
       "432"
     ],
-    "has_image": true,
-    "source_page": 12,
-    "image_file": "images/SI_2018_Mains_Paper3/q_48_page_12.png"
+    "has_image": false,
+    "source_page": 12
   },
   {
     "q_no": 49,
@@ -1029,9 +1028,8 @@
       "A, C only",
       "all of A, B, C"
     ],
-    "has_image": true,
-    "source_page": 21,
-    "image_file": "images/SI_2018_Mains_Paper3/q_86_page_21.png"
+    "has_image": false,
+    "source_page": 21
   },
   {
     "q_no": 87,
@@ -1054,9 +1052,8 @@
       "96",
       "80"
     ],
-    "has_image": true,
-    "source_page": 21,
-    "image_file": "images/SI_2018_Mains_Paper3/q_88_page_21.png"
+    "has_image": false,
+    "source_page": 21
   },
   {
     "q_no": 89,
@@ -1115,9 +1112,8 @@
       "512",
       "729"
     ],
-    "has_image": true,
-    "source_page": 22,
-    "image_file": "images/SI_2018_Mains_Paper3/q_93_page_22.png"
+    "has_image": false,
+    "source_page": 22
   },
   {
     "q_no": 94,
@@ -1140,9 +1136,8 @@
       "1.0",
       "0.8"
     ],
-    "has_image": true,
-    "source_page": 23,
-    "image_file": "images/SI_2018_Mains_Paper3/q_95_page_23.png"
+    "has_image": false,
+    "source_page": 23
   },
   {
     "q_no": 96,
@@ -1381,9 +1376,8 @@
       "Vice-Chancellor",
       "Director"
     ],
-    "has_image": true,
-    "source_page": 25,
-    "image_file": "images/SI_2018_Mains_Paper3/q_115_page_25.png"
+    "has_image": false,
+    "source_page": 25
   },
   {
     "q_no": 116,
@@ -1394,9 +1388,8 @@
       "Golkonda",
       "Falaknuma Palace"
     ],
-    "has_image": true,
-    "source_page": 25,
-    "image_file": "images/SI_2018_Mains_Paper3/q_116_page_25.png"
+    "has_image": false,
+    "source_page": 25
   },
   {
     "q_no": 117,
@@ -1409,7 +1402,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2018_Mains_Paper3/q_117_page_26.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_117_cropped.png"
   },
   {
     "q_no": 118,
@@ -1422,7 +1415,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2018_Mains_Paper3/q_118_page_26.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_118_cropped.png"
   },
   {
     "q_no": 119,
@@ -1435,7 +1428,7 @@
     ],
     "has_image": true,
     "source_page": 26,
-    "image_file": "images/SI_2018_Mains_Paper3/q_119_page_26.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_119_cropped.png"
   },
   {
     "q_no": 120,
@@ -1568,7 +1561,7 @@
     ],
     "has_image": true,
     "source_page": 29,
-    "image_file": "images/SI_2018_Mains_Paper3/q_130_page_29.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_130_cropped.png"
   },
   {
     "q_no": 131,
@@ -1581,7 +1574,7 @@
     ],
     "has_image": true,
     "source_page": 30,
-    "image_file": "images/SI_2018_Mains_Paper3/q_131_page_30.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_131_cropped.png"
   },
   {
     "q_no": 132,
@@ -1810,7 +1803,7 @@
     ],
     "has_image": true,
     "source_page": 34,
-    "image_file": "images/SI_2018_Mains_Paper3/q_150_page_34.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_150_cropped.png"
   },
   {
     "q_no": 151,
@@ -1835,7 +1828,7 @@
     ],
     "has_image": true,
     "source_page": 35,
-    "image_file": "images/SI_2018_Mains_Paper3/q_152_page_35.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_152_cropped.png"
   },
   {
     "q_no": 153,
@@ -1848,7 +1841,7 @@
     ],
     "has_image": true,
     "source_page": 35,
-    "image_file": "images/SI_2018_Mains_Paper3/q_153_page_35.png"
+    "image_file": "images/SI_2018_Mains_Paper3/q_153_cropped.png"
   },
   {
     "q_no": 154,
@@ -1895,9 +1888,8 @@
       "102 2/3",
       "106 1/3"
     ],
-    "has_image": true,
-    "source_page": 36,
-    "image_file": "images/SI_2018_Mains_Paper3/q_157_page_36.png"
+    "has_image": false,
+    "source_page": 36
   },
   {
     "q_no": 158,
@@ -2124,9 +2116,8 @@
       "(3) (I) is true, (II) is false.",
       "(4) (I) is false, (II) is true."
     ],
-    "has_image": true,
-    "source_page": 41,
-    "image_file": "images/SI_2018_Mains_Paper3/q_176_page_41.png"
+    "has_image": false,
+    "source_page": 41
   },
   {
     "q_no": 177,
@@ -2219,9 +2210,8 @@
       "n is product of distinct numbers.",
       "n is the cube of a prime numbers."
     ],
-    "has_image": true,
-    "source_page": 43,
-    "image_file": "images/SI_2018_Mains_Paper3/q_184_page_43.png"
+    "has_image": false,
+    "source_page": 43
   },
   {
     "q_no": 185,
@@ -2260,9 +2250,8 @@
       "The angles of the triangle are 90°, 30°, 60°.",
       "Length of the hypotenuse is 15√2 cm."
     ],
-    "has_image": true,
-    "source_page": 43,
-    "image_file": "images/SI_2018_Mains_Paper3/q_188_page_43.png"
+    "has_image": false,
+    "source_page": 43
   },
   {
     "q_no": 189,

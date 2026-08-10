@@ -46,7 +46,7 @@
     ],
     "has_image": true,
     "source_page": 4,
-    "image_file": "images/SI_2018_Mains_Paper2/q_4_page_4.png"
+    "image_file": "images/SI_2018_Mains_Paper2/q_4_cropped.png"
   },
   {
     "q_no": 5,
@@ -81,9 +81,8 @@
       "(3) (i)-C, (ii)-A, (iii)-D, (iv)-B",
       "(4) (i)-C, (ii)-A, (iii)-B, (iv)-D"
     ],
-    "has_image": true,
-    "source_page": 5,
-    "image_file": "images/SI_2018_Mains_Paper2/q_7_page_5.png"
+    "has_image": false,
+    "source_page": 5
   },
   {
     "q_no": 8,
@@ -142,9 +141,8 @@
       "abhor/detest",
       "introspection/brooding"
     ],
-    "has_image": true,
-    "source_page": 7,
-    "image_file": "images/SI_2018_Mains_Paper2/q_12_page_7.png"
+    "has_image": false,
+    "source_page": 7
   },
   {
     "q_no": 13,
@@ -167,9 +165,8 @@
       "(i) consequence (ii) deemed (iii) members (iv) merges (v) agree",
       "(i) consequence (ii) agree (iii) merged (iv) deemed (v) members"
     ],
-    "has_image": true,
-    "source_page": 7,
-    "image_file": "images/SI_2018_Mains_Paper2/q_14_page_7.png"
+    "has_image": false,
+    "source_page": 7
   },
   {
     "q_no": 15,
@@ -1802,7 +1799,7 @@
     ],
     "has_image": true,
     "source_page": 49,
-    "image_file": "images/SI_2018_Mains_Paper2/q_150_page_49.png"
+    "image_file": "images/SI_2018_Mains_Paper2/q_150_cropped.png"
   },
   {
     "q_no": 151,
