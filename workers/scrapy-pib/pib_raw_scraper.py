@@ -1,49 +1,48 @@
 #!/usr/bin/env python3
 """
-PIB Raw Article Scraper - Rate-Limit Proof Multi-Threaded Scraper
+PIB Raw Article Scraper - Hardened Edition
 
-Features:
-  - User-Agent Rotation (Chrome, Firefox, Safari, Edge)
-  - Token Bucket Rate Limiting (prevents server bans)
-  - Exponential Backoff + Jitter on HTTP 429/503/Timeouts
-  - Auto-Cooldown Pause on Consecutive Errors
-  - SQLite storage (resumable)
+Key architecture decisions (from GPT analysis):
+  - Pacer: no lock held during sleep (was freezing all workers)
+  - allow_redirects=False: dead PRIDs classified immediately (no 4s wait)
+  - timeout=(1.5, 4.0): connect timeout 1.5s kills dead PRIDs fast; read timeout 4s for valid pages
+  - Single attempt per PRID in dense scan (no retry loop for dead IDs)
+  - Per-thread requests.Session (thread-safe, no shared state)
+  - Dense range: only from last-prev-month-anchor to max-target-anchor (not full 2-month range)
+  - Probes table: records every PRID outcome so failed GitHub Actions jobs can resume
+  - Stable UA (not browser impersonation rotation)
 
 Usage:
-  python3 workers/scrapy-pib/pib_raw_scraper.py                        # full 20 months
-  python3 workers/scrapy-pib/pib_raw_scraper.py --from 2025-01-01 --to 2025-06-30 --workers 10 --rps 12
+  python3 workers/scrapy-pib/pib_raw_scraper.py --from 2025-05-01 --to 2025-05-31 --scan-from 2025-04-01
   python3 workers/scrapy-pib/pib_raw_scraper.py --stats
   python3 workers/scrapy-pib/pib_raw_scraper.py --export pib_raw.csv
-
-Output: workers/scrapy-pib/pib_raw.db (SQLite)
 """
 from __future__ import annotations
+
 import argparse, csv, random, re, sqlite3, threading, time, unicodedata
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import date, datetime
 from pathlib import Path
+from typing import Optional
 import requests
 from bs4 import BeautifulSoup
 
+# ---------------------------------------------------------------------------
+# Paths & constants
+# ---------------------------------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 DB_PATH    = SCRIPT_DIR / "pib_raw.db"
 
 PIB_BASE    = "https://pib.gov.in"
 ARTICLE_URL = f"{PIB_BASE}/PressReleasePage.aspx?PRID={{}}&reg=3&lang=1"
 
-USER_AGENTS = [
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
-    "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:125.0) Gecko/20100101 Firefox/125.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0",
-]
+# Stable, honest UA (not browser impersonation - per AI recommendation)
+SCRAPER_UA = "TGPRB-PIB-research-scraper/2.0 (+https://github.com/naveeneppalapally/TGPRB_STUDY)"
 
 PRID_ANCHOR_START_DATE = date(2025, 1, 1);  PRID_ANCHOR_START = 2_090_000
 PRID_ANCHOR_END_DATE   = date(2026, 8, 9);  PRID_ANCHOR_END   = 2_296_000
-PRID_PADDING   = 10_000   # Must be large enough to cover interpolation error (~5k mid-range)
+PRID_PADDING   = 10_000
 MAX_TEXT_CHARS = 12_000
 
 MONTHS = {"jan":1,"january":1,"feb":2,"february":2,"mar":3,"march":3,"apr":4,"april":4,"may":5,
@@ -54,6 +53,9 @@ POSTED_ON_RE = re.compile(
     r"Posted\s+On\s*:\s*(\d{1,2})\s+([A-Za-z]+)\s+(20\d{2})"
     r"(?:\s+\d{1,2}:\d{2}\s*(?:AM|PM)?)?\s+by\s+(.+)$", re.IGNORECASE)
 
+# ---------------------------------------------------------------------------
+# Database schema  (articles + probes table for cross-run resumability)
+# ---------------------------------------------------------------------------
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS articles (
     prid       INTEGER PRIMARY KEY,
@@ -66,8 +68,17 @@ CREATE TABLE IF NOT EXISTS articles (
     word_count INTEGER DEFAULT 0,
     scraped_at TEXT DEFAULT (datetime('now'))
 );
-CREATE INDEX IF NOT EXISTS idx_pub_date ON articles(pub_date);
-CREATE INDEX IF NOT EXISTS idx_ministry ON articles(ministry);
+CREATE INDEX IF NOT EXISTS idx_pub_date  ON articles(pub_date);
+CREATE INDEX IF NOT EXISTS idx_ministry  ON articles(ministry);
+
+-- Probe ledger: every PRID we have attempted, with outcome.
+-- Allows resuming across failed GitHub Actions runs.
+CREATE TABLE IF NOT EXISTS probes (
+    prid        INTEGER PRIMARY KEY,
+    state       TEXT NOT NULL,   -- stored | filtered | terminal | transient | throttled
+    attempts    INTEGER DEFAULT 1,
+    probed_at   TEXT DEFAULT (datetime('now'))
+);
 """
 
 @dataclass
@@ -75,84 +86,140 @@ class ArticleRecord:
     prid: int; title: str; pub_date: date
     ministry: str; office: str; full_text: str; url: str
 
+@dataclass
+class FetchResult:
+    prid:  int
+    url:   str
+    soup:  Optional[BeautifulSoup]
+    state: str  # ok | redirect | terminal | transient | throttled
 
-class RateLimiter:
-    """Thread-safe Token Bucket Rate Limiter to prevent rate-limiting bans."""
-    def __init__(self, max_rps: float):
-        self.interval = 1.0 / max_rps if max_rps > 0 else 0
-        self.lock = threading.Lock()
-        self.last_call = time.time()
-        self.consecutive_errors = 0
-
-    def wait(self):
-        if self.interval <= 0: return
-        with self.lock:
-            now = time.time()
-            elapsed = now - self.last_call
-            if elapsed < self.interval:
-                time.sleep(self.interval - elapsed)
-            self.last_call = time.time()
-
-    def record_error(self):
-        with self.lock:
-            self.consecutive_errors += 1
-            if self.consecutive_errors >= 5:
-                print("\n  [!] Rate limit / network pressure detected. Cooling down for 8 seconds...", flush=True)
-                time.sleep(8.0)
-                self.consecutive_errors = 0
-
-    def record_success(self):
-        with self.lock:
-            self.consecutive_errors = max(0, self.consecutive_errors - 1)
-
-
-def open_db():
-    con = sqlite3.connect(DB_PATH, timeout=30.0)
+# ---------------------------------------------------------------------------
+# Database helpers
+# ---------------------------------------------------------------------------
+def open_db() -> sqlite3.Connection:
+    con = sqlite3.connect(DB_PATH, timeout=30.0, check_same_thread=False)
     con.executescript(SCHEMA)
     con.execute("PRAGMA journal_mode=WAL")
     return con
 
-def already_scraped(con, prid):
-    return con.execute("SELECT 1 FROM articles WHERE prid=?", (prid,)).fetchone() is not None
+def probe_due(con: sqlite3.Connection, prid: int) -> bool:
+    """Returns True if this PRID has never been successfully processed."""
+    row = con.execute(
+        "SELECT state FROM probes WHERE prid=?", (prid,)
+    ).fetchone()
+    if not row:
+        return True
+    # Re-attempt transient/throttled; skip stored/filtered/terminal
+    return row[0] in ("transient", "throttled")
 
-def insert_article(con, rec: ArticleRecord):
+def mark_probe(con: sqlite3.Connection, prid: int, state: str) -> None:
+    con.execute("""
+        INSERT INTO probes(prid, state) VALUES(?,?)
+        ON CONFLICT(prid) DO UPDATE SET
+            state=excluded.state,
+            attempts=attempts+1,
+            probed_at=datetime('now')
+    """, (prid, state))
+
+def insert_article(con: sqlite3.Connection, rec: ArticleRecord) -> None:
     con.execute(
-        "INSERT OR IGNORE INTO articles (prid,title,pub_date,ministry,office,full_text,url,word_count) VALUES (?,?,?,?,?,?,?,?)",
+        "INSERT OR IGNORE INTO articles "
+        "(prid,title,pub_date,ministry,office,full_text,url,word_count) "
+        "VALUES (?,?,?,?,?,?,?,?)",
         (rec.prid, rec.title, rec.pub_date.isoformat(), rec.ministry, rec.office,
          rec.full_text, rec.url, len(rec.full_text.split())))
+    mark_probe(con, rec.prid, "stored")
     con.commit()
 
-def latin_ratio(text):
-    letters = [c for c in text if c.isalpha()]
-    return 0.0 if not letters else sum(unicodedata.name(c,"").startswith("LATIN") for c in letters)/len(letters)
+# ---------------------------------------------------------------------------
+# Pacer — NO lock held during sleep (was the bug that froze all workers)
+# ---------------------------------------------------------------------------
+class Pacer:
+    def __init__(self, rps: float):
+        self.interval       = 1.0 / max(rps, 0.1)
+        self.lock           = threading.Lock()
+        self.next_at        = 0.0
+        self.cooldown_until = 0.0
 
-def fetch_prid(session: requests.Session, prid: int, rate_limiter: RateLimiter, max_retries: int = 3) -> tuple[int, BeautifulSoup | None, str]:
+    def acquire(self) -> None:
+        with self.lock:
+            now       = time.monotonic()
+            scheduled = max(now, self.next_at, self.cooldown_until)
+            self.next_at = scheduled + self.interval
+        # Sleep OUTSIDE the lock so other workers are not frozen
+        sleep_for = scheduled - time.monotonic()
+        if sleep_for > 0:
+            time.sleep(sleep_for)
+
+    def cooldown(self, seconds: float) -> None:
+        with self.lock:
+            self.cooldown_until = max(
+                self.cooldown_until, time.monotonic() + seconds
+            )
+
+# ---------------------------------------------------------------------------
+# Per-thread session storage
+# ---------------------------------------------------------------------------
+_thread_local = threading.local()
+
+def _session() -> requests.Session:
+    """One Session per worker thread — thread-safe, keeps TCP connections alive."""
+    if not hasattr(_thread_local, "session"):
+        s = requests.Session()
+        s.headers.update({
+            "User-Agent":      SCRAPER_UA,
+            "Accept-Language": "en-US,en;q=0.9",
+        })
+        _thread_local.session = s
+    return _thread_local.session
+
+# ---------------------------------------------------------------------------
+# Fetch — allow_redirects=False classifies dead PRIDs immediately
+# ---------------------------------------------------------------------------
+def fetch_prid(prid: int, pacer: Pacer) -> FetchResult:
     url = ARTICLE_URL.format(prid)
-    headers = {"User-Agent": random.choice(USER_AGENTS), "Accept-Language": "en-US,en;q=0.9"}
+    pacer.acquire()
 
-    for attempt in range(max_retries):
-        rate_limiter.wait()
-        try:
-            resp = session.get(url, headers=headers, timeout=4)
-            if resp.status_code == 429 or resp.status_code == 503:
-                rate_limiter.record_error()
-                backoff = (2 ** attempt) + random.uniform(0.5, 1.5)
-                time.sleep(backoff)
-                continue
-            if resp.status_code != 200:
-                return prid, None, url
+    try:
+        resp = _session().get(
+            url,
+            timeout=(1.5, 4.0),     # connect 1.5s, read 4s
+            allow_redirects=False,   # dead PRIDs redirect → instant classification
+        )
+    except (requests.Timeout, requests.ConnectionError, OSError):
+        # Timeout on non-existent PRID is EXPECTED — not a rate-limit signal
+        return FetchResult(prid, url, None, "transient")
+    except Exception:
+        return FetchResult(prid, url, None, "transient")
 
-            rate_limiter.record_success()
-            return prid, BeautifulSoup(resp.text, "lxml"), url
-        except Exception:
-            # Timeout from non-existent PRID is expected - NOT a rate-limit signal.
-            # Only HTTP 429/503 above should trigger record_error().
-            if attempt < max_retries - 1:
-                time.sleep(0.5)
+    if resp.status_code in (429, 503):
+        retry_after = resp.headers.get("Retry-After", "")
+        delay = float(retry_after) if retry_after.isdigit() else 60.0
+        pacer.cooldown(delay + random.uniform(2, 8))
+        print(f"  [THROTTLE] HTTP {resp.status_code} on PRID {prid}. Cooling {delay:.0f}s", flush=True)
+        return FetchResult(prid, url, None, "throttled")
 
-    return prid, None, url
+    if 300 <= resp.status_code < 400:
+        return FetchResult(prid, url, None, "redirect")   # dead PRID, instant
 
-def extract_date_only(soup: BeautifulSoup) -> date | None:
+    if 400 <= resp.status_code < 500:
+        return FetchResult(prid, url, None, "terminal")
+
+    if resp.status_code >= 500:
+        return FetchResult(prid, url, None, "transient")
+
+    return FetchResult(prid, url, BeautifulSoup(resp.text, "lxml"), "ok")
+
+# ---------------------------------------------------------------------------
+# Parsing helpers
+# ---------------------------------------------------------------------------
+def latin_ratio(text: str) -> float:
+    letters = [c for c in text if c.isalpha()]
+    return 0.0 if not letters else (
+        sum(unicodedata.name(c, "").startswith("LATIN") for c in letters) / len(letters)
+    )
+
+def extract_date_only(soup: BeautifulSoup) -> Optional[date]:
     if not soup: return None
     meta_div = soup.find("div", class_=re.compile(r"PrDateTime|ReleaseDateSubHead", re.IGNORECASE))
     if not meta_div: return None
@@ -163,11 +230,12 @@ def extract_date_only(soup: BeautifulSoup) -> date | None:
     try: return date(int(m.group(3)), month, int(m.group(1)))
     except ValueError: return None
 
-def full_parse(prid: int, soup: BeautifulSoup, url: str) -> ArticleRecord | None:
+def full_parse(prid: int, soup: BeautifulSoup, url: str) -> Optional[ArticleRecord]:
     if not soup: return None
+
     title_node = soup.find("h2", id="Titleh2")
     if not title_node:
-        og = soup.find("meta", attrs={"property":"og:title"})
+        og = soup.find("meta", attrs={"property": "og:title"})
         title = og["content"].strip() if og and og.get("content") else ""
     else:
         title = title_node.get_text(" ", strip=True)
@@ -182,129 +250,200 @@ def full_parse(prid: int, soup: BeautifulSoup, url: str) -> ArticleRecord | None
     if not month: return None
     try: pub_date = date(int(m.group(3)), month, int(m.group(1)))
     except ValueError: return None
+
     om = re.search(r"\bby\s+(PIB\s+[A-Za-z]+)\b", meta_text, re.IGNORECASE)
     office = om.group(1).strip() if om else ""
-
     if office.casefold() != "pib delhi": return None
-    sample = " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p")[:5] if len(p.get_text(strip=True))>20)
+
+    sample = " ".join(p.get_text(" ", strip=True) for p in soup.find_all("p")[:5]
+                      if len(p.get_text(strip=True)) > 20)
     if latin_ratio(sample) < 0.7: return None
 
     ministry = ""
-    for tag in [soup.find("div", class_=re.compile(r"ministry|dept",re.IGNORECASE))]:
-        if tag:
-            t = tag.get_text(" ", strip=True)
-            if t and len(t) < 120: ministry = t; break
+    tag = soup.find("div", class_=re.compile(r"ministry|dept", re.IGNORECASE))
+    if tag:
+        t = tag.get_text(" ", strip=True)
+        if t and len(t) < 120: ministry = t
 
     for tag in soup(["script","style","nav","footer","aside","iframe","noscript"]): tag.decompose()
-    content = (soup.find("div", id=re.compile(r"content|body|main",re.IGNORECASE))
-               or soup.find("div", class_=re.compile(r"content|body|release|press",re.IGNORECASE))
+    content = (soup.find("div", id=re.compile(r"content|body|main", re.IGNORECASE))
+               or soup.find("div", class_=re.compile(r"content|body|release|press", re.IGNORECASE))
                or soup.find("main") or soup.body)
     if not content: return None
-    full_text = "\n".join(p.get_text(strip=True) for p in content.find_all("p") if len(p.get_text(strip=True))>20)
+
+    full_text = "\n".join(p.get_text(strip=True) for p in content.find_all("p")
+                          if len(p.get_text(strip=True)) > 20)
     if not full_text: return None
     if len(full_text) > MAX_TEXT_CHARS: full_text = full_text[:MAX_TEXT_CHARS]
 
-    return ArticleRecord(prid=prid, title=title, pub_date=pub_date, ministry=ministry, office=office, full_text=full_text, url=url)
+    return ArticleRecord(prid=prid, title=title, pub_date=pub_date,
+                         ministry=ministry, office=office, full_text=full_text, url=url)
 
+# ---------------------------------------------------------------------------
+# PRID estimation
+# ---------------------------------------------------------------------------
 def estimate_prid(target: date) -> int:
     total_days  = (PRID_ANCHOR_END_DATE - PRID_ANCHOR_START_DATE).days
     total_prids = PRID_ANCHOR_END - PRID_ANCHOR_START
-    return PRID_ANCHOR_START + round((target - PRID_ANCHOR_START_DATE).days * total_prids / total_days)
+    return PRID_ANCHOR_START + round(
+        (target - PRID_ANCHOR_START_DATE).days * total_prids / total_days
+    )
 
-def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coarse_step: int, con: sqlite3.Connection, scan_from: date | None = None):
-    # scan_from controls PRID estimation (wider net); from_date controls what gets SAVED
+# ---------------------------------------------------------------------------
+# Main scan logic
+# ---------------------------------------------------------------------------
+def scan_and_store(
+    from_date:  date,
+    to_date:    date,
+    scan_from:  Optional[date],
+    workers:    int,
+    rps:        float,
+    coarse_step: int,
+    con:        sqlite3.Connection,
+) -> dict:
     prid_start_date = scan_from if scan_from else from_date
     start_prid = max(1, estimate_prid(prid_start_date) - PRID_PADDING)
     end_prid   = estimate_prid(to_date) + PRID_PADDING
-    rate_limiter = RateLimiter(max_rps=rps)
+    pacer      = Pacer(rps)
 
-    print(f"\n{'='*60}\nPIB Rate-Limit Proof Raw Scraper ({workers} workers, max {rps} req/sec)\n{'='*60}")
+    print(f"\n{'='*60}\nPIB Raw Scraper (hardened)\n{'='*60}")
     print(f"Save range : {from_date} to {to_date}")
-    print(f"Scan from  : {prid_start_date} (PRID estimation anchor)")
+    print(f"Scan from  : {prid_start_date}  (PRID estimation anchor)")
     print(f"PRIDs      : {start_prid} to {end_prid}")
-    print(f"Coarse step: {coarse_step}")
+    print(f"Workers    : {workers}  |  RPS cap: {rps}")
     print(f"Output DB  : {DB_PATH}\n{'='*60}", flush=True)
 
-    stats = {"saved": 0, "skipped_db": 0, "probes": 0}
+    stats = {"saved": 0, "terminal": 0, "transient": 0, "filtered": 0, "skipped": 0}
 
-    # STEP 1: Fast multi-threaded coarse scan
-    # Search for ANY date in prid_start_date→to_date window to build clusters
+    # ---- STEP 1: Coarse scan (all dates in scan window) ----
     coarse_prids = list(range(start_prid, end_prid + 1, coarse_step))
     date_clusters: dict[date, list[int]] = {}
 
-    session = requests.Session()
-    with ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(fetch_prid, session, p, rate_limiter): p for p in coarse_prids}
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(fetch_prid, p, pacer): p for p in coarse_prids}
         for fut in as_completed(futures):
-            stats["probes"] += 1
-            prid, soup, _ = fut.result()
-            if soup:
-                pub_date = extract_date_only(soup)
-                # Collect clusters for the full scan window (not just save window)
+            res = fut.result()
+            if res.state == "ok" and res.soup:
+                pub_date = extract_date_only(res.soup)
                 if pub_date and prid_start_date <= pub_date <= to_date:
-                    date_clusters.setdefault(pub_date, []).append(prid)
+                    date_clusters.setdefault(pub_date, []).append(res.prid)
 
-    print(f"\n[Coarse] Found {len(date_clusters)} date clusters across {len(coarse_prids)} probes", flush=True)
+    print(f"\n[Coarse] Found {len(date_clusters)} date clusters "
+          f"across {len(coarse_prids)} probes", flush=True)
+
     if not date_clusters:
-        print("[!] No date clusters found.")
+        print("[!] No date clusters found — check PRID anchors or date range.")
         return stats
 
-    # STEP 2: Dense scan - ONE contiguous PRID range from min to max cluster anchor.
-    # This avoids the per-cluster ±window approach which creates thousands of
-    # non-overlapping gaps when clusters are spread across 2 months.
-    all_anchors = [p for anchors in date_clusters.values() for p in anchors]
-    dense_low   = min(all_anchors) - 150   # small buffer before first article
-    dense_high  = max(all_anchors) + 150   # small buffer after last article
-    to_scan     = [
-        p for p in range(dense_low, dense_high + 1)
-        if not already_scraped(con, p)
-    ]
+    # ---- STEP 2: Compute a TIGHT dense range ----
+    # Separate previous-month anchors from target-month anchors.
+    # Use max(prev_month) as the START so we bridge right into target month Day 1.
+    # Use max(target_month) + buffer as END.
+    prev_anchors   = [p for d, ancs in date_clusters.items() for p in ancs if d < from_date]
+    target_anchors = [p for d, ancs in date_clusters.items() for p in ancs if from_date <= d <= to_date]
 
-    print(f"[Dense] Scanning {len(to_scan)} candidate PRIDs "
-          f"(PRID {dense_low}–{dense_high}, contiguous)...", flush=True)
+    if target_anchors:
+        # Bridge from last known prev-month article into the target month
+        bridge_start = max(prev_anchors) - 200 if prev_anchors else min(target_anchors) - 600
+        dense_low    = bridge_start
+        dense_high   = max(target_anchors) + 200
+    else:
+        # Fallback: no target month articles found in coarse scan
+        all_anchors = [p for ancs in date_clusters.values() for p in ancs]
+        dense_low   = min(all_anchors) - 200
+        dense_high  = max(all_anchors) + 200
+        print("[!] No target-month clusters found. Using full coarse range as fallback.", flush=True)
 
-    with ThreadPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(fetch_prid, session, p, rate_limiter): p for p in to_scan}
-        for fut in as_completed(futures):
-            stats["probes"] += 1
-            prid, soup, url = fut.result()
-            if not soup: continue
-            rec = full_parse(prid, soup, url)
-            if rec and from_date <= rec.pub_date <= to_date:
+    # ---- STEP 3: Dense scan — ONE contiguous PRID range ----
+    todo = [p for p in range(dense_low, dense_high + 1) if probe_due(con, p)]
+    skipped = (dense_high - dense_low + 1) - len(todo)
+    stats["skipped"] = skipped
+
+    print(f"[Dense] {len(todo)} PRIDs to probe "
+          f"(PRID {dense_low}–{dense_high}, {skipped} already done)", flush=True)
+
+    db_lock = threading.Lock()
+
+    def process(prid: int):
+        res = fetch_prid(prid, pacer)
+
+        if res.state in ("transient", "throttled"):
+            with db_lock:
+                mark_probe(con, prid, res.state)
+                con.commit()
+            return res.state
+
+        if res.state != "ok":
+            with db_lock:
+                mark_probe(con, prid, "terminal")
+                con.commit()
+            return "terminal"
+
+        rec = full_parse(prid, res.soup, res.url)
+        if rec and from_date <= rec.pub_date <= to_date:
+            with db_lock:
                 insert_article(con, rec)
-                stats["saved"] += 1
-                print(f"  [SAVED] {rec.pub_date} | {rec.prid} | {rec.title[:65]}", flush=True)
+            print(f"  [SAVED] {rec.pub_date} | {prid} | {rec.title[:65]}", flush=True)
+            return "saved"
+
+        with db_lock:
+            mark_probe(con, prid, "filtered")
+            con.commit()
+        return "filtered"
+
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(process, p): p for p in todo}
+        for fut in as_completed(futures):
+            outcome = fut.result()
+            stats[outcome] = stats.get(outcome, 0) + 1
 
     return stats
 
-def cmd_stats(con):
+# ---------------------------------------------------------------------------
+# CLI helpers
+# ---------------------------------------------------------------------------
+def cmd_stats(con: sqlite3.Connection) -> None:
     total  = con.execute("SELECT COUNT(*) FROM articles").fetchone()[0]
     oldest = con.execute("SELECT MIN(pub_date) FROM articles").fetchone()[0]
     newest = con.execute("SELECT MAX(pub_date) FROM articles").fetchone()[0]
-    size   = DB_PATH.stat().st_size/(1024*1024) if DB_PATH.exists() else 0
-    print(f"\n=== PIB Raw DB ===\nArticles : {total:,}\nRange    : {oldest} to {newest}\nSize     : {size:.1f} MB\nPath     : {DB_PATH}")
-    print("\nTop ministries:")
-    for min_name, count in con.execute("SELECT ministry,COUNT(*) n FROM articles WHERE ministry!='' GROUP BY ministry ORDER BY n DESC LIMIT 10"):
-        print(f"  {count:5d}  {min_name}")
+    probes = con.execute("SELECT COUNT(*) FROM probes").fetchone()[0]
+    retryable = con.execute(
+        "SELECT COUNT(*) FROM probes WHERE state IN ('transient','throttled')"
+    ).fetchone()[0]
+    size   = DB_PATH.stat().st_size / (1024*1024) if DB_PATH.exists() else 0
 
-def cmd_export(con, out_path):
-    rows = con.execute("SELECT prid,title,pub_date,ministry,office,full_text,url,word_count,scraped_at FROM articles ORDER BY pub_date,prid").fetchall()
-    with open(out_path,"w",newline="",encoding="utf-8") as f:
-        w = csv.writer(f); w.writerow(["prid","title","pub_date","ministry","office","full_text","url","word_count","scraped_at"]); w.writerows(rows)
+    print(f"\n=== PIB Raw DB ===")
+    print(f"Articles : {total:,}  |  Range: {oldest} to {newest}")
+    print(f"Probes   : {probes:,}  |  Retryable: {retryable}")
+    print(f"Size     : {size:.1f} MB  |  Path: {DB_PATH}")
+    print("\nTop ministries:")
+    for m, c in con.execute("SELECT ministry,COUNT(*) n FROM articles WHERE ministry!='' "
+                            "GROUP BY ministry ORDER BY n DESC LIMIT 10"):
+        print(f"  {c:5d}  {m}")
+
+def cmd_export(con: sqlite3.Connection, out_path: str) -> None:
+    rows = con.execute(
+        "SELECT prid,title,pub_date,ministry,office,full_text,url,word_count,scraped_at "
+        "FROM articles ORDER BY pub_date,prid"
+    ).fetchall()
+    with open(out_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["prid","title","pub_date","ministry","office",
+                    "full_text","url","word_count","scraped_at"])
+        w.writerows(rows)
     print(f"Exported {len(rows):,} articles to {out_path}")
 
-def main():
-    parser = argparse.ArgumentParser(description="PIB rate-limit proof raw scraper -> SQLite")
+def main() -> None:
+    parser = argparse.ArgumentParser(description="PIB hardened raw scraper → SQLite")
     parser.add_argument("--from",      dest="from_date",  default="2025-01-01",
                         help="Start date to SAVE (YYYY-MM-DD)")
     parser.add_argument("--to",        dest="to_date",    default=datetime.now().strftime("%Y-%m-%d"),
                         help="End date to SAVE (YYYY-MM-DD)")
     parser.add_argument("--scan-from", dest="scan_from",  default=None,
-                        help="Earlier date for PRID scan start (YYYY-MM-DD). "
-                             "Set 1 month before --from to guarantee full month coverage. "
-                             "Saves only articles in --from..--to range.")
+                        help="Earlier date for PRID scan anchor — set 1 month before --from")
     parser.add_argument("--workers",     type=int,   default=10)
-    parser.add_argument("--rps",         type=float, default=20.0)
+    parser.add_argument("--rps",         type=float, default=15.0,
+                        help="Max requests/sec per job (default 15; each job is a separate IP)")
     parser.add_argument("--coarse-step", type=int,   default=80)
     parser.add_argument("--stats",  action="store_true")
     parser.add_argument("--export", metavar="FILE")
@@ -317,8 +456,16 @@ def main():
     from_date = datetime.strptime(args.from_date, "%Y-%m-%d").date()
     to_date   = datetime.strptime(args.to_date,   "%Y-%m-%d").date()
     scan_from = datetime.strptime(args.scan_from,  "%Y-%m-%d").date() if args.scan_from else None
-    stats = scan_and_store(from_date, to_date, args.workers, args.rps, args.coarse_step, con, scan_from=scan_from)
-    print(f"\n{'='*60}\nDONE\nProbes : {stats['probes']}\nSaved  : {stats['saved']}\n{'='*60}")
+
+    stats = scan_and_store(from_date, to_date, scan_from, args.workers, args.rps, args.coarse_step, con)
+
+    print(f"\n{'='*60}")
+    print(f"DONE  |  Saved: {stats.get('saved',0)}  "
+          f"Terminal: {stats.get('terminal',0)}  "
+          f"Transient: {stats.get('transient',0)}  "
+          f"Filtered: {stats.get('filtered',0)}  "
+          f"Skipped(DB): {stats.get('skipped',0)}")
+    print('='*60)
     cmd_stats(con)
 
 if __name__ == "__main__":
