@@ -120,6 +120,6 @@ jobs:
           git config user.name  "PIB PRID Backfill Bot"
           git config user.email "actions@github.com"
           git add content/current-affairs/
-          git commit -m "add: PIB backfill ${{ steps.dates.outputs.from_date }} to ${{ steps.dates.outputs.to_date }} (${{ steps.count.outputs.new_files }} cards) [skip ci]"
+          git commit -m "add: PIB backfill ${{ steps.dates.outputs.from_date }} to ${{ steps.dates.outputs.to_date }} (${{ steps.count.outputs.new_files }} cards)"
           git push
 
