@@ -423,20 +423,15 @@ def scan_and_store(
     # Separate previous-month anchors from target-month anchors.
     # Use max(prev_month) as the START so we bridge right into target month Day 1.
     # Use max(target_month) + buffer as END.
-    prev_anchors   = [p for d, ancs in date_clusters.items() for p in ancs if d < from_date]
     target_anchors = [p for d, ancs in date_clusters.items() for p in ancs if from_date <= d <= to_date]
 
     if target_anchors:
-        # Bridge from last known prev-month article into the target month
-        bridge_start = max(prev_anchors) - 200 if prev_anchors else min(target_anchors) - 600
-        dense_low    = bridge_start
-        dense_high   = max(target_anchors) + 200
+        dense_low  = max(1, min(target_anchors) - 600)
+        dense_high = max(target_anchors) + 600
     else:
-        # Fallback: no target month articles found in coarse scan
-        all_anchors = [p for ancs in date_clusters.values() for p in ancs]
-        dense_low   = min(all_anchors) - 200
-        dense_high  = max(all_anchors) + 200
-        print("[!] No target-month clusters found. Using full coarse range as fallback.", flush=True)
+        dense_low  = max(1, estimate_prid(from_date) - 2000)
+        dense_high = estimate_prid(to_date) + 2000
+        print("[!] No target-month clusters found in coarse scan. Using estimated PRID range fallback.", flush=True)
 
     # ---- STEP 3: Dense scan — ONE contiguous PRID range ----
     todo = [p for p in range(dense_low, dense_high + 1) if probe_due(con, p)]
