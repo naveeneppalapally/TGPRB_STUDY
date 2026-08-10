@@ -12,7 +12,7 @@ on:
 jobs:
   scrape-chunks:
     name: "${{ matrix.chunk.name }}"
-    if: ${{ inputs.month == 'all' || inputs.month == matrix.chunk.name }}
+    if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -86,7 +86,7 @@ jobs:
     needs: scrape-chunks
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: ${{ inputs.month == 'all' && success() }}
+    if: ${{ github.event.inputs.month == 'all' && success() }}
 
     steps:
       - name: Checkout repository
