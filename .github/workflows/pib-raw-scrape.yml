@@ -16,6 +16,7 @@ jobs:
   scrape-chunks:
     name: Scrape Chunk (${{ matrix.chunk.name }})
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
@@ -45,7 +46,7 @@ jobs:
             --from "${{ matrix.chunk.from }}" \
             --to "${{ matrix.chunk.to }}" \
             --workers 20 \
-            --rps 25.0
+            --rps 20.0
 
       - name: Export Chunk to CSV
         run: |

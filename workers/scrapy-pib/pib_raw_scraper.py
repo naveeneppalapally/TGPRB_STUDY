@@ -133,7 +133,7 @@ def fetch_prid(session: requests.Session, prid: int, rate_limiter: RateLimiter, 
     for attempt in range(max_retries):
         rate_limiter.wait()
         try:
-            resp = session.get(url, headers=headers, timeout=12)
+            resp = session.get(url, headers=headers, timeout=4)
             if resp.status_code == 429 or resp.status_code == 503:
                 rate_limiter.record_error()
                 backoff = (2 ** attempt) + random.uniform(0.5, 1.5)
@@ -289,7 +289,7 @@ def main():
     parser.add_argument("--from",  dest="from_date", default="2025-01-01")
     parser.add_argument("--to",    dest="to_date",   default=datetime.now().strftime("%Y-%m-%d"))
     parser.add_argument("--workers", type=int, default=10, help="Concurrent worker threads (default: 10)")
-    parser.add_argument("--rps",     type=float, default=15.0, help="Max requests per second (default: 15)")
+    parser.add_argument("--rps",     type=float, default=20.0, help="Max requests per second (default: 20)")
     parser.add_argument("--coarse-step", type=int, default=80)
     parser.add_argument("--stats",  action="store_true")
     parser.add_argument("--export", metavar="FILE")
