@@ -145,10 +145,10 @@ def fetch_prid(session: requests.Session, prid: int, rate_limiter: RateLimiter, 
             rate_limiter.record_success()
             return prid, BeautifulSoup(resp.text, "lxml"), url
         except Exception:
-            rate_limiter.record_error()
+            # Timeout from non-existent PRID is expected - NOT a rate-limit signal.
+            # Only HTTP 429/503 above should trigger record_error().
             if attempt < max_retries - 1:
-                backoff = (1.5 ** attempt) + random.uniform(0.3, 1.0)
-                time.sleep(backoff)
+                time.sleep(0.5)
 
     return prid, None, url
 
@@ -249,15 +249,19 @@ def scan_and_store(from_date: date, to_date: date, workers: int, rps: float, coa
         print("[!] No date clusters found.")
         return stats
 
-    # STEP 2: Dense multi-threaded scan per cluster
-    to_scan: list[int] = []
-    for cluster_date, anchors in sorted(date_clusters.items()):
-        low = min(anchors) - 120; high = max(anchors) + 120
-        for p in range(low, high + 1):
-            if not already_scraped(con, p) and p not in to_scan:
-                to_scan.append(p)
+    # STEP 2: Dense scan - ONE contiguous PRID range from min to max cluster anchor.
+    # This avoids the per-cluster ±window approach which creates thousands of
+    # non-overlapping gaps when clusters are spread across 2 months.
+    all_anchors = [p for anchors in date_clusters.values() for p in anchors]
+    dense_low   = min(all_anchors) - 150   # small buffer before first article
+    dense_high  = max(all_anchors) + 150   # small buffer after last article
+    to_scan     = [
+        p for p in range(dense_low, dense_high + 1)
+        if not already_scraped(con, p)
+    ]
 
-    print(f"[Dense] Scanning {len(to_scan)} candidate PRIDs...", flush=True)
+    print(f"[Dense] Scanning {len(to_scan)} candidate PRIDs "
+          f"(PRID {dense_low}–{dense_high}, contiguous)...", flush=True)
 
     with ThreadPoolExecutor(max_workers=workers) as executor:
         futures = {executor.submit(fetch_prid, session, p, rate_limiter): p for p in to_scan}
