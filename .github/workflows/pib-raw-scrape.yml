@@ -2,15 +2,22 @@ name: PIB Raw Articles Scraper (Full Data Engine)
 
 on:
   workflow_dispatch:
+    inputs:
+      month:
+        description: "One chunk name (for example 2025-02), or all after a successful smoke test"
+        required: true
+        default: "2025-02"
+        type: string
 
 jobs:
   scrape-chunks:
     name: "${{ matrix.chunk.name }}"
+    if: ${{ inputs.month == 'all' || inputs.month == matrix.chunk.name }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
       fail-fast: false
-      max-parallel: 20
+      max-parallel: 2
       matrix:
         chunk:
           # --from/--to  = exact save window (1 full month)
@@ -56,8 +63,8 @@ jobs:
             --from      "${{ matrix.chunk.from }}"      \
             --to        "${{ matrix.chunk.to }}"        \
             --scan-from "${{ matrix.chunk.scan_from }}" \
-            --workers 20 \
-            --rps 20.0
+            --workers 4 \
+            --rps 4.0
 
       - name: Show results
         run: python3 workers/scrapy-pib/pib_raw_scraper.py --stats
@@ -79,7 +86,7 @@ jobs:
     needs: scrape-chunks
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    if: always()
+    if: ${{ inputs.month == 'all' && success() }}
 
     steps:
       - name: Checkout repository
