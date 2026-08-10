@@ -12,7 +12,6 @@ on:
 jobs:
   scrape-chunks:
     name: "${{ matrix.chunk.name }}"
-    if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -56,6 +55,7 @@ jobs:
         run: pip install requests beautifulsoup4 lxml
 
       - name: Run Raw Scraper for ${{ matrix.chunk.name }}
+        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
         env:
           PYTHONUNBUFFERED: "1"
         run: |
@@ -67,14 +67,17 @@ jobs:
             --rps 4.0
 
       - name: Show results
+        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
         run: python3 workers/scrapy-pib/pib_raw_scraper.py --stats
 
       - name: Export chunk to CSV
+        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
         run: |
           python3 workers/scrapy-pib/pib_raw_scraper.py \
             --export "pib_raw_${{ matrix.chunk.name }}.csv"
 
       - name: Upload chunk CSV artifact
+        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
         uses: actions/upload-artifact@v4
         with:
           name: "pib-raw-${{ matrix.chunk.name }}"
