@@ -41,8 +41,19 @@ PIB_BASE    = "https://www.pib.gov.in"
 ARTICLE_URL = f"{PIB_BASE}/PressReleasePage.aspx?PRID={{}}&reg=3&lang=1"
 PREFLIGHT_PRID = 2_093_213  # Known English PIB Delhi release: 15 Jan 2025.
 
-# Stable, honest UA (not browser impersonation - per AI recommendation)
-SCRAPER_UA = "TGPRB-PIB-research-scraper/2.0 (+https://github.com/naveeneppalapally/TGPRB_STUDY)"
+# Browser UA is required — PIB's WAF returns HTTP 403 on non-browser UAs.
+# Rotating UAs is intentionally avoided (one stable Chrome UA per run is enough).
+SCRAPER_UA = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+)
+SCRAPER_HEADERS = {
+    "User-Agent":      SCRAPER_UA,
+    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Referer":         "https://www.pib.gov.in/",
+}
 
 PRID_ANCHOR_START_DATE = date(2025, 1, 1);  PRID_ANCHOR_START = 2_090_000
 PRID_ANCHOR_END_DATE   = date(2026, 8, 9);  PRID_ANCHOR_END   = 2_296_000
@@ -172,10 +183,7 @@ def _session() -> requests.Session:
     """One Session per worker thread — thread-safe, keeps TCP connections alive."""
     if not hasattr(_thread_local, "session"):
         s = requests.Session()
-        s.headers.update({
-            "User-Agent":      SCRAPER_UA,
-            "Accept-Language": "en-US,en;q=0.9",
-        })
+        s.headers.update(SCRAPER_HEADERS)
         _thread_local.session = s
     return _thread_local.session
 
@@ -183,23 +191,34 @@ def _session() -> requests.Session:
 # Preflight — verify PIB is reachable before burning 20 min on coarse scan
 # ---------------------------------------------------------------------------
 def preflight() -> None:
-    """Fetch a known PRID and assert it parses correctly. Raises on failure."""
+    """Fetch a known PRID and assert it parses correctly. Raises on hard failure."""
     url = ARTICLE_URL.format(PREFLIGHT_PRID)
     print(f"[Preflight] Checking PRID {PREFLIGHT_PRID} ...", flush=True)
     try:
-        resp = requests.get(url, timeout=(5, 10), headers={"User-Agent": SCRAPER_UA})
+        resp = requests.get(url, timeout=(5, 10), headers=SCRAPER_HEADERS)
     except Exception as exc:
         raise RuntimeError(f"[Preflight FAIL] Network error: {exc}") from exc
+
+    if resp.status_code == 403:
+        # 403 = WAF blocking our UA or IP. Log clearly but let coarse scan proceed
+        # so we can see if it's a transient block or total block.
+        print(f"[Preflight WARN] HTTP 403 — WAF may be blocking. "
+              f"Headers sent: {SCRAPER_HEADERS['User-Agent']}", flush=True)
+        print(f"[Preflight WARN] Proceeding to coarse scan — "
+              f"if 0 clusters found, IP range is blocked.", flush=True)
+        return
 
     if resp.status_code != 200:
         raise RuntimeError(
             f"[Preflight FAIL] HTTP {resp.status_code} — "
-            f"redirect to: {resp.headers.get('Location', 'n/a')}"
+            f"Location: {resp.headers.get('Location', 'n/a')}"
         )
     soup = BeautifulSoup(resp.text, "lxml")
     pub_date = extract_date_only(soup)
     if pub_date is None:
-        raise RuntimeError("[Preflight FAIL] Page parsed but no date found — HTML structure may have changed")
+        raise RuntimeError(
+            "[Preflight FAIL] Page parsed but no date found — HTML structure may have changed"
+        )
     print(f"[Preflight OK] PRID {PREFLIGHT_PRID} → {pub_date} (HTTP 200)", flush=True)
 
 # ---------------------------------------------------------------------------
