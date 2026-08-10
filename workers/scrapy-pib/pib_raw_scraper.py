@@ -20,6 +20,7 @@ Usage:
 from __future__ import annotations
 
 import argparse, csv, random, re, sqlite3, threading, time, unicodedata
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -34,8 +35,11 @@ from bs4 import BeautifulSoup
 SCRIPT_DIR = Path(__file__).resolve().parent
 DB_PATH    = SCRIPT_DIR / "pib_raw.db"
 
-PIB_BASE    = "https://pib.gov.in"
+# PIB redirects the bare domain. Requests are deliberately made to the
+# canonical host because fetch_prid does not follow arbitrary redirects.
+PIB_BASE    = "https://www.pib.gov.in"
 ARTICLE_URL = f"{PIB_BASE}/PressReleasePage.aspx?PRID={{}}&reg=3&lang=1"
+PREFLIGHT_PRID = 2_093_213  # Known English PIB Delhi release: 15 Jan 2025.
 
 # Stable, honest UA (not browser impersonation - per AI recommendation)
 SCRAPER_UA = "TGPRB-PIB-research-scraper/2.0 (+https://github.com/naveeneppalapally/TGPRB_STUDY)"
@@ -92,6 +96,8 @@ class FetchResult:
     url:   str
     soup:  Optional[BeautifulSoup]
     state: str  # ok | redirect | terminal | transient | throttled
+    status_code: Optional[int] = None
+    location: str = ""
 
 # ---------------------------------------------------------------------------
 # Database helpers
@@ -174,7 +180,33 @@ def _session() -> requests.Session:
     return _thread_local.session
 
 # ---------------------------------------------------------------------------
-# Fetch — allow_redirects=False classifies dead PRIDs immediately
+# Preflight — verify PIB is reachable before burning 20 min on coarse scan
+# ---------------------------------------------------------------------------
+def preflight() -> None:
+    """Fetch a known PRID and assert it parses correctly. Raises on failure."""
+    url = ARTICLE_URL.format(PREFLIGHT_PRID)
+    print(f"[Preflight] Checking PRID {PREFLIGHT_PRID} ...", flush=True)
+    try:
+        resp = requests.get(url, timeout=(5, 10), headers={"User-Agent": SCRAPER_UA})
+    except Exception as exc:
+        raise RuntimeError(f"[Preflight FAIL] Network error: {exc}") from exc
+
+    if resp.status_code != 200:
+        raise RuntimeError(
+            f"[Preflight FAIL] HTTP {resp.status_code} — "
+            f"redirect to: {resp.headers.get('Location', 'n/a')}"
+        )
+    soup = BeautifulSoup(resp.text, "lxml")
+    pub_date = extract_date_only(soup)
+    if pub_date is None:
+        raise RuntimeError("[Preflight FAIL] Page parsed but no date found — HTML structure may have changed")
+    print(f"[Preflight OK] PRID {PREFLIGHT_PRID} → {pub_date} (HTTP 200)", flush=True)
+
+# ---------------------------------------------------------------------------
+# Fetch
+# NOTE: allow_redirects=True (default) is intentional.
+# PIB redirects pib.gov.in → www.pib.gov.in on ALL requests including valid ones.
+# allow_redirects=False would classify every valid article as "redirect" → 0 clusters.
 # ---------------------------------------------------------------------------
 def fetch_prid(prid: int, pacer: Pacer) -> FetchResult:
     url = ARTICLE_URL.format(prid)
@@ -183,8 +215,8 @@ def fetch_prid(prid: int, pacer: Pacer) -> FetchResult:
     try:
         resp = _session().get(
             url,
-            timeout=(1.5, 4.0),     # connect 1.5s, read 4s
-            allow_redirects=False,   # dead PRIDs redirect → instant classification
+            timeout=(3, 8),   # connect 3s, read 8s — PIB is a slow Indian govt server
+            allow_redirects=True,
         )
     except (requests.Timeout, requests.ConnectionError, OSError):
         # Timeout on non-existent PRID is EXPECTED — not a rate-limit signal
@@ -197,18 +229,21 @@ def fetch_prid(prid: int, pacer: Pacer) -> FetchResult:
         delay = float(retry_after) if retry_after.isdigit() else 60.0
         pacer.cooldown(delay + random.uniform(2, 8))
         print(f"  [THROTTLE] HTTP {resp.status_code} on PRID {prid}. Cooling {delay:.0f}s", flush=True)
-        return FetchResult(prid, url, None, "throttled")
+        return FetchResult(prid, url, None, "throttled", resp.status_code)
 
     if 300 <= resp.status_code < 400:
-        return FetchResult(prid, url, None, "redirect")   # dead PRID, instant
+        return FetchResult(
+            prid, url, None, "redirect", resp.status_code,
+            resp.headers.get("Location", ""),
+        )
 
     if 400 <= resp.status_code < 500:
-        return FetchResult(prid, url, None, "terminal")
+        return FetchResult(prid, url, None, "terminal", resp.status_code)
 
     if resp.status_code >= 500:
-        return FetchResult(prid, url, None, "transient")
+        return FetchResult(prid, url, None, "transient", resp.status_code)
 
-    return FetchResult(prid, url, BeautifulSoup(resp.text, "lxml"), "ok")
+    return FetchResult(prid, url, BeautifulSoup(resp.text, "lxml"), "ok", resp.status_code)
 
 # ---------------------------------------------------------------------------
 # Parsing helpers
@@ -229,6 +264,23 @@ def extract_date_only(soup: BeautifulSoup) -> Optional[date]:
     if not month: return None
     try: return date(int(m.group(3)), month, int(m.group(1)))
     except ValueError: return None
+
+
+def preflight_pib(pacer: Pacer) -> None:
+    """Fail before a full scan when PIB is redirecting or blocking requests."""
+    result = fetch_prid(PREFLIGHT_PRID, pacer)
+    published = extract_date_only(result.soup) if result.soup else None
+    if result.state != "ok" or not published:
+        raise RuntimeError(
+            "PIB preflight failed for known PRID "
+            f"{PREFLIGHT_PRID}: state={result.state}, "
+            f"http_status={result.status_code}, redirect_to={result.location!r}."
+        )
+    print(
+        f"[Preflight] PRID {PREFLIGHT_PRID} returned {published} "
+        f"(HTTP {result.status_code})",
+        flush=True,
+    )
 
 def full_parse(prid: int, soup: BeautifulSoup, url: str) -> Optional[ArticleRecord]:
     if not soup: return None
@@ -314,26 +366,39 @@ def scan_and_store(
     print(f"Output DB  : {DB_PATH}\n{'='*60}", flush=True)
 
     stats = {"saved": 0, "terminal": 0, "transient": 0, "filtered": 0, "skipped": 0}
+    preflight()   # Verify PIB reachable on known PRID before wasting a coarse scan
 
     # ---- STEP 1: Coarse scan (all dates in scan window) ----
     coarse_prids = list(range(start_prid, end_prid + 1, coarse_step))
     date_clusters: dict[date, list[int]] = {}
+    coarse_states: Counter[str] = Counter()
+    coarse_without_date = 0
 
     with ThreadPoolExecutor(max_workers=workers) as pool:
         futures = {pool.submit(fetch_prid, p, pacer): p for p in coarse_prids}
         for fut in as_completed(futures):
             res = fut.result()
+            coarse_states[res.state] += 1
             if res.state == "ok" and res.soup:
                 pub_date = extract_date_only(res.soup)
                 if pub_date and prid_start_date <= pub_date <= to_date:
                     date_clusters.setdefault(pub_date, []).append(res.prid)
+                elif not pub_date:
+                    coarse_without_date += 1
 
     print(f"\n[Coarse] Found {len(date_clusters)} date clusters "
           f"across {len(coarse_prids)} probes", flush=True)
+    print(
+        f"[Coarse] States: {dict(sorted(coarse_states.items()))}; "
+        f"200 responses without Posted On metadata: {coarse_without_date}",
+        flush=True,
+    )
 
     if not date_clusters:
-        print("[!] No date clusters found — check PRID anchors or date range.")
-        return stats
+        raise RuntimeError(
+            "No date clusters found after a successful PIB preflight. "
+            f"Coarse states: {dict(sorted(coarse_states.items()))}"
+        )
 
     # ---- STEP 2: Compute a TIGHT dense range ----
     # Separate previous-month anchors from target-month anchors.
