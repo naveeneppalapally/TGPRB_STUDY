@@ -1,7 +1,7 @@
 [
   {
     "q_no": 1,
-    "question": "What is the synonym of 'amenable' in 'Both parties were amenable to a peaceful settlement of the land dispute'.?",
+    "question": "What is the synonym of ‘amenable' in ‘Both parties were amenable to a peaceful settlement of the land dispute'.?",
     "options": [
       "Doubtful",
       "Unwilling",
@@ -13,7 +13,7 @@
   },
   {
     "q_no": 2,
-    "question": "What is the synonym of 'antidote' in 'Jogging is considered an antidote to mental stress'.?",
+    "question": "What is the synonym of ‘antidote' in ‘Jogging is considered an antidote to mental stress'.?",
     "options": [
       "Poisonous",
       "Remedy",
@@ -25,7 +25,7 @@
   },
   {
     "q_no": 3,
-    "question": "What is the antonym of 'transperant' in ‘The window-glass is transperant'?",
+    "question": "What is the antonym of 'transperant' in 'The window-glass is transperant'?",
     "options": [
       "Opaque",
       "Translucent",
@@ -37,7 +37,7 @@
   },
   {
     "q_no": 4,
-    "question": "What is the antonym of 'unanimous' in ‘It was a unanimous decision'?",
+    "question": "What is the antonym of ‘unanimous' in 'It was a unanimous decision'?",
     "options": [
       "United",
       "Partial",
@@ -49,7 +49,7 @@
   },
   {
     "q_no": 5,
-    "question": "His mother was ________ American though his father was ________ European.",
+    "question": "His mother was American though his father was European.",
     "options": [
       "a, a",
       "a, an",
@@ -61,7 +61,7 @@
   },
   {
     "q_no": 6,
-    "question": "The coordinator was asked to attend ________ the issue and resolve it immediately.",
+    "question": "The coordinator was asked to attend the issue and resolve it immediately.",
     "options": [
       "by",
       "in",
@@ -73,7 +73,7 @@
   },
   {
     "q_no": 7,
-    "question": "Either of the roads ________ to Vasantha Nagar.",
+    "question": "Either of the roads to Vasantha Nagar.",
     "options": [
       "lead",
       "leads",
@@ -85,7 +85,7 @@
   },
   {
     "q_no": 8,
-    "question": "Please don't disturb me, I ________ the coins now.",
+    "question": "Please don't disturb me, I the coins now.",
     "options": [
       "have been counting",
       "count",
@@ -97,7 +97,7 @@
   },
   {
     "q_no": 9,
-    "question": "Rishi ________ his engineering course by the end of 2017.",
+    "question": "Rishi his engineering course by the end of 2017.",
     "options": [
       "will completed",
       "complete",
@@ -106,6 +106,90 @@
     ],
     "paper_name": "Constable_2015_Mains",
     "source_page": 5
+  },
+  {
+    "q_no": 10,
+    "question": "Choose the correctly spelt word from the options given below.",
+    "options": [
+      "occasional",
+      "occassional",
+      "ocasional",
+      "occational"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
+  },
+  {
+    "q_no": 11,
+    "question": "What is the meaning of underlined idiom in “We would be glad to put you up for a few days if you would like to stay\"?",
+    "options": [
+      "tolerate someone",
+      "build something",
+      "provide accommodation",
+      "contribute something"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
+  },
+  {
+    "q_no": 12,
+    "question": "What is the meaning of the underlined phrase in ‘How did you wolf down that pizza so quickly'?",
+    "options": [
+      "To eat gently",
+      "To eat hungrily",
+      "To eat slowly",
+      "To swallow slowly"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
+  },
+  {
+    "q_no": 13,
+    "question": "Choose the correct order of the following jumbled sentences into a meaningful paragraph.\n(a) Wages will seldom rise in proportion to the rising prices\n(b) The problem of food is intimately connect with population, the market is governed by demand and supply\n(c) Without enough food, such people lack health, strength of efficiency and they fall an easy prey to all sorts of diseases\n(d) If too many people demand goods to go round, prices will rise and poor classes will starve",
+    "options": [
+      "1-(c), 2-(d), 3-(a), 4-(b)",
+      "1-(d), 2-(c), 3-(b), 4-(a)",
+      "1-(a), 2-(c), 3-(d), 4-(b)",
+      "1-(b), 2-(d), 3-(a), 4-(c)"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
+  },
+  {
+    "q_no": 14,
+    "question": "Choose the correct order of the following jumbled sentences to make it a meaningful paragraph.\n(a) A dove, perched on a nearby tree, saw the ant's danger and dropped a leaf into the water\n(b) Once, an ant who had come to drink at a stream fell into the water and was carried ay by the swift current\n(c) He was about to fire when the ant, who was nearby, crawled forward and bit him sharply on the ankle\n(d) Sometime after this, a hunter, creeping through the bushes, saw the dove asleep, and took a careful aim with his gun",
+    "options": [
+      "1-(d), 2-(c), 3-(b), 4-(a)",
+      "1-(c), 2-(d), 3-(a), 4-(b)",
+      "1-(b), 2-(a), 3-(d), 4-(c)",
+      "1-(a), 2-(c), 3-(d), 4-(b)"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
+  },
+  {
+    "q_no": 15,
+    "question": "Fill in the blank:\nManoj played cricket for two days,______ he?",
+    "options": [
+      "did",
+      "didn't",
+      "wasn't",
+      "wouldn't"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
+  },
+  {
+    "q_no": 16,
+    "question": "Fill in the blank:\nJohnson has not prepared for tomorrow's exam,______ he?",
+    "options": [
+      "isn't",
+      "hasn't",
+      "has",
+      "does"
+    ],
+    "paper_name": "Constable_2015_Mains",
+    "source_page": 6
   },
   {
     "q_no": 17,
@@ -169,7 +253,7 @@
   },
   {
     "q_no": 22,
-    "question": "When you see a child facing a problem in understanding an important concept for a long time , you advise him to",
+    "question": "When you see a child facing a problem in understanding an important concept for a long time, you advise him to",
     "options": [
       "stop reading the subject",
       "leave that subject forever",
@@ -207,7 +291,7 @@
     "q_no": 25,
     "question": "Do you produce a wrong evidence to your parents regarding your performance in Exams?",
     "options": [
-      "I do",
+      "Ido",
       "No",
       "Sometimes",
       "Depending upon the situation"
@@ -217,7 +301,7 @@
   },
   {
     "q_no": 26,
-    "question": "According to you, 'Gender Equality\" means",
+    "question": "According to you, ‘Gender Equality” means",
     "options": [
       "Having women reservations",
       "Women are superior to men",
@@ -276,20 +360,8 @@
     "source_page": 9
   },
   {
-    "q_no": 31,
-    "question": "(1-1/2)(1-1/3)(1-1/4)...(1-1/n) =",
-    "options": [
-      "1/(n(n+1))",
-      "(n+1)/n",
-      "2/n",
-      "1/n"
-    ],
-    "paper_name": "Constable_2015_Mains",
-    "source_page": 9
-  },
-  {
     "q_no": 32,
-    "question": "The ratio of two numbers is 3:5 and their H.C.F is 5. Then, their L.C.M is",
+    "question": "The ratio of two numbers is 3:5 and their H.C.Fis 5. Then, their L.C.M is",
     "options": [
       "45",
       "35",
@@ -315,10 +387,10 @@
     "q_no": 34,
     "question": "The ages of A and B are in the ratio 3:5. Ten years later, the ratio of their ages will be 31:45. Their present ages are (in years)",
     "options": [
-      "21, 35",
-      "24, 40",
+      "21,35",
+      "24,40",
       "18, 30",
-      "27, 45"
+      "27,45"
     ],
     "paper_name": "Constable_2015_Mains",
     "source_page": 10

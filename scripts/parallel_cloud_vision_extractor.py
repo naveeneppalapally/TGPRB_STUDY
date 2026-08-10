@@ -9,6 +9,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from google.cloud import vision
 from google import genai
 from google.genai import types
+from tenacity import retry, wait_exponential, stop_after_attempt
 
 # 1. Load Google Cloud credentials from .env
 dotenv_path = '/home/naveen/Documents/TGPRB/.env'
@@ -69,21 +70,29 @@ def extract_single_pdf(pdf_path):
     out_file = os.path.join(output_dir, f"{paper_name}.json")
     desktop_file = os.path.join(desktop_dir, f"{paper_name}.json")
     
-    # Check if already completed
-    if os.path.exists(out_file):
-        try:
-            existing = json.load(open(out_file))
-            if len(existing) >= 20:
-                print(f"⏩ [{paper_name}] Already extracted ({len(existing)} Qs). Skipping.", flush=True)
-                with open(desktop_file, 'w', encoding='utf-8') as f:
-                    json.dump(existing, f, indent=2, ensure_ascii=False)
-                return paper_name, len(existing)
-        except Exception:
-            pass
+    # We will FORCE extraction for all files to ensure complete data
+    # (Previously skipping if len(existing) >= 100, but we found many incomplete files)
 
     # Thread-local GCP clients
     vision_client = vision.ImageAnnotatorClient()
     gemini_client = genai.Client(vertexai=True, project=project_id, location='us-central1')
+
+    @retry(wait=wait_exponential(multiplier=1, min=2, max=10), stop=stop_after_attempt(5))
+    def call_vision(img_bytes):
+        image = vision.Image(content=img_bytes)
+        ocr_res = vision_client.document_text_detection(image=image)
+        return ocr_res.full_text_annotation.text if ocr_res.full_text_annotation else ""
+
+    @retry(wait=wait_exponential(multiplier=1, min=4, max=20), stop=stop_after_attempt(5))
+    def call_gemini(raw_text):
+        return gemini_client.models.generate_content(
+            model='gemini-2.5-flash',
+            contents=f"{text_structuring_prompt}\n\nRAW PAGE OCR TEXT:\n{raw_text}",
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.0
+            )
+        )
 
     doc = fitz.open(pdf_path)
     total_pages = len(doc)
@@ -99,10 +108,9 @@ def extract_single_pdf(pdf_path):
 
         # Phase A: Cloud Vision OCR
         try:
-            image = vision.Image(content=img_bytes)
-            ocr_res = vision_client.document_text_detection(image=image)
-            raw_page_text = ocr_res.full_text_annotation.text if ocr_res.full_text_annotation else ""
+            raw_page_text = call_vision(img_bytes)
         except Exception as e:
+            print(f"⚠️ [{paper_name} P{page_num+1}] Vision OCR Failed after retries: {e}", flush=True)
             continue
 
         if not raw_page_text.strip():
@@ -110,14 +118,7 @@ def extract_single_pdf(pdf_path):
 
         # Phase B: Text LLM Structuring
         try:
-            response = gemini_client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=f"{text_structuring_prompt}\n\nRAW PAGE OCR TEXT:\n{raw_page_text}",
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    temperature=0.0
-                )
-            )
+            response = call_gemini(raw_page_text)
             page_qs = json.loads(response.text.strip())
             if isinstance(page_qs, list):
                 for q in page_qs:
@@ -125,7 +126,8 @@ def extract_single_pdf(pdf_path):
                     q['source_page'] = page_num + 1
                 paper_questions.extend(page_qs)
         except Exception as e:
-            pass
+            print(f"⚠️ [{paper_name} P{page_num+1}] Gemini Structuring Failed after retries: {e}", flush=True)
+            continue
 
         # Save separate JSON file incrementally
         with open(out_file, 'w', encoding='utf-8') as f:
@@ -134,7 +136,7 @@ def extract_single_pdf(pdf_path):
         with open(desktop_file, 'w', encoding='utf-8') as f:
             json.dump(paper_questions, f, indent=2, ensure_ascii=False)
 
-        time.sleep(0.1)
+        time.sleep(0.25)
 
     elapsed = round(time.time() - t0, 1)
     print(f"✅ [{paper_name}] Complete! Saved to Desktop/{paper_name}.json ({len(paper_questions)} Qs in {elapsed}s)", flush=True)
