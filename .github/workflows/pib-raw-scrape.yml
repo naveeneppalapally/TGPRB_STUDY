@@ -1,0 +1,126 @@
+name: PIB Raw Articles Scraper (Full Data Engine)
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "Start Date YYYY-MM-DD"
+        required: false
+        default: "2025-01-01"
+      to_date:
+        description: "End Date YYYY-MM-DD"
+        required: false
+        default: "2026-08-10"
+
+jobs:
+  scrape-chunks:
+    name: Scrape Chunk (${{ matrix.chunk.name }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk:
+          - { name: "2025-Q1", from: "2025-01-01", to: "2025-03-31" }
+          - { name: "2025-Q2", from: "2025-04-01", to: "2025-06-30" }
+          - { name: "2025-Q3", from: "2025-07-01", to: "2025-09-30" }
+          - { name: "2025-Q4", from: "2025-10-01", to: "2025-12-31" }
+          - { name: "2026-Q1-Q3", from: "2026-01-01", to: "2026-08-10" }
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4 lxml
+
+      - name: Run Raw Scraper for ${{ matrix.chunk.name }}
+        run: |
+          PYTHONUNBUFFERED=1 python3 workers/scrapy-pib/pib_raw_scraper.py \
+            --from "${{ matrix.chunk.from }}" \
+            --to "${{ matrix.chunk.to }}" \
+            --workers 20 \
+            --rps 25.0
+
+      - name: Export Chunk to CSV
+        run: |
+          python3 workers/scrapy-pib/pib_raw_scraper.py --export "pib_raw_${{ matrix.chunk.name }}.csv"
+
+      - name: Upload Chunk CSV Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pib-raw-${{ matrix.chunk.name }}
+          path: pib_raw_${{ matrix.chunk.name }}.csv
+
+  merge-artifacts:
+    name: Merge All Chunks & Export Final Database
+    needs: scrape-chunks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Download all chunk artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: ./chunk-csvs
+
+      - name: Combine CSVs and build master SQLite DB
+        run: |
+          python3 - << 'EOF'
+          import csv, glob, sqlite3, os
+
+          con = sqlite3.connect("pib_raw_2025_2026.db")
+          con.execute("""
+          CREATE TABLE articles (
+              prid INTEGER PRIMARY KEY,
+              title TEXT, pub_date TEXT, ministry TEXT, office TEXT,
+              full_text TEXT, url TEXT, word_count INTEGER, scraped_at TEXT
+          );
+          """)
+
+          csv_files = glob.glob("./chunk-csvs/**/*.csv", recursive=True)
+          total_articles = 0
+
+          with open("pib_raw_full_2025_2026.csv", "w", newline="", encoding="utf-8") as master_csv:
+              writer = None
+              for fpath in sorted(csv_files):
+                  print(f"Merging {fpath}...")
+                  with open(fpath, "r", encoding="utf-8") as f:
+                      reader = csv.reader(f)
+                      header = next(reader, None)
+                      if not header: continue
+                      if writer is None:
+                          writer = csv.writer(master_csv)
+                          writer.writerow(header)
+                      for row in reader:
+                          if not row or len(row) < 8: continue
+                          writer.writerow(row)
+                          con.execute(
+                              "INSERT OR IGNORE INTO articles VALUES (?,?,?,?,?,?,?,?,?)",
+                              (int(row[0]), row[1], row[2], row[3], row[4], row[5], row[6], int(row[7]), row[8] if len(row)>8 else "")
+                          )
+                          total_articles += 1
+
+          con.commit()
+          db_size = os.path.getsize("pib_raw_2025_2026.db") / (1024*1024)
+          print(f"SUCCESS: Combined {total_articles:,} total articles into master SQLite DB ({db_size:.1f} MB)")
+          EOF
+
+      - name: Upload Final Consolidated Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: pib-raw-master-dataset-2025-2026
+          path: |
+            pib_raw_full_2025_2026.csv
+            pib_raw_2025_2026.db
