@@ -39,6 +39,7 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# PIB raw SQLite corpus (local only, ~500MB)
-workers/scrapy-pib/pib_raw.db
+# PIB raw SQLite corpus (local only)
+workers/scrapy-pib/*.db
+workers/scrapy-pib/*.csv
 workers/scrapy-pib/__pycache__/
