@@ -191,13 +191,24 @@ def _session() -> requests.Session:
 # Preflight — verify PIB is reachable before burning 20 min on coarse scan
 # ---------------------------------------------------------------------------
 def preflight() -> None:
-    """Fetch a known PRID and assert it parses correctly. Raises on hard failure."""
+    """Fetch a known PRID and assert it parses correctly.
+    Retries up to 3 times on transient network errors before giving up."""
     url = ARTICLE_URL.format(PREFLIGHT_PRID)
     print(f"[Preflight] Checking PRID {PREFLIGHT_PRID} ...", flush=True)
-    try:
-        resp = requests.get(url, timeout=(5, 10), headers=SCRAPER_HEADERS)
-    except Exception as exc:
-        raise RuntimeError(f"[Preflight FAIL] Network error: {exc}") from exc
+    last_exc = None
+    for attempt in range(1, 4):
+        try:
+            resp = requests.get(url, timeout=(8, 20), headers=SCRAPER_HEADERS)
+            last_exc = None
+            break
+        except Exception as exc:
+            last_exc = exc
+            print(f"[Preflight] Attempt {attempt}/3 failed: {exc}", flush=True)
+            if attempt < 3:
+                time.sleep(10 * attempt)  # 10s, 20s backoff
+
+    if last_exc is not None:
+        raise RuntimeError(f"[Preflight FAIL] Network error after 3 attempts: {last_exc}") from last_exc
 
     if resp.status_code == 403:
         # 403 = WAF blocking our UA or IP. Log clearly but let coarse scan proceed
