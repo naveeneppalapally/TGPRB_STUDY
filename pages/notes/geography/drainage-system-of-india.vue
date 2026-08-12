@@ -227,6 +227,16 @@
               </div>
             </div>
 
+            <!-- Indus River Basin Map -->
+            <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+              <img
+                src="/images/geography/indus-river-basin-map.webp"
+                alt="Indus River Basin Map showing Jhelum, Chenab, Ravi, Beas, Satluj tributaries and Pakistan India region"
+                class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+              />
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Indus River Basin - Wikimedia Commons / CC BY-SA</p>
+            </div>
+
             <!-- 2. Ganga -->
             <div class="panel panel-pad mb-4">
               <div class="mb-4 flex items-baseline justify-between gap-3">
@@ -263,6 +273,16 @@
               </div>
             </div>
 
+            <!-- Ganga-Yamuna River Basin Map -->
+            <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+              <img
+                src="/images/geography/ganga-river-basin-map.webp"
+                alt="Ganga Yamuna River Basin Map showing left and right bank tributaries - Kosi, Ghaghara, Yamuna, Son, Damodar"
+                class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+              />
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Ganga-Yamuna River Basin - Wikimedia Commons / CC BY-SA</p>
+            </div>
+
             <!-- 3. Brahmaputra -->
             <div class="panel panel-pad">
               <div class="mb-4 flex items-baseline justify-between gap-3">
@@ -296,6 +316,16 @@
                   "Brahmaputra is antecedent / called Tsangpo in Tibet" - direct assertion PYQ.
                 </p>
               </div>
+            </div>
+
+            <!-- Brahmaputra River Basin Map -->
+            <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+              <img
+                src="/images/geography/brahmaputra-river-basin-map.webp"
+                alt="Brahmaputra River Basin Map showing Yarlung Tsangpo in Tibet, Dihang in Arunachal, tributaries Subhansiri Lohit Manas Teesta"
+                class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+              />
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Brahmaputra River Basin - Wikimedia Commons / CC BY-SA</p>
             </div>
           </div>
 
@@ -358,6 +388,26 @@
                 </p>
               </div>
             </div>
+          </div>
+
+          <!-- Godavari River Basin Map -->
+          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <img
+              src="/images/geography/godavari-river-basin-map.webp"
+              alt="Godavari River Basin Map showing Wardha Pranhita Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
+              class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+            />
+            <p class="mt-2 text-[11px] text-gray-400 font-mono">Godavari River Basin - Wikimedia Commons / CC BY-SA</p>
+          </div>
+
+          <!-- Krishna River Basin Map -->
+          <div class="mb-10 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <img
+              src="/images/geography/krishna-river-basin-map.webp"
+              alt="Krishna River Basin Map showing Bhima Musi Tungabhadra Malprabha tributaries across Maharashtra Karnataka Andhra Pradesh Telangana"
+              class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+            />
+            <p class="mt-2 text-[11px] text-gray-400 font-mono">Krishna River Basin - Wikimedia Commons / CC BY-SA</p>
           </div>
 
           <!-- C. Peninsular - West-flowing -->
