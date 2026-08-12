@@ -1,122 +1,149 @@
 <template>
-  <div class="mx-auto max-w-4xl px-4 py-10">
+  <div class="mx-auto max-w-4xl px-4 py-8">
     <!-- Page header -->
     <header class="mb-8">
-      <p class="eyebrow mb-2 flex items-center gap-1.5">
-        <UIcon name="i-heroicons-newspaper" class="h-3.5 w-3.5" />
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">
+        <UIcon name="i-heroicons-newspaper" class="h-4 w-4" />
         Daily Updates
-      </p>
-      <h1 class="text-display mb-2 t-hi">Current Affairs</h1>
-      <p class="text-body t-mid">
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight t-hi mb-3">
+        Current Affairs
+      </h1>
+      <p class="text-sm sm:text-base leading-relaxed t-mid max-w-3xl">
         Exam-relevant news sourced from PIB, updated daily at 7am IST.
-        <span class="font-medium t-mid">85% of TGPRB current-affairs questions come from the last 6 months</span> -
-        those cards are marked <span class="inline-flex items-center gap-0.5 text-red-500 font-semibold"><UIcon name="i-heroicons-fire" class="h-3 w-3" />Hot zone</span>.
+        <span class="font-semibold text-emerald-700 dark:text-emerald-400">85% of TGPRB current-affairs questions come from the last 6 months</span> –
+        those cards are marked <span class="inline-flex items-center gap-0.5 text-red-500 font-bold"><UIcon name="i-heroicons-fire" class="h-4 w-4" />Hot zone</span>.
       </p>
 
       <!-- Stats row (Clickable quick-filters) -->
-      <div class="mt-4 flex flex-wrap gap-3">
+      <div class="mt-5 flex flex-wrap gap-2.5">
         <button
-          class="chip cursor-pointer transition-colors hover:border-accent"
-          :class="activeDateFilter === '1D' ? 'bg-accent text-white border-accent' : ''"
+          class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
+          :class="activeDateFilter === '1D'
+            ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+            : 'b-line bg-sub t-mid hover:border-emerald-500'"
           @click="activeDateFilter = '1D'"
         >
-          <UIcon name="i-heroicons-sun" class="h-3 w-3" />
+          <UIcon name="i-heroicons-sun" class="h-3.5 w-3.5" />
           {{ todayCount }} today
         </button>
         <button
-          class="chip cursor-pointer transition-colors hover:border-accent"
-          :class="activeDateFilter === '7D' ? 'bg-accent text-white border-accent' : ''"
+          class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
+          :class="activeDateFilter === '7D'
+            ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+            : 'b-line bg-sub t-mid hover:border-emerald-500'"
           @click="activeDateFilter = '7D'"
         >
-          <UIcon name="i-heroicons-calendar-days" class="h-3 w-3" />
+          <UIcon name="i-heroicons-calendar-days" class="h-3.5 w-3.5" />
           {{ thisWeekCount }} this week
         </button>
         <button
-          class="chip cursor-pointer transition-colors hover:border-red-500"
-          :class="activeDateFilter === '6M' ? 'bg-red-500 text-white border-red-500' : ''"
+          class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
+          :class="activeDateFilter === '6M'
+            ? 'bg-red-600 text-white border-red-600 shadow-sm font-semibold'
+            : 'border-red-500/30 bg-red-50 dark:bg-red-950/20 text-red-600 dark:text-red-400 hover:border-red-500'"
           @click="activeDateFilter = '6M'"
         >
-          <UIcon name="i-heroicons-fire" class="h-3 w-3 text-red-500" :class="activeDateFilter === '6M' ? 'text-white' : ''" />
+          <UIcon name="i-heroicons-fire" class="h-3.5 w-3.5 text-red-500" :class="activeDateFilter === '6M' ? 'text-white' : ''" />
           {{ hotZoneCount }} in hot zone (6mo)
         </button>
         <button
-          class="chip cursor-pointer transition-colors hover:border-accent"
-          :class="activeDateFilter === 'ALL' && activeCategory === 'ALL' ? 'bg-black/10 dark:bg-white/10' : ''"
+          class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
+          :class="activeDateFilter === 'ALL' && activeCategory === 'ALL'
+            ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+            : 'b-line bg-sub t-mid hover:border-emerald-500'"
           @click="activeDateFilter = 'ALL'; activeCategory = 'ALL'"
         >
-          <UIcon name="i-heroicons-document-text" class="h-3 w-3" />
+          <UIcon name="i-heroicons-document-text" class="h-3.5 w-3.5" />
           {{ items.length }} total entries
         </button>
         <button
           v-if="tgCount"
-          class="chip cursor-pointer transition-colors border-saffron-300 dark:border-saffron-800 hover:border-saffron-500"
-          :class="activeCategory === 'telangana' ? 'bg-saffron-500 text-white border-saffron-500' : ''"
+          class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
+          :class="activeCategory === 'telangana'
+            ? 'bg-saffron-600 text-white border-saffron-600 shadow-sm font-semibold'
+            : 'border-saffron-300 dark:border-saffron-800 bg-saffron-50 dark:bg-saffron-950/20 text-saffron-700 dark:text-saffron-300 hover:border-saffron-500'"
           @click="activeCategory = activeCategory === 'telangana' ? 'ALL' : 'telangana'"
         >
-          <UIcon name="i-heroicons-map-pin" class="h-3 w-3 text-saffron-500" :class="activeCategory === 'telangana' ? 'text-white' : ''" />
+          <UIcon name="i-heroicons-map-pin" class="h-3.5 w-3.5 text-saffron-500" :class="activeCategory === 'telangana' ? 'text-white' : ''" />
           {{ tgCount }} Telangana focus
         </button>
       </div>
     </header>
 
-    <!-- Digest view switch: Today / This week / etc -->
-    <div class="mb-4 flex flex-wrap gap-1.5">
+    <!-- Date Range Filter Switch -->
+    <div class="mb-6 flex flex-wrap items-center gap-2 border-b b-line pb-4">
+      <span class="text-xs font-bold uppercase tracking-wider t-lo mr-1">Timeframe:</span>
       <button
         v-for="df in dateFilters"
         :key="df.value"
-        class="chip cursor-pointer transition-colors"
-        :class="activeDateFilter === df.value ? 'bg-accent text-white border-accent' : 'hover:b-line'"
+        class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer"
+        :class="activeDateFilter === df.value
+          ? 'bg-emerald-600 text-white shadow-sm'
+          : 'bg-black/5 dark:bg-white/5 t-mid hover:bg-black/10 dark:hover:bg-white/10'"
         @click="activeDateFilter = df.value"
       >
         {{ df.label }}
       </button>
     </div>
 
-    <!-- Category breakdown / progress -->
-    <section class="mb-6 rounded-lg border b-line bg-sub p-4">
-      <div class="mb-3 flex items-center justify-between">
-        <p class="eyebrow m-0">Category breakdown</p>
-        <p class="text-[11px] t-lo">{{ items.length }} cards across {{ categories.length }} categories</p>
+    <!-- Category Breakdown & Filter Grid -->
+    <section class="mb-8 rounded-xl border b-line bg-sub p-5 shadow-sm">
+      <div class="mb-4 flex items-center justify-between">
+        <div>
+          <h2 class="text-sm font-bold uppercase tracking-wider t-hi flex items-center gap-2">
+            <UIcon name="i-heroicons-funnel" class="h-4 w-4 text-emerald-600" />
+            Filter by Category
+          </h2>
+          <p class="text-xs t-mid mt-0.5">Click any category to filter the news below</p>
+        </div>
+        <button
+          v-if="activeCategory !== 'ALL'"
+          class="text-xs font-semibold text-emerald-600 hover:underline"
+          @click="activeCategory = 'ALL'"
+        >
+          Clear category filter (Show All)
+        </button>
       </div>
+
       <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+        <!-- ALL Categories Option -->
+        <button
+          class="flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left transition-all cursor-pointer"
+          :class="activeCategory === 'ALL'
+            ? 'bg-emerald-600 text-white border-emerald-600 font-bold shadow-sm'
+            : 'b-line bg-white/50 dark:bg-black/20 t-hi hover:border-emerald-500/50'"
+          @click="activeCategory = 'ALL'"
+        >
+          <span class="flex items-center gap-2 text-xs truncate">
+            <UIcon name="i-heroicons-squares-2x2" class="h-4 w-4 shrink-0" />
+            All Categories
+          </span>
+          <span class="font-mono text-xs shrink-0" :class="activeCategory === 'ALL' ? 'text-white/90' : 't-lo'">
+            {{ items.length }}
+          </span>
+        </button>
+
+        <!-- Specific Categories -->
         <button
           v-for="cat in categoryStats"
           :key="cat.id"
-          class="flex items-center justify-between gap-2 rounded-md border b-line px-2.5 py-1.5 text-left transition-colors"
-          :class="activeCategory === cat.id ? 'bg-accent text-white border-accent' : 'hover:bg-black/[0.03] dark:hover:bg-white/[0.03]'"
+          class="flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left transition-all cursor-pointer"
+          :class="activeCategory === cat.id
+            ? 'bg-emerald-600 text-white border-emerald-600 font-bold shadow-sm'
+            : 'b-line bg-white/50 dark:bg-black/20 t-hi hover:border-emerald-500/50'"
           @click="activeCategory = activeCategory === cat.id ? 'ALL' : cat.id"
         >
-          <span class="flex items-center gap-1.5 text-[11.5px] font-medium truncate">
-            <UIcon :name="cat.icon" class="h-3.5 w-3.5 shrink-0" />
+          <span class="flex items-center gap-2 text-xs truncate">
+            <UIcon :name="cat.icon" class="h-4 w-4 shrink-0" />
             {{ cat.label }}
           </span>
-          <span class="font-mono text-[11px] shrink-0" :class="activeCategory === cat.id ? 'text-white/80' : 't-lo'">
+          <span class="font-mono text-xs shrink-0" :class="activeCategory === cat.id ? 'text-white/90' : 't-lo'">
             {{ cat.count }}
           </span>
         </button>
       </div>
     </section>
-
-    <!-- Category filter chips -->
-    <div class="mb-6 flex flex-wrap gap-1.5">
-      <button
-        class="chip transition-colors"
-        :class="activeCategory === 'ALL' ? 'bg-accent text-white border-accent' : 'hover:b-line'"
-        @click="activeCategory = 'ALL'"
-      >
-        All categories
-      </button>
-      <button
-        v-for="cat in categories"
-        :key="cat.id"
-        class="chip transition-colors inline-flex items-center gap-1"
-        :class="activeCategory === cat.id ? 'bg-accent text-white border-accent' : 'hover:b-line'"
-        @click="activeCategory = cat.id"
-      >
-        <UIcon :name="cat.icon" class="h-3 w-3" />
-        {{ cat.label }}
-      </button>
-    </div>
 
     <!-- Loading skeleton -->
     <div v-if="pending" class="flex flex-col gap-3">
@@ -135,37 +162,47 @@
     </div>
 
     <!-- Entry list (paginated) -->
-    <div v-else-if="filtered.length" class="flex flex-col gap-3">
+    <div v-else-if="filtered.length" class="flex flex-col gap-4">
       <div
         v-for="item in visibleItems"
         :key="item.id"
-        class="rounded-lg border b-line bg-sub p-4 flex flex-col gap-2 transition-shadow hover:shadow-sm"
-        :class="item.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : ''"
+        class="rounded-xl border b-line bg-sub p-5 flex flex-col gap-2 transition-all hover:shadow-md"
+        :class="item.meta?.is_telangana_focus ? 'border-l-4 border-l-saffron-500' : ''"
       >
         <CACard :item="item" />
       </div>
 
       <!-- Load more -->
-      <div v-if="visibleItems.length < filtered.length" class="py-4 text-center">
+      <div v-if="visibleItems.length < filtered.length" class="py-6 text-center">
         <UButton
-          variant="soft"
-          color="gray"
-          size="sm"
+          variant="solid"
+          color="emerald"
+          size="md"
           :loading="loadingMore"
+          class="font-semibold shadow-sm"
           @click="loadMore"
         >
-          Load {{ Math.min(PAGE_SIZE, filtered.length - visibleItems.length) }} more
-          <span class="t-lo">({{ filtered.length - visibleItems.length }} remaining)</span>
+          Load {{ Math.min(PAGE_SIZE, filtered.length - visibleItems.length) }} more cards
+          <span class="text-white/80">({{ filtered.length - visibleItems.length }} remaining)</span>
         </UButton>
       </div>
 
-      <p v-else class="text-center text-xs t-lo py-2">All {{ filtered.length }} cards shown</p>
+      <p v-else class="text-center text-xs font-medium t-lo py-4">All {{ filtered.length }} cards shown</p>
     </div>
 
     <!-- Empty state -->
-    <div v-else class="rounded-lg border b-line bg-sub p-10 text-center">
-      <UIcon name="i-heroicons-newspaper" class="h-8 w-8 t-lo mx-auto mb-3" />
-      <p class="text-body t-mid">No current affairs found for this filter.</p>
+    <div v-else class="rounded-xl border b-line bg-sub p-12 text-center">
+      <UIcon name="i-heroicons-newspaper" class="h-10 w-10 t-lo mx-auto mb-3" />
+      <h3 class="text-base font-semibold t-hi mb-1">No current affairs found</h3>
+      <p class="text-sm t-mid mb-4">Try selecting "All Categories" or choosing a broader timeframe filter.</p>
+      <UButton
+        color="emerald"
+        variant="soft"
+        size="sm"
+        @click="activeCategory = 'ALL'; activeDateFilter = 'ALL'"
+      >
+        Reset All Filters
+      </UButton>
     </div>
   </div>
 </template>
@@ -179,10 +216,9 @@ useHead({
   meta: [{ name: 'description', content: 'Daily exam-relevant current affairs for TGPRB/TSPSC Police Constable and SI exams. Updated every morning.' }],
 })
 
-const { categories, getCategoryMeta } = useCACategories()
+const { categories } = useCACategories()
 
 // Fetch all current affairs - select only frontmatter fields needed for display
-// (avoids loading full card body for all 676 cards at once)
 const { data: allEntries, pending } = await useAsyncData(
   'current-affairs-page',
   () => queryCollection('current_affair').select(
@@ -195,12 +231,12 @@ const activeCategory   = ref('ALL')
 const activeDateFilter = ref('ALL')
 
 const dateFilters = [
-  { label: 'All',           value: 'ALL' },
-  { label: 'Today',         value: '1D' },
-  { label: 'This week',     value: '7D' },
-  { label: 'This month',    value: '1M' },
+  { label: 'All',            value: 'ALL' },
+  { label: 'Today',          value: '1D' },
+  { label: 'This week',      value: '7D' },
+  { label: 'This month',     value: '1M' },
   { label: 'Hot zone (6mo)', value: '6M' },
-  { label: 'Last year',     value: '1Y' },
+  { label: 'Last year',      value: '1Y' },
 ]
 
 // Pagination state
@@ -216,7 +252,6 @@ const visibleItems = computed(() => filtered.value.slice(0, page.value * PAGE_SI
 
 function loadMore() {
   loadingMore.value = true
-  // Use requestAnimationFrame so the loading state renders before heavy DOM work
   requestAnimationFrame(() => {
     page.value++
     loadingMore.value = false
@@ -243,7 +278,7 @@ const filtered = computed(() => {
   })
 })
 
-// Category breakdown (counts computed off the full unfiltered set)
+// Category breakdown (counts computed off the full set)
 const categoryStats = computed(() =>
   categories.map((cat) => ({
     ...cat,

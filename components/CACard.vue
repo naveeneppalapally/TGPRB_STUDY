@@ -39,7 +39,7 @@
     </div>
 
     <!-- Headline -->
-    <h3 class="text-sm font-semibold leading-snug t-hi">
+    <h3 class="text-base sm:text-lg font-bold leading-snug t-hi tracking-tight my-1">
       {{ item.meta.headline }}
     </h3>
 
