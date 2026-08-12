@@ -81,5 +81,11 @@ export default defineNuxtConfig({
     },
   },
 
+  vite: {
+    optimizeDeps: {
+      include: ['ts-fsrs'],
+    },
+  },
+
   devtools: { enabled: !isCFBuild },
 })
