@@ -337,7 +337,10 @@ const score = ref(0)
 const passed = ref(false)
 
 onMounted(() => {
-  if (props.noteId) {
+  const policy = localStorage.getItem('studyos-gate-policy')
+  if (policy === 'unlocked') {
+    passed.value = true
+  } else if (props.noteId) {
     const savedState = localStorage.getItem(`gate_state_${props.noteId}`)
     if (savedState) {
       try {
