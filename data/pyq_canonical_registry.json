@@ -1,0 +1,214 @@
+{
+  "total_source_files": 25,
+  "total_raw_questions": 4991,
+  "total_unique_questions": 3129,
+  "total_repeated_questions": 1262,
+  "paper_overlap_pairs": [
+    {
+      "paper_a": "SI_2016_Prelims_Paper1.json",
+      "paper_b": "SI_2016_Prelims_Paper2.json",
+      "common_count": 180,
+      "paper_a_count": 192,
+      "paper_b_count": 192,
+      "overlap_ratio": 0.9375
+    },
+    {
+      "paper_a": "SI_2016_Final_Arithmetic_Paper.json",
+      "paper_b": "SI_2016_Mains_Paper1.json",
+      "common_count": 183,
+      "paper_a_count": 198,
+      "paper_b_count": 198,
+      "overlap_ratio": 0.9242
+    },
+    {
+      "paper_a": "Constable_2015_Prelims.json",
+      "paper_b": "Constable_2016_Mains.json",
+      "common_count": 177,
+      "paper_a_count": 193,
+      "paper_b_count": 193,
+      "overlap_ratio": 0.9171
+    },
+    {
+      "paper_a": "SI_2018_Mains_Paper1.json",
+      "paper_b": "SI_2018_Mains_Paper3.json",
+      "common_count": 181,
+      "paper_a_count": 198,
+      "paper_b_count": 198,
+      "overlap_ratio": 0.9141
+    },
+    {
+      "paper_a": "SI_2016_Final_GS_Paper.json",
+      "paper_b": "SI_2016_Mains_Paper2.json",
+      "common_count": 175,
+      "paper_a_count": 194,
+      "paper_b_count": 194,
+      "overlap_ratio": 0.9021
+    },
+    {
+      "paper_a": "SI_2016_Final_GS_Paper.json",
+      "paper_b": "SI_2016_Mains_Paper4.json",
+      "common_count": 175,
+      "paper_a_count": 194,
+      "paper_b_count": 194,
+      "overlap_ratio": 0.9021
+    },
+    {
+      "paper_a": "SI_2016_Mains_Paper2.json",
+      "paper_b": "SI_2016_Mains_Paper4.json",
+      "common_count": 175,
+      "paper_a_count": 194,
+      "paper_b_count": 194,
+      "overlap_ratio": 0.9021
+    },
+    {
+      "paper_a": "Constable_2016_Mains.json",
+      "paper_b": "Constable_2016_Prelims.json",
+      "common_count": 174,
+      "paper_a_count": 193,
+      "paper_b_count": 193,
+      "overlap_ratio": 0.9016
+    },
+    {
+      "paper_a": "Constable_2015_Prelims.json",
+      "paper_b": "Constable_2016_Prelims.json",
+      "common_count": 172,
+      "paper_a_count": 193,
+      "paper_b_count": 193,
+      "overlap_ratio": 0.8912
+    },
+    {
+      "paper_a": "SI_2016_Prelims_Paper.json",
+      "paper_b": "SI_2016_Prelims_Paper1.json",
+      "common_count": 163,
+      "paper_a_count": 189,
+      "paper_b_count": 192,
+      "overlap_ratio": 0.8624
+    },
+    {
+      "paper_a": "SI_2016_Prelims_Paper.json",
+      "paper_b": "SI_2016_Prelims_Paper2.json",
+      "common_count": 161,
+      "paper_a_count": 189,
+      "paper_b_count": 192,
+      "overlap_ratio": 0.8519
+    },
+    {
+      "paper_a": "Constable_2015_Mains.json",
+      "paper_b": "Constable_2023_Set_A.json",
+      "common_count": 166,
+      "paper_a_count": 200,
+      "paper_b_count": 200,
+      "overlap_ratio": 0.83
+    },
+    {
+      "paper_a": "Constable_2018_Prelims.json",
+      "paper_b": "SI_2018_Mains_Paper4_GS.json",
+      "common_count": 163,
+      "paper_a_count": 199,
+      "paper_b_count": 198,
+      "overlap_ratio": 0.8232
+    }
+  ],
+  "files_summary": {
+    "Constable_2015_Mains.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "Constable_2015_Prelims.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "Constable_2016_Mains.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "Constable_2016_Prelims.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "Constable_2018_Mains.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "Constable_2018_Prelims.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "Constable_2022_Prelims.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "Constable_2023_Mains_Official.json": {
+      "question_count": 199,
+      "is_duplicate_set": false
+    },
+    "Constable_2023_Set_A.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "SI_2016_Final_Arithmetic_Paper.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Final_GS_Paper.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Mains_Paper1.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Mains_Paper2.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Mains_Paper4.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Prelims_Paper.json": {
+      "question_count": 196,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Prelims_Paper1.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2016_Prelims_Paper2.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2018_Mains_Paper1.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2018_Mains_Paper2.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "SI_2018_Mains_Paper3.json": {
+      "question_count": 200,
+      "is_duplicate_set": true
+    },
+    "SI_2018_Mains_Paper4_GS.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "SI_2018_Prelims_Paper1.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "SI_2022_Prelims.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    },
+    "SI_2023_Mains_Arithmetic_Reasoning.json": {
+      "question_count": 196,
+      "is_duplicate_set": false
+    },
+    "SI_2023_Mains_General_Studies.json": {
+      "question_count": 200,
+      "is_duplicate_set": false
+    }
+  }
+}

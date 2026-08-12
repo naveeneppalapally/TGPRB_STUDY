@@ -1,0 +1,364 @@
+{
+  "version": "1.0.0",
+  "description": "Standard TSLPRB Hierarchical Taxonomy for Constable & SI Examination",
+  "subjects": [
+    {
+      "subject_id": "GEO",
+      "subject_name": "Indian & World Geography",
+      "topics": [
+        {
+          "topic_id": "GEO-PHY",
+          "topic_name": "Physical Geography & Geomorphology",
+          "sub_topics": [
+            "Earth Structure & Plate Tectonics",
+            "Rocks & Minerals",
+            "Landforms & Volcanism",
+            "Atmosphere, Pressure Belts & Winds"
+          ]
+        },
+        {
+          "topic_id": "GEO-DRAINAGE",
+          "topic_name": "Drainage Systems of India",
+          "sub_topics": [
+            "Himalayan Rivers (Indus, Ganga, Brahmaputra)",
+            "Peninsular Rivers (Godavari, Krishna, Cauvery, Mahanadi)",
+            "West Flowing Rivers (Narmada, Tapi)",
+            "River Projects, Dams & Multipurpose Schemes",
+            "Lakes, Waterfalls & Coastal Features"
+          ]
+        },
+        {
+          "topic_id": "GEO-CLIMATE",
+          "topic_name": "Climate, Monsoons & Soil",
+          "sub_topics": [
+            "Indian Monsoons & Rainfall Distribution",
+            "Soil Types & Distribution in India",
+            "Soil Erosion & Conservation"
+          ]
+        },
+        {
+          "topic_id": "GEO-ENV",
+          "topic_name": "Forests, Wildlife & Environment",
+          "sub_topics": [
+            "Natural Vegetation & Forest Types",
+            "National Parks, Wildlife Sanctuaries & Biosphere Reserves",
+            "Biodiversity Hotspots & Conservation",
+            "Environmental Pollution & Climate Change"
+          ]
+        },
+        {
+          "topic_id": "GEO-AGRI-MINERAL",
+          "topic_name": "Agriculture, Minerals & Transport",
+          "sub_topics": [
+            "Major Crops, Cropping Seasons & Irrigation",
+            "Mineral Resources & Distribution",
+            "Energy Resources (Thermal, Hydro, Nuclear, Solar)",
+            "Railways, Highways, Ports & Waterways"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "POL",
+      "subject_name": "Indian Polity & Constitution",
+      "topics": [
+        {
+          "topic_id": "POL-CONST-FRAME",
+          "topic_name": "Constitutional Framework & Preamble",
+          "sub_topics": [
+            "Making of the Constitution & Constituent Assembly",
+            "Preamble, Salient Features & Sources",
+            "Union & its Territory, Citizenship"
+          ]
+        },
+        {
+          "topic_id": "POL-FR-DPSP",
+          "topic_name": "Fundamental Rights, DPSP & Duties",
+          "sub_topics": [
+            "Fundamental Rights (Articles 12-35)",
+            "Directive Principles of State Policy (Articles 36-51)",
+            "Fundamental Duties (Article 51A)",
+            "Basic Structure Doctrine & Judicial Review"
+          ]
+        },
+        {
+          "topic_id": "POL-UNION-EXEC-LEG",
+          "topic_name": "Union Executive & Legislature",
+          "sub_topics": [
+            "President, Vice-President & Emergency Provisions",
+            "Prime Minister & Council of Ministers",
+            "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+            "Legislative Procedure & Money Bills"
+          ]
+        },
+        {
+          "topic_id": "POL-STATE-LOCAL",
+          "topic_name": "State Government & Local Governance",
+          "sub_topics": [
+            "Governor, Chief Minister & State Legislature",
+            "Panchayati Raj (73rd Amendment)",
+            "Municipalities & Urban Local Bodies (74th Amendment)"
+          ]
+        },
+        {
+          "topic_id": "POL-JUDICIARY-BODIES",
+          "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+          "sub_topics": [
+            "Supreme Court & High Courts",
+            "Election Commission, UPSC, CAG & Finance Commission",
+            "NITI Aayog, NHRC, Lokpal & Tribunals",
+            "Important Constitutional Amendments"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "HIS",
+      "subject_name": "History of India & National Movement",
+      "topics": [
+        {
+          "topic_id": "HIS-ANCIENT",
+          "topic_name": "Ancient India & Culture",
+          "sub_topics": [
+            "Indus Valley Civilization",
+            "Vedic Period & Vedic Literature",
+            "Buddhism, Jainism & Religious Reform",
+            "Mauryan Empire & Ashoka Edicts",
+            "Gupta Empire, Harsha & South Indian Dynasties"
+          ]
+        },
+        {
+          "topic_id": "HIS-MEDIEVAL",
+          "topic_name": "Medieval India",
+          "sub_topics": [
+            "Delhi Sultanate (Slave, Khilji, Tughlaq, Sayyid, Lodi)",
+            "Mughal Empire (Babur to Aurangzeb)",
+            "Bhakti & Sufi Movements",
+            "Vijayanagara & Bahmani Kingdoms",
+            "Maratha Empire & Shivaji"
+          ]
+        },
+        {
+          "topic_id": "HIS-MODERN-MOV",
+          "topic_name": "Modern India & National Movement",
+          "sub_topics": [
+            "European Advent & British Rule Expansion",
+            "Revolt of 1857 & its Causes/Impact",
+            "Socio-Religious Reform Movements",
+            "Early Congress & Moderate Phase (1885-1905)",
+            "Extremist Phase, Swadeshi & Revolutionary Movements",
+            "Gandhian Era (NCM, CDM, Quit India Movement)",
+            "Governor Generals, Viceroys & British Acts (1909, 1919, 1935)",
+            "Partition, Independence & Integration of States"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "TEL",
+      "subject_name": "Telangana State - History, Movement, Geography & Schemes",
+      "topics": [
+        {
+          "topic_id": "TEL-HIS-CULTURE",
+          "topic_name": "Telangana History & Culture",
+          "sub_topics": [
+            "Satavahanas, Ikshvakus, Vishnukundins",
+            "Kakatiyas, Qutb Shahis & Asaf Jahis (Nizams)",
+            "Telangana Festivals (Bathukamma, Bonalu, Medaram Jatara)",
+            "Telangana Art, Literature, Forts & Heritage Monuments"
+          ]
+        },
+        {
+          "topic_id": "TEL-MOVEMENT",
+          "topic_name": "Telangana Armed Struggle & Statehood Movement",
+          "sub_topics": [
+            "Telangana Armed Struggle (1946-1951)",
+            "Hyderabad State Integration & Police Action (1948)",
+            "Mulki Movement & 1969 Telangana Agitation",
+            "Gentlemen's Agreement & Six-Point Formula",
+            "Final Phase of Telangana Movement (2001-2014) & AP Reorganisation Act"
+          ]
+        },
+        {
+          "topic_id": "TEL-GEO-ECO-SCHEMES",
+          "topic_name": "Telangana Geography, Economy & Welfare Schemes",
+          "sub_topics": [
+            "Telangana Districts, Boundaries & Rivers",
+            "Irrigation Projects (Kaleshwaram, Sriram Sagar, etc.)",
+            "State Welfare Schemes & Initiatives",
+            "Telangana State Budget, Industries & IT Exports",
+            "Telangana Police Department & Administrative Structure"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "SCI",
+      "subject_name": "General Science & Technology",
+      "topics": [
+        {
+          "topic_id": "SCI-BIO",
+          "topic_name": "Biology & Life Sciences",
+          "sub_topics": [
+            "Human Anatomy & Organ Systems (Circulatory, Nervous, Digestive)",
+            "Nutrition, Vitamins, Minerals & Deficiency Diseases",
+            "Infectious & Non-Infectious Diseases (Bacterial, Viral, Protozoan)",
+            "Plant Physiology, Photosynthesis & Plant Hormones",
+            "Genetics, Evolution & Biotechnology"
+          ]
+        },
+        {
+          "topic_id": "SCI-PHY",
+          "topic_name": "Physics",
+          "sub_topics": [
+            "Units, Dimensions, Motion, Force & Newton's Laws",
+            "Work, Power, Energy & Gravitation",
+            "Optics, Light Reflection, Refraction & Lenses",
+            "Sound Waves, Echo & Acoustics",
+            "Heat, Thermodynamics, Electricity & Magnetism"
+          ]
+        },
+        {
+          "topic_id": "SCI-CHEM",
+          "topic_name": "Chemistry",
+          "sub_topics": [
+            "Matter, Elements, Compounds & Periodic Table",
+            "Acids, Bases, Salts & pH Scale",
+            "Metals, Non-Metals & Metallurgy",
+            "Carbon & its Compounds, Polymers & Daily Life Chemistry"
+          ]
+        },
+        {
+          "topic_id": "SCI-TECH-SPACE",
+          "topic_name": "Science, Technology, Space & Defence",
+          "sub_topics": [
+            "ISRO Space Missions, Launch Vehicles (PSLV, GSLV, SSLV) & Satellites",
+            "DRDO Missiles, Defence Platforms & Naval Ships",
+            "Information Technology, AI, Cybersecurity & Semiconductors",
+            "Nuclear Energy, Renewable Energy & Emerging Tech"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "ECO",
+      "subject_name": "Indian Economy & Development",
+      "topics": [
+        {
+          "topic_id": "ECO-BASIC-BANKING",
+          "topic_name": "National Income, Banking & Monetary Policy",
+          "sub_topics": [
+            "GDP, GNP, NNP, Inflation & Price Indices (CPI, WPI)",
+            "Reserve Bank of India (RBI), Repo Rate & Monetary Policy",
+            "Banking Structure, Commercial Banks, NBFCs & Fintech/UPI",
+            "Money Market & Capital Market (SEBI, Stock Exchanges)"
+          ]
+        },
+        {
+          "topic_id": "ECO-FISCAL-SCHEMES",
+          "topic_name": "Public Finance, Budget & Central Schemes",
+          "sub_topics": [
+            "Union Budget, Fiscal Deficit, Revenue & Capital Receipts",
+            "GST, Direct Taxes & Finance Commission",
+            "Poverty, Unemployment & Five-Year Plans / NITI Aayog",
+            "Central Government Flagship Welfare & Infrastructure Schemes"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "ARI",
+      "subject_name": "Arithmetic & Quantitative Aptitude",
+      "topics": [
+        {
+          "topic_id": "ARI-NUMBER-MATH",
+          "topic_name": "Number System & Basic Math",
+          "sub_topics": [
+            "Number System, Divisibility, Unit Digits & Remainder Theorem",
+            "LCM, HCF & Fractions",
+            "Simplification, BODMAS, Surds & Indices"
+          ]
+        },
+        {
+          "topic_id": "ARI-COMMERCIAL-MATH",
+          "topic_name": "Commercial Arithmetic",
+          "sub_topics": [
+            "Percentages & Applications",
+            "Profit, Loss, Discount & Marked Price",
+            "Simple Interest & Compound Interest",
+            "Ratio, Proportion & Partnership",
+            "Averages, Mixtures & Alligations, Ages"
+          ]
+        },
+        {
+          "topic_id": "ARI-SPEED-WORK-MENS",
+          "topic_name": "Speed, Work & Mensuration",
+          "sub_topics": [
+            "Time & Work, Pipes & Cisterns",
+            "Time, Speed & Distance, Trains, Boats & Streams",
+            "Mensuration 2D (Triangles, Circles, Quadrilaterals)",
+            "Mensuration 3D (Cylinders, Spheres, Cones, Cubes)",
+            "Basic Algebra, Progressions (AP/GP) & Data Interpretation"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "REA",
+      "subject_name": "Reasoning & Mental Ability",
+      "topics": [
+        {
+          "topic_id": "REA-VERBAL",
+          "topic_name": "Verbal Reasoning & Logical Deductions",
+          "sub_topics": [
+            "Number Series, Alphabet Series & Letter-Number Sequences",
+            "Analogy & Classification (Odd One Out)",
+            "Coding-Decoding & Substitution",
+            "Blood Relations & Family Tree",
+            "Direction Sense & Coordinate Navigation",
+            "Syllogisms & Logical Venn Diagrams",
+            "Seating Arrangements & Linear/Circular Rankings",
+            "Clock, Calendar, Mathematical Operations"
+          ]
+        },
+        {
+          "topic_id": "REA-NONVERBAL",
+          "topic_name": "Non-Verbal & Spatial Reasoning",
+          "sub_topics": [
+            "Mirror Images & Water Images",
+            "Paper Folding, Cutting & Pattern Completion",
+            "Cube, Dice & Figure Matrix / Series",
+            "Embedded Figures & Counting of Shapes"
+          ]
+        }
+      ]
+    },
+    {
+      "subject_id": "ENG",
+      "subject_name": "General English",
+      "topics": [
+        {
+          "topic_id": "ENG-GRAMMAR",
+          "topic_name": "English Grammar & Usage",
+          "sub_topics": [
+            "Articles, Prepositions & Conjunctions",
+            "Tenses, Subject-Verb Agreement & Error Spotting",
+            "Active & Passive Voice",
+            "Direct & Indirect Speech (Narration)",
+            "Sentence Correction, Sentence Rearrangement"
+          ]
+        },
+        {
+          "topic_id": "ENG-VOCAB-COMP",
+          "topic_name": "Vocabulary & Reading Comprehension",
+          "sub_topics": [
+            "Synonyms, Antonyms & One-Word Substitutions",
+            "Idioms, Phrases & Phrasal Verbs",
+            "Spelling Errors & Fill in the Blanks",
+            "Reading Comprehension Passages"
+          ]
+        }
+      ]
+    }
+  ]
+}

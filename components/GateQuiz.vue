@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="border-color: var(--border-active)">
+  <div v-if="quiz" class="card" style="border-color: var(--border-active)">
     <div class="flex items-center gap-2 mb-4">
       <span class="text-xl">🎯</span>
       <h3 class="font-semibold">Comprehension Gate</h3>
@@ -46,8 +46,7 @@
               class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
               :style="answers[qi] === oi
                 ? 'border-color: var(--accent); background: var(--accent)'
-                : 'border-color: var(--border-subtle)'
-              "
+                : 'border-color: var(--border-subtle)'"
             >
               <span
                 v-if="answers[qi] === oi"
@@ -78,14 +77,13 @@
         class="p-4 rounded-lg text-center"
         :style="passed
           ? 'background: rgba(52, 211, 153, 0.1); border: 1px solid rgba(52, 211, 153, 0.3)'
-          : 'background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3)'
-        "
+          : 'background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3)'"
       >
         <p class="text-3xl font-bold font-mono mb-1" :style="passed ? 'color: #34d399' : 'color: #f87171'">
           {{ score }}/{{ quiz.questions.length }}
         </p>
         <p class="text-sm" :style="passed ? 'color: #34d399' : 'color: #f87171'">
-          {{ passed ? '✅ Gate Passed - Flashcards Unlocked!' : '❌ Gate Failed - Review the note and try again' }}
+          {{ passed ? 'Gate Passed - Flashcards Unlocked!' : 'Gate Failed - Review the note and try again' }}
         </p>
       </div>
 
@@ -98,7 +96,7 @@
       >
         <div class="flex items-start gap-2 mb-2">
           <span :class="answers[qi] === q.correct_answer ? 'text-green-400' : 'text-red-400'">
-            {{ answers[qi] === q.correct_answer ? '✓' : '✗' }}
+            {{ answers[qi] === q.correct_answer ? 'v' : 'x' }}
           </span>
           <p class="font-medium text-sm">{{ q.question }}</p>
         </div>
@@ -118,9 +116,19 @@
       </div>
     </div>
   </div>
+
+  <!-- Nothing to show yet: no quiz prop and no matching note-id gate found -->
+  <div v-else class="card" style="border-color: var(--border-active)">
+    <p class="text-sm" style="color: var(--text-muted)">
+      Comprehension gate not available for this note yet.
+    </p>
+  </div>
 </template>
 
 <script setup lang="ts">
+import { computed, reactive, ref } from 'vue'
+import { useAsyncData } from '#imports'
+
 interface GateQuestion {
   id: string
   question: string
@@ -135,13 +143,26 @@ interface GateQuizData {
   questions: GateQuestion[]
 }
 
+// Either pass `quiz` directly (e.g. NoteRenderer.vue, which already fetched the
+// note's gate_quiz JSON), or pass `note-id` and this component self-fetches the
+// matching gate from server/api/gate/[noteId].get.ts. The API fetch is SSR-safe:
+// $fetch against a relative /api/ route resolves via Nitro's internal handler
+// during prerendering, never touching a browser-only API.
 const props = defineProps<{
-  quiz: GateQuizData
+  quiz?: GateQuizData
+  noteId?: string
 }>()
 
 const emit = defineEmits<{
   completed: [result: { score: number; total: number; passed: boolean }]
 }>()
+
+const { data: fetchedQuiz } = await useAsyncData<GateQuizData | null>(
+  `gate-quiz-${props.noteId ?? 'none'}`,
+  () => props.noteId ? $fetch<GateQuizData>(`/api/gate/${props.noteId}`) : Promise.resolve(null),
+)
+
+const quiz = computed<GateQuizData | undefined>(() => props.quiz ?? fetchedQuiz.value ?? undefined)
 
 const answers = reactive<Record<number, number>>({})
 const submitted = ref(false)
@@ -149,21 +170,22 @@ const score = ref(0)
 const passed = ref(false)
 
 const answeredCount = computed(() => Object.keys(answers).length)
-const allAnswered = computed(() => answeredCount.value === props.quiz.questions.length)
+const allAnswered = computed(() => !!quiz.value && answeredCount.value === quiz.value.questions.length)
 
 function submitGate() {
+  if (!quiz.value) return
   let correct = 0
-  props.quiz.questions.forEach((q, i) => {
+  quiz.value.questions.forEach((q, i) => {
     if (answers[i] === q.correct_answer) correct++
   })
 
   score.value = correct
-  passed.value = correct >= props.quiz.pass_threshold
+  passed.value = correct >= quiz.value.pass_threshold
   submitted.value = true
 
   emit('completed', {
     score: correct,
-    total: props.quiz.questions.length,
+    total: quiz.value.questions.length,
     passed: passed.value,
   })
 }

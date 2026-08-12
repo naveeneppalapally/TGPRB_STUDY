@@ -1,10 +1,11 @@
 <template>
   <div class="flex flex-col gap-3">
-    <!-- Header: Category pill + TG Focus + Date -->
+    <!-- Header: Category pill + TG Focus + Hot zone + Date -->
     <div class="flex items-center justify-between gap-2 flex-wrap">
       <div class="flex items-center gap-2">
-        <span :class="['chip text-[10px] uppercase font-bold tracking-wider', categoryColorClass]">
-          {{ item.meta.category || 'general' }}
+        <span :class="['chip text-[10px] uppercase font-bold tracking-wider inline-flex items-center gap-1', categoryMeta.colorClass]">
+          <UIcon :name="categoryMeta.icon" class="h-3 w-3" />
+          {{ categoryMeta.label }}
         </span>
         <span
           v-if="item.meta.difficulty"
@@ -19,6 +20,14 @@
         >
           <UIcon name="i-heroicons-map-pin" class="h-3 w-3 shrink-0" />
           TG Focus
+        </span>
+        <span
+          v-if="isHotZone"
+          class="inline-flex items-center gap-1 rounded-full bg-red-500/10 dark:bg-red-500/20 text-red-600 dark:text-red-400 px-2 py-0.5 text-[10px] font-semibold tracking-wide border border-red-500/20"
+          title="85% of PYQ current-affairs questions come from the last 6 months"
+        >
+          <UIcon name="i-heroicons-fire" class="h-3 w-3 shrink-0" />
+          Hot zone
         </span>
       </div>
       <time
@@ -164,10 +173,13 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useCACategories } from '@/composables/useCACategories'
 
 const props = defineProps<{
   item: any
 }>()
+
+const { getCategoryMeta } = useCACategories()
 
 // Normalise: support both new mcqs array and legacy single mcq
 const mcqs = computed<any[]>(() => {
@@ -232,23 +244,15 @@ const difficultyClass = computed(() => {
   return 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400'
 })
 
-const categoryColorClass = computed(() => {
-  const cat = (props.item.meta.category || '').toLowerCase()
-  const map: Record<string, string> = {
-    appointments: 'text-blue-700 bg-blue-100 dark:text-blue-300 dark:bg-blue-900/30',
-    awards: 'text-amber-700 bg-amber-100 dark:text-amber-300 dark:bg-amber-900/30',
-    sports: 'text-green-700 bg-green-100 dark:text-green-300 dark:bg-green-900/30',
-    economy: 'text-emerald-700 bg-emerald-100 dark:text-emerald-300 dark:bg-emerald-900/30',
-    international: 'text-purple-700 bg-purple-100 dark:text-purple-300 dark:bg-purple-900/30',
-    defence: 'text-red-700 bg-red-100 dark:text-red-300 dark:bg-red-900/30',
-    telangana: 'text-saffron-700 bg-saffron-100 dark:text-saffron-300 dark:bg-saffron-900/30',
-    science: 'text-cyan-700 bg-cyan-100 dark:text-cyan-300 dark:bg-cyan-900/30',
-    judiciary: 'text-indigo-700 bg-indigo-100 dark:text-indigo-300 dark:bg-indigo-900/30',
-    environment: 'text-lime-700 bg-lime-100 dark:text-lime-300 dark:bg-lime-900/30',
-    books: 'text-orange-700 bg-orange-100 dark:text-orange-300 dark:bg-orange-900/30',
-    schemes: 'text-teal-700 bg-teal-100 dark:text-teal-300 dark:bg-teal-900/30',
-  }
-  return map[cat] || 'text-gray-700 bg-gray-100 dark:text-gray-300 dark:bg-gray-800'
+const categoryMeta = computed(() => getCategoryMeta(props.item.meta.category))
+
+// Hot zone: last 6 months (180 days). PYQ analysis shows 85% of current
+// affairs questions are drawn from this window (see AGENTS.md).
+const isHotZone = computed(() => {
+  const iso = props.item.meta.published_at || props.item.meta.event_date || props.item.meta.date
+  if (!iso) return false
+  const days = (Date.now() - new Date(iso).getTime()) / 86400000
+  return days >= 0 && days <= 180
 })
 
 function formatDate(iso: string): string {

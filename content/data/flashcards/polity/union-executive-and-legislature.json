@@ -1,0 +1,115 @@
+{
+  "topic_id": "POL-UNION-EXEC-LEG",
+  "cards": [
+    {
+      "id": "POL-UNION-EXEC-LEG-01",
+      "front": "Which Article of the Indian Constitution states that there shall be a President of India?",
+      "back": "Article 52 states that there shall be a President of India.",
+      "key_fact": "Article 52 provides for the office of the President of India.",
+      "tags": [
+        "polity",
+        "president",
+        "constitution"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-02",
+      "front": "Who participates in the electoral college for the election of the President of India?",
+      "back": "Elected members of both Houses of Parliament and elected members of State Legislative Assemblies elect the President.",
+      "key_fact": "Only elected members of Parliament and State Assemblies elect the President.",
+      "tags": [
+        "polity",
+        "president",
+        "elections"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-03",
+      "front": "Which Article of the Indian Constitution lays down the procedure for the impeachment of the President?",
+      "back": "Article 61 lays down the procedure for the impeachment of the President.",
+      "key_fact": "Article 61 prescribes the impeachment process for the President.",
+      "tags": [
+        "polity",
+        "president",
+        "impeachment"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-04",
+      "front": "Who is the ex-officio Chairman of the Rajya Sabha?",
+      "back": "The Vice-President of India is the ex-officio Chairman of the Rajya Sabha.",
+      "key_fact": "The Vice-President serves as the ex-officio Chairman of the Rajya Sabha.",
+      "tags": [
+        "polity",
+        "vice-president",
+        "rajya-sabha"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-05",
+      "front": "To which body is the Council of Ministers collectively responsible under Article 75(3)?",
+      "back": "The Council of Ministers is collectively responsible to the House of the People (Lok Sabha).",
+      "key_fact": "The Council of Ministers is collectively responsible to the Lok Sabha.",
+      "tags": [
+        "polity",
+        "executive",
+        "lok-sabha"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-06",
+      "front": "What three components constitute the Parliament of India under Article 79?",
+      "back": "The Parliament consists of the President, the Rajya Sabha, and the Lok Sabha.",
+      "key_fact": "Parliament consists of the President, Rajya Sabha, and Lok Sabha.",
+      "tags": [
+        "polity",
+        "parliament",
+        "structure"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-07",
+      "front": "Who presides over a joint sitting of both Houses of Parliament?",
+      "back": "The Speaker of the Lok Sabha presides over a joint sitting of Parliament.",
+      "key_fact": "The Speaker of Lok Sabha presides over joint sittings of Parliament.",
+      "tags": [
+        "polity",
+        "parliament",
+        "speaker"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-08",
+      "front": "Who has the final authority to certify whether a bill is a Money Bill?",
+      "back": "The Speaker of the Lok Sabha has the final authority to certify a Money Bill.",
+      "key_fact": "The Speaker certifies whether a bill is a Money Bill.",
+      "tags": [
+        "polity",
+        "speaker",
+        "money-bill"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-09",
+      "front": "What is the maximum constitutional strength of the Rajya Sabha?",
+      "back": "The maximum permitted strength of the Rajya Sabha is 250 members.",
+      "key_fact": "The maximum strength of Rajya Sabha is 250 members.",
+      "tags": [
+        "polity",
+        "rajya-sabha",
+        "parliament"
+      ]
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG-10",
+      "front": "Under which Article can the President promulgate Ordinances during recess of Parliament?",
+      "back": "Article 123 empowers the President to promulgate Ordinances during recess of Parliament.",
+      "key_fact": "Article 123 grants ordinance-making power to the President.",
+      "tags": [
+        "polity",
+        "president",
+        "ordinance"
+      ]
+    }
+  ]
+}

@@ -8,56 +8,93 @@
       </p>
       <h1 class="text-display mb-2 t-hi">Current Affairs</h1>
       <p class="text-body t-mid">
-        Exam-relevant news updated every day at 7am IST. Sourced from The Hindu, PIB, Telangana Today and more.
+        Exam-relevant news sourced from PIB, updated daily at 7am IST.
+        <span class="font-medium t-mid">85% of TGPRB current-affairs questions come from the last 6 months</span> -
+        those cards are marked <span class="inline-flex items-center gap-0.5 text-red-500 font-semibold"><UIcon name="i-heroicons-fire" class="h-3 w-3" />Hot zone</span>.
       </p>
 
       <!-- Stats row -->
       <div class="mt-4 flex flex-wrap gap-3">
         <span class="chip">
+          <UIcon name="i-heroicons-sun" class="h-3 w-3" />
+          {{ todayCount }} today
+        </span>
+        <span class="chip">
           <UIcon name="i-heroicons-calendar-days" class="h-3 w-3" />
-          {{ thisWeekCount }} new this week
+          {{ thisWeekCount }} this week
+        </span>
+        <span class="chip">
+          <UIcon name="i-heroicons-fire" class="h-3 w-3 text-red-500" />
+          {{ hotZoneCount }} in hot zone (6mo)
         </span>
         <span class="chip">
           <UIcon name="i-heroicons-document-text" class="h-3 w-3" />
           {{ items.length }} total entries
         </span>
-        <span v-if="tgCount" class="chip">
+        <span v-if="tgCount" class="chip border-saffron-300 dark:border-saffron-800">
           <UIcon name="i-heroicons-map-pin" class="h-3 w-3 text-saffron-500" />
           {{ tgCount }} Telangana focus
         </span>
       </div>
     </header>
 
-    <!-- Filters -->
-    <div class="mb-6 flex flex-wrap gap-2">
-      <!-- Section filter -->
-      <div class="flex flex-wrap gap-1.5">
+    <!-- Digest view switch: Today / This week / etc -->
+    <div class="mb-4 flex flex-wrap gap-1.5">
+      <button
+        v-for="df in dateFilters"
+        :key="df.value"
+        class="chip transition-colors"
+        :class="activeDateFilter === df.value ? 'bg-accent text-white border-accent' : 'hover:b-line'"
+        @click="activeDateFilter = df.value"
+      >
+        {{ df.label }}
+      </button>
+    </div>
+
+    <!-- Category breakdown / progress -->
+    <section class="mb-6 rounded-lg border b-line bg-sub p-4">
+      <div class="mb-3 flex items-center justify-between">
+        <p class="eyebrow m-0">Category breakdown</p>
+        <p class="text-[11px] t-lo">{{ items.length }} cards across {{ categories.length }} categories</p>
+      </div>
+      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
         <button
-          v-for="sec in sections"
-          :key="sec.value"
-          class="chip transition-colors"
-          :class="activeSection === sec.value ? 'bg-accent text-white border-accent' : 'hover:b-line'"
-          @click="activeSection = sec.value"
+          v-for="cat in categoryStats"
+          :key="cat.id"
+          class="flex items-center justify-between gap-2 rounded-md border b-line px-2.5 py-1.5 text-left transition-colors"
+          :class="activeCategory === cat.id ? 'bg-accent text-white border-accent' : 'hover:bg-black/[0.03] dark:hover:bg-white/[0.03]'"
+          @click="activeCategory = activeCategory === cat.id ? 'ALL' : cat.id"
         >
-          {{ sec.label }}
+          <span class="flex items-center gap-1.5 text-[11.5px] font-medium truncate">
+            <UIcon :name="cat.icon" class="h-3.5 w-3.5 shrink-0" />
+            {{ cat.label }}
+          </span>
+          <span class="font-mono text-[11px] shrink-0" :class="activeCategory === cat.id ? 'text-white/80' : 't-lo'">
+            {{ cat.count }}
+          </span>
         </button>
       </div>
+    </section>
 
-      <!-- Divider -->
-      <div class="h-6 w-px bg-black/10 dark:bg-white/10 self-center mx-1" />
-
-      <!-- Date filter -->
-      <div class="flex flex-wrap gap-1.5">
-        <button
-          v-for="df in dateFilters"
-          :key="df.value"
-          class="chip transition-colors"
-          :class="activeDateFilter === df.value ? 'bg-accent text-white border-accent' : 'hover:b-line'"
-          @click="activeDateFilter = df.value"
-        >
-          {{ df.label }}
-        </button>
-      </div>
+    <!-- Category filter chips -->
+    <div class="mb-6 flex flex-wrap gap-1.5">
+      <button
+        class="chip transition-colors"
+        :class="activeCategory === 'ALL' ? 'bg-accent text-white border-accent' : 'hover:b-line'"
+        @click="activeCategory = 'ALL'"
+      >
+        All categories
+      </button>
+      <button
+        v-for="cat in categories"
+        :key="cat.id"
+        class="chip transition-colors inline-flex items-center gap-1"
+        :class="activeCategory === cat.id ? 'bg-accent text-white border-accent' : 'hover:b-line'"
+        @click="activeCategory = cat.id"
+      >
+        <UIcon :name="cat.icon" class="h-3 w-3" />
+        {{ cat.label }}
+      </button>
     </div>
 
     <!-- Entry list -->
@@ -82,11 +119,14 @@
 
 <script setup lang="ts">
 import { queryCollection } from '#imports'
+import { useCACategories } from '@/composables/useCACategories'
 
 useHead({
   title: 'Current Affairs - TGPRB StudyOS',
   meta: [{ name: 'description', content: 'Daily exam-relevant current affairs for TGPRB/TSPSC Police Constable and SI exams. Updated every morning.' }],
 })
+
+const { categories, getCategoryMeta } = useCACategories()
 
 // Fetch all current affairs
 const { data: allEntries } = await useAsyncData(
@@ -95,32 +135,23 @@ const { data: allEntries } = await useAsyncData(
 )
 
 // Filters state
-const activeSection    = ref('ALL')
+const activeCategory   = ref('ALL')
 const activeDateFilter = ref('ALL')
 
-const sections = [
-  { label: 'All',          value: 'ALL' },
-  { label: 'Telangana',    value: 'Telangana' },
-  { label: 'Geography',    value: 'Geography' },
-  { label: 'Polity',       value: 'Polity' },
-  { label: 'Economy',      value: 'Economy' },
-  { label: 'Science',      value: 'Science & Technology' },
-  { label: 'History',      value: 'History' },
-]
-
 const dateFilters = [
-  { label: 'All',          value: 'ALL' },
-  { label: 'This week',    value: '7D' },
-  { label: 'This month',   value: '1M' },
-  { label: 'Last 3 months', value: '3M' },
-  { label: 'Last year',    value: '1Y' },
+  { label: 'All',           value: 'ALL' },
+  { label: 'Today',         value: '1D' },
+  { label: 'This week',     value: '7D' },
+  { label: 'This month',    value: '1M' },
+  { label: 'Hot zone (6mo)', value: '6M' },
+  { label: 'Last year',     value: '1Y' },
 ]
 
 // Sorted all entries newest first
 const items = computed(() => {
   if (!allEntries.value) return []
   return [...allEntries.value].sort(
-    (a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime()
+    (a: any, b: any) => new Date(entryDate(b)).getTime() - new Date(entryDate(a)).getTime()
   )
 })
 
@@ -128,38 +159,48 @@ const items = computed(() => {
 const filtered = computed(() => {
   const cutoff = dateCutoff(activeDateFilter.value)
   return items.value.filter((e: any) => {
-    const sec  = e.meta?.exam_section ?? ''
-    const date = new Date(e.meta?.date ?? 0)
-    const sectionOk = activeSection.value === 'ALL' || sec === activeSection.value
-    const dateOk    = activeDateFilter.value === 'ALL' || date >= cutoff
-    return sectionOk && dateOk
+    const cat  = (e.meta?.category ?? '').toLowerCase()
+    const date = new Date(entryDate(e) ?? 0)
+    const categoryOk = activeCategory.value === 'ALL' || cat === activeCategory.value
+    const dateOk      = activeDateFilter.value === 'ALL' || date >= cutoff
+    return categoryOk && dateOk
   })
 })
 
+// Category breakdown (counts computed off the full unfiltered set)
+const categoryStats = computed(() =>
+  categories.map((cat) => ({
+    ...cat,
+    count: items.value.filter((e: any) => (e.meta?.category ?? '').toLowerCase() === cat.id).length,
+  })).sort((a, b) => b.count - a.count)
+)
+
 // Stats
+const todayCount = computed(() => {
+  const cutoff = dateCutoff('1D')
+  return items.value.filter((e: any) => new Date(entryDate(e) ?? 0) >= cutoff).length
+})
 const thisWeekCount = computed(() => {
   const cutoff = dateCutoff('7D')
-  return items.value.filter((e: any) => new Date(e.meta?.date ?? 0) >= cutoff).length
+  return items.value.filter((e: any) => new Date(entryDate(e) ?? 0) >= cutoff).length
+})
+const hotZoneCount = computed(() => {
+  const cutoff = dateCutoff('6M')
+  return items.value.filter((e: any) => new Date(entryDate(e) ?? 0) >= cutoff).length
 })
 const tgCount = computed(() =>
   items.value.filter((e: any) => e.meta?.is_telangana_focus).length
 )
 
 // Helpers
+function entryDate(e: any): string | undefined {
+  return e?.meta?.published_at || e?.meta?.event_date || e?.meta?.date
+}
+
 function dateCutoff(filter: string): Date {
   if (filter === 'ALL') return new Date(0)
   const now  = new Date()
-  const days = filter === '7D' ? 7 : filter === '1M' ? 30 : filter === '3M' ? 90 : 365
+  const days = filter === '1D' ? 1 : filter === '7D' ? 7 : filter === '1M' ? 30 : filter === '6M' ? 180 : 365
   return new Date(now.getTime() - days * 86400000)
-}
-
-function formatDate(iso: string): string {
-  if (!iso) return ''
-  return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
-}
-
-function sourceDomain(url: string): string {
-  try { return new URL(url).hostname.replace(/^www\./, '') }
-  catch { return url }
 }
 </script>

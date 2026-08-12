@@ -1,0 +1,114 @@
+{
+  "topic_id": "TEL-MOVEMENT",
+  "cards": [
+    {
+      "id": "FC-TEL-MOV-1",
+      "front": "Who was the first martyr of the Telangana Armed Struggle (1946-1951)?",
+      "back": "Doddi Komarayya was the first martyr of the Telangana Armed Struggle.",
+      "key_fact": "Doddi Komarayya was the first martyr of the Telangana Armed Struggle.",
+      "tags": [
+        "Telangana Armed Struggle",
+        "History",
+        "Martyrs"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-2",
+      "front": "Which peasant leader famously resisted the oppression of landlord Visnoor Deshmukh?",
+      "back": "Chityala Ailamma (Chakali Ilamma) resisted the oppression of Visnoor Deshmukh.",
+      "key_fact": "Chityala Ailamma led peasant resistance against Visnoor Deshmukh.",
+      "tags": [
+        "Telangana Armed Struggle",
+        "Peasant Movement"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-3",
+      "front": "What was the code name of the Indian military action that integrated Hyderabad State into India in 1948?",
+      "back": "The military action was code-named Operation Polo.",
+      "key_fact": "Operation Polo integrated Hyderabad State into the Indian Union in September 1948.",
+      "tags": [
+        "Operation Polo",
+        "Hyderabad State",
+        "Integration"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-4",
+      "front": "In which year was the Gentlemen's Agreement signed to safeguard Telangana interests?",
+      "back": "The Gentlemen's Agreement was signed in 1956.",
+      "key_fact": "The Gentlemen's Agreement was signed in 1956 prior to the formation of Andhra Pradesh.",
+      "tags": [
+        "Gentlemens Agreement",
+        "1956",
+        "Safeguards"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-5",
+      "front": "Who founded the Telangana Praja Samithi (TPS) at the start of the 1969 agitation?",
+      "back": "Ananthula Madan Mohan founded the Telangana Praja Samithi in 1969.",
+      "key_fact": "Ananthula Madan Mohan founded TPS in 1969 to lead the statehood agitation.",
+      "tags": [
+        "1969 Agitation",
+        "TPS",
+        "Statehood"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-6",
+      "front": "In which year did K. Chandrashekar Rao found the Telangana Rashtra Samithi (TRS)?",
+      "back": "K. Chandrashekar Rao founded the Telangana Rashtra Samithi in 2001.",
+      "key_fact": "TRS was founded in 2001 by K. Chandrashekar Rao to demand separate statehood.",
+      "tags": [
+        "TRS",
+        "KCR",
+        "2001"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-7",
+      "front": "Which committee was appointed by the Central Government in 2010 to study the Telangana statehood demand?",
+      "back": "The Justice B.N. Srikrishna Committee was appointed in 2010.",
+      "key_fact": "The Srikrishna Committee was formed in 2010 to evaluate the Telangana issue.",
+      "tags": [
+        "Srikrishna Committee",
+        "2010",
+        "Statehood"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-8",
+      "front": "Who served as the Chairman of the Telangana Joint Action Committee (TJAC)?",
+      "back": "Professor M. Kodandaram served as the Chairman of the TJAC.",
+      "key_fact": "Professor M. Kodandaram led the TJAC during the statehood movement.",
+      "tags": [
+        "TJAC",
+        "Kodandaram",
+        "Statehood"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-9",
+      "front": "In which year was the historic Million March organized in Hyderabad for Telangana statehood?",
+      "back": "The Million March was organized on Tank Bund in the year 2011.",
+      "key_fact": "The Million March took place in Hyderabad in 2011.",
+      "tags": [
+        "Million March",
+        "2011",
+        "Protest"
+      ]
+    },
+    {
+      "id": "FC-TEL-MOV-10",
+      "front": "On which exact date was the state of Telangana officially formed?",
+      "back": "Telangana was officially formed on June 2, 2014.",
+      "key_fact": "June 2, 2014 is the official formation date of Telangana State.",
+      "tags": [
+        "Telangana Formation",
+        "2014",
+        "Statehood"
+      ]
+    }
+  ]
+}

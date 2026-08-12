@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-POL-UNION-EXEC",
+  "pass_threshold": 4,
+  "questions": [
+    {
+      "id": "GATE-POL-UEL-1",
+      "question": "Under which Article of the Indian Constitution can the President of India be impeached for violation of the Constitution?",
+      "options": [
+        "Article 52",
+        "Article 61",
+        "Article 72",
+        "Article 123"
+      ],
+      "correct_answer": 1,
+      "explanation": "Article 61 of the Indian Constitution details the specific procedure for the impeachment of the President of India."
+    },
+    {
+      "id": "GATE-POL-UEL-2",
+      "question": "Who presides over a Joint Sitting of both Houses of Parliament convened under Article 108?",
+      "options": [
+        "President of India",
+        "Chairman of Rajya Sabha",
+        "Speaker of Lok Sabha",
+        "Prime Minister of India"
+      ],
+      "correct_answer": 2,
+      "explanation": "As per Article 118(4), the Speaker of Lok Sabha presides over a joint sitting of both Houses of Parliament."
+    },
+    {
+      "id": "GATE-POL-UEL-3",
+      "question": "What is the maximum permissible gap between two sessions of the Indian Parliament?",
+      "options": [
+        "3 months",
+        "6 months",
+        "9 months",
+        "12 months"
+      ],
+      "correct_answer": 1,
+      "explanation": "Article 85 mandates that Parliament must meet at least twice a year, with no more than 6 months gap between sessions."
+    },
+    {
+      "id": "GATE-POL-UEL-4",
+      "question": "Which Article of the Constitution empowers the President of India to grant pardons and suspend or commute sentences?",
+      "options": [
+        "Article 72",
+        "Article 74",
+        "Article 76",
+        "Article 78"
+      ],
+      "correct_answer": 0,
+      "explanation": "Article 72 grants executive clemency powers to the President to grant pardons, reprieves, respites, or remissions of punishment."
+    },
+    {
+      "id": "GATE-POL-UEL-5",
+      "question": "Which Article confers ordinance-making power on the President when Parliament is not in session?",
+      "options": [
+        "Article 110",
+        "Article 123",
+        "Article 213",
+        "Article 352"
+      ],
+      "correct_answer": 1,
+      "explanation": "Article 123 empowers the President to promulgate ordinances during the recess of Parliament."
+    }
+  ]
+}

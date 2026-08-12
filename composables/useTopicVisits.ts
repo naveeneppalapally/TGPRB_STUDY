@@ -3,11 +3,11 @@
  *
  * Storage strategy:
  *   Layer 1: localStorage  - instant, offline, no auth needed (always used)
- *   Layer 2: Supabase      - cloud sync when user is logged in
+ *   Layer 2: IndexedDB mutation queue + Supabase CRDT state after sign-in
  *
  * When logged in, the two layers stay in sync:
  *   - On read: use whichever timestamp is newer
- *   - On markCaughtUp: write to localStorage immediately, then async to Supabase
+ *   - On markCaughtUp: write localStorage and queue an idempotent mutation
  *
  * This means:
  *   - You and your friend both see "caught up" after either of you marks it
@@ -15,12 +15,17 @@
  */
 
 import { useSupabaseClient, useSupabaseUser } from '#imports'
+import { createSupabaseOfflineSyncAdapter, useOfflineSync } from '@/composables/useOfflineSync'
 
 const STORAGE_PREFIX = 'tgprb:ca:last-seen:'
 
 export function useTopicVisits() {
   const supabase = useSupabaseClient()
   const user = useSupabaseUser()
+  const offlineSync = useOfflineSync({
+    getUserId: () => user.value?.id,
+    adapter: createSupabaseOfflineSyncAdapter(supabase),
+  })
 
   // -------------------------------------------------------------------------
   // localStorage helpers
@@ -45,33 +50,15 @@ export function useTopicVisits() {
     if (!user.value) return null
     try {
       const { data } = await supabase
-        .from('topic_visits')
+        .from('user_topic_states')
         .select('last_seen_at')
         .eq('user_id', user.value.id)
-        .eq('note_id', noteId)
-        .maybeSingle()
+        .eq('topic_id', noteId)
+        .maybeSingle<{ last_seen_at: string }>()
       return data?.last_seen_at ? new Date(data.last_seen_at) : null
     }
     catch {
       return null
-    }
-  }
-
-  async function _dbSet(noteId: string, ts: Date): Promise<void> {
-    if (!user.value) return
-    try {
-      await supabase.from('topic_visits').upsert(
-        {
-          user_id: user.value.id,
-          note_id: noteId,
-          last_seen_at: ts.toISOString(),
-          updated_at: new Date().toISOString(),
-        },
-        { onConflict: 'user_id,note_id' },
-      )
-    }
-    catch {
-      // Silently fail - localStorage is the fallback
     }
   }
 
@@ -81,7 +68,7 @@ export function useTopicVisits() {
 
   /**
    * Get the last-seen timestamp for a topic.
-   * Merges localStorage + Supabase, picks the newer one.
+   * Merges localStorage + Supabase CRDT state, picks the newer one.
    * Returns null if this topic has never been marked caught up.
    */
   async function getLastVisit(noteId: string): Promise<Date | null> {
@@ -104,14 +91,17 @@ export function useTopicVisits() {
   }
 
   /**
-   * Mark a topic as caught up right now.
-   * Writes to localStorage immediately (instant UI update),
-   * then async writes to Supabase if logged in.
+   * Mark a topic as caught up right now. The localStorage write and reactive
+   * local state happen synchronously; the idempotent cloud mutation is queued
+   * in the background and works offline or before the user signs in.
    */
-  async function markCaughtUp(noteId: string): Promise<void> {
+  function markCaughtUp(noteId: string): void {
     const now = new Date()
-    _lsSet(noteId, now)                   // instant
-    await _dbSet(noteId, now)             // cloud sync (non-blocking via await but fast)
+    _lsSet(noteId, now)
+    offlineSync.queueTopicVisit({
+      topic_id: noteId,
+      last_seen_at: now.toISOString(),
+    })
   }
 
   /**
@@ -158,5 +148,5 @@ export function useTopicVisits() {
     return { newEntries, earlierEntries, isFirstVisit: false }
   }
 
-  return { getLastVisit, markCaughtUp, getNewCount, getSplitEntries }
+  return { getLastVisit, markCaughtUp, getNewCount, getSplitEntries, offlineSync }
 }

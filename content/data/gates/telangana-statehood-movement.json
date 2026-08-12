@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-TEL-MOVEMENT",
+  "pass_threshold": 4,
+  "questions": [
+    {
+      "id": "GATE-TEL-MOV-1",
+      "question": "Who among the following was the first martyr of the Telangana Armed Struggle (1946-1951), killed on July 4, 1946, in Kadavendi village?",
+      "options": [
+        "Doddi Komaraiah",
+        "Shoebullah Khan",
+        "Chakali Ilamma",
+        "Baddam Yella Reddy"
+      ],
+      "correct_answer": 0,
+      "explanation": "Doddi Komaraiah was martyred on July 4, 1946, at Kadavendi village in Warangal district, marking the spark of the armed peasant struggle against feudal oppression."
+    },
+    {
+      "id": "GATE-TEL-MOV-2",
+      "question": "The historic Gentlemen's Agreement between Andhra and Telangana leaders was signed on which date in New Delhi?",
+      "options": [
+        "February 20, 1956",
+        "November 1, 1956",
+        "March 5, 1956",
+        "December 29, 1953"
+      ],
+      "correct_answer": 0,
+      "explanation": "The Gentlemen's Agreement was signed on February 20, 1956, in New Delhi to provide statutory safeguards for Telangana prior to the merger forming Andhra Pradesh."
+    },
+    {
+      "id": "GATE-TEL-MOV-3",
+      "question": "Which political organization was led by Dr. M. Chenna Reddy to spearhead the 1969 Jai Telangana Movement?",
+      "options": [
+        "Telangana Praja Samithi (TPS)",
+        "Telangana Rashtra Samithi (TRS)",
+        "Telangana Jana Sabha",
+        "Telangana Information Centre"
+      ],
+      "correct_answer": 0,
+      "explanation": "Telangana Praja Samithi (TPS) was led by Dr. M. Chenna Reddy during the 1969 agitation to demand statehood following violations of Mulki rules."
+    },
+    {
+      "id": "GATE-TEL-MOV-4",
+      "question": "The Five-Member Committee for Consultations on the Situation in Andhra Pradesh constituted in 2010 was headed by which retired Supreme Court judge?",
+      "options": [
+        "Justice B.N. Srikrishna",
+        "Justice K. Madhava Reddy",
+        "Justice J.S. Verma",
+        "Justice V.R. Krishna Iyer"
+      ],
+      "correct_answer": 0,
+      "explanation": "The committee was chaired by former Supreme Court Judge Justice B.N. Srikrishna and submitted its detailed report on December 30, 2010."
+    },
+    {
+      "id": "GATE-TEL-MOV-5",
+      "question": "As per the Andhra Pradesh Reorganisation Act, 2014, which date was officially declared as the Appointed Day for the formal formation of Telangana State?",
+      "options": [
+        "June 2, 2014",
+        "February 18, 2014",
+        "March 1, 2014",
+        "June 18, 2014"
+      ],
+      "correct_answer": 0,
+      "explanation": "June 2, 2014, was notified as the Appointed Day when Telangana officially emerged as the 29th state of India."
+    }
+  ]
+}

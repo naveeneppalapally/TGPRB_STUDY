@@ -1,0 +1,267 @@
+{
+  "summary": {
+    "total_unique_questions": 3129,
+    "enriched_questions": 3129,
+    "completion_percentage": 100.0,
+    "average_confidence": 0.9845,
+    "completed_at": "2026-08-12T10:08:41.575924+00:00"
+  },
+  "subjects": {
+    "ARI": {
+      "name": "Arithmetic & Quantitative Aptitude",
+      "count": 676,
+      "share_pct": 21.6
+    },
+    "REA": {
+      "name": "Reasoning & Mental Ability",
+      "count": 585,
+      "share_pct": 18.7
+    },
+    "TEL": {
+      "name": "Telangana State - History, Movement, Geography & Schemes",
+      "count": 367,
+      "share_pct": 11.73
+    },
+    "HIS": {
+      "name": "History of India & National Movement",
+      "count": 329,
+      "share_pct": 10.51
+    },
+    "GEO": {
+      "name": "Indian & World Geography",
+      "count": 326,
+      "share_pct": 10.42
+    },
+    "SCI": {
+      "name": "General Science & Technology",
+      "count": 306,
+      "share_pct": 9.78
+    },
+    "POL": {
+      "name": "Indian Polity & Constitution",
+      "count": 203,
+      "share_pct": 6.49
+    },
+    "ECO": {
+      "name": "Indian Economy & Development",
+      "count": 184,
+      "share_pct": 5.88
+    },
+    "ENG": {
+      "name": "General English",
+      "count": 153,
+      "share_pct": 4.89
+    }
+  },
+  "topics": {
+    "REA-VERBAL": {
+      "name": "Verbal Reasoning & Logical Deductions",
+      "subject_id": "REA",
+      "count": 531,
+      "share_pct": 16.97,
+      "tier": "T1"
+    },
+    "ARI-COMMERCIAL-MATH": {
+      "name": "Commercial Arithmetic",
+      "subject_id": "ARI",
+      "count": 295,
+      "share_pct": 9.43,
+      "tier": "T1"
+    },
+    "ARI-SPEED-WORK-MENS": {
+      "name": "Speed, Work & Mensuration",
+      "subject_id": "ARI",
+      "count": 264,
+      "share_pct": 8.44,
+      "tier": "T1"
+    },
+    "TEL-MOVEMENT": {
+      "name": "Telangana Armed Struggle & Statehood Movement",
+      "subject_id": "TEL",
+      "count": 169,
+      "share_pct": 5.4,
+      "tier": "T1"
+    },
+    "TEL-HIS-CULTURE": {
+      "name": "Telangana History & Culture",
+      "subject_id": "TEL",
+      "count": 158,
+      "share_pct": 5.05,
+      "tier": "T1"
+    },
+    "HIS-ANCIENT": {
+      "name": "Ancient India & Culture",
+      "subject_id": "HIS",
+      "count": 130,
+      "share_pct": 4.15,
+      "tier": "T1"
+    },
+    "HIS-MODERN-MOV": {
+      "name": "Modern India & National Movement",
+      "subject_id": "HIS",
+      "count": 120,
+      "share_pct": 3.84,
+      "tier": "T1"
+    },
+    "ARI-NUMBER-MATH": {
+      "name": "Number System & Basic Math",
+      "subject_id": "ARI",
+      "count": 117,
+      "share_pct": 3.74,
+      "tier": "T1"
+    },
+    "ECO-FISCAL-SCHEMES": {
+      "name": "Public Finance, Budget & Central Schemes",
+      "subject_id": "ECO",
+      "count": 114,
+      "share_pct": 3.64,
+      "tier": "T1"
+    },
+    "GEO-AGRI-MINERAL": {
+      "name": "Agriculture, Minerals & Transport",
+      "subject_id": "GEO",
+      "count": 112,
+      "share_pct": 3.58,
+      "tier": "T1"
+    },
+    "SCI-BIO": {
+      "name": "Biology & Life Sciences",
+      "subject_id": "SCI",
+      "count": 109,
+      "share_pct": 3.48,
+      "tier": "T1"
+    },
+    "ENG-VOCAB-COMP": {
+      "name": "Vocabulary & Reading Comprehension",
+      "subject_id": "ENG",
+      "count": 90,
+      "share_pct": 2.88,
+      "tier": "T1"
+    },
+    "GEO-ENV": {
+      "name": "Forests, Wildlife & Environment",
+      "subject_id": "GEO",
+      "count": 82,
+      "share_pct": 2.62,
+      "tier": "T1"
+    },
+    "HIS-MEDIEVAL": {
+      "name": "Medieval India",
+      "subject_id": "HIS",
+      "count": 79,
+      "share_pct": 2.52,
+      "tier": "T1"
+    },
+    "GEO-PHY": {
+      "name": "Physical Geography & Geomorphology",
+      "subject_id": "GEO",
+      "count": 76,
+      "share_pct": 2.43,
+      "tier": "T1"
+    },
+    "SCI-TECH-SPACE": {
+      "name": "Science, Technology, Space & Defence",
+      "subject_id": "SCI",
+      "count": 73,
+      "share_pct": 2.33,
+      "tier": "T1"
+    },
+    "ECO-BASIC-BANKING": {
+      "name": "National Income, Banking & Monetary Policy",
+      "subject_id": "ECO",
+      "count": 70,
+      "share_pct": 2.24,
+      "tier": "T1"
+    },
+    "ENG-GRAMMAR": {
+      "name": "English Grammar & Usage",
+      "subject_id": "ENG",
+      "count": 63,
+      "share_pct": 2.01,
+      "tier": "T1"
+    },
+    "SCI-CHEM": {
+      "name": "Chemistry",
+      "subject_id": "SCI",
+      "count": 63,
+      "share_pct": 2.01,
+      "tier": "T1"
+    },
+    "SCI-PHY": {
+      "name": "Physics",
+      "subject_id": "SCI",
+      "count": 61,
+      "share_pct": 1.95,
+      "tier": "T1"
+    },
+    "POL-JUDICIARY-BODIES": {
+      "name": "Judiciary & Constitutional/Statutory Bodies",
+      "subject_id": "POL",
+      "count": 59,
+      "share_pct": 1.89,
+      "tier": "T1"
+    },
+    "POL-UNION-EXEC-LEG": {
+      "name": "Union Executive & Legislature",
+      "subject_id": "POL",
+      "count": 57,
+      "share_pct": 1.82,
+      "tier": "T1"
+    },
+    "REA-NONVERBAL": {
+      "name": "Non-Verbal & Spatial Reasoning",
+      "subject_id": "REA",
+      "count": 54,
+      "share_pct": 1.73,
+      "tier": "T1"
+    },
+    "TEL-GEO-ECO-SCHEMES": {
+      "name": "Telangana Geography, Economy & Welfare Schemes",
+      "subject_id": "TEL",
+      "count": 40,
+      "share_pct": 1.28,
+      "tier": "T1"
+    },
+    "POL-FR-DPSP": {
+      "name": "Fundamental Rights, DPSP & Duties",
+      "subject_id": "POL",
+      "count": 35,
+      "share_pct": 1.12,
+      "tier": "T1"
+    },
+    "POL-CONST-FRAME": {
+      "name": "Constitutional Framework & Preamble",
+      "subject_id": "POL",
+      "count": 31,
+      "share_pct": 0.99,
+      "tier": "T1"
+    },
+    "GEO-DRAINAGE": {
+      "name": "Drainage Systems of India",
+      "subject_id": "GEO",
+      "count": 31,
+      "share_pct": 0.99,
+      "tier": "T1"
+    },
+    "GEO-CLIMATE": {
+      "name": "Climate, Monsoons & Soil",
+      "subject_id": "GEO",
+      "count": 25,
+      "share_pct": 0.8,
+      "tier": "T1"
+    },
+    "POL-STATE-LOCAL": {
+      "name": "State Government & Local Governance",
+      "subject_id": "POL",
+      "count": 21,
+      "share_pct": 0.67,
+      "tier": "T1"
+    }
+  },
+  "difficulty_distribution": {
+    "M": 1576,
+    "F": 1513,
+    "O": 39,
+    "E": 1
+  }
+}

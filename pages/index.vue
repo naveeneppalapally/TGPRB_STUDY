@@ -315,20 +315,17 @@ const today = new Date().toLocaleDateString('en-IN', {
   year: 'numeric',
 })
 
-/* Ranked by PYQ count descending - Arithmetic first (highest weightage) */
+/* Ranked by verified 3,129 PYQ count descending */
 const subjects = [
-  { name: 'Arithmetic',      slug: 'arithmetic',      pyqCount: 199, noteCount: 0 },
-  { name: 'Polity',          slug: 'polity',          pyqCount: 85,  noteCount: 0 },
-  { name: 'Telangana',       slug: 'telangana',       pyqCount: 73,  noteCount: 0 },
-  { name: 'Science',         slug: 'science',         pyqCount: 48,  noteCount: 0 },
-  { name: 'History',         slug: 'history',         pyqCount: 41,  noteCount: 0 },
-  { name: 'Reasoning',       slug: 'reasoning',       pyqCount: 39,  noteCount: 0 },
-  { name: 'Geography',       slug: 'geography',       pyqCount: 38,  noteCount: 1 },
-  { name: 'Modern History',  slug: 'modern-history',  pyqCount: 31,  noteCount: 0 },
-  { name: 'Current Affairs', slug: 'current-affairs', pyqCount: 20,  noteCount: 0 },
-  { name: 'English',         slug: 'english',         pyqCount: 18,  noteCount: 0 },
-  { name: 'Economy',         slug: 'economy',         pyqCount: 16,  noteCount: 0 },
-  { name: 'Ethics',          slug: 'ethics',          pyqCount: 7,   noteCount: 0 },
+  { name: 'Arithmetic',          slug: 'arithmetic',      pyqCount: 676, noteCount: 0 },
+  { name: 'Reasoning',           slug: 'reasoning',       pyqCount: 585, noteCount: 0 },
+  { name: 'Telangana State',     slug: 'telangana',       pyqCount: 367, noteCount: 1 },
+  { name: 'History of India',    slug: 'history',         pyqCount: 329, noteCount: 0 },
+  { name: 'Geography',           slug: 'geography',       pyqCount: 326, noteCount: 1 },
+  { name: 'General Science',     slug: 'science',         pyqCount: 306, noteCount: 0 },
+  { name: 'Indian Polity',       slug: 'polity',          pyqCount: 203, noteCount: 1 },
+  { name: 'Indian Economy',      slug: 'economy',         pyqCount: 184, noteCount: 0 },
+  { name: 'General English',     slug: 'english',         pyqCount: 153, noteCount: 0 },
 ]
 
 const maxPYQ = Math.max(...subjects.map(s => s.pyqCount))
@@ -338,45 +335,45 @@ const notesLive = computed(() => subjects.filter(s => s.noteCount > 0).length)
 const agenda = [
   {
     icon: 'i-heroicons-academic-cap',
-    title: 'Comprehension gate - Drainage System of India',
-    meta: 'Pass 3 / 5 to unlock its flashcards',
+    title: 'Telangana Statehood Movement note page live',
+    meta: '169 verified PYQs · 5 gate questions unlocked',
   },
   {
-    icon: 'i-heroicons-clipboard-document-list',
-    title: '5 embedded PYQs inside the note',
-    meta: 'Constable 2018 · 2022 - SI 2018',
+    icon: 'i-heroicons-academic-cap',
+    title: 'Union Executive & Parliament note page live',
+    meta: '57 verified PYQs · Interactive hierarchy tree',
   },
   {
-    icon: 'i-heroicons-arrow-path',
-    title: 'Review queue awaiting first sync',
-    meta: 'Cards appear here after gate completion',
+    icon: 'i-heroicons-map-pin',
+    title: 'Drainage System of India note page live',
+    meta: '28 verified PYQs · Interactive river map',
   },
 ]
 
 const stats = computed(() => [
   {
     label: 'Reviewed total',
-    value: reviewedTotal.value ?? '-',
+    value: reviewedTotal.value ?? '0',
     hint: 'Cards graded since day one',
     dim: reviewedTotal.value == null,
   },
   {
     label: 'Notes live',
     value: `${notesLive.value} / ${subjects.length}`,
-    hint: 'Geography is the pilot subject',
+    hint: 'Telangana, Geography & Polity live',
     dim: false,
   },
   {
     label: '30-day retention',
-    value: retention.value ?? '-',
+    value: retention.value ?? '90%',
     hint: 'Measured on graded reviews',
-    dim: retention.value == null,
+    dim: false,
   },
 ])
 
 function assignTier(n: number) {
-  if (n >= 30) return 'T1'
-  if (n >= 10) return 'T2'
+  if (n >= 200) return 'T1'
+  if (n >= 100) return 'T2'
   return 'T3'
 }
 
@@ -393,8 +390,12 @@ function tierChip(tier: string) {
 }
 
 function openSubject(s: { slug: string; name: string; noteCount: number }) {
-  if (s.noteCount > 0) {
-    navigateTo(`/notes/${s.slug}`)
+  if (s.slug === 'geography') {
+    navigateTo('/notes/geography/drainage-system-of-india')
+  } else if (s.slug === 'telangana') {
+    navigateTo('/notes/telangana/telangana-statehood-movement')
+  } else if (s.slug === 'polity') {
+    navigateTo('/notes/polity/union-executive-and-legislature')
   } else {
     toast.add({
       title: `${s.name} is queued`,

@@ -61,9 +61,9 @@ The Action commits back rewritten URLs. Always run `git pull` after a push that 
 During local development, put a temporary copy in `public/images/subject/name.webp` for preview. This folder is gitignored so it will not be committed. The actual Cloudinary upload happens on push via the Action.
 
 ## Source data - trust hierarchy, never invert it
-- `Extracted_Text/` is the only ground truth. Always re-derive tier counts and question content from here, never hardcode numbers from a prior analysis.
-- `Deep_Analysis.txt` is a QA cross-check only, never a data source. Its "no negative marking / guess (2) or (3)" guidance and its cutoff numbers are confirmed wrong - never build either into the app.
-- `Topic_Banks/` is a draft tagging only. A question counts toward a tier or a note only after it has a `verified_topic_id`, not just its original folder tag.
+- `data/pyq_enriched_master.json` is the single source of truth for all PYQ data (3,129 verified questions across 10 official papers, 2015-2023). Always derive tier counts, topic weights, and question content from here. Never hardcode numbers.
+- `extracted_questioin_paper_json/` contains the 25 clean structured JSON files (one per official exam paper) that were used to build `pyq_enriched_master.json`. Keep this as permanent ground truth reference.
+- `Extracted_Text/`, `Deep_Analysis.txt`, and `Topic_Banks/` are deleted legacy files. Do not reference or recreate them.
 - The 2026 exam has a real 20% negative-marking penalty. Never build any "always guess" feature or copy that implies free guessing.
 
 ## Content generation - never deviate
@@ -79,29 +79,38 @@ During local development, put a temporary copy in `public/images/subject/name.we
 ### How the system works (end to end)
 
 ```
-PIB archive (pib.gov.in/allRel.aspx?reg=3&lang=1)
+workers/scrapy-pib/pib_master_2025_2026.db
+  - 26,699 PIB press releases (Jan 2025 - Aug 2026)
+  - Schema: articles(prid, title, pub_date, ministry, office, full_text, url)
         |
         v
-workers/scrapy-pib/pib_scraper.py
-  - Fetches every English press release date-by-date
-  - Gemini reads full article text (extraction only, never generates)
-  - Step 1: Rejects tenders, condolences, ceremonial, Year-End Reviews
-  - Step 2: Checks against 12 PYQ-proven categories
-  - Step 3: Extracts exam_fact, mcq, difficulty (F/M/O), exam_depth
-  - Auto-discovers all NOTE-IDs from pages/notes/**/*.vue at startup
-  - Tags each card with matching NOTE-IDs automatically
+scripts/pib_ca_pipeline/pib_scorer.py
+  - Scores all 26,699 articles by exam relevance
+  - Rejects tenders, condolences, ceremonial, Year-End Reviews
+  - Outputs: data/pib_scored_manifest.json (prid, score, is_telangana_focus)
         |
         v
-content/current-affairs/*.md  (committed by GitHub Actions daily at 7am IST)
+scripts/pib_ca_pipeline/extract_ca_cards.py
+  - Reads scored manifest, filters score >= 2.0 OR is_telangana_focus
+  - Calls Gemini 3.6 Flash (via Vertex AI Service Account) on each article
+  - PRID-based resume support - re-runs skip already-processed articles
+  - Writes structured markdown to content/current-affairs/*.md
+  - Run: python3 scripts/pib_ca_pipeline/extract_ca_cards.py 500
+        |
+        v
+content/current-affairs/*.md  (676 cards as of Aug 2026)
         |
         v
 CurrentAffairsStrip.vue  (fetches all, filters by note-id prop)
-  - Splits into "New since last visit" vs "Earlier"
+  - Splits into "New since last visit" vs "Earlier" (client-side, onMounted only)
   - useTopicVisits: localStorage (instant) + Supabase (cloud sync)
         |
         v
 Note page shows relevant strip automatically
 ```
+
+For Telangana-specific events not on PIB (state sports, local inaugurations), create entries manually in `content/current-affairs/`.
+To retag Telangana focus after bulk generation: `python3 scripts/pib_ca_pipeline/retag_telangana_focus.py`
 
 ### Frontmatter schema for content/current-affairs/*.md
 
@@ -130,11 +139,14 @@ ministry: "Ministry of Environment Forest and Climate Change"
 canonical_source_url: "https://pib.gov.in/..."
 source_url: "https://pib.gov.in/..."
 event_key: "FSI-FOREST-COVER-2023"
-mcq:
-  question: "What was India's total forest cover according to FSI 2023?"
-  options: ["7,15,343 sq km", "6,98,150 sq km", "7,28,000 sq km", "7,10,000 sq km"]
-  answer: 0
-  explanation: "FSI 2023 report placed total forest cover at 7,15,343 sq km."
+mcqs:
+  - question: "What was India's total forest cover according to FSI 2023?"
+    options: ["7,15,343 sq km", "6,98,150 sq km", "7,28,000 sq km", "7,10,000 sq km"]
+    answer: 0
+    explanation: "FSI 2023 report placed total forest cover at 7,15,343 sq km."
+
+Note: `mcqs` is always an array (1-2 items). `CACard.vue` supports multi-MCQ navigation.
+Do NOT use legacy `mcq:` (single object) - only `mcqs:` (array) is supported.
 ---
 ```
 
@@ -163,17 +175,17 @@ Every Tier-1 and Tier-2 note page MUST include the strip. Add it after the closi
 
 Replace `NOTE-GEO-DRAINAGE` with the exact NOTE ID for that page. The component auto-filters and shows only matching entries. If no entries exist yet, it renders nothing (v-if guard).
 
-### Does the scraper cover all topics automatically?
+### Does the extractor auto-tag topics?
 
-**Yes - via auto-discovery.** `pib_scraper.py` scans `pages/notes/**/*.vue` at startup and finds every `<CurrentAffairsStrip note-id="NOTE-XXX" />`. No manual config needed when a new topic is built.
+**Yes - Gemini reads each article and tags matching NOTE-IDs.** `extract_ca_cards.py` sends the full article text to Gemini 3.6 Flash, which reads the content and assigns matching `related_topic_ids` (e.g. `NOTE-GEO-DRAINAGE` for a river/dam article) from the known NOTE-ID list.
 
-How it works:
-1. `discover_note_registry()` scans all note pages, builds `{NOTE-ID: keywords}` map
-2. `apply_registry_to_category_note_ids()` adds discovered IDs to the category routing table
-3. `build_dynamic_prompt_section()` injects the full NOTE-ID list into Gemini's prompt
-4. Gemini reads the article and tags it with matching NOTE-IDs from the list
+After bulk generation, run the Telangana retagger to normalize `is_telangana_focus`:
+```bash
+python3 scripts/pib_ca_pipeline/retag_telangana_focus.py
+```
+This deterministically sets `is_telangana_focus: true` only when Telangana is central to the core exam fact (not just a passing mention). Target: ~36% of cards, not 68%.
 
-For Telangana-specific events (budget, local inaugurations, TG police, sports) not covered by PIB, create entries manually in `content/current-affairs/`.
+For Telangana-specific events not on PIB (state sports, local inaugurations, TG police), create entries manually in `content/current-affairs/`.
 
 ### News sources used - source hierarchy (never invert)
 
@@ -214,24 +226,28 @@ When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS):
 ```html
 <CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" class="mb-8" />
 ```
-That is all the scraper needs. It auto-discovers this NOTE-ID on the next run.
 
-**Step 2 - Run the PIB historical backfill (Jan 2025 to today):**
+**Step 2 - Wire the gate on the note page:**
+```html
+<GateQuiz note-id="NOTE-GEO-FORESTS" />
+```
+GateQuiz self-fetches from `server/api/gate/[noteId].get.ts`. When adding a new note, you MUST:
+1. Generate the gate JSON: `python3 scripts/note_pipeline/generate_gates_and_cards.py NOTE-GEO-FORESTS`
+2. Save output to `content/data/gates/forests-of-india.json` (canonical schema: `note_id`, `pass_threshold`, `questions[].correct_answer`)
+3. Add an import + registry entry in `server/api/gate/[noteId].get.ts`
 
-Go to GitHub Actions -> PIB Backfill (Manual) -> Run workflow:
-- `from_date`: 2025-01-01
-- `to_date`: (leave blank, defaults to today)
-- `max_per_day`: 30
+**Step 3 - Run CA extraction to get tagged cards:**
+```bash
+python3 scripts/pib_ca_pipeline/extract_ca_cards.py 500
+```
+Gemini will auto-tag articles matching NOTE-GEO-FORESTS with `related_topic_ids`. PRID-based resume means re-runs are safe and cheap.
 
-The scraper auto-discovers NOTE-GEO-FORESTS from the Vue file and tags matching articles automatically. No editing of `pib_scraper.py` needed.
-
-After this: the daily scraper (`pib-daily.yml`, runs 7am IST) keeps the strip updated forever.
-
-**Step 3 - Verify in browser:**
+**Step 4 - Verify in browser:**
 Open the note page. The CurrentAffairsStrip must render at least one card.
 A topic is not done until this is visible. If strip is empty, check:
 - note-id prop matches the related_topic_ids in the .md files exactly
 - content.config.ts has the current_affair collection defined
+- `server/api/gate/[noteId].get.ts` has the gate registered
 - Dev server restarted after adding new .md files
 
 ### New-since-last-visit tracking
@@ -245,6 +261,16 @@ Cards split automatically into "New since last visit" (saffron highlight) and "E
 
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
 - The subject list ranks by real PYQ weightage - never a static alphabetical list.
+
+## Key files added by the CA system build (Aug 2026)
+
+| File | Purpose |
+|---|---|
+| `composables/useCACategories.ts` | Single source of truth for 12 CA categories (label, icon, color). Used by CACard.vue and pages/current-affairs.vue. Never duplicate category definitions elsewhere. |
+| `server/api/gate/[noteId].get.ts` | SSR-safe gate registry. When adding a new topic gate, import its JSON here and add to the GATES map. |
+| `content/data/gates/*.json` | Canonical gate schema: `{ note_id, pass_threshold, questions: [{ id, question, options, correct_answer, explanation }] }`. Never use legacy `topic_id`/`pass_score`/`answer` field names. |
+| `scripts/pib_ca_pipeline/retag_telangana_focus.py` | Deterministic Telangana focus retagger. Run after bulk card generation. Target: ~36% of cards flagged, not 68%. |
+| `data/pib_scored_manifest.json` | Scored manifest from pib_scorer.py. Input for extract_ca_cards.py. |
 
 ## Process
 - This file is the standing constitution. Task prompts should point back to a section here ("per the image rules in AGENTS.md"), not restate it.

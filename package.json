@@ -12,7 +12,9 @@
     "postinstall": "nuxt prepare && git config core.hooksPath .githooks",
     "ingest": "npx tsx scripts/ingest.ts",
     "tier": "npx tsx scripts/tier.ts",
-    "verify": "npx tsx scripts/verify-topics.ts"
+    "verify": "npx tsx scripts/verify-topics.ts",
+    "test:exam-strategy": "npx tsx scripts/test-exam-strategy.ts",
+    "test:offline-sync": "npx tsx scripts/test-offline-sync.ts"
   },
   "dependencies": {
     "@nuxt/content": "^3.0.0",
