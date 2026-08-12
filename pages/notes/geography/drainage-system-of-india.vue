@@ -679,7 +679,7 @@
           <header class="sec-head">
             <span class="sec-num">06</span>
             <h2 class="sec-title">PYQs</h2>
-            <span class="sec-rule" />
+            <span class="sec-rule"></span>
             <span class="sec-meta">
               {{ filteredPyqs.length }} questions
               <template v-if="attemptedCount > 0"> · {{ attemptedCount }} attempted ({{ correctCount }} correct)</template>
@@ -826,7 +826,7 @@
               </button>
             </article>
           </div>
-        </section>        </section>
+        </section>
 
         <!-- ── Footer nav ───────────────────────────────────────────────── -->
         <nav class="grid gap-3 border-t b-line pt-8 sm:grid-cols-2">
@@ -1078,7 +1078,6 @@ interface Pyq {
   rivers: string[]
   source: string
   tag: string
-  question: string
   options: string[]
   correct: number
   explanation: string
@@ -1791,7 +1790,6 @@ const pyqs = reactive<Pyq[]>([
   }
 ])
 
-/* ── Interactive Filters Logic ────────────────────────────────────────────── */
 const activeExamFilter = ref<'all' | 'Constable' | 'SI'>('all')
 const activeYearFilter = ref<string>('all')
 const activeRiverFilter = ref<string>('all')
