@@ -23,7 +23,6 @@
           <span>🎴</span>
           <span>Flashcards</span>
           <span class="text-[10px] opacity-90">({{ flashcardDeck.length }})</span>
-          <span v-if="passed" class="chip chip-jade text-[9px] px-1 py-0 border-0">Unlocked</span>
         </button>
       </div>
 
@@ -54,7 +53,7 @@
         <!-- 🎯 MODE 1: COMPREHENSION GATE QUIZ -->
         <div v-if="activeMode === 'quiz'" class="space-y-6">
           <p class="text-body-xs t-lo">
-            Pass {{ quiz.pass_threshold }}/{{ quiz.questions.length }} to unlock FSRS repetition cards.
+            Self-test key facts for {{ noteId || 'this topic' }}. Select options below to check your answers!
           </p>
 
           <!-- Question display (Unsubmitted) -->
