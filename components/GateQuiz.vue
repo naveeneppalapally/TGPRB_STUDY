@@ -23,6 +23,8 @@
           <span>🎴</span>
           <span>Flashcards</span>
           <span class="text-[10px] opacity-90">({{ flashcardDeck.length }})</span>
+          <span v-if="passed" class="chip chip-jade text-[9px] px-1.5 py-0 border-0">🔓 Unlocked</span>
+          <span v-else class="chip text-[9px] px-1.5 py-0 border-0 bg-gray-200 dark:bg-gray-700 t-lo">🔒 Locked</span>
         </button>
       </div>
 
@@ -53,7 +55,7 @@
         <!-- 🎯 MODE 1: COMPREHENSION GATE QUIZ -->
         <div v-if="activeMode === 'quiz'" class="space-y-6">
           <p class="text-body-xs t-lo">
-            Self-test key facts for {{ noteId || 'this topic' }}. Select options below to check your answers!
+            Pass {{ quiz.pass_threshold }}/{{ quiz.questions.length }} on this gate quiz to unlock the atomic memory flashcards.
           </p>
 
           <!-- Question display (Unsubmitted) -->
@@ -116,7 +118,7 @@
                 {{ score }}/{{ quiz.questions.length }}
               </p>
               <p class="text-body-sm font-semibold">
-                {{ passed ? '🎉 Gate Passed - Flashcards Unlocked!' : '❌ Gate Failed - Review the note and try again' }}
+                {{ passed ? '🎉 Gate Passed - Flashcards Unlocked!' : '❌ Gate Failed - Score 3/5 or higher to unlock flashcards' }}
               </p>
 
               <button
@@ -125,7 +127,15 @@
                 class="mt-3 px-4 py-1.5 rounded-lg bg-emerald-500 text-white font-semibold text-body-xs shadow-sm hover:bg-emerald-600 transition-colors"
                 @click="activeMode = 'flashcards'"
               >
-                Open Flashcards Deck (10 Cards) →
+                Open Unlocked Flashcards Deck (10 Cards) →
+              </button>
+              <button
+                v-else
+                type="button"
+                class="mt-3 px-4 py-1.5 rounded-lg border border-rose-500/30 text-rose-600 dark:text-rose-400 font-semibold text-body-xs hover:bg-rose-500/10 transition-colors"
+                @click="submitted = false"
+              >
+                Retry Gate Quiz
               </button>
             </div>
 
@@ -161,72 +171,92 @@
           </div>
         </div>
 
-        <!-- 🎴 MODE 2: TOPIC FLASHCARDS DECK -->
+        <!-- 🎴 MODE 2: TOPIC FLASHCARDS DECK (Requires Gate Pass) -->
         <div v-else class="space-y-4">
-          <div class="flex items-center justify-between">
-            <p class="text-body-xs t-lo">
-              10 Atomic FSRS Memory Cards for {{ noteId || 'Topic' }}
+          <!-- Locked Banner if not passed yet -->
+          <div v-if="!passed" class="p-8 text-center rounded-xl border border-amber-500/30 bg-amber-500/5">
+            <UIcon name="i-heroicons-lock-closed" class="mx-auto h-10 w-10 text-amber-500 mb-3" />
+            <h4 class="text-body font-bold t-hi mb-1">Flashcards Locked 🔒</h4>
+            <p class="text-body-xs t-lo mb-4 max-w-md mx-auto">
+              Complete the 5-question Comprehension Gate Quiz above (score {{ quiz.pass_threshold }}/{{ quiz.questions.length }} or higher) to unlock the 10 atomic flashcards!
             </p>
-            <span class="font-mono text-body-xs accent font-semibold">
-              Card {{ currentCardIndex + 1 }} of {{ flashcardDeck.length }}
-            </span>
-          </div>
-
-          <!-- Flip Card Container -->
-          <div
-            class="relative min-h-[170px] cursor-pointer rounded-xl border border-amber-500/30 bg-amber-500/5 dark:bg-gray-900 p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:border-amber-500"
-            @click="isFlipped = !isFlipped"
-          >
-            <div class="flex items-center justify-between text-[11px] font-mono t-lo mb-2">
-              <span class="font-bold accent">{{ isFlipped ? 'ANSWER (BACK)' : 'QUESTION (FRONT)' }}</span>
-              <span class="text-amber-500 font-semibold">click to flip 🔄</span>
-            </div>
-
-            <!-- Card Front -->
-            <div v-if="!isFlipped" class="my-auto py-2">
-              <p class="text-body font-semibold t-hi leading-relaxed text-center">
-                {{ currentCard.front }}
-              </p>
-            </div>
-
-            <!-- Card Back -->
-            <div v-else class="my-auto py-2 animate-fade-in">
-              <p class="text-body font-bold accent text-center mb-2">
-                {{ currentCard.back }}
-              </p>
-              <p v-if="currentCard.key_fact" class="text-body-xs t-lo text-center italic">
-                💡 Key Fact: {{ currentCard.key_fact }}
-              </p>
-            </div>
-          </div>
-
-          <!-- Flashcard Nav Controls -->
-          <div class="flex items-center justify-between pt-2">
             <button
               type="button"
-              class="px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-gray-800 text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40"
-              :disabled="currentCardIndex <= 0"
-              @click="currentCardIndex--; isFlipped = false"
+              class="px-4 py-2 rounded-lg bg-amber-500 text-white text-body-xs font-semibold shadow-sm hover:bg-amber-600 transition-colors"
+              @click="activeMode = 'quiz'"
             >
-              ← Previous
+              Take Comprehension Gate Quiz →
             </button>
+          </div>
 
-            <button
-              type="button"
-              class="px-4 py-1.5 rounded-lg bg-amber-500 text-white text-body-xs font-semibold shadow-sm hover:bg-amber-600 transition-colors"
+          <!-- Unlocked Flashcard Deck -->
+          <div v-else class="space-y-4">
+            <div class="flex items-center justify-between">
+              <p class="text-body-xs t-lo flex items-center gap-1.5">
+                <span class="text-emerald-500 font-bold">✓ Unlocked</span>
+                <span>· 10 Atomic FSRS Memory Cards</span>
+              </p>
+              <span class="font-mono text-body-xs accent font-semibold">
+                Card {{ currentCardIndex + 1 }} of {{ flashcardDeck.length }}
+              </span>
+            </div>
+
+            <!-- Flip Card Container -->
+            <div
+              class="relative min-h-[170px] cursor-pointer rounded-xl border border-amber-500/30 bg-amber-500/5 dark:bg-gray-900 p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:border-amber-500"
               @click="isFlipped = !isFlipped"
             >
-              {{ isFlipped ? 'Show Question' : 'Flip Answer' }}
-            </button>
+              <div class="flex items-center justify-between text-[11px] font-mono t-lo mb-2">
+                <span class="font-bold accent">{{ isFlipped ? 'ANSWER (BACK)' : 'QUESTION (FRONT)' }}</span>
+                <span class="text-amber-500 font-semibold">click to flip 🔄</span>
+              </div>
 
-            <button
-              type="button"
-              class="px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-gray-800 text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40"
-              :disabled="currentCardIndex >= flashcardDeck.length - 1"
-              @click="currentCardIndex++; isFlipped = false"
-            >
-              Next →
-            </button>
+              <!-- Card Front -->
+              <div v-if="!isFlipped" class="my-auto py-2">
+                <p class="text-body font-semibold t-hi leading-relaxed text-center">
+                  {{ currentCard.front }}
+                </p>
+              </div>
+
+              <!-- Card Back -->
+              <div v-else class="my-auto py-2 animate-fade-in">
+                <p class="text-body font-bold accent text-center mb-2">
+                  {{ currentCard.back }}
+                </p>
+                <p v-if="currentCard.key_fact" class="text-body-xs t-lo text-center italic">
+                  💡 Key Fact: {{ currentCard.key_fact }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Flashcard Nav Controls -->
+            <div class="flex items-center justify-between pt-2">
+              <button
+                type="button"
+                class="px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-gray-800 text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40"
+                :disabled="currentCardIndex <= 0"
+                @click="currentCardIndex--; isFlipped = false"
+              >
+                ← Previous
+              </button>
+
+              <button
+                type="button"
+                class="px-4 py-1.5 rounded-lg bg-amber-500 text-white text-body-xs font-semibold shadow-sm hover:bg-amber-600 transition-colors"
+                @click="isFlipped = !isFlipped"
+              >
+                {{ isFlipped ? 'Show Question' : 'Flip Answer' }}
+              </button>
+
+              <button
+                type="button"
+                class="px-3.5 py-1.5 rounded-lg border border-gray-200 dark:border-gray-800 text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40"
+                :disabled="currentCardIndex >= flashcardDeck.length - 1"
+                @click="currentCardIndex++; isFlipped = false"
+              >
+                Next →
+              </button>
+            </div>
           </div>
         </div>
 
