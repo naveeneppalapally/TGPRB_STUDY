@@ -560,6 +560,47 @@ body {
 .hover\:accent-strong:hover { color: var(--accent-strong); }
 .group:hover .group-hover\:accent { color: var(--accent); }
 
-/* Translucent base — sticky topbar over scrolling content */
+/* Translucent base - sticky topbar over scrolling content */
 .bg-base-85 { background-color: color-mix(in srgb, var(--bg) 86%, transparent); }
+
+/* -- 7. Shared collapse transition ------------------------------------------
+   Used by GateQuiz.vue and FlashcardDeck.vue (via composables/useCollapse.ts)
+   for the arrow-toggled sections. Content fades and height animates to 0 on
+   collapse; everything below reflows smoothly instead of snapping.          */
+.collapse-enter-active,
+.collapse-leave-active {
+  overflow: hidden;
+  transition: height 320ms ease, opacity 200ms ease, margin 320ms ease;
+}
+
+/* -- 8. Flip card (flashcards) -----------------------------------------------
+   True 3D flip, not an instant text swap. .flip-card needs an explicit
+   min-height since both faces are absolutely positioned inside it.          */
+.flip-card {
+  position: relative;
+  perspective: 1400px;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+.flip-card-inner {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0.15, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+.flip-card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.flip-card-face.flip-card-back {
+  transform: rotateY(180deg);
+}
 

@@ -107,7 +107,7 @@
         </span>
         <p class="eyebrow mb-2">Queue clear</p>
         <p class="mx-auto max-w-xs text-[13px] leading-relaxed t-mid">
-          Nothing due right now. Study a note to generate cards - the
+          {{ mode === 'gate' ? 'Pass a comprehension gate on a note to unlock cards. ' : 'No flashcards are available yet. ' }}Study a note to generate cards - the
           <NuxtLink to="/notes/geography/drainage-system-of-india" class="accent-strong underline decoration-[var(--accent-line)] underline-offset-4">
             Drainage System note
           </NuxtLink>
@@ -144,10 +144,13 @@ interface Card {
   back: string
   exam_section?: string
   topic?: string
+  source_note_id?: string
 }
 
+const allCards = ref<Card[]>([])
 const dueCards = ref<Card[]>([])
 const currentIndex = ref(0)
+const { mode, isGatePassed } = useFlashcardUnlock()
 const flipped = ref(false)
 const reviewedToday = ref(0)
 const avgRetention = ref(0)
@@ -181,6 +184,17 @@ function getSectionColor(section: string) {
   return sectionColors[section] || '#b1ab9e'
 }
 
+const eligibleCards = computed(() => {
+  if (mode.value === 'direct') return allCards.value
+  return allCards.value.filter(card => card.source_note_id ? isGatePassed(card.source_note_id) : false)
+})
+
+watch(eligibleCards, (cards) => {
+  dueCards.value = [...cards]
+  currentIndex.value = 0
+  flipped.value = false
+}, { immediate: true })
+
 function toggleFlip() {
   flipped.value = !flipped.value
 }
@@ -199,10 +213,10 @@ function rate(rating: number) {
 
 onMounted(async () => {
   try {
-    const data = await $fetch<Card[]>('/data/flashcards/geography/drainage-system.json')
-    if (Array.isArray(data)) dueCards.value = data
+    const data = await $fetch<{ cards: Card[] }>('/api/flashcards')
+    if (Array.isArray(data.cards)) allCards.value = data.cards
   } catch {
-    /* No local flashcard pack yet - empty state renders */
+    /* No flashcard decks available yet - empty state renders */
   }
 })
 

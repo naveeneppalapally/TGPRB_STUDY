@@ -111,34 +111,33 @@
       </div>
     </section>
 
-    <!-- Study Mechanics -->
+    <!-- Flashcard unlock mode -->
     <section class="mb-8">
-      <h2 class="mb-1 text-[13px] font-semibold uppercase tracking-wider t-lo">Study Mechanics</h2>
+      <h2 class="mb-1 text-[13px] font-semibold uppercase tracking-wider t-lo">Flashcard unlocking</h2>
       <div class="mt-3 rounded-xl border b-line bg-elev p-5">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <p class="text-[15px] font-medium t-hi">Flashcards Gate Policy</p>
-            <p class="mt-0.5 text-[13px] t-lo">
-              Choose whether flashcards require passing the Comprehension Gate Quiz (score 3/5+), or are always unlocked.
-            </p>
-          </div>
-          <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1">
-            <button
-              v-for="policy in [
-                { id: 'locked', label: 'Require Gate (3/5)' },
-                { id: 'unlocked', label: 'Always Unlocked' }
-              ]"
-              :key="policy.id"
-              type="button"
-              class="rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors"
-              :class="gatePolicy === policy.id
-                ? 'bg-elev shadow-sm t-hi border b-line font-semibold'
-                : 't-lo hover:t-mid'"
-              @click="setGatePolicy(policy.id)"
-            >
-              {{ policy.label }}
-            </button>
-          </div>
+        <div class="mb-4">
+          <p class="text-[15px] font-medium t-hi">How should atomic flashcards unlock?</p>
+          <p class="mt-0.5 text-[13px] t-lo">This preference applies to note pages and the review queue on this device.</p>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Flashcard unlock mode">
+          <button
+            v-for="option in flashcardUnlockOptions"
+            :key="option.value"
+            type="button"
+            class="rounded-lg border p-4 text-left transition-colors"
+            :class="flashcardUnlockMode === option.value
+              ? 'border-saffron-500 bg-saffron-50 dark:bg-saffron-950/30'
+              : 'b-line bg-sub hover:border-saffron-300 dark:hover:border-saffron-800'"
+            role="radio"
+            :aria-checked="flashcardUnlockMode === option.value"
+            @click="setFlashcardUnlockMode(option.value)"
+          >
+            <span class="flex items-center gap-2 text-[14px] font-semibold t-hi">
+              <UIcon :name="option.icon" class="h-4 w-4" :class="flashcardUnlockMode === option.value ? 'accent' : 't-lo'" />
+              {{ option.label }}
+            </span>
+            <span class="mt-1 block text-[12px] leading-relaxed t-lo">{{ option.description }}</span>
+          </button>
         </div>
       </div>
     </section>
@@ -182,6 +181,22 @@
 useHead({ title: 'Settings - StudyOS' })
 
 const colorMode = useColorMode()
+const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
+
+const flashcardUnlockOptions = [
+  {
+    value: 'gate' as const,
+    label: 'Comprehension gate first',
+    description: 'Pass the note quiz before the atomic flashcards appear.',
+    icon: 'i-heroicons-lock-closed',
+  },
+  {
+    value: 'direct' as const,
+    label: 'Direct unlock',
+    description: 'Show the atomic flashcards immediately without the gate.',
+    icon: 'i-heroicons-lock-open',
+  },
+]
 
 const sizeOptions = [
   { label: 'Small',   value: 'small'   },
@@ -199,19 +214,12 @@ const scaleMap: Record<string, string> = {
 const scaleHeading = ref<string>('default')
 const scaleSubheading = ref<string>('default')
 const scaleBase = ref<string>('default')
-const gatePolicy = ref<string>('locked')
 
 onMounted(() => {
   scaleHeading.value = localStorage.getItem('studyos-scale-heading') || 'default'
   scaleSubheading.value = localStorage.getItem('studyos-scale-subheading') || 'default'
   scaleBase.value = localStorage.getItem('studyos-scale-base') || 'default'
-  gatePolicy.value = localStorage.getItem('studyos-gate-policy') || 'locked'
 })
-
-function setGatePolicy(val: string) {
-  gatePolicy.value = val
-  localStorage.setItem('studyos-gate-policy', val)
-}
 
 function setScale(type: 'heading' | 'subheading' | 'base', value: string) {
   if (type === 'heading') {

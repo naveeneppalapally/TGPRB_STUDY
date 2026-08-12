@@ -1,42 +1,63 @@
-import { defineEventHandler, getRouterParam, createError } from 'h3'
-import fs from 'fs'
-import path from 'path'
+import { createError, defineEventHandler, getRouterParam } from 'h3'
+import drainageSystem from '~/content/data/flashcards/geography/drainage-system.json'
+import unionExecutiveAndLegislature from '~/content/data/flashcards/polity/union-executive-and-legislature.json'
+import telanganaStatehoodMovement from '~/content/data/flashcards/telangana/telangana-statehood-movement.json'
+
+interface FlashcardRecord {
+  id: string
+  front: string
+  back: string
+  exam_section: string
+  topic: string
+  subtopic: string
+  source_note_id: string
+}
+
+const DECKS: Record<string, unknown> = {
+  'NOTE-GEO-DRAINAGE': drainageSystem,
+  'NOTE-POL-UNION-EXEC': unionExecutiveAndLegislature,
+  'NOTE-TEL-MOVEMENT': telanganaStatehoodMovement,
+}
+
+const DECK_META: Record<string, { exam_section: string; topic: string }> = {
+  'NOTE-GEO-DRAINAGE': { exam_section: 'Geography', topic: 'Drainage System of India' },
+  'NOTE-POL-UNION-EXEC': { exam_section: 'Polity', topic: 'Union Executive and Legislature' },
+  'NOTE-TEL-MOVEMENT': { exam_section: 'Telangana', topic: 'Telangana Statehood Movement' },
+}
+
+function normalizeCards(noteId: string, deck: unknown): FlashcardRecord[] {
+  const rawCards = Array.isArray(deck)
+    ? deck
+    : deck && typeof deck === 'object' && Array.isArray((deck as { cards?: unknown }).cards)
+      ? (deck as { cards: unknown[] }).cards
+      : []
+  const meta = DECK_META[noteId] ?? { exam_section: 'General', topic: noteId }
+
+  return rawCards.map((raw, index) => {
+    const card = raw as Partial<FlashcardRecord> & { key_fact?: string; tags?: string[] }
+    return {
+      id: card.id ?? `${noteId}-${index + 1}`,
+      front: card.front ?? '',
+      back: card.back ?? card.key_fact ?? '',
+      exam_section: card.exam_section ?? meta.exam_section,
+      topic: card.topic ?? meta.topic,
+      subtopic: card.subtopic ?? card.tags?.[0] ?? 'Atomic fact',
+      source_note_id: card.source_note_id ?? noteId,
+    }
+  }).filter(card => card.front && card.back)
+}
 
 export default defineEventHandler((event) => {
   const noteId = getRouterParam(event, 'noteId')
-  if (!noteId) {
-    throw createError({ statusCode: 400, statusMessage: 'Missing noteId parameter' })
+  if (!noteId || !DECKS[noteId]) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: `No flashcard deck found for note-id "${noteId}"`,
+    })
   }
 
-  // Map note_id to topic flashcard file
-  const mapNoteToPath: Record<string, string> = {
-    'NOTE-GEO-DRAINAGE': 'geography/drainage-system-of-india.json',
-  }
-
-  const relPath = mapNoteToPath[noteId] || 'geography/drainage-system-of-india.json'
-  const fullPath = path.resolve(process.cwd(), 'content/data/flashcards', relPath)
-
-  if (fs.existsSync(fullPath)) {
-    const data = JSON.parse(fs.readFileSync(fullPath, 'utf-8'))
-    return data
-  }
-
-  // Fallback default cards if file not found
   return {
-    topic_id: noteId,
-    cards: [
-      {
-        id: 'FC-1',
-        front: 'Which peninsular river is known as Dakshin Ganga?',
-        back: 'Godavari River (1,465 km long, originating in Trimbakeshwar, Nasik).',
-        key_fact: 'Godavari = Dakshin Ganga.'
-      },
-      {
-        id: 'FC-2',
-        front: 'What is the easternmost tributary of Godavari?',
-        back: 'Sabari River.',
-        key_fact: 'Sabari is easternmost.'
-      }
-    ]
+    note_id: noteId,
+    cards: normalizeCards(noteId, DECKS[noteId]),
   }
 })
