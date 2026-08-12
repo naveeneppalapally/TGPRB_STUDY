@@ -100,9 +100,10 @@
 
             <!-- Submit button -->
             <button
+              type="button"
               class="w-full py-3 px-4 rounded-lg bg-amber-500 text-white font-semibold text-body-sm shadow-sm hover:bg-amber-600 transition-colors disabled:opacity-50"
               :disabled="!allAnswered"
-              @click="submitGate"
+              @click.prevent="submitGate"
             >
               Submit Gate Answers ({{ answeredCount }}/{{ quiz.questions.length }})
             </button>
@@ -376,10 +377,6 @@ function submitGate() {
       score: correct,
       passed: passed.value
     }))
-  }
-
-  if (passed.value) {
-    activeMode.value = 'flashcards'
   }
 
   emit('completed', {
