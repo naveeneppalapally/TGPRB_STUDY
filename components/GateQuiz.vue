@@ -23,7 +23,7 @@
           <span>🎴</span>
           <span>Flashcards</span>
           <span class="text-[10px] opacity-90">({{ flashcardDeck.length }})</span>
-          <span v-if="passed" class="chip chip-jade text-[9px] px-1.5 py-0 border-0">🔓 Unlocked</span>
+          <span v-if="isUnlocked" class="chip chip-jade text-[9px] px-1.5 py-0 border-0">🔓 Unlocked</span>
           <span v-else class="chip text-[9px] px-1.5 py-0 border-0 bg-gray-200 dark:bg-gray-700 t-lo">🔒 Locked</span>
         </button>
       </div>
@@ -172,10 +172,10 @@
           </div>
         </div>
 
-        <!-- 🎴 MODE 2: TOPIC FLASHCARDS DECK (Requires Gate Pass) -->
+        <!-- 🎴 MODE 2: TOPIC FLASHCARDS DECK (Requires Gate Pass unless set to Always Unlocked in Settings) -->
         <div v-else class="space-y-4">
           <!-- Locked Banner if not passed yet -->
-          <div v-if="!passed" class="p-8 text-center rounded-xl border border-amber-500/30 bg-amber-500/5">
+          <div v-if="!isUnlocked" class="p-8 text-center rounded-xl border border-amber-500/30 bg-amber-500/5">
             <UIcon name="i-heroicons-lock-closed" class="mx-auto h-10 w-10 text-amber-500 mb-3" />
             <h4 class="text-body font-bold t-hi mb-1">Flashcards Locked 🔒</h4>
             <p class="text-body-xs t-lo mb-4 max-w-md mx-auto">
@@ -336,11 +336,17 @@ const answers = reactive<Record<number, number>>({})
 const submitted = ref(false)
 const score = ref(0)
 const passed = ref(false)
+const gatePolicy = ref<string>('locked')
+
+const isUnlocked = computed(() => {
+  if (gatePolicy.value === 'unlocked') return true
+  return passed.value
+})
 
 onMounted(() => {
-  const policy = localStorage.getItem('studyos-gate-policy')
-  if (policy === 'unlocked') {
-    passed.value = true
+  gatePolicy.value = localStorage.getItem('studyos-gate-policy') || 'locked'
+  if (gatePolicy.value === 'unlocked') {
+    activeMode.value = 'flashcards'
   } else if (props.noteId) {
     const savedState = localStorage.getItem(`gate_state_${props.noteId}`)
     if (savedState) {
