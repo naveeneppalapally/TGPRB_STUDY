@@ -1,0 +1,65 @@
+{
+  "topic_id": "NOTE-GEO-DRAINAGE",
+  "cards": [
+    {
+      "id": "FC-DRAIN-01",
+      "front": "Which peninsular river is known as 'Dakshin Ganga' and is the longest in South India?",
+      "back": "Godavari River (1,465 km long, originating at Trimbakeshwar in Nasik, Maharashtra).",
+      "key_fact": "Godavari is 1,465 km long and covers 7 states."
+    },
+    {
+      "id": "FC-DRAIN-02",
+      "front": "What is the easternmost tributary of the Godavari River system?",
+      "back": "Sabari River (often asked as a trap vs Indravati).",
+      "key_fact": "Sabari is the easternmost tributary of Godavari."
+    },
+    {
+      "id": "FC-DRAIN-03",
+      "front": "Which major rivers flow through rift valleys into the Arabian Sea without forming deltas?",
+      "back": "Narmada and Tapi rivers (they form estuaries instead of deltas).",
+      "key_fact": "Narmada & Tapi flow through rift valleys into Arabian Sea."
+    },
+    {
+      "id": "FC-DRAIN-04",
+      "front": "Which river is India's only major river with inland drainage (ending in Rann of Kutch)?",
+      "back": "Luni River (originating in Pushkar Valley, Aravalli Range).",
+      "key_fact": "Luni ends in Rann of Kutch without reaching the sea."
+    },
+    {
+      "id": "FC-DRAIN-05",
+      "front": "What is the ancient Vedic name of the Ravi River?",
+      "back": "Iravati.",
+      "key_fact": "Ravi = Iravati (Sutlej = Shatudri, Beas = Vipasha, Chenab = Asikni, Jhelum = Vitasta)."
+    },
+    {
+      "id": "FC-DRAIN-06",
+      "front": "What names does the Brahmaputra River take in Tibet, Arunachal Pradesh, and Assam?",
+      "back": "Tsangpo (Tibet) -> Dihang (Arunachal Pradesh) -> Brahmaputra (Assam).",
+      "key_fact": "Tsangpo -> Dihang -> Brahmaputra."
+    },
+    {
+      "id": "FC-DRAIN-07",
+      "front": "On which river is the Ukai Hydroelectric Dam situated?",
+      "back": "Tapi River in Gujarat.",
+      "key_fact": "Ukai Dam is on Tapi River."
+    },
+    {
+      "id": "FC-DRAIN-08",
+      "front": "Which Doab lies between the Beas and Sutlej rivers?",
+      "back": "Bist Doab.",
+      "key_fact": "Bist Doab = Beas + Sutlej."
+    },
+    {
+      "id": "FC-DRAIN-09",
+      "front": "Where do the Bhagirathi and Alaknanda rivers meet to form the Ganga?",
+      "back": "Devprayag (Uttarakhand).",
+      "key_fact": "Devprayag = Bhagirathi + Alaknanda -> Ganga."
+    },
+    {
+      "id": "FC-DRAIN-10",
+      "front": "On which river in Mahbubnagar (Telangana) is the Rajoli Banda Diversion Scheme built?",
+      "back": "Krishna River (specifically on the Krishna basin).",
+      "key_fact": "Rajoli Banda Diversion Scheme is on Krishna."
+    }
+  ]
+}
