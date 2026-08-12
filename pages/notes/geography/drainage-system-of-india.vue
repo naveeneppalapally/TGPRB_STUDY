@@ -49,6 +49,9 @@
         <!-- Current Affairs for this note -->
         <CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" class="mb-8" />
 
+        <!-- Comprehension Gate & Flashcard Unlock -->
+        <GateQuiz note-id="NOTE-GEO-DRAINAGE" class="mb-8" />
+
         <!-- ══ Coverage strip - the 6 ways TGPRB tests this topic ══ -->
         <section class="mb-10">
           <p class="eyebrow mb-3">How TGPRB tests this topic</p>
