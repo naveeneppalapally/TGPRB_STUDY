@@ -273,7 +273,7 @@ const subjectLinks = subjects.map(s =>
 )
 
 const practiceLinks = [
-  { label: 'PYQ Archive', icon: 'i-heroicons-archive-box', click: () => queuedFeature('PYQ Archive') },
+  { label: 'PYQ Archive', icon: 'i-heroicons-archive-box', to: '/pyq-archive' },
 ]
 
 const prefLinks = [
