@@ -118,16 +118,48 @@
       </button>
     </div>
 
-    <!-- Entry list -->
-    <div v-if="filtered.length" class="flex flex-col gap-3">
+    <!-- Loading skeleton -->
+    <div v-if="pending" class="flex flex-col gap-3">
       <div
-        v-for="item in filtered"
+        v-for="i in 8"
+        :key="i"
+        class="rounded-lg border b-line bg-sub p-4 space-y-3 animate-pulse"
+      >
+        <div class="flex gap-2">
+          <div class="h-5 w-20 rounded-full bg-black/10 dark:bg-white/10" />
+          <div class="h-5 w-12 rounded-full bg-black/10 dark:bg-white/10" />
+        </div>
+        <div class="h-4 w-3/4 rounded bg-black/10 dark:bg-white/10" />
+        <div class="h-10 w-full rounded bg-black/10 dark:bg-white/10" />
+      </div>
+    </div>
+
+    <!-- Entry list (paginated) -->
+    <div v-else-if="filtered.length" class="flex flex-col gap-3">
+      <div
+        v-for="item in visibleItems"
         :key="item.id"
         class="rounded-lg border b-line bg-sub p-4 flex flex-col gap-2 transition-shadow hover:shadow-sm"
         :class="item.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : ''"
       >
         <CACard :item="item" />
       </div>
+
+      <!-- Load more -->
+      <div v-if="visibleItems.length < filtered.length" class="py-4 text-center">
+        <UButton
+          variant="soft"
+          color="gray"
+          size="sm"
+          :loading="loadingMore"
+          @click="loadMore"
+        >
+          Load {{ Math.min(PAGE_SIZE, filtered.length - visibleItems.length) }} more
+          <span class="t-lo">({{ filtered.length - visibleItems.length }} remaining)</span>
+        </UButton>
+      </div>
+
+      <p v-else class="text-center text-xs t-lo py-2">All {{ filtered.length }} cards shown</p>
     </div>
 
     <!-- Empty state -->
@@ -149,10 +181,13 @@ useHead({
 
 const { categories, getCategoryMeta } = useCACategories()
 
-// Fetch all current affairs
-const { data: allEntries } = await useAsyncData(
+// Fetch all current affairs - select only frontmatter fields needed for display
+// (avoids loading full card body for all 676 cards at once)
+const { data: allEntries, pending } = await useAsyncData(
   'current-affairs-page',
-  () => queryCollection('current_affair').all(),
+  () => queryCollection('current_affair').select(
+    'id', 'meta'
+  ).all(),
 )
 
 // Filters state
@@ -167,6 +202,26 @@ const dateFilters = [
   { label: 'Hot zone (6mo)', value: '6M' },
   { label: 'Last year',     value: '1Y' },
 ]
+
+// Pagination state
+const PAGE_SIZE = 30
+const page = ref(1)
+const loadingMore = ref(false)
+
+// Reset pagination whenever filters change
+watch([activeCategory, activeDateFilter], () => { page.value = 1 })
+
+// Only render the current page slice
+const visibleItems = computed(() => filtered.value.slice(0, page.value * PAGE_SIZE))
+
+function loadMore() {
+  loadingMore.value = true
+  // Use requestAnimationFrame so the loading state renders before heavy DOM work
+  requestAnimationFrame(() => {
+    page.value++
+    loadingMore.value = false
+  })
+}
 
 // Sorted all entries newest first
 const items = computed(() => {
