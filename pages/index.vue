@@ -13,7 +13,7 @@
 
     <!-- ── Hero - due count + agenda ───────────────────────────────────── -->
     <section class="panel relative mb-6 overflow-hidden">
-      <div class="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
+
       <div class="relative grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
         <!-- Due count -->
         <div class="flex flex-col">
