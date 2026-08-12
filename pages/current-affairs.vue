@@ -162,7 +162,7 @@
     </div>
 
     <!-- Entry list (paginated) -->
-    <div v-else-if="filtered.length" class="flex flex-col gap-4">
+    <div ref="resultsRef" v-else-if="filtered.length" class="flex flex-col gap-4">
       <div
         v-for="item in visibleItems"
         :key="item.id"
@@ -218,6 +218,15 @@ useHead({
 
 const { categories } = useCACategories()
 
+// Ref for scrolling to results when a filter is applied
+const resultsRef = ref<HTMLElement | null>(null)
+
+function scrollToResults() {
+  nextTick(() => {
+    resultsRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  })
+}
+
 // Fetch all current affairs - select only frontmatter fields needed for display
 const { data: allEntries, pending } = await useAsyncData(
   'current-affairs-page',
@@ -244,8 +253,11 @@ const PAGE_SIZE = 30
 const page = ref(1)
 const loadingMore = ref(false)
 
-// Reset pagination whenever filters change
-watch([activeCategory, activeDateFilter], () => { page.value = 1 })
+// Reset pagination and scroll to results whenever filters change
+watch([activeCategory, activeDateFilter], () => {
+  page.value = 1
+  scrollToResults()
+})
 
 // Only render the current page slice
 const visibleItems = computed(() => filtered.value.slice(0, page.value * PAGE_SIZE))
