@@ -74,6 +74,15 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - Current affairs are a separate content type, never edited into a note's markdown file.
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
 
+### Subject-specific note scaffolds - mandatory reference
+When building any topic note page, follow the subject scaffold from `docs/tslprb-pyq-processing-engine-research-report.md`:
+- **Geography (6-Point Scaffold)**: 01. Location, 02. Origin/source, 03. Direction/extent, 04. States/regions, 05. Connections (dams/tributaries), 06. Key exam distinction.
+- **History (5-Step Causal Chain)**: Cause -> Event -> Leader/Authority -> Outcome -> Next consequence.
+- **Polity (4-Tier Architecture)**: Part -> Constitutional Area -> Article Range -> Landmark Articles.
+- **Arithmetic (7-Step Drill)**: Formula/Condition -> 15-25 untimed examples -> changed-value variants -> mixed practice -> timed set -> error-log retest -> speed benchmark.
+- **General Science**: Biology (diagram redraws), Physics (formula-condition-unit cards), Chemistry (contrastive pairs).
+- **Telangana GK (2-Axis Framework)**: Spatial (district -> landmark) + Thematic (history -> movement -> culture -> governance -> schemes).
+
 ## Current Affairs system - read before building any note page
 
 ### How the system works (end to end)
