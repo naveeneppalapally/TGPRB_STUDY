@@ -230,7 +230,7 @@
             <!-- Indus River Basin Map -->
             <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/indus-river-basin-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556254/geography/indus-river-basin-map.webp"
                 alt="Indus River Basin Map showing Jhelum, Chenab, Ravi, Beas, Satluj tributaries and Pakistan India region"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -276,7 +276,7 @@
             <!-- Ganga-Yamuna River Basin Map -->
             <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/ganga-river-basin-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556256/geography/ganga-river-basin-map.webp"
                 alt="Ganga Yamuna River Basin Map showing left and right bank tributaries - Kosi, Ghaghara, Yamuna, Son, Damodar"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -321,7 +321,7 @@
             <!-- Brahmaputra River Basin Map -->
             <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/brahmaputra-river-basin-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556257/geography/brahmaputra-river-basin-map.webp"
                 alt="Brahmaputra River Basin Map showing Yarlung Tsangpo in Tibet, Dihang in Arunachal, tributaries Subhansiri Lohit Manas Teesta"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -393,7 +393,7 @@
           <!-- Godavari River Basin Map -->
           <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
             <img
-              src="/images/geography/godavari-river-basin-map.webp"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556255/geography/godavari-river-basin-map.webp"
               alt="Godavari River Basin Map showing Wardha Pranhita Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
               class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
             />
@@ -403,7 +403,7 @@
           <!-- Krishna River Basin Map -->
           <div class="mb-10 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
             <img
-              src="/images/geography/krishna-river-basin-map.webp"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556253/geography/krishna-river-basin-map.webp"
               alt="Krishna River Basin Map showing Bhima Musi Tungabhadra Malprabha tributaries across Maharashtra Karnataka Andhra Pradesh Telangana"
               class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
             />
