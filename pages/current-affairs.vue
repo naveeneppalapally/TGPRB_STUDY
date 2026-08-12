@@ -2,7 +2,7 @@
   <div class="mx-auto max-w-4xl px-4 py-8">
     <!-- Page header -->
     <header class="mb-8">
-      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">
+      <div class="eyebrow flex items-center gap-2 mb-2">
         <UIcon name="i-heroicons-newspaper" class="h-4 w-4" />
         Daily Updates
       </div>
@@ -11,7 +11,7 @@
       </h1>
       <p class="text-sm sm:text-base leading-relaxed t-mid max-w-3xl">
         Exam-relevant news sourced from PIB, updated daily at 7am IST.
-        <span class="font-semibold text-emerald-700 dark:text-emerald-400">85% of TGPRB current-affairs questions come from the last 6 months</span> –
+        <span class="font-semibold accent">85% of TGPRB current-affairs questions come from the last 6 months</span> –
         those cards are marked <span class="inline-flex items-center gap-0.5 text-red-500 font-bold"><UIcon name="i-heroicons-fire" class="h-4 w-4" />Hot zone</span>.
       </p>
 
@@ -20,8 +20,8 @@
         <button
           class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
           :class="activeDateFilter === '1D'
-            ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
-            : 'b-line bg-sub t-mid hover:border-emerald-500'"
+            ? 'bg-saffron-600 text-white border-saffron-600 shadow-sm'
+            : 'b-line bg-sub t-mid hover:border-saffron-500'"
           @click="activeDateFilter = '1D'"
         >
           <UIcon name="i-heroicons-sun" class="h-3.5 w-3.5" />
@@ -30,8 +30,8 @@
         <button
           class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
           :class="activeDateFilter === '7D'
-            ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
-            : 'b-line bg-sub t-mid hover:border-emerald-500'"
+            ? 'bg-saffron-600 text-white border-saffron-600 shadow-sm'
+            : 'b-line bg-sub t-mid hover:border-saffron-500'"
           @click="activeDateFilter = '7D'"
         >
           <UIcon name="i-heroicons-calendar-days" class="h-3.5 w-3.5" />
@@ -50,8 +50,8 @@
         <button
           class="px-3 py-1.5 rounded-md text-xs font-medium border transition-all cursor-pointer flex items-center gap-1.5"
           :class="activeDateFilter === 'ALL' && activeCategory === 'ALL'
-            ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
-            : 'b-line bg-sub t-mid hover:border-emerald-500'"
+            ? 'bg-saffron-600 text-white border-saffron-600 shadow-sm'
+            : 'b-line bg-sub t-mid hover:border-saffron-500'"
           @click="activeDateFilter = 'ALL'; activeCategory = 'ALL'"
         >
           <UIcon name="i-heroicons-document-text" class="h-3.5 w-3.5" />
@@ -79,7 +79,7 @@
         :key="df.value"
         class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer"
         :class="activeDateFilter === df.value
-          ? 'bg-emerald-600 text-white shadow-sm'
+          ? 'bg-saffron-600 text-white shadow-sm'
           : 'bg-black/5 dark:bg-white/5 t-mid hover:bg-black/10 dark:hover:bg-white/10'"
         @click="activeDateFilter = df.value"
       >
@@ -92,14 +92,14 @@
       <div class="mb-4 flex items-center justify-between">
         <div>
           <h2 class="text-sm font-bold uppercase tracking-wider t-hi flex items-center gap-2">
-            <UIcon name="i-heroicons-funnel" class="h-4 w-4 text-emerald-600" />
+            <UIcon name="i-heroicons-funnel" class="h-4 w-4 accent" />
             Filter by Category
           </h2>
           <p class="text-xs t-mid mt-0.5">Click any category to filter the news below</p>
         </div>
         <button
           v-if="activeCategory !== 'ALL'"
-          class="text-xs font-semibold text-emerald-600 hover:underline"
+          class="text-xs font-semibold accent hover:underline"
           @click="activeCategory = 'ALL'"
         >
           Clear category filter (Show All)
@@ -111,8 +111,8 @@
         <button
           class="flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left transition-all cursor-pointer"
           :class="activeCategory === 'ALL'
-            ? 'bg-emerald-600 text-white border-emerald-600 font-bold shadow-sm'
-            : 'b-line bg-white/50 dark:bg-black/20 t-hi hover:border-emerald-500/50'"
+            ? 'bg-saffron-600 text-white border-saffron-600 font-bold shadow-sm'
+            : 'b-line bg-white/50 dark:bg-black/20 t-hi hover:border-saffron-500/50'"
           @click="activeCategory = 'ALL'"
         >
           <span class="flex items-center gap-2 text-xs truncate">
@@ -130,8 +130,8 @@
           :key="cat.id"
           class="flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left transition-all cursor-pointer"
           :class="activeCategory === cat.id
-            ? 'bg-emerald-600 text-white border-emerald-600 font-bold shadow-sm'
-            : 'b-line bg-white/50 dark:bg-black/20 t-hi hover:border-emerald-500/50'"
+            ? 'bg-saffron-600 text-white border-saffron-600 font-bold shadow-sm'
+            : 'b-line bg-white/50 dark:bg-black/20 t-hi hover:border-saffron-500/50'"
           @click="activeCategory = activeCategory === cat.id ? 'ALL' : cat.id"
         >
           <span class="flex items-center gap-2 text-xs truncate">
@@ -176,7 +176,7 @@
       <div v-if="visibleItems.length < filtered.length" class="py-6 text-center">
         <UButton
           variant="solid"
-          color="emerald"
+          color="primary"
           size="md"
           :loading="loadingMore"
           class="font-semibold shadow-sm"
@@ -196,7 +196,7 @@
       <h3 class="text-base font-semibold t-hi mb-1">No current affairs found</h3>
       <p class="text-sm t-mid mb-4">Try selecting "All Categories" or choosing a broader timeframe filter.</p>
       <UButton
-        color="emerald"
+        color="primary"
         variant="soft"
         size="sm"
         @click="activeCategory = 'ALL'; activeDateFilter = 'ALL'"
@@ -274,7 +274,7 @@ function loadMore() {
 const items = computed(() => {
   if (!allEntries.value) return []
   return [...allEntries.value].sort(
-    (a: any, b: any) => new Date(entryDate(b)).getTime() - new Date(entryDate(a)).getTime()
+    (a: any, b: any) => new Date(entryDate(b) ?? 0).getTime() - new Date(entryDate(a) ?? 0).getTime()
   )
 })
 
