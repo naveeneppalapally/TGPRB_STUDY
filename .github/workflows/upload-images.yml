@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'assets-to-upload/**'
+    # Skip Cloudflare build on the raw image push - URLs are not ready yet.
+    # The bot commit below (without [skip ci]) is what triggers the real deploy.
 
 # Give the workflow write access to push the rewritten URLs back
 permissions:
@@ -43,5 +45,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || git commit -m "chore: auto-upload images to Cloudinary [skip ci]"
+          git diff --cached --quiet || git commit -m "chore: auto-upload images to Cloudinary"
           git push
