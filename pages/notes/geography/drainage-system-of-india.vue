@@ -276,7 +276,7 @@
             <!-- Ganga-Yamuna River Basin Map -->
             <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/ganga-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558595/geography/ganga-river-map.webp"
                 alt="Ganga Yamuna River System Map showing left and right bank tributaries - Kosi, Ghaghara, Yamuna, Son, Damodar"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -321,7 +321,7 @@
             <!-- Brahmaputra River Basin Map -->
             <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/brahmaputra-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558596/geography/brahmaputra-river-map.webp"
                 alt="Brahmaputra River Basin Map showing Yarlung Tsangpo in Tibet, Dihang in Arunachal, tributaries Subhansiri Lohit Manas Teesta"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -392,7 +392,7 @@
             <!-- Godavari River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/godavari-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558594/geography/godavari-river-map.webp"
                 alt="Godavari River Basin Map showing Wardha Pranhita Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -402,7 +402,7 @@
             <!-- Krishna River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/krishna-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558594/geography/krishna-river-map.webp"
                 alt="Krishna River Basin Map showing Bhima Musi Tungabhadra Malprabha tributaries across Maharashtra Karnataka Andhra Pradesh Telangana"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -412,7 +412,7 @@
             <!-- Mahanadi River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/mahanadi-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558593/geography/mahanadi-river-map.webp"
                 alt="Mahanadi River System Map showing Seonath Hasdeo Mand Ib Tel Jonk tributaries"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -422,7 +422,7 @@
             <!-- Cauvery River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/cauvery-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558595/geography/cauvery-river-map.webp"
                 alt="Cauvery Kaveri River System Map showing Harangi Hemavati Arkavathi Kabini Bhavani Amaravathi tributaries"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -477,7 +477,7 @@
             <!-- Narmada River Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/narmada-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558593/geography/narmada-river-map.webp"
                 alt="Narmada River System Map showing Amarkantak origin, rift valley between Vindhya and Satpura ranges, Sardar Sarovar dam"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
@@ -487,7 +487,7 @@
             <!-- Tapi River Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/tapi-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558592/geography/tapi-river-map.webp"
                 alt="Tapi River System Map showing Multai origin in Betul MP, Ukai dam, Gulf of Khambhat estuary"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
