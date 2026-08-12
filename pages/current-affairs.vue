@@ -13,28 +13,49 @@
         those cards are marked <span class="inline-flex items-center gap-0.5 text-red-500 font-semibold"><UIcon name="i-heroicons-fire" class="h-3 w-3" />Hot zone</span>.
       </p>
 
-      <!-- Stats row -->
+      <!-- Stats row (Clickable quick-filters) -->
       <div class="mt-4 flex flex-wrap gap-3">
-        <span class="chip">
+        <button
+          class="chip cursor-pointer transition-colors hover:border-accent"
+          :class="activeDateFilter === '1D' ? 'bg-accent text-white border-accent' : ''"
+          @click="activeDateFilter = '1D'"
+        >
           <UIcon name="i-heroicons-sun" class="h-3 w-3" />
           {{ todayCount }} today
-        </span>
-        <span class="chip">
+        </button>
+        <button
+          class="chip cursor-pointer transition-colors hover:border-accent"
+          :class="activeDateFilter === '7D' ? 'bg-accent text-white border-accent' : ''"
+          @click="activeDateFilter = '7D'"
+        >
           <UIcon name="i-heroicons-calendar-days" class="h-3 w-3" />
           {{ thisWeekCount }} this week
-        </span>
-        <span class="chip">
-          <UIcon name="i-heroicons-fire" class="h-3 w-3 text-red-500" />
+        </button>
+        <button
+          class="chip cursor-pointer transition-colors hover:border-red-500"
+          :class="activeDateFilter === '6M' ? 'bg-red-500 text-white border-red-500' : ''"
+          @click="activeDateFilter = '6M'"
+        >
+          <UIcon name="i-heroicons-fire" class="h-3 w-3 text-red-500" :class="activeDateFilter === '6M' ? 'text-white' : ''" />
           {{ hotZoneCount }} in hot zone (6mo)
-        </span>
-        <span class="chip">
+        </button>
+        <button
+          class="chip cursor-pointer transition-colors hover:border-accent"
+          :class="activeDateFilter === 'ALL' && activeCategory === 'ALL' ? 'bg-black/10 dark:bg-white/10' : ''"
+          @click="activeDateFilter = 'ALL'; activeCategory = 'ALL'"
+        >
           <UIcon name="i-heroicons-document-text" class="h-3 w-3" />
           {{ items.length }} total entries
-        </span>
-        <span v-if="tgCount" class="chip border-saffron-300 dark:border-saffron-800">
-          <UIcon name="i-heroicons-map-pin" class="h-3 w-3 text-saffron-500" />
+        </button>
+        <button
+          v-if="tgCount"
+          class="chip cursor-pointer transition-colors border-saffron-300 dark:border-saffron-800 hover:border-saffron-500"
+          :class="activeCategory === 'telangana' ? 'bg-saffron-500 text-white border-saffron-500' : ''"
+          @click="activeCategory = activeCategory === 'telangana' ? 'ALL' : 'telangana'"
+        >
+          <UIcon name="i-heroicons-map-pin" class="h-3 w-3 text-saffron-500" :class="activeCategory === 'telangana' ? 'text-white' : ''" />
           {{ tgCount }} Telangana focus
-        </span>
+        </button>
       </div>
     </header>
 
@@ -43,7 +64,7 @@
       <button
         v-for="df in dateFilters"
         :key="df.value"
-        class="chip transition-colors"
+        class="chip cursor-pointer transition-colors"
         :class="activeDateFilter === df.value ? 'bg-accent text-white border-accent' : 'hover:b-line'"
         @click="activeDateFilter = df.value"
       >
