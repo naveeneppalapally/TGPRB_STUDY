@@ -208,7 +208,7 @@ const emit = defineEmits<{
 
 const { data: fetchedQuiz } = await useAsyncData<GateQuizData | null>(
   `gate-quiz-${props.noteId ?? 'none'}`,
-  () => props.noteId ? $fetch<GateQuizData>(`/api/gate/${props.noteId}`) : Promise.resolve(null),
+  () => props.noteId ? $fetch<GateQuizData>(`/api/gate/${props.noteId}`).catch(() => null) : Promise.resolve(null),
 )
 
 const quiz = computed<GateQuizData | undefined>(() => props.quiz ?? fetchedQuiz.value ?? undefined)
