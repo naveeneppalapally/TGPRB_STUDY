@@ -1,5 +1,5 @@
 <template>
-  <ClientOnly>
+  <div>
     <UButton
       icon="i-heroicons-sparkles"
       label="Ask AI"
@@ -100,7 +100,7 @@
         </footer>
       </div>
     </USlideover>
-  </ClientOnly>
+  </div>
 </template>
 
 <script setup lang="ts">
