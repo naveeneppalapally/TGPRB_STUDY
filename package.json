@@ -17,6 +17,7 @@
     "test:offline-sync": "npx tsx scripts/test-offline-sync.ts"
   },
   "dependencies": {
+    "@google/genai": "^2.17.0",
     "@nuxt/content": "^3.0.0",
     "@nuxt/ui": "^2.22.3",
     "@nuxtjs/supabase": "^1.4.0",

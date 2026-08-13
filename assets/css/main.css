@@ -71,6 +71,16 @@ html {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+@media (max-width: 640px) {
+  /* Belt-and-suspenders: the table/card rules below are designed to never
+     exceed the viewport width, but this guarantees the page itself never
+     grows a horizontal scrollbar on mobile even if some future piece of
+     content misbehaves. Desktop is untouched. */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
 body {
   background-color: var(--bg);
   color: var(--text-1);
@@ -602,5 +612,114 @@ body {
 }
 .flip-card-face.flip-card-back {
   transform: rotateY(180deg);
+}
+
+/* -- 9. Global responsive tables (mobile stacked cards) ----------------------
+   Every <table> in the app - .table-note (index.vue, drainage-system-of-india.vue),
+   .note-body table (markdown notes rendered via ContentRenderer), and the
+   ad-hoc Tailwind-styled tables hand-written in polity/telangana note pages -
+   is covered by this single universal `table` selector. No page or table
+   needs its own mobile-specific markup or class.
+
+   Below the breakpoint, each <tbody> row becomes a self-contained card and
+   every cell stacks as a label/value pair instead of a column, so nothing
+   ever needs to scroll horizontally - not the table, not the page. The
+   column label shown on the left of each value comes from a `data-label`
+   attribute that plugins/responsive-tables.client.ts copies from the table's
+   own <thead> at runtime, so no note content or markdown table needs to be
+   rewritten to supply it and no data is lost.
+
+   Above the breakpoint this block does not apply at all - desktop tables are
+   completely unaffected and render exactly as before. */
+@media (max-width: 640px) {
+  /* Only neutralise scroll wrappers that exist purely to hold a <table> -
+     once the table stacks into single-column cards it is never wider than
+     its container, so scrolling is turned off entirely instead of merely
+     possible. `.overflow-x-auto` is also used (deliberately) around ASCII
+     diagrams (.artifact pre), code blocks (ProseCode.vue) and the SVG
+     constitutional-hierarchy diagram, none of which stack like a table -
+     those must keep scrolling exactly as before, so the selector is scoped
+     with :has(table) rather than matching every `.overflow-x-auto`. */
+  .overflow-x-auto:has(table) {
+    overflow-x: visible;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    min-width: 0 !important; /* neutralises any desktop-only min-w-[...] utility */
+    white-space: normal;
+  }
+
+  /* Header row is not shown visually - its text is preserved per-cell via
+     data-label instead - but stays in the DOM so nothing is deleted. */
+  table thead {
+    display: none;
+  }
+
+  table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  table tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 4px 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
+  table tbody tr:last-child { margin-bottom: 0; }
+
+  /* Deliberately NOT display:flex here. A cell's real content is often a mix
+     of plain text and inline elements (comma-separated tributary names next
+     to a <span class="hot-tag">PYQ</span> chip, for example). Flex treats
+     every one of those siblings as its own non-wrapping flex item, which is
+     what caused values to spill past the card edge instead of wrapping.
+     Block + normal inline flow wraps arbitrary mixed content correctly with
+     zero special-casing, so the label goes on its own line above the value
+     instead of beside it. */
+  table td,
+  table th {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--line);
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  table tr > td:last-child,
+  table tr > th:last-child {
+    border-bottom: none;
+  }
+
+  /* Label pulled from the real header text - see plugins/responsive-tables.client.ts */
+  table td::before,
+  table th::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 3px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  /* Desktop-only alignment/whitespace helpers that would otherwise fight the
+     stacked layout (numeric columns, nowrap key cells, etc). */
+  .table-note .cell-num,
+  .table-note th {
+    white-space: normal;
+  }
+  .table-note td:first-child,
+  .table-note th:first-child {
+    padding-left: 0;
+  }
 }
 
