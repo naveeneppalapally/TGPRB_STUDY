@@ -77,19 +77,13 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
 
 ### Subject-specific note scaffolds - mandatory reference
-When building any topic note page, follow the subject scaffold from `docs/tslprb-pyq-processing-engine-research-report.md` and `docs/memory-retention-study-design-research.md`:
-- **Geography**: For physical/spatial features (rivers, parks, mountains, passes), use the **6-Point Scaffold** (01. Location, 02. Origin/source, 03. Direction/extent, 04. States/regions, 05. Connections: tributaries/dams/ranges/neighbors, 06. Key exam distinction). For thematic/ecological topics (forests, soils, climate, industries), adapt the structure to classification, distribution, characteristics, and environmental factors.
+When building any topic note page, follow the subject scaffold from `docs/tslprb-pyq-processing-engine-research-report.md`:
+- **Geography (6-Point Scaffold)**: 01. Location, 02. Origin/source, 03. Direction/extent, 04. States/regions, 05. Connections (dams/tributaries), 06. Key exam distinction.
 - **History (5-Step Causal Chain)**: Cause -> Event -> Leader/Authority -> Outcome -> Next consequence.
 - **Polity (4-Tier Architecture)**: Part -> Constitutional Area -> Article Range -> Landmark Articles.
 - **Arithmetic (7-Step Drill)**: Formula/Condition -> 15-25 untimed examples -> changed-value variants -> mixed practice -> timed set -> error-log retest -> speed benchmark.
 - **General Science**: Biology (diagram redraws), Physics (formula-condition-unit cards), Chemistry (contrastive pairs).
 - **Telangana GK (2-Axis Framework)**: Spatial (district -> landmark) + Thematic (history -> movement -> culture -> governance -> schemes).
-
-> [!IMPORTANT]
-> **Scaffold Research & Integration Mandate**:
-> 1. **Research First**: Before writing any note page, agents MUST explicitly read the corresponding sections in `docs/tslprb-pyq-processing-engine-research-report.md` and `docs/memory-retention-study-design-research.md`. Do not generalize or omit the subject note scaffolds.
-> 2. **Add Required Components**: In addition to the subject scaffolds, every note page must feature its respective Comprehension Gate quiz (`<GateQuiz />`), atomic FSRS flashcards (unlocked by the gate), and a tagged Current Affairs strip (`<CurrentAffairsStrip />`) linked to the note ID.
-
 
 ## Current Affairs system - read before building any note page
 
@@ -181,16 +175,35 @@ Every note page must have exactly one NOTE ID. Format: `NOTE-{SECTION}-{TOPIC}`
 | History | HIS | NOTE-HIS-GENERAL, NOTE-HIS-MODERN |
 | Arithmetic | ARI | NOTE-ARI-GENERAL |
 
-### Wiring CurrentAffairsStrip to a new note page
+### Wiring Current Affairs & Comprehension Gate to a new note page
 
-Every Tier-1 and Tier-2 note page MUST include the strip. Add it after the closing `</header>` of the title block, before the coverage strip:
+Every Tier-1 and Tier-2 note page MUST include both the Comprehension Gate and the Current Affairs strip. To prevent content blocking, these must be placed at the **very bottom of the page** (after the PYQs section) as dedicated sections, and registered in the right-side Table of Contents (TOC) `sections` array.
+
+Example bottom-of-page layout structure:
 
 ```html
-<!-- Current Affairs for this note -->
-<CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" class="mb-8" />
-```
+<!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
+<section id="gate" class="mb-14 scroll-mt-20">
+  <header class="sec-head">
+    <span class="sec-num">07</span>
+    <h2 class="sec-title">Comprehension Gate</h2>
+    <span class="sec-rule" />
+    <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
+  </header>
+  <GateQuiz note-id="NOTE-GEO-DRAINAGE" />
+</section>
 
-Replace `NOTE-GEO-DRAINAGE` with the exact NOTE ID for that page. The component auto-filters and shows only matching entries. If no entries exist yet, it renders nothing (v-if guard).
+<!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+<section id="current-affairs" class="mb-14 scroll-mt-20">
+  <header class="sec-head">
+    <span class="sec-num">08</span>
+    <h2 class="sec-title">Current Affairs</h2>
+    <span class="sec-rule" />
+    <span class="sec-meta hidden sm:block">tagged to this topic</span>
+  </header>
+  <CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" />
+</section>
+```
 
 ### Does the extractor auto-tag topics?
 
@@ -239,107 +252,35 @@ High-yield PYQ categories (build feeds for these first if adding new ones):
 
 When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS):
 
-## Note page layout - canonical section order (never change this)
+**Step 1 - Wire the Gate and Current Affairs sections at the bottom of the page:**
+Add the `<GateQuiz>` and `<CurrentAffairsStrip>` components inside their respective standard sections at the end of the template (before the footer navigation), matching the layout structure.
 
-Every Tier-1 and Tier-2 note page MUST follow this exact section order. Do NOT place GateQuiz or CurrentAffairsStrip at the top of the page - they block students from reaching study content.
-
-```
-01  The Map / Location           (spatial anchor, first thing student sees)
-02  Introduction                 (what, why it matters, PYQ signal)
-03  Deep Dive                    (all subtopics, facts, diagrams)
-04  Data & Comparisons           (tables, timelines)
-05  Memory Hacks                 (mnemonics, patterns)
-06  PYQs                         (verified real questions, exam/year filter)
-07  Comprehension Gate           (<GateQuiz note-id="NOTE-XXX" />)
-08  Current Affairs              (<CurrentAffairsStrip note-id="NOTE-XXX" />)
-Footer nav                       (back to subject + open review queue)
-```
-
-**Why 07 and 08 go at the bottom:** The student must read the note content first. Placing CA or the Gate at the top blocks them from reaching Sections 01-06. The rule is: learn first, then test, then catch up on news.
-
-**Right-side TOC:** Every note page's `sections` array must include ALL sections including gate and current-affairs so students can jump there directly:
-
+**Step 2 - Register sections in the TOC:**
+Add `gate` and `current-affairs` to the `sections` array in the script block so they render in the right-side sticky TOC:
 ```ts
 const sections = [
-  { id: 'map',             label: 'The Map' },
-  { id: 'introduction',    label: 'Introduction' },
-  { id: 'deep-dive',       label: 'Deep Dive' },
-  { id: 'data',            label: 'Data & Comparisons' },
-  { id: 'memory-hacks',    label: 'Memory Hacks' },
+  // ... other sections
   { id: 'pyqs',            label: 'PYQs' },
   { id: 'gate',            label: 'Comprehension Gate' },
   { id: 'current-affairs', label: 'Current Affairs' },
 ]
 ```
 
-**Section 07 template (GateQuiz):**
-```html
-<!-- 07 - Comprehension Gate -->
-<section id="gate" class="mb-14 scroll-mt-20">
-  <header class="sec-head">
-    <span class="sec-num">07</span>
-    <h2 class="sec-title">Comprehension Gate</h2>
-    <span class="sec-rule" />
-    <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
-  </header>
-  <GateQuiz note-id="NOTE-GEO-FORESTS" />
-</section>
-```
-
-**Section 08 template (CurrentAffairsStrip):**
-```html
-<!-- 08 - Current Affairs -->
-<section id="current-affairs" class="mb-14 scroll-mt-20">
-  <header class="sec-head">
-    <span class="sec-num">08</span>
-    <h2 class="sec-title">Current Affairs</h2>
-    <span class="sec-rule" />
-    <span class="sec-meta hidden sm:block">tagged to this topic</span>
-  </header>
-  <CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" />
-</section>
-```
-
-## Component UX rules - never change these
-
-**CurrentAffairsStrip.vue** - single-card carousel (NOT a stacked list):
-- Shows one CA card at a time with left/right arrow buttons
-- Dot indicators for navigation (max 10 dots shown)
-- Keyboard: ArrowLeft/ArrowRight/ArrowUp/ArrowDown all work
-- Counter shows `(1/13)` in header
-- "Mark read" button clears the NEW badge
-
-**GateQuiz.vue** - one question at a time (NOT all questions dumped on screen):
-- Shows one question at a time with left/right arrow buttons
-- Dot progress bar (filled dot = answered, saffron capsule = current)
-- Submit button only appears on the LAST question
-- Keyboard: ArrowLeft/ArrowRight navigate between questions
-- Retry button shown after failing
-
-**Never revert these components to the old stacked/list style.** The old style dumped all 13 CA cards and all 5 gate questions onto the screen at once, blocking the student from reaching note content.
-
-## Per-topic wiring steps
-
-**Step 1 - Add sections 07 and 08 at the bottom of the note (before footer nav):**
-Use the exact templates above.
-
-**Step 2 - Wire the gate JSON:**
-```bash
-python3 scripts/note_pipeline/generate_gates_and_cards.py NOTE-GEO-FORESTS
-```
-Save output to `content/data/gates/forests-of-india.json` then add import + registry entry in `server/api/gate/[noteId].get.ts`.
+**Step 3 - Setup the gate JSON:**
+GateQuiz self-fetches from `server/api/gate/[noteId].get.ts`. You MUST:
+1. Generate the gate JSON: `python3 scripts/note_pipeline/generate_gates_and_cards.py NOTE-GEO-FORESTS`
+2. Save output to `content/data/gates/forests-of-india.json` (canonical schema: `note_id`, `pass_threshold`, `questions[].correct_answer`)
+3. Add an import + registry entry in `server/api/gate/[noteId].get.ts`
 
 **Step 3 - Run CA extraction to get tagged cards:**
 ```bash
 python3 scripts/pib_ca_pipeline/extract_ca_cards.py 500
 ```
-Gemini will auto-tag articles matching NOTE-GEO-FORESTS with `related_topic_ids`. PRID-based resume means re-runs are safe.
-
-If the pipeline returns zero drainage/topic-relevant articles (score >= 2.0), create CA cards MANUALLY from PIB articles using the frontmatter schema above. Do not leave a topic with zero CA cards - that is an incomplete build.
+Gemini will auto-tag articles matching NOTE-GEO-FORESTS with `related_topic_ids`. PRID-based resume means re-runs are safe and cheap.
 
 **Step 4 - Verify in browser:**
-Open the note page. Scroll to section 08. The CurrentAffairsStrip must render at least one card and show arrow navigation. Scroll to section 07. GateQuiz must show one question at a time with arrow buttons.
-A topic is not done until both are visible. If strip is empty, check:
+Open the note page. The CurrentAffairsStrip must render at least one card.
+A topic is not done until this is visible. If strip is empty, check:
 - note-id prop matches the related_topic_ids in the .md files exactly
 - content.config.ts has the current_affair collection defined
 - `server/api/gate/[noteId].get.ts` has the gate registered
@@ -351,8 +292,7 @@ A topic is not done until both are visible. If strip is empty, check:
 - Layer 1: localStorage (instant, offline, no auth needed)
 - Layer 2: Supabase `topic_visits` table (cloud sync when logged in)
 
-Cards show a "NEW" badge when published after the user's last visit. First visit shows all cards without flooding - they appear under "Earlier" via the carousel.
-
+Cards split automatically into "New since last visit" (saffron highlight) and "Earlier" (collapsed). First visit shows all cards under "Earlier" - never floods with backlog.
 
 
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
