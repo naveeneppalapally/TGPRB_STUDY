@@ -83,10 +83,14 @@ async function recordAiEvent(
   }
 }
 
-export default defineEventHandler(async (event) => {
-  const client = await serverSupabaseClient(event)
-  const { data: { user } } = await client.auth.getUser()
-  if (!user) throw createError({ statusCode: 401, statusMessage: 'Sign in to use the study assistant.' })
+  let userId = 'guest-anonymous'
+  try {
+    const client = await serverSupabaseClient(event)
+    const { data: { user } } = await client.auth.getUser()
+    if (user) userId = user.id
+  } catch {
+    userId = 'guest-anonymous'
+  }
 
   const input = parseAiExplainRequest(await readBody(event))
   if (!input || !getAiNoteDefinition(input.note_id)) {
@@ -112,18 +116,21 @@ export default defineEventHandler(async (event) => {
     googleAuthOptions: { credentials },
   })
 
-  const dailyLimit = Math.min(50, Math.max(1, Number(config.aiDailyQueryLimit) || 20))
-  const { data: quotaData, error: quotaError } = await client.rpc('consume_ai_query', {
-    p_daily_limit: dailyLimit,
-  })
-
-  if (quotaError) {
-    throw createError({ statusCode: 503, statusMessage: 'AI quota storage is not ready. Run the latest database schema first.' })
+  let quotaAllowed = true
+  try {
+    const { data: quotaData, error: quotaError } = await client.rpc('consume_ai_query', {
+      p_daily_limit: dailyLimit,
+    })
+    if (!quotaError) {
+      const quota = Array.isArray(quotaData) ? quotaData[0] as QuotaResult | undefined : quotaData as QuotaResult | undefined
+      if (quota && !quota.allowed) quotaAllowed = false
+    }
+  } catch {
+    // Allow guest / fallback query
   }
 
-  const quota = Array.isArray(quotaData) ? quotaData[0] as QuotaResult | undefined : quotaData as QuotaResult | undefined
-  if (!quota?.allowed) {
-    throw createError({ statusCode: 429, statusMessage: `Daily AI limit reached. Try again after the next India-time reset.` })
+  if (!quotaAllowed) {
+    throw createError({ statusCode: 429, statusMessage: 'Daily AI limit reached. Try again after the next India-time reset.' })
   }
 
   setResponseHeader(event, 'Content-Type', 'text/event-stream; charset=utf-8')
