@@ -77,8 +77,8 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
 
 ### Subject-specific note scaffolds - mandatory reference
-When building any topic note page, follow the subject scaffold from `docs/tslprb-pyq-processing-engine-research-report.md`:
-- **Geography (6-Point Scaffold)**: 01. Location, 02. Origin/source, 03. Direction/extent, 04. States/regions, 05. Connections (dams/tributaries), 06. Key exam distinction.
+When building any topic note page, follow the subject scaffold from `docs/tslprb-pyq-processing-engine-research-report.md` and `docs/memory-retention-study-design-research.md`:
+- **Geography**: For physical/spatial features (rivers, parks, mountains, passes), use the **6-Point Scaffold** (01. Location, 02. Origin/source, 03. Direction/extent, 04. States/regions, 05. Connections: tributaries/dams/ranges/neighbors, 06. Key exam distinction). For thematic/ecological topics (forests, soils, climate, industries), adapt the structure to classification, distribution, characteristics, and environmental factors.
 - **History (5-Step Causal Chain)**: Cause -> Event -> Leader/Authority -> Outcome -> Next consequence.
 - **Polity (4-Tier Architecture)**: Part -> Constitutional Area -> Article Range -> Landmark Articles.
 - **Arithmetic (7-Step Drill)**: Formula/Condition -> 15-25 untimed examples -> changed-value variants -> mixed practice -> timed set -> error-log retest -> speed benchmark.
