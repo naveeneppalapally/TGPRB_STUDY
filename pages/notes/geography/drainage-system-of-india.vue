@@ -46,11 +46,6 @@
           </div>
         </header>
 
-        <!-- Current Affairs for this note -->
-        <CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" class="mb-8" />
-
-        <!-- Comprehension Gate & Flashcard Unlock -->
-        <GateQuiz note-id="NOTE-GEO-DRAINAGE" class="mb-8" />
 
         <!-- ══ Coverage strip - the 6 ways TGPRB tests this topic ══ -->
         <section class="mb-10">
@@ -831,6 +826,28 @@
           </div>
         </section>
 
+        <!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
+        <section id="gate" class="mb-14 scroll-mt-20">
+          <header class="sec-head">
+            <span class="sec-num">07</span>
+            <h2 class="sec-title">Comprehension Gate</h2>
+            <span class="sec-rule" />
+            <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
+          </header>
+          <GateQuiz note-id="NOTE-GEO-DRAINAGE" />
+        </section>
+
+        <!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+        <section id="current-affairs" class="mb-14 scroll-mt-20">
+          <header class="sec-head">
+            <span class="sec-num">08</span>
+            <h2 class="sec-title">Current Affairs</h2>
+            <span class="sec-rule" />
+            <span class="sec-meta hidden sm:block">tagged to this topic</span>
+          </header>
+          <CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" />
+        </section>
+
         <!-- ── Footer nav ───────────────────────────────────────────────── -->
         <nav class="grid gap-3 border-t b-line pt-8 sm:grid-cols-2">
           <NuxtLink to="/notes/geography" class="panel panel-hover group flex items-center gap-3 p-5">
@@ -901,12 +918,14 @@ const coverage = [
 
 /* ── ToC + scrollspy + reading progress ──────────────────────────────────── */
 const sections = [
-  { id: 'map',           label: 'The Map' },
-  { id: 'introduction',  label: 'Introduction' },
-  { id: 'deep-dive',     label: 'Deep Dive' },
-  { id: 'data',          label: 'Data & Comparisons' },
-  { id: 'memory-hacks',  label: 'Memory Hacks' },
-  { id: 'pyqs',          label: 'PYQs' },
+  { id: 'map',             label: 'The Map' },
+  { id: 'introduction',   label: 'Introduction' },
+  { id: 'deep-dive',      label: 'Deep Dive' },
+  { id: 'data',           label: 'Data & Comparisons' },
+  { id: 'memory-hacks',   label: 'Memory Hacks' },
+  { id: 'pyqs',           label: 'PYQs' },
+  { id: 'gate',           label: 'Comprehension Gate' },
+  { id: 'current-affairs', label: 'Current Affairs' },
 ]
 
 const activeSection = ref('map')
