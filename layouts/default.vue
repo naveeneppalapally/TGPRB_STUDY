@@ -206,6 +206,9 @@
     </UModal>
 
     <UNotifications />
+    <ClientOnly>
+      <AiAssistantDrawer />
+    </ClientOnly>
   </div>
 </template>
 
