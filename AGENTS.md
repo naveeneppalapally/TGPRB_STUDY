@@ -233,29 +233,107 @@ High-yield PYQ categories (build feeds for these first if adding new ones):
 
 When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS):
 
-**Step 1 - Wire the strip on the note page:**
-```html
-<CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" class="mb-8" />
+## Note page layout - canonical section order (never change this)
+
+Every Tier-1 and Tier-2 note page MUST follow this exact section order. Do NOT place GateQuiz or CurrentAffairsStrip at the top of the page - they block students from reaching study content.
+
+```
+01  The Map / Location           (spatial anchor, first thing student sees)
+02  Introduction                 (what, why it matters, PYQ signal)
+03  Deep Dive                    (all subtopics, facts, diagrams)
+04  Data & Comparisons           (tables, timelines)
+05  Memory Hacks                 (mnemonics, patterns)
+06  PYQs                         (verified real questions, exam/year filter)
+07  Comprehension Gate           (<GateQuiz note-id="NOTE-XXX" />)
+08  Current Affairs              (<CurrentAffairsStrip note-id="NOTE-XXX" />)
+Footer nav                       (back to subject + open review queue)
 ```
 
-**Step 2 - Wire the gate on the note page:**
-```html
-<GateQuiz note-id="NOTE-GEO-FORESTS" />
+**Why 07 and 08 go at the bottom:** The student must read the note content first. Placing CA or the Gate at the top blocks them from reaching Sections 01-06. The rule is: learn first, then test, then catch up on news.
+
+**Right-side TOC:** Every note page's `sections` array must include ALL sections including gate and current-affairs so students can jump there directly:
+
+```ts
+const sections = [
+  { id: 'map',             label: 'The Map' },
+  { id: 'introduction',    label: 'Introduction' },
+  { id: 'deep-dive',       label: 'Deep Dive' },
+  { id: 'data',            label: 'Data & Comparisons' },
+  { id: 'memory-hacks',    label: 'Memory Hacks' },
+  { id: 'pyqs',            label: 'PYQs' },
+  { id: 'gate',            label: 'Comprehension Gate' },
+  { id: 'current-affairs', label: 'Current Affairs' },
+]
 ```
-GateQuiz self-fetches from `server/api/gate/[noteId].get.ts`. When adding a new note, you MUST:
-1. Generate the gate JSON: `python3 scripts/note_pipeline/generate_gates_and_cards.py NOTE-GEO-FORESTS`
-2. Save output to `content/data/gates/forests-of-india.json` (canonical schema: `note_id`, `pass_threshold`, `questions[].correct_answer`)
-3. Add an import + registry entry in `server/api/gate/[noteId].get.ts`
+
+**Section 07 template (GateQuiz):**
+```html
+<!-- 07 - Comprehension Gate -->
+<section id="gate" class="mb-14 scroll-mt-20">
+  <header class="sec-head">
+    <span class="sec-num">07</span>
+    <h2 class="sec-title">Comprehension Gate</h2>
+    <span class="sec-rule" />
+    <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
+  </header>
+  <GateQuiz note-id="NOTE-GEO-FORESTS" />
+</section>
+```
+
+**Section 08 template (CurrentAffairsStrip):**
+```html
+<!-- 08 - Current Affairs -->
+<section id="current-affairs" class="mb-14 scroll-mt-20">
+  <header class="sec-head">
+    <span class="sec-num">08</span>
+    <h2 class="sec-title">Current Affairs</h2>
+    <span class="sec-rule" />
+    <span class="sec-meta hidden sm:block">tagged to this topic</span>
+  </header>
+  <CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" />
+</section>
+```
+
+## Component UX rules - never change these
+
+**CurrentAffairsStrip.vue** - single-card carousel (NOT a stacked list):
+- Shows one CA card at a time with left/right arrow buttons
+- Dot indicators for navigation (max 10 dots shown)
+- Keyboard: ArrowLeft/ArrowRight/ArrowUp/ArrowDown all work
+- Counter shows `(1/13)` in header
+- "Mark read" button clears the NEW badge
+
+**GateQuiz.vue** - one question at a time (NOT all questions dumped on screen):
+- Shows one question at a time with left/right arrow buttons
+- Dot progress bar (filled dot = answered, saffron capsule = current)
+- Submit button only appears on the LAST question
+- Keyboard: ArrowLeft/ArrowRight navigate between questions
+- Retry button shown after failing
+
+**Never revert these components to the old stacked/list style.** The old style dumped all 13 CA cards and all 5 gate questions onto the screen at once, blocking the student from reaching note content.
+
+## Per-topic wiring steps
+
+**Step 1 - Add sections 07 and 08 at the bottom of the note (before footer nav):**
+Use the exact templates above.
+
+**Step 2 - Wire the gate JSON:**
+```bash
+python3 scripts/note_pipeline/generate_gates_and_cards.py NOTE-GEO-FORESTS
+```
+Save output to `content/data/gates/forests-of-india.json` then add import + registry entry in `server/api/gate/[noteId].get.ts`.
 
 **Step 3 - Run CA extraction to get tagged cards:**
 ```bash
 python3 scripts/pib_ca_pipeline/extract_ca_cards.py 500
 ```
-Gemini will auto-tag articles matching NOTE-GEO-FORESTS with `related_topic_ids`. PRID-based resume means re-runs are safe and cheap.
+Gemini will auto-tag articles matching NOTE-GEO-FORESTS with `related_topic_ids`. PRID-based resume means re-runs are safe.
+
+If the pipeline returns zero drainage/topic-relevant articles (score >= 2.0), create CA cards MANUALLY from PIB articles using the frontmatter schema above. Do not leave a topic with zero CA cards - that is an incomplete build.
 
 **Step 4 - Verify in browser:**
-Open the note page. The CurrentAffairsStrip must render at least one card.
-A topic is not done until this is visible. If strip is empty, check:
+Open the note page. Scroll to section 08. The CurrentAffairsStrip must render at least one card and show arrow navigation. Scroll to section 07. GateQuiz must show one question at a time with arrow buttons.
+A topic is not done until both are visible. If strip is empty, check:
 - note-id prop matches the related_topic_ids in the .md files exactly
 - content.config.ts has the current_affair collection defined
 - `server/api/gate/[noteId].get.ts` has the gate registered
@@ -267,7 +345,8 @@ A topic is not done until this is visible. If strip is empty, check:
 - Layer 1: localStorage (instant, offline, no auth needed)
 - Layer 2: Supabase `topic_visits` table (cloud sync when logged in)
 
-Cards split automatically into "New since last visit" (saffron highlight) and "Earlier" (collapsed). First visit shows all cards under "Earlier" - never floods with backlog.
+Cards show a "NEW" badge when published after the user's last visit. First visit shows all cards without flooding - they appear under "Earlier" via the carousel.
+
 
 
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
