@@ -83,6 +83,7 @@ async function recordAiEvent(
   }
 }
 
+export default defineEventHandler(async (event) => {
   let userId = 'guest-anonymous'
   try {
     const client = await serverSupabaseClient(event)
