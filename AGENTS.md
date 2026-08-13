@@ -85,6 +85,12 @@ When building any topic note page, follow the subject scaffold from `docs/tslprb
 - **General Science**: Biology (diagram redraws), Physics (formula-condition-unit cards), Chemistry (contrastive pairs).
 - **Telangana GK (2-Axis Framework)**: Spatial (district -> landmark) + Thematic (history -> movement -> culture -> governance -> schemes).
 
+> [!IMPORTANT]
+> **Scaffold Research & Integration Mandate**:
+> 1. **Research First**: Before writing any note page, agents MUST explicitly read the corresponding sections in `docs/tslprb-pyq-processing-engine-research-report.md` and `docs/memory-retention-study-design-research.md`. Do not generalize or omit the subject note scaffolds.
+> 2. **Add Required Components**: In addition to the subject scaffolds, every note page must feature its respective Comprehension Gate quiz (`<GateQuiz />`), atomic FSRS flashcards (unlocked by the gate), and a tagged Current Affairs strip (`<CurrentAffairsStrip />`) linked to the note ID.
+
+
 ## Current Affairs system - read before building any note page
 
 ### How the system works (end to end)
