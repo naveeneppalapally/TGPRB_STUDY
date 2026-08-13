@@ -542,6 +542,11 @@
       </section>
 
     </div>
+    <AiAssistantDrawer
+      note-id="NOTE-POL-UNION-EXEC"
+      note-title="Union Executive and Legislature"
+      :quick-prompts="aiQuickPrompts"
+    />
   </div>
 </template>
 
@@ -549,6 +554,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import CurrentAffairsStrip from '@/components/CurrentAffairsStrip.vue'
 import ConstitutionalHierarchy from '@/components/visual/ConstitutionalHierarchy.vue'
+
+const aiQuickPrompts = useAiPromptChips('NOTE-POL-UNION-EXEC')
 
 // Scroll progress bar indicator
 const scrollProgress = ref<number>(0)

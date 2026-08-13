@@ -146,6 +146,19 @@
           Correct: {{ q.options[q.correct_answer] }}
         </p>
         <p v-if="q.explanation" class="text-[12px] ml-6 mt-2 t-lo italic">{{ q.explanation }}</p>
+        <AiAskButton
+          v-if="assistantNoteId"
+          class="ml-6 mt-3"
+          :note-id="assistantNoteId"
+          :prompt="`Explain the reasoning for this gate question and the likely exam trap: ${q.question}`"
+          :source-question-id="q.id"
+          :quiz-state="{
+            incorrect_question_ids: answers[qi] === q.correct_answer ? [] : [q.id],
+            gate_score: score,
+            gate_total: quiz.questions.length,
+          }"
+          label="Explain this"
+        />
       </div>
 
       <!-- Retry -->
@@ -199,6 +212,7 @@ const { data: fetchedQuiz } = await useAsyncData<GateQuizData | null>(
 )
 
 const quiz = computed<GateQuizData | undefined>(() => props.quiz ?? fetchedQuiz.value ?? undefined)
+const assistantNoteId = computed(() => props.noteId ?? quiz.value?.note_id ?? '')
 
 // Navigation
 const currentQ = ref(0)

@@ -160,3 +160,115 @@ CREATE TRIGGER trigger_topic_visits_updated_at
   BEFORE UPDATE ON topic_visits
   FOR EACH ROW
   EXECUTE FUNCTION update_updated_at();
+
+-- ---------------------------------------------------------------------------
+-- AI study assistant - per-user quota and privacy-minimised usage analytics.
+-- Queries and model responses are intentionally not stored.
+-- ---------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS ai_daily_usage (
+  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  usage_date DATE NOT NULL,
+  query_count SMALLINT NOT NULL DEFAULT 0 CHECK (query_count >= 0),
+  last_query_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  PRIMARY KEY (user_id, usage_date)
+);
+
+CREATE TABLE IF NOT EXISTS ai_query_events (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  note_id TEXT NOT NULL,
+  action TEXT NOT NULL CHECK (action IN ('explain', 'mnemonic', 'exam-traps', 'compare', 'review-plan')),
+  source_question_id TEXT,
+  exam_profile TEXT NOT NULL CHECK (exam_profile IN ('constable', 'si')),
+  model TEXT NOT NULL,
+  outcome TEXT NOT NULL CHECK (outcome IN ('completed', 'failed')),
+  prompt_tokens INTEGER,
+  response_tokens INTEGER,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS idx_ai_query_events_user_time
+  ON ai_query_events(user_id, created_at DESC);
+
+CREATE INDEX IF NOT EXISTS idx_ai_query_events_note_time
+  ON ai_query_events(note_id, created_at DESC);
+
+ALTER TABLE ai_daily_usage ENABLE ROW LEVEL SECURITY;
+ALTER TABLE ai_query_events ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Users view own AI quota" ON ai_daily_usage;
+CREATE POLICY "Users view own AI quota"
+  ON ai_daily_usage FOR SELECT
+  USING (auth.uid() = user_id);
+
+DROP POLICY IF EXISTS "Users view own AI event metadata" ON ai_query_events;
+CREATE POLICY "Users view own AI event metadata"
+  ON ai_query_events FOR SELECT
+  USING (auth.uid() = user_id);
+
+-- Atomically reserve a daily slot using India time. The calling client must be
+-- authenticated, so auth.uid() is never trusted from browser-supplied input.
+CREATE OR REPLACE FUNCTION consume_ai_query(p_daily_limit INTEGER DEFAULT 20)
+RETURNS TABLE(allowed BOOLEAN, used INTEGER, remaining INTEGER)
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  v_user_id UUID := auth.uid();
+  v_usage_date DATE := (NOW() AT TIME ZONE 'Asia/Kolkata')::DATE;
+  v_used INTEGER;
+BEGIN
+  IF v_user_id IS NULL THEN
+    RAISE EXCEPTION 'Authentication is required';
+  END IF;
+
+  IF p_daily_limit < 1 OR p_daily_limit > 50 THEN
+    RAISE EXCEPTION 'Invalid daily AI query limit';
+  END IF;
+
+  INSERT INTO ai_daily_usage (user_id, usage_date, query_count, last_query_at)
+  VALUES (v_user_id, v_usage_date, 1, NOW())
+  ON CONFLICT (user_id, usage_date) DO UPDATE
+    SET query_count = ai_daily_usage.query_count + 1,
+        last_query_at = NOW()
+    WHERE ai_daily_usage.query_count < p_daily_limit
+  RETURNING query_count INTO v_used;
+
+  IF v_used IS NULL THEN
+    SELECT query_count INTO v_used
+      FROM ai_daily_usage
+      WHERE user_id = v_user_id AND usage_date = v_usage_date;
+    RETURN QUERY SELECT FALSE, COALESCE(v_used, p_daily_limit), 0;
+    RETURN;
+  END IF;
+
+  RETURN QUERY SELECT TRUE, v_used, GREATEST(p_daily_limit - v_used, 0);
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION refund_ai_query()
+RETURNS VOID
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  v_user_id UUID := auth.uid();
+  v_usage_date DATE := (NOW() AT TIME ZONE 'Asia/Kolkata')::DATE;
+BEGIN
+  IF v_user_id IS NULL THEN
+    RAISE EXCEPTION 'Authentication is required';
+  END IF;
+
+  UPDATE ai_daily_usage
+    SET query_count = GREATEST(query_count - 1, 0),
+        last_query_at = NOW()
+    WHERE user_id = v_user_id AND usage_date = v_usage_date;
+END;
+$$;
+
+GRANT EXECUTE ON FUNCTION consume_ai_query(INTEGER) TO authenticated;
+GRANT EXECUTE ON FUNCTION refund_ai_query() TO authenticated;
+REVOKE EXECUTE ON FUNCTION consume_ai_query(INTEGER) FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION refund_ai_query() FROM PUBLIC;

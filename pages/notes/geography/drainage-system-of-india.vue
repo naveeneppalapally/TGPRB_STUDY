@@ -816,6 +816,14 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
+                <AiAskButton
+                  class="mt-3"
+                  note-id="NOTE-GEO-DRAINAGE"
+                  :prompt="`Explain the reasoning for this PYQ and the likely exam trap: ${q.question}`"
+                  :source-question-id="q.uid"
+                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid ?? ''], gate_score: 0, gate_total: 0 }"
+                  label="Explain with AI"
+                />
               </div>
 
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="reveal(q)">
@@ -892,6 +900,11 @@
         </div>
       </aside>
     </div>
+    <AiAssistantDrawer
+      note-id="NOTE-GEO-DRAINAGE"
+      note-title="Drainage System of India"
+      :quick-prompts="aiQuickPrompts"
+    />
   </div>
 </template>
 
@@ -900,6 +913,8 @@ useHead({
   title: 'Drainage System of India - TGPRB StudyOS',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Drainage System of India with an interactive physical river map, 28 PYQs, and 10 practice questions.' }],
 })
+
+const aiQuickPrompts = useAiPromptChips('NOTE-GEO-DRAINAGE')
 
 /* Physical map component (locate-on-map from deep dive) */
 function goMap(id: string) {

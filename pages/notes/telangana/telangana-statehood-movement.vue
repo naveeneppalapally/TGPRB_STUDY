@@ -7,6 +7,8 @@ useHead({
   meta: [{ name: 'description', content: 'Complete high-yield note on Telangana Statehood Movement 1948-2014 for TGPRB Constable and SI exams.' }],
 })
 
+const aiQuickPrompts = useAiPromptChips('NOTE-TEL-MOVEMENT')
+
 // Scroll progress handling
 const readingProgress = ref(0)
 
@@ -515,5 +517,10 @@ onUnmounted(() => {
       <!-- Gate Quiz Assessment -->
       <GateQuiz note-id="NOTE-TEL-MOVEMENT" />
     </main>
+    <AiAssistantDrawer
+      note-id="NOTE-TEL-MOVEMENT"
+      note-title="Telangana Armed Struggle and Statehood Movement"
+      :quick-prompts="aiQuickPrompts"
+    />
   </div>
 </template>

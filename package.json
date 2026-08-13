@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npx tsx scripts/ban-em-dash.ts",
+    "prebuild": "npx tsx scripts/generate-ai-context.ts && npx tsx scripts/ban-em-dash.ts",
+    "generate:ai-context": "npx tsx scripts/generate-ai-context.ts",
     "build": "nuxt build",
     "predev": "npx tsx scripts/ban-em-dash.ts",
     "dev": "nuxt dev",

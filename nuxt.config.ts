@@ -57,6 +57,13 @@ export default defineNuxtConfig({
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL || '',
     supabaseServiceKey: process.env.SUPABASE_SERVICE_KEY || '',
+    // Nuxt maps NUXT_* variables at runtime, including in Cloudflare Pages.
+    // Keep the service account JSON server-only and set it as an encrypted secret.
+    vertexProject: '',
+    vertexLocation: 'global',
+    googleServiceAccountJson: '',
+    aiModel: 'gemini-2.5-flash',
+    aiDailyQueryLimit: 20,
     public: {
       supabaseUrl: process.env.SUPABASE_URL || '',
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY || '',
