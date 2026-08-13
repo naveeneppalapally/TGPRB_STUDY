@@ -312,3 +312,16 @@ Cards split automatically into "New since last visit" (saffron highlight) and "E
 - This file is the standing constitution. Task prompts should point back to a section here ("per the image rules in AGENTS.md"), not restate it.
 - `docs/build-prompt.md` holds the full one-time spec (schema, Tier-1 template, settings, deployment). Update it when an architecture decision actually changes - not for routine topic-by-topic work.
 - No em-dashes anywhere in the codebase. Use standard hyphens only. The `predev`/`prebuild` hooks enforce this automatically.
+
+## Standard Workflow: One-Line Topic Generation Directive
+
+Whenever the user provides a prompt in the format:
+`Topic - [Topic Name] ([Subject])` (e.g., `Topic - Forests of India (Geography)`), the agent must immediately execute the complete topic creation pipeline without asking any clarifying questions:
+
+1. Query `data/pyq_enriched_master.json` for verified PYQs matching the topic to compute the Tier and load question content.
+2. Generate the full `.vue` note page at `pages/notes/[subject]/[topic-slug].vue` following the 8-section layout (01 Visual, 02 Intro, 03 Deep Dive with subject scaffold, 04 Data, 05 Memory Hacks, 06 PYQs, 07 Gate, 08 Current Affairs).
+3. Generate the 5-MCQ Gate Quiz JSON at `content/data/gates/[topic-slug].json`.
+4. Register the gate in `server/api/gate/[noteId].get.ts`.
+5. Add the sidebar navigation link in `layouts/default.vue`.
+6. Run `npm run prebuild` to verify zero em-dashes and clean compilation.
+7. Commit and push the changes.
