@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-GEO-MOUNTAINS",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-MNT-01",
+      "question": "Which of the following represents the correct sequence of Himalayan mountain ranges from North to South?",
+      "options": [
+        "Karakoram \u2192 Ladakh \u2192 Zaskar \u2192 Pir Panjal \u2192 Shivalik",
+        "Ladakh \u2192 Karakoram \u2192 Pir Panjal \u2192 Zaskar \u2192 Shivalik",
+        "Zaskar \u2192 Ladakh \u2192 Karakoram \u2192 Shivalik \u2192 Pir Panjal",
+        "Pir Panjal \u2192 Karakoram \u2192 Ladakh \u2192 Zaskar \u2192 Shivalik"
+      ],
+      "correct_answer": 0,
+      "explanation": "From North to South, the correct sequence is Karakoram (Trans-Himalayas) \u2192 Ladakh \u2192 Zaskar \u2192 Pir Panjal (Lesser Himalayas) \u2192 Shivalik (Outer Himalayas). Remember the mnemonic: KLZPS."
+    },
+    {
+      "id": "GATE-MNT-02",
+      "question": "Which is the highest mountain peak located in South India (Peninsular India)?",
+      "options": [
+        "Dodda Betta",
+        "Anamudi",
+        "Guru Shikhar",
+        "Mahendragiri"
+      ],
+      "correct_answer": 1,
+      "explanation": "Anamudi (2,695 m), located in the Anamalai Hills of Kerala, is the highest peak in South India and the entire Peninsular Plateau. Dodda Betta (2,637 m) is the highest peak in the Nilgiri Hills."
+    },
+    {
+      "id": "GATE-MNT-03",
+      "question": "The famous 'Karewas' (thick lacustrine deposits famous for Saffron / Zafran cultivation) are found along the lower slopes of which mountain range?",
+      "options": [
+        "Dhauladhar Range",
+        "Pir Panjal Range",
+        "Zaskar Range",
+        "Shivalik Range"
+      ],
+      "correct_answer": 1,
+      "explanation": "Karewas are thick lacustrine (lake clay and silt) terrace deposits formed during the Pleistocene epoch, found along the lower slopes of the Pir Panjal Range in the Kashmir Valley."
+    },
+    {
+      "id": "GATE-MNT-04",
+      "question": "Which strategic mountain pass connects Srinagar to Leh across the Great Himalayas?",
+      "options": [
+        "Shipki La",
+        "Nathu La",
+        "Zoji La",
+        "Bomdi La"
+      ],
+      "correct_answer": 2,
+      "explanation": "Zoji La connects Srinagar with Leh/Ladakh across the Great Himalayan range. National Highway 1D passes through it. Shipki La connects Himachal Pradesh to Tibet, while Nathu La connects Sikkim to Tibet."
+    },
+    {
+      "id": "GATE-MNT-05",
+      "question": "Which mountain range acts as the water divide between the Ganga river basin and the Peninsular river systems, running parallel to the north of the Narmada River?",
+      "options": [
+        "Satpura Range",
+        "Aravalli Range",
+        "Vindhya Range",
+        "Ajanta Range"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Vindhya Range lies to the north of the Narmada rift valley and acts as the primary watershed/divide between the Northern drainage system (Ganga/Yamuna tributaries like Chambal, Betwa, Ken, Son) and the Peninsular river systems."
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import drainageSystem from '~/content/data/gates/drainage-system.json'
 import unionExecutiveAndLegislature from '~/content/data/gates/union-executive-and-legislature.json'
 import telanganaStatehoodMovement from '~/content/data/gates/telangana-statehood-movement.json'
 import irrigationInIndia from '~/content/data/gates/irrigation-in-india.json'
+import mountainsInIndia from '~/content/data/gates/mountains-in-india.json'
 
 /**
  * Comprehension gate quiz registry, keyed by NOTE-ID.
@@ -20,6 +21,7 @@ const GATES: Record<string, unknown> = {
   [(unionExecutiveAndLegislature as { note_id: string }).note_id]: unionExecutiveAndLegislature,
   [(telanganaStatehoodMovement as { note_id: string }).note_id]: telanganaStatehoodMovement,
   [(irrigationInIndia as { note_id: string }).note_id]: irrigationInIndia,
+  [(mountainsInIndia as { note_id: string }).note_id]: mountainsInIndia,
 }
 
 export default defineEventHandler((event) => {

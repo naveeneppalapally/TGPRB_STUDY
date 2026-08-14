@@ -53,11 +53,30 @@
             <UIcon name="i-heroicons-sparkles" class="h-4 w-4 accent" />
           </span>
           <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Irrigation in India & Telangana</p>
+            <p class="text-[14px] font-semibold t-hi">Irrigation in India &amp; Telangana</p>
             <p class="mt-0.5 text-[11.5px] t-lo">Wells, canals, tanks, KLIP, SRSP, Indira Gandhi canal, PMKSY</p>
           </div>
           <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
           <span class="num font-mono text-[11px] t-lo">29 PYQs</span>
+          <UIcon
+            name="i-heroicons-arrow-right"
+            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+          />
+        </NuxtLink>
+
+        <NuxtLink
+          to="/notes/geography/mountains-in-india"
+          class="panel-hover group flex items-center gap-4 px-5 py-4"
+        >
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+            <UIcon name="i-heroicons-globe-alt" class="h-4 w-4 accent" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[14px] font-semibold t-hi">Mountains, Ranges &amp; Passes of India</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Himalayan ranges (KLZPS), Purvanchal, Ghats, Aravallis, Vindhyas, Passes &amp; Peaks</p>
+          </div>
+          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
+          <span class="num font-mono text-[11px] t-lo">34 PYQs</span>
           <UIcon
             name="i-heroicons-arrow-right"
             class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
