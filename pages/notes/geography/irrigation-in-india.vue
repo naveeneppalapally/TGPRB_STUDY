@@ -38,7 +38,7 @@
               <UIcon name="i-heroicons-queue-list" class="h-3.5 w-3.5" />8 sections
             </span>
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
-              <UIcon name="i-heroicons-clipboard-document-list" class="h-3.5 w-3.5" />12 practice PYQs
+              <UIcon name="i-heroicons-clipboard-document-list" class="h-3.5 w-3.5" />10 practice PYQs
             </span>
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
               <UIcon name="i-heroicons-clock" class="h-3.5 w-3.5" />~18 min read
@@ -46,7 +46,7 @@
           </div>
         </header>
 
-        <!-- ══ Coverage strip - How TGPRB tests this topic ══ -->
+        <!-- ══ Coverage strip - the 6 ways TGPRB tests this topic ══ -->
         <section class="mb-10">
           <p class="eyebrow mb-3">How TGPRB tests this topic</p>
           <div class="flex flex-wrap gap-2">
@@ -61,7 +61,8 @@
             </span>
           </div>
           <p class="mt-2.5 text-body-xs t-lo">
-            Cover all six and you have everything TGPRB has ever asked about irrigation and dams here. Anything outside these six is context, not exam material.
+            Cover all six and you have everything TGPRB has ever asked about irrigation and dams here.
+            Anything outside these six is context, not exam material.
           </p>
 
           <!-- 2026 Predicted Question Format Callout -->
@@ -76,132 +77,152 @@
           </div>
         </section>
 
-        <!-- ── 01 · The physical map ───────────────────────────────────── -->
-        <section id="map" class="mb-14 scroll-mt-20">
+        <!-- ── 01 · The Visual Architecture ────────────────────────────── -->
+        <section id="visual" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">01</span>
-            <h2 class="sec-title">The Map</h2>
+            <h2 class="sec-title">The Visual Architecture</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">spatial · anchor</span>
+            <span class="sec-meta hidden sm:block">spatial · hierarchy</span>
           </header>
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
-            Irrigation in India is spatially bifurcated: the <strong class="t-hi">Alluvial North</strong> relies on Wells & Perennial Canals from Himalayan rivers; the <strong class="t-hi">Peninsular South</strong> relies on Tanks & Lift Irrigation due to hard crystalline basalt terrain.
+            Irrigation in India is spatially divided: the <strong class="t-hi">Northern Alluvial Plains</strong> rely on Wells & Perennial Canals fed by Himalayan rivers; the <strong class="t-hi">Peninsular Plateau</strong> relies on Tanks & Multi-Stage Lift Irrigation due to impermeable hard basalt/granite rock.
           </p>
 
-          <!-- High-Quality Labeled Physical River & Dam Map of India -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-4 text-center shadow-sm">
-            <img
-              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp"
-              alt="Physical Map of India showing major river systems, multipurpose dam reservoirs, and canal command areas"
-              class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
-            />
-            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 text-body-xs text-gray-500 font-mono">
-              <span>Physical relief map with major river basins & reservoirs (Wikimedia Commons / CC BY-SA 3.0)</span>
-              <a href="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp" target="_blank" class="text-amber-600 hover:underline flex items-center gap-1 font-sans font-medium">
-                Open Full Res ↗
-              </a>
+          <!-- Infographic Architecture Panel -->
+          <div class="panel p-5 sm:p-6 mb-6">
+            <div class="mb-4 flex items-center justify-between border-b b-line pb-3">
+              <div>
+                <p class="font-display text-[15px] font-bold t-hi">National Irrigation Sources & Canal Network Infrastructure</p>
+                <p class="text-[11.5px] t-lo mt-0.5">Macro percentages, state distributions, and key engineering headworks</p>
+              </div>
+              <span class="chip chip-saffron chip-mono">Core Macro</span>
+            </div>
+
+            <!-- 4 Sources Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-5">
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono t-lo uppercase">Source 01</span>
+                  <span class="chip chip-saffron text-[10px]">Rank 1</span>
+                </div>
+                <p class="text-[26px] font-bold font-mono accent mt-2">62–64%</p>
+                <p class="text-[13.5px] font-semibold t-hi mt-1">Wells & Tube-wells</p>
+                <p class="text-[11.5px] t-lo mt-1 leading-snug">Uttar Pradesh leads. Gangetic plain tube-wells + Deccan open dug wells.</p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono t-lo uppercase">Source 02</span>
+                  <span class="chip text-[10px]">Rank 2</span>
+                </div>
+                <p class="text-[26px] font-bold font-mono text-sky-500 mt-2">24–26%</p>
+                <p class="text-[13.5px] font-semibold t-hi mt-1">Canals</p>
+                <p class="text-[11.5px] t-lo mt-1 leading-snug">UP, Punjab, Haryana, Rajasthan. Indira Gandhi Canal (650 km from Harike).</p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono t-lo uppercase">Source 03</span>
+                  <span class="chip text-[10px]">South India</span>
+                </div>
+                <p class="text-[26px] font-bold font-mono text-amber-500 mt-2">3–4%</p>
+                <p class="text-[13.5px] font-semibold t-hi mt-1">Tanks</p>
+                <p class="text-[11.5px] t-lo mt-1 leading-snug">Tamil Nadu, AP, Telangana. Deccan plateau hard rock terrain & natural bowls.</p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[11px] font-mono t-lo uppercase">Source 04</span>
+                  <span class="chip text-[10px]">Modern</span>
+                </div>
+                <p class="text-[26px] font-bold font-mono text-emerald-500 mt-2">6–8%</p>
+                <p class="text-[13.5px] font-semibold t-hi mt-1">Other / Lift</p>
+                <p class="text-[11.5px] t-lo mt-1 leading-snug">Multi-stage lift irrigation (Kaleshwaram), springs, water harvesting.</p>
+              </div>
+            </div>
+
+            <!-- Canal Alignment Schematic -->
+            <div class="rounded-xl border b-line bg-sub p-4 text-[12.5px] space-y-2">
+              <p class="font-semibold t-hi flex items-center gap-1.5">
+                <UIcon name="i-heroicons-map-pin" class="h-4 w-4 accent" />
+                Major Canal Take-off Headworks (High-Yield PYQ Discriminators)
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-2 pt-1 font-mono text-[11.5px]">
+                <div class="p-2.5 rounded-lg bg-inset border b-line">
+                  <span class="accent block font-bold">Harike Barrage (Punjab)</span>
+                  <span class="t-mid">Confluence of Sutlej + Beas → Indira Gandhi Canal into Thar Desert</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-inset border b-line">
+                  <span class="text-sky-500 block font-bold">Tajewala / Hathnikund (Haryana)</span>
+                  <span class="t-mid">Yamuna River → Western Yamuna Canal (Oldest North canal)</span>
+                </div>
+                <div class="p-2.5 rounded-lg bg-inset border b-line">
+                  <span class="text-amber-500 block font-bold">Medigadda Barrage (Telangana)</span>
+                  <span class="t-mid">Godavari + Pranahita → KLIP 7 links to lift 45 lakh acres uphill</span>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Hierarchy text summary artifact -->
-          <div class="artifact overflow-hidden mb-6">
+          <div class="artifact overflow-hidden">
             <div class="flex items-center justify-between border-b border-[var(--ink-card-line)] px-5 py-3">
               <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-[#a89f8d]">
-                Irrigation Sources Hierarchy at a Glance
+                Hierarchy at a glance
               </p>
               <UIcon name="i-heroicons-command-line" class="h-3.5 w-3.5 text-[#a89f8d]" />
             </div>
-            <pre class="overflow-x-auto px-5 py-4 font-mono text-body-xs leading-[1.75] text-[#e9e2d2]">1. Wells & Tube-wells : ~62-64% (Largest share | UP leads in Tube-wells | Rajasthan, Gujarat, MP)
-2. Canals             : ~24-26% (Second largest | UP leads network | Indira Gandhi Canal in Thar)
-3. Tanks              : ~3-4%   (Dominant in South India | TN, AP, Telangana | Hard rock terrain)
-4. Other Sources      : ~6-8%   (Lift irrigation schemes, springs, water harvesting structures)</pre>
+            <pre class="overflow-x-auto px-5 py-4 font-mono text-body-xs leading-[1.75] text-[#e9e2d2]">{{ textHierarchy }}</pre>
           </div>
         </section>
 
         <!-- ── 02 · Introduction ────────────────────────────────────────── -->
-        <section id="overview" class="mb-14 scroll-mt-20">
+        <section id="introduction" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">02</span>
-            <h2 class="sec-title">Sources of Irrigation in India</h2>
+            <h2 class="sec-title">Introduction</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">macro data</span>
           </header>
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
-            India has the <strong class="t-hi">largest net irrigated area in the world</strong> (~70+ million hectares). Irrigation is essential because over 75% of annual rainfall is concentrated within the 4 months of the Southwest Monsoon (June-September), leaving the remaining 8 months dry.
+            India has the <strong class="font-semibold t-hi">largest net irrigated area in the world</strong> (~70+ million hectares). Irrigation is indispensable for Indian agriculture because over 75% of total annual precipitation falls during just 100 to 120 days of the Southwest Monsoon, leaving the remaining 8 months dry.
           </p>
-
-          <div class="panel p-5 sm:p-6 mb-6">
-            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Irrigation Source Distribution Matrix</h3>
-            <div class="overflow-x-auto">
-              <table class="table-note">
-                <thead>
-                  <tr>
-                    <th>Source Type</th>
-                    <th>Share (%)</th>
-                    <th>Leading States</th>
-                    <th>Geological / Economic Drivers</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="cell-key">Wells & Tube-wells</td>
-                    <td class="font-mono accent font-semibold">62–64%</td>
-                    <td>Uttar Pradesh, Rajasthan, Punjab, Gujarat, MP</td>
-                    <td>Soft alluvial soil allows easy boring; rapid expansion of rural electricity & submersible pump sets.</td>
-                  </tr>
-                  <tr>
-                    <td class="cell-key">Canals</td>
-                    <td class="font-mono text-sky-500 font-semibold">24–26%</td>
-                    <td>Uttar Pradesh, Rajasthan, Punjab, Haryana, AP</td>
-                    <td>Perennial snow-fed Himalayan rivers provide steady water; large state-funded multi-purpose barrages.</td>
-                  </tr>
-                  <tr>
-                    <td class="cell-key">Tanks</td>
-                    <td class="font-mono text-amber-500 font-semibold">3–4%</td>
-                    <td>Tamil Nadu, Andhra Pradesh, Telangana, Karnataka</td>
-                    <td>Impermeable Deccan basalt rocks; natural plateau depressions; seasonal non-perennial rivers.</td>
-                  </tr>
-                  <tr>
-                    <td class="cell-key">Other Sources</td>
-                    <td class="font-mono text-emerald-500 font-semibold">6–8%</td>
-                    <td>Telangana, Maharashtra, HP, J&K</td>
-                    <td>Multi-stage river lift irrigation schemes, natural mountain springs, check dams.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
 
           <div class="callout callout-saffron mb-6">
             <p class="callout-title">
               <UIcon name="i-heroicons-chart-bar" class="h-4 w-4" />
-              Why Tank Irrigation Dominates South India (Frequent TGPRB PYQ)
+              Why this topic matters for TGPRB
             </p>
             <p class="callout-body">
-              1. <strong>Hard Rock Shield:</strong> The crystalline, granite-gneiss bedrock of the Deccan Plateau makes well-drilling difficult.<br />
-              2. <strong>Natural Depressions:</strong> Undulating topography forms natural bowl basins where rainwater collects easily.<br />
-              3. <strong>Non-Perennial Rivers:</strong> Peninsular rivers are purely rain-fed and dry up in summer, necessitating tank storage (e.g. Kakatiya chain-tank system).
+              29 verified PYQs across Constable + SI papers (2015–2023). Expect 2–4 per paper.
+              Top question types follow the coverage strip above: source percentages, dam–river–state pairs, canal origins, lift irrigation stages, and PMKSY micro-irrigation schemes.
             </p>
           </div>
+
+          <p class="text-body leading-[1.8] t-mid">
+            Historically, irrigation development evolved through three distinct eras: <strong class="t-hi">Traditional community tanks</strong> (Kakatiya and Chola era), <strong class="t-hi">Canal barrages</strong> (British colonial era like Sir Arthur Cotton's Dowleswaram Barrage), and <strong class="t-hi">Mega Multi-purpose River Valley Projects & Modern Lift Irrigation</strong> (Post-independence era, Nehru's "Temples of Modern India").
+          </p>
         </section>
 
-        <!-- ── 03 · Multipurpose Projects ──────────────────────────────── -->
-        <section id="projects" class="mb-14 scroll-mt-20">
+        <!-- ── 03 · Deep Dive ──────────────────────────────────────────── -->
+        <section id="deep-dive" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">03</span>
-            <h2 class="sec-title">Multipurpose River Valley Projects</h2>
+            <h2 class="sec-title">Deep Dive</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">dams · rivers · states</span>
+            <span class="sec-meta hidden sm:block">projects · canals · telangana</span>
           </header>
 
-          <p class="mb-4 text-body leading-[1.8] t-mid">
-            Multipurpose projects serve combined goals: irrigation, flood control, hydroelectric power, and soil conservation.
+          <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
+            Master the major river valley projects, canal headworks, and Telangana's lift irrigation architecture.
           </p>
 
+          <!-- 1. Multipurpose River Valley Projects -->
           <div class="panel p-5 sm:p-6 mb-6">
-            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Major Multipurpose Projects in India</h3>
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">1. Major Multipurpose River Valley Projects</h3>
+            <p class="text-body-xs t-lo mb-3">River ↔ Project ↔ Reservoir ↔ State pairings tested in TGPRB match-the-following questions:</p>
             <div class="overflow-x-auto">
               <table class="table-note">
                 <thead>
@@ -209,61 +230,61 @@
                     <th>Project Name</th>
                     <th>River</th>
                     <th>State(s)</th>
-                    <th>Key Exam Fact / Superlative</th>
+                    <th>Key Exam Superlative</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td class="cell-key">Bhakra-Nangal</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Sutlej</td>
+                    <td class="font-mono accent">Sutlej</td>
                     <td>HP, Punjab, Haryana, Rajasthan</td>
-                    <td>Forms <strong class="t-hi">Govind Sagar</strong> reservoir. Highest concrete gravity dam in India (226 m).</td>
+                    <td>Highest concrete gravity dam (226 m). Forms <strong class="t-hi">Govind Sagar</strong> reservoir.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Hirakud Dam</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Mahanadi</td>
+                    <td class="font-mono accent">Mahanadi</td>
                     <td>Odisha (Sambalpur)</td>
-                    <td><strong class="t-hi">Longest earthen dam</strong> in India (4.8 km main dam, 25.8 km total with dykes).</td>
+                    <td><strong class="t-hi">Longest earthen dam</strong> in India (4.8 km main, 25.8 km total).</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Damodar Valley (DVC)</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Damodar (Barakar, Konar)</td>
+                    <td class="font-mono accent">Damodar (Barakar, Konar)</td>
                     <td>Jharkhand & West Bengal</td>
-                    <td><strong class="t-hi">First multipurpose project of independent India (1948)</strong>. Modeled on USA's Tennessee Valley Authority (TVA). Dams: Tilaiya, Maithon, Panchet.</td>
+                    <td><strong class="t-hi">First multipurpose project of independent India (1948)</strong>. Modeled on USA's TVA. Dams: Tilaiya, Maithon, Panchet.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Tehri Dam</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Bhagirathi</td>
+                    <td class="font-mono accent">Bhagirathi</td>
                     <td>Uttarakhand</td>
-                    <td><strong class="t-hi">Highest dam in India</strong> (260.5 m). Earth and rock-fill embankment dam at confluence with Bhilangna.</td>
+                    <td><strong class="t-hi">Highest dam in India</strong> (260.5 m). Earth and rock-fill embankment dam at Bhilangna confluence.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Sardar Sarovar</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Narmada</td>
+                    <td class="font-mono accent">Narmada</td>
                     <td>Gujarat, MP, Maharashtra, Rajasthan</td>
-                    <td>Lifeline of Gujarat (Saurashtra/Kutch). Narmada Main Canal carries water 458 km to the Rajasthan border.</td>
+                    <td>Lifeline of Gujarat (Saurashtra/Kutch). Main canal length 458 km to Rajasthan border.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Nagarjuna Sagar</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Krishna</td>
+                    <td class="font-mono accent">Krishna</td>
                     <td>Telangana (Nalgonda) & AP (Palnadu)</td>
                     <td><strong class="t-hi">World's largest masonry dam</strong>. Right canal: Jawahar Canal; Left canal: Lal Bahadur Canal. Foundation laid by Pt. Nehru on 10 Dec 1955.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Tungabhadra Project</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Tungabhadra</td>
+                    <td class="font-mono accent">Tungabhadra</td>
                     <td>Karnataka & Telangana / AP</td>
-                    <td>Located at Hosapete (Pampa Sagar reservoir). Supplies irrigation to Raichur and Jogulamba Gadwal.</td>
+                    <td>Located at Hosapete (Pampa Sagar reservoir). Supplies Raichur and Jogulamba Gadwal.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Idukki Dam</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Periyar</td>
+                    <td class="font-mono accent">Periyar</td>
                     <td>Kerala</td>
-                    <td>Double curvature concrete <strong class="t-hi">arch dam</strong> constructed between Kuravan and Kurathi granite hills.</td>
+                    <td>Double curvature concrete <strong class="t-hi">arch dam</strong> built between Kuravan and Kurathi hills.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Rihand Project</td>
-                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Rihand (Son tributary)</td>
+                    <td class="font-mono accent">Rihand (Son tributary)</td>
                     <td>Uttar Pradesh (Sonbhadra)</td>
                     <td>Forms <strong class="t-hi">Govind Ballabh Pant Sagar</strong>, the largest artificial reservoir in India by surface area.</td>
                   </tr>
@@ -272,183 +293,97 @@
             </div>
           </div>
 
-          <!-- Northern Basin Map (Indus & Ganga) -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
-            <img
-              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556254/geography/indus-river-basin-map.webp"
-              alt="Indus River Basin Map showing Harike Barrage, Bhakra Nangal Dam, Sutlej and Beas canal headworks"
-              class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
-            />
-            <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
-              Indus Basin: Bhakra-Nangal Dam (Sutlej) and Harike Barrage take-off for Indira Gandhi Canal
-            </p>
+          <!-- 2. Major Canal Networks -->
+          <div class="panel p-5 sm:p-6 mb-6">
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">2. Major Canal Systems of India</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <span class="chip chip-saffron mb-2">Longest Canal</span>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Indira Gandhi Canal (Rajasthan Canal)</h4>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  Originates from <strong class="t-hi">Harike Barrage</strong> in Punjab at the confluence of the <strong class="t-hi">Sutlej and Beas rivers</strong>. Runs ~650 km through Punjab/Haryana into Western Rajasthan (Thar Desert: Ganganagar, Bikaner, Jaisalmer, Barmer).
+                </p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <span class="chip mb-2">Northern Historic</span>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Sirhind & Western Yamuna Canals</h4>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  <strong class="t-hi">Sirhind Canal:</strong> Takes off from Sutlej at Ropar (Punjab).<br />
+                  <strong class="t-hi">Western Yamuna Canal:</strong> Oldest canal in North India, originates from Tajewala/Hathnikund Barrage on the Yamuna (Haryana).
+                </p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <span class="chip mb-2">East Coast System</span>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Buckingham Canal</h4>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  796 km long freshwater navigation and drainage canal running parallel to the Coromandel Coast from Kakinada (AP) to Viluppuram (TN). Integrated with National Waterway 4 (NW-4).
+                </p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <span class="chip mb-2">Delta Systems</span>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Dowleswaram & Prakasam Barrages</h4>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  <strong class="t-hi">Sir Arthur Cotton Barrage:</strong> Across Godavari at Rajahmundry (1852).<br />
+                  <strong class="t-hi">Prakasam Barrage:</strong> Across Krishna at Vijayawada (1957).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Telangana Projects -->
+          <div class="panel p-5 sm:p-6 mb-6">
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">3. Telangana Lift Irrigation & Reservoir Systems</h3>
+            <p class="text-body-xs t-lo mb-3">Because Telangana sits on an elevated plateau (300m–600m MSL), multi-stage lift irrigation is the primary engineering solution:</p>
+
+            <div class="space-y-3">
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+                  <h4 class="font-display text-[15px] font-bold t-hi">Kaleshwaram Lift Irrigation Project (KLIP)</h4>
+                  <span class="chip chip-saffron chip-mono text-[10px]">World's Largest Multi-Stage Lift</span>
+                </div>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  Draws water from <strong class="t-hi">Godavari River</strong> at the confluence of <strong class="t-hi">Pranahita and Godavari</strong> at Kaleshwaram. Lifts water across 7 links and 28 packages through Medigadda (Lakshmi), Annaram (Saraswati), and Sundilla (Parvati) barrages to irrigate ~45 lakh acres.
+                </p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Sriram Sagar Project (SRSP / Pochampad Project)</h4>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  Constructed across <strong class="t-hi">Godavari River</strong> at Pochampad in Nizamabad district. Lifeline of North Telangana agriculture. Key canals: <strong class="t-hi">Kakatiya Canal</strong> (146 km), Saraswati Canal, and Laxmi Canal.
+                </p>
+              </div>
+
+              <div class="rounded-xl border b-line bg-sub p-4">
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Rajolibanda Diversion Scheme (RDS) & Other Schemes</h4>
+                <p class="text-[13px] leading-relaxed t-mid">
+                  <strong class="t-hi">RDS:</strong> Anicut across <strong class="t-hi">Tungabhadra River</strong> supplying Jogulamba Gadwal and Raichur.<br />
+                  <strong class="t-hi">Priyadarshini Jurala:</strong> First project on Krishna River entering Telangana (Jogulamba Gadwal).<br />
+                  <strong class="t-hi">Mission Kakatiya:</strong> Flagship scheme to restore 46,531 minor irrigation chain-tanks across Telangana.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- ── 04 · Major Canal Networks ───────────────────────────────── -->
-        <section id="canals" class="mb-14 scroll-mt-20">
+        <!-- ── 04 · Data & Comparisons ─────────────────────────────────── -->
+        <section id="data" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">04</span>
-            <h2 class="sec-title">Major Canal Systems of India</h2>
+            <h2 class="sec-title">Data & Comparisons</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">headworks · alignments</span>
-          </header>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
-            <div class="panel p-5">
-              <span class="chip chip-saffron mb-2">Longest Canal in India</span>
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">Indira Gandhi Canal (Rajasthan Canal)</h3>
-              <p class="text-[13px] leading-relaxed t-mid">
-                Originates from <strong class="t-hi">Harike Barrage</strong> in Punjab at the confluence of the <strong class="t-hi">Sutlej and Beas rivers</strong>. Extends ~650 km into the Thar Desert (Sri Ganganagar, Bikaner, Jaisalmer, Barmer), transforming arid western wasteland into green agricultural cropland.
-              </p>
-            </div>
-
-            <div class="panel p-5">
-              <span class="chip mb-2">Historic Canals</span>
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">Sirhind & Western Yamuna Canals</h3>
-              <p class="text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Sirhind Canal:</strong> Draws from Sutlej at Ropar (Punjab).<br />
-                <strong class="t-hi">Western Yamuna Canal:</strong> Oldest canal in North India (rebuilt from Mughal-era canal), originates from Tajewala/Hathnikund Barrage on the Yamuna (Haryana).
-              </p>
-            </div>
-
-            <div class="panel p-5">
-              <span class="chip mb-2">East Coast System</span>
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">Buckingham Canal</h3>
-              <p class="text-[13px] leading-relaxed t-mid">
-                796 km long freshwater navigation and drainage canal running parallel to the Coromandel Coast from Kakinada (AP) to Viluppuram (TN). Integrated with National Waterway 4 (NW-4).
-              </p>
-            </div>
-
-            <div class="panel p-5">
-              <span class="chip mb-2">Delta Irrigation</span>
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">Dowleswaram & Prakasam Barrages</h3>
-              <p class="text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Sir Arthur Cotton Barrage:</strong> Built across Godavari at Rajahmundry in 1852.<br />
-                <strong class="t-hi">Prakasam Barrage:</strong> Built across Krishna at Vijayawada in 1957, feeding the Krishna delta canals.
-              </p>
-            </div>
-          </div>
-
-          <!-- Ganga Basin Map -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
-            <img
-              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556256/geography/ganga-river-basin-map.webp"
-              alt="Ganga River Basin Map showing Tehri Dam, Upper Ganga Canal, Sharda Canal, and DVC systems"
-              class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
-            />
-            <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
-              Ganga Basin: Upper & Lower Ganga Canals, Sharda Canal, and Damodar Valley Corporation (DVC)
-            </p>
-          </div>
-        </section>
-
-        <!-- ── 05 · Telangana Projects ─────────────────────────────────── -->
-        <section id="telangana" class="mb-14 scroll-mt-20">
-          <header class="sec-head">
-            <span class="sec-num">05</span>
-            <h2 class="sec-title">Telangana Major Irrigation & Lift Schemes</h2>
-            <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">state specific · high yield</span>
+            <span class="sec-meta hidden sm:block">comparison · efficiency</span>
           </header>
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
-            Because Telangana sits on an elevated plateau (Deccan plateau elevation: 300m to 600m above sea level), gravity canals cannot supply water uphill. Hence, <strong class="t-hi">Multi-Stage Lift Irrigation</strong> is Telangana's core engineering paradigm.
+            Micro-irrigation and precision water delivery comparison matrix:
           </p>
 
-          <!-- Godavari & Krishna Basin Maps for Telangana Projects -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
-              <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556255/geography/godavari-river-basin-map.webp"
-                alt="Godavari River Basin Map showing Kaleshwaram, Sriram Sagar, Nizam Sagar, and Lower Manair Dam"
-                class="mx-auto block w-full h-auto object-contain rounded-lg"
-              />
-              <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
-                Godavari Basin: Kaleshwaram (Medigadda), SRSP Pochampad, LMD
-              </p>
-            </div>
-            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
-              <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556253/geography/krishna-river-basin-map.webp"
-                alt="Krishna River Basin Map showing Nagarjuna Sagar, Jurala, and Rajolibanda Diversion Scheme"
-                class="mx-auto block w-full h-auto object-contain rounded-lg"
-              />
-              <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
-                Krishna Basin: Nagarjuna Sagar, Jurala, RDS on Tungabhadra
-              </p>
-            </div>
-          </div>
-
-          <div class="space-y-4 mb-6">
-            <!-- Kaleshwaram -->
-            <div class="panel p-5 border-l-4 border-l-saffron-500">
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <h3 class="font-display text-[17px] font-bold t-hi">1. Kaleshwaram Lift Irrigation Project (KLIP)</h3>
-                <span class="chip chip-saffron chip-mono">World's Largest Multi-Stage Lift Project</span>
-              </div>
-              <p class="text-[13px] leading-relaxed t-mid">
-                Draws water from the <strong class="t-hi">Godavari River</strong> at the confluence of the <strong class="t-hi">Pranahita and Godavari</strong> at Kaleshwaram (Jayashankar Bhupalpally). Inaugurated by Governor E.S.L. Narasimhan on 21 June 2019. Lifts water through 7 links and 28 packages to irrigate ~45 lakh acres.
-              </p>
-              <div class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2 text-[12px]">
-                <div class="bg-sub p-2.5 rounded-lg border b-line">
-                  <span class="font-semibold block t-hi">Medigadda (Lakshmi) Barrage</span>
-                  <span class="t-lo">Primary intake barrage across Godavari</span>
-                </div>
-                <div class="bg-sub p-2.5 rounded-lg border b-line">
-                  <span class="font-semibold block t-hi">Annaram (Saraswati) Barrage</span>
-                  <span class="t-lo">Second stage lift barrage</span>
-                </div>
-                <div class="bg-sub p-2.5 rounded-lg border b-line">
-                  <span class="font-semibold block t-hi">Sundilla (Parvati) Barrage</span>
-                  <span class="t-lo">Third stage lift upstream</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sriram Sagar -->
-            <div class="panel p-5">
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">2. Sriram Sagar Project (SRSP / Pochampad Project)</h3>
-              <p class="text-[13px] leading-relaxed t-mid">
-                Constructed across the <strong class="t-hi">Godavari River</strong> at Pochampad in Nizamabad district. Serves as the agricultural lifeline of North Telangana (Nizamabad, Nirmal, Jagtial, Karimnagar, Warangal). Major canals: <strong class="t-hi">Kakatiya Canal</strong> (146 km), Saraswati Canal, Laxmi Canal.
-              </p>
-            </div>
-
-            <!-- RDS & Other Schemes -->
-            <div class="panel p-5">
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">3. Rajolibanda Diversion Scheme (RDS) & Other Dams</h3>
-              <p class="text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Rajolibanda Diversion Scheme (RDS):</strong> Anicut across <strong class="t-hi">Tungabhadra River</strong> supplying irrigation to Jogulamba Gadwal district (Telangana) and Raichur (Karnataka).<br />
-                <strong class="t-hi">Priyadarshini Jurala Project:</strong> First project on Krishna River entering Telangana at Jogulamba Gadwal.<br />
-                <strong class="t-hi">Lower Manair Dam (LMD):</strong> On Manair River at Karimnagar.<br />
-                <strong class="t-hi">Kadam Reservoir:</strong> Across Kadam river in Nirmal district.
-              </p>
-            </div>
-
-            <!-- Mission Kakatiya -->
-            <div class="panel p-5">
-              <div class="flex items-center justify-between gap-2 mb-1">
-                <h3 class="font-display text-[16px] font-bold t-hi">4. Mission Kakatiya (Mana Ooru - Mana Cheruvu)</h3>
-                <span class="chip chip-jade chip-mono">Tank Restoration</span>
-              </div>
-              <p class="text-[13px] leading-relaxed t-mid">
-                Flagship program launched in 2015 to restore <strong class="t-hi">46,531 minor irrigation tanks</strong> across Telangana built during the Kakatiya, Qutb Shahi, and Asaf Jahi dynasties. Tagline: <em>"Mana Ooru - Mana Cheruvu"</em>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- ── 06 · Micro-Irrigation & Central Schemes ─────────────────── -->
-        <section id="micro-irrigation" class="mb-14 scroll-mt-20">
-          <header class="sec-head">
-            <span class="sec-num">06</span>
-            <h2 class="sec-title">Micro-Irrigation & Government Schemes</h2>
-            <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">drip · sprinkler · pmksy</span>
-          </header>
-
+          <!-- Drip vs Sprinkler Table -->
           <div class="panel p-5 sm:p-6 mb-6">
-            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Drip vs Sprinkler Micro-Irrigation Comparison</h3>
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Drip vs Sprinkler Micro-Irrigation</h3>
             <div class="overflow-x-auto">
               <table class="table-note">
                 <thead>
@@ -466,18 +401,18 @@
                   </tr>
                   <tr>
                     <td class="cell-key">Mechanism</td>
-                    <td>Water drips slowly directly to plant root zone via emitters</td>
-                    <td>Water sprayed under pressure into air simulating natural rainfall</td>
+                    <td>Water drips slowly directly to root zone via emitters</td>
+                    <td>Water sprayed under pressure into air like artificial rain</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Ideal Terrain & Crops</td>
-                    <td>Orchards, vegetables, cash crops, flat or terraced fields</td>
+                    <td>Orchards, vegetables, cash crops, flat or terraced lands</td>
                     <td>Undulating terrain, sandy soil, tea/coffee, pulses, wheat</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Key Advantages</td>
-                    <td>Zero weed growth, minimal evaporation, fertiliser delivery via fertigation</td>
-                    <td>Washes dust from leaves, frost protection, prevents soil erosion</td>
+                    <td>Zero weed growth, minimal evaporation, fertiliser via fertigation</td>
+                    <td>Cleans dust from leaves, frost protection, prevents soil erosion</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Leading States</td>
@@ -490,23 +425,23 @@
           </div>
 
           <!-- PMKSY Scheme Details -->
-          <div class="panel p-5">
+          <div class="panel p-5 sm:p-6 mb-6">
             <h3 class="font-display text-[16px] font-bold t-hi mb-2">Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h3>
-            <p class="text-[13px] leading-relaxed t-mid">
-              Launched on <strong class="t-hi">1 July 2015</strong> with the overarching motto <em class="t-hi">"Har Khet Ko Pani"</em> and <em class="t-hi">"More Crop Per Drop"</em>. It combines 4 central components:
+            <p class="text-[13px] leading-relaxed t-mid mb-4">
+              Launched on <strong class="t-hi">1 July 2015</strong> with the motto <em class="t-hi">"Har Khet Ko Pani"</em> and <em class="t-hi">"More Crop Per Drop"</em>. Amalgamated 4 central programs:
             </p>
-            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px]">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px]">
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">1. AIBP (Accelerated Irrigation Benefit Programme)</strong>
-                <p class="t-lo">Focuses on fast-tracking major and medium multi-purpose dams and national canal projects.</p>
+                <p class="t-lo">Fast-tracks major and medium multi-purpose dams and national canal projects.</p>
               </div>
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">2. Har Khet Ko Pani (HKKP)</strong>
-                <p class="t-lo">Command Area Development (CAD), repair and restoration of traditional water bodies.</p>
+                <p class="t-lo">Command Area Development (CAD), repair and restoration of water bodies.</p>
               </div>
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">3. Per Drop More Crop (PDMC)</strong>
-                <p class="t-lo">Promotes micro-irrigation technologies (Drip & Sprinkler) and precision water management.</p>
+                <p class="t-lo">Promotes micro-irrigation technologies (Drip & Sprinkler) and precision water delivery.</p>
               </div>
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">4. Watershed Development</strong>
@@ -514,19 +449,23 @@
               </div>
             </div>
             <p class="mt-3 text-[12px] font-mono t-lo">
-              * Micro Irrigation Fund (MIF): Dedicated corpus of ₹5,000 Crore established with NABARD to subsidize micro-irrigation installations across states.
+              * Micro Irrigation Fund (MIF): Dedicated corpus of ₹5,000 Crore established with NABARD.
             </p>
           </div>
         </section>
 
-        <!-- ── 07 · Exam Distinction Matrix ────────────────────────────── -->
-        <section id="memory-matrix" class="mb-14 scroll-mt-20">
+        <!-- ── 05 · Memory Hacks ───────────────────────────────────────── -->
+        <section id="hacks" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">07</span>
-            <h2 class="sec-title">Exam Distinction & Memory Hacks</h2>
+            <span class="sec-num">05</span>
+            <h2 class="sec-title">Memory Hacks</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">negative marking traps</span>
           </header>
+
+          <p class="mb-4 text-body leading-[1.8] t-mid">
+            Negative marking traps designed by exam setters to induce errors:
+          </p>
 
           <div class="space-y-4">
             <div class="callout callout-red">
@@ -558,59 +497,76 @@
           </div>
         </section>
 
-        <!-- ── 08 · Verified PYQs ──────────────────────────────────────── -->
+        <!-- ── 06 · PYQs ───────────────────────────────────────────────── -->
         <section id="pyqs" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">08</span>
-            <h2 class="sec-title">Verified TGPRB Previous Questions</h2>
+            <span class="sec-num">06</span>
+            <h2 class="sec-title">PYQs</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">2015–2023 papers</span>
+            <span class="sec-meta hidden sm:block">2015–2023 verified papers</span>
           </header>
 
-          <div class="space-y-4">
-            <div
-              v-for="(pyq, idx) in pyqList"
-              :key="pyq.id"
-              class="panel p-5"
+          <p class="mb-6 max-w-2xl text-body leading-[1.8] t-mid">
+            Every question below appeared in an official TSLPRB Constable or SI paper.
+            Click an option to test your understanding.
+          </p>
+
+          <div class="space-y-6">
+            <article
+              v-for="q in pyqList"
+              :key="q.uid"
+              class="panel p-5 sm:p-6 transition-all duration-200"
             >
-              <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-                <span class="font-mono text-[11px] accent font-bold">{{ pyq.tag }}</span>
-                <span class="chip chip-mono text-[10px]">{{ pyq.exam }}</span>
-              </div>
-              <p class="text-[14px] font-semibold t-hi mb-3">{{ idx + 1 }}. {{ pyq.question }}</p>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-3">
-                <div
-                  v-for="(opt, optIdx) in pyq.options"
-                  :key="optIdx"
-                  class="p-2.5 rounded-lg text-[12.5px] border b-line"
-                  :class="pyq.showAnswer && optIdx === pyq.answer ? 'border-emerald-500 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-semibold' : 'bg-sub t-mid'"
-                >
-                  <span class="font-mono mr-1">({{ String.fromCharCode(65 + optIdx) }})</span> {{ opt }}
-                </div>
+              <div class="mb-3 flex flex-wrap items-center gap-2">
+                <span class="chip chip-mono">{{ q.source }}</span>
+                <span class="chip font-mono text-[10.5px]">{{ q.tag }}</span>
+                <span
+                  v-if="q.revealed && q.selected !== null"
+                  class="chip chip-mono ms-auto"
+                  :class="q.selected === q.correct ? 'chip-jade' : 'chip-red'"
+                >{{ q.selected === q.correct ? 'Correct' : 'Missed' }}</span>
               </div>
 
-              <div class="flex items-center justify-between pt-2 border-t b-line">
+              <p class="mb-4 whitespace-pre-line text-[14px] font-medium leading-[1.7] t-hi">{{ q.question }}</p>
+
+              <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 <button
+                  v-for="(opt, oi) in q.options"
+                  :key="oi"
                   type="button"
-                  class="text-[12px] font-medium accent hover:underline"
-                  @click="pyq.showAnswer = !pyq.showAnswer"
+                  class="opt"
+                  :class="optionClass(q, oi)"
+                  :disabled="q.revealed"
+                  @click="attempt(q, oi)"
                 >
-                  {{ pyq.showAnswer ? 'Hide Explanation' : 'Show Answer & Explanation' }}
+                  <span class="opt-letter">{{ 'ABCD'[oi] }}</span>
+                  <span class="flex-1 text-left">{{ opt }}</span>
+                  <UIcon v-if="q.revealed && oi === q.correct" name="i-heroicons-check-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--jade)]" />
+                  <UIcon v-else-if="q.revealed && oi === q.selected" name="i-heroicons-x-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--red)]" />
                 </button>
               </div>
 
-              <div v-if="pyq.showAnswer" class="mt-3 p-3 rounded-lg bg-sub text-[12px] leading-relaxed t-lo">
-                <strong class="t-hi">Answer: ({{ String.fromCharCode(65 + pyq.answer) }})</strong> - {{ pyq.explanation }}
+              <!-- Explanation -->
+              <div v-if="q.revealed" class="callout callout-jade mt-4 animate-fade-in">
+                <p class="callout-title">
+                  <UIcon name="i-heroicons-light-bulb" class="h-3.5 w-3.5" />
+                  Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
+                </p>
+                <p class="callout-body">{{ q.explanation }}</p>
               </div>
-            </div>
+
+              <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="reveal(q)">
+                <span>Reveal answer &amp; explanation</span>
+                <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
+              </button>
+            </article>
           </div>
         </section>
 
-        <!-- ── 09 · Comprehension Gate ─────────────────────────────────── -->
+        <!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
         <section id="gate" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">09</span>
+            <span class="sec-num">07</span>
             <h2 class="sec-title">Comprehension Gate</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
@@ -618,10 +574,10 @@
           <GateQuiz note-id="NOTE-GEO-IRRIGATION" />
         </section>
 
-        <!-- ── 10 · Current Affairs ─────────────────────────────────────── -->
+        <!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
         <section id="current-affairs" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">10</span>
+            <span class="sec-num">08</span>
             <h2 class="sec-title">Current Affairs</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
@@ -629,48 +585,46 @@
           <CurrentAffairsStrip note-id="NOTE-GEO-IRRIGATION" />
         </section>
 
-        <!-- Footer Navigation -->
-        <footer class="mt-16 pt-8 border-t b-line flex flex-wrap items-center justify-between gap-4">
-          <NuxtLink
-            to="/notes/geography/drainage-system-of-india"
-            class="flex items-center gap-2 text-[13px] font-medium t-mid hover:t-hi transition-colors"
-          >
-            <UIcon name="i-heroicons-arrow-left" class="h-4 w-4" />
-            Previous: Drainage System of India
+        <!-- ── Footer nav ───────────────────────────────────────────────── -->
+        <nav class="grid gap-3 border-t b-line pt-8 sm:grid-cols-2">
+          <NuxtLink to="/notes/geography" class="panel panel-hover group flex items-center gap-3 p-5">
+            <UIcon name="i-heroicons-arrow-left" class="h-4 w-4 shrink-0 t-lo transition-transform group-hover:-translate-x-1" />
+            <div>
+              <p class="eyebrow mb-0.5">Subject</p>
+              <p class="text-[13.5px] font-semibold t-hi">All Geography topics</p>
+            </div>
           </NuxtLink>
-          <NuxtLink
-            to="/notes/polity/union-executive-and-legislature"
-            class="flex items-center gap-2 text-[13px] font-medium accent hover:underline"
-          >
-            Next: Union Executive & Parliament
-            <UIcon name="i-heroicons-arrow-right" class="h-4 w-4" />
+          <NuxtLink to="/review" class="panel panel-hover group flex items-center justify-end gap-3 p-5 text-right">
+            <div>
+              <p class="eyebrow mb-0.5">Next step</p>
+              <p class="text-[13.5px] font-semibold t-hi">Open the review queue</p>
+            </div>
+            <UIcon name="i-heroicons-arrow-right" class="h-4 w-4 shrink-0 accent transition-transform group-hover:translate-x-1" />
           </NuxtLink>
-        </footer>
+        </nav>
       </article>
 
-      <!-- ══ Right-side TOC (Sticky) ═════════════════════════════════════ -->
-      <aside class="hidden xl:block w-64 shrink-0">
-        <div class="sticky top-20 rounded-xl border b-line bg-sub p-4 text-[12px]">
+      <!-- ══ Sticky ToC ══════════════════════════════════════════════════ -->
+      <aside class="hidden w-52 shrink-0 xl:block">
+        <div class="sticky top-20">
           <p class="eyebrow mb-3">On this page</p>
-          <nav class="space-y-1">
+          <nav class="space-y-0.5">
             <a
-              v-for="s in sections"
-              :key="s.id"
-              :href="'#' + s.id"
-              class="block py-1 text-slate-400 hover:text-slate-200 transition-colors"
+              v-for="(section, i) in sections"
+              :key="section.id"
+              :href="`#${section.id}`"
+              class="group flex items-baseline gap-2.5 rounded-md px-2 py-1.5 text-body-xs transition-colors"
+              :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+              @click.prevent="scrollTo(section.id)"
             >
-              {{ s.label }}
+              <span class="num font-mono text-[10px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span>{{ section.label }}</span>
             </a>
           </nav>
 
-          <div class="mt-6 pt-4 border-t b-line">
-            <p class="text-[11px] t-lo mb-2">Note Stats</p>
-            <div class="space-y-1.5 font-mono text-[11px] t-mid">
-              <div class="flex justify-between"><span>PYQ Weightage:</span><span class="accent">High (T1)</span></div>
-              <div class="flex justify-between"><span>Verified PYQs:</span><span>29 Qs</span></div>
-              <div class="flex justify-between"><span>Flashcards:</span><span>12 Cards</span></div>
-              <div class="flex justify-between"><span>Gate Pass:</span><span class="text-emerald-500">3/5 MCQs</span></div>
-            </div>
+          <div class="mt-6 border-t b-line pt-4">
+            <p class="eyebrow mb-2">Weight in paper</p>
+            <p class="text-body-xs leading-relaxed t-lo">2–4 questions per paper, every year since 2015.</p>
           </div>
         </div>
       </aside>
@@ -679,9 +633,15 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, onUnmounted, reactive, ref } from 'vue'
+import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+
+useHead({
+  title: 'Irrigation in India & Telangana - TGPRB StudyOS',
+  meta: [{ name: 'description', content: 'Complete TGPRB study note: Irrigation in India & Telangana with sources breakdown, multipurpose projects, canal networks, KLIP lift schemes, and verified PYQs.' }],
+})
 
 const readProgress = ref(0)
+const activeSection = ref('visual')
 
 function onScroll() {
   const h = document.documentElement
@@ -690,6 +650,23 @@ function onScroll() {
   const sh = 'scrollHeight'
   const percent = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100
   readProgress.value = Math.min(100, Math.max(0, percent))
+
+  // Determine active section
+  const sectionEls = sections.map(s => document.getElementById(s.id)).filter(Boolean)
+  for (let i = sectionEls.length - 1; i >= 0; i--) {
+    const el = sectionEls[i]
+    if (el && el.getBoundingClientRect().top <= 120) {
+      activeSection.value = sections[i].id
+      break
+    }
+  }
+}
+
+function scrollTo(id: string) {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
 }
 
 onMounted(() => {
@@ -710,73 +687,131 @@ const coverage = [
 ]
 
 const sections = [
-  { id: 'map', label: '01 · The Physical Map' },
-  { id: 'overview', label: '02 · Sources Breakdown' },
-  { id: 'projects', label: '03 · River Valley Projects' },
-  { id: 'canals', label: '04 · Major Canal Networks' },
-  { id: 'telangana', label: '05 · Telangana Projects' },
-  { id: 'micro-irrigation', label: '06 · Micro-Irrigation & PMKSY' },
-  { id: 'memory-matrix', label: '07 · Exam Distinction Matrix' },
-  { id: 'pyqs', label: '08 · Verified PYQs' },
-  { id: 'gate', label: '09 · Comprehension Gate' },
-  { id: 'current-affairs', label: '10 · Current Affairs' },
+  { id: 'visual', label: 'The Visual Architecture' },
+  { id: 'introduction', label: 'Introduction' },
+  { id: 'deep-dive', label: 'Deep Dive' },
+  { id: 'data', label: 'Data & Comparisons' },
+  { id: 'hacks', label: 'Memory Hacks' },
+  { id: 'pyqs', label: 'PYQs' },
+  { id: 'gate', label: 'Comprehension Gate' },
+  { id: 'current-affairs', label: 'Current Affairs' },
 ]
 
-const pyqList = reactive([
+const textHierarchy = `IRRIGATION IN INDIA (Macro Sources & Distribution)
+├── Wells & Tube-wells : ~62-64% (Largest share | UP leads in Tube-wells | Rajasthan, Gujarat, MP)
+├── Canals             : ~24-26% (Second largest | UP leads network | Indira Gandhi Canal in Thar)
+├── Tanks              : ~3-4%   (Dominant in South India | TN, AP, Telangana | Hard rock terrain)
+└── Other / Lift       : ~6-8%   (Multi-stage lift irrigation like Kaleshwaram, springs, check dams)
+
+MAJOR CANAL HEADWORKS & MULTIPURPOSE DAMS
+├── Harike Barrage (Sutlej + Beas) → Indira Gandhi Canal (650 km to Thar Desert)
+├── Bhakra Dam (Sutlej River)      → Govind Sagar (Highest Concrete Gravity Dam - 226 m)
+├── Hirakud Dam (Mahanadi River)   → Longest Earthen Dam (25.8 km in Odisha)
+├── Tehri Dam (Bhagirathi River)   → Highest Dam in India (260.5 m in Uttarakhand)
+├── Sardar Sarovar (Narmada River) → Navagam Dam + 458 km Main Canal to Rajasthan
+└── Nagarjuna Sagar (Krishna River)→ World's Largest Masonry Dam (Nalgonda/Palnadu)`
+
+interface Pyq {
+  uid: string
+  exam: string
+  year: string
+  source: string
+  tag: string
+  question: string
+  options: string[]
+  correct: number
+  explanation: string
+  revealed: boolean
+  selected: number | null
+}
+
+const pyqList = reactive<Pyq[]>([
   {
-    id: 'PYQ-IRR-01',
-    tag: 'TSLPRB SI 2022',
-    exam: 'SI Prelims',
+    uid: 'PYQ-IRR-01',
+    exam: 'SI',
+    year: '2022',
+    source: 'SI 2022 Prelims',
+    tag: 'Multipurpose Projects',
     question: 'Bhakra-Nangal project is constructed on the river:',
     options: ['Ravi', 'Chenab', 'Sutlej', 'Jhelum'],
-    answer: 2,
-    showAnswer: false,
-    explanation: 'Bhakra-Nangal is constructed across the Sutlej river in Himachal Pradesh/Punjab. The reservoir formed is Govind Sagar.'
+    correct: 2,
+    explanation: 'Bhakra-Nangal project is constructed across the Sutlej river in Himachal Pradesh/Punjab. The reservoir formed behind Bhakra Dam is Govind Sagar.',
+    revealed: false,
+    selected: null
   },
   {
-    id: 'PYQ-IRR-02',
-    tag: 'TSLPRB Constable 2018',
-    exam: 'Constable Mains',
+    uid: 'PYQ-IRR-02',
+    exam: 'Constable',
+    year: '2018',
+    source: 'Constable 2018 Mains',
+    tag: 'Telangana Schemes',
     question: 'On which river is the Rajolibanda Diversion Scheme built?',
     options: ['Krishna', 'Tungabhadra', 'Godavari', 'Pennar'],
-    answer: 1,
-    showAnswer: false,
-    explanation: 'Rajolibanda Diversion Scheme (RDS) is an anicut built across the Tungabhadra river to serve Jogulamba Gadwal and Raichur.'
+    correct: 1,
+    explanation: 'Rajolibanda Diversion Scheme (RDS) is an anicut constructed across the Tungabhadra river to supply irrigation to Jogulamba Gadwal and Raichur.',
+    revealed: false,
+    selected: null
   },
   {
-    id: 'PYQ-IRR-03',
-    tag: 'TSLPRB SI 2018',
-    exam: 'SI Mains',
-    question: 'Match the Following: (a) Sardar Sarovar (b) Nagarjuna Sagar (c) Hirakud (d) Bhakra Nangal with Rivers: (i) Mahanadi (ii) Sutlej (iii) Narmada (iv) Krishna',
+    uid: 'PYQ-IRR-03',
+    exam: 'SI',
+    year: '2018',
+    source: 'SI 2018 Mains',
+    tag: 'Match Projects',
+    question: 'Match the Following:\n(a) Sardar Sarovar\n(b) Nagarjuna Sagar\n(c) Hirakud\n(d) Bhakra Nangal\n\nwith Rivers:\n(i) Mahanadi\n(ii) Sutlej\n(iii) Narmada\n(iv) Krishna',
     options: [
-      'a-iii, b-iv, c-i, d-ii',
-      'a-ii, b-i, c-iv, d-iii',
-      'a-iv, b-iii, c-ii, d-i',
-      'a-i, b-ii, c-iii, d-iv'
+      '(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)',
+      '(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)',
+      '(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)',
+      '(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)'
     ],
-    answer: 0,
-    showAnswer: false,
-    explanation: 'Sardar Sarovar is on Narmada, Nagarjuna Sagar is on Krishna, Hirakud is on Mahanadi, and Bhakra Nangal is on Sutlej.'
+    correct: 0,
+    explanation: 'Sardar Sarovar is on Narmada, Nagarjuna Sagar is on Krishna, Hirakud is on Mahanadi, and Bhakra Nangal is on Sutlej.',
+    revealed: false,
+    selected: null
   },
   {
-    id: 'PYQ-IRR-04',
-    tag: 'TSLPRB SI 2016',
-    exam: 'SI Prelims',
+    uid: 'PYQ-IRR-04',
+    exam: 'SI',
+    year: '2016',
+    source: 'SI 2016 Prelims',
+    tag: 'Historical Foundation',
     question: 'On which date did Pandit Jawaharlal Nehru lay the foundation stone for the great Nagarjuna Sagar Project?',
     options: ['10 December 1955', '15 August 1956', '26 January 1950', '2 October 1958'],
-    answer: 0,
-    showAnswer: false,
-    explanation: 'Pandit Jawaharlal Nehru laid the foundation stone for Nagarjuna Sagar Dam across the Krishna River on 10 December 1955.'
+    correct: 0,
+    explanation: 'Pandit Jawaharlal Nehru laid the foundation stone for the Nagarjuna Sagar Dam across the Krishna River on 10 December 1955.',
+    revealed: false,
+    selected: null
   },
   {
-    id: 'PYQ-IRR-05',
-    tag: 'TSLPRB Constable 2022',
-    exam: 'Constable Prelims',
+    uid: 'PYQ-IRR-05',
+    exam: 'Constable',
+    year: '2022',
+    source: 'Constable 2022 Prelims',
+    tag: 'Micro-Irrigation',
     question: 'The Indian Government approved a corpus of ₹5,000 crore for setting up the Micro Irrigation Fund (MIF) with which apex financial institution?',
     options: ['RBI', 'NABARD', 'SIDBI', 'SBI'],
-    answer: 1,
-    showAnswer: false,
-    explanation: 'The ₹5,000 crore Micro Irrigation Fund (MIF) was set up with NABARD under PMKSY to facilitate states in expanding micro-irrigation coverage.'
+    correct: 1,
+    explanation: 'The ₹5,000 crore Micro Irrigation Fund (MIF) was established with NABARD under PMKSY to help states incentivize drip and sprinkler installations.',
+    revealed: false,
+    selected: null
   }
 ])
+
+function attempt(q: Pyq, oi: number) {
+  if (q.revealed) return
+  q.selected = oi
+  q.revealed = true
+}
+
+function reveal(q: Pyq) {
+  q.revealed = true
+}
+
+function optionClass(q: Pyq, oi: number) {
+  if (!q.revealed) return ''
+  if (oi === q.correct) return 'opt-correct'
+  if (oi === q.selected) return 'opt-wrong'
+  return 'opt-dim'
+}
 </script>

@@ -248,11 +248,11 @@
         <table class="table-note min-w-[640px]">
           <thead>
             <tr>
-              <th class="w-10 pl-4">#</th>
-              <th>Subject</th>
-              <th class="text-right">PYQs</th>
-              <th class="w-[30%]">Coverage</th>
-              <th class="w-20 pr-4 text-center">Tier</th>
+              <th class="w-14 px-6 text-left">#</th>
+              <th class="px-4">Subject</th>
+              <th class="px-4 text-right">PYQs</th>
+              <th class="w-[32%] px-4">Coverage</th>
+              <th class="w-24 px-6 text-center">Tier</th>
             </tr>
           </thead>
           <tbody>
@@ -262,8 +262,8 @@
               class="cursor-pointer"
               @click="openSubject(s)"
             >
-              <td class="pl-4 font-mono text-[11px] t-lo num">{{ String(i + 1).padStart(2, '0') }}</td>
-              <td>
+              <td class="px-6 font-mono text-[11px] t-lo num">{{ String(i + 1).padStart(2, '0') }}</td>
+              <td class="px-4">
                 <div class="flex items-center gap-2">
                   <span class="cell-key">{{ s.name }}</span>
                   <span v-if="s.noteCount > 0" class="chip chip-jade chip-mono">
@@ -271,10 +271,10 @@
                   </span>
                 </div>
               </td>
-              <td class="text-right cell-num">{{ s.pyqCount }}</td>
-              <td>
+              <td class="px-4 text-right cell-num">{{ s.pyqCount }}</td>
+              <td class="px-4">
                 <div class="flex items-center gap-3">
-                  <div class="h-1 min-w-[72px] flex-1 overflow-hidden rounded-full bg-inset">
+                  <div class="h-1.5 min-w-[72px] flex-1 overflow-hidden rounded-full bg-inset">
                     <div
                       class="h-full rounded-full"
                       :class="s.tier === 'T1' ? 'bg-saffron-500' : s.tier === 'T2' ? 'bg-sky-500' : 'bg-stone-400 dark:bg-stone-600'"
@@ -286,7 +286,7 @@
                   </span>
                 </div>
               </td>
-              <td class="pr-4 text-center">
+              <td class="px-6 text-center">
                 <span class="chip chip-mono" :class="tierChip(s.tier)">{{ s.tier }}</span>
               </td>
             </tr>
