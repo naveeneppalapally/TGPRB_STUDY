@@ -99,7 +99,7 @@
               <span class="chip chip-saffron chip-mono">Primary Spatial Anchor</span>
             </div>
             <img
-              src="/images/geography/india-natural-vegetation-map.png"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786735509/geography/india-natural-vegetation-map.webp"
               alt="Natural Vegetation Map of India showing Tropical Evergreen, Tropical Deciduous, Tropical Thorn, and Alpine zones"
               class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
               loading="eager"
@@ -120,7 +120,7 @@
                   <span class="chip chip-mono text-[10px]">18 Reserves</span>
                 </div>
                 <img
-                  src="/images/geography/india-biosphere-reserves-map.png"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786735510/geography/india-biosphere-reserves-map.webp"
                   alt="Biosphere Reserves in India map indicating Nilgiri, Nanda Devi, Sundarban, Gulf of Mannar, Simlipal, and Pachmarhi"
                   class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
                   loading="lazy"
@@ -139,7 +139,7 @@
                   <span class="chip chip-mono text-[10px]">Tri-Junction</span>
                 </div>
                 <img
-                  src="/images/geography/nilgiri-biosphere-reserve-tripartite-map.jpg"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786735507/geography/nilgiri-biosphere-reserve-tripartite-map.webp"
                   alt="Nilgiri Biosphere Reserve map showing Bandipur, Nagarhole, Wayanad, Mudumalai, Mukurthi, and Silent Valley national parks"
                   class="w-full h-auto max-h-[380px] object-cover rounded-lg bg-inset"
                   loading="lazy"
@@ -163,7 +163,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
               <div class="md:col-span-1 aspect-video md:aspect-square rounded-xl overflow-hidden bg-inset border b-line">
                 <img
-                  src="/images/geography/sundarbans-mangrove-vegetation.jpg"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786735506/geography/sundarbans-mangrove-vegetation.webp"
                   alt="Sundarbans mangrove vegetation showing exposed stilt roots and vertical pneumatophores"
                   class="h-full w-full object-cover"
                   loading="lazy"
