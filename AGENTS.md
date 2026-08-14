@@ -20,7 +20,8 @@ Persistent rules for every agent working in this repo. Read this before any task
   3. **Primary Anchor vs Secondary Cues**:
      - The top of Section 01 (Visual Architecture) MUST be anchored by a **comprehensive labeled spatial locator map or thematic diagram**.
      - Individual scenic photographs (e.g. mountain peaks, individual dams) serve as secondary supporting visual cues placed below or alongside the main locator maps, NEVER as the sole visual anchor.
-  4. Place sourced images in `assets-to-upload/<subject>/filename.webp` (and copy to `public/images/<subject>/filename.webp` for local preview) - same pipeline.
+  4. **Candidate Image Cleanup Rule (Zero Leftovers)**: When multiple image candidates are downloaded during research, inspect them with `view_file`. Only the selected winning candidate(s) that pass the 4-Point Visual Gate must be kept. ALL other unselected, discarded, or superseded image candidates in `assets-to-upload/` and `public/images/` must be immediately deleted before moving to the next phase. Never push unreferenced images.
+  5. Place selected images in `assets-to-upload/<subject>/filename.webp` (and copy to `public/images/<subject>/filename.webp` for local preview) - same pipeline.
 
 ## Images - strict rules, never break these
 
