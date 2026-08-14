@@ -10,6 +10,7 @@ Persistent rules for every agent working in this repo. Read this before any task
 - No PWA, no service workers, no offline caching.
 - No Framer Motion, no bespoke animation elsewhere. GSAP only for topics that pass the visual rule below. Plain CSS/Nuxt UI defaults for everything else.
 - Never invoke `image-to-code`, `imagegen-frontend-web`, or `imagegen-frontend-mobile` skills on this project. No reference-image-first design workflow.
+- **generate_image tool IS allowed and REQUIRED**: When a topic note needs a custom diagram (irrigation zone map, constitutional hierarchy, historical timeline), use the `generate_image` tool to generate one. Place generated images in `assets-to-upload/<subject>/filename.webp` and reference as `/images/<subject>/filename.webp`. Never skip image generation by saying "no image available" - generate one instead.
 
 ## Images - strict rules, never break these
 
@@ -75,6 +76,33 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - Prefer real, verified PYQs everywhere. Any synthetic/practice question must be explicitly labeled as such - never presented as a real PYQ.
 - Current affairs are a separate content type, never edited into a note's markdown file.
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
+
+## Fact verification - never assume, always cite the data year
+
+**AI knowledge cutoff warning**: When writing note content that includes statistical data (irrigation percentages, census figures, GDP numbers, scheme allocations, population data, scheme corpus amounts), the AI model's training data may be 1-3 years behind current official publications. Do NOT silently present stale data as current 2026 fact.
+
+### Mandatory rules for statistical content in notes:
+- Always cite the source and data year in a `text-body-xs t-lo` caption below the data (e.g. "Source: 4th Minor Irrigation Census 2017-18, Ministry of Jal Shakti").
+- If the data year is older than 2023, add a note: "Verify against latest official publication before exam."
+- For government scheme allocations (PMKSY corpus, MIF amounts, budget figures), always cite the Budget year or scheme launch year.
+- Engineering constants (dam heights, river lengths, canal distances) are stable - no year flag needed.
+- Population, census, and agricultural percentages change with each Census/Survey cycle. Flag these.
+
+### Preferred 2026-verified sources (check these first):
+- Ministry of Jal Shakti (jalshakti-dowr.gov.in) - Irrigation census, dam safety, canal data
+- India Water Portal (indiawaterportal.org) - Independent secondary verification
+- PIB press releases (pib.gov.in) - Scheme updates, new dam inaugurations, revised corpus
+- Ministry of Finance Union Budget documents - Latest scheme allocation amounts
+- NABARD annual reports - MIF disbursement data
+- National Commission for Integrated Water Resources Development (NCIWRD) reports
+
+### Example correct citation in note:
+```html
+<p class="mt-2 text-body-xs t-lo font-mono">
+  Source: 4th Minor Irrigation Census 2017-18 (Ministry of Jal Shakti).
+  5th Census data collection in progress as of 2025 - verify for exam.
+</p>
+```
 
 ### Subject-specific note scaffolds - mandatory reference
 When building any topic note page, follow the subject scaffold from `docs/tslprb-pyq-processing-engine-research-report.md`:
