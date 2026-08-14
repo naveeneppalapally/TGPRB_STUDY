@@ -9,11 +9,10 @@ Persistent rules for every agent working in this repo. Read this before any task
 - FSRS via `ts-fsrs`. Never hand-roll SM-2 or Leitner.
 - No PWA, no service workers, no offline caching.
 - No Framer Motion, no bespoke animation elsewhere. GSAP only for topics that pass the visual rule below. Plain CSS/Nuxt UI defaults for everything else.
-- **Image sourcing workflow - always follow this order**:
-  1. **Search online first** (`search_web` or `read_url_content`): Search anywhere on the internet - any site, any source. No restrictions. If a clear, accurate image exists anywhere online, use it.
-  2. **Generate with `generate_image` only if**: (a) no suitable image was found online, OR (b) a custom annotated version would be clearly better (e.g. exam-specific color coding, specific labels, memory-hack layout that no existing image provides).
-  3. **Never skip visuals entirely** - if search finds nothing and generation fails, try a different search query or retry generation. "No image" is never an acceptable final answer for spatial/hierarchical topics.
-  4. Place sourced or generated images in `assets-to-upload/<subject>/filename.webp` - same pipeline regardless of source.
+- **Image sourcing workflow - strict priority**:
+  1. **Always search online first** (`search_web`, Wikipedia API, Wikimedia Commons, OpenStreetMap, educational repositories, government portals): Search the internet thoroughly. Real maps, topographic diagrams, satellite imagery, and authentic photographs must always be preferred. Download real images directly to `assets-to-upload/<subject>/filename.ext`.
+  2. **Generate with `generate_image` ONLY as a last resort**: Generate only if no suitable image exists on the internet after searching. Do not default to generation when authentic images exist online.
+  3. Place sourced images in `assets-to-upload/<subject>/filename.webp` (and copy to `public/images/<subject>/filename.webp` for local preview) - same pipeline.
 
 ## Images - strict rules, never break these
 
