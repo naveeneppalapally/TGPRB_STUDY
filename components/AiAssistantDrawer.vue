@@ -18,7 +18,7 @@
               <UIcon name="i-heroicons-sparkles" class="h-3.5 w-3.5 accent" />
               Study assistant
             </p>
-            <h2 class="mt-1 text-[15px] font-semibold t-hi">{{ noteTitle }}</h2>
+            <h2 class="mt-1 text-[15px] font-semibold t-hi">{{ effectiveNoteTitle }}</h2>
             <p class="mt-1 text-[11px] leading-relaxed t-lo">
               Grounded in this note and verified TGPRB PYQs. Keep a final check against official sources.
             </p>
@@ -65,7 +65,7 @@
         <footer class="border-t b-line bg-base px-4 py-3">
           <div class="mb-3 flex flex-wrap gap-2">
             <UButton
-              v-for="chip in quickPrompts"
+              v-for="chip in effectiveQuickPrompts"
               :key="chip.label"
               :label="chip.label"
               color="gray"
@@ -105,6 +105,7 @@
 
 <script setup lang="ts">
 import { computed, nextTick, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import type {
   AiAssistantAction,
   AiConversationTurn,
@@ -119,12 +120,42 @@ interface ChatMessage extends AiConversationTurn {
 }
 
 const props = withDefaults(defineProps<{
-  noteId: string
-  noteTitle: string
+  noteId?: string
+  noteTitle?: string
   examProfile?: AiExamProfile
-  quickPrompts: AiPromptChip[]
+  quickPrompts?: AiPromptChip[]
 }>(), {
   examProfile: 'constable',
+})
+
+const route = useRoute()
+
+const ROUTE_NOTE_MAP: Record<string, { noteId: string; title: string }> = {
+  '/notes/geography/drainage-system-of-india': { noteId: 'NOTE-GEO-DRAINAGE', title: 'Drainage System of India' },
+  '/notes/polity/union-executive-and-legislature': { noteId: 'NOTE-POL-UNION-EXEC', title: 'Union Executive and Legislature' },
+  '/notes/telangana/telangana-statehood-movement': { noteId: 'NOTE-TEL-MOVEMENT', title: 'Telangana Statehood Movement' },
+}
+
+function resolveCurrentNote() {
+  if (props.noteId && props.noteTitle) {
+    return { noteId: props.noteId, title: props.noteTitle }
+  }
+  const currentPath = (route.path || '').replace(/\/$/, '')
+  if (ROUTE_NOTE_MAP[currentPath]) {
+    return ROUTE_NOTE_MAP[currentPath]
+  }
+  if (currentPath.includes('/notes/geography')) return { noteId: 'NOTE-GEO-DRAINAGE', title: 'Drainage System of India' }
+  if (currentPath.includes('/notes/polity')) return { noteId: 'NOTE-POL-UNION-EXEC', title: 'Union Executive and Legislature' }
+  if (currentPath.includes('/notes/telangana')) return { noteId: 'NOTE-TEL-MOVEMENT', title: 'Telangana Statehood Movement' }
+  return { noteId: 'NOTE-GEO-DRAINAGE', title: 'Drainage System of India' }
+}
+
+const currentNote = computed(() => resolveCurrentNote())
+const effectiveNoteId = computed(() => props.noteId || currentNote.value.noteId)
+const effectiveNoteTitle = computed(() => props.noteTitle || currentNote.value.title)
+const effectiveQuickPrompts = computed(() => {
+  if (props.quickPrompts && props.quickPrompts.length > 0) return props.quickPrompts
+  return useAiPromptChips(effectiveNoteId.value)
 })
 
 const { pendingRequest, clearRequest } = useAiAssistant()
@@ -137,25 +168,26 @@ const suggestedCards = ref<AiFlashcardSuggestion[]>([])
 const quotaRemaining = ref<number | null>(null)
 const chatRegion = ref<HTMLElement | null>(null)
 
-const storageKey = `studyos:ai-chat:${props.noteId}`
+const storageKey = computed(() => `studyos:ai-chat:${effectiveNoteId.value}`)
 const quotaLabel = computed(() => quotaRemaining.value === null
   ? '20 questions per day for signed-in students.'
   : `${quotaRemaining.value} AI question${quotaRemaining.value === 1 ? '' : 's'} left today.`)
 
 onMounted(() => {
-  const saved = sessionStorage.getItem(storageKey)
+  const saved = sessionStorage.getItem(storageKey.value)
   if (!saved) return
 
   try {
     const parsed = JSON.parse(saved) as ChatMessage[]
     if (Array.isArray(parsed)) messages.value = parsed.slice(-10)
   } catch {
-    sessionStorage.removeItem(storageKey)
+    sessionStorage.removeItem(storageKey.value)
   }
 })
 
 watch(pendingRequest, (request) => {
-  if (!request || request.noteId !== props.noteId) return
+  if (!request) return
+  if (props.noteId && request.noteId !== props.noteId) return
   isOpen.value = true
   draft.value = request.question
   void nextTick(() => submit(request.action, request.sourceQuestionId, request.quizState))
@@ -201,7 +233,7 @@ async function submit(
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'text/event-stream' },
       body: JSON.stringify({
-        note_id: props.noteId,
+        note_id: effectiveNoteId.value,
         question,
         action,
         exam_profile: props.examProfile,

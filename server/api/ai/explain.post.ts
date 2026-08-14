@@ -106,16 +106,24 @@ export default defineEventHandler(async (event) => {
 
   const config = useRuntimeConfig(event)
   const model = String(config.aiModel || 'gemini-2.5-flash')
-  const credentials = serviceAccount(config.googleServiceAccountJson)
-  const project = String(config.vertexProject || '')
-  if (!project) throw createError({ statusCode: 503, statusMessage: 'The assistant is not configured for this environment yet.' })
+  const apiKey = String(config.geminiApiKey || process.env.GEMINI_API_KEY || '')
+  const serviceAccountJson = String(config.googleServiceAccountJson || process.env.GOOGLE_SERVICE_ACCOUNT_JSON || '')
+  const project = String(config.vertexProject || process.env.VERTEX_PROJECT || '')
 
-  const ai = new GoogleGenAI({
-    vertexai: true,
-    project,
-    location: String(config.vertexLocation || 'global'),
-    googleAuthOptions: { credentials },
-  })
+  let ai: GoogleGenAI
+  if (apiKey) {
+    ai = new GoogleGenAI({ apiKey })
+  } else if (project && serviceAccountJson) {
+    const credentials = serviceAccount(serviceAccountJson)
+    ai = new GoogleGenAI({
+      vertexai: true,
+      project,
+      location: String(config.vertexLocation || 'global'),
+      googleAuthOptions: { credentials },
+    })
+  } else {
+    throw createError({ statusCode: 503, statusMessage: 'The assistant is not configured for this environment yet.' })
+  }
 
   let quotaAllowed = true
   try {
