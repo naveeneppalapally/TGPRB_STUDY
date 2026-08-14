@@ -93,7 +93,7 @@
           <!-- Master Visual Architecture Map of India -->
           <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 text-center shadow-sm">
             <img
-              src="/images/geography/india-irrigation-zones-map.jpg"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728085/geography/india-irrigation-zones-map.webp"
               alt="India Irrigation Sources, Major Canals & Multipurpose Dam Headworks"
               class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
             />
@@ -313,7 +313,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/nagarjuna-sagar-dam.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728081/geography/nagarjuna-sagar-dam.webp"
                       alt="Nagarjuna Sagar Dam across Krishna River (Telangana / AP)"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -333,7 +333,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/bhakra-dam-sutlej.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728089/geography/bhakra-dam-sutlej.webp"
                       alt="Bhakra Dam on Sutlej River"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -353,7 +353,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/hirakud-dam-mahanadi.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/hirakud-dam-mahanadi.webp"
                       alt="Hirakud Dam on Mahanadi River in Sambalpur Odisha"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -373,7 +373,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/tehri-dam-bhagirathi.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728077/geography/tehri-dam-bhagirathi.webp"
                       alt="Tehri Dam on Bhagirathi River in Uttarakhand"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -393,7 +393,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/sardar-sarovar-dam-narmada.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/sardar-sarovar-dam-narmada.webp"
                       alt="Sardar Sarovar Dam on Narmada River"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -413,7 +413,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/idukki-arch-dam.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728086/geography/idukki-arch-dam.webp"
                       alt="Idukki Concrete Arch Dam on Periyar River in Kerala"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -480,7 +480,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/harike-barrage-confluence.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728088/geography/harike-barrage-confluence.webp"
                       alt="Harike Barrage headworks at Sutlej and Beas confluence in Punjab"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -496,7 +496,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset flex items-center justify-center p-1 bg-white dark:bg-stone-900">
                     <img
-                      src="/images/geography/indira-gandhi-canal-route.png"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728083/geography/indira-gandhi-canal-route.webp"
                       alt="Indira Gandhi Lift Canal schematic route and distribution branches"
                       class="max-h-full max-w-full object-contain"
                       loading="lazy"
@@ -512,7 +512,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/indira-gandhi-canal-flow.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728084/geography/indira-gandhi-canal-flow.webp"
                       alt="Indira Gandhi Canal flowing through Thar Desert in Western Rajasthan"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -540,7 +540,7 @@
               <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
                 <div class="md:col-span-5 aspect-video md:aspect-auto w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/kaleshwaram-lakshmi-pumphouse.png"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728082/geography/kaleshwaram-lakshmi-pumphouse.webp"
                     alt="Aerial view of Lakshmi Medigadda Pumphouse under Kaleshwaram Lift Irrigation Project"
                     class="h-full w-full object-cover"
                     loading="lazy"
