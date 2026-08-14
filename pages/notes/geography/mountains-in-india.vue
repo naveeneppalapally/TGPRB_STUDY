@@ -99,7 +99,7 @@
               <span class="chip chip-saffron chip-mono">Primary Spatial Anchor</span>
             </div>
             <img
-              src="/images/geography/india-mountain-ranges-physical-map.jpg"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786733961/geography/india-mountain-ranges-physical-map.webp"
               alt="Complete Physical Relief and Mountain Ranges Map of India showing Himalayas, Peninsular Plateau, Western Ghats, Eastern Ghats, and Purvanchal"
               class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
               loading="eager"
@@ -120,7 +120,7 @@
                   <span class="chip chip-mono text-[10px]">KLZPS Order</span>
                 </div>
                 <img
-                  src="/images/geography/himalayan-ranges-klzps-map.jpg"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786733964/geography/himalayan-ranges-klzps-map.webp"
                   alt="Chart illustrating the trends of the principal mountain ranges of the Himalayan and Trans-Himalayan systems"
                   class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
                   loading="lazy"
@@ -139,7 +139,7 @@
                   <span class="chip chip-mono text-[10px]">8000m Peaks</span>
                 </div>
                 <img
-                  src="/images/geography/himalaya-eight-thousanders-annotated-map.jpg"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786733965/geography/himalaya-eight-thousanders-annotated-map.webp"
                   alt="NASA Landsat annotated showing the 14 eight-thousander peaks and syntaxial bends from Nanga Parbat to Namcha Barwa"
                   class="w-full h-auto max-h-[380px] object-cover rounded-lg bg-inset"
                   loading="lazy"

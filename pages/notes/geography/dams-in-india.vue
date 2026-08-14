@@ -99,7 +99,7 @@
               <span class="chip chip-saffron chip-mono">Primary Spatial Anchor</span>
             </div>
             <img
-              src="/images/geography/major-rivers-and-dams-india-map.jpg"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786733957/geography/major-rivers-and-dams-india-map.webp"
               alt="Major Rivers and Dams in India showing Tehri, Bhakra Nangal, Hirakud, Sardar Sarovar, Nagarjuna Sagar, Srisailam, Mettur, and DVC project alignments"
               class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
               loading="eager"
