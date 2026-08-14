@@ -74,7 +74,7 @@ During local development, put a temporary copy in `public/images/subject/name.we
 
 ## Source data - trust hierarchy, never invert it
 - `data/pyq_enriched_master.json` is the single source of truth for all PYQ data (3,129 verified questions across 10 official papers, 2015-2023). Always derive tier counts, topic weights, and question content from here. Never hardcode numbers.
-- `extracted_questioin_paper_json/` contains the 25 clean structured JSON files (one per official exam paper) that were used to build `pyq_enriched_master.json`. Keep this as permanent ground truth reference.
+- `extracted_question_paper_json/` contains the 25 clean structured JSON files (one per official exam paper) that were used to build `pyq_enriched_master.json`. Keep this as permanent ground truth reference.
 - `Extracted_Text/`, `Deep_Analysis.txt`, and `Topic_Banks/` are deleted legacy files. Do not reference or recreate them.
 - The 2026 exam has a real 20% negative-marking penalty. Never build any "always guess" feature or copy that implies free guessing.
 

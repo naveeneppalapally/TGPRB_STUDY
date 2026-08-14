@@ -14,7 +14,7 @@ import glob
 import hashlib
 import unicodedata
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "../../extracted_questioin_paper_json")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "../../extracted_question_paper_json")
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "../../data")
 
 def normalize_stem(text: str) -> str:
