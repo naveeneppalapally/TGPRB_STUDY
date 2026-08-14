@@ -23,6 +23,7 @@
         <header class="mb-8 border-b b-line pb-7">
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
+            <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3–5 Questions (4–6 Marks)</span>
             <span class="chip">28 verified PYQs</span>
             <span class="chip">Geography</span>
           </div>
@@ -65,6 +66,17 @@
             Cover all six and you have everything TGPRB has ever asked about drainage here.
             Anything outside these six is context, not exam material.
           </p>
+
+          <!-- 2026 Predicted Question Format Callout -->
+          <div class="mt-4 rounded-xl border border-saffron-500/30 bg-saffron-500/5 p-4 flex items-start gap-3">
+            <UIcon name="i-heroicons-sparkles" class="h-5 w-5 accent shrink-0 mt-0.5" />
+            <div>
+              <p class="text-[12px] font-semibold uppercase tracking-wider accent">Predicted 2026 Question Patterns</p>
+              <p class="mt-1 text-[13px] leading-relaxed t-mid">
+                <strong class="t-hi">Primary Format:</strong> Match the Following (River ↔ Tributary / Dam), followed by <strong class="t-hi">4-Statement True/False Verifications</strong> on East vs West flowing rivers. Trap alert: TGPRB frequently pairs Krishna tributaries with Godavari to induce negative marking.
+              </p>
+            </div>
+          </div>
         </section>
 
         <!-- ── 01 · The physical map ───────────────────────────────────── -->

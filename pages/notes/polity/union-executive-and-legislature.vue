@@ -31,7 +31,7 @@
         <!-- Metadata Chips -->
         <div class="flex flex-wrap items-center gap-2 text-xs font-semibold">
           <span class="px-2.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-            Note ID: NOTE-POL-UNION-EXEC
+            🎯 Projected 2026: 4–5 Questions (4–5 Marks)
           </span>
           <span class="px-2.5 py-1 rounded-full bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 border border-blue-300 dark:border-blue-800">
             Verified PYQs: 57
@@ -47,6 +47,17 @@
 
       <!-- Dynamic Current Affairs Strip -->
       <CurrentAffairsStrip note-id="NOTE-POL-UNION-EXEC" class="mb-8" />
+
+      <!-- 2026 Predicted Question Patterns Callout -->
+      <div class="mb-6 rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 flex items-start gap-3">
+        <UIcon name="i-heroicons-sparkles" class="h-5 w-5 text-amber-500 shrink-0 mt-0.5" />
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">Predicted 2026 Question Patterns</p>
+          <p class="mt-1 text-[13px] leading-relaxed text-slate-700 dark:text-slate-300">
+            <strong class="text-slate-900 dark:text-white">Primary Format:</strong> 4-Statement True/False Verifications on President & Speaker powers (Money Bill certification, Casting Vote Art 100), and <strong class="text-slate-900 dark:text-white">Direct Article Matching (Art 52–123)</strong>. Trap alert: Watch for Council of Ministers collective responsibility (Lok Sabha only vs Parliament).
+          </p>
+        </div>
+      </div>
 
       <!-- Exam Coverage Strategy Strip -->
       <div class="mb-10 bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 text-white rounded-xl p-5 shadow-lg border border-slate-700">

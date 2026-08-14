@@ -171,6 +171,72 @@
       </div>
     </section>
 
+    <!-- ── 2026 High-Probability Topics (Leaderboard) ─────────────── -->
+    <section class="mb-10">
+      <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <h2 class="font-display text-lg font-semibold tracking-tight t-hi">🎯 2026 High-Probability Topics</h2>
+          <span class="chip chip-saffron text-[10.5px]">Top Yield</span>
+        </div>
+        <span class="eyebrow">Ranked by PYQ recurrence + projected 2026 marks</span>
+      </div>
+
+      <div class="panel divide-y divide-[var(--line)] overflow-hidden">
+        <div
+          v-for="topic in predictedHighYieldTopics"
+          :key="topic.rank"
+          class="flex flex-col gap-3 p-4 transition-colors hover:bg-sub sm:flex-row sm:items-center sm:justify-between"
+        >
+          <!-- Left: Rank + Info -->
+          <div class="flex items-start gap-3 min-w-0">
+            <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-accent-soft font-mono text-[13px] font-bold accent">
+              {{ String(topic.rank).padStart(2, '0') }}
+            </span>
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <NuxtLink
+                  v-if="topic.isLive"
+                  :to="topic.href"
+                  class="font-display text-[14px] font-bold tracking-tight t-hi hover:underline"
+                >
+                  {{ topic.title }}
+                </NuxtLink>
+                <span v-else class="font-display text-[14px] font-semibold tracking-tight t-mid">
+                  {{ topic.title }}
+                </span>
+                <span class="chip chip-mono text-[10px]">{{ topic.subject }}</span>
+                <span v-if="topic.isLive" class="chip chip-jade chip-mono text-[10px]">
+                  <span class="dot" />Live Note
+                </span>
+              </div>
+              <p class="mt-1 text-[12px] leading-relaxed t-lo">
+                <strong class="t-mid">Likely 2026 Pattern:</strong> {{ topic.likelyFormat }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Projected Marks + Action -->
+          <div class="flex shrink-0 items-center justify-between gap-4 sm:justify-end border-t b-line pt-2 sm:border-t-0 sm:pt-0">
+            <div class="text-left sm:text-right">
+              <span class="inline-block rounded-md bg-emerald-500/10 px-2 py-0.5 font-mono text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
+                {{ topic.projectedMarks }}
+              </span>
+              <p class="mt-0.5 font-mono text-[10px] t-lo">{{ topic.pyqs }} verified PYQs · {{ topic.confidence }} conf.</p>
+            </div>
+            <UButton
+              v-if="topic.isLive"
+              label="Study"
+              :to="topic.href"
+              size="xs"
+              color="primary"
+              variant="solid"
+            />
+            <span v-else class="text-[11px] font-medium t-lo italic px-2">Queued</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ── Subject coverage ────────────────────────────────────────────── -->
     <section>
       <div class="mb-4 flex flex-wrap items-baseline justify-between gap-2">
@@ -347,6 +413,69 @@ const agenda = [
     icon: 'i-heroicons-map-pin',
     title: 'Drainage System of India note page live',
     meta: '28 verified PYQs · Interactive river map',
+  },
+]
+
+const predictedHighYieldTopics = [
+  {
+    rank: 1,
+    title: 'Drainage System of India',
+    subject: 'Geography',
+    pyqs: 28,
+    projectedMarks: '4–6 Marks (3–5 Qs)',
+    likelyFormat: 'River ↔ Tributary Matching | Estuary vs Delta Traps',
+    href: '/notes/geography/drainage-system-of-india',
+    tier: 'T1',
+    confidence: '95%',
+    isLive: true,
+  },
+  {
+    rank: 2,
+    title: 'Telangana Statehood Movement & Chronology',
+    subject: 'Telangana',
+    pyqs: 26,
+    projectedMarks: '5–8 Marks (4–6 Qs)',
+    likelyFormat: 'Timeline Sequencing (1969 to 2014) | Committee Match',
+    href: '/notes/telangana/telangana-statehood-movement',
+    tier: 'T1',
+    confidence: '94%',
+    isLive: true,
+  },
+  {
+    rank: 3,
+    title: 'Union Executive & Legislature (President, Parliament, Articles)',
+    subject: 'Polity',
+    pyqs: 24,
+    projectedMarks: '4–5 Marks (3–4 Qs)',
+    likelyFormat: '4-Statement True/False | Landmark Article Traps (52–123)',
+    href: '/notes/polity/union-executive-and-legislature',
+    tier: 'T1',
+    confidence: '92%',
+    isLive: true,
+  },
+  {
+    rank: 4,
+    title: 'Indian National Movement & 1857 Revolts',
+    subject: 'History',
+    pyqs: 22,
+    projectedMarks: '4–6 Marks (3–5 Qs)',
+    likelyFormat: '5-Step Causal Chain | Leader ↔ Organization Pairing',
+    href: '/notes/history',
+    tier: 'T1',
+    confidence: '90%',
+    isLive: false,
+  },
+  {
+    rank: 5,
+    title: 'Ratio, Proportions & Arithmetic Word Problems',
+    subject: 'Arithmetic',
+    pyqs: 35,
+    projectedMarks: '8–10 Marks (6–8 Qs)',
+    likelyFormat: 'Speed-accuracy Calculation | Multi-step Word Problems',
+    href: '/notes/arithmetic',
+    tier: 'T1',
+    confidence: '96%',
+    isLive: false,
   },
 ]
 

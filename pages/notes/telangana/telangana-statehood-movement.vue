@@ -62,11 +62,11 @@ onUnmounted(() => {
 
         <!-- Metadata Badges -->
         <div class="flex flex-wrap items-center gap-2 text-xs">
-          <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-medium">
-            Subject: Telangana History & Movement
-          </span>
           <span class="px-2.5 py-1 rounded-full bg-emerald-950/80 border border-emerald-800/80 text-emerald-400 font-bold flex items-center gap-1">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            🎯 Projected 2026: 5–8 Questions (5–8 Marks)
+          </span>
+          <span class="px-2.5 py-1 rounded-full bg-slate-800 border border-slate-700 text-slate-300 font-medium">
             169 Verified PYQs
           </span>
           <span class="px-2.5 py-1 rounded-full bg-amber-950/80 border border-amber-800/80 text-amber-300 font-medium">
@@ -82,6 +82,17 @@ onUnmounted(() => {
     <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
       <!-- Current Affairs Integration Banner -->
       <CurrentAffairsStrip note-id="NOTE-TEL-MOVEMENT" class="mb-8" />
+
+      <!-- 2026 Predicted Question Patterns Callout -->
+      <div class="mb-8 rounded-xl border border-amber-500/30 bg-amber-500/5 p-4 flex items-start gap-3">
+        <UIcon name="i-heroicons-sparkles" class="h-5 w-5 text-amber-400 shrink-0 mt-0.5" />
+        <div>
+          <p class="text-[12px] font-semibold uppercase tracking-wider text-amber-400">Predicted 2026 Question Patterns</p>
+          <p class="mt-1 text-[13px] leading-relaxed text-slate-300">
+            <strong class="text-white">Primary Format:</strong> Chronological Sequencing of agitations (Million March ➔ Sakala Janula Samme ➔ Sagaraharam ➔ Sadak Bandh) and <strong class="text-white">Committee / Accord Pairing</strong> (Gentlemen's Agreement, 8-Point, 5-Point, 6-Point Formula, Srikrishna Committee recommendations).
+          </p>
+        </div>
+      </div>
 
       <!-- Exam Pattern Coverage Strip -->
       <div class="mb-8 p-4 rounded-xl bg-slate-950 border border-slate-800">
