@@ -9,7 +9,11 @@ Persistent rules for every agent working in this repo. Read this before any task
 - FSRS via `ts-fsrs`. Never hand-roll SM-2 or Leitner.
 - No PWA, no service workers, no offline caching.
 - No Framer Motion, no bespoke animation elsewhere. GSAP only for topics that pass the visual rule below. Plain CSS/Nuxt UI defaults for everything else.
-- **generate_image tool IS always available and must be used freely**: Use `generate_image` for ANY diagram, map, chart, or visual that helps a student understand a topic - irrigation zone maps, constitutional hierarchies, historical timelines, battle maps, science diagrams, anything. Never say "no image available" or skip image generation. Generate as many images per topic as are useful. Place each generated image in `assets-to-upload/<subject>/filename.webp` and reference as `/images/<subject>/filename.webp`. There is NO limit on how many images a topic can have.
+- **Image sourcing workflow - always follow this order**:
+  1. **Search online first** (`search_web` or `read_url_content`): Look for an existing map, diagram, or chart from Wikipedia, NCERT, Survey of India, government portals, or educational sites. If a clear, accurate, publicly usable image exists - download/reference it.
+  2. **Generate with `generate_image` only if**: (a) no suitable image was found online, OR (b) the topic needs a custom annotated diagram that no existing image provides (e.g. color-coded exam-specific zones, specific tributary labels, memory-hack layouts).
+  3. **Never skip visuals entirely** - if search finds nothing and generation fails, try a different search query or retry generation. "No image" is never an acceptable final answer for spatial/hierarchical topics.
+  4. Place sourced or generated images in `assets-to-upload/<subject>/filename.webp` - same pipeline regardless of source.
 
 ## Images - strict rules, never break these
 
@@ -70,7 +74,7 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - Tier is computed per topic from its real, verified PYQ count - never assumed from the subject's general weight. Tier 1 (10+): full note. Tier 2 (3-9): compact note. Tier 3 (<3): flashcards only, no note.
 - The visual rule is independent of tier: any topic - even Tier 2 - keeps a map/diagram if its facts are genuinely spatial, chronological, or hierarchical. A flat list never gets one, regardless of tier.
 - **Image placement flexibility**: Images, maps, and diagrams can be placed ANYWHERE on a note page where relevant (at the top, inside deep-dive sections, after river/subtopic tables, or next to specific facts). There are no rigid placement restrictions - place visuals wherever they best clarify exam content.
-- **Generate as many images as are useful - no limit, no justification needed**: If a visual helps the student, generate it and add it. No cap per topic, no cap per section, no cap per note page. Each subtopic, each canal system, each dam, each zone, each historical event - if a diagram or map would help, generate it with `generate_image` and embed it. Never skip or reduce images to "keep the page clean". More visuals = better learning. The only question is: does this image help the student understand or remember the exam content? If yes, generate it.
+- **As many images as are useful - no limit**: No cap per topic, per section, or per note page. Each subtopic, each canal system, each dam, each zone, each historical event - if a visual helps the student understand or remember the exam content, add it. Always search online first; generate with `generate_image` only when nothing suitable exists or a custom annotated version is clearly better. Never reduce images to "keep the page clean".
 - A note's comprehension-gate MCQs never enter the FSRS queue directly. Passing the gate is what unlocks the note's atomic flashcards and its real PYQs into the queue.
 - Prefer real, verified PYQs everywhere. Any synthetic/practice question must be explicitly labeled as such - never presented as a real PYQ.
 - Current affairs are a separate content type, never edited into a note's markdown file.
