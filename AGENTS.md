@@ -302,19 +302,18 @@ GateQuiz self-fetches from `server/api/gate/[noteId].get.ts`. You MUST:
 2. Save output to `content/data/gates/forests-of-india.json` (canonical schema: `note_id`, `pass_threshold`, `questions[].correct_answer`)
 3. Add an import + registry entry in `server/api/gate/[noteId].get.ts`
 
-**Step 3 - Run CA extraction to get tagged cards:**
-```bash
-python3 scripts/pib_ca_pipeline/extract_ca_cards.py 500
-```
-Gemini will auto-tag articles matching NOTE-GEO-FORESTS with `related_topic_ids`. PRID-based resume means re-runs are safe and cheap.
+**Step 4 - Complete Current Affairs Tagging (Strict Rule: Zero Omissions):**
+- **Every single relevant card in `content/current-affairs/*.md` must be tagged** with `NOTE-{SECTION}-{TOPIC}`.
+- **Never tag just an arbitrary 1-3 cards.** Scan the entire `content/current-affairs/` directory to attach all matching events (e.g. all relevant reports, schemes, appointments, summits, or state orders).
+- If fewer than 3 matching cards exist in the database, extract new cards from PIB (`extract_ca_cards.py`) or create official state cards so the student gets comprehensive current coverage.
 
-**Step 4 - Verify in browser:**
-Open the note page. The CurrentAffairsStrip must render at least one card.
+**Step 5 - Verify in browser:**
+Open the note page. The CurrentAffairsStrip must render all tagged cards in the carousel.
 A topic is not done until this is visible. If strip is empty, check:
-- note-id prop matches the related_topic_ids in the .md files exactly
-- content.config.ts has the current_affair collection defined
+- `note-id` prop matches the `related_topic_ids` in the `.md` files exactly
+- `content.config.ts` has the `current_affair` collection defined
 - `server/api/gate/[noteId].get.ts` has the gate registered
-- Dev server restarted after adding new .md files
+- Dev server restarted or refreshed after adding new `.md` files
 
 ### New-since-last-visit tracking
 
@@ -323,7 +322,6 @@ A topic is not done until this is visible. If strip is empty, check:
 - Layer 2: Supabase `topic_visits` table (cloud sync when logged in)
 
 Cards split automatically into "New since last visit" (saffron highlight) and "Earlier" (collapsed). First visit shows all cards under "Earlier" - never floods with backlog.
-
 
 - The due-review count is the homepage's dominant element - never one of several equal-weight stat cells.
 - The subject list ranks by real PYQ weightage - never a static alphabetical list.
@@ -348,10 +346,11 @@ Cards split automatically into "New since last visit" (saffron highlight) and "E
 Whenever the user provides a prompt in the format:
 `Topic - [Topic Name] ([Subject])` (e.g., `Topic - Forests of India (Geography)`), the agent must immediately execute the complete topic creation pipeline without asking any clarifying questions:
 
-1. Query `data/pyq_enriched_master.json` for verified PYQs matching the topic to compute the Tier and load question content.
-2. Generate the full `.vue` note page at `pages/notes/[subject]/[topic-slug].vue` following the 8-section layout (01 Visual, 02 Intro, 03 Deep Dive with subject scaffold, 04 Data, 05 Memory Hacks, 06 PYQs, 07 Gate, 08 Current Affairs).
-3. Generate the 5-MCQ Gate Quiz JSON at `content/data/gates/[topic-slug].json`.
-4. Register the gate in `server/api/gate/[noteId].get.ts`.
-5. Add the sidebar navigation link in `layouts/default.vue`.
-6. Run `npm run prebuild` to verify zero em-dashes and clean compilation.
-7. Commit and push the changes.
+1. **PYQ Extraction & Tier Determination**: Query `data/pyq_enriched_master.json` for verified PYQs matching the topic to compute the Tier and load question content.
+2. **Authentic Image Sourcing**: Search online first (Wikipedia/Wikimedia Commons/government portals) for real maps, diagrams, and photographs. Download directly to `assets-to-upload/[subject]/` and preview in `public/images/[subject]/`.
+3. **Comprehensive Current Affairs Attachment (All Matching Cards)**: Scan the entire `content/current-affairs/*.md` database and tag **every matching card** to `NOTE-[SECTION]-[TOPIC]`. If no cards exist in the database, extract or create official cards from PIB/State sources. Every matching card must be attached - never an arbitrary subset.
+4. **Generate Full Note Page**: Generate `pages/notes/[subject]/[topic-slug].vue` following the 8-section layout (01 Visual Architecture, 02 Intro, 03 Deep Dive with subject scaffold, 04 Data, 05 Memory Hacks, 06 Interactive PYQs, 07 Comprehension Gate, 08 Current Affairs).
+5. **Comprehension Gate Setup**: Generate the 5-MCQ Gate Quiz JSON at `content/data/gates/[topic-slug].json` and register the NOTE-ID in `server/api/gate/[noteId].get.ts`.
+6. **Navigation Updates**: Add the live topic link to `pages/notes/[subject]/index.vue` and check default layout sidebar navigation.
+7. **Prebuild & Verification**: Run `npm run prebuild` (zero em-dashes check) and verify `HTTP 200` on the live URL. Verify that both `<GateQuiz>` and `<CurrentAffairsStrip>` render live data.
+8. **Git Commit & Push**: Commit code and images together (`git push origin main`) and pull back after GitHub Action Cloudinary conversion.
