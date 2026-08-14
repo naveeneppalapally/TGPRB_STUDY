@@ -291,7 +291,7 @@ body {
 .table-note tbody tr { transition: background-color 0.1s ease; }
 .table-note tbody tr:hover { background: var(--accent-soft); }
 .table-note tbody tr:last-child td { border-bottom: none; }
-.table-note td:first-child, .table-note th:first-child { padding-left: 2px; }
+.table-note td:first-child, .table-note th:first-child { padding-left: 20px; }
 .table-note .cell-key { color: var(--text-1); font-weight: 600; }
 .table-note .cell-num {
   font-family: 'JetBrains Mono', ui-monospace, monospace;

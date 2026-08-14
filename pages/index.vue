@@ -248,7 +248,7 @@
         <table class="table-note min-w-[640px]">
           <thead>
             <tr>
-              <th class="w-14 px-6 text-left">#</th>
+              <th class="w-12">#</th>
               <th class="px-4">Subject</th>
               <th class="px-4 text-right">PYQs</th>
               <th class="w-[32%] px-4">Coverage</th>
@@ -262,7 +262,7 @@
               class="cursor-pointer"
               @click="openSubject(s)"
             >
-              <td class="px-6 font-mono text-[11px] t-lo num">{{ String(i + 1).padStart(2, '0') }}</td>
+              <td class="font-mono text-[11px] t-lo num">{{ String(i + 1).padStart(2, '0') }}</td>
               <td class="px-4">
                 <div class="flex items-center gap-2">
                   <span class="cell-key">{{ s.name }}</span>
