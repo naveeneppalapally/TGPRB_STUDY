@@ -92,7 +92,7 @@
           <!-- NASA Landsat Himalayan Relief Map -->
           <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 text-center shadow-sm">
             <img
-              src="/images/geography/himalayas-nasa-relief.jpg"
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731874/geography/himalayas-nasa-relief.webp"
               alt="NASA Landsat relief showing the Himalayas, Tibetan plateau, Indus and Ganga gorges, and major mountain ranges"
               class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
             />
@@ -329,7 +329,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/k2-godwin-austen.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731872/geography/k2-godwin-austen.webp"
                     alt="Mount K2 Godwin Austen in the Karakoram Range"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -348,7 +348,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/kanchenjunga-peak.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731871/geography/kanchenjunga-peak.webp"
                     alt="Kangchenjunga peak viewed from Sikkim"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -367,7 +367,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/nanda-devi-peak.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731870/geography/nanda-devi-peak.webp"
                     alt="Mount Nanda Devi in Garhwal Himalayas Uttarakhand"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -386,7 +386,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/karewas-kashmir-valley.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731870/geography/karewas-kashmir-valley.webp"
                     alt="Kashmir Valley with Karewa terraces and Pir Panjal range"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -520,7 +520,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/zojila-mountain-pass.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731864/geography/zojila-mountain-pass.webp"
                       alt="Zoji La pass highway connecting Srinagar and Leh"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -536,7 +536,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/nathula-pass-sikkim.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731869/geography/nathula-pass-sikkim.webp"
                       alt="Nathu La border pass in Sikkim"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -552,7 +552,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/rohtang-pass-himachal.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731866/geography/rohtang-pass-himachal.webp"
                       alt="Rohtang Pass in Himachal Pradesh"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -568,7 +568,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/palghat-gap-western-ghats.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731868/geography/palghat-gap-western-ghats.webp"
                       alt="Palghat Gap in the Western Ghats between Nilgiris and Anamalai"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -633,7 +633,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/anamudi-western-ghats.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731876/geography/anamudi-western-ghats.webp"
                       alt="Anamudi peak in Anamalai Hills of Western Ghats in Kerala"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -650,7 +650,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/doddabetta-nilgiri-hills.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731875/geography/doddabetta-nilgiri-hills.webp"
                       alt="Dodda Betta peak in Nilgiri Hills of Tamil Nadu"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -667,7 +667,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/guru-shikhar-aravalli.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731875/geography/guru-shikhar-aravalli.webp"
                       alt="Guru Shikhar peak in Aravalli Range at Mount Abu"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -684,7 +684,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/satpura-mahadeo-range.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731865/geography/satpura-mahadeo-range.webp"
                       alt="Satpura mountain ranges in Central India"
                       class="h-full w-full object-cover"
                       loading="lazy"
