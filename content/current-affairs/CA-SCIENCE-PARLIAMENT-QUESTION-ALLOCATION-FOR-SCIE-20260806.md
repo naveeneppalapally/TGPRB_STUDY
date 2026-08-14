@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "National R&D Institutions and Allocation"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-INSTITUTIONS", \"NOTE-GEO-MOUNTAINS\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "Economy"
 topic: "India-Canada Bilateral Economic Partnership"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-INT-RELATIONS"]
+related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-INT-RELATIONS", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

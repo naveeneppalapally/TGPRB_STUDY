@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "NCDC Grant Assistance to Cooperative Federations"
-related_topic_ids: ["NOTE-ECO-COOPERATIVES", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-COOPERATIVES", "NOTE-TEL-ECONOMY", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

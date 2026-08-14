@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Jal Sanchay Jan Bhagidari (JSJB) Awards 2025"
-related_topic_ids: ["NOTE-SCH-JALSHAKTI", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-SCH-JALSHAKTI", "NOTE-TEL-INITIATIVES", \"NOTE-GEO-IRRIGATION\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

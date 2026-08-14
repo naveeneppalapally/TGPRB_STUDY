@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "11th International Day of Yoga Countdown at LB Stadium Hyderabad"
-related_topic_ids: ["NOTE-TEL-EVENTS", "NOTE-GS-MISC"]
+related_topic_ids: ["NOTE-TEL-EVENTS", "NOTE-GS-MISC", \"NOTE-TEL-MOVEMENT\"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

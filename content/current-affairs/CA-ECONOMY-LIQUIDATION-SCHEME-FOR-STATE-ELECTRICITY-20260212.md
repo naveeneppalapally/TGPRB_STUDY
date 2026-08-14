@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Electricity Late Payment Surcharge Rules 2022"
-related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-TEL-ECONOMY", \"NOTE-TEL-MOVEMENT\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

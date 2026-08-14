@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "PESA Act 1996 and PESA Mahotsav 2025"
-related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-CONSTITUTION"]
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-CONSTITUTION", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Economy"
 topic: "India Defence Production and Exports Milestones"
-related_topic_ids: ["NOTE-DEF-PRODUCTION", "NOTE-ECO-EXPORTS"]
+related_topic_ids: ["NOTE-DEF-PRODUCTION", "NOTE-ECO-EXPORTS", \"NOTE-TEL-MOVEMENT\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "National Perspective Plan for Interlinking of Rivers"
-related_topic_ids: ["NOTE-GEO-RIVERS", "NOTE-TEL-IRRIGATION", \"NOTE-GEO-DAMS\"]
+related_topic_ids: ["NOTE-GEO-RIVERS", "NOTE-TEL-IRRIGATION", \"NOTE-GEO-DAMS\", \"NOTE-GEO-IRRIGATION\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

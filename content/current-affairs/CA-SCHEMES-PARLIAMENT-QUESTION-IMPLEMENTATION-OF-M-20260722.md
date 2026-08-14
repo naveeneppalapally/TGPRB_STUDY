@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "Mission Mausam"
-related_topic_ids: ["NOTE-SCI-METEOROLOGY", "NOTE-SCH-GOVT"]
+related_topic_ids: ["NOTE-SCI-METEOROLOGY", "NOTE-SCH-GOVT", \"NOTE-POL-UNION-EXEC\", \"NOTE-GEO-IRRIGATION\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

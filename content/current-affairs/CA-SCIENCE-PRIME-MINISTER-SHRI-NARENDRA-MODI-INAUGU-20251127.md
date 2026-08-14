@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Skyroot Infinity Campus Hyderabad"
-related_topic_ids: ["NOTE-SCI-SPACE", "NOTE-TEL-INITIATIVES", \"NOTE-GEO-DAMS\"]
+related_topic_ids: ["NOTE-SCI-SPACE", "NOTE-TEL-INITIATIVES", \"NOTE-GEO-DAMS\", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

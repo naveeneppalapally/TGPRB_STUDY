@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India's Largest Integrated Textile Park in Dhar"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-TEL-HISTORY"]
+related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-TEL-HISTORY", \"NOTE-POL-UNION-EXEC\", \"NOTE-TEL-MOVEMENT\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

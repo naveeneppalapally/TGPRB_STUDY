@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Modernization of Command Area Development and Water Management Sub-Scheme"
-related_topic_ids: ["NOTE-SCHEMES-AGRICULTURE", "NOTE-GEO-IRRIGATION", \"NOTE-GEO-DAMS\"]
+related_topic_ids: ["NOTE-SCHEMES-AGRICULTURE", "NOTE-GEO-IRRIGATION", \"NOTE-GEO-DAMS\", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

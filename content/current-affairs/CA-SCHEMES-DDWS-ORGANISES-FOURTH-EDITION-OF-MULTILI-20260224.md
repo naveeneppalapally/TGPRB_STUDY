@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Jal Jeevan Mission - Sujal Gram Samvad & Jal Mahotsav"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-POL-PANCHAYATI-RAJ"]
+related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-POL-PANCHAYATI-RAJ", \"NOTE-GEO-IRRIGATION\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

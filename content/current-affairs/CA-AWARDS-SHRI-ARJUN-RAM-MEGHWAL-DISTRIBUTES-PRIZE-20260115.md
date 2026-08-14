@@ -4,7 +4,7 @@ type: "current_affair"
 category: "awards"
 exam_section: "Polity"
 topic: "26th National Youth Parliament Competition 2024-25 Winners"
-related_topic_ids: ["NOTE-POL-PARLIAMENT"]
+related_topic_ids: ["NOTE-POL-PARLIAMENT", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

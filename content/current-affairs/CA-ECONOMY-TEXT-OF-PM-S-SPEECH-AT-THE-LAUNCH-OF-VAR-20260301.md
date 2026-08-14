@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Infrastructure Projects and Proposed High-Speed Rail Corridors"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-ECONOMY", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

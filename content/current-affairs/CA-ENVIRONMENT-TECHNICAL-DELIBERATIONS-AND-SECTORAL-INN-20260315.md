@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "National Conference on Cold Water Fisheries"
-related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-ECON-FISHERIES"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-ECON-FISHERIES", \"NOTE-GEO-MOUNTAINS\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

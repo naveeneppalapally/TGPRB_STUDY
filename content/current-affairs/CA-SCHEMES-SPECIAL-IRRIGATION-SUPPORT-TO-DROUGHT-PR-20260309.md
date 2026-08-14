@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PMKSY Funding Pattern and Irrigation Projects"
-related_topic_ids: ["NOTE-SCHEMES-CENTRAL", "NOTE-TEL-IRRIGATION"]
+related_topic_ids: ["NOTE-SCHEMES-CENTRAL", "NOTE-TEL-IRRIGATION", \"NOTE-TEL-MOVEMENT\", \"NOTE-GEO-IRRIGATION\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

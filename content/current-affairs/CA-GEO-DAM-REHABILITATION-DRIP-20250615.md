@@ -5,6 +5,7 @@ category: "geography"
 exam_section: "Geography"
 topic: "Dam Safety and Rehabilitation in India"
 related_topic_ids:
+  - \"NOTE-GEO-IRRIGATION\"
   - \"NOTE-GEO-DAMS\"
   - "NOTE-GEO-DRAINAGE"
 is_telangana_focus: false

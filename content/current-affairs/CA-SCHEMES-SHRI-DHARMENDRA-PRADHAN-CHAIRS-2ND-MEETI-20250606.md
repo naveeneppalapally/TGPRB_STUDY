@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Promotion of Bharatiya Bhasha and AI Translation Tools in Education"
-related_topic_ids: ["NOTE-POL-CONSTITUTION", "NOTE-EDU-SCHEMES"]
+related_topic_ids: ["NOTE-POL-CONSTITUTION", "NOTE-EDU-SCHEMES", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

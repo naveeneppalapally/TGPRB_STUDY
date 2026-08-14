@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Development Projects Worth ₹9,400 Crore Inaugurated in Telangana"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-TEL-INFRA"]
+related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-TEL-INFRA", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

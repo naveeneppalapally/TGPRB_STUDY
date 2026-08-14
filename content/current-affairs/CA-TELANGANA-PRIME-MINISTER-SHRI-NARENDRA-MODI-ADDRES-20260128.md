@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Wings India 2026 Summit in Hyderabad"
-related_topic_ids: ["NOTE-TEL-INFRA", "NOTE-ECO-INFRA"]
+related_topic_ids: ["NOTE-TEL-INFRA", "NOTE-ECO-INFRA", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

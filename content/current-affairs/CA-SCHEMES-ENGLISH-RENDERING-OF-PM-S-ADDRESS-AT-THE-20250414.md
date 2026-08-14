@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "135th Ambedkar Jayanti and Industrialization Vision"
-related_topic_ids: ["NOTE-POL-CONSTITUTION", "NOTE-ECO-INDUSTRY"]
+related_topic_ids: ["NOTE-POL-CONSTITUTION", "NOTE-ECO-INDUSTRY", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

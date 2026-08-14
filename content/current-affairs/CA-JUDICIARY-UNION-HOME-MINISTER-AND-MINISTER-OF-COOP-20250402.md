@@ -4,7 +4,7 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "Waqf (Amendment) Bill 2025 Key Provisions"
-related_topic_ids: ["NOTE-POL-PARLIAMENT"]
+related_topic_ids: ["NOTE-POL-PARLIAMENT", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

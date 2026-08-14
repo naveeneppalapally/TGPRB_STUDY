@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "DRDO Long-Duration Scramjet Engine Test"
-related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-SCI-AEROSPACE"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-SCI-AEROSPACE", \"NOTE-GEO-MOUNTAINS\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

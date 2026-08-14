@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Amaravati Development Projects Outlay"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-STATE-AP"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-STATE-AP", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

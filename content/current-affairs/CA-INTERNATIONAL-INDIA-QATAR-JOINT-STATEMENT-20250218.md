@@ -4,7 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "India-Qatar Strategic Partnership and Trade Agreements"
-related_topic_ids: ["NOTE-INT-RELATIONS", "NOTE-ECO-TRADE"]
+related_topic_ids: ["NOTE-INT-RELATIONS", "NOTE-ECO-TRADE", \"NOTE-POL-UNION-EXEC\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

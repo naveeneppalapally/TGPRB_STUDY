@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Jal Jeevan Mission and Atal Bhujal Yojana Progress"
-related_topic_ids: ["NOTE-SCHEMES-WATER", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-SCHEMES-WATER", "NOTE-TEL-INITIATIVES", \"NOTE-GEO-IRRIGATION\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"
