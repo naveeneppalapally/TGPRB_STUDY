@@ -3,7 +3,7 @@
     <!-- Reading progress -->
     <div
       class="fixed left-0 top-0 z-50 h-[2px] bg-gradient-to-r from-saffron-500 to-saffron-400 transition-[width] duration-100"
-      :style="{ width: readProgress + "%" }"
+      :style="{ width: readProgress + '%' }"
       aria-hidden="true"
     />
 
