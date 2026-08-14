@@ -268,7 +268,7 @@ const subjects = [
 
 const subjectLinks = subjects.map(s =>
   s.to
-    ? { label: s.name, icon: s.icon, to: s.to, badge: '1' }
+    ? { label: s.name, icon: s.icon, to: s.to }
     : { label: s.name, icon: s.icon, click: () => queuedFeature(s.name) },
 )
 

@@ -25,13 +25,13 @@
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
             <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3–4 Questions (4–5 Marks)</span>
             <span class="chip">29 verified PYQs</span>
-            <span class="chip">Geography & TG Economy</span>
+            <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
             Irrigation in India & Telangana
           </h1>
-          <p class="mt-3 max-w-2xl text-body leading-relaxed t-mid">
-            TGPRB Constable / SI · 2–4 direct questions per paper. Master the 4 irrigation sources, multi-purpose dams, canal headworks, Telangana lift irrigation systems, and PMKSY schemes.
+          <p class="mt-3 max-w-xl text-body leading-relaxed t-mid">
+            TGPRB Constable / SI · 2–4 direct questions per paper. Learn the 4 sources, major canal headworks, multipurpose dams, and Telangana lift irrigation schemes.
           </p>
           <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
@@ -46,7 +46,7 @@
           </div>
         </header>
 
-        <!-- ══ Coverage strip - How TGPRB tests Irrigation ══ -->
+        <!-- ══ Coverage strip - How TGPRB tests this topic ══ -->
         <section class="mb-10">
           <p class="eyebrow mb-3">How TGPRB tests this topic</p>
           <div class="flex flex-wrap gap-2">
@@ -61,7 +61,7 @@
             </span>
           </div>
           <p class="mt-2.5 text-body-xs t-lo">
-            Covers all core tested dimensions: Source percentages, Dam-River pairs, Canal headworks, Lift irrigation stages, and Micro-irrigation subsidies.
+            Cover all six and you have everything TGPRB has ever asked about irrigation and dams here. Anything outside these six is context, not exam material.
           </p>
 
           <!-- 2026 Predicted Question Format Callout -->
@@ -70,53 +70,56 @@
             <div>
               <p class="text-[12px] font-semibold uppercase tracking-wider accent">Predicted 2026 Question Patterns</p>
               <p class="mt-1 text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Primary Format:</strong> Match the Following (Project ↔ River / District) and <strong class="t-hi">4-Statement True/False Verifications</strong> on Canal origins (Harike Barrage) and PMKSY components (Per Drop More Crop). Trap alert: Watch out for Tank vs Tube-well leading state traps.
+                <strong class="t-hi">Primary Format:</strong> Match the Following (Project ↔ River / Dam) and <strong class="t-hi">4-Statement True/False Verifications</strong> on Canal origins (Harike Barrage) and PMKSY components (Per Drop More Crop). Trap alert: Watch out for Tank vs Tube-well leading state traps.
               </p>
             </div>
           </div>
         </section>
 
-        <!-- ── 01 · Visual Scaffold ────────────────────────────────────── -->
-        <section id="visual" class="mb-14 scroll-mt-20">
+        <!-- ── 01 · The physical map ───────────────────────────────────── -->
+        <section id="map" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">01</span>
-            <h2 class="sec-title">Visual Architecture</h2>
+            <h2 class="sec-title">The Map</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">spatial · hierarchy</span>
+            <span class="sec-meta hidden sm:block">spatial · anchor</span>
           </header>
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
-            Irrigation in India is spatially bifurcated: <strong class="t-hi">Alluvial North</strong> relies on Wells & Canals; <strong class="t-hi">Peninsular South</strong> relies on Tanks & Lift Irrigation due to hard crystalline basalt terrain.
+            Irrigation in India is spatially bifurcated: the <strong class="t-hi">Alluvial North</strong> relies on Wells & Perennial Canals from Himalayan rivers; the <strong class="t-hi">Peninsular South</strong> relies on Tanks & Lift Irrigation due to hard crystalline basalt terrain.
           </p>
 
-          <!-- Infographic Card -->
-          <div class="panel p-6 mb-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
-              <div class="rounded-xl border b-line bg-sub p-4">
-                <p class="text-[28px] font-bold font-mono accent">62-64%</p>
-                <p class="text-[14px] font-semibold t-hi mt-1">Wells & Tube-wells</p>
-                <p class="text-[11.5px] t-lo mt-1">Dominant in UP, Rajasthan, Punjab, Gujarat. Largest national share.</p>
-              </div>
-              <div class="rounded-xl border b-line bg-sub p-4">
-                <p class="text-[28px] font-bold font-mono text-sky-500">24-26%</p>
-                <p class="text-[14px] font-semibold t-hi mt-1">Canals</p>
-                <p class="text-[11.5px] t-lo mt-1">Dominant in UP, Rajasthan (Indira Gandhi Canal), Punjab, Haryana.</p>
-              </div>
-              <div class="rounded-xl border b-line bg-sub p-4">
-                <p class="text-[28px] font-bold font-mono text-amber-500">3-4%</p>
-                <p class="text-[14px] font-semibold t-hi mt-1">Tanks</p>
-                <p class="text-[11.5px] t-lo mt-1">Peninsular India (TN, AP, Telangana). Crystalline rock terrain.</p>
-              </div>
-              <div class="rounded-xl border b-line bg-sub p-4">
-                <p class="text-[28px] font-bold font-mono text-emerald-500">6-8%</p>
-                <p class="text-[14px] font-semibold t-hi mt-1">Other Sources</p>
-                <p class="text-[11.5px] t-lo mt-1">Lift irrigation, check dams, springs, water harvesting structures.</p>
-              </div>
+          <!-- High-Quality Labeled Physical River & Dam Map of India -->
+          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-4 text-center shadow-sm">
+            <img
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp"
+              alt="Physical Map of India showing major river systems, multipurpose dam reservoirs, and canal command areas"
+              class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
+            />
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 text-body-xs text-gray-500 font-mono">
+              <span>Physical relief map with major river basins & reservoirs (Wikimedia Commons / CC BY-SA 3.0)</span>
+              <a href="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp" target="_blank" class="text-amber-600 hover:underline flex items-center gap-1 font-sans font-medium">
+                Open Full Res ↗
+              </a>
             </div>
+          </div>
+
+          <!-- Hierarchy text summary artifact -->
+          <div class="artifact overflow-hidden mb-6">
+            <div class="flex items-center justify-between border-b border-[var(--ink-card-line)] px-5 py-3">
+              <p class="font-mono text-[10px] uppercase tracking-[0.16em] text-[#a89f8d]">
+                Irrigation Sources Hierarchy at a Glance
+              </p>
+              <UIcon name="i-heroicons-command-line" class="h-3.5 w-3.5 text-[#a89f8d]" />
+            </div>
+            <pre class="overflow-x-auto px-5 py-4 font-mono text-body-xs leading-[1.75] text-[#e9e2d2]">1. Wells & Tube-wells : ~62-64% (Largest share | UP leads in Tube-wells | Rajasthan, Gujarat, MP)
+2. Canals             : ~24-26% (Second largest | UP leads network | Indira Gandhi Canal in Thar)
+3. Tanks              : ~3-4%   (Dominant in South India | TN, AP, Telangana | Hard rock terrain)
+4. Other Sources      : ~6-8%   (Lift irrigation schemes, springs, water harvesting structures)</pre>
           </div>
         </section>
 
-        <!-- ── 02 · Sources Breakdown ──────────────────────────────────── -->
+        <!-- ── 02 · Introduction ────────────────────────────────────────── -->
         <section id="overview" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">02</span>
@@ -125,48 +128,66 @@
             <span class="sec-meta hidden sm:block">macro data</span>
           </header>
 
-          <div class="space-y-6 text-body leading-[1.8] t-mid">
-            <div class="panel p-5">
-              <h3 class="font-display text-[17px] font-bold t-hi mb-2">1. Wells and Tube-wells (62–64% of Net Irrigated Area)</h3>
-              <p>
-                Wells and tube-wells form the backbone of Indian agriculture since the Green Revolution (1960s). High adoption is driven by independent control over water delivery, availability of rural electrification, and submersible pumps.
-              </p>
-              <ul class="mt-3 list-disc list-inside space-y-1 text-[13px] t-lo">
-                <li><strong class="t-hi">Leading State:</strong> <span class="accent font-medium">Uttar Pradesh</span> leads India in both total well-irrigated area and tube-well density.</li>
-                <li><strong class="t-hi">Other High States:</strong> Rajasthan, Madhya Pradesh, Punjab, Gujarat, and Haryana.</li>
-                <li><strong class="t-hi">Exam Distinction:</strong> Open wells are common in Deccan traps, while deep tube-wells dominate the Gangetic alluvial plain.</li>
-              </ul>
-            </div>
+          <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
+            India has the <strong class="t-hi">largest net irrigated area in the world</strong> (~70+ million hectares). Irrigation is essential because over 75% of annual rainfall is concentrated within the 4 months of the Southwest Monsoon (June-September), leaving the remaining 8 months dry.
+          </p>
 
-            <div class="panel p-5">
-              <h3 class="font-display text-[17px] font-bold t-hi mb-2">2. Canals (24–26% of Net Irrigated Area)</h3>
-              <p>
-                Second largest source. Canals are classified into <strong class="t-hi">Inundation Canals</strong> (draw water only during floods, no barrage) and <strong class="t-hi">Perennial Canals</strong> (draw water year-round using barrages/dams across perennial rivers).
-              </p>
-              <ul class="mt-3 list-disc list-inside space-y-1 text-[13px] t-lo">
-                <li><strong class="t-hi">Leading State:</strong> <span class="accent font-medium">Uttar Pradesh</span> has the largest canal network in India (Upper Ganga Canal, Lower Ganga Canal, Sharda Canal).</li>
-                <li><strong class="t-hi">Key Feature:</strong> Perennial canals dominate Punjab, Haryana, and Western Rajasthan due to Himalayan glacier-fed rivers.</li>
-              </ul>
+          <div class="panel p-5 sm:p-6 mb-6">
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Irrigation Source Distribution Matrix</h3>
+            <div class="overflow-x-auto">
+              <table class="table-note">
+                <thead>
+                  <tr>
+                    <th>Source Type</th>
+                    <th>Share (%)</th>
+                    <th>Leading States</th>
+                    <th>Geological / Economic Drivers</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-key">Wells & Tube-wells</td>
+                    <td class="font-mono accent font-semibold">62–64%</td>
+                    <td>Uttar Pradesh, Rajasthan, Punjab, Gujarat, MP</td>
+                    <td>Soft alluvial soil allows easy boring; rapid expansion of rural electricity & submersible pump sets.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Canals</td>
+                    <td class="font-mono text-sky-500 font-semibold">24–26%</td>
+                    <td>Uttar Pradesh, Rajasthan, Punjab, Haryana, AP</td>
+                    <td>Perennial snow-fed Himalayan rivers provide steady water; large state-funded multi-purpose barrages.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Tanks</td>
+                    <td class="font-mono text-amber-500 font-semibold">3–4%</td>
+                    <td>Tamil Nadu, Andhra Pradesh, Telangana, Karnataka</td>
+                    <td>Impermeable Deccan basalt rocks; natural plateau depressions; seasonal non-perennial rivers.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Other Sources</td>
+                    <td class="font-mono text-emerald-500 font-semibold">6–8%</td>
+                    <td>Telangana, Maharashtra, HP, J&K</td>
+                    <td>Multi-stage river lift irrigation schemes, natural mountain springs, check dams.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
 
-            <div class="panel p-5">
-              <h3 class="font-display text-[17px] font-bold t-hi mb-2">3. Tanks (3–4% of Net Irrigated Area)</h3>
-              <p>
-                Tank irrigation is an ancient, community-managed irrigation practice predominant in <strong class="t-hi">Peninsular South India</strong> (Tamil Nadu, Andhra Pradesh, Telangana, Karnataka).
-              </p>
-              <div class="callout callout-saffron mt-3">
-                <p class="callout-title">Why Tank Irrigation Dominates South India (High-Yield PYQ Reason):</p>
-                <p class="callout-body mt-1">
-                  1. <strong>Impermeable Bedrock:</strong> Hard crystalline basalt and granite rocks make digging deep tube-wells difficult and costly.<br />
-                  2. <strong>Undulating Topography:</strong> Natural depressions in the Deccan plateau form ideal natural water storage catchments.<br />
-                  3. <strong>Seasonal Non-Perennial Rivers:</strong> Peninsular rivers dry up post-monsoon, making perennial canal systems unviable without large storage tanks.
-                </p>
-              </div>
-            </div>
+          <div class="callout callout-saffron mb-6">
+            <p class="callout-title">
+              <UIcon name="i-heroicons-chart-bar" class="h-4 w-4" />
+              Why Tank Irrigation Dominates South India (Frequent TGPRB PYQ)
+            </p>
+            <p class="callout-body">
+              1. <strong>Hard Rock Shield:</strong> The crystalline, granite-gneiss bedrock of the Deccan Plateau makes well-drilling difficult.<br />
+              2. <strong>Natural Depressions:</strong> Undulating topography forms natural bowl basins where rainwater collects easily.<br />
+              3. <strong>Non-Perennial Rivers:</strong> Peninsular rivers are purely rain-fed and dry up in summer, necessitating tank storage (e.g. Kakatiya chain-tank system).
+            </p>
           </div>
         </section>
 
-        <!-- ── 03 · Multipurpose River Valley Projects ─────────────────── -->
+        <!-- ── 03 · Multipurpose Projects ──────────────────────────────── -->
         <section id="projects" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">03</span>
@@ -176,76 +197,91 @@
           </header>
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
-            Jawaharlal Nehru famously called these projects the <em class="t-hi">"Temples of Modern India"</em>. TGPRB frequently tests River ↔ Dam ↔ Beneficiary State matching pairs.
+            Multipurpose projects serve combined goals: irrigation, flood control, hydroelectric power, and soil conservation.
           </p>
 
-          <div class="panel overflow-x-auto mb-6">
-            <table class="table-note min-w-[680px]">
-              <thead>
-                <tr>
-                  <th class="pl-4">Project Name</th>
-                  <th>River</th>
-                  <th>State(s)</th>
-                  <th>Key Exam Fact / Superlative</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Bhakra-Nangal Project</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Sutlej</td>
-                  <td>Himachal Pradesh, Punjab, Haryana, Rajasthan</td>
-                  <td>Forms <strong class="t-hi">Govind Sagar</strong> reservoir. Highest concrete gravity dam in India (226 m).</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Hirakud Dam</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Mahanadi</td>
-                  <td>Odisha (Sambalpur)</td>
-                  <td><strong class="t-hi">Longest earthen dam</strong> in India (4.8 km main, 25.8 km total with dykes).</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Damodar Valley Corp (DVC)</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Damodar (Barakar, Konar)</td>
-                  <td>Jharkhand & West Bengal</td>
-                  <td><strong class="t-hi">First multipurpose project of independent India (1948)</strong>. Modeled on USA's Tennessee Valley Authority (TVA).</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Tehri Dam</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Bhagirathi (at Bhilangna confluence)</td>
-                  <td>Uttarakhand</td>
-                  <td><strong class="t-hi">Highest dam in India</strong> (260.5 m). Earth and rock-fill embankment dam.</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Sardar Sarovar Project</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Narmada</td>
-                  <td>Gujarat, MP, Maharashtra, Rajasthan</td>
-                  <td>Lifeline of Gujarat (Saurashtra/Kutch). Narmada Main Canal is world's largest lined irrigation canal.</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Nagarjuna Sagar Dam</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Krishna</td>
-                  <td>Telangana (Nalgonda) & AP (Palnadu)</td>
-                  <td><strong class="t-hi">World's largest masonry dam</strong>. Foundation laid on 10 Dec 1955 by Pt. Nehru. Right Canal: Jawahar Canal; Left Canal: Lal Bahadur Canal.</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Tungabhadra Project</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Tungabhadra</td>
-                  <td>Karnataka & Andhra Pradesh / Telangana</td>
-                  <td>Located at Hosapete (Pampa Sagar reservoir). Joint venture between Karnataka and erstwhile Andhra Pradesh.</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Idukki Dam</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Periyar</td>
-                  <td>Kerala</td>
-                  <td>Double curvature concrete <strong class="t-hi">arch dam</strong> built between Kuravan and Kurathi hills.</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Rihand Project (Govind Ballabh Pant Sagar)</td>
-                  <td class="font-mono text-saffron-600 dark:text-saffron-400">Rihand (Son tributary)</td>
-                  <td>Uttar Pradesh (Sonbhadra)</td>
-                  <td><strong class="t-hi">Largest man-made reservoir in India by surface area</strong>.</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="panel p-5 sm:p-6 mb-6">
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Major Multipurpose Projects in India</h3>
+            <div class="overflow-x-auto">
+              <table class="table-note">
+                <thead>
+                  <tr>
+                    <th>Project Name</th>
+                    <th>River</th>
+                    <th>State(s)</th>
+                    <th>Key Exam Fact / Superlative</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-key">Bhakra-Nangal</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Sutlej</td>
+                    <td>HP, Punjab, Haryana, Rajasthan</td>
+                    <td>Forms <strong class="t-hi">Govind Sagar</strong> reservoir. Highest concrete gravity dam in India (226 m).</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Hirakud Dam</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Mahanadi</td>
+                    <td>Odisha (Sambalpur)</td>
+                    <td><strong class="t-hi">Longest earthen dam</strong> in India (4.8 km main dam, 25.8 km total with dykes).</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Damodar Valley (DVC)</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Damodar (Barakar, Konar)</td>
+                    <td>Jharkhand & West Bengal</td>
+                    <td><strong class="t-hi">First multipurpose project of independent India (1948)</strong>. Modeled on USA's Tennessee Valley Authority (TVA). Dams: Tilaiya, Maithon, Panchet.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Tehri Dam</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Bhagirathi</td>
+                    <td>Uttarakhand</td>
+                    <td><strong class="t-hi">Highest dam in India</strong> (260.5 m). Earth and rock-fill embankment dam at confluence with Bhilangna.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Sardar Sarovar</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Narmada</td>
+                    <td>Gujarat, MP, Maharashtra, Rajasthan</td>
+                    <td>Lifeline of Gujarat (Saurashtra/Kutch). Narmada Main Canal carries water 458 km to the Rajasthan border.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Nagarjuna Sagar</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Krishna</td>
+                    <td>Telangana (Nalgonda) & AP (Palnadu)</td>
+                    <td><strong class="t-hi">World's largest masonry dam</strong>. Right canal: Jawahar Canal; Left canal: Lal Bahadur Canal. Foundation laid by Pt. Nehru on 10 Dec 1955.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Tungabhadra Project</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Tungabhadra</td>
+                    <td>Karnataka & Telangana / AP</td>
+                    <td>Located at Hosapete (Pampa Sagar reservoir). Supplies irrigation to Raichur and Jogulamba Gadwal.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Idukki Dam</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Periyar</td>
+                    <td>Kerala</td>
+                    <td>Double curvature concrete <strong class="t-hi">arch dam</strong> constructed between Kuravan and Kurathi granite hills.</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Rihand Project</td>
+                    <td class="font-mono text-saffron-600 dark:text-saffron-400">Rihand (Son tributary)</td>
+                    <td>Uttar Pradesh (Sonbhadra)</td>
+                    <td>Forms <strong class="t-hi">Govind Ballabh Pant Sagar</strong>, the largest artificial reservoir in India by surface area.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Northern Basin Map (Indus & Ganga) -->
+          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <img
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556254/geography/indus-river-basin-map.webp"
+              alt="Indus River Basin Map showing Harike Barrage, Bhakra Nangal Dam, Sutlej and Beas canal headworks"
+              class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+            />
+            <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
+              Indus Basin: Bhakra-Nangal Dam (Sutlej) and Harike Barrage take-off for Indira Gandhi Canal
+            </p>
           </div>
         </section>
 
@@ -255,43 +291,55 @@
             <span class="sec-num">04</span>
             <h2 class="sec-title">Major Canal Systems of India</h2>
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">headworks · routes</span>
+            <span class="sec-meta hidden sm:block">headworks · alignments</span>
           </header>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
             <div class="panel p-5">
-              <span class="chip chip-saffron mb-2">Longest in India</span>
+              <span class="chip chip-saffron mb-2">Longest Canal in India</span>
               <h3 class="font-display text-[16px] font-bold t-hi mb-1">Indira Gandhi Canal (Rajasthan Canal)</h3>
               <p class="text-[13px] leading-relaxed t-mid">
-                Originates from <strong class="t-hi">Harike Barrage</strong> in Punjab at the confluence of the <strong class="t-hi">Sutlej and Beas rivers</strong>. Runs ~650 km through Punjab and Haryana into Western Rajasthan (Thar Desert: Ganganagar, Bikaner, Jaisalmer, Barmer), transforming arid desert into fertile agricultural land.
+                Originates from <strong class="t-hi">Harike Barrage</strong> in Punjab at the confluence of the <strong class="t-hi">Sutlej and Beas rivers</strong>. Extends ~650 km into the Thar Desert (Sri Ganganagar, Bikaner, Jaisalmer, Barmer), transforming arid western wasteland into green agricultural cropland.
               </p>
             </div>
 
             <div class="panel p-5">
-              <span class="chip mb-2">Historic Northern Canals</span>
+              <span class="chip mb-2">Historic Canals</span>
               <h3 class="font-display text-[16px] font-bold t-hi mb-1">Sirhind & Western Yamuna Canals</h3>
               <p class="text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Sirhind Canal:</strong> Takes off from Sutlej at Ropar (Punjab).<br />
-                <strong class="t-hi">Western Yamuna Canal:</strong> Oldest canal in Northern India, originates from Tajewala/Hathnikund Barrage on the Yamuna (Haryana).
+                <strong class="t-hi">Sirhind Canal:</strong> Draws from Sutlej at Ropar (Punjab).<br />
+                <strong class="t-hi">Western Yamuna Canal:</strong> Oldest canal in North India (rebuilt from Mughal-era canal), originates from Tajewala/Hathnikund Barrage on the Yamuna (Haryana).
               </p>
             </div>
 
             <div class="panel p-5">
-              <span class="chip mb-2">Eastern & Coastal Canals</span>
+              <span class="chip mb-2">East Coast System</span>
               <h3 class="font-display text-[16px] font-bold t-hi mb-1">Buckingham Canal</h3>
               <p class="text-[13px] leading-relaxed t-mid">
-                796 km long freshwater navigation and drainage canal running parallel to the Coromandel Coast from Kakinada (Andhra Pradesh) to Viluppuram (Tamil Nadu). Connected to the National Waterway 4 (NW-4).
+                796 km long freshwater navigation and drainage canal running parallel to the Coromandel Coast from Kakinada (AP) to Viluppuram (TN). Integrated with National Waterway 4 (NW-4).
               </p>
             </div>
 
             <div class="panel p-5">
-              <span class="chip mb-2">Delta Systems</span>
-              <h3 class="font-display text-[16px] font-bold t-hi mb-1">Godavari & Krishna Delta Canals</h3>
+              <span class="chip mb-2">Delta Irrigation</span>
+              <h3 class="font-display text-[16px] font-bold t-hi mb-1">Dowleswaram & Prakasam Barrages</h3>
               <p class="text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Sir Arthur Cotton Barrage (Dowleswaram):</strong> Across Godavari at Rajahmundry.<br />
-                <strong class="t-hi">Prakasam Barrage:</strong> Across Krishna at Vijayawada, supplying Buckingham and Eluru canal systems.
+                <strong class="t-hi">Sir Arthur Cotton Barrage:</strong> Built across Godavari at Rajahmundry in 1852.<br />
+                <strong class="t-hi">Prakasam Barrage:</strong> Built across Krishna at Vijayawada in 1957, feeding the Krishna delta canals.
               </p>
             </div>
+          </div>
+
+          <!-- Ganga Basin Map -->
+          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <img
+              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556256/geography/ganga-river-basin-map.webp"
+              alt="Ganga River Basin Map showing Tehri Dam, Upper Ganga Canal, Sharda Canal, and DVC systems"
+              class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
+            />
+            <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
+              Ganga Basin: Upper & Lower Ganga Canals, Sharda Canal, and Damodar Valley Corporation (DVC)
+            </p>
           </div>
         </section>
 
@@ -305,29 +353,53 @@
           </header>
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
-            Because Telangana sits on an elevated plateau (Deccan plateau slope), conventional gravity canals cannot reach high-altitude agricultural fields. Hence, <strong class="t-hi">Multi-Stage Lift Irrigation</strong> is Telangana's primary engineering model.
+            Because Telangana sits on an elevated plateau (Deccan plateau elevation: 300m to 600m above sea level), gravity canals cannot supply water uphill. Hence, <strong class="t-hi">Multi-Stage Lift Irrigation</strong> is Telangana's core engineering paradigm.
           </p>
+
+          <!-- Godavari & Krishna Basin Maps for Telangana Projects -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+              <img
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556255/geography/godavari-river-basin-map.webp"
+                alt="Godavari River Basin Map showing Kaleshwaram, Sriram Sagar, Nizam Sagar, and Lower Manair Dam"
+                class="mx-auto block w-full h-auto object-contain rounded-lg"
+              />
+              <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
+                Godavari Basin: Kaleshwaram (Medigadda), SRSP Pochampad, LMD
+              </p>
+            </div>
+            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+              <img
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556253/geography/krishna-river-basin-map.webp"
+                alt="Krishna River Basin Map showing Nagarjuna Sagar, Jurala, and Rajolibanda Diversion Scheme"
+                class="mx-auto block w-full h-auto object-contain rounded-lg"
+              />
+              <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
+                Krishna Basin: Nagarjuna Sagar, Jurala, RDS on Tungabhadra
+              </p>
+            </div>
+          </div>
 
           <div class="space-y-4 mb-6">
             <!-- Kaleshwaram -->
             <div class="panel p-5 border-l-4 border-l-saffron-500">
               <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
                 <h3 class="font-display text-[17px] font-bold t-hi">1. Kaleshwaram Lift Irrigation Project (KLIP)</h3>
-                <span class="chip chip-saffron chip-mono">World's Largest Lift Project</span>
+                <span class="chip chip-saffron chip-mono">World's Largest Multi-Stage Lift Project</span>
               </div>
               <p class="text-[13px] leading-relaxed t-mid">
-                Draws water from the <strong class="t-hi">Godavari River</strong> at the confluence of the <strong class="t-hi">Pranahita and Godavari</strong> at Kaleshwaram. Lifts water across 7 links and 28 packages to irrigate ~45 lakh acres.
+                Draws water from the <strong class="t-hi">Godavari River</strong> at the confluence of the <strong class="t-hi">Pranahita and Godavari</strong> at Kaleshwaram (Jayashankar Bhupalpally). Inaugurated by Governor E.S.L. Narasimhan on 21 June 2019. Lifts water through 7 links and 28 packages to irrigate ~45 lakh acres.
               </p>
               <div class="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-2 text-[12px]">
-                <div class="bg-sub p-2.5 rounded-lg">
+                <div class="bg-sub p-2.5 rounded-lg border b-line">
                   <span class="font-semibold block t-hi">Medigadda (Lakshmi) Barrage</span>
                   <span class="t-lo">Primary intake barrage across Godavari</span>
                 </div>
-                <div class="bg-sub p-2.5 rounded-lg">
+                <div class="bg-sub p-2.5 rounded-lg border b-line">
                   <span class="font-semibold block t-hi">Annaram (Saraswati) Barrage</span>
                   <span class="t-lo">Second stage lift barrage</span>
                 </div>
-                <div class="bg-sub p-2.5 rounded-lg">
+                <div class="bg-sub p-2.5 rounded-lg border b-line">
                   <span class="font-semibold block t-hi">Sundilla (Parvati) Barrage</span>
                   <span class="t-lo">Third stage lift upstream</span>
                 </div>
@@ -338,7 +410,7 @@
             <div class="panel p-5">
               <h3 class="font-display text-[16px] font-bold t-hi mb-1">2. Sriram Sagar Project (SRSP / Pochampad Project)</h3>
               <p class="text-[13px] leading-relaxed t-mid">
-                Constructed across the <strong class="t-hi">Godavari River</strong> at Pochampad in Nizamabad district. Serves as the agricultural lifeline of North Telangana (Nizamabad, Nirmal, Jagtial, Karimnagar, Warangal). Its main canals include the <strong class="t-hi">Kakatiya Canal</strong> (146 km), Saraswati Canal, and Laxmi Canal.
+                Constructed across the <strong class="t-hi">Godavari River</strong> at Pochampad in Nizamabad district. Serves as the agricultural lifeline of North Telangana (Nizamabad, Nirmal, Jagtial, Karimnagar, Warangal). Major canals: <strong class="t-hi">Kakatiya Canal</strong> (146 km), Saraswati Canal, Laxmi Canal.
               </p>
             </div>
 
@@ -346,9 +418,9 @@
             <div class="panel p-5">
               <h3 class="font-display text-[16px] font-bold t-hi mb-1">3. Rajolibanda Diversion Scheme (RDS) & Other Dams</h3>
               <p class="text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Rajolibanda Diversion Scheme (RDS):</strong> Anicut on the <strong class="t-hi">Tungabhadra River</strong> providing irrigation to Jogulamba Gadwal district (Telangana) and Raichur (Karnataka).<br />
-                <strong class="t-hi">Priyadarshini Jurala Project:</strong> First project on Krishna River in Telangana (Jogulamba Gadwal).<br />
-                <strong class="t-hi">Lower Manair Dam (LMD):</strong> Built on the Manair River at Karimnagar.<br />
+                <strong class="t-hi">Rajolibanda Diversion Scheme (RDS):</strong> Anicut across <strong class="t-hi">Tungabhadra River</strong> supplying irrigation to Jogulamba Gadwal district (Telangana) and Raichur (Karnataka).<br />
+                <strong class="t-hi">Priyadarshini Jurala Project:</strong> First project on Krishna River entering Telangana at Jogulamba Gadwal.<br />
+                <strong class="t-hi">Lower Manair Dam (LMD):</strong> On Manair River at Karimnagar.<br />
                 <strong class="t-hi">Kadam Reservoir:</strong> Across Kadam river in Nirmal district.
               </p>
             </div>
@@ -360,7 +432,7 @@
                 <span class="chip chip-jade chip-mono">Tank Restoration</span>
               </div>
               <p class="text-[13px] leading-relaxed t-mid">
-                Flagship program launched in 2015 to restore <strong class="t-hi">46,531 minor irrigation tanks and water bodies</strong> across Telangana built during the Kakatiya, Qutb Shahi, and Asaf Jahi dynasties. Tagline: <em>"Mana Ooru - Mana Cheruvu"</em>.
+                Flagship program launched in 2015 to restore <strong class="t-hi">46,531 minor irrigation tanks</strong> across Telangana built during the Kakatiya, Qutb Shahi, and Asaf Jahi dynasties. Tagline: <em>"Mana Ooru - Mana Cheruvu"</em>.
               </p>
             </div>
           </div>
@@ -375,71 +447,74 @@
             <span class="sec-meta hidden sm:block">drip · sprinkler · pmksy</span>
           </header>
 
-          <div class="panel overflow-x-auto mb-6">
-            <table class="table-note min-w-[620px]">
-              <thead>
-                <tr>
-                  <th class="pl-4">Feature</th>
-                  <th>Drip Irrigation (Trickle)</th>
-                  <th>Sprinkler Irrigation</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Water Efficiency</td>
-                  <td class="accent font-mono font-bold">90–95%</td>
-                  <td class="text-sky-500 font-mono font-bold">75–85%</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Mechanism</td>
-                  <td>Water drips slowly directly to roots via emitters</td>
-                  <td>Water sprayed into air like artificial rain</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Ideal Terrain & Crops</td>
-                  <td>Orchards, vegetables, cash crops, flat/terraced lands</td>
-                  <td>Undulating terrain, sandy soil, tea/coffee, pulses, wheat</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Key Advantages</td>
-                  <td>Zero weed growth, minimal evaporation, fertiliser via fertigation</td>
-                  <td>Cleans dust from leaves, frost protection, prevents soil erosion</td>
-                </tr>
-                <tr>
-                  <td class="pl-4 font-semibold t-hi">Leading States</td>
-                  <td>Maharashtra, Andhra Pradesh, Gujarat, Karnataka</td>
-                  <td>Rajasthan, Haryana, Gujarat, Madhya Pradesh</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="panel p-5 sm:p-6 mb-6">
+            <h3 class="font-display text-[16px] font-bold t-hi mb-3">Drip vs Sprinkler Micro-Irrigation Comparison</h3>
+            <div class="overflow-x-auto">
+              <table class="table-note">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Drip Irrigation (Trickle)</th>
+                    <th>Sprinkler Irrigation</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="cell-key">Water Efficiency</td>
+                    <td class="font-mono accent font-semibold">90–95%</td>
+                    <td class="font-mono text-sky-500 font-semibold">75–85%</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Mechanism</td>
+                    <td>Water drips slowly directly to plant root zone via emitters</td>
+                    <td>Water sprayed under pressure into air simulating natural rainfall</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Ideal Terrain & Crops</td>
+                    <td>Orchards, vegetables, cash crops, flat or terraced fields</td>
+                    <td>Undulating terrain, sandy soil, tea/coffee, pulses, wheat</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Key Advantages</td>
+                    <td>Zero weed growth, minimal evaporation, fertiliser delivery via fertigation</td>
+                    <td>Washes dust from leaves, frost protection, prevents soil erosion</td>
+                  </tr>
+                  <tr>
+                    <td class="cell-key">Leading States</td>
+                    <td>Maharashtra, Andhra Pradesh, Gujarat, Karnataka</td>
+                    <td>Rajasthan, Haryana, Gujarat, Madhya Pradesh</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <!-- PMKSY Scheme Details -->
           <div class="panel p-5">
             <h3 class="font-display text-[16px] font-bold t-hi mb-2">Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h3>
             <p class="text-[13px] leading-relaxed t-mid">
-              Launched on <strong class="t-hi">1 July 2015</strong> with the overarching motto <em class="t-hi">"Har Khet Ko Pani"</em> and <em class="t-hi">"More Crop Per Drop"</em>. It amalgamated four existing central programs:
+              Launched on <strong class="t-hi">1 July 2015</strong> with the overarching motto <em class="t-hi">"Har Khet Ko Pani"</em> and <em class="t-hi">"More Crop Per Drop"</em>. It combines 4 central components:
             </p>
             <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12.5px]">
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">1. AIBP (Accelerated Irrigation Benefit Programme)</strong>
-                <p class="t-lo">Focuses on fast-tracking major and medium irrigation dams and multi-purpose canal projects.</p>
+                <p class="t-lo">Focuses on fast-tracking major and medium multi-purpose dams and national canal projects.</p>
               </div>
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">2. Har Khet Ko Pani (HKKP)</strong>
-                <p class="t-lo">Command Area Development (CAD), repair and restoration of water bodies, and ground water development.</p>
+                <p class="t-lo">Command Area Development (CAD), repair and restoration of traditional water bodies.</p>
               </div>
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">3. Per Drop More Crop (PDMC)</strong>
-                <p class="t-lo">Promotes micro-irrigation (Drip & Sprinkler) and precision water management technologies.</p>
+                <p class="t-lo">Promotes micro-irrigation technologies (Drip & Sprinkler) and precision water management.</p>
               </div>
               <div class="bg-sub p-3 rounded-lg border b-line">
                 <strong class="t-hi block mb-1">4. Watershed Development</strong>
-                <p class="t-lo">Soil & moisture conservation, rain-water harvesting structures, and runoff management.</p>
+                <p class="t-lo">Soil & moisture conservation, check dams, rainwater harvesting, and runoff management.</p>
               </div>
             </div>
             <p class="mt-3 text-[12px] font-mono t-lo">
-              * Micro Irrigation Fund (MIF): Dedicated corpus of ₹5,000 Crore established with NABARD to subsidize micro-irrigation installations.
+              * Micro Irrigation Fund (MIF): Dedicated corpus of ₹5,000 Crore established with NABARD to subsidize micro-irrigation installations across states.
             </p>
           </div>
         </section>
@@ -458,7 +533,7 @@
               <p class="callout-title">Trap 1: Govind Sagar vs Govind Ballabh Pant Sagar</p>
               <p class="callout-body">
                 • <strong class="t-hi">Govind Sagar:</strong> Formed behind <strong class="t-hi">Bhakra Dam</strong> on <strong class="t-hi">Sutlej River</strong> (Himachal Pradesh).<br />
-                • <strong class="t-hi">Govind Ballabh Pant Sagar:</strong> Formed behind <strong class="t-hi">Rihand Dam</strong> on <strong class="t-hi">Rihand River</strong> (Uttar Pradesh). It is the largest artificial lake in India.
+                • <strong class="t-hi">Govind Ballabh Pant Sagar:</strong> Formed behind <strong class="t-hi">Rihand Dam</strong> on <strong class="t-hi">Rihand River</strong> (Uttar Pradesh). Largest artificial reservoir in India.
               </p>
             </div>
 
@@ -476,8 +551,8 @@
               <p class="callout-title">Trap 3: Polavaram vs Kaleshwaram River Association</p>
               <p class="callout-body">
                 Both mega-projects are on the <strong class="t-hi">Godavari River</strong>. However:<br />
-                • <strong class="t-hi">Kaleshwaram:</strong> Lift irrigation project upstream at Medigadda (Telangana).<br />
-                • <strong class="t-hi">Polavaram (Indira Sagar):</strong> Gravity dam project downstream in Eluru/East Godavari (Andhra Pradesh, declared National Project under AP Reorganisation Act 2014).
+                • <strong class="t-hi">Kaleshwaram:</strong> Multi-stage lift irrigation upstream at Medigadda (Telangana).<br />
+                • <strong class="t-hi">Polavaram (Indira Sagar):</strong> Gravity dam downstream in Eluru/East Godavari (Andhra Pradesh, declared National Project under AP Reorganisation Act 2014).
               </p>
             </div>
           </div>
@@ -594,6 +669,7 @@
               <div class="flex justify-between"><span>PYQ Weightage:</span><span class="accent">High (T1)</span></div>
               <div class="flex justify-between"><span>Verified PYQs:</span><span>29 Qs</span></div>
               <div class="flex justify-between"><span>Flashcards:</span><span>12 Cards</span></div>
+              <div class="flex justify-between"><span>Gate Pass:</span><span class="text-emerald-500">3/5 MCQs</span></div>
             </div>
           </div>
         </div>
@@ -634,7 +710,7 @@ const coverage = [
 ]
 
 const sections = [
-  { id: 'visual', label: '01 · Visual Scaffold' },
+  { id: 'map', label: '01 · The Physical Map' },
   { id: 'overview', label: '02 · Sources Breakdown' },
   { id: 'projects', label: '03 · River Valley Projects' },
   { id: 'canals', label: '04 · Major Canal Networks' },
