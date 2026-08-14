@@ -89,6 +89,27 @@
             Jawaharlal Nehru famously hailed multipurpose river valley projects as the <strong class="t-hi">"Temples of Modern India"</strong>. Dams in India serve integrated functions: flood control, canal irrigation, hydroelectricity generation, navigation, and municipal water supply.
           </p>
 
+          <!-- Primary National Spatial Anchor: Major Rivers and Dams of India Map -->
+          <div class="mb-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm">
+            <div class="mb-3 flex items-center justify-between border-b b-line pb-2.5">
+              <div>
+                <p class="font-display text-[15px] font-bold t-hi">Master River Basin &amp; Dam Locator Map of India</p>
+                <p class="text-[11.5px] t-lo mt-0.5">High-yield spatial alignment: Indus, Ganga, Narmada, Tapi, Mahanadi, Godavari, Krishna, and Cauvery projects</p>
+              </div>
+              <span class="chip chip-saffron chip-mono">Primary Spatial Anchor</span>
+            </div>
+            <img
+              src="/images/geography/major-rivers-and-dams-india-map.jpg"
+              alt="Major Rivers and Dams in India showing Tehri, Bhakra Nangal, Hirakud, Sardar Sarovar, Nagarjuna Sagar, Srisailam, Mettur, and DVC project alignments"
+              class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
+              loading="eager"
+            />
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 dark:border-gray-800 pt-3 text-body-xs text-gray-500 dark:text-gray-400 font-mono">
+              <span>Source: Survey of India &amp; Central Water Commission Basin Architecture</span>
+              <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Essential Spatial Reference for TGPRB River Valley Questions</span>
+            </div>
+          </div>
+
           <!-- Major Superlative Dams Visual Grid -->
           <div class="panel p-5 sm:p-6 mb-6">
             <div class="mb-4 flex items-center justify-between border-b b-line pb-3">

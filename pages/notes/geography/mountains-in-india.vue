@@ -89,16 +89,65 @@
             India's orography is divided into two major macro-systems: the young tertiary <strong class="t-hi">Himalayan Fold Mountains</strong> in the north (created by the collision of the Indian and Eurasian tectonic plates) and the ancient relict <strong class="t-hi">Peninsular Block &amp; Ghat Ranges</strong> in the south (Pre-Cambrian crystalline shields).
           </p>
 
-          <!-- NASA Landsat Himalayan Relief Map -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 text-center shadow-sm">
+          <!-- 1. Primary National Spatial Anchor Map: Physical Ranges & Relief of India -->
+          <div class="mb-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm">
+            <div class="mb-3 flex items-center justify-between border-b b-line pb-2.5">
+              <div>
+                <p class="font-display text-[15px] font-bold t-hi">Master Physical Map: Mountain Ranges &amp; Plateaus of India</p>
+                <p class="text-[11.5px] t-lo mt-0.5">Comprehensive spatial locator: Himalayas, Aravallis, Vindhyas, Satpura, Western &amp; Eastern Ghats</p>
+              </div>
+              <span class="chip chip-saffron chip-mono">Primary Spatial Anchor</span>
+            </div>
             <img
-              src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786731874/geography/himalayas-nasa-relief.webp"
-              alt="NASA Landsat relief showing the Himalayas, Tibetan plateau, Indus and Ganga gorges, and major mountain ranges"
-              class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
+              src="/images/geography/india-mountain-ranges-physical-map.jpg"
+              alt="Complete Physical Relief and Mountain Ranges Map of India showing Himalayas, Peninsular Plateau, Western Ghats, Eastern Ghats, and Purvanchal"
+              class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
+              loading="eager"
             />
             <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 dark:border-gray-800 pt-3 text-body-xs text-gray-500 dark:text-gray-400 font-mono">
-              <span>Himalayan Arc &amp; Allied Ranges Relief (NASA Landsat / Public Domain)</span>
-              <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Core TGPRB Spatial Anchor</span>
+              <span>Source: Survey of India Topographic Base &amp; National Geographic Data</span>
+              <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Essential Spatial Anchor for TGPRB Physical Geography</span>
+            </div>
+          </div>
+
+          <!-- 2. Dual Range Diagrams: KLZPS Parallel Trends & West-East Syntaxial Extent -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+            <!-- Himalayan Trends & KLZPS System Map -->
+            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="mb-3 flex items-center justify-between border-b b-line pb-2">
+                  <h4 class="font-display text-[14px] font-bold t-hi">Himalayan &amp; Trans-Himalayan Parallel Systems</h4>
+                  <span class="chip chip-mono text-[10px]">KLZPS Order</span>
+                </div>
+                <img
+                  src="/images/geography/himalayan-ranges-klzps-map.jpg"
+                  alt="Chart illustrating the trends of the principal mountain ranges of the Himalayan and Trans-Himalayan systems"
+                  class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
+                  loading="lazy"
+                />
+              </div>
+              <p class="mt-3 text-[11px] t-mid border-t b-line pt-2">
+                <strong class="t-hi font-mono">North-to-South Order:</strong> Karakoram -> Ladakh -> Zaskar -> Great Himalaya -> Pir Panjal / Lesser Himalaya -> Siwalik.
+              </p>
+            </div>
+
+            <!-- West-to-East Syntaxial Extent & 8000m Peaks -->
+            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="mb-3 flex items-center justify-between border-b b-line pb-2">
+                  <h4 class="font-display text-[14px] font-bold t-hi">West-to-East Syntaxial Extent (Nanga Parbat to Namcha Barwa)</h4>
+                  <span class="chip chip-mono text-[10px]">8000m Peaks</span>
+                </div>
+                <img
+                  src="/images/geography/himalaya-eight-thousanders-annotated-map.jpg"
+                  alt="NASA Landsat annotated showing the 14 eight-thousander peaks and syntaxial bends from Nanga Parbat to Namcha Barwa"
+                  class="w-full h-auto max-h-[380px] object-cover rounded-lg bg-inset"
+                  loading="lazy"
+                />
+              </div>
+              <p class="mt-3 text-[11px] t-mid border-t b-line pt-2">
+                <strong class="t-hi font-mono">Syntaxial Terminals:</strong> Nanga Parbat (8,126 m, Indus bend) in the West to Namcha Barwa (7,782 m, Tsangpo bend) in the East.
+              </p>
             </div>
           </div>
 

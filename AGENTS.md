@@ -9,10 +9,18 @@ Persistent rules for every agent working in this repo. Read this before any task
 - FSRS via `ts-fsrs`. Never hand-roll SM-2 or Leitner.
 - No PWA, no service workers, no offline caching.
 - No Framer Motion, no bespoke animation elsewhere. GSAP only for topics that pass the visual rule below. Plain CSS/Nuxt UI defaults for everything else.
-- **Image sourcing workflow - strict priority**:
-  1. **Always search online first** (`search_web`, Wikipedia API, Wikimedia Commons, OpenStreetMap, educational repositories, government portals): Search the internet thoroughly. Real maps, topographic diagrams, satellite imagery, and authentic photographs must always be preferred. Download real images directly to `assets-to-upload/<subject>/filename.ext`.
-  2. **Generate with `generate_image` ONLY as a last resort**: Generate only if no suitable image exists on the internet after searching. Do not default to generation when authentic images exist online.
-  3. Place sourced images in `assets-to-upload/<subject>/filename.webp` (and copy to `public/images/<subject>/filename.webp` for local preview) - same pipeline.
+- **Image sourcing workflow - strict priority & Visual Exam-Utility Gate**:
+  1. **Always search online first** (`search_web`, Wikipedia API, Wikimedia Commons, OpenStreetMap, NCERT, Survey of India, educational repositories, government portals): Real maps, topographic diagrams, satellite imagery, and authentic infographics must always be preferred.
+  2. **Mandatory AI Visual Inspection**: The agent must inspect every downloaded image candidate against the **4-Point Visual Exam-Utility Gate**:
+     - **Criterion 1 (Label Legibility)**: All key text, labels, and markers must be crystal clear and readable on both mobile and desktop screens.
+     - **Criterion 2 (PYQ Alignment)**: The map/diagram must explicitly illustrate concepts tested in official PYQs (e.g., North-to-South range order KLZPS, pass connectors, river-dam alignments, state borders). Scenic photos without spatial context are secondary only.
+     - **Criterion 3 (Spatial Clarity)**: Geographic boundaries, relative positions, elevations, and flow directions must be unmistakably clear.
+     - **Criterion 4 (Zero Clutter)**: No watermark obstructions, microscopic fonts, or pixelated low-resolution artifacts.
+     - *Inspection Action Loop*: If candidate fails the gate, discard it, search and inspect candidate 2. If no suitable annotated map exists online, generate a custom high-resolution annotated map.
+  3. **Primary Anchor vs Secondary Cues**:
+     - The top of Section 01 (Visual Architecture) MUST be anchored by a **comprehensive labeled spatial locator map or thematic diagram**.
+     - Individual scenic photographs (e.g. mountain peaks, individual dams) serve as secondary supporting visual cues placed below or alongside the main locator maps, NEVER as the sole visual anchor.
+  4. Place sourced images in `assets-to-upload/<subject>/filename.webp` (and copy to `public/images/<subject>/filename.webp` for local preview) - same pipeline.
 
 ## Images - strict rules, never break these
 
