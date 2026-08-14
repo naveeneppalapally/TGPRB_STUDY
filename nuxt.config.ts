@@ -57,13 +57,6 @@ export default defineNuxtConfig({
   runtimeConfig: {
     supabaseUrl: process.env.SUPABASE_URL || '',
     supabaseServiceKey: process.env.SUPABASE_SERVICE_KEY || '',
-    // Nuxt maps NUXT_* variables at runtime, including in Cloudflare Pages.
-    vertexProject: process.env.VERTEX_PROJECT || process.env.NUXT_VERTEX_PROJECT || '',
-    vertexLocation: process.env.VERTEX_LOCATION || process.env.NUXT_VERTEX_LOCATION || 'global',
-    googleServiceAccountJson: process.env.GOOGLE_SERVICE_ACCOUNT_JSON || process.env.NUXT_GOOGLE_SERVICE_ACCOUNT_JSON || '',
-    geminiApiKey: process.env.GEMINI_API_KEY || process.env.NUXT_GEMINI_API_KEY || '',
-    aiModel: process.env.AI_MODEL || process.env.NUXT_AI_MODEL || 'gemini-2.5-flash',
-    aiDailyQueryLimit: process.env.AI_DAILY_QUERY_LIMIT ? Number(process.env.AI_DAILY_QUERY_LIMIT) : 20,
     public: {
       supabaseUrl: process.env.SUPABASE_URL || '',
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY || '',
