@@ -5,6 +5,7 @@ import telanganaStatehoodMovement from '~/content/data/gates/telangana-statehood
 import irrigationInIndia from '~/content/data/gates/irrigation-in-india.json'
 import mountainsInIndia from '~/content/data/gates/mountains-in-india.json'
 import damsInIndia from '~/content/data/gates/dams-in-india.json'
+import forestsOfIndia from '~/content/data/gates/forests-of-india.json'
 
 /**
  * Comprehension gate quiz registry, keyed by NOTE-ID.
@@ -24,6 +25,7 @@ const GATES: Record<string, unknown> = {
   [(irrigationInIndia as { note_id: string }).note_id]: irrigationInIndia,
   [(mountainsInIndia as { note_id: string }).note_id]: mountainsInIndia,
   [(damsInIndia as { note_id: string }).note_id]: damsInIndia,
+  [(forestsOfIndia as { note_id: string }).note_id]: forestsOfIndia,
 }
 
 export default defineEventHandler((event) => {

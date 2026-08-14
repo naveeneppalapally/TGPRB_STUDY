@@ -8,6 +8,7 @@ related_topic_ids:
   - \"NOTE-GEO-IRRIGATION\"
   - "NOTE-GEO-DRAINAGE"
   - "NOTE-GEO-ENVIRONMENT"
+  - NOTE-GEO-FORESTS
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

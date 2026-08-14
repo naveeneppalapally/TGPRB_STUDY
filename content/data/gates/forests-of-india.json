@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-GEO-FORESTS",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which type of forest is the most widespread and dominant natural vegetation in India, also known as 'Monsoon Forests'?",
+      "options": [
+        "Tropical Wet Evergreen Forests",
+        "Tropical Deciduous Forests (Moist & Dry)",
+        "Tropical Thorn & Scrub Forests",
+        "Montane Himalayan Forests"
+      ],
+      "correct_answer": 1,
+      "explanation": "Tropical Deciduous Forests (covering ~65% of India's forested area) are the most widespread vegetation type in India, characterized by Teak, Sal, Sandalwood, and Bamboo."
+    },
+    {
+      "id": 2,
+      "question": "According to the Forest Survey of India (ISFR), which Indian State has the largest total geographical area under forest cover?",
+      "options": [
+        "Arunachal Pradesh",
+        "Madhya Pradesh",
+        "Chhattisgarh",
+        "Odisha"
+      ],
+      "correct_answer": 1,
+      "explanation": "Madhya Pradesh has the largest area under forest cover in India (77,493 sq km), followed by Arunachal Pradesh, Chhattisgarh, Odisha, and Maharashtra."
+    },
+    {
+      "id": 3,
+      "question": "Which was the first Biosphere Reserve established in India under the UNESCO Man and Biosphere (MAB) programme in 1986?",
+      "options": [
+        "Sundarbans Biosphere Reserve",
+        "Nanda Devi Biosphere Reserve",
+        "Nilgiri Biosphere Reserve",
+        "Gulf of Mannar Biosphere Reserve"
+      ],
+      "correct_answer": 2,
+      "explanation": "Nilgiri Biosphere Reserve (established in 1986 at the tri-junction of Tamil Nadu, Kerala, and Karnataka) was the first Biosphere Reserve in India, harboring Silent Valley, Nagarhole, Bandipur, and Mudumalai."
+    },
+    {
+      "id": 4,
+      "question": "Match the following National Parks / Wildlife Sanctuaries with their respective States:\n(A) Dachigam National Park\n(B) Keibul Lamjao National Park\n(C) Silent Valley National Park\n(D) Simlipal National Park\n\n(I) Manipur\n(II) Kerala\n(III) Jammu & Kashmir\n(IV) Odisha",
+      "options": [
+        "(A)-(III), (B)-(I), (C)-(II), (D)-(IV)",
+        "(A)-(I), (B)-(III), (C)-(IV), (D)-(II)",
+        "(A)-(III), (B)-(II), (C)-(I), (D)-(IV)",
+        "(A)-(IV), (B)-(I), (C)-(II), (D)-(III)"
+      ],
+      "correct_answer": 0,
+      "explanation": "Dachigam NP is in Jammu & Kashmir (home to endangered Hangul/Kashmir stag); Keibul Lamjao is in Manipur (only floating NP in the world on Loktak lake, home to Sangai deer); Silent Valley is in Kerala (Palakkad, Lion-tailed macaque); Simlipal NP is in Mayurbhanj, Odisha."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following are the two officially notified Tiger Reserves located in the State of Telangana?",
+      "options": [
+        "Kawal Tiger Reserve and Amrabad Tiger Reserve",
+        "Eturnagaram and Pakhal Tiger Reserves",
+        "Pocharam and Manjira Tiger Reserves",
+        "Kinnerasani and Shivaram Tiger Reserves"
+      ],
+      "correct_answer": 0,
+      "explanation": "Telangana has two declared Tiger Reserves: Kawal Tiger Reserve (in Mancherial/Kumuram Bheem/Adilabad/Nirmal) and Amrabad Tiger Reserve (in Nagarkurnool and Nalgonda in the northern Nallamala hills)."
+    }
+  ]
+}

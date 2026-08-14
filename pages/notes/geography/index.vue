@@ -101,6 +101,25 @@
             class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
           />
         </NuxtLink>
+
+        <NuxtLink
+          to="/notes/geography/forests-in-india"
+          class="panel-hover group flex items-center gap-4 px-5 py-4"
+        >
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+            <UIcon name="i-heroicons-shield-check" class="h-4 w-4 accent" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[14px] font-semibold t-hi">Forests, Natural Vegetation &amp; Protected Areas</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Champion-Seth types, ISFR rankings, Biosphere Reserves, National Parks, Kawal &amp; Amrabad</p>
+          </div>
+          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
+          <span class="num font-mono text-[11px] t-lo">38 PYQs</span>
+          <UIcon
+            name="i-heroicons-arrow-right"
+            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+          />
+        </NuxtLink>
       </div>
     </section>
 
@@ -138,6 +157,5 @@ const pending = [
   { name: 'Climate of India',           tier: 'T2', pyqs: '3' },
   { name: 'Indian Ports and Transport', tier: 'T2', pyqs: '3' },
   { name: 'Soils of India',             tier: 'T3', pyqs: '2' },
-  { name: 'Natural Vegetation',         tier: 'T3', pyqs: '1' },
 ]
 </script>

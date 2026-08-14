@@ -6,6 +6,7 @@ exam_section: "Indian & World Geography"
 topic: "Trans-border Rivers - India-Bhutan Cooperation"
 related_topic_ids:
   - "NOTE-GEO-DRAINAGE"
+  - NOTE-GEO-FORESTS
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
