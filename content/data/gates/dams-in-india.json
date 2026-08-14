@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-GEO-DAMS",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which is the highest dam in India, and across which river is it constructed?",
+      "options": [
+        "Bhakra Dam across Sutlej River",
+        "Tehri Dam across Bhagirathi River",
+        "Hirakud Dam across Mahanadi River",
+        "Sardar Sarovar Dam across Narmada River"
+      ],
+      "correct_answer": 1,
+      "explanation": "Tehri Dam in Uttarakhand is the highest dam in India (height 260.5 metres), built across the Bhagirathi River in Garhwal Himalayas."
+    },
+    {
+      "id": 2,
+      "question": "Which is the longest earthen dam in India and the world?",
+      "options": [
+        "Nagarjuna Sagar Dam across Krishna",
+        "Hirakud Dam across Mahanadi",
+        "Bhakra Dam across Sutlej",
+        "Tungabhadra Dam across Tungabhadra"
+      ],
+      "correct_answer": 1,
+      "explanation": "Hirakud Dam across the Mahanadi River in Sambalpur, Odisha is the longest earthen dam in India (main section 4.8 km; total length with dykes 25.8 km)."
+    },
+    {
+      "id": 3,
+      "question": "Which was the first multipurpose river valley project developed in independent India (1948), modeled on the Tennessee Valley Authority (TVA) of the USA?",
+      "options": [
+        "Bhakra Nangal Project",
+        "Damodar Valley Corporation (DVC)",
+        "Hirakud Project",
+        "Nagarjuna Sagar Project"
+      ],
+      "correct_answer": 1,
+      "explanation": "Damodar Valley Corporation (DVC) established in 1948 was the first multipurpose river valley project in independent India, modeled after the US Tennessee Valley Authority (TVA)."
+    },
+    {
+      "id": 4,
+      "question": "Match the following famous dams with their respective rivers:\n(A) Ukai Dam\n(B) Matatilla Dam\n(C) Mettur Dam\n(D) Almatti Dam\n\n(I) Betwa\n(II) Tapi\n(III) Krishna\n(IV) Cauvery",
+      "options": [
+        "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+        "(A)-(I), (B)-(II), (C)-(III), (D)-(IV)",
+        "(A)-(II), (B)-(IV), (C)-(I), (D)-(III)",
+        "(A)-(IV), (B)-(I), (C)-(II), (D)-(III)"
+      ],
+      "correct_answer": 0,
+      "explanation": "Ukai Dam is on Tapi (Gujarat); Matatilla Dam is on Betwa (UP/MP); Mettur Dam (Stanley Reservoir) is on Cauvery (Tamil Nadu); Almatti Dam (Lal Bahadur Shastri Reservoir) is on Krishna (Karnataka)."
+    },
+    {
+      "id": 5,
+      "question": "Which dam in Kerala is a double-curvature concrete arch dam constructed in a narrow gorge between the Kuravan and Kurathi granite hills?",
+      "options": [
+        "Mullaperiyar Dam",
+        "Idukki Dam",
+        "Malampuzha Dam",
+        "Parambikulam Dam"
+      ],
+      "correct_answer": 1,
+      "explanation": "Idukki Dam on the Periyar River in Kerala is India's most famous double-curvature thin arch dam, built between the Kuravan and Kurathi hills with Canadian assistance."
+    }
+  ]
+}

@@ -82,6 +82,25 @@
             class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
           />
         </NuxtLink>
+
+        <NuxtLink
+          to="/notes/geography/dams-in-india"
+          class="panel-hover group flex items-center gap-4 px-5 py-4"
+        >
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+            <UIcon name="i-heroicons-building-library" class="h-4 w-4 accent" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[14px] font-semibold t-hi">Dams &amp; Multipurpose Projects of India</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Tehri, Bhakra Nangal, Hirakud, Sardar Sarovar, Nagarjuna Sagar, Idukki, DVC &amp; Polavaram</p>
+          </div>
+          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
+          <span class="num font-mono text-[11px] t-lo">22 PYQs</span>
+          <UIcon
+            name="i-heroicons-arrow-right"
+            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+          />
+        </NuxtLink>
       </div>
     </section>
 
