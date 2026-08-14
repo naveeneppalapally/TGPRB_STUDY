@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Status of Devolution to Panchayats in States Report"
-related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-73RDAMENDMENT"]
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-73RDAMENDMENT", \"NOTE-GEO-DAMS\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

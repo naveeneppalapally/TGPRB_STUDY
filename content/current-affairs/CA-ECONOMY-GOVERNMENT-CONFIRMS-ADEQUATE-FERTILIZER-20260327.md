@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Fertilizer Sector and Indigenous Urea Production"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-TEL-ECONOMY", \"NOTE-GEO-DAMS\"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

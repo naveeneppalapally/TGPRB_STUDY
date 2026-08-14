@@ -5,6 +5,7 @@ category: "science"
 exam_section: "General Science & Technology"
 topic: "Digital Technologies in Water Resources Management"
 related_topic_ids:
+  - \"NOTE-GEO-DAMS\"
   - "NOTE-GEO-DRAINAGE"
   - "NOTE-SCI-GENERAL"
 is_telangana_focus: false

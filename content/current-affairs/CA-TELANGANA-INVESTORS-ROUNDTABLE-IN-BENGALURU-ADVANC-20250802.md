@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "NICDP Southern Industrial Nodes and Zaheerabad Node"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-ECO-INDUSTRY"]
+related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-ECO-INDUSTRY", \"NOTE-GEO-DAMS\"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

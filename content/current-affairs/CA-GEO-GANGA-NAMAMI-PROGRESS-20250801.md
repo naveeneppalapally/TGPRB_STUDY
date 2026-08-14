@@ -5,6 +5,7 @@ category: "geography"
 exam_section: "Geography"
 topic: "Namami Gange Programme - Ganga River Rejuvenation"
 related_topic_ids:
+  - \"NOTE-GEO-DAMS\"
   - "NOTE-GEO-DRAINAGE"
 is_telangana_focus: false
 difficulty: "F"

@@ -5,6 +5,7 @@ category: "geography"
 exam_section: "Indian & World Geography"
 topic: "Interlinking of Rivers - National Perspective Plan"
 related_topic_ids:
+  - \"NOTE-GEO-DAMS\"
   - "NOTE-GEO-DRAINAGE"
 is_telangana_focus: false
 difficulty: "M"
