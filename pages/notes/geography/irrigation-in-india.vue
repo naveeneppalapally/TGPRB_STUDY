@@ -87,14 +87,27 @@
           </header>
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
-            Irrigation in India is spatially divided: the <strong class="t-hi">Northern Alluvial Plains</strong> rely on Wells & Perennial Canals fed by Himalayan rivers; the <strong class="t-hi">Peninsular Plateau</strong> relies on Tanks & Multi-Stage Lift Irrigation due to impermeable hard basalt/granite rock.
+            Irrigation in India is spatially divided: the <strong class="t-hi">Northern Alluvial Plains</strong> rely on Wells &amp; Perennial Canals fed by Himalayan rivers; the <strong class="t-hi">Peninsular Plateau</strong> relies on Tanks &amp; Multi-Stage Lift Irrigation due to impermeable hard basalt/granite rock.
           </p>
+
+          <!-- Master Visual Architecture Map of India -->
+          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 text-center shadow-sm">
+            <img
+              src="/images/geography/india-irrigation-zones-map.jpg"
+              alt="India Irrigation Sources, Major Canals & Multipurpose Dam Headworks"
+              class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
+            />
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 dark:border-gray-800 pt-3 text-body-xs text-gray-500 dark:text-gray-400 font-mono">
+              <span>National Irrigation Zones, Canal Networks &amp; Key Headworks</span>
+              <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Core TGPRB Spatial Anchor</span>
+            </div>
+          </div>
 
           <!-- Infographic Architecture Panel -->
           <div class="panel p-5 sm:p-6 mb-6">
             <div class="mb-4 flex items-center justify-between border-b b-line pb-3">
               <div>
-                <p class="font-display text-[15px] font-bold t-hi">National Irrigation Sources & Canal Network Infrastructure</p>
+                <p class="font-display text-[15px] font-bold t-hi">National Irrigation Sources &amp; Canal Network Infrastructure</p>
                 <p class="text-[11.5px] t-lo mt-0.5">Macro percentages, state distributions, and key engineering headworks</p>
               </div>
               <span class="chip chip-saffron chip-mono">Core Macro</span>
@@ -108,7 +121,7 @@
                   <span class="chip chip-saffron text-[10px]">Rank 1</span>
                 </div>
                 <p class="text-[26px] font-bold font-mono accent mt-2">62–64%</p>
-                <p class="text-[13.5px] font-semibold t-hi mt-1">Wells & Tube-wells</p>
+                <p class="text-[13.5px] font-semibold t-hi mt-1">Wells &amp; Tube-wells</p>
                 <p class="text-[11.5px] t-lo mt-1 leading-snug">Uttar Pradesh leads. Gangetic plain tube-wells + Deccan open dug wells.</p>
               </div>
 
@@ -129,7 +142,7 @@
                 </div>
                 <p class="text-[26px] font-bold font-mono text-amber-500 mt-2">3–4%</p>
                 <p class="text-[13.5px] font-semibold t-hi mt-1">Tanks</p>
-                <p class="text-[11.5px] t-lo mt-1 leading-snug">Tamil Nadu, AP, Telangana. Deccan plateau hard rock terrain & natural bowls.</p>
+                <p class="text-[11.5px] t-lo mt-1 leading-snug">Tamil Nadu, AP, Telangana. Deccan plateau hard rock terrain &amp; natural bowls.</p>
               </div>
 
               <div class="rounded-xl border b-line bg-sub p-4">
@@ -202,7 +215,7 @@
           </div>
 
           <p class="text-body leading-[1.8] t-mid">
-            Historically, irrigation development evolved through three distinct eras: <strong class="t-hi">Traditional community tanks</strong> (Kakatiya and Chola era), <strong class="t-hi">Canal barrages</strong> (British colonial era like Sir Arthur Cotton's Dowleswaram Barrage), and <strong class="t-hi">Mega Multi-purpose River Valley Projects & Modern Lift Irrigation</strong> (Post-independence era, Nehru's "Temples of Modern India").
+            Historically, irrigation development evolved through three distinct eras: <strong class="t-hi">Traditional community tanks</strong> (Kakatiya and Chola era), <strong class="t-hi">Canal barrages</strong> (British colonial era like Sir Arthur Cotton's Dowleswaram Barrage), and <strong class="t-hi">Mega Multi-purpose River Valley Projects &amp; Modern Lift Irrigation</strong> (Post-independence era, Nehru's "Temples of Modern India").
           </p>
         </section>
 
@@ -249,7 +262,7 @@
                   <tr>
                     <td class="cell-key">Damodar Valley (DVC)</td>
                     <td class="font-mono accent">Damodar (Barakar, Konar)</td>
-                    <td>Jharkhand & West Bengal</td>
+                    <td>Jharkhand &amp; West Bengal</td>
                     <td><strong class="t-hi">First multipurpose project of independent India (1948)</strong>. Modeled on USA's TVA. Dams: Tilaiya, Maithon, Panchet.</td>
                   </tr>
                   <tr>
@@ -267,13 +280,13 @@
                   <tr>
                     <td class="cell-key">Nagarjuna Sagar</td>
                     <td class="font-mono accent">Krishna</td>
-                    <td>Telangana (Nalgonda) & AP (Palnadu)</td>
+                    <td>Telangana (Nalgonda) &amp; AP (Palnadu)</td>
                     <td><strong class="t-hi">World's largest masonry dam</strong>. Right canal: Jawahar Canal; Left canal: Lal Bahadur Canal. Foundation laid by Pt. Nehru on 10 Dec 1955.</td>
                   </tr>
                   <tr>
                     <td class="cell-key">Tungabhadra Project</td>
                     <td class="font-mono accent">Tungabhadra</td>
-                    <td>Karnataka & Telangana / AP</td>
+                    <td>Karnataka &amp; Telangana / AP</td>
                     <td>Located at Hosapete (Pampa Sagar reservoir). Supplies Raichur and Jogulamba Gadwal.</td>
                   </tr>
                   <tr>
@@ -291,12 +304,139 @@
                 </tbody>
               </table>
             </div>
+
+            <!-- Major Dams Visual Gallery Grid -->
+            <div class="mt-6 border-t b-line pt-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] t-lo mb-3 font-semibold">Visual Gallery · High-Yield Tested Dams &amp; Reservoirs</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Nagarjuna Sagar -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/nagarjuna-sagar-dam.jpg"
+                      alt="Nagarjuna Sagar Dam across Krishna River (Telangana / AP)"
+                      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="chip chip-saffron text-[10px] mb-1">Masonry Superlative</span>
+                      <h4 class="text-[13.5px] font-bold t-hi">Nagarjuna Sagar Dam</h4>
+                      <p class="text-[11.5px] t-mid mt-0.5">Krishna River · World's largest masonry dam (Nalgonda/Palnadu).</p>
+                    </div>
+                    <p class="font-mono text-[10px] t-lo mt-2">Canals: Jawahar (Right) &amp; Lal Bahadur (Left)</p>
+                  </div>
+                </div>
+
+                <!-- Bhakra Dam -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/bhakra-dam-sutlej.jpg"
+                      alt="Bhakra Dam on Sutlej River"
+                      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="chip text-[10px] mb-1">Gravity Superlative</span>
+                      <h4 class="text-[13.5px] font-bold t-hi">Bhakra Dam</h4>
+                      <p class="text-[11.5px] t-mid mt-0.5">Sutlej River · Highest concrete gravity dam (226 m) in India.</p>
+                    </div>
+                    <p class="font-mono text-[10px] t-lo mt-2">Reservoir: Govind Sagar (Himachal Pradesh)</p>
+                  </div>
+                </div>
+
+                <!-- Hirakud Dam -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/hirakud-dam-mahanadi.jpg"
+                      alt="Hirakud Dam on Mahanadi River in Sambalpur Odisha"
+                      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="chip text-[10px] mb-1">Earthen Superlative</span>
+                      <h4 class="text-[13.5px] font-bold t-hi">Hirakud Dam</h4>
+                      <p class="text-[11.5px] t-mid mt-0.5">Mahanadi River · Longest earthen dam in India (25.8 km total).</p>
+                    </div>
+                    <p class="font-mono text-[10px] t-lo mt-2">Sambalpur (Odisha) · Control of Mahanadi floods</p>
+                  </div>
+                </div>
+
+                <!-- Tehri Dam -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/tehri-dam-bhagirathi.jpg"
+                      alt="Tehri Dam on Bhagirathi River in Uttarakhand"
+                      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="chip chip-saffron text-[10px] mb-1">Height Superlative</span>
+                      <h4 class="text-[13.5px] font-bold t-hi">Tehri Dam</h4>
+                      <p class="text-[11.5px] t-mid mt-0.5">Bhagirathi River · Highest dam in India (260.5 m, Uttarakhand).</p>
+                    </div>
+                    <p class="font-mono text-[10px] t-lo mt-2">Confluence with Bhilangna · Rock &amp; earth fill</p>
+                  </div>
+                </div>
+
+                <!-- Sardar Sarovar -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/sardar-sarovar-dam-narmada.jpg"
+                      alt="Sardar Sarovar Dam on Narmada River"
+                      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="chip text-[10px] mb-1">Narmada Basin</span>
+                      <h4 class="text-[13.5px] font-bold t-hi">Sardar Sarovar Dam</h4>
+                      <p class="text-[11.5px] t-mid mt-0.5">Narmada River (Gujarat) · 4-state project with 458 km Main Canal.</p>
+                    </div>
+                    <p class="font-mono text-[10px] t-lo mt-2">Feeds drought-prone Saurashtra &amp; Kutch</p>
+                  </div>
+                </div>
+
+                <!-- Idukki Arch Dam -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/idukki-arch-dam.jpg"
+                      alt="Idukki Concrete Arch Dam on Periyar River in Kerala"
+                      class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span class="chip text-[10px] mb-1">Arch Dam</span>
+                      <h4 class="text-[13.5px] font-bold t-hi">Idukki Dam</h4>
+                      <p class="text-[11.5px] t-mid mt-0.5">Periyar River (Kerala) · Double curvature concrete arch dam.</p>
+                    </div>
+                    <p class="font-mono text-[10px] t-lo mt-2">Between Kuravan &amp; Kurathi granite hills</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- 2. Major Canal Networks -->
           <div class="panel p-5 sm:p-6 mb-6">
             <h3 class="font-display text-[16px] font-bold t-hi mb-3">2. Major Canal Systems of India</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div class="rounded-xl border b-line bg-sub p-4">
                 <span class="chip chip-saffron mb-2">Longest Canal</span>
                 <h4 class="font-display text-[15px] font-bold t-hi mb-1">Indira Gandhi Canal (Rajasthan Canal)</h4>
@@ -307,7 +447,7 @@
 
               <div class="rounded-xl border b-line bg-sub p-4">
                 <span class="chip mb-2">Northern Historic</span>
-                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Sirhind & Western Yamuna Canals</h4>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Sirhind &amp; Western Yamuna Canals</h4>
                 <p class="text-[13px] leading-relaxed t-mid">
                   <strong class="t-hi">Sirhind Canal:</strong> Takes off from Sutlej at Ropar (Punjab).<br />
                   <strong class="t-hi">Western Yamuna Canal:</strong> Oldest canal in North India, originates from Tajewala/Hathnikund Barrage on the Yamuna (Haryana).
@@ -324,31 +464,117 @@
 
               <div class="rounded-xl border b-line bg-sub p-4">
                 <span class="chip mb-2">Delta Systems</span>
-                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Dowleswaram & Prakasam Barrages</h4>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Dowleswaram &amp; Prakasam Barrages</h4>
                 <p class="text-[13px] leading-relaxed t-mid">
                   <strong class="t-hi">Sir Arthur Cotton Barrage:</strong> Across Godavari at Rajahmundry (1852).<br />
                   <strong class="t-hi">Prakasam Barrage:</strong> Across Krishna at Vijayawada (1957).
                 </p>
               </div>
             </div>
+
+            <!-- Canal Visual Diagrams & Photos Grid -->
+            <div class="border-t b-line pt-5">
+              <p class="font-mono text-[11px] uppercase tracking-[0.14em] t-lo mb-3 font-semibold">Canal Infrastructure &amp; Take-off Headworks</p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Harike Barrage -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/harike-barrage-confluence.jpg"
+                      alt="Harike Barrage headworks at Sutlej and Beas confluence in Punjab"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3">
+                    <h5 class="text-[13px] font-bold t-hi">Harike Barrage (Punjab)</h5>
+                    <p class="text-[11px] t-mid mt-0.5">Origin of Indira Gandhi Canal at Sutlej + Beas confluence.</p>
+                  </div>
+                </div>
+
+                <!-- Indira Gandhi Canal Route Diagram -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden">
+                  <div class="aspect-video w-full overflow-hidden bg-inset flex items-center justify-center p-1 bg-white dark:bg-stone-900">
+                    <img
+                      src="/images/geography/indira-gandhi-canal-route.png"
+                      alt="Indira Gandhi Lift Canal schematic route and distribution branches"
+                      class="max-h-full max-w-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3">
+                    <h5 class="text-[13px] font-bold t-hi">Indira Gandhi Canal Alignment</h5>
+                    <p class="text-[11px] t-mid mt-0.5">Route schematic showing Feeder Canal and Lift branches in Thar.</p>
+                  </div>
+                </div>
+
+                <!-- Indira Gandhi Canal in Thar Desert -->
+                <div class="rounded-xl border b-line bg-sub overflow-hidden">
+                  <div class="aspect-video w-full overflow-hidden bg-inset">
+                    <img
+                      src="/images/geography/indira-gandhi-canal-flow.jpg"
+                      alt="Indira Gandhi Canal flowing through Thar Desert in Western Rajasthan"
+                      class="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="p-3">
+                    <h5 class="text-[13px] font-bold t-hi">Desert Flow (Thar)</h5>
+                    <p class="text-[11px] t-mid mt-0.5">Canal bringing perennial Himalayan waters to Jaisalmer &amp; Bikaner.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- 3. Telangana Projects -->
           <div class="panel p-5 sm:p-6 mb-6">
-            <h3 class="font-display text-[16px] font-bold t-hi mb-3">3. Telangana Lift Irrigation & Reservoir Systems</h3>
-            <p class="text-body-xs t-lo mb-3">Because Telangana sits on an elevated plateau (300m–600m MSL), multi-stage lift irrigation is the primary engineering solution:</p>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+              <h3 class="font-display text-[16px] font-bold t-hi">3. Telangana Lift Irrigation &amp; Reservoir Systems</h3>
+              <span class="chip chip-saffron chip-mono text-[10px]">Telangana Special Focus</span>
+            </div>
+            <p class="text-body-xs t-lo mb-4">Because Telangana sits on an elevated plateau (300m–600m MSL), multi-stage lift irrigation is the primary engineering solution:</p>
+
+            <!-- KLIP Visual Card with Pumphouse Photo -->
+            <div class="rounded-xl border b-line bg-sub overflow-hidden mb-4">
+              <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
+                <div class="md:col-span-5 aspect-video md:aspect-auto w-full overflow-hidden bg-inset">
+                  <img
+                    src="/images/geography/kaleshwaram-lakshmi-pumphouse.png"
+                    alt="Aerial view of Lakshmi Medigadda Pumphouse under Kaleshwaram Lift Irrigation Project"
+                    class="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="md:col-span-7 p-4 sm:p-5 flex flex-col justify-between">
+                  <div>
+                    <div class="flex items-center justify-between mb-1.5">
+                      <h4 class="font-display text-[16px] font-bold t-hi">Kaleshwaram Lift Irrigation Project (KLIP)</h4>
+                      <span class="chip chip-mono text-[10px]">World's Largest Lift</span>
+                    </div>
+                    <p class="text-[12.5px] leading-relaxed t-mid">
+                      Draws water from <strong class="t-hi">Godavari River</strong> at the confluence of <strong class="t-hi">Pranahita and Godavari</strong> at Kaleshwaram. Lifts water across <strong class="t-hi">7 links and 28 packages</strong> through Medigadda (Lakshmi), Annaram (Saraswati), and Sundilla (Parvati) barrages to irrigate ~45 lakh acres.
+                    </p>
+                  </div>
+                  <div class="mt-3 grid grid-cols-3 gap-2 pt-2 border-t b-line font-mono text-[10.5px]">
+                    <div>
+                      <span class="t-lo block uppercase">Origin</span>
+                      <span class="t-hi font-bold">Medigadda</span>
+                    </div>
+                    <div>
+                      <span class="t-lo block uppercase">Confluence</span>
+                      <span class="accent font-bold">Godavari+Pranahita</span>
+                    </div>
+                    <div>
+                      <span class="t-lo block uppercase">Lift Height</span>
+                      <span class="text-sky-500 font-bold">~536 metres</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="space-y-3">
-              <div class="rounded-xl border b-line bg-sub p-4">
-                <div class="flex flex-wrap items-center justify-between gap-2 mb-1">
-                  <h4 class="font-display text-[15px] font-bold t-hi">Kaleshwaram Lift Irrigation Project (KLIP)</h4>
-                  <span class="chip chip-saffron chip-mono text-[10px]">World's Largest Multi-Stage Lift</span>
-                </div>
-                <p class="text-[13px] leading-relaxed t-mid">
-                  Draws water from <strong class="t-hi">Godavari River</strong> at the confluence of <strong class="t-hi">Pranahita and Godavari</strong> at Kaleshwaram. Lifts water across 7 links and 28 packages through Medigadda (Lakshmi), Annaram (Saraswati), and Sundilla (Parvati) barrages to irrigate ~45 lakh acres.
-                </p>
-              </div>
-
               <div class="rounded-xl border b-line bg-sub p-4">
                 <h4 class="font-display text-[15px] font-bold t-hi mb-1">Sriram Sagar Project (SRSP / Pochampad Project)</h4>
                 <p class="text-[13px] leading-relaxed t-mid">
@@ -357,7 +583,7 @@
               </div>
 
               <div class="rounded-xl border b-line bg-sub p-4">
-                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Rajolibanda Diversion Scheme (RDS) & Other Schemes</h4>
+                <h4 class="font-display text-[15px] font-bold t-hi mb-1">Rajolibanda Diversion Scheme (RDS) &amp; Other Schemes</h4>
                 <p class="text-[13px] leading-relaxed t-mid">
                   <strong class="t-hi">RDS:</strong> Anicut across <strong class="t-hi">Tungabhadra River</strong> supplying Jogulamba Gadwal and Raichur.<br />
                   <strong class="t-hi">Priyadarshini Jurala:</strong> First project on Krishna River entering Telangana (Jogulamba Gadwal).<br />
