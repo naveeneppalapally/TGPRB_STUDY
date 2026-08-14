@@ -104,7 +104,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/tehri-dam-uttarakhand.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786732871/geography/tehri-dam-uttarakhand.webp"
                     alt="Tehri Dam in Uttarakhand on Bhagirathi river"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -123,7 +123,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/bhakra-nangal-dam-sutlej.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786732880/geography/bhakra-nangal-dam-sutlej.webp"
                     alt="Bhakra Dam on Sutlej River"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -142,7 +142,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/hirakud-dam-mahanadi.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/hirakud-dam-mahanadi.webp"
                     alt="Hirakud Dam on Mahanadi river in Odisha"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -161,7 +161,7 @@
               <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                 <div class="aspect-video w-full overflow-hidden bg-inset">
                   <img
-                    src="/images/geography/sardar-sarovar-dam-narmada.jpg"
+                    src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/sardar-sarovar-dam-narmada.webp"
                     alt="Sardar Sarovar Dam on Narmada River"
                     class="h-full w-full object-cover"
                     loading="lazy"
@@ -185,7 +185,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/nagarjuna-sagar-dam-krishna.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786732874/geography/nagarjuna-sagar-dam-krishna.webp"
                       alt="Nagarjuna Sagar Dam on Krishna River"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -202,7 +202,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/idukki-arch-dam-kerala.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786732877/geography/idukki-arch-dam-kerala.webp"
                       alt="Idukki Double Curvature Arch Dam in Kerala"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -219,7 +219,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/mettur-dam-cauvery.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786732876/geography/mettur-dam-cauvery.webp"
                       alt="Mettur Dam on Cauvery river in Tamil Nadu"
                       class="h-full w-full object-cover"
                       loading="lazy"
@@ -236,7 +236,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="/images/geography/srisailam-dam-krishna.jpg"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786732872/geography/srisailam-dam-krishna.webp"
                       alt="Srisailam Dam on Krishna River gorge"
                       class="h-full w-full object-cover"
                       loading="lazy"

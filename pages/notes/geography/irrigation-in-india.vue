@@ -353,7 +353,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/hirakud-dam-mahanadi.webp"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/hirakud-dam-mahanadi.webp"
                       alt="Hirakud Dam on Mahanadi River in Sambalpur Odisha"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -393,7 +393,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/sardar-sarovar-dam-narmada.webp"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/sardar-sarovar-dam-narmada.webp"
                       alt="Sardar Sarovar Dam on Narmada River"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
