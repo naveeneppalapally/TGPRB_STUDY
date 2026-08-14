@@ -112,12 +112,12 @@ const items = computed(() => {
   if (!allEntries.value) return []
   return allEntries.value
     .filter((e: any) => {
-      const ids: string[] = e.meta?.related_topic_ids ?? []
-      return ids.includes(props.noteId)
+      const ids: string[] = e.meta?.related_topic_ids ?? e.related_topic_ids ?? []
+      return Array.isArray(ids) && ids.includes(props.noteId)
     })
     .sort((a: any, b: any) => {
-      const dateA = a.meta?.published_at || a.meta?.event_date || a.meta?.date
-      const dateB = b.meta?.published_at || b.meta?.event_date || b.meta?.date
+      const dateA = a.meta?.published_at || a.published_at || a.meta?.event_date || a.event_date || a.meta?.date || a.date || ''
+      const dateB = b.meta?.published_at || b.published_at || b.meta?.event_date || b.event_date || b.meta?.date || b.date || ''
       return new Date(dateB).getTime() - new Date(dateA).getTime()
     })
 })
