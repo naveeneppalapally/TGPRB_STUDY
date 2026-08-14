@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-GEO-IRRIGATION",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-GEO-IRR-01",
+      "question": "Which is the largest source of irrigation in India by percentage of net irrigated area?",
+      "options": [
+        "Canals (~24-26%)",
+        "Tanks (~3-4%)",
+        "Wells and Tube-wells (~62-64%)",
+        "Ocean desalination (~5-7%)"
+      ],
+      "correct_answer": 2,
+      "explanation": "Wells and tube-wells account for over 62-64% of the net irrigated area in India. Uttar Pradesh leads the country in tube-well irrigated area."
+    },
+    {
+      "id": "GATE-GEO-IRR-02",
+      "question": "From which barrage does the Indira Gandhi Canal (Rajasthan Canal), the longest irrigation canal in India, take off?",
+      "options": [
+        "Prakasam Barrage at Vijayawada",
+        "Harike Barrage at the confluence of Sutlej and Beas",
+        "Farakka Barrage on the Ganga",
+        "Hathnikund Barrage on the Yamuna"
+      ],
+      "correct_answer": 1,
+      "explanation": "The Indira Gandhi Canal originates from Harike Barrage in Punjab at the confluence of Sutlej and Beas rivers, carrying water across the Thar Desert in Rajasthan."
+    },
+    {
+      "id": "GATE-GEO-IRR-03",
+      "question": "The Bhakra-Nangal multipurpose project is constructed across which river, forming the Govind Sagar reservoir?",
+      "options": [
+        "Sutlej River",
+        "Chenab River",
+        "Jhelum River",
+        "Ravi River"
+      ],
+      "correct_answer": 0,
+      "explanation": "Bhakra Dam is a concrete gravity dam on the Sutlej River in Bilaspur, Himachal Pradesh, forming the Govind Sagar reservoir. Nangal Dam is situated downstream."
+    },
+    {
+      "id": "GATE-GEO-IRR-04",
+      "question": "On which river is the Rajolibanda Diversion Scheme (RDS) constructed, which serves irrigation to Jogulamba Gadwal and Raichur districts?",
+      "options": [
+        "Godavari River",
+        "Krishna River",
+        "Tungabhadra River",
+        "Manair River"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Rajolibanda Diversion Scheme (RDS) is an anicut constructed across the Tungabhadra River."
+    },
+    {
+      "id": "GATE-GEO-IRR-05",
+      "question": "Under the Pradhan Mantri Krishi Sinchayee Yojana (PMKSY), which pillar is dedicated specifically to promoting micro-irrigation (drip and sprinkler systems)?",
+      "options": [
+        "Accelerated Irrigation Benefit Programme (AIBP)",
+        "Har Khet Ko Pani",
+        "Per Drop More Crop (PDMC)",
+        "Watershed Development"
+      ],
+      "correct_answer": 2,
+      "explanation": "Per Drop More Crop (PDMC) under PMKSY focuses on micro-irrigation technologies (drip and sprinkler) to maximize water use efficiency."
+    }
+  ]
+}

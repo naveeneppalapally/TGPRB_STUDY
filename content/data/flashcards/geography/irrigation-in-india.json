@@ -1,0 +1,134 @@
+[
+  {
+    "id": "FC-GEO-IRR-001",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Sources of Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "What is the ranking of irrigation sources in India by percentage of net irrigated area?",
+    "back": "1. Wells and Tube-wells (~62-64%)\n2. Canals (~24-26%)\n3. Tanks (~3-4%)\n4. Other sources (~6-8%)."
+  },
+  {
+    "id": "FC-GEO-IRR-002",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Sources of Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "Which Indian state has the largest area under Tube-well irrigation?",
+    "back": "Uttar Pradesh. It leads India in both total canal irrigated area and tube-well irrigated area."
+  },
+  {
+    "id": "FC-GEO-IRR-003",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Tank Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "Why is tank irrigation predominantly practiced in Peninsular India (South India)?",
+    "back": "1. Hard crystalline, impermeable rock terrain makes well-digging difficult.\n2. Natural depressions easily store monsoon runoff.\n3. Seasonal, non-perennial rivers limit perennial canal networks."
+  },
+  {
+    "id": "FC-GEO-IRR-004",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Canal Systems",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "From which headworks/barrage does the Indira Gandhi Canal (Rajasthan Canal) originate?",
+    "back": "Harike Barrage in Punjab, located at the confluence of the Sutlej and Beas rivers."
+  },
+  {
+    "id": "FC-GEO-IRR-005",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Multipurpose Projects",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "On which river is the Bhakra-Nangal multipurpose project constructed?",
+    "back": "Sutlej River. The reservoir formed behind Bhakra Dam is Govind Sagar in Himachal Pradesh."
+  },
+  {
+    "id": "FC-GEO-IRR-006",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Multipurpose Projects",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "On which river is the Hirakud Dam, the longest earthen dam in India, built?",
+    "back": "Mahanadi River in Sambalpur, Odisha."
+  },
+  {
+    "id": "FC-GEO-IRR-007",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Multipurpose Projects",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "Which was the first multipurpose river valley project of independent India?",
+    "back": "Damodar Valley Corporation (DVC), established in 1948 on the Damodar River, modeled on the Tennessee Valley Authority (TVA) in the USA."
+  },
+  {
+    "id": "FC-GEO-IRR-008",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Telangana Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "Which river does the Kaleshwaram Lift Irrigation Project (KLIP) draw water from, and which is its primary barrage?",
+    "back": "Godavari River. The primary intake barrage is the Medigadda (Lakshmi) Barrage at the confluence of the Godavari and Pranahita rivers."
+  },
+  {
+    "id": "FC-GEO-IRR-009",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Telangana Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "On which river and district is the Sriram Sagar Project (SRSP / Pochampad) built?",
+    "back": "Godavari River at Pochampad in Nizamabad district. It is considered the lifeline of North Telangana agriculture."
+  },
+  {
+    "id": "FC-GEO-IRR-010",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Telangana Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "On which river is the Nagarjuna Sagar Project constructed?",
+    "back": "Krishna River (border of Nalgonda district, Telangana and Palnadu/Guntur, AP). Foundation stone was laid on 10 December 1955 by Pandit Jawaharlal Nehru."
+  },
+  {
+    "id": "FC-GEO-IRR-011",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Micro-Irrigation",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "What is the water application efficiency of Drip Irrigation vs Sprinkler Irrigation?",
+    "back": "Drip Irrigation: ~90-95% efficiency (delivers water directly to root zone, prevents evaporation).\nSprinkler Irrigation: ~75-85% efficiency (simulates natural rainfall, suitable for undulating/sandy soils)."
+  },
+  {
+    "id": "FC-GEO-IRR-012",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Irrigation in India",
+    "subtopic": "Government Schemes",
+    "related_topic_ids": ["NOTE-GEO-IRRIGATION"],
+    "source_note_id": "NOTE-GEO-IRRIGATION",
+    "front": "What are the 4 main components of PMKSY (Pradhan Mantri Krishi Sinchayee Yojana)?",
+    "back": "1. Accelerated Irrigation Benefit Programme (AIBP)\n2. Har Khet Ko Pani\n3. Per Drop More Crop (Micro-irrigation)\n4. Watershed Development."
+  }
+]

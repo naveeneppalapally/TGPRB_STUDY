@@ -290,7 +290,8 @@ const paletteGroups = computed(() => [
       { id: 'review',   label: 'Review Queue',             icon: 'i-heroicons-rectangle-stack', to: '/review' },
       { id: 'ca',       label: 'Current Affairs',          icon: 'i-heroicons-newspaper',       to: '/current-affairs', suffix: 'Updated 7am daily' },
       { id: 'geo',      label: 'Geography - all topics',   icon: 'i-heroicons-map',             to: '/notes/geography' },
-      { id: 'drainage', label: 'Drainage System of India', icon: 'i-heroicons-book-open',       to: '/notes/geography/drainage-system-of-india', suffix: 'Latest note' },
+      { id: 'drainage',   label: 'Drainage System of India',       icon: 'i-heroicons-book-open',       to: '/notes/geography/drainage-system-of-india' },
+      { id: 'irrigation', label: 'Irrigation in India & Telangana',icon: 'i-heroicons-sparkles',        to: '/notes/geography/irrigation-in-india', suffix: 'New Note' },
     ],
   },
   {

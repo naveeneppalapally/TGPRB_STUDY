@@ -2,6 +2,7 @@ import { defineEventHandler, getRouterParam, createError } from 'h3'
 import drainageSystem from '~/content/data/gates/drainage-system.json'
 import unionExecutiveAndLegislature from '~/content/data/gates/union-executive-and-legislature.json'
 import telanganaStatehoodMovement from '~/content/data/gates/telangana-statehood-movement.json'
+import irrigationInIndia from '~/content/data/gates/irrigation-in-india.json'
 
 /**
  * Comprehension gate quiz registry, keyed by NOTE-ID.
@@ -18,6 +19,7 @@ const GATES: Record<string, unknown> = {
   [(drainageSystem as { note_id: string }).note_id]: drainageSystem,
   [(unionExecutiveAndLegislature as { note_id: string }).note_id]: unionExecutiveAndLegislature,
   [(telanganaStatehoodMovement as { note_id: string }).note_id]: telanganaStatehoodMovement,
+  [(irrigationInIndia as { note_id: string }).note_id]: irrigationInIndia,
 }
 
 export default defineEventHandler((event) => {
