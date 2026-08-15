@@ -39,6 +39,10 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# Python cache
+__pycache__/
+*.pyc
+
 # PIB raw SQLite corpus (local only)
 workers/scrapy-pib/*.db
 workers/scrapy-pib/*.csv
