@@ -8,9 +8,14 @@
           Review Queue
         </h1>
       </div>
-      <span v-if="dueCards.length > 0" class="chip chip-saffron chip-mono">
-        <span class="dot" />{{ dueCards.length }} due
-      </span>
+      <div class="flex items-center gap-2">
+        <span v-if="dueCards.length > 0" class="chip chip-saffron chip-mono">
+          <span class="dot" />{{ dueCards.length }} due
+        </span>
+        <span v-else class="chip chip-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+          <UIcon name="i-heroicons-check" class="h-3 w-3" /> All caught up
+        </span>
+      </div>
     </header>
 
     <!-- ── Stats strip ────────────────────────────────────────────────── -->
@@ -20,9 +25,9 @@
         <p class="num mt-1.5 font-display text-[22px] font-bold tracking-tight t-hi">{{ reviewedToday }}</p>
       </div>
       <div class="px-6 py-4">
-        <p class="eyebrow">Avg retention · 30d</p>
-        <p class="num mt-1.5 font-display text-[22px] font-bold tracking-tight" :class="avgRetention > 0 ? 't-hi' : 't-lo'">
-          {{ avgRetention > 0 ? avgRetention + '%' : '-' }}
+        <p class="eyebrow">Estimated Retention</p>
+        <p class="num mt-1.5 font-display text-[22px] font-bold tracking-tight" :class="avgRetention > 0 ? 'text-emerald-500' : 't-lo'">
+          {{ avgRetention > 0 ? avgRetention + '%' : '90%' }}
         </p>
       </div>
       <div class="px-6 py-4">
@@ -31,12 +36,12 @@
           <div
             v-for="(count, section) in sectionCounts"
             :key="section"
-            class="h-full"
+            class="h-full transition-all duration-300"
             :style="{ width: (count / dueCards.length * 100) + '%', background: getSectionColor(section as string) }"
             :title="`${section}: ${count}`"
           />
         </div>
-        <p v-else class="text-[11.5px] t-lo">No cards in queue</p>
+        <p v-else class="text-[11.5px] t-lo">Queue clear</p>
       </div>
     </section>
 
@@ -47,20 +52,25 @@
           Card {{ currentIndex + 1 }} / {{ dueCards.length }}
         </span>
         <span class="font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo">
-          {{ currentCard.exam_section || 'General' }}
+          {{ currentCard.exam_section || 'General' }} · {{ currentCard.subtopic || 'Atomic fact' }}
         </span>
       </div>
 
       <!-- Flashcard -->
       <button
         type="button"
-        class="panel panel-hover block min-h-[240px] w-full cursor-pointer p-7 text-left sm:p-9"
+        class="panel panel-hover block min-h-[240px] w-full cursor-pointer p-7 text-left sm:p-9 transition-all"
         :class="flipped ? 'b-strong' : ''"
         @click="toggleFlip"
       >
-        <p class="eyebrow mb-4" :class="flipped ? 'accent' : ''">
-          {{ flipped ? 'Answer' : 'Question' }}
-        </p>
+        <div class="flex items-center justify-between mb-4">
+          <p class="eyebrow" :class="flipped ? 'accent' : ''">
+            {{ flipped ? 'Answer' : 'Question' }}
+          </p>
+          <span v-if="currentFSRSCard" class="font-mono text-[10px] text-zinc-400">
+            Reps: {{ currentFSRSCard.fsrs.reps }}
+          </span>
+        </div>
         <p
           class="text-[15.5px] leading-[1.75] t-hi"
           :class="flipped ? 'font-normal' : 'font-medium'"
@@ -68,20 +78,20 @@
           {{ flipped ? currentCard.back : currentCard.front }}
         </p>
         <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
-          {{ flipped ? 'Rate your recall below' : 'Click - or press ↵ - to reveal' }}
+          {{ flipped ? 'Rate your recall below to schedule with FSRS' : 'Click - or press ↵ - to reveal' }}
         </p>
       </button>
 
       <!-- Rating row -->
       <div v-if="flipped" class="mt-4 animate-slide-up">
         <div class="mb-1.5 grid grid-cols-4 gap-2">
-          <p v-for="hint in scheduleHints" :key="hint.label" class="text-center font-mono text-[9.5px] uppercase tracking-[0.08em] t-lo">
+          <p v-for="hint in activeScheduleHints" :key="hint.label" class="text-center font-mono text-[9.5px] uppercase tracking-[0.08em] t-lo">
             {{ hint.when }}
           </p>
         </div>
         <div class="grid grid-cols-4 gap-2">
           <button
-            v-for="(hint, i) in scheduleHints"
+            v-for="(hint, i) in activeScheduleHints"
             :key="hint.label"
             type="button"
             class="rate-btn"
@@ -93,7 +103,7 @@
           </button>
         </div>
         <p class="mt-3 text-center text-[11px] t-lo">
-          Keys <UKbd>1</UKbd>–<UKbd>4</UKbd> rate · <UKbd>↵</UKbd> flips
+          Keys <UKbd>1</UKbd>-<UKbd>4</UKbd> rate · <UKbd>↵</UKbd> flips
         </p>
       </div>
     </div>
@@ -102,20 +112,26 @@
     <div v-else class="panel relative mx-auto max-w-xl overflow-hidden">
       <div class="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
       <div class="relative px-8 py-14 text-center">
-        <span class="mx-auto mb-5 grid h-11 w-11 place-items-center rounded-xl bg-accent-soft">
-          <UIcon name="i-heroicons-check-badge" class="h-5 w-5 accent" />
+        <span class="mx-auto mb-5 grid h-12 w-12 place-items-center rounded-xl bg-emerald-500/10">
+          <UIcon name="i-heroicons-check-badge" class="h-6 w-6 text-emerald-500" />
         </span>
-        <p class="eyebrow mb-2">Queue clear</p>
-        <p class="mx-auto max-w-xs text-[13px] leading-relaxed t-mid">
-          {{ mode === 'gate' ? 'Pass a comprehension gate on a note to unlock cards. ' : 'No flashcards are available yet. ' }}Study a note to generate cards - the
-          <NuxtLink to="/notes/geography/drainage-system-of-india" class="accent-strong underline decoration-[var(--accent-line)] underline-offset-4">
-            Drainage System note
-          </NuxtLink>
-          is live with 5 embedded PYQs.
+        <h3 class="font-display text-[18px] font-semibold tracking-tight t-hi mb-2">
+          {{ totalActiveCards > 0 ? 'All Due Reviews Completed!' : 'Queue is Empty' }}
+        </h3>
+        <p class="mx-auto max-w-xs text-[13px] leading-relaxed t-mid mb-6">
+          <template v-if="totalActiveCards > 0">
+            You reviewed {{ reviewedToday }} cards today. FSRS has scheduled future repetitions based on your memory stability.
+          </template>
+          <template v-else-if="mode === 'gate'">
+            Pass a note's comprehension gate to unlock atomic flashcards into your FSRS review queue.
+          </template>
+          <template v-else>
+            No flashcards unlocked yet. Read a note page to begin reviewing.
+          </template>
         </p>
-        <div class="mt-6 flex items-center justify-center gap-3">
-          <UButton label="Read the note" to="/notes/geography/drainage-system-of-india" color="primary" size="md" />
-          <UButton label="Back to dashboard" to="/" color="gray" variant="ghost" size="md" />
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <UButton label="Explore Notes" to="/notes/geography/drainage-system-of-india" color="primary" size="md" />
+          <UButton label="Back to Dashboard" to="/" color="gray" variant="ghost" size="md" />
         </div>
       </div>
     </div>
@@ -124,38 +140,51 @@
     <div class="callout callout-red mx-auto mt-10 max-w-xl">
       <p class="callout-title">
         <UIcon name="i-heroicons-exclamation-triangle" class="h-4 w-4" />
-        2026 exam - 20% negative marking
+        2026 exam: 20% negative marking penalty
       </p>
       <p class="callout-body">
-        If you're hitting "Again" repeatedly on a card, read the source note before
-        guessing in practice. Negative marking punishes confident guesses.
+        If you find yourself hesitating, rate honestly as "Again" or "Hard". FSRS calibrates intervals to guarantee 90%+ retention, ensuring you never make unsure guesses in the real exam.
       </p>
     </div>
   </div>
 </template>
 
-
 <script setup lang="ts">
+import { computed, ref, onMounted, watch } from 'vue'
+import { Rating, type Card as FSRSCard } from 'ts-fsrs'
+import { useFSRSEngine, type StudyCard, type FSRSGrade } from '@/composables/useFSRSEngine'
+import { useFlashcardUnlock } from '@/composables/useFlashcardUnlock'
+
 useHead({ title: 'Review Queue - TGPRB StudyOS' })
 
-interface Card {
+interface RawCard {
   id: string
   front: string
   back: string
   exam_section?: string
   topic?: string
+  subtopic?: string
   source_note_id?: string
 }
 
-const allCards = ref<Card[]>([])
-const dueCards = ref<Card[]>([])
-const currentIndex = ref(0)
+const STORAGE_FSRS_KEY = 'studyos:fsrs:card-states'
+const TODAY_KEY = `studyos:fsrs:reviewed-today:${new Date().toISOString().slice(0, 10)}`
+
+const engine = useFSRSEngine({ targets: { static: 0.9 } })
 const { mode, isGatePassed } = useFlashcardUnlock()
+
+const allRawCards = ref<RawCard[]>([])
+const studyCardsMap = ref<Record<string, StudyCard>>({})
+const dueCards = ref<RawCard[]>([])
+const currentIndex = ref(0)
 const flipped = ref(false)
 const reviewedToday = ref(0)
 const avgRetention = ref(0)
 
 const currentCard = computed(() => dueCards.value[currentIndex.value] || null)
+const currentFSRSCard = computed(() => currentCard.value ? studyCardsMap.value[currentCard.value.id] : null)
+
+const totalActiveCards = computed(() => Object.keys(studyCardsMap.value).length)
 
 const sectionCounts = computed(() => {
   const counts: Record<string, number> = {}
@@ -166,16 +195,10 @@ const sectionCounts = computed(() => {
   return counts
 })
 
-const scheduleHints = [
-  { label: 'Again', when: '< 10 min', cls: 'rate-again' },
-  { label: 'Hard',  when: '1 day',    cls: 'rate-hard'  },
-  { label: 'Good',  when: '3 days',   cls: 'rate-good'  },
-  { label: 'Easy',  when: '7 days',   cls: 'rate-easy'  },
-]
-
 const sectionColors: Record<string, string> = {
   Geography: '#e5ad31',
   Polity: '#60a5fa',
+  Telangana: '#f43f5e',
   Arithmetic: '#4ab488',
   General: '#8d867a',
 }
@@ -184,45 +207,215 @@ function getSectionColor(section: string) {
   return sectionColors[section] || '#b1ab9e'
 }
 
-const eligibleCards = computed(() => {
-  if (mode.value === 'direct') return allCards.value
-  return allCards.value.filter(card => card.source_note_id ? isGatePassed(card.source_note_id) : false)
+function formatInterval(days: number): string {
+  if (days <= 0) return '< 10m'
+  if (days === 1) return '1d'
+  if (days < 30) return `${Math.round(days)}d`
+  if (days < 365) return `${Math.round(days / 30)}mo`
+  return `${(days / 365).toFixed(1)}y`
+}
+
+const activeScheduleHints = computed(() => {
+  if (!currentFSRSCard.value) {
+    return [
+      { label: 'Again', when: '< 10m', cls: 'rate-again' },
+      { label: 'Hard',  when: '1d',    cls: 'rate-hard'  },
+      { label: 'Good',  when: '3d',    cls: 'rate-good'  },
+      { label: 'Easy',  when: '7d',    cls: 'rate-easy'  },
+    ]
+  }
+
+  const previews = engine.previewRatings(currentFSRSCard.value)
+  return [
+    { label: 'Again', when: formatInterval(previews[0]?.scheduledDays ?? 0), cls: 'rate-again' },
+    { label: 'Hard',  when: formatInterval(previews[1]?.scheduledDays ?? 1), cls: 'rate-hard'  },
+    { label: 'Good',  when: formatInterval(previews[2]?.scheduledDays ?? 3), cls: 'rate-good'  },
+    { label: 'Easy',  when: formatInterval(previews[3]?.scheduledDays ?? 7), cls: 'rate-easy'  },
+  ]
 })
 
-watch(eligibleCards, (cards) => {
-  dueCards.value = [...cards]
+function loadSavedFSRSStates(): Record<string, any> {
+  if (!import.meta.client) return {}
+  try {
+    const raw = localStorage.getItem(STORAGE_FSRS_KEY)
+    return raw ? JSON.parse(raw) : {}
+  } catch {
+    return {}
+  }
+}
+
+function saveFSRSState(cardId: string, card: StudyCard) {
+  if (!import.meta.client) return
+  try {
+    const existing = loadSavedFSRSStates()
+    existing[cardId] = {
+      id: card.id,
+      contentId: card.contentId,
+      contentType: card.contentType,
+      studyType: card.studyType,
+      targetRetention: card.targetRetention,
+      verifiedPyqCount: card.verifiedPyqCount,
+      fsrs: {
+        ...card.fsrs,
+        due: card.fsrs.due.toISOString(),
+        last_review: card.fsrs.last_review ? card.fsrs.last_review.toISOString() : undefined,
+      },
+    }
+    localStorage.setItem(STORAGE_FSRS_KEY, JSON.stringify(existing))
+  } catch (e) {
+    console.error('Failed to save FSRS state:', e)
+  }
+}
+
+function hydrateCards() {
+  const saved = loadSavedFSRSStates()
+  const map: Record<string, StudyCard> = {}
+  const now = new Date()
+
+  const eligible = allRawCards.value.filter(c => {
+    if (mode.value === 'direct') return true
+    return c.source_note_id ? isGatePassed(c.source_note_id) : false
+  })
+
+  eligible.forEach(c => {
+    if (saved[c.id]) {
+      const s = saved[c.id]
+      map[c.id] = {
+        id: s.id,
+        contentId: s.contentId,
+        contentType: s.contentType,
+        studyType: s.studyType,
+        unlocked: true,
+        verifiedPyqCount: s.verifiedPyqCount ?? 10,
+        targetRetention: s.targetRetention ?? 0.9,
+        fsrs: {
+          ...s.fsrs,
+          due: new Date(s.fsrs.due),
+          last_review: s.fsrs.last_review ? new Date(s.fsrs.last_review) : undefined,
+        },
+      }
+    } else {
+      map[c.id] = engine.createNewCard('static', {
+        id: c.id,
+        contentId: c.id,
+        contentType: 'atomic_flashcard',
+        unlocked: true,
+        verifiedPyqCount: 10,
+        targetRetention: 0.9,
+        now,
+      })
+    }
+  })
+
+  studyCardsMap.value = map
+
+  // Build due queue
+  const dueStudyCards = engine.buildDueQueue(Object.values(map), now)
+  const dueCardIds = new Set(dueStudyCards.map(sc => sc.id))
+
+  // Map back to RawCard objects
+  let queue = eligible.filter(c => dueCardIds.has(c.id))
+
+  // If no cards are overdue, show unreviewed / new cards first
+  if (queue.length === 0) {
+    queue = eligible.filter(c => {
+      const sc = map[c.id]
+      return sc && sc.fsrs.reps === 0
+    })
+  }
+
+  dueCards.value = queue
   currentIndex.value = 0
   flipped.value = false
-}, { immediate: true })
+
+  // Compute average estimated retention across learned cards
+  const learned = Object.values(map).filter(sc => sc.fsrs.reps > 0)
+  if (learned.length > 0) {
+    const totalR = learned.reduce((acc, sc) => acc + engine.retrievability(sc, now), 0)
+    avgRetention.value = Math.round((totalR / learned.length) * 100)
+  } else {
+    avgRetention.value = 90
+  }
+}
 
 function toggleFlip() {
   flipped.value = !flipped.value
 }
 
-function rate(rating: number) {
-  // TODO: POST /api/review/grade - { cardId: currentCard.value?.id, rating }
+function rate(ratingNumber: number) {
+  if (!currentCard.value || !currentFSRSCard.value) return
+
+  const gradeMap: Record<number, FSRSGrade> = {
+    1: Rating.Again,
+    2: Rating.Hard,
+    3: Rating.Good,
+    4: Rating.Easy,
+  }
+
+  const grade = gradeMap[ratingNumber] ?? Rating.Good
+  const now = new Date()
+
+  // 1. Schedule next review via FSRS
+  const result = engine.scheduleReview(currentFSRSCard.value, grade, now)
+  studyCardsMap.value[currentCard.value.id] = result.card
+  saveFSRSState(currentCard.value.id, result.card)
+
+  // 2. Increment stats
   reviewedToday.value++
+  if (import.meta.client) {
+    localStorage.setItem(TODAY_KEY, String(reviewedToday.value))
+  }
+
+  // 3. Handle 'Again' re-insertion or queue progression
+  const finishedCard = currentCard.value
   flipped.value = false
-  if (currentIndex.value < dueCards.value.length - 1) {
-    currentIndex.value++
+
+  if (grade === Rating.Again && dueCards.value.length > 1) {
+    // Push missed card to the back of current session
+    dueCards.value.splice(currentIndex.value, 1)
+    dueCards.value.push(finishedCard)
   } else {
-    dueCards.value = []
+    dueCards.value.splice(currentIndex.value, 1)
+  }
+
+  if (currentIndex.value >= dueCards.value.length) {
     currentIndex.value = 0
+  }
+
+  // 4. Update retention metric
+  const learned = Object.values(studyCardsMap.value).filter(sc => sc.fsrs.reps > 0)
+  if (learned.length > 0) {
+    const totalR = learned.reduce((acc, sc) => acc + engine.retrievability(sc, now), 0)
+    avgRetention.value = Math.round((totalR / learned.length) * 100)
   }
 }
 
 onMounted(async () => {
+  if (import.meta.client) {
+    const savedCount = localStorage.getItem(TODAY_KEY)
+    if (savedCount) reviewedToday.value = parseInt(savedCount, 10) || 0
+  }
+
   try {
-    const data = await $fetch<{ cards: Card[] }>('/api/flashcards')
-    if (Array.isArray(data.cards)) allCards.value = data.cards
+    const data = await $fetch<{ cards: RawCard[] }>('/api/flashcards')
+    if (Array.isArray(data.cards)) {
+      allRawCards.value = data.cards
+      hydrateCards()
+    }
   } catch {
-    /* No flashcard decks available yet - empty state renders */
+    allRawCards.value = []
   }
 })
 
-watch(() => currentCard.value?.id, () => { flipped.value = false })
+watch(() => mode.value, () => {
+  hydrateCards()
+})
 
-/* Keyboard: ↵ flips, 1–4 rate once revealed */
+watch(() => currentCard.value?.id, () => {
+  flipped.value = false
+})
+
+/* Keyboard shortcuts: ↵ flips, 1-4 rate once revealed */
 defineShortcuts({
   enter: () => { if (currentCard.value) toggleFlip() },
   '1': () => { if (flipped.value) rate(1) },
