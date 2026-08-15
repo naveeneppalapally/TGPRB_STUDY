@@ -1,176 +1,246 @@
 <template>
   <ClientOnly>
-    <div v-if="quiz" class="rounded-xl border b-line overflow-hidden" @keydown="handleKey" tabindex="0">
-      <!-- Header -->
-      <div class="flex items-center justify-between px-5 py-3.5 border-b b-line">
-        <div class="flex items-center gap-2">
-          <UIcon name="i-heroicons-lock-closed" class="h-4 w-4 text-saffron-500" />
-          <h3 class="font-semibold text-[13px] t-hi">Comprehension Gate</h3>
-          <span class="font-mono text-[10px] t-lo">
-            {{ submitted ? 'Done' : `Q${currentQ + 1} of ${quiz.questions.length}` }}
-          </span>
-        </div>
-        <span class="text-[11px] t-lo">Pass {{ quiz.pass_threshold }}/{{ quiz.questions.length }} to unlock flashcards</span>
-      </div>
-
-      <!-- Question view (one at a time) -->
-      <div v-if="!submitted">
-        <Transition :name="slideDir" mode="out-in">
-          <div :key="currentQ" class="px-5 py-5">
-            <!-- Question text -->
-            <p class="font-medium text-[14px] leading-[1.7] t-hi mb-4">
-              <span class="font-mono text-saffron-500 mr-1.5">Q{{ currentQ + 1 }}.</span>
-              {{ quiz.questions[currentQ].question }}
+    <div class="space-y-6">
+      <!-- Direct Unlock Active Banner -->
+      <div
+        v-if="mode === 'direct'"
+        class="rounded-xl border border-saffron-500/30 bg-saffron-500/5 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+      >
+        <div class="flex items-start gap-3">
+          <UIcon name="i-heroicons-lock-open" class="h-5 w-5 text-saffron-500 shrink-0 mt-0.5" />
+          <div>
+            <p class="text-[13px] font-semibold t-hi flex items-center gap-2">
+              Direct Unlock Active
+              <span class="chip chip-mono text-[10px] bg-saffron-500/20 text-saffron-600 dark:text-saffron-400">Settings</span>
             </p>
-
-            <!-- Options -->
-            <div class="flex flex-col gap-2">
-              <label
-                v-for="(opt, oi) in quiz.questions[currentQ].options"
-                :key="oi"
-                class="opt"
-                :class="answers[currentQ] === oi ? 'opt-selected' : ''"
-              >
-                <input
-                  type="radio"
-                  :name="`gate-q-${currentQ}`"
-                  :value="oi"
-                  v-model="answers[currentQ]"
-                  class="sr-only"
-                />
-                <span
-                  class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
-                  :class="answers[currentQ] === oi
-                    ? 'border-saffron-500 bg-saffron-500'
-                    : 'border-gray-300 dark:border-gray-700'"
-                >
-                  <span v-if="answers[currentQ] === oi" class="w-2 h-2 rounded-full bg-white" />
-                </span>
-                <span class="text-[13px] flex-1" :class="answers[currentQ] === oi ? 't-hi font-medium' : 't-mid'">
-                  {{ opt }}
-                </span>
-              </label>
-            </div>
-          </div>
-        </Transition>
-
-        <!-- Progress dots + navigation -->
-        <div class="flex items-center justify-between px-5 py-3 border-t b-line bg-white/30 dark:bg-black/20">
-          <!-- Dot progress -->
-          <div class="flex items-center gap-1.5">
-            <span
-              v-for="(q, i) in quiz.questions"
-              :key="i"
-              class="rounded-full transition-all duration-200"
-              :class="[
-                i === currentQ ? 'w-4 h-1.5 bg-saffron-500' : 'w-1.5 h-1.5',
-                answers[i] !== undefined
-                  ? 'bg-saffron-400'
-                  : 'bg-gray-300 dark:bg-gray-700'
-              ]"
-            />
-          </div>
-
-          <!-- Arrows + Submit -->
-          <div class="flex items-center gap-2">
-            <button
-              type="button"
-              class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
-              :disabled="currentQ === 0"
-              @click="prevQ"
-            >
-              <UIcon name="i-heroicons-arrow-left" class="h-4 w-4" />
-            </button>
-            <button
-              v-if="currentQ < quiz.questions.length - 1"
-              type="button"
-              class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
-              @click="nextQ"
-            >
-              <UIcon name="i-heroicons-arrow-right" class="h-4 w-4" />
-            </button>
-            <button
-              v-else
-              type="button"
-              class="h-8 px-4 rounded-lg text-[12px] font-semibold transition-all"
-              :class="allAnswered
-                ? 'bg-saffron-500 text-white hover:bg-saffron-600'
-                : 'bg-gray-100 dark:bg-gray-800 t-lo cursor-not-allowed'"
-              :disabled="!allAnswered"
-              @click="submitGate"
-            >
-              Submit ({{ answeredCount }}/{{ quiz.questions.length }})
-            </button>
+            <p class="mt-0.5 text-[12px] t-mid">
+              Atomic flashcards are unlocked immediately on this device without requiring the comprehension gate.
+            </p>
           </div>
         </div>
-      </div>
-
-      <!-- Results view -->
-      <div v-else class="px-5 py-5 space-y-4">
-        <!-- Score banner -->
-        <div
-          class="rounded-xl p-5 text-center"
-          :class="passed
-            ? 'bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800'
-            : 'bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800'"
-        >
-          <p class="text-4xl font-bold font-mono mb-1" :class="passed ? 'text-green-500' : 'text-red-400'">
-            {{ score }}/{{ quiz.questions.length }}
-          </p>
-          <p class="text-[13px] font-medium" :class="passed ? 'text-green-600 dark:text-green-400' : 'text-red-500'">
-            {{ passed ? 'Gate Passed - Flashcards Unlocked!' : 'Not quite - review and try again' }}
-          </p>
-        </div>
-
-        <!-- Per-question review -->
-        <div
-          v-for="(q, qi) in quiz.questions"
-          :key="q.id"
-          class="rounded-lg border b-line p-4"
-          :class="answers[qi] === q.correct_answer ? 'border-green-200 dark:border-green-900' : 'border-red-200 dark:border-red-900'"
-        >
-          <div class="flex items-start gap-2 mb-2">
-            <UIcon
-              :name="answers[qi] === q.correct_answer ? 'i-heroicons-check-circle-solid' : 'i-heroicons-x-circle-solid'"
-              class="h-4 w-4 mt-0.5 flex-shrink-0"
-              :class="answers[qi] === q.correct_answer ? 'text-green-500' : 'text-red-400'"
-            />
-            <p class="font-medium text-[13px] t-hi">{{ q.question }}</p>
-          </div>
-          <p class="text-[12px] ml-6 t-lo">
-            Your answer:
-            <span :class="answers[qi] === q.correct_answer ? 'text-green-500' : 'text-red-400'">
-              {{ q.options[answers[qi]] }}
-            </span>
-          </p>
-          <p v-if="answers[qi] !== q.correct_answer" class="text-[12px] ml-6 text-green-500">
-            Correct: {{ q.options[q.correct_answer] }}
-          </p>
-          <p v-if="q.explanation" class="text-[12px] ml-6 mt-2 t-lo italic">{{ q.explanation }}</p>
-        </div>
-
-        <!-- Retry -->
         <button
-          v-if="!passed"
+          v-if="quiz"
           type="button"
-          class="w-full py-2.5 rounded-lg border b-line text-[12px] font-medium t-mid hover:t-hi hover:bg-gray-50 dark:hover:bg-gray-900 transition-all"
-          @click="retry"
+          class="shrink-0 text-[11.5px] font-mono font-medium accent hover:underline flex items-center gap-1 self-start sm:self-center"
+          @click="showOptionalQuiz = !showOptionalQuiz"
         >
-          Try again
+          <UIcon :name="showOptionalQuiz ? 'i-heroicons-chevron-up' : 'i-heroicons-beaker'" class="h-3.5 w-3.5" />
+          {{ showOptionalQuiz ? 'Hide Quiz' : 'Practice Gate Quiz (Optional)' }}
         </button>
       </div>
-    </div>
 
-    <!-- Gate not available yet -->
-    <div v-else class="rounded-xl border b-line px-5 py-4">
-      <p class="text-[12px] t-lo">Comprehension gate not available for this note yet.</p>
+      <!-- Gate Quiz Box (Shown if gate mode, or if user toggled optional quiz in direct mode) -->
+      <div
+        v-if="quiz && (mode === 'gate' || showOptionalQuiz)"
+        class="rounded-xl border b-line overflow-hidden"
+        @keydown="handleKey"
+        tabindex="0"
+      >
+        <!-- Header -->
+        <div class="flex items-center justify-between px-5 py-3.5 border-b b-line">
+          <div class="flex items-center gap-2">
+            <UIcon
+              :name="isUnlocked ? 'i-heroicons-lock-open' : 'i-heroicons-lock-closed'"
+              class="h-4 w-4"
+              :class="isUnlocked ? 'text-emerald-500' : 'text-saffron-500'"
+            />
+            <h3 class="font-semibold text-[13px] t-hi">Comprehension Gate</h3>
+            <span class="font-mono text-[10px] t-lo">
+              {{ submitted ? 'Done' : (previouslyPassed && !retrying ? 'Passed' : `Q${currentQ + 1} of ${quiz.questions.length}`) }}
+            </span>
+          </div>
+          <span class="text-[11px] t-lo">
+            Pass {{ quiz.pass_threshold }}/{{ quiz.questions.length }} to unlock flashcards
+          </span>
+        </div>
+
+        <!-- Previously Passed State (Gate mode) -->
+        <div v-if="previouslyPassed && !retrying && !submitted" class="p-6 text-center space-y-3">
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 mb-1">
+            <UIcon name="i-heroicons-check-badge" class="h-7 w-7" />
+          </div>
+          <h4 class="text-[15px] font-semibold t-hi">Comprehension Gate Passed</h4>
+          <p class="text-[12.5px] t-mid max-w-md mx-auto leading-relaxed">
+            You have already verified your understanding of this note. The atomic flashcards are fully unlocked and synced with your review queue.
+          </p>
+          <div class="pt-2">
+            <button
+              type="button"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border b-line text-[11.5px] font-mono font-medium t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              @click="startRetake"
+            >
+              <UIcon name="i-heroicons-arrow-path" class="h-3.5 w-3.5" />
+              Retake Gate Quiz
+            </button>
+          </div>
+        </div>
+
+        <!-- Question view (one at a time) -->
+        <div v-else-if="!submitted">
+          <Transition :name="slideDir" mode="out-in">
+            <div :key="currentQ" class="px-5 py-5">
+              <!-- Question text -->
+              <p class="font-medium text-[14px] leading-[1.7] t-hi mb-4">
+                <span class="font-mono text-saffron-500 mr-1.5">Q{{ currentQ + 1 }}.</span>
+                {{ quiz.questions[currentQ].question }}
+              </p>
+
+              <!-- Options -->
+              <div class="flex flex-col gap-2">
+                <label
+                  v-for="(opt, oi) in quiz.questions[currentQ].options"
+                  :key="oi"
+                  class="opt"
+                  :class="answers[currentQ] === oi ? 'opt-selected' : ''"
+                >
+                  <input
+                    type="radio"
+                    :name="`gate-q-${currentQ}`"
+                    :value="oi"
+                    v-model="answers[currentQ]"
+                    class="sr-only"
+                  />
+                  <span
+                    class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
+                    :class="answers[currentQ] === oi
+                      ? 'border-saffron-500 bg-saffron-500'
+                      : 'border-gray-300 dark:border-gray-700'"
+                  >
+                    <span v-if="answers[currentQ] === oi" class="w-2 h-2 rounded-full bg-white" />
+                  </span>
+                  <span class="text-[13px] flex-1" :class="answers[currentQ] === oi ? 't-hi font-medium' : 't-mid'">
+                    {{ opt }}
+                  </span>
+                </label>
+              </div>
+            </div>
+          </Transition>
+
+          <!-- Progress dots + navigation -->
+          <div class="flex items-center justify-between px-5 py-3 border-t b-line bg-white/30 dark:bg-black/20">
+            <!-- Dot progress -->
+            <div class="flex items-center gap-1.5">
+              <span
+                v-for="(q, i) in quiz.questions"
+                :key="i"
+                class="rounded-full transition-all duration-200"
+                :class="[
+                  i === currentQ ? 'w-4 h-1.5 bg-saffron-500' : 'w-1.5 h-1.5',
+                  answers[i] !== undefined
+                    ? 'bg-saffron-400'
+                    : 'bg-gray-300 dark:bg-gray-700'
+                ]"
+              />
+            </div>
+
+            <!-- Arrows + Submit -->
+            <div class="flex items-center gap-2">
+              <button
+                type="button"
+                class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
+                :disabled="currentQ === 0"
+                @click="prevQ"
+              >
+                <UIcon name="i-heroicons-arrow-left" class="h-4 w-4" />
+              </button>
+              <button
+                v-if="currentQ < quiz.questions.length - 1"
+                type="button"
+                class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                @click="nextQ"
+              >
+                <UIcon name="i-heroicons-arrow-right" class="h-4 w-4" />
+              </button>
+              <button
+                v-else
+                type="button"
+                class="h-8 px-4 rounded-lg text-[12px] font-semibold transition-all"
+                :class="allAnswered
+                  ? 'bg-saffron-500 text-white hover:bg-saffron-600'
+                  : 'bg-gray-100 dark:bg-gray-800 t-lo cursor-not-allowed'"
+                :disabled="!allAnswered"
+                @click="submitGate"
+              >
+                Submit ({{ answeredCount }}/{{ quiz.questions.length }})
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results view -->
+        <div v-else class="px-5 py-5 space-y-4">
+          <!-- Score banner -->
+          <div
+            class="rounded-xl p-5 text-center"
+            :class="passed
+              ? 'bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800'
+              : 'bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800'"
+          >
+            <p class="text-4xl font-bold font-mono mb-1" :class="passed ? 'text-green-500' : 'text-red-400'">
+              {{ score }}/{{ quiz.questions.length }}
+            </p>
+            <p class="text-[13px] font-medium" :class="passed ? 'text-green-600 dark:text-green-400' : 'text-red-500'">
+              {{ passed ? 'Gate Passed - Flashcards Unlocked!' : 'Not quite - review and try again' }}
+            </p>
+          </div>
+
+          <!-- Per-question review -->
+          <div
+            v-for="(q, qi) in quiz.questions"
+            :key="q.id"
+            class="rounded-lg border b-line p-4"
+            :class="answers[qi] === q.correct_answer ? 'border-green-200 dark:border-green-900' : 'border-red-200 dark:border-red-900'"
+          >
+            <div class="flex items-start gap-2 mb-2">
+              <UIcon
+                :name="answers[qi] === q.correct_answer ? 'i-heroicons-check-circle-solid' : 'i-heroicons-x-circle-solid'"
+                class="h-4 w-4 mt-0.5 flex-shrink-0"
+                :class="answers[qi] === q.correct_answer ? 'text-green-500' : 'text-red-400'"
+              />
+              <p class="font-medium text-[13px] t-hi">{{ q.question }}</p>
+            </div>
+            <p class="text-[12px] ml-6 t-lo">
+              Your answer:
+              <span :class="answers[qi] === q.correct_answer ? 'text-green-500' : 'text-red-400'">
+                {{ q.options[answers[qi]] }}
+              </span>
+            </p>
+            <p v-if="answers[qi] !== q.correct_answer" class="text-[12px] ml-6 text-green-500">
+              Correct: {{ q.options[q.correct_answer] }}
+            </p>
+            <p v-if="q.explanation" class="text-[12px] ml-6 mt-2 t-lo italic">{{ q.explanation }}</p>
+          </div>
+
+          <!-- Retry -->
+          <button
+            v-if="!passed"
+            type="button"
+            class="w-full py-2.5 rounded-lg border b-line text-[12px] font-medium t-mid hover:t-hi hover:bg-gray-50 dark:hover:bg-gray-900 transition-all"
+            @click="retry"
+          >
+            Try again
+          </button>
+        </div>
+      </div>
+
+      <!-- Gate not available yet -->
+      <div v-else-if="!quiz && mode === 'gate'" class="rounded-xl border b-line px-5 py-4">
+        <p class="text-[12px] t-lo">Comprehension gate not available for this note yet.</p>
+      </div>
+
+      <!-- Flashcard Deck (Rendered whenever unlocked via Direct mode, Gate pass, or previous pass) -->
+      <FlashcardDeck
+        v-if="isUnlocked && assistantNoteId"
+        :note-id="assistantNoteId"
+        :unlock-mode="mode"
+      />
     </div>
   </ClientOnly>
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref, onMounted } from 'vue'
-import { useAsyncData } from '#imports'
+import { computed, reactive, ref, onMounted, watch } from 'vue'
+import { useFlashcardUnlock } from '@/composables/useFlashcardUnlock'
 
 interface GateQuestion {
   id: string
@@ -195,7 +265,14 @@ const emit = defineEmits<{
   completed: [result: { score: number; total: number; passed: boolean }]
 }>()
 
+const { mode, hasPassedQuizLocally, markGatePassed } = useFlashcardUnlock()
+
 const fetchedQuiz = ref<GateQuizData | null>(null)
+const showOptionalQuiz = ref(false)
+const previouslyPassed = ref(false)
+const retrying = ref(false)
+
+const assistantNoteId = computed(() => props.noteId ?? quiz.value?.note_id ?? '')
 
 onMounted(async () => {
   if (props.noteId && !props.quiz) {
@@ -205,10 +282,19 @@ onMounted(async () => {
       fetchedQuiz.value = null
     }
   }
+
+  if (assistantNoteId.value) {
+    previouslyPassed.value = hasPassedQuizLocally(assistantNoteId.value)
+  }
+})
+
+watch(() => assistantNoteId.value, (newId) => {
+  if (newId) {
+    previouslyPassed.value = hasPassedQuizLocally(newId)
+  }
 })
 
 const quiz = computed<GateQuizData | undefined>(() => props.quiz ?? fetchedQuiz.value ?? undefined)
-const assistantNoteId = computed(() => props.noteId ?? quiz.value?.note_id ?? '')
 
 // Navigation
 const currentQ = ref(0)
@@ -218,6 +304,13 @@ const answers = reactive<Record<number, number>>({})
 const submitted = ref(false)
 const score = ref(0)
 const passed = ref(false)
+
+const isUnlocked = computed(() => {
+  if (mode.value === 'direct') return true
+  if (passed.value) return true
+  if (previouslyPassed.value) return true
+  return false
+})
 
 const answeredCount = computed(() => Object.keys(answers).length)
 const allAnswered = computed(() => !!quiz.value && answeredCount.value === quiz.value.questions.length)
@@ -248,9 +341,21 @@ function submitGate() {
     if (answers[i] === q.correct_answer) correct++
   })
   score.value = correct
-  passed.value = correct >= quiz.value.pass_threshold
+  const didPass = correct >= quiz.value.pass_threshold
+  passed.value = didPass
   submitted.value = true
-  emit('completed', { score: correct, total: quiz.value.questions.length, passed: passed.value })
+
+  if (didPass && assistantNoteId.value) {
+    markGatePassed(assistantNoteId.value)
+    previouslyPassed.value = true
+  }
+
+  emit('completed', { score: correct, total: quiz.value.questions.length, passed: didPass })
+}
+
+function startRetake() {
+  retrying.value = true
+  retry()
 }
 
 function retry() {

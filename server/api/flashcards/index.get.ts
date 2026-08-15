@@ -1,5 +1,9 @@
 import { defineEventHandler } from 'h3'
 import drainageSystem from '~/content/data/flashcards/geography/drainage-system.json'
+import mountainsInIndia from '~/content/data/flashcards/geography/mountains-in-india.json'
+import damsInIndia from '~/content/data/flashcards/geography/dams-in-india.json'
+import irrigationInIndia from '~/content/data/flashcards/geography/irrigation-in-india.json'
+import forestsInIndia from '~/content/data/flashcards/geography/forests-in-india.json'
 import unionExecutiveAndLegislature from '~/content/data/flashcards/polity/union-executive-and-legislature.json'
 import telanganaStatehoodMovement from '~/content/data/flashcards/telangana/telangana-statehood-movement.json'
 
@@ -26,6 +30,30 @@ const DECKS: DeckMeta[] = [
     examSection: 'Geography',
     topic: 'Drainage System of India',
     deck: drainageSystem,
+  },
+  {
+    noteId: 'NOTE-GEO-MOUNTAINS',
+    examSection: 'Geography',
+    topic: 'Mountains of India',
+    deck: mountainsInIndia,
+  },
+  {
+    noteId: 'NOTE-GEO-DAMS',
+    examSection: 'Geography',
+    topic: 'Dams in India',
+    deck: damsInIndia,
+  },
+  {
+    noteId: 'NOTE-GEO-IRRIGATION',
+    examSection: 'Geography',
+    topic: 'Irrigation in India',
+    deck: irrigationInIndia,
+  },
+  {
+    noteId: 'NOTE-GEO-FORESTS',
+    examSection: 'Geography',
+    topic: 'Forests of India',
+    deck: forestsInIndia,
   },
   {
     noteId: 'NOTE-POL-UNION-EXEC',

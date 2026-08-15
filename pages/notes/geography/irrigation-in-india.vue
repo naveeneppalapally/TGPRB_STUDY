@@ -789,10 +789,106 @@
           </div>
         </section>
 
-        <!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
-        <section id="gate" class="mb-14 scroll-mt-20">
+        <!-- ── 07 · Advanced Practice ───────────────────────────────────── -->
+        <section id="advanced-practice" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">07</span>
+            <h2 class="sec-title">Advanced Practice</h2>
+            <span class="sec-rule" />
+            <span class="sec-meta hidden sm:block">
+              {{ advancedPractice.length }} drills
+              <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
+            </span>
+          </header>
+
+          <!-- Disclaimer callout -->
+          <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
+            <p class="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              <UIcon name="i-heroicons-beaker" class="h-4 w-4" />
+              TGPSC-Style Advanced Practice
+            </p>
+            <p class="mt-1.5 text-[13px] leading-relaxed t-mid">
+              These questions use <strong class="t-hi">multi-statement, 4x4 matching, and scheme verification</strong> formats
+              from recent TGPSC Group-I patterns. TGPRB papers (2022-2023) remain
+              <strong class="t-hi">92-93.5% direct factual MCQs</strong>. These drills harden your policy and canal recall.
+            </p>
+            <p class="mt-2 text-[11.5px] font-mono t-lo">
+              Source: Forensic Paper-Setting Evolution Audit, Aug 2026 - 1,350 questions classified across 7 papers.
+            </p>
+          </div>
+
+          <!-- Advanced Practice Cards -->
+          <div class="space-y-6">
+            <article
+              v-for="q in advancedPractice"
+              :key="q.uid"
+              class="panel p-5 sm:p-6 transition-all duration-200"
+            >
+              <!-- Card header -->
+              <div class="mb-3 flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10.5px] font-bold font-mono uppercase tracking-wider bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+                  {{ q.format }}
+                </span>
+                <span v-if="q.isSynthetic" class="chip chip-mono">Synthetic</span>
+                <span v-else class="chip chip-mono">Real TGPSC</span>
+                <span class="font-mono text-[10.5px] tracking-tight t-lo ms-auto hidden sm:inline">{{ q.source }}</span>
+                <span
+                  v-if="q.revealed && q.selected !== null"
+                  class="chip chip-mono ms-auto sm:ms-0"
+                  :class="q.selected === q.correct ? 'chip-jade' : 'chip-red'"
+                >{{ q.selected === q.correct ? 'Correct' : 'Missed' }}</span>
+              </div>
+
+              <!-- Question stem -->
+              <p class="mb-4 whitespace-pre-line text-[14px] font-medium leading-[1.7] t-hi">{{ q.question }}</p>
+
+              <!-- Options grid -->
+              <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <button
+                  v-for="(opt, oi) in q.options"
+                  :key="oi"
+                  type="button"
+                  class="opt"
+                  :class="advOptionClass(q, oi)"
+                  :disabled="q.revealed"
+                  @click="advAttempt(q, oi)"
+                >
+                  <span class="opt-letter">{{ 'ABCD'[oi] }}</span>
+                  <span class="flex-1 text-left">{{ opt }}</span>
+                  <UIcon v-if="q.revealed && oi === q.correct" name="i-heroicons-check-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--jade)]" />
+                  <UIcon v-else-if="q.revealed && oi === q.selected" name="i-heroicons-x-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--red)]" />
+                </button>
+              </div>
+
+              <!-- Explanation -->
+              <div v-if="q.revealed" class="callout callout-jade mt-4 animate-fade-in">
+                <p class="callout-title">
+                  <UIcon name="i-heroicons-light-bulb" class="h-3.5 w-3.5" />
+                  Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
+                </p>
+                <p class="callout-body">{{ q.explanation }}</p>
+                <AiAskButton
+                  class="mt-3"
+                  note-id="NOTE-GEO-IRRIGATION"
+                  :prompt="`Explain the reasoning for this TGPSC-style irrigation question and the exam trap: ${q.question}`"
+                  :source-question-id="q.uid"
+                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
+                  label="Explain with AI"
+                />
+              </div>
+
+              <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
+                <span>Reveal answer &amp; explanation</span>
+                <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── 08 · Comprehension Gate ─────────────────────────────────── -->
+        <section id="gate" class="mb-14 scroll-mt-20">
+          <header class="sec-head">
+            <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
@@ -800,10 +896,10 @@
           <GateQuiz note-id="NOTE-GEO-IRRIGATION" />
         </section>
 
-        <!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+        <!-- ── 09 · Current Affairs ─────────────────────────────────────── -->
         <section id="current-affairs" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">08</span>
+            <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
@@ -913,14 +1009,15 @@ const coverage = [
 ]
 
 const sections = [
-  { id: 'visual', label: 'The Visual Architecture' },
-  { id: 'introduction', label: 'Introduction' },
-  { id: 'deep-dive', label: 'Deep Dive' },
-  { id: 'data', label: 'Data & Comparisons' },
-  { id: 'hacks', label: 'Memory Hacks' },
-  { id: 'pyqs', label: 'PYQs' },
-  { id: 'gate', label: 'Comprehension Gate' },
-  { id: 'current-affairs', label: 'Current Affairs' },
+  { id: 'visual',            label: 'The Visual Architecture' },
+  { id: 'introduction',      label: 'Introduction' },
+  { id: 'deep-dive',         label: 'Deep Dive' },
+  { id: 'data',              label: 'Data & Comparisons' },
+  { id: 'hacks',             label: 'Memory Hacks' },
+  { id: 'pyqs',              label: 'PYQs' },
+  { id: 'advanced-practice', label: 'Advanced Practice' },
+  { id: 'gate',              label: 'Comprehension Gate' },
+  { id: 'current-affairs',   label: 'Current Affairs' },
 ]
 
 const textHierarchy = `IRRIGATION IN INDIA (Macro Sources & Distribution)
@@ -1023,6 +1120,126 @@ const pyqList = reactive<Pyq[]>([
     selected: null
   }
 ])
+
+/* ── Advanced Practice: TGPSC-style hardening drills ────────────────────── */
+interface AdvPractice {
+  uid: string
+  question: string
+  options: string[]
+  correct: number
+  explanation: string
+  source: string
+  format: string
+  isSynthetic: boolean
+  revealed: boolean
+  selected: number | null
+}
+
+const advancedPractice = reactive<AdvPractice[]>([
+  {
+    uid: 'ADV-GEO-IRR-001',
+    question: 'Match the following lift irrigation projects/barrage with the rivers:\n\nList I (Project/Barrage):\nA. Mahatma Gandhi Kalwakurthy Lift Irrigation Project\nB. Nizam Sagar Project\nC. J. Chokka Rao Devadula Lift Irrigation Scheme\nD. Chanaka-Korata Barrage\n\nList II (River):\nI. Godavari\nII. Krishna\nIII. Penganga\nIV. Manjeera\n\nChoose the correct answer:',
+    options: [
+      'A-II, B-I, C-IV, D-III',
+      'A-II, B-I, C-III, D-IV',
+      'A-II, B-IV, C-I, D-III',
+      'A-I, B-II, C-III, D-IV'
+    ],
+    correct: 2,
+    explanation: 'Kalwakurthy LIS draws from Krishna River (A-II). Nizam Sagar is on Manjeera River in Kamareddy (B-IV). Devadula LIS lifts water from Godavari at Gangaram (C-I). Chanaka-Korata Barrage is on Penganga River in Adilabad (D-III).',
+    source: 'TGPSC Group-I 2024, Q101',
+    format: 'Matching',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-IRR-002',
+    question: 'Consider the following statements regarding Telangana irrigation projects:\n\nA. Koulasnala and Boggulavagu irrigation projects are located in the Godavari basin.\nB. Kotepally Vagu and Asif Nahar irrigation projects are located in the Krishna basin.\n\nWhich of the above statements is/are correct?',
+    options: [
+      'A only',
+      'B only',
+      'Both A and B',
+      'Neither A nor B'
+    ],
+    correct: 2,
+    explanation: 'Koulasnala (Kamareddy - Manjeera/Godavari) and Boggulavagu (Mancherial - Godavari basin) are Godavari projects. Kotepally Vagu (Vikarabad - Kagna/Krishna) and Asif Nahar fall in Krishna basin. Both statements are correct.',
+    source: 'TGPSC Group-I 2024, Q71',
+    format: 'Multi-statement',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-IRR-003',
+    question: 'Jal Jeevan Mission is a Government of India programme. Which of the following statements are correct about Jal Jeevan Mission?\n\nA. \'Har Ghar Jal\' initiative was launched in 2019.\nB. Goa became the first certified Har Ghar Jal State in August 2022.\nC. Har Ghar Jal initiative is set to provide all rural households with safe drinking water through taps by 2025.\nD. More than 73.7% households are reported to have tap water supply as on 30.01.2024.\n\nChoose the correct answer:',
+    options: [
+      'A and B only',
+      'A, B and C only',
+      'A, B and D only',
+      'A, C and D only'
+    ],
+    correct: 2,
+    explanation: 'Statements A, B, and D are factually correct. Statement C is false because the original mission target deadline was 2024, not 2025.',
+    source: 'TGPSC Group-I 2024, Q36',
+    format: 'Multi-statement',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-IRR-004',
+    question: 'Which of the following statements regarding the sources of irrigation in India are correct?\n\nA. Tube-wells and other wells constitute the largest source of net irrigated area in India (~62-64%).\nB. Canals form the second largest source of irrigation (~24-26%), with Uttar Pradesh possessing the largest canal network.\nC. Tank irrigation is predominantly practiced in the Peninsular region due to hard crystalline non-porous rock terrain.\nD. Micro-irrigation (Drip and Sprinkler) is promoted under the \'Per Drop More Crop\' component of PMKSY.\n\nChoose the correct answer:',
+    options: [
+      'A, B, C and D',
+      'A, B and C only',
+      'B, C and D only',
+      'A and B only'
+    ],
+    correct: 0,
+    explanation: 'All four statements are verified factual principles from Ministry of Jal Shakti reports and NCERT irrigation geography.',
+    source: 'Synthetic - derived from National Irrigation Census & PYQ inventory',
+    format: 'Multi-statement',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-IRR-005',
+    question: 'Match the following major canal systems with their headworks/source rivers:\n\nList I (Canal System):\nA. Indira Gandhi Canal\nB. Buckingham Canal\nC. Sirhind Canal\nD. Kurnool-Cuddapah (K-C) Canal\n\nList II (Headworks / Source):\nI. Sutlej River at Ropar (Punjab)\nII. Sunkesula Barrage on Tungabhadra River\nIII. Harike Barrage at Sutlej-Beas confluence\nIV. Saltwater navigation canal along AP/TN coast',
+    options: [
+      'A-III, B-IV, C-I, D-II',
+      'A-III, B-I, C-IV, D-II',
+      'A-I, B-IV, C-III, D-II',
+      'A-III, B-IV, C-II, D-I'
+    ],
+    correct: 0,
+    explanation: 'Indira Gandhi Canal takes off from Harike Barrage (III). Buckingham Canal is a historic coastal canal in AP/TN (IV). Sirhind Canal originates at Ropar from Sutlej (I). K-C Canal originates from Sunkesula Barrage on Tungabhadra (II).',
+    source: 'Synthetic - derived from canal systems inventory',
+    format: 'Matching',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+])
+
+const advAttemptedCount = computed(() => advancedPractice.filter(q => q.revealed).length)
+const advCorrectCount = computed(() => advancedPractice.filter(q => q.revealed && q.selected === q.correct).length)
+
+function advAttempt(q: AdvPractice, optIdx: number) {
+  if (q.revealed) return
+  q.selected = optIdx
+  q.revealed = true
+}
+function advReveal(q: AdvPractice) {
+  q.revealed = true
+}
+function advOptionClass(q: AdvPractice, oi: number) {
+  if (!q.revealed) return ''
+  if (oi === q.correct) return 'opt-correct'
+  if (oi === q.selected) return 'opt-wrong'
+  return 'opt-dim'
+}
 
 function attempt(q: Pyq, oi: number) {
   if (q.revealed) return

@@ -846,10 +846,107 @@
           </div>
         </section>
 
-        <!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
-        <section id="gate" class="mb-14 scroll-mt-20">
+        <!-- -- 07 - TGPSC-Style Advanced Practice ----------------------- -->
+        <section id="advanced-practice" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">07</span>
+            <h2 class="sec-title">Advanced Practice</h2>
+            <span class="sec-rule" />
+            <span class="sec-meta hidden sm:block">
+              {{ advancedPractice.length }} drills
+              <template v-if="advAttemptedCount > 0"> - {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
+            </span>
+          </header>
+
+          <!-- Disclaimer callout -->
+          <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
+            <p class="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              <UIcon name="i-heroicons-beaker" class="h-4 w-4" />
+              TGPSC-Style Advanced Practice
+            </p>
+            <p class="mt-1.5 text-[13px] leading-relaxed t-mid">
+              These questions use <strong class="t-hi">multi-statement, matching, and assertion-reason</strong> formats
+              from the TGPSC Group-I 2024 paper. TGPRB papers (2022-2023) remain
+              <strong class="t-hi">92-93.5% direct factual MCQs</strong>. These drills harden your fact base
+              against a potentially harder 2026 format.
+            </p>
+            <p class="mt-2 text-[11.5px] font-mono t-lo">
+              Source: Forensic Paper-Setting Evolution Audit, Aug 2026 - 1,350 questions classified across 7 papers.
+            </p>
+          </div>
+
+          <!-- Advanced Practice Cards -->
+          <div class="space-y-4">
+            <article
+              v-for="(q, qi) in advancedPractice"
+              :key="q.uid"
+              class="panel panel-pad transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-700"
+            >
+              <!-- Card header -->
+              <div class="mb-3 flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10.5px] font-bold font-mono uppercase tracking-wider bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+                  {{ q.format }}
+                </span>
+                <span v-if="q.isSynthetic" class="chip chip-mono">Synthetic</span>
+                <span v-else class="chip chip-mono">Real TGPSC</span>
+                <span class="font-mono text-[10.5px] tracking-tight t-lo ms-auto hidden sm:inline">{{ q.source }}</span>
+                <span
+                  v-if="q.revealed && q.selected !== null"
+                  class="chip chip-mono ms-auto sm:ms-0"
+                  :class="q.selected === q.correct ? 'chip-jade' : 'chip-red'"
+                >{{ q.selected === q.correct ? 'Correct' : 'Missed' }}</span>
+              </div>
+
+              <!-- Question stem -->
+              <p class="mb-4 whitespace-pre-line text-[14px] font-medium leading-[1.7] t-hi">{{ q.question }}</p>
+
+              <!-- Options grid -->
+              <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <button
+                  v-for="(opt, oi) in q.options"
+                  :key="oi"
+                  type="button"
+                  class="opt"
+                  :class="advOptionClass(q, oi)"
+                  :disabled="q.revealed"
+                  @click="advAttempt(q, oi)"
+                >
+                  <span class="opt-letter">{{ 'ABCD'[oi] }}</span>
+                  <span class="flex-1">{{ opt }}</span>
+                  <UIcon v-if="q.revealed && oi === q.correct" name="i-heroicons-check-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--jade)]" />
+                  <UIcon v-else-if="q.revealed && oi === q.selected" name="i-heroicons-x-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--red)]" />
+                </button>
+              </div>
+
+              <!-- Explanation -->
+              <div v-if="q.revealed" class="callout callout-jade mt-4 animate-fade-in">
+                <p class="callout-title">
+                  <UIcon name="i-heroicons-light-bulb" class="h-3.5 w-3.5" />
+                  Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
+                </p>
+                <p class="callout-body">{{ q.explanation }}</p>
+                <AiAskButton
+                  class="mt-3"
+                  note-id="NOTE-GEO-DRAINAGE"
+                  :prompt="`Explain the reasoning for this TGPSC-style question and the exam trap: ${q.question}`"
+                  :source-question-id="q.uid"
+                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
+                  label="Explain with AI"
+                />
+              </div>
+
+              <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
+                <span>Reveal answer &amp; explanation</span>
+                <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <!-- -- 08 - Comprehension Gate ----------------------------------- -->
+        <section id="gate" class="mb-14 scroll-mt-20">
+          <header class="sec-head">
+            <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
@@ -857,10 +954,10 @@
           <GateQuiz note-id="NOTE-GEO-DRAINAGE" />
         </section>
 
-        <!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+        <!-- -- 09 - Current Affairs -------------------------------------- -->
         <section id="current-affairs" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">08</span>
+            <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
@@ -945,14 +1042,15 @@ const coverage = [
 
 /* ── ToC + scrollspy + reading progress ──────────────────────────────────── */
 const sections = [
-  { id: 'map',             label: 'The Map' },
-  { id: 'introduction',   label: 'Introduction' },
-  { id: 'deep-dive',      label: 'Deep Dive' },
-  { id: 'data',           label: 'Data & Comparisons' },
-  { id: 'memory-hacks',   label: 'Memory Hacks' },
-  { id: 'pyqs',           label: 'PYQs' },
-  { id: 'gate',           label: 'Comprehension Gate' },
-  { id: 'current-affairs', label: 'Current Affairs' },
+  { id: 'map',               label: 'The Map' },
+  { id: 'introduction',     label: 'Introduction' },
+  { id: 'deep-dive',        label: 'Deep Dive' },
+  { id: 'data',             label: 'Data & Comparisons' },
+  { id: 'memory-hacks',     label: 'Memory Hacks' },
+  { id: 'pyqs',             label: 'PYQs' },
+  { id: 'advanced-practice', label: 'Advanced Practice' },
+  { id: 'gate',             label: 'Comprehension Gate' },
+  { id: 'current-affairs',  label: 'Current Affairs' },
 ]
 
 const activeSection = ref('map')
@@ -1880,6 +1978,126 @@ function focusRiverPYQ(riverKey: string) {
 
 const attemptedCount = computed(() => pyqs.filter(q => q.revealed).length)
 const correctCount = computed(() => pyqs.filter(q => q.revealed && q.selected === q.correct).length)
+
+/* -- Advanced Practice: TGPSC-style hardening drills ---------------------- */
+interface AdvPractice {
+  uid: string
+  question: string
+  options: string[]
+  correct: number
+  explanation: string
+  source: string
+  format: string
+  isSynthetic: boolean
+  revealed: boolean
+  selected: number | null
+}
+
+const advancedPractice = reactive<AdvPractice[]>([
+  {
+    uid: 'ADV-GEO-DRAIN-001',
+    question: 'Match the following lift irrigation projects/barrage with the rivers:\n\nA. Mahatma Gandhi Kalwakurthy Lift Irrigation Project\nB. Nizam Sagar Project\nC. J. Chokka Rao Devadula Lift Irrigation Scheme\nD. Chanaka-Korata Barrage\n\nI. Godavari  II. Krishna  III. Penganga  IV. Manjeera',
+    options: [
+      'A-II, B-I, C-IV, D-III',
+      'A-II, B-I, C-III, D-IV',
+      'A-II, B-IV, C-I, D-III',
+      'A-I, B-II, C-III, D-IV',
+    ],
+    correct: 2,
+    explanation: 'Kalwakurthy LIS draws from Krishna (Srisailam foreshore). Nizam Sagar is on Manjeera River (Kamareddy). Devadula LIS lifts from Godavari at Gangaram. Chanaka-Korata Barrage is on Penganga River (Adilabad).',
+    source: 'TGPSC Group-I 2024, Q101',
+    format: 'Matching',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DRAIN-002',
+    question: 'Consider the following statements:\n\nA. Koulasnala and Boggulavagu irrigation projects are located in the Godavari basin.\nB. Kotepally Vagu and Asif Nahar irrigation projects are located in the Krishna basin.\n\nWhich of the above statements is/are correct?',
+    options: [
+      'A only',
+      'B only',
+      'Both A and B',
+      'Neither A nor B',
+    ],
+    correct: 2,
+    explanation: 'Koulasnala (Jukkal, Kamareddy - Manjeera/Godavari) and Boggulavagu (Mancherial - Godavari basin) are Godavari projects. Kotepally Vagu (Vikarabad - Kagna/Bhima sub-basin) and Asif Nahar fall in the Krishna basin. Both statements are correct.',
+    source: 'TGPSC Group-I 2024, Q71',
+    format: 'Multi-statement',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DRAIN-003',
+    question: 'Which of the following fluvial landforms are associated with rejuvenated topography?\n\nA. Incised meander\nB. Entrenched meander\nC. Knickpoint\nD. Natural levees\n\nChoose the correct answer:',
+    options: [
+      'A, B, C and D',
+      'B, C and D only',
+      'A, C and D only',
+      'A, B and C only',
+    ],
+    correct: 3,
+    explanation: 'Rejuvenation occurs when base level falls or land is uplifted, renewing downcutting. Incised meanders, entrenched meanders, and knickpoints are characteristic features. Natural levees are depositional features of mature/old river stages, not indicators of rejuvenation.',
+    source: 'TGPSC Group-I 2024, Q62',
+    format: 'Multi-statement',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DRAIN-004',
+    question: 'Consider the following statements about the Godavari river system:\n\nA. It is the longest peninsular river of India at 1,465 km.\nB. Its basin covers parts of 7 states.\nC. It originates near Trimbakeshwar in Maharashtra.\nD. It drains into the Arabian Sea.\n\nWhich of the above statements are correct?',
+    options: [
+      'A, B and C only',
+      'A and C only',
+      'B, C and D only',
+      'A, B, C and D',
+    ],
+    correct: 0,
+    explanation: 'Godavari is the longest peninsular river (1,465 km), its basin spans 7 states (Maharashtra, Telangana, AP, Chhattisgarh, MP, Odisha, Karnataka), and it originates near Trimbakeshwar, Nashik. Statement D is false: Godavari drains into the Bay of Bengal, not the Arabian Sea.',
+    source: 'Synthetic - derived from PYQ-0735, PYQ-0712',
+    format: 'Multi-statement',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DRAIN-005',
+    question: 'Match the following rivers with their place of origin:\n\nA. Narmada\nB. Krishna\nC. Cauvery\nD. Godavari\n\nI. Brahmagiri Hills  II. Trimbakeshwar  III. Amarkantak  IV. Mahabaleshwar',
+    options: [
+      'A-III, B-IV, C-I, D-II',
+      'A-IV, B-III, C-I, D-II',
+      'A-III, B-I, C-IV, D-II',
+      'A-III, B-IV, C-II, D-I',
+    ],
+    correct: 0,
+    explanation: 'Narmada originates at Amarkantak (MP). Krishna originates near Mahabaleshwar (Maharashtra). Cauvery originates in Brahmagiri Hills (Karnataka). Godavari originates near Trimbakeshwar (Maharashtra).',
+    source: 'Synthetic - derived from PYQ-1512',
+    format: 'Matching',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+])
+
+const advAttemptedCount = computed(() => advancedPractice.filter(q => q.revealed).length)
+const advCorrectCount = computed(() => advancedPractice.filter(q => q.revealed && q.selected === q.correct).length)
+
+function advAttempt(q: AdvPractice, optIdx: number) {
+  if (q.revealed) return
+  q.selected = optIdx
+  q.revealed = true
+}
+function advReveal(q: AdvPractice) {
+  q.revealed = true
+}
+function advOptionClass(q: AdvPractice, oi: number) {
+  if (!q.revealed) return ''
+  if (oi === q.correct) return 'opt-correct'
+  if (oi === q.selected) return 'opt-wrong'
+  return 'opt-dim'
+}
 
 function attempt(q: Pyq, optIdx: number) {
   if (q.revealed) return

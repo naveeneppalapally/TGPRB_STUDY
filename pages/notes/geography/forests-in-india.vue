@@ -740,10 +740,106 @@
           </div>
         </section>
 
-        <!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
-        <section id="gate" class="mb-14 scroll-mt-20">
+        <!-- ── 07 · Advanced Practice ───────────────────────────────────── -->
+        <section id="advanced-practice" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">07</span>
+            <h2 class="sec-title">Advanced Practice</h2>
+            <span class="sec-rule" />
+            <span class="sec-meta hidden sm:block">
+              {{ advancedPractice.length }} drills
+              <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
+            </span>
+          </header>
+
+          <!-- Disclaimer callout -->
+          <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
+            <p class="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              <UIcon name="i-heroicons-beaker" class="h-4 w-4" />
+              TGPSC-Style Advanced Practice
+            </p>
+            <p class="mt-1.5 text-[13px] leading-relaxed t-mid">
+              These questions use <strong class="t-hi">multi-statement, 4x4 matching, and sequence ranking</strong> formats
+              from recent TGPSC Group-I patterns. TGPRB papers (2022-2023) remain
+              <strong class="t-hi">92-93.5% direct factual MCQs</strong>. These drills harden your forest area and protected zone recall.
+            </p>
+            <p class="mt-2 text-[11.5px] font-mono t-lo">
+              Source: Forensic Paper-Setting Evolution Audit, Aug 2026 - 1,350 questions classified across 7 papers.
+            </p>
+          </div>
+
+          <!-- Advanced Practice Cards -->
+          <div class="space-y-6">
+            <article
+              v-for="q in advancedPractice"
+              :key="q.uid"
+              class="panel p-5 sm:p-6 transition-all duration-200"
+            >
+              <!-- Card header -->
+              <div class="mb-3 flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10.5px] font-bold font-mono uppercase tracking-wider bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+                  {{ q.format }}
+                </span>
+                <span v-if="q.isSynthetic" class="chip chip-mono">Synthetic</span>
+                <span v-else class="chip chip-mono">Real TGPSC</span>
+                <span class="font-mono text-[10.5px] tracking-tight t-lo ms-auto hidden sm:inline">{{ q.source }}</span>
+                <span
+                  v-if="q.revealed && q.selected !== null"
+                  class="chip chip-mono ms-auto sm:ms-0"
+                  :class="q.selected === q.correct ? 'chip-jade' : 'chip-red'"
+                >{{ q.selected === q.correct ? 'Correct' : 'Missed' }}</span>
+              </div>
+
+              <!-- Question stem -->
+              <p class="mb-4 whitespace-pre-line text-[14px] font-medium leading-[1.7] t-hi">{{ q.question }}</p>
+
+              <!-- Options grid -->
+              <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <button
+                  v-for="(opt, oi) in q.options"
+                  :key="oi"
+                  type="button"
+                  class="opt"
+                  :class="advOptionClass(q, oi)"
+                  :disabled="q.revealed"
+                  @click="advAttempt(q, oi)"
+                >
+                  <span class="opt-letter">{{ 'ABCD'[oi] }}</span>
+                  <span class="flex-1 text-left">{{ opt }}</span>
+                  <UIcon v-if="q.revealed && oi === q.correct" name="i-heroicons-check-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--jade)]" />
+                  <UIcon v-else-if="q.revealed && oi === q.selected" name="i-heroicons-x-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--red)]" />
+                </button>
+              </div>
+
+              <!-- Explanation -->
+              <div v-if="q.revealed" class="callout callout-jade mt-4 animate-fade-in">
+                <p class="callout-title">
+                  <UIcon name="i-heroicons-light-bulb" class="h-3.5 w-3.5" />
+                  Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
+                </p>
+                <p class="callout-body">{{ q.explanation }}</p>
+                <AiAskButton
+                  class="mt-3"
+                  note-id="NOTE-GEO-FORESTS"
+                  :prompt="`Explain the reasoning for this TGPSC-style forest question and the exam trap: ${q.question}`"
+                  :source-question-id="q.uid"
+                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
+                  label="Explain with AI"
+                />
+              </div>
+
+              <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
+                <span>Reveal answer &amp; explanation</span>
+                <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── 08 · Comprehension Gate ─────────────────────────────────── -->
+        <section id="gate" class="mb-14 scroll-mt-20">
+          <header class="sec-head">
+            <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
@@ -751,10 +847,10 @@
           <GateQuiz note-id="NOTE-GEO-FORESTS" />
         </section>
 
-        <!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+        <!-- ── 09 · Current Affairs ─────────────────────────────────────── -->
         <section id="current-affairs" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">08</span>
+            <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
@@ -834,14 +930,15 @@ const coverage = [
 ]
 
 const sections = [
-  { id: 'visual',          label: '01 · Visual Architecture' },
-  { id: 'intro',           label: '02 · Forest Policies' },
-  { id: 'types',           label: '03 · Forest Types Deep Dive' },
-  { id: 'protected-areas', label: '04 · Protected Areas & TG' },
-  { id: 'traps',           label: '05 · Memory Hacks & Traps' },
-  { id: 'pyqs',            label: '06 · Verified PYQs Drill' },
-  { id: 'gate',            label: '07 · Comprehension Gate' },
-  { id: 'current-affairs', label: '08 · Current Affairs' },
+  { id: 'visual',            label: '01 · Visual Architecture' },
+  { id: 'intro',             label: '02 · Forest Policies' },
+  { id: 'types',             label: '03 · Forest Types Deep Dive' },
+  { id: 'protected-areas',   label: '04 · Protected Areas & TG' },
+  { id: 'traps',             label: '05 · Memory Hacks & Traps' },
+  { id: 'pyqs',              label: '06 · Verified PYQs Drill' },
+  { id: 'advanced-practice', label: '07 · Advanced Practice' },
+  { id: 'gate',              label: '08 · Comprehension Gate' },
+  { id: 'current-affairs',   label: '09 · Current Affairs' },
 ]
 
 const pyqDrill = [
@@ -946,4 +1043,124 @@ const pyqDrill = [
     explanation: 'The Valley of Flowers National Park in Chamoli district of Uttarakhand forms the core zone of the UNESCO-inscribed Nanda Devi Biosphere Reserve.'
   }
 ]
+
+/* ── Advanced Practice: TGPSC-style hardening drills ────────────────────── */
+interface AdvPractice {
+  uid: string
+  question: string
+  options: string[]
+  correct: number
+  explanation: string
+  source: string
+  format: string
+  isSynthetic: boolean
+  revealed: boolean
+  selected: number | null
+}
+
+const advancedPractice = reactive<AdvPractice[]>([
+  {
+    uid: 'ADV-GEO-FOR-001',
+    question: 'Arrange the following States in descending order based on percentage of Geographical Area under Recorded Forest Area (RFA) in 2021 as per the India - State of Forest Report - 2021 published by Forest Survey of India:\n\nA. Nagaland\nB. Sikkim\nC. Mizoram\nD. Arunachal Pradesh\n\nChoose the correct order:',
+    options: [
+      'A, B, D, C',
+      'B, A, D, C',
+      'B, D, A, C',
+      'D, B, A, C'
+    ],
+    correct: 2,
+    explanation: '% Recorded Forest Area (RFA) in ISFR 2021: Sikkim (82.31%) -> Arunachal Pradesh (61.55%) -> Nagaland (52.01%) -> Mizoram (35.83%). Note the trap: Mizoram leads in % Forest Cover (84.53%), but Sikkim leads in % RFA (82.31%).',
+    source: 'TGPSC Group-I 2024, Q9',
+    format: 'Sequence Ranking',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-FOR-002',
+    question: 'Match the following National parks and their States:\n\nList I (National Park):\nA. Tadoba National Park\nB. Madhav National Park\nC. Dudhwa National Park\nD. Bandipur National Park\n\nList II (State):\nI. Karnataka\nII. Uttar Pradesh\nIII. Maharashtra\nIV. Madhya Pradesh\n\nChoose the correct answer:',
+    options: [
+      'A-IV, B-III, C-II, D-I',
+      'A-III, B-IV, C-I, D-II',
+      'A-I, B-IV, C-II, D-III',
+      'A-III, B-IV, C-II, D-I'
+    ],
+    correct: 3,
+    explanation: 'Tadoba NP is in Chandrapur, Maharashtra (A-III). Madhav NP is in Shivpuri, Madhya Pradesh (B-IV). Dudhwa NP is in Lakhimpur Kheri, Uttar Pradesh (C-II). Bandipur NP is in Chamarajanagar, Karnataka (D-I).',
+    source: 'TGPSC Group-I 2024, Q69',
+    format: 'Matching',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-FOR-003',
+    question: 'Match the following Environmental and Forest Acts with their year of enactment:\n\nList I (Act):\nA. Forest (Conservation) Act\nB. National Green Tribunal (NGT) Act\nC. Wild Life (Protection) Act\nD. Biological Diversity Act\n\nList II (Year):\nI. 2010\nII. 2002\nIII. 1972\nIV. 1980',
+    options: [
+      'A-IV, B-I, C-III, D-II',
+      'A-I, B-IV, C-III, D-II',
+      'A-IV, B-I, C-II, D-III',
+      'A-III, B-I, C-IV, D-II'
+    ],
+    correct: 0,
+    explanation: 'Forest Conservation Act was passed in 1980 (IV). NGT Act in 2010 (I). Wildlife Protection Act in 1972 (III). Biological Diversity Act in 2002 (II).',
+    source: 'TGPSC Group-I 2024, Q41',
+    format: 'Matching',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-FOR-004',
+    question: 'Consider the following statements regarding Indian forest types:\n\nA. Tropical Wet Evergreen forests occur in regions with annual rainfall exceeding 200 cm and a short dry season.\nB. Rosewood, Mahogany, Ebony, and Aini are characteristic commercial tree species of Tropical Evergreen forests.\nC. Tropical Moist Deciduous forests form the most widespread forest cover in India, shedding leaves in dry summer.\nD. Teak, Sal, Shisham, and Sandalwood are dominant species of Tropical Deciduous forests.\n\nWhich of the above statements are correct?',
+    options: [
+      'A, B, C and D',
+      'A, B and D only',
+      'A and B only',
+      'B, C and D only'
+    ],
+    correct: 0,
+    explanation: 'All four statements are verified classifications per Champion & Seth and NCERT Biogeography.',
+    source: 'Synthetic - derived from Forest Types inventory',
+    format: 'Multi-statement',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-FOR-005',
+    question: 'Which of the following statements regarding protected areas and wildlife in Telangana are correct?\n\nA. Amrabad Tiger Reserve is located in the Nallamala Hills across Nagarkurnool and Nalgonda districts.\nB. Kawal Tiger Reserve is located in Mancherial, Kumuram Bheem Asifabad, and Nirmal districts in northern Telangana.\nC. Pakhal Wildlife Sanctuary is located around the historical Pakhal Lake in Jayashankar Bhupalpally / Warangal.\nD. Telangana has no national parks or tiger reserves notified under the Wildlife Protection Act, 1972.\n\nChoose the correct answer:',
+    options: [
+      'A, B and C only',
+      'A and B only',
+      'B, C and D only',
+      'A, B, C and D'
+    ],
+    correct: 0,
+    explanation: 'Statements A, B, and C are correct. Statement D is false because Telangana has 2 Tiger Reserves (Amrabad and Kawal) and 3 National Parks (KBR, Mahavir Harina Vanasthali, and Mrugavani).',
+    source: 'Synthetic - derived from Telangana Protected Areas inventory',
+    format: 'Multi-statement',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+])
+
+const advAttemptedCount = computed(() => advancedPractice.filter(q => q.revealed).length)
+const advCorrectCount = computed(() => advancedPractice.filter(q => q.revealed && q.selected === q.correct).length)
+
+function advAttempt(q: AdvPractice, optIdx: number) {
+  if (q.revealed) return
+  q.selected = optIdx
+  q.revealed = true
+}
+function advReveal(q: AdvPractice) {
+  q.revealed = true
+}
+function advOptionClass(q: AdvPractice, oi: number) {
+  if (!q.revealed) return ''
+  if (oi === q.correct) return 'opt-correct'
+  if (oi === q.selected) return 'opt-wrong'
+  return 'opacity-60'
+}
 </script>

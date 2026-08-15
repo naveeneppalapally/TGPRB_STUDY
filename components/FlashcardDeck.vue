@@ -126,7 +126,7 @@ const props = withDefaults(defineProps<{
 
 const { data, pending } = await useAsyncData<{ note_id: string; cards: Flashcard[] }>(
   `flashcards-${props.noteId}`,
-  () => $fetch(`/api/flashcards/${props.noteId}`),
+  () => $fetch(`/api/flashcards/${props.noteId}`).catch(() => ({ note_id: props.noteId, cards: [] })),
 )
 
 const cards = computed(() => data.value?.cards ?? [])

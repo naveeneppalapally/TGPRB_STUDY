@@ -1,0 +1,215 @@
+{
+  "audit_date": "2026-08-15",
+  "purpose": "Provenance manifest for the forensic paper-setting evolution audit. It distinguishes primary official URLs from independently hosted reproductions and records access limitations instead of treating a mirror as an official document.",
+  "retrieval_workspace": "/tmp/tgprb-primary-sources",
+  "text_extraction": {
+    "tool": "pdftotext -layout",
+    "output_root": "data/research/source-text/",
+    "coverage": "Every PDF preserved under data/research/source-pdfs/ has a corresponding extracted UTF-8 text artifact under the matching source-text path."
+  },
+  "documents": [
+    {
+      "id": "TGPSC-G1-PRELIMS-2024",
+      "title": "TGPSC Group-I Preliminary Test, General Studies and Mental Ability, 09 June 2024",
+      "question_count": 150,
+      "official_source": "https://websitenew.tgpsc.gov.in/preview/RElSRUNUUkVDUlVJVE1FTlROT1RJL05PVElGSUNBVElPTl9OT18wMi0yMDI0X0dyb3VwLUlfU2VydmljZXMgKDEpMjAyNDAyMjAxNDA3MzcucGRmr95v17a0y2d8i13v",
+      "official_paper_key_access": "Candidate-login delivery. Public URL found through archived page: https://websitenew.tspsc.gov.in/viewKeyObjections?accessId=Kgsoy895EREIjhfjisd. It returned access denied during retrieval.",
+      "retrieved_reproduction": "https://www.tgnns.com/wp-content/uploads/2024/06/TSPSC-GROUP-1-PRELIMS-QUESTION-PAPER-Final.pdf",
+      "downloaded_file": "tgpsc-group-1-prelims-2024-question-paper.pdf",
+      "sha256": "0636d2d5012f4db0a3097df1e42c4fc71c5aeac34680971839e44ee916a6f949",
+      "ingestion": "PDF is an image-only 52-page bilingual scan. Page 1 was visually inspected; the selectable public transcription was downloaded from Scribd and parsed into 150 English question stems.",
+      "transcription_url": "https://www.scribd.com/document/783709428/TSPSC-Group-1-Prelims-Official-Paper-Held-On-09-Jun-2024",
+      "confidence": "Question text corroborated by two independent public reproductions; official final master key itself was not publicly retrievable."
+    },
+    {
+      "id": "TGPSC-GROUP-IV-PAPER-I-2023",
+      "title": "TGPSC Group-IV Services Paper-I, General Studies, 01 July 2023",
+      "question_count": 150,
+      "official_question_paper_url": "https://notificationslist.tspsc.gov.in/notificationPDF/GPIVQP/Gp_IV_Paper_1_Master.pdf",
+      "official_final_key_url": "https://notificationslist.tspsc.gov.in/notificationPDF/GPIVQP/GR4_1922_P1_KEY_0.pdf",
+      "retrieval_result": "Both historical official-host URLs failed DNS resolution in the retrieval environment.",
+      "retrieved_key_reproduction": "https://www.scribd.com/document/683661232/GR4-1922-P1-FINAL-KEY-020231006204020-1-1",
+      "downloaded_file": "tgpsc-group-iv-2023-final-key-scribd.html",
+      "sha256": "fe9d9a9224b7f424069a17acd7d1d754aaef9ce2283c8dcf91b87133384c2385",
+      "ingestion": "HTML text identifies itself as the Paper-I Final Master Key, notification 19/2022, code 22191. It lists deleted questions and option changes.",
+      "confidence": "Official URL provenance established, but retained artifact is a reproduction because the official host is retired/unreachable."
+    },
+    {
+      "id": "TGPSC-DAO-2023",
+      "title": "TGPSC Divisional Accounts Officer Paper-I, General Studies, 26 February 2023",
+      "question_count": 150,
+      "official_delivery": "Question paper and response/key were originally delivered through TSPSC candidate services. The public official archive no longer exposes a retrievable document.",
+      "discovery_source": "https://education.sakshi.com/en/tspsc/previous-papers-2023/tspsc-dao-exam-2023-paper-1-question-paper-key-126075",
+      "corroborating_catalog": "https://testbook.com/telangana-divisional-accounts-officer/previous-year-papers",
+      "ingestion": "Catalog and public paper listing inspected. This paper is a corroborating comparator only and is not part of the percentage matrix.",
+      "confidence": "Metadata corroborated; no final master key artifact was publicly downloadable without a candidate session."
+    },
+    {
+      "id": "TGPSC-POLYTECHNIC-LECTURER-2023",
+      "title": "TGPSC Lecturers in Government Polytechnics, September 2023",
+      "official_delivery": "Question papers, candidate response sheets, and provisional keys were delivered by login. Final keys were released after the objection process.",
+      "corroborating_catalog": "https://testbook.com/tspsc-polytechnic-lecturer/answer-key",
+      "ingestion": "Public record inspected for exam dates, key release and objection workflow. Individual discipline papers are not combined into one invalid aggregate.",
+      "confidence": "Metadata corroborated; final-key download endpoint was not publicly retrievable."
+    },
+    {
+      "id": "TGPRB-MODERN-2022-2023",
+      "title": "TSLPRB SI and Constable preliminary and final written papers, 2022-2023",
+      "papers": [
+        "SI_2022_Prelims.json",
+        "SI_2023_Mains_General_Studies.json",
+        "Constable_2022_Prelims.json",
+        "Constable_2023_Mains_Official.json"
+      ],
+      "official_delivery": "Question papers and response sheets were candidate-login/public-homepage releases at the time of examination. Official final keys are now recovered from the board's public S3 bucket and archived board-host URLs.",
+      "ingestion": "The project-maintained extracted_question_paper_json corpus was inspected in full. It is identified in AGENTS.md as the clean structured ground-truth source used to build the verified PYQ master. Retrieved official final and preliminary keys were downloaded, checksum-verified and text-extracted separately.",
+      "confidence": "Full question text is available locally. SI and PC official key artifacts for 2022-2023 are now independently retrievable and preserved under data/research/source-pdfs/."
+    },
+    {
+      "id": "TGPRB-LEGACY-2015-2018",
+      "title": "TSLPRB SI and Constable preliminary and mains papers, 2015-2018",
+      "papers": [
+        "Constable_2015_Prelims.json",
+        "Constable_2015_Mains.json",
+        "Constable_2016_Prelims.json",
+        "Constable_2016_Mains.json",
+        "SI_2016_Final_GS_Paper.json",
+        "Constable_2018_Prelims.json",
+        "Constable_2018_Mains.json",
+        "SI_2018_Prelims_Paper1.json",
+        "SI_2018_Mains_Paper4_GS.json"
+      ],
+      "official_delivery": "Historical question PDFs are not exposed by the current TGPRB portal, but official board-host key files were recovered through archived board URLs.",
+      "ingestion": "The project-maintained extracted_question_paper_json corpus was inspected in full for each matrix paper. Recovered official key PDFs were downloaded, checksum-verified and text-extracted separately.",
+      "confidence": "Full question text is available locally. The retained key artifacts provide primary-source answer-key provenance; the local structured question corpus remains the text source for the format matrix."
+    }
+  ],
+  "retrieved_official_tgpsc_context_artifacts": [
+    {
+      "exam": "TGPSC Group-I Services Notification 02/2024",
+      "kind": "official recruitment notification",
+      "url": "https://websitenew.tgpsc.gov.in/preview/RElSRUNUUkVDUlVJVE1FTlROT1RJL05PVElGSUNBVElPTl9OT18wMi0yMDI0X0dyb3VwLUlfU2VydmljZXMgKDEpMjAyNDAyMjAxNDA3MzcucGRmr95v17a0y2d8i13v",
+      "local_file": "data/research/source-pdfs/tgpsc-official/context/group1-notification-02-2024.pdf",
+      "sha256": "14677658797210c4e6dadbcfdb5236a7f378b375b965dce30a6bc92082cc49e8"
+    },
+    {
+      "exam": "TGPSC Group-IV Services Notification 19/2022",
+      "kind": "official recruitment notification",
+      "url": "https://websitenew.tgpsc.gov.in/preview/RElSRUNUUkVDUlVJVE1FTlROT1RJLzE5LTIwMjItR1JPVVAtSVYtTk9USUZJQ0FUSU9OMjAyMjEyMzEyMDMzMjUucGRmr95v17a0y2d8i13v",
+      "local_file": "data/research/source-pdfs/tgpsc-official/context/group4-notification-19-2022.pdf",
+      "sha256": "8fdeb55c53a9b5fdc40eb578211b142d89d529f8cdbd3d00801ade4c81c33ff6"
+    },
+    {
+      "exam": "TGPSC Divisional Accounts Officer Notification 08/2022",
+      "kind": "official recruitment notification",
+      "url": "https://websitenew.tgpsc.gov.in/preview/RElSRUNUUkVDUlVJVE1FTlROT1RJLzA4LTIwMjItREFPLU5PVElGTi1GSU5BTC0xMjAyMjA4MDUxNDEyMTAyMDIyMDgxNjE3MzUxMy5wZGY=r95v17a0y2d8i13v",
+      "local_file": "data/research/source-pdfs/tgpsc-official/context/dao-notification-08-2022.pdf",
+      "sha256": "65c780eb9ddac2a22ec847fa08c9696d3fed7f703362fce144e59951a50c7bf0"
+    },
+    {
+      "exam": "TGPSC Polytechnic Lecturer Notification 20/2022",
+      "kind": "official recruitment notification",
+      "url": "https://websitenew.tgpsc.gov.in/preview/RElSRUNUUkVDUlVJVE1FTlROT1RJLzIwLTIwMjItTEVDVFVSRVJTIElOIEdPVkVSTk1FTlQgUE9MWVRFQ0hOSUMgQ09MTEVHRVMtTk9USUZOMjAyMjEyMDgxNDM4MDcucGRmr95v17a0y2d8i13v",
+      "local_file": "data/research/source-pdfs/tgpsc-official/context/polytechnic-lecturer-notification-20-2022.pdf",
+      "sha256": "c98d7249b69bd7b8287330af59b716bbfe7e9d215351a6d821e1fa30a664656e"
+    }
+  ],
+  "retrieved_official_key_artifacts": [
+    {
+      "exam": "TSLPRB SI 2022 PWT",
+      "kind": "preliminary key",
+      "original_url": "https://www.tslprb.in/Pdfs/SI_PWT_ENGLISH_TELUGU.pdf",
+      "archive_url": "https://web.archive.org/web/20220812235522id_/https://www.tslprb.in/Pdfs/SI_PWT_ENGLISH_TELUGU.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2022/si-2022-pwt-preliminary-key.pdf",
+      "sha256": "b696d7ff19a673a137bbf97663fc5ccedbf46c520a3afa918ce1f377d140d8f6"
+    },
+    {
+      "exam": "TSLPRB SI 2022 PWT",
+      "kind": "final key",
+      "original_url": "https://www.tslprb.in/Pdfs/SI_FINAL_ENGLISH_TELUGU.pdf",
+      "archive_url": "https://web.archive.org/web/20221021164141id_/https://www.tslprb.in/Pdfs/SI_FINAL_ENGLISH_TELUGU.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2022/si-2022-final-key-english-telugu.pdf",
+      "sha256": "740056c733dff1a71f9b0dc7acf22d1dfae23fdceaa9ce4b5e7ca79e95fd1bd1"
+    },
+    {
+      "exam": "TSLPRB PC 2022 PWT",
+      "kind": "preliminary key",
+      "original_url": "https://www.tslprb.in/Pdfs/PC_PWT_PreliminaryKey.pdf",
+      "archive_url": "https://web.archive.org/web/20220902175516id_/https://www.tslprb.in/Pdfs/PC_PWT_PreliminaryKey.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2022/pc-2022-pwt-preliminary-key.pdf",
+      "sha256": "c23dddc85843efeeb78c8c3ddc2bfd80e94f1ff3a672fe9c4510f8abad6dac0e"
+    },
+    {
+      "exam": "TSLPRB PC 2022 PWT",
+      "kind": "final key",
+      "original_url": "https://www.tslprb.in/pdfs/Final_Key_PC.pdf",
+      "archive_url": "https://web.archive.org/web/20221021164004id_/https://www.tslprb.in/pdfs/Final_Key_PC.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2022/pc-2022-final-key.pdf",
+      "sha256": "b1e807129f090a776a91e7fc381bd3cdd8c32abcd0c4b277319db01e0553609f"
+    },
+    {
+      "exam": "TSLPRB SI 2023 Mains GS",
+      "kind": "preliminary key",
+      "original_url": "https://tslprbpartone.s3.ap-south-1.amazonaws.com/Preliminary_Key_SI_GS.pdf",
+      "archive_url": "https://web.archive.org/web/20230521180221id_/https://tslprbpartone.s3.ap-south-1.amazonaws.com/Preliminary_Key_SI_GS.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2023/si-2023-gs-preliminary-key.pdf",
+      "sha256": "11f75f792ad19b497839988c1735396f8cb8a2fa372f30dd46c0f4b85b8dfa5b"
+    },
+    {
+      "exam": "TSLPRB SI 2023 Mains GS",
+      "kind": "final key",
+      "original_url": "https://tslprbpartone.s3.ap-south-1.amazonaws.com/Final_Key_SI_GS_2023.pdf",
+      "archive_url": "https://web.archive.org/web/20230530184554id_/https://tslprbpartone.s3.ap-south-1.amazonaws.com/Final_Key_SI_GS_2023.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2023/si-2023-gs-final-key.pdf",
+      "sha256": "39244253f1a781f2730113ea39b41c7ea168e35edca6355355fbed277222385c"
+    },
+    {
+      "exam": "TSLPRB PC 2023 Mains GS",
+      "kind": "preliminary key",
+      "original_url": "https://tslprbpartone.s3.ap-south-1.amazonaws.com/Preliminary+key+PC.pdf",
+      "archive_url": "https://web.archive.org/web/20230522035619id_/https://tslprbpartone.s3.ap-south-1.amazonaws.com/Preliminary+key+PC.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2023/pc-2023-preliminary-key.pdf",
+      "sha256": "d678aaf7fe9a88d9511534bc89dbe5c011ba72aec3a3796d690fbd05ef547c8b"
+    },
+    {
+      "exam": "TSLPRB PC 2023 Mains GS",
+      "kind": "final key",
+      "original_url": "https://tslprbpartone.s3.ap-south-1.amazonaws.com/Final_Key_PC_GS_2023.pdf",
+      "archive_url": "https://web.archive.org/web/20230530184625id_/https://tslprbpartone.s3.ap-south-1.amazonaws.com/Final_Key_PC_GS_2023.pdf",
+      "local_file": "data/research/source-pdfs/tgprb-official-archive/2023/pc-2023-gs-final-key.pdf",
+      "sha256": "652c1fafe193523ee258dbfaef2b28467f84ec2f9bbd8b960ea65c5b49ea1e5c"
+    },
+    {
+      "exam": "TSLPRB legacy 2015-2016",
+      "kind": "archived official key set",
+      "source_urls": [
+        "http://tslprb.in/Files/TSLPRBT-FWE-2015%20-%20PRELIM%20KEY.pdf",
+        "https://www.tslprb.in/Files/TSLPRBT_PC-2015_PreliminaryKey.pdf",
+        "http://tslprb.in:80/Files/SIFWEPRELIMINARYKEY.pdf",
+        "http://tslprb.in/Files/SI/KeyPCCOM.pdf",
+        "http://tslprb.in/Files/SI/KeySICOM.pdf"
+      ],
+      "local_directory": "data/research/source-pdfs/tgprb-official-archive/legacy/",
+      "note": "The directory preserves the six retrieved files with content-corrected local names and individual SHA-256 values. One archived URL labelled as an SC file resolves to a board PDF whose own title identifies SI Communication final key; the title, not the guessed filename, controls classification."
+    }
+  ],
+  "retrieved_nonofficial_reproductions": [
+    {
+      "exam": "TGPSC Group-I Prelims 2024",
+      "kind": "preliminary master-key reproduction",
+      "url": "https://studybizz.com/results/wp-content/uploads/2024/06/TSPSC-Key-2024.pdf",
+      "local_file": "data/research/source-pdfs/tgpsc-reproductions/tgpsc-group1-2024-key-reproduction.pdf",
+      "sha256": "4904cd19bd397947065c3a62e84bf265d8746d8c645564e9cbded28ab54060cd",
+      "status": "Independent reproduction of the official key; not treated as an official-host download."
+    },
+    {
+      "exam": "TGPSC Group-IV Paper-I 2023",
+      "kind": "final master-key reproduction",
+      "url": "https://www.careerpower.in/blog/wp-content/uploads/2023/08/06224650/TSPSC-Group-4-Paper-1-Answer-Key-.pdf",
+      "local_file": "data/research/source-pdfs/tgpsc-reproductions/tgpsc-group4-2023-final-key-reproduction.pdf",
+      "sha256": "400ce81ef8a42c2fcd5d57e49e149da7c85cc4d538d93a01f7993fa1d03bdd07",
+      "status": "Independent reproduction whose title and answer table identify Final Master Key 22191; not treated as an official-host download."
+    }
+  ],
+  "critical_limit": "No conclusion in the report treats an inaccessible candidate-login key as if it were downloaded. Format classification uses question stems, not answer keys."
+}

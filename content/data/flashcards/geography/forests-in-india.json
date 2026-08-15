@@ -1,0 +1,112 @@
+[
+  {
+    "id": "FC-GEO-FOR-001",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "National Forest Statistics",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "According to ISFR 2021, what percentage of India's geographical area is covered by Forest Cover?",
+    "back": "21.71% (7,13,789 sq km). Total Forest and Tree Cover combined is 24.62% (8,09,537 sq km)."
+  },
+  {
+    "id": "FC-GEO-FOR-002",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "State Rankings",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which Indian state has the largest forest cover in terms of absolute area?",
+    "back": "Madhya Pradesh (77,493 sq km), followed by Arunachal Pradesh (66,431 sq km) and Chhattisgarh (55,717 sq km)."
+  },
+  {
+    "id": "FC-GEO-FOR-003",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "State Rankings",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which Indian state has the highest percentage of forest cover relative to its total geographic area?",
+    "back": "Mizoram (84.53%), followed by Arunachal Pradesh (79.33%), Meghalaya (76.00%), and Manipur (74.34%)."
+  },
+  {
+    "id": "FC-GEO-FOR-004",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "Forest Types",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which forest type is the most widespread and dominant across India?",
+    "back": "Tropical Deciduous Forests (Moist and Dry Deciduous), also known as Monsoon Forests (~65% of total forest area). Dominant trees: Teak and Sal."
+  },
+  {
+    "id": "FC-GEO-FOR-005",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "Mangroves",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which Indian state has the largest area under Mangrove forest cover?",
+    "back": "West Bengal (Sundarbans accounts for ~42.3% of India's total mangrove cover), followed by Gujarat (23.6%) and Andaman & Nicobar Islands."
+  },
+  {
+    "id": "FC-GEO-FOR-006",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "Telangana Protected Areas",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which are the two notified Tiger Reserves located in Telangana State?",
+    "back": "1. Amrabad Tiger Reserve (Nallamala Hills - Nagarkurnool & Nalgonda)\n2. Kawal Tiger Reserve (Mancherial, Nirmal, KB Asifabad)."
+  },
+  {
+    "id": "FC-GEO-FOR-007",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "Biosphere Reserves",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which was the first Biosphere Reserve established in India?",
+    "back": "Nilgiri Biosphere Reserve (established in 1986 in Tamil Nadu, Kerala, and Karnataka)."
+  },
+  {
+    "id": "FC-GEO-FOR-008",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "Environmental Legislation",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "What are the years of enactment of the Wildlife Protection Act and the Forest (Conservation) Act in India?",
+    "back": "Wildlife (Protection) Act: 1972.\nForest (Conservation) Act: 1980.\nEnvironment (Protection) Act: 1986."
+  },
+  {
+    "id": "FC-GEO-FOR-009",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "Environmental Movements",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Who were the prominent leaders of the Chipko Movement (1973) in Chamoli, Uttarakhand?",
+    "back": "Sunderlal Bahuguna, Chandi Prasad Bhatt, and Gaura Devi."
+  },
+  {
+    "id": "FC-GEO-FOR-010",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Forests of India",
+    "subtopic": "National Parks",
+    "related_topic_ids": ["NOTE-GEO-FORESTS"],
+    "source_note_id": "NOTE-GEO-FORESTS",
+    "front": "Which was India's first National Park, and what was its original name?",
+    "back": "Jim Corbett National Park in Nainital/Pauri Garhwal, Uttarakhand. Established in 1936 as Hailey National Park."
+  }
+]

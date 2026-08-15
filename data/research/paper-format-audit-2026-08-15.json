@@ -1,0 +1,619 @@
+{
+  "audit_date": "2026-08-15",
+  "method": {
+    "unit": "one mutually-exclusive primary format per question",
+    "precedence": [
+      "assertion_reason_or_pair_counting",
+      "four_by_four_matching",
+      "chronology_or_spatial_sequence",
+      "multi_statement",
+      "direct_one_liner"
+    ],
+    "human_review_required": "Review all non-direct assignments and the stored examples before making causal claims."
+  },
+  "papers": [
+    {
+      "paper": "TSLPRB Constable 2016 Prelims",
+      "source_file": "extracted_question_paper_json/Constable_2016_Prelims.json",
+      "total_questions": 200,
+      "counts": {
+        "direct_one_liner": 130,
+        "multi_statement": 16,
+        "four_by_four_matching": 29,
+        "chronology_or_spatial_sequence": 7,
+        "assertion_reason_or_pair_counting": 18
+      },
+      "percentages": {
+        "direct_one_liner": 65.0,
+        "multi_statement": 8.0,
+        "four_by_four_matching": 14.5,
+        "chronology_or_spatial_sequence": 3.5,
+        "assertion_reason_or_pair_counting": 9.0
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 2,
+            "excerpt": "Choose the right rearrangement of the following sentences into a meaningful paragraph. A. They are broken into small pieces called \"places\". B. A painter once discovered something possible and valuable about this street. C. One street goes across itself one or two times. D. They turn in different directions. E. In a small part of the city west of Washington Square, the streets have gone wild."
+          },
+          {
+            "q_no": 3,
+            "excerpt": "Fill in the blanks with right verb forms to make it a meaningful sentence. If you ______ hard in your school days, you ______ this examination today."
+          },
+          {
+            "q_no": 4,
+            "excerpt": "Identify the part of the sentence which has an error in the following statements. Children washed (A)/their hands (B)/after they played (C)/with a new born puppy (D)."
+          }
+        ],
+        "multi_statement": [
+          {
+            "q_no": 47,
+            "excerpt": "Read the following statements : (a) The Raman effect deals with scattering of light by the molecules of a medium when they are excited to vibrational energy levels. (b) A conservation law is a hypothesis and cannot be proved but it can be verified by experiments. (c) Sir Issac Newton showed that the same laws of motion and gravitation cannot be applied to celestial and terrestrial domains. The correct answer is"
+          },
+          {
+            "q_no": 49,
+            "excerpt": "A closed vessel is half filled with water. There is a hole at the top of the vessel and air is pumped out from this hole. Then (a) The density of the liquid will decrease (b) The pressure at the surface of the water will decrease (c) The water level will rise up in the vessel (d) The force by the water on the bottom of the vessel will decrease Which of the above statements are correct ?"
+          },
+          {
+            "q_no": 69,
+            "excerpt": "Read the following statements. (A) Pyramid of number of forest ecosystem is upright (B) Primary consumers in food chain are herbivores (C) In case of a parasitic food chain, the pyramid of number is inverted (D) Pyramid of energy is always inverted Choose the correct statements"
+          }
+        ],
+        "four_by_four_matching": [
+          {
+            "q_no": 1,
+            "excerpt": "Choose the right matching of one word substitutes with their description. (i) Congestion (ii) Collision (iii) Bottleneck (iv) Breakdown (A) An accident in which two vehicles hit each other (B) Situation in which roads are full of traffic (C) Occasion when a vehicle stops working (D) Place in a road where the traffic cannot pass"
+          },
+          {
+            "q_no": 46,
+            "excerpt": "Match the following List-I (a) Radio Broadcasting (b) Marine and Navigational aids (c) T.V. Broadcasting (d) Satellite Communication List-II (i) LF Band (ii) HF Band (iii) SHF Band (iv) VHF Band The correct match is"
+          },
+          {
+            "q_no": 53,
+            "excerpt": "Match the following List-I (A) pH of unpolluted rain water (B) Teflon (C) Buna-N (D) Polystyrene List-II (I) Moulded Containers (II) Hose pipe (III) 5.6 (IV) Paints (V) Lubricant"
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 6,
+            "excerpt": "Find the correct order of the words to form a sentence. travel I and together Satish a b c d e"
+          },
+          {
+            "q_no": 65,
+            "excerpt": "Arrange the following blood cells in ascending order of their number per cubic millimeter present in the blood (A) Basophils (C) Eosinophils (E) Monocytes (B) Lymphocytes (D) Neutrophils"
+          },
+          {
+            "q_no": 79,
+            "excerpt": "Arrange the following administrative units of the Chola period in the descending order :"
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 48,
+            "excerpt": "Assertion (A): An electrical motor converts mechanical energy into electrical energy. Reason (R) : An electrical motor works on the principle of mutual induction."
+          },
+          {
+            "q_no": 59,
+            "excerpt": "Assertion (A) : Water at the foot of a water fall is always at different temperature from that at the top. Reason (R) : The potential energy of water at the top is converted into heat energy during the fall."
+          },
+          {
+            "q_no": 60,
+            "excerpt": "Assertion (A) : The rate of photosynthesis is more in red light than in blue light. Reason (R) : The energy content of red photon is more than blue photon."
+          }
+        ]
+      }
+    },
+    {
+      "paper": "TSLPRB SI 2016 Mains GS",
+      "source_file": "extracted_question_paper_json/SI_2016_Final_GS_Paper.json",
+      "total_questions": 200,
+      "counts": {
+        "direct_one_liner": 121,
+        "multi_statement": 41,
+        "four_by_four_matching": 24,
+        "chronology_or_spatial_sequence": 3,
+        "assertion_reason_or_pair_counting": 11
+      },
+      "percentages": {
+        "direct_one_liner": 60.5,
+        "multi_statement": 20.5,
+        "four_by_four_matching": 12.0,
+        "chronology_or_spatial_sequence": 1.5,
+        "assertion_reason_or_pair_counting": 5.5
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 2,
+            "excerpt": "Chlorophyll is a naturally occurring compound in which the central metal atom is"
+          },
+          {
+            "q_no": 3,
+            "excerpt": "The color change of Taj mahal is due to"
+          },
+          {
+            "q_no": 4,
+            "excerpt": "Minamata disease affects the"
+          }
+        ],
+        "multi_statement": [
+          {
+            "q_no": 31,
+            "excerpt": "Read the following statements: A) Teachers' Day in India is celebrated on September 5 every year. B) World Teachers' Day is also celebrated on September 5 every year. C) The 2016 World Teachers' Day's theme is ‘Valuing Teachers, Improving Their Status'. Choose the correct statements:"
+          },
+          {
+            "q_no": 32,
+            "excerpt": "Read the following statements about the National Science Day: A) The National Science Day is celebrated every year in India on February 28. B) It is celebrated to mark the discovery of the Raman effect by Indian Physicist, C.V. Raman C) Its theme for 2016 is “Science for Sustainable Development\". Choose the incorrect statement(s):"
+          },
+          {
+            "q_no": 33,
+            "excerpt": "Read the following statements on the ‘World Habitat Day' (WHD): A) It is observed every year on the first Monday of October. B) It aims to raise awareness about the need for affordable housing for all in urban areas, cities and towns. C) The theme for 2016 is 'Habitat for All'. Choose the correct statements:"
+          }
+        ],
+        "four_by_four_matching": [
+          {
+            "q_no": 41,
+            "excerpt": "Match the following: Award A) Dhyan Chand Award B) Dronacharya Award C) Maulana Abul Kalam Azad Trophy D) Rajiv Gandhi Khel Ratna Award Awardee I) Dipa Karmakar II) Mahabir Singh III) Satti Geetha IV) Punjab University The correct pairs are"
+          },
+          {
+            "q_no": 42,
+            "excerpt": "Match the following: Name A) Neeraj Chopra B) Mariyappan Thangavelu C) S. Pradeep Kumar D) Jithu Rai Sport / Game I) Swimming II) Shooting III) Javelin Throw IV) High Jump The correct answer is"
+          },
+          {
+            "q_no": 50,
+            "excerpt": "Match the following: Name of the Person: A) Bezwada Wilson, B) Deepa Karmakar, C) Nagapuri Ramesh, D) Lalita Babar. Award (2016): I) Dronacharya Award, II) Ramon Magsaysay Award, III) Arjuna Award, IV) Rajiv Gandhi Khel Ratna Award."
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 1,
+            "excerpt": "The correct order of steps occurring in nutrition in animals is?"
+          },
+          {
+            "q_no": 136,
+            "excerpt": "What is ascending order of the following admnistrative units of Cholas"
+          },
+          {
+            "q_no": 144,
+            "excerpt": "Which one of the following chronological order is correct about the Sikh Gurus"
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 34,
+            "excerpt": "Assertion (A): National Mathematics Day is observed on December 22, every year from 2012 in India. Reason (R): It is celebrated as a tribute to the mathematical genious Srinivasa Ramanujan who was born on 22nd December 1887. The correct answer is:"
+          },
+          {
+            "q_no": 44,
+            "excerpt": "Assertion (A): The RBI has brought down the repo rate by 0.25% to 6.25% on September 4, 2016. Reason (R): The reduction of repo rate reduces the rate of inflation in the economy. The correct answer is :"
+          },
+          {
+            "q_no": 55,
+            "excerpt": "Assertion (A): Cell biologist, Yoshinori Oshumi is awarded the Noble prize in Biology. Reason (R): He is awarded for his discoveries on how cells recycle their content, through a process known as autophagy. The correct answer is :"
+          }
+        ]
+      }
+    },
+    {
+      "paper": "TSLPRB Constable 2018 Mains",
+      "source_file": "extracted_question_paper_json/Constable_2018_Mains.json",
+      "total_questions": 200,
+      "counts": {
+        "direct_one_liner": 154,
+        "multi_statement": 20,
+        "four_by_four_matching": 12,
+        "chronology_or_spatial_sequence": 9,
+        "assertion_reason_or_pair_counting": 5
+      },
+      "percentages": {
+        "direct_one_liner": 77.0,
+        "multi_statement": 10.0,
+        "four_by_four_matching": 6.0,
+        "chronology_or_spatial_sequence": 4.5,
+        "assertion_reason_or_pair_counting": 2.5
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 1,
+            "excerpt": "Which of the following statements is incorrect regarding the usage of the article?"
+          },
+          {
+            "q_no": 2,
+            "excerpt": "Fill in the blanks using the correct preposition: Where did you come _______ ?"
+          },
+          {
+            "q_no": 3,
+            "excerpt": "Fill in the blank with the appropriate verb form given below : Raghu _______ cricket when his friend went home yesterday."
+          }
+        ],
+        "multi_statement": [
+          {
+            "q_no": 21,
+            "excerpt": "Consider the following statements: (A) The number of ordered pairs of positive integers (m, n) such that m + n = 648 and g.c.d. of (m, n) = 27 is 8. (B) If the number x is of the form x = 48m + 39 for some positive integer m, then the remainder when x is divided by 8 is 1. Select the correct option among the following:"
+          },
+          {
+            "q_no": 46,
+            "excerpt": "Read the following statements: a. Biofertilizers synthesize nutrients from environment and soil. b. Deep litter is an example of concentrated organic manure. c. Application of potassium to crops enhances resistance towards disease causing pests. Which of the above statements is/are correct?"
+          },
+          {
+            "q_no": 63,
+            "excerpt": "Read the following statements : a. Membrane bound nucleus is absent in cyanobacteria. b. Ribosomes are associated with photorespiration. c. Nerve cells do not have the ability to regenerate Which of the above statements is/are correct?"
+          }
+        ],
+        "four_by_four_matching": [
+          {
+            "q_no": 32,
+            "excerpt": "Suppose some principal amount P is given at r% simple interest per annum for a period of 12 years to get an amount A. Match the following: List – I (Amount) (A): i. 2P ii. 5P/4 iii. 3P/2 iv. 7P/4 List – II (Rate of Interest) (r): a. 2 1/12 b. 6 1/4 c. 8 1/3 d. 4 1/6"
+          },
+          {
+            "q_no": 44,
+            "excerpt": "If a = 5/4, b = 3/8, then match the following: List - I A. 1/a + 1/b = B. a²+b² = C. 1/a²+1/b² = D. a/b + b/a = List - II P. 1744/225 Q. 52/15 R. 109/30 S. 109/64"
+          },
+          {
+            "q_no": 47,
+            "excerpt": "Match the following food materials with the predominant organic acids they contain: List-I (Food Material) a. Apple fruit b. Spinach leaves c. Tamarind fruit d. Amla fruit List - II (Predominant carboxylic acid) i. Tartaric acid ii. Ascorbic acid iii. Malic acid iv. oxalic acid The correct answer is :"
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 11,
+            "excerpt": "In the following question, there are six sentences of a paragraph marked S1, S6, P, Q, R, S. The positions of S1 and S6 are fixed. You are required to choose the most logical sequence of the sentences that form the paragraph : S1 : Proverbs contain homely but universal truths. P : Some of them point out the incongruities of situations in life. Q : Naturally, they are translatable from one language to another. R : Therefore, their appeal is direct to anyone. S : Many of them had their birth in fo"
+          },
+          {
+            "q_no": 13,
+            "excerpt": "In the following question, there are six sentences of a paragraph marked S1, S6, P, Q, R, S. The positions of S1 and S6 are fixed. You are required to choose the most logical sequence of the sentences that form the paragraph: S1: There are divergent theories of education. P: There is still another which holds that education has to be considered rather in relation to community than to the other. Q: Yet, again some believe that a right proportion of all the theories should go into every system. R:"
+          },
+          {
+            "q_no": 80,
+            "excerpt": "Arrange the following Delhi Sultanate dynasties in their chronological order :"
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 53,
+            "excerpt": "Assertion (A): When a carpet is beaten with a stick, dust comes out. Reason (R): Inertia is a property of matter that resists changes in its state of motion or rest. The correct answer is :"
+          },
+          {
+            "q_no": 73,
+            "excerpt": "Assertion (A): After the Revolt of 1857 was put down, the British were particularly hard on the Muslims. Reason (R): The British came to the conclusion that the Great Revolt was led by Muslims and that they were mainly responsible for it. Correct answer is :"
+          },
+          {
+            "q_no": 124,
+            "excerpt": "Assertion (A): A disaster relief exercise, 'Exercise Rahat' was demonstrated in Rajasthan in February 2019. Reason (R): Exercise Rahat was organised to synergise efforts for humanitarian assistance and disaster relief operations. The correct answer is :"
+          }
+        ]
+      }
+    },
+    {
+      "paper": "TSLPRB SI 2018 Mains GS",
+      "source_file": "extracted_question_paper_json/SI_2018_Mains_Paper4_GS.json",
+      "total_questions": 200,
+      "counts": {
+        "direct_one_liner": 141,
+        "multi_statement": 22,
+        "four_by_four_matching": 19,
+        "chronology_or_spatial_sequence": 7,
+        "assertion_reason_or_pair_counting": 11
+      },
+      "percentages": {
+        "direct_one_liner": 70.5,
+        "multi_statement": 11.0,
+        "four_by_four_matching": 9.5,
+        "chronology_or_spatial_sequence": 3.5,
+        "assertion_reason_or_pair_counting": 5.5
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 2,
+            "excerpt": "Read the pairs about the Kalamsat-V2: a. Kalamsat-V2 satellite : World's lightest satellite b. Weight of the satellite : 2.6 kg c. The satellite was built by : Students of Space Kids India Choose the correct pairs:"
+          },
+          {
+            "q_no": 3,
+            "excerpt": "The National Bench of the Goods and Services Tax Appellate Tribunal (GSTAT), which was created by the Union Cabinet, is a: a. Forum of first appeal in GST laws. b. Common forum of dispute resolution between the centre and states. Choose the correct answer:"
+          },
+          {
+            "q_no": 4,
+            "excerpt": "The 13th Conference of Parties (COP) of the Convention on the conservation of migratory species (CMS) of wild animals is scheduled to be hosted in February 2020 in:"
+          }
+        ],
+        "multi_statement": [
+          {
+            "q_no": 11,
+            "excerpt": "Read the following statements: a. National aquatic animal of Thailand is Siamese fighting fish, as per the decision taken by the Thailand government in February 2019. b. Official national animal of Thailand is Tiger. Choose the correct answer:"
+          },
+          {
+            "q_no": 13,
+            "excerpt": "Read the following statements about the 'Seoul Peace Prize': a. The 2019 Seoul Peace Prize was awarded to Narendra Modi, the Prime Minister of India. b. The Prime Minister was awarded the prize money of $ 2,00,000. Choose the correct answer:"
+          },
+          {
+            "q_no": 14,
+            "excerpt": "Read the following statements regarding the 'International Day of Women and Girls in Science': a. This day is celebrated every year on 11th February. b. This day was declared by the UNDP. c. The 2019 theme of the day focusses on 'Education in Science and Technology to Women and Girls'. Choose the correct statement/s:"
+          }
+        ],
+        "four_by_four_matching": [
+          {
+            "q_no": 1,
+            "excerpt": "Match the following positions with the persons now holding them (as in March 2019): Institution & Designation a. Chief Election Commissioner b. Chief Justice of India (CJI) c. Director, CBI d. Central Vigilance Commissioner Person's Name i. Ranjan Gogoi ii. Rishi Kumar Shukla iii. K.V. Chowdary iv. Deepak Misra v. Sunil Arora"
+          },
+          {
+            "q_no": 12,
+            "excerpt": "Match the following years with the names of the countries in which the G20 summits are held or to be held: List-I (Summit Year) a. 2019 b. 2020 c. 2018 d. 2022 List-II (Host Country) i. India ii. Japan iii. Saudi Arabia iv. Argentina The correct answer is :"
+          },
+          {
+            "q_no": 19,
+            "excerpt": "Match the following: List-I a. First Woman Flight Engineer of IAF b. First Woman IPS and Indo Tibetan Border Police Officer to successfully reach the South Pole c. First Female Chief Economist of IMF List - II i. Gita Gopinath ii. G.C. Anupama iii. Hina Jaiswal iv. Aparna Kumar"
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 9,
+            "excerpt": "Arrange the following four major grand slam tennis tournaments in the chronological order as per the tennis calendar: a. The Wimbledon Tennis Tournament b. The United States Open Tennis Tournament c. The Roland Garros Tennis Tournament d. The Australian Open Tennis Tournament Choose the correct sequence order :"
+          },
+          {
+            "q_no": 17,
+            "excerpt": "As per the World Steel Organisation, the global crude steel in 2017 was around 1,730 million tonnes. Arrange the following countries in the descending order on the basis of crude steel production in 2017. a. United States b. Japan c. India d. China Choose the correct order:"
+          },
+          {
+            "q_no": 96,
+            "excerpt": "Find out the sequence of the major states which have the highest degree of urbanisation as per 2011 Census."
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 24,
+            "excerpt": "Assertion (A): ISRO launched a communication satellite named GSAT-31 in February 2019, successfully. Reason (R): GSAT-31 will provide DTH television services, connectivity to VSATs for ATM, stock exchange, e-governance applications etc. Choose the correct answer:"
+          },
+          {
+            "q_no": 38,
+            "excerpt": "Assertion (A): Oils are generally liquids at room temperature. Reason (R): Oils contain unsaturated fatty acids. The correct answer is:"
+          },
+          {
+            "q_no": 45,
+            "excerpt": "Assertion (A): In a basket with raw mangoes kept for ripening, if one fully ripened mango is put, all the mangoes in the basket ripe very quickly. Reason (R): Ethylene coming from the ripened mango induces ethylene production in raw mangoes and accelerate their ripening. The correct answer is:"
+          }
+        ]
+      }
+    },
+    {
+      "paper": "TSLPRB SI 2022 Prelims",
+      "source_file": "extracted_question_paper_json/SI_2022_Prelims.json",
+      "total_questions": 200,
+      "counts": {
+        "direct_one_liner": 184,
+        "multi_statement": 0,
+        "four_by_four_matching": 1,
+        "chronology_or_spatial_sequence": 6,
+        "assertion_reason_or_pair_counting": 9
+      },
+      "percentages": {
+        "direct_one_liner": 92.0,
+        "multi_statement": 0.0,
+        "four_by_four_matching": 0.5,
+        "chronology_or_spatial_sequence": 3.0,
+        "assertion_reason_or_pair_counting": 4.5
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 1,
+            "excerpt": "A person invested an amount of ₹ X at the rate of 18% simple interest per annum and an amount of ₹ Y at the rate of 12% simple interest per annum. He received an interest of ₹4,320/- at the end of the year. Had he interchanged the amounts invested, he would have received an interest of ₹4,680/-. Then |X-Y|="
+          },
+          {
+            "q_no": 2,
+            "excerpt": "The ratio of a principal and the total amount with r% simple interest rate on that principal after 1 year is a : b then value of r in terms of a, b is"
+          },
+          {
+            "q_no": 3,
+            "excerpt": "A person invested ₹18,000 at the rate of 20% compound interest per annum. Then the interest he gets after completing the duration of two years is"
+          }
+        ],
+        "multi_statement": [],
+        "four_by_four_matching": [
+          {
+            "q_no": 124,
+            "excerpt": "Match the following. List - I (Dynasties) (a) Nizam Shahis (b) Imad Shahis (c) Adil Shahis (d) Qutub Shahis (e) Barid Shahis List-II (Kingdoms) (i) Bidar (ii) Golkonda (iii) Berar (iv) Ahmednagar (v) Bijapur"
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 131,
+            "excerpt": "Arrange the following Political Associations chronologically based on their inception. (a) Indian Association (c) Madras Mahajana Sabha (b) Poona Sarvajanik Sabha (d) Bombay Presidency Association"
+          },
+          {
+            "q_no": 133,
+            "excerpt": "Arrange the following important events chronologically based on the Muslim separatist politics. (a) Deliverence Day (c) Direct Action day (b) Lucknow Pact (d) Establishment of 'All India Muslim League'"
+          },
+          {
+            "q_no": 177,
+            "excerpt": "Arrange the following events related to Telangana Movement in Chronological order : (a) Telangana Vidrohadinam (b) Bhuvanagiri Declaration (c) Namaste Telangana daily was launched (d) Sagaraharam"
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 58,
+            "excerpt": "Each statement is followed by two arguments numbered I and II. Decide which of the arguments is a strong argument and which is a weak argument. Statement: Should there be blended learning in education system? Arguments: I. Yes. This method allows students to work at their own pace, ensuring that they fully understand new concepts. II. No. Possession of electronic gadgets in classroom and access to social media diverts most of the students from the actual concepts and lessons."
+          },
+          {
+            "q_no": 59,
+            "excerpt": "Each statement is followed by two arguments numbered I and II. Decide which of the arguments is a strong argument and which is a weak argument. Statement: Should there be high level of violence in films in the name of entertainment? Arguments: I. No. Exposure to high level of violence causes behavioural changes in human attitude particularly in children and youth there by developing criminal thoughts in mind. II. Yes. When the story demands the film makers have no other go"
+          },
+          {
+            "q_no": 61,
+            "excerpt": "In this question, a statement which is to be taken as true is given and it is followed by two assumptions numbered I & II. Decide which of the assumption (s) is (are) implicit of the statement. Statement: An instruction on the hall ticket for a competitive examination is \"Every candidate has to be in the examination hall before the examination commences. Not even a late by 1 min is allowed.\" Assumptions: I. If not mentioned in hall ticket, candidates may come to the exam at any time as per their"
+          }
+        ]
+      }
+    },
+    {
+      "paper": "TSLPRB SI 2023 Mains GS",
+      "source_file": "extracted_question_paper_json/SI_2023_Mains_General_Studies.json",
+      "total_questions": 200,
+      "counts": {
+        "direct_one_liner": 187,
+        "multi_statement": 0,
+        "four_by_four_matching": 7,
+        "chronology_or_spatial_sequence": 3,
+        "assertion_reason_or_pair_counting": 3
+      },
+      "percentages": {
+        "direct_one_liner": 93.5,
+        "multi_statement": 0.0,
+        "four_by_four_matching": 3.5,
+        "chronology_or_spatial_sequence": 1.5,
+        "assertion_reason_or_pair_counting": 1.5
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 1,
+            "excerpt": "Identify the mammal/mammals from the following."
+          },
+          {
+            "q_no": 2,
+            "excerpt": "Which of the following vitamin/mineral deficiency causes mental disorder in children ?"
+          },
+          {
+            "q_no": 3,
+            "excerpt": "China is reportedly building a new dam on Mabja Zangbo river in Tibet at the trijunction with India and Nepal, the other side of the state _____"
+          }
+        ],
+        "multi_statement": [],
+        "four_by_four_matching": [
+          {
+            "q_no": 58,
+            "excerpt": "Match the following. Group-I (Social Reformers) (a) Raja Ram Mohan Roy (b) Bal Shastri Jambekar (c) Shivanath Shastri (d) Devendranath Tagore Group-II (Papers and Magazines) (i) Tattvabodhini (ii) Mukul (iii) Sambad Kaumudi (iv) Darpan"
+          },
+          {
+            "q_no": 75,
+            "excerpt": "During Swadeshi movement in Bengal, number of organizations established in favour of Swadeshi and Boycott. Match the following persons with organizations. Group-I (Organization) (a) Dawn Society (b) Swadeshi Bandhav Samithi (c) Anti-Circular Society (d) (Dhaka) Decca Anushilan Samithi Group-II (Persons) (i) Krishna Kumar Mitra (ii) Pulin Das (iii) Aswin Kumar Dutt (iv) Satish Chandra Mukerji"
+          },
+          {
+            "q_no": 93,
+            "excerpt": "Match the following. Group-I (Kings): (a) Kanishka (b) Menandar (c) Gondophernes (d) Maos Group-II (Dynasties): (i) Parthians (ii) Shakas (iii) Kushans (iv) Indo-Greeks"
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 53,
+            "excerpt": "Chronologically arrange the following important events at the time of Muhammad Bin Tughlaq. (a) Introduction of Token (Copper) currency. (b) Shifting of capital from Delhi to Daulatabad. (c) Increase of Revenue in Ganga-Yamuna Doab. (d) The Khurasan expedition."
+          },
+          {
+            "q_no": 193,
+            "excerpt": "Arrange the following events connected with Telangana movement in chronologic order from First to last. (A) Ravindranath started indefinite strike at Palvancha (B) Indira Gandhi Announced 8 points Formula (C) M. Chenna Reddy's announcement of the postponement of Jai Telangana movement (D) Announcement of six points formula by Central Govt. in September, 1973."
+          },
+          {
+            "q_no": 194,
+            "excerpt": "Arrange the following events connected with Telangana movement in chronological order as per their occurance. (A) 1997 Suryapet declaration. (B) 1998 Telangana Jana sabha meeting at Hyderabad. (C) Formation of Telangana 'Aikhya Vedika' in 1997. (D) Warangal Sabha 1997."
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 77,
+            "excerpt": "Assertion(A): Hinayanists believed in individual salvation through self-discipline and meditation. Reason (R): Mahayanists believed in the salvation of all with help and grace of the Buddha."
+          },
+          {
+            "q_no": 78,
+            "excerpt": "Assertion(A): Firoj Shah Tughlaq imposed Jiziya on Brahmans, the priest community of Hindus also. Reason (R): Firoj shah Tughlaq believed all human beings are equal and no body is superior to another."
+          },
+          {
+            "q_no": 94,
+            "excerpt": "Assertion(A): Gandhi's technique of satyagraha was based on the twin concepts of truth (Satya) and non-violence (Ahimsa). Reason (R): The literal meaning of satyagraha is holding on to truth. Choose the correct answer :"
+          }
+        ]
+      }
+    },
+    {
+      "paper": "TGPSC Group-I Prelims 2024",
+      "source_file": "/tmp/tgprb-primary-sources/tgpsc-group-1-prelims-2024-scribd.html",
+      "total_questions": 150,
+      "counts": {
+        "direct_one_liner": 70,
+        "multi_statement": 47,
+        "four_by_four_matching": 16,
+        "chronology_or_spatial_sequence": 11,
+        "assertion_reason_or_pair_counting": 6
+      },
+      "percentages": {
+        "direct_one_liner": 46.7,
+        "multi_statement": 31.3,
+        "four_by_four_matching": 10.7,
+        "chronology_or_spatial_sequence": 7.3,
+        "assertion_reason_or_pair_counting": 4.0
+      },
+      "representative_examples": {
+        "direct_one_liner": [
+          {
+            "q_no": 2,
+            "excerpt": "2. Who amongst the following were appointed as Election Commissioners of India in March 2024 ? A. Rajiv Kumar B. Gyanesh Kumar C. Sukhbir Singh Sandhu D. Arun Kumar Goel Choose the correct answer : (1) B, C and D only (2) A, C and D only (3) A and C only (4) B and C only"
+          },
+          {
+            "q_no": 8,
+            "excerpt": "8. Which of the following two countries conducted a Joint Military Exercise ‘‘SADA TANSEEQ’’ during January – February 2024 ? (1) Iran – Kazakhstan (2) India – Afghanistan (3) India – Saudi Arabia (4) Pakistan – Tanzania"
+          },
+          {
+            "q_no": 11,
+            "excerpt": "11. Who was appointed as the National Icon for Voter Awareness and Education for the Election Commission of India in October 2023 ? (1) Pankaj Tripathi (2) Rajkummar Rao (3) Sonu Sood (4) Virat Kohli"
+          }
+        ],
+        "multi_statement": [
+          {
+            "q_no": 3,
+            "excerpt": "3. Which of the following statements related to Aditya-L1 is/are true ? A. The orbit of Aditya-L1 is located roughly 15 million kilometers away from the Earth. B. The mission will help us in understanding Coronal Mass Ejections. Choose the correct answer : (1) A only (2) B only (3) Both A and B (4) Neither A nor B"
+          },
+          {
+            "q_no": 5,
+            "excerpt": "5. Which of the following statements about G-20 is/are correct ? A. India held the presidency of the G-20 from 1st December 2022 to 30th November 2023. B. New Zealand is a member country of G-20 as of 2023. C. G-20 is the premier forum for international humanitarian co-operation. D. G-20 was founded in 1998. Choose the correct answer : (1) A, B and D only (2) B, C and D only (3) A and B only (4) A only"
+          },
+          {
+            "q_no": 10,
+            "excerpt": "10. Which of the following statements about Agni-5 are correct ? A. It uses a three-stage solid-fuelled engine. B. It is capable of striking targets at ranges up to 2000 kilometers only. C. It is indigenously developed by DRDO. D. It uses Multiple – Dependable Targetable Re-entry Vehicle (MDRV) technology. Choose the correct answer : (1) A and B only (2) A, B and C only (3) A, C and D only (4) A and C only"
+          }
+        ],
+        "four_by_four_matching": [
+          {
+            "q_no": 1,
+            "excerpt": "1. Match the following Sahitya Akademi awardees in poetry for the year 2023 with the language in which they were conferred the award : Name of the awardee Language A. Vijay Verma I. Sanskrit B. Arun Ranjan Mishra II. Kashmiri C. Manshoor Banihali III. Gujarati D. Vinod Joshi IV. Dogri Choose the correct answer : (1) A-IV; B-II; C-III; D-I (2) A-II; B-III; C-I; D-IV (3) A-IV; B-I; C-II; D-III (4) A-I; B-IV; C-III; D-II"
+          },
+          {
+            "q_no": 4,
+            "excerpt": "4. Match the following in relation to 2023 Nobel Prizes : Name of the person Subject/Field A. Jon Fosse I. Physics B. Narges Mohammadi II. Chemistry C. Aleksey Yekimov III. Peace D. Ferenc Krausz IV. Literature V. Physiology or Medicine Choose the correct answer : (1) A-III; B-IV; C-II; D-V (2) A-III; B-IV; C-I; D-II (3) A-IV; B-III; C-II; D-I (4) A-V; B-III; C-I; D-II"
+          },
+          {
+            "q_no": 6,
+            "excerpt": "6. Match the following sportspersons with their respective sports : Name of the person Name of the sport A. Pravin Jadhav I. Cycling B. Singhraj Adhana II. Gymnastics C. Aaryan Davande III. Archery D. J. Srimathi IV. Football V. Shooting Choose the correct answer : (1) A-IV; B-II; C-III; D-V (2) A-V; B-I; C-IV; D-II (3) A-III; B-V; C-I; D-IV (4) A-III; B-V; C-II; D-I"
+          }
+        ],
+        "chronology_or_spatial_sequence": [
+          {
+            "q_no": 7,
+            "excerpt": "7. Arrange the following sectors/items in ascending order based on proposed allocations (in ₹ crores) to these sectors/items in Telangana State vote on account budget for the financial year 2024 – 25 presented to the State Legislature on 10th February, 2024 : A. SC Welfare B. Capital Expenditure C. Education D. Medical and Health Choose the correct order : (1) A, B, D, C (2) D, C, A, B (3) D, A, C, B (4) B, A, C, D"
+          },
+          {
+            "q_no": 9,
+            "excerpt": "9. Arrange the following States in descending order based on percentage of Geographical Area under Recorded Forest Area (RFA) in 2021 as per the India – State of Forest Report – 2021 published by Forest Survey of India : A. Nagaland B. Sikkim C. Mizoram D. Arunachal Pradesh Choose the correct order : (1) A, B, D, C (2) B, A, D, C (3) B, D, A, C (4) D, B, A, C"
+          },
+          {
+            "q_no": 18,
+            "excerpt": "18. Arrange the following BIMSTEC Secretaries General in chronological order : A. Sumith Nakandala B. Indra Mani Pandey C. Tenzin Lekphell D. M. Shahidul Islam Choose the correct order : (1) A, D, C, B (2) C, B, A, D (3) A, B, C, D (4) D, A, B, C"
+          }
+        ],
+        "assertion_reason_or_pair_counting": [
+          {
+            "q_no": 35,
+            "excerpt": "35. Consider the following statements about India’s Pharmaceutical Sector : Assertion (A) : The Bureau of Pharma PSUs of India (BPPI) educates the public about the usage of the Jan Aushadhi generic medicines. Reason (R) : The Government of India has set a target to increase the number of Pradhan Mantri Janaushadhi Kendras to 10,000 by March, 2024. Choose the correct answer : (1) (A) is true, but (R) is false. (2) Both (A) and (R) are true and (R) is the correct explanation of (A). (3) (A) is fal"
+          },
+          {
+            "q_no": 64,
+            "excerpt": "64. Consider the following two statements : Assertion (A) : Orographic precipitation results when moving moisture-laden air strikes a topographic barrier and is forced upwards. Reason (R) : Most of the precipitation falls on the windward side of the barrier and the leeward side is likely to be dry. Choose the correct answer : (1) (A) is true, but (R) is false. (2) Both (A) and (R) are true and (R) is the correct explanation of (A). (3) (A) is false, but (R) is true. (4) Both (A) and (R) are true"
+          },
+          {
+            "q_no": 125,
+            "excerpt": "125. Consider the following statements. Assertion (A) : Democratic decentralisation provided space for the deprived and marginalised social sections for their collective bargains and to get their due share in local governance and development process. Reason (R) : Decentralisation and democratisation process helps to protect the interests of the most excluded social groups like Scheduled Castes, Scheduled Tribes and women. Choose the correct answer : (1) (A) is true, but (R) is false. (2) Both (A"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "FC-GEO-MTN-001",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Himalayan Architecture",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "What is the correct North-to-South sequence of the Trans-Himalayan and Himalayan mountain ranges?",
+    "back": "Karakoram -> Ladakh -> Zaskar -> Pir Panjal -> Shivalik (Mnemonic: KLZPS)."
+  },
+  {
+    "id": "FC-GEO-MTN-002",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Himalayan Peaks",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "What is the highest mountain peak situated entirely within undisputed Indian territory?",
+    "back": "Nanda Devi (7,816 m) in Chamoli district, Uttarakhand. (K2 / Godwin Austen at 8,611 m is in PoK; Kanchenjunga at 8,586 m lies on the India-Nepal border)."
+  },
+  {
+    "id": "FC-GEO-MTN-003",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Mountain Passes",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "Which strategic pass connects Srinagar with Leh across the Great Himalayan range?",
+    "back": "Zoji La (elevation 3,528 m) on National Highway 1D."
+  },
+  {
+    "id": "FC-GEO-MTN-004",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Mountain Passes",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "Through which Himalayan pass does the Sutlej River enter India from Tibet?",
+    "back": "Shipki La in Kinnaur district, Himachal Pradesh."
+  },
+  {
+    "id": "FC-GEO-MTN-005",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Peninsular Ranges",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "What is the highest peak in South India / Peninsular India, and in which range is it located?",
+    "back": "Anamudi (2,695 m), located in the Anaimalai Hills in Kerala."
+  },
+  {
+    "id": "FC-GEO-MTN-006",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Peninsular Ranges",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "Which mountain range represents the oldest fold mountain system in India?",
+    "back": "Aravalli Range (Pre-Cambrian orogeny). Its highest peak is Guru Shikhar (1,722 m) in Mount Abu, Rajasthan."
+  },
+  {
+    "id": "FC-GEO-MTN-007",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Peninsular Ranges",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "Where do the Western Ghats and Eastern Ghats meet?",
+    "back": "Nilgiri Hills (Blue Mountains) at the border junction of Tamil Nadu, Kerala, and Karnataka. Its highest peak is Doddabetta (2,637 m)."
+  },
+  {
+    "id": "FC-GEO-MTN-008",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Peninsular Passes",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "Which pass connects Mumbai with Nashik across the Western Ghats (Sahyadris)?",
+    "back": "Thalghat (Kasara Ghat). (Bhorghat connects Mumbai with Pune; Palghat connects Palakkad in Kerala with Coimbatore in Tamil Nadu)."
+  },
+  {
+    "id": "FC-GEO-MTN-009",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Himalayan Landforms",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "What are 'Karewas' in Himalayan geomorphology, and which precious crop are they famous for cultivating?",
+    "back": "Lacustrine (lake) deposits of clay, silt, and moraines in the Kashmir Valley between Pir Panjal and Great Himalayas. Famous for Saffron (Zafran) cultivation."
+  },
+  {
+    "id": "FC-GEO-MTN-010",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Mountains of India",
+    "subtopic": "Peninsular Ranges",
+    "related_topic_ids": ["NOTE-GEO-MOUNTAINS"],
+    "source_note_id": "NOTE-GEO-MOUNTAINS",
+    "front": "What is the highest peak of the Satpura Range?",
+    "back": "Dhupgarh (1,350 m) located in the Mahadeo Hills near Pachmarhi, Madhya Pradesh."
+  }
+]

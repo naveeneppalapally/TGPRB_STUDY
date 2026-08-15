@@ -77,8 +77,37 @@ During local development, put a temporary copy in `public/images/subject/name.we
 ## Source data - trust hierarchy, never invert it
 - `data/pyq_enriched_master.json` is the single source of truth for all PYQ data (3,129 verified questions across 10 official papers, 2015-2023). Always derive tier counts, topic weights, and question content from here. Never hardcode numbers.
 - `extracted_question_paper_json/` contains the 25 clean structured JSON files (one per official exam paper) that were used to build `pyq_enriched_master.json`. Keep this as permanent ground truth reference.
+- `docs/forensic-paper-setting-evolution-audit-2026-08-15.md` and `data/research/paper-format-audit-2026-08-15.json` are the verified empirical format audit across 7 papers (1,350 questions). Never contradict their findings without new primary-source evidence (e.g., a released 2026 TGPRB paper showing a format shift).
 - `Extracted_Text/`, `Deep_Analysis.txt`, and `Topic_Banks/` are deleted legacy files. Do not reference or recreate them.
 - The 2026 exam has a real 20% negative-marking penalty. Never build any "always guess" feature or copy that implies free guessing.
+
+## Paper-setting format evidence - empirical, never speculative
+
+The forensic audit (`docs/forensic-paper-setting-evolution-audit-2026-08-15.md`) classified 1,350 questions across 7 papers using a precedence-based mutual-exclusion classifier. These are the verified percentages:
+
+| Paper | Direct 1-liner | Multi-statement | Matching | Chronology | Assertion/pair |
+|---|---:|---:|---:|---:|---:|
+| Constable 2016 Prelims | 65.0% | 8.0% | 14.5% | 3.5% | 9.0% |
+| SI 2016 Mains GS | 60.5% | 20.5% | 12.0% | 1.5% | 5.5% |
+| Constable 2018 Mains | 77.0% | 10.0% | 6.0% | 4.5% | 2.5% |
+| SI 2018 Mains GS | 70.5% | 11.0% | 9.5% | 3.5% | 5.5% |
+| SI 2022 Prelims | 92.0% | 0.0% | 0.5% | 3.0% | 4.5% |
+| SI 2023 Mains GS | 93.5% | 0.0% | 3.5% | 1.5% | 1.5% |
+| TGPSC Group-I 2024 | 46.7% | 31.3% | 10.7% | 7.3% | 4.0% |
+
+### Three rules derived from this data - never violate
+
+1. **TGPRB 2022-2023 is 92-93.5% direct factual MCQs.** Never claim TGPRB has adopted multi-statement formats. The data shows the opposite: TGPRB papers became *more* direct between 2018 and 2023, not less.
+2. **TGPSC Group-I 2024 shows a real complexity shift** (46.7% direct, 31.3% multi-statement). This is a useful preparation hedge signal for 2026, but it is NOT a confirmed TGPRB blueprint. Present it as "TGPSC-style advanced practice" in student-facing content.
+3. **No retrieved public document identifies a shared confidential faculty panel between TGPSC and TGPRB.** The UPSC newsletter confirms university/academic-body involvement in TGPSC work, but does not disclose roster membership or shared membership with TGPRB. Never state shared paper-setters as fact.
+
+### Dual-stratification rule for content
+
+| Layer | Input papers | Product role |
+|---|---|---|
+| Fact and concept inventory | TSLPRB 2015-2023 (all 25 papers) | Extract atomic facts, distractor families, maps, timelines, high-frequency concepts. Primary training format. |
+| Format/complexity blueprint | TGPSC Group-I 2024 | Model multi-statement, matching, ordering, assertion-reason drills as *supplementary hardening*. Always label as advanced practice. |
+| Calibration | 2026 SI notification + any future released TGPRB paper | Apply actual marking penalty, current syllabus, and only verified format changes. |
 
 ## Content generation - never deviate
 - Tier is computed per topic from its real, verified PYQ count - never assumed from the subject's general weight. Tier 1 (10+): full note. Tier 2 (3-9): compact note. Tier 3 (<3): flashcards only, no note.
@@ -87,6 +116,7 @@ During local development, put a temporary copy in `public/images/subject/name.we
 - **As many images as are useful - no limit**: No cap per topic, per section, or per note page. Each subtopic, each canal system, each dam, each zone, each historical event - if a visual helps the student understand or remember the exam content, add it. Always search online first; generate with `generate_image` only when nothing suitable exists or a custom annotated version is clearly better. Never reduce images to "keep the page clean".
 - A note's comprehension-gate MCQs never enter the FSRS queue directly. Passing the gate is what unlocks the note's atomic flashcards and its real PYQs into the queue.
 - Prefer real, verified PYQs everywhere. Any synthetic/practice question must be explicitly labeled as such - never presented as a real PYQ.
+- **Synthetic multi-statement/matching questions must be labelled as "TGPSC-style advanced practice"** - never present them as reflecting the confirmed TGPRB format. The verified TGPRB format (2022-2023) is 92-93.5% direct factual MCQs. Multi-statement drills are supplementary hardening, not the primary question type.
 - Current affairs are a separate content type, never edited into a note's markdown file.
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
 
@@ -216,17 +246,38 @@ Every note page must have exactly one NOTE ID. Format: `NOTE-{SECTION}-{TOPIC}`
 | History | HIS | NOTE-HIS-GENERAL, NOTE-HIS-MODERN |
 | Arithmetic | ARI | NOTE-ARI-GENERAL |
 
-### Wiring Current Affairs & Comprehension Gate to a new note page
+### Note Page Structure: Subject-Specific Scaffolds + 4-Stage Evaluation Block
 
-Every Tier-1 and Tier-2 note page MUST include both the Comprehension Gate and the Current Affairs strip. To prevent content blocking, these must be placed at the **very bottom of the page** (after the PYQs section) as dedicated sections, and registered in the right-side Table of Contents (TOC) `sections` array.
+Every Tier-1 and Tier-2 note page consists of two integrated layers:
+
+1. **Content Layer (Subject-Specific Cognitive Scaffold)**:
+   The pedagogical sections are structured according to the subject scaffold defined in `docs/tslprb-pyq-processing-engine-research-report.md` (e.g. Geography 6-Point Scaffold, History 5-Step Causal Chain, Polity 4-Tier Architecture, Arithmetic 7-Step Drill). Do not force an artificial, generic section template onto subjects that require distinct chronological or hierarchical scaffolds.
+
+2. **Mandatory 4-Stage Practice & Evaluation Closing Block**:
+   Every topic note page MUST terminate with these four standardized sections placed sequentially at the bottom and registered in the right-side Table of Contents (TOC) `sections` array:
+   - **PYQs**: Real TGPRB verified questions (2015-2023) representing the confirmed 92-93.5% direct factual format.
+   - **Advanced Practice**: TGPSC-style hardening drills (multi-statement, 4x4 matching, assertion-reason) in a distinct indigo visual theme (`border-indigo-500/30 bg-indigo-500/5`) with pedagogical disclaimer.
+   - **Comprehension Gate**: `<GateQuiz>` component (pass 3/5 to unlock flashcards into FSRS).
+   - **Current Affairs**: `<CurrentAffairsStrip>` carousel tagged to the topic.
 
 Example bottom-of-page layout structure:
 
 ```html
-<!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
-<section id="gate" class="mb-14 scroll-mt-20">
+<!-- ── 07 · Advanced Practice ───────────────────────────────────── -->
+<section id="advanced-practice" class="mb-14 scroll-mt-20">
   <header class="sec-head">
     <span class="sec-num">07</span>
+    <h2 class="sec-title">Advanced Practice</h2>
+    <span class="sec-rule" />
+    <span class="sec-meta hidden sm:block">TGPSC-style hardening drills</span>
+  </header>
+  <!-- Indigo disclaimer + interactive cards -->
+</section>
+
+<!-- ── 08 · Comprehension Gate ─────────────────────────────────── -->
+<section id="gate" class="mb-14 scroll-mt-20">
+  <header class="sec-head">
+    <span class="sec-num">08</span>
     <h2 class="sec-title">Comprehension Gate</h2>
     <span class="sec-rule" />
     <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
@@ -234,10 +285,10 @@ Example bottom-of-page layout structure:
   <GateQuiz note-id="NOTE-GEO-DRAINAGE" />
 </section>
 
-<!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+<!-- ── 09 · Current Affairs ─────────────────────────────────────── -->
 <section id="current-affairs" class="mb-14 scroll-mt-20">
   <header class="sec-head">
-    <span class="sec-num">08</span>
+    <span class="sec-num">09</span>
     <h2 class="sec-title">Current Affairs</h2>
     <span class="sec-rule" />
     <span class="sec-meta hidden sm:block">tagged to this topic</span>
@@ -297,13 +348,14 @@ When building a new topic (e.g. Forests of India with NOTE-GEO-FORESTS):
 Add the `<GateQuiz>` and `<CurrentAffairsStrip>` components inside their respective standard sections at the end of the template (before the footer navigation), matching the layout structure.
 
 **Step 2 - Register sections in the TOC:**
-Add `gate` and `current-affairs` to the `sections` array in the script block so they render in the right-side sticky TOC:
+Add `advanced-practice`, `gate`, and `current-affairs` to the `sections` array in the script block so they render in the right-side sticky TOC:
 ```ts
 const sections = [
   // ... other sections
-  { id: 'pyqs',            label: 'PYQs' },
-  { id: 'gate',            label: 'Comprehension Gate' },
-  { id: 'current-affairs', label: 'Current Affairs' },
+  { id: 'pyqs',              label: 'PYQs' },
+  { id: 'advanced-practice', label: 'Advanced Practice' },
+  { id: 'gate',              label: 'Comprehension Gate' },
+  { id: 'current-affairs',   label: 'Current Affairs' },
 ]
 ```
 
@@ -360,7 +412,7 @@ Whenever the user provides a prompt in the format:
 1. **PYQ Extraction & Tier Determination**: Query `data/pyq_enriched_master.json` for verified PYQs matching the topic to compute the Tier and load question content.
 2. **Authentic Image Sourcing**: Search online first (Wikipedia/Wikimedia Commons/government portals) for real maps, diagrams, and photographs. Download directly to `assets-to-upload/[subject]/` and preview in `public/images/[subject]/`.
 3. **Comprehensive Current Affairs Attachment (All Matching Cards)**: Scan the entire `content/current-affairs/*.md` database and tag **every matching card** to `NOTE-[SECTION]-[TOPIC]`. If no cards exist in the database, extract or create official cards from PIB/State sources. Every matching card must be attached - never an arbitrary subset.
-4. **Generate Full Note Page**: Generate `pages/notes/[subject]/[topic-slug].vue` following the 8-section layout (01 Visual Architecture, 02 Intro, 03 Deep Dive with subject scaffold, 04 Data, 05 Memory Hacks, 06 Interactive PYQs, 07 Comprehension Gate, 08 Current Affairs).
+4. **Generate Full Note Page**: Generate `pages/notes/[subject]/[topic-slug].vue` structuring the conceptual content according to the **Subject-Specific Scaffold** (e.g. Geography 6-point, History causal chain, Polity architecture), followed by the **Standard 4-Stage Closing Block** (Interactive PYQs, TGPSC-Style Advanced Practice, Comprehension Gate, Current Affairs).
 5. **Comprehension Gate Setup**: Generate the 5-MCQ Gate Quiz JSON at `content/data/gates/[topic-slug].json` and register the NOTE-ID in `server/api/gate/[noteId].get.ts`.
 6. **Navigation Updates**: Add the live topic link to `pages/notes/[subject]/index.vue` and check default layout sidebar navigation.
 7. **Prebuild & Verification**: Run `npm run prebuild` (zero em-dashes check) and verify `HTTP 200` on the live URL. Verify that both `<GateQuiz>` and `<CurrentAffairsStrip>` render live data.

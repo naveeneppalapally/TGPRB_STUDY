@@ -1,0 +1,112 @@
+[
+  {
+    "id": "FC-GEO-DAM-001",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "National Superlatives",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "Which is the highest dam in India, and on which river and state is it built?",
+    "back": "Tehri Dam (height 260.5 m, earth-and-rockfill) on the Bhagirathi River in Tehri Garhwal district, Uttarakhand."
+  },
+  {
+    "id": "FC-GEO-DAM-002",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "National Superlatives",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "Which is India's highest concrete gravity dam, and what is its reservoir called?",
+    "back": "Bhakra Dam (height 226 m) on the Sutlej River in Bilaspur, Himachal Pradesh. Reservoir is Govind Sagar."
+  },
+  {
+    "id": "FC-GEO-DAM-003",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "National Superlatives",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "Which is the longest earthen dam in India / world, and on which river is it located?",
+    "back": "Hirakud Dam (total length 25.8 km, main dam 4.8 km) on the Mahanadi River in Sambalpur, Odisha."
+  },
+  {
+    "id": "FC-GEO-DAM-004",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Reservoirs",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "Which is India's largest artificial reservoir by water storage volume?",
+    "back": "Govind Ballabh Pant Sagar, formed by the Rihand Dam on the Rihand River (a tributary of the Son) in Sonbhadra district, Uttar Pradesh."
+  },
+  {
+    "id": "FC-GEO-DAM-005",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Telangana Dams",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "On which river and district is the historic Nizam Sagar Dam constructed?",
+    "back": "Manjeera River (a right-bank tributary of Godavari) in Kamareddy district, Telangana. Built between 1923-1931 by the 7th Nizam under Nawab Ali Nawaz Jung."
+  },
+  {
+    "id": "FC-GEO-DAM-006",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Telangana Dams",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "On which river is the Nagarjuna Sagar Dam, the world's largest masonry dam, built?",
+    "back": "Krishna River (straddling Nalgonda district, Telangana and Palnadu/Guntur district, Andhra Pradesh)."
+  },
+  {
+    "id": "FC-GEO-DAM-007",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Peninsular Dams",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "On which river is the Almatti Dam (Lal Bahadur Shastri Dam) built?",
+    "back": "Krishna River in Bijapur (Vijayapura) district, Karnataka (Upper Krishna Project)."
+  },
+  {
+    "id": "FC-GEO-DAM-008",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Peninsular Dams",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "On which river is the Sardar Sarovar Dam built?",
+    "back": "Narmada River at Kevadia in Narmada district, Gujarat."
+  },
+  {
+    "id": "FC-GEO-DAM-009",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Telangana Dams",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "Which barrage serves as the primary intake structure for the Kaleshwaram Lift Irrigation Project?",
+    "back": "Medigadda (Lakshmi) Barrage across the Godavari River just downstream of the confluence with the Pranahita River in Jayashankar Bhupalpally district."
+  },
+  {
+    "id": "FC-GEO-DAM-010",
+    "type": "atomic_flashcard",
+    "exam_section": "Geography",
+    "topic": "Dams in India",
+    "subtopic": "Peninsular Dams",
+    "related_topic_ids": ["NOTE-GEO-DAMS"],
+    "source_note_id": "NOTE-GEO-DAMS",
+    "front": "On which river is the Mettur Dam (Stanley Reservoir) built?",
+    "back": "Cauvery River in Salem district, Tamil Nadu."
+  }
+]

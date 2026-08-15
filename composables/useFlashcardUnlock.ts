@@ -27,6 +27,12 @@ export function useFlashcardUnlock() {
   }
 
   function isGatePassed(noteId: string): boolean {
+    if (mode.value === 'direct') return true
+    if (!import.meta.client || !noteId) return false
+    return localStorage.getItem(`${GATE_PREFIX}${noteId}`) === 'true'
+  }
+
+  function hasPassedQuizLocally(noteId: string): boolean {
     if (!import.meta.client || !noteId) return false
     return localStorage.getItem(`${GATE_PREFIX}${noteId}`) === 'true'
   }
@@ -37,11 +43,19 @@ export function useFlashcardUnlock() {
     }
   }
 
+  function resetGate(noteId: string) {
+    if (import.meta.client && noteId) {
+      localStorage.removeItem(`${GATE_PREFIX}${noteId}`)
+    }
+  }
+
   return {
     mode,
     setMode,
     isGatePassed,
+    hasPassedQuizLocally,
     markGatePassed,
+    resetGate,
     storageKey: STORAGE_KEY,
   }
 }

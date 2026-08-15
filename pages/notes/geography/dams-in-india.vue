@@ -862,10 +862,106 @@
           </div>
         </section>
 
-        <!-- ── 07 · Comprehension Gate ─────────────────────────────────── -->
-        <section id="gate" class="mb-14 scroll-mt-20">
+        <!-- ── 07 · Advanced Practice ───────────────────────────────────── -->
+        <section id="advanced-practice" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">07</span>
+            <h2 class="sec-title">Advanced Practice</h2>
+            <span class="sec-rule" />
+            <span class="sec-meta hidden sm:block">
+              {{ advancedPractice.length }} drills
+              <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
+            </span>
+          </header>
+
+          <!-- Disclaimer callout -->
+          <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
+            <p class="flex items-center gap-2 text-[12px] font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
+              <UIcon name="i-heroicons-beaker" class="h-4 w-4" />
+              TGPSC-Style Advanced Practice
+            </p>
+            <p class="mt-1.5 text-[13px] leading-relaxed t-mid">
+              These questions use <strong class="t-hi">multi-statement, 4x4 matching, and basin cross-linking</strong> formats
+              from recent TGPSC Group-I patterns. TGPRB papers (2022-2023) remain
+              <strong class="t-hi">92-93.5% direct factual MCQs</strong>. These drills harden your project-river recall.
+            </p>
+            <p class="mt-2 text-[11.5px] font-mono t-lo">
+              Source: Forensic Paper-Setting Evolution Audit, Aug 2026 - 1,350 questions classified across 7 papers.
+            </p>
+          </div>
+
+          <!-- Advanced Practice Cards -->
+          <div class="space-y-6">
+            <article
+              v-for="q in advancedPractice"
+              :key="q.uid"
+              class="panel p-5 sm:p-6 transition-all duration-200"
+            >
+              <!-- Card header -->
+              <div class="mb-3 flex flex-wrap items-center gap-2">
+                <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10.5px] font-bold font-mono uppercase tracking-wider bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
+                  {{ q.format }}
+                </span>
+                <span v-if="q.isSynthetic" class="chip chip-mono">Synthetic</span>
+                <span v-else class="chip chip-mono">Real TGPSC</span>
+                <span class="font-mono text-[10.5px] tracking-tight t-lo ms-auto hidden sm:inline">{{ q.source }}</span>
+                <span
+                  v-if="q.revealed && q.selected !== null"
+                  class="chip chip-mono ms-auto sm:ms-0"
+                  :class="q.selected === q.correct ? 'chip-jade' : 'chip-red'"
+                >{{ q.selected === q.correct ? 'Correct' : 'Missed' }}</span>
+              </div>
+
+              <!-- Question stem -->
+              <p class="mb-4 whitespace-pre-line text-[14px] font-medium leading-[1.7] t-hi">{{ q.question }}</p>
+
+              <!-- Options grid -->
+              <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <button
+                  v-for="(opt, oi) in q.options"
+                  :key="oi"
+                  type="button"
+                  class="opt"
+                  :class="advOptionClass(q, oi)"
+                  :disabled="q.revealed"
+                  @click="advAttempt(q, oi)"
+                >
+                  <span class="opt-letter">{{ 'ABCD'[oi] }}</span>
+                  <span class="flex-1 text-left">{{ opt }}</span>
+                  <UIcon v-if="q.revealed && oi === q.correct" name="i-heroicons-check-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--jade)]" />
+                  <UIcon v-else-if="q.revealed && oi === q.selected" name="i-heroicons-x-circle-solid" class="mt-0.5 h-4 w-4 shrink-0 text-[var(--red)]" />
+                </button>
+              </div>
+
+              <!-- Explanation -->
+              <div v-if="q.revealed" class="callout callout-jade mt-4 animate-fade-in">
+                <p class="callout-title">
+                  <UIcon name="i-heroicons-light-bulb" class="h-3.5 w-3.5" />
+                  Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
+                </p>
+                <p class="callout-body">{{ q.explanation }}</p>
+                <AiAskButton
+                  class="mt-3"
+                  note-id="NOTE-GEO-DAMS"
+                  :prompt="`Explain the reasoning for this TGPSC-style dam question and the exam trap: ${q.question}`"
+                  :source-question-id="q.uid"
+                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
+                  label="Explain with AI"
+                />
+              </div>
+
+              <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
+                <span>Reveal answer &amp; explanation</span>
+                <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
+              </button>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── 08 · Comprehension Gate ─────────────────────────────────── -->
+        <section id="gate" class="mb-14 scroll-mt-20">
+          <header class="sec-head">
+            <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
@@ -873,10 +969,10 @@
           <GateQuiz note-id="NOTE-GEO-DAMS" />
         </section>
 
-        <!-- ── 08 · Current Affairs ─────────────────────────────────────── -->
+        <!-- ── 09 · Current Affairs ─────────────────────────────────────── -->
         <section id="current-affairs" class="mb-14 scroll-mt-20">
           <header class="sec-head">
-            <span class="sec-num">08</span>
+            <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
@@ -987,14 +1083,15 @@ const coverage = [
 ]
 
 const sections = [
-  { id: 'visual',          label: 'The Visual Architecture' },
-  { id: 'introduction',    label: 'Introduction' },
-  { id: 'deep-dive',       label: 'Deep Dive' },
-  { id: 'data',            label: 'Data &amp; Comparisons' },
-  { id: 'hacks',           label: 'Memory Hacks' },
-  { id: 'pyqs',            label: 'PYQs' },
-  { id: 'gate',            label: 'Comprehension Gate' },
-  { id: 'current-affairs', label: 'Current Affairs' },
+  { id: 'visual',            label: 'The Visual Architecture' },
+  { id: 'introduction',      label: 'Introduction' },
+  { id: 'deep-dive',         label: 'Deep Dive' },
+  { id: 'data',              label: 'Data & Comparisons' },
+  { id: 'hacks',             label: 'Memory Hacks' },
+  { id: 'pyqs',              label: 'PYQs' },
+  { id: 'advanced-practice', label: 'Advanced Practice' },
+  { id: 'gate',              label: 'Comprehension Gate' },
+  { id: 'current-affairs',   label: 'Current Affairs' },
 ]
 
 const textHierarchy = `MAJOR DAMS & MULTIPURPOSE PROJECTS OF INDIA
@@ -1196,6 +1293,126 @@ const pyqList = reactive<PYQItem[]>([
     revealed: false,
   }
 ])
+
+/* ── Advanced Practice: TGPSC-style hardening drills ────────────────────── */
+interface AdvPractice {
+  uid: string
+  question: string
+  options: string[]
+  correct: number
+  explanation: string
+  source: string
+  format: string
+  isSynthetic: boolean
+  revealed: boolean
+  selected: number | null
+}
+
+const advancedPractice = reactive<AdvPractice[]>([
+  {
+    uid: 'ADV-GEO-DAM-001',
+    question: 'Match the following lift irrigation projects/barrage with the rivers:\n\nList I (Project/Barrage):\nA. Mahatma Gandhi Kalwakurthy Lift Irrigation Project\nB. Nizam Sagar Project\nC. J. Chokka Rao Devadula Lift Irrigation Scheme\nD. Chanaka-Korata Barrage\n\nList II (River):\nI. Godavari\nII. Krishna\nIII. Penganga\nIV. Manjeera\n\nChoose the correct answer:',
+    options: [
+      'A-II, B-I, C-IV, D-III',
+      'A-II, B-I, C-III, D-IV',
+      'A-II, B-IV, C-I, D-III',
+      'A-I, B-II, C-III, D-IV'
+    ],
+    correct: 2,
+    explanation: 'Kalwakurthy LIS draws from Krishna River foreshore (A-II). Nizam Sagar is on Manjeera River in Kamareddy (B-IV). Devadula LIS lifts water from Godavari at Gangaram (C-I). Chanaka-Korata Barrage is on Penganga River in Adilabad (D-III).',
+    source: 'TGPSC Group-I 2024, Q101',
+    format: 'Matching',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DAM-002',
+    question: 'Consider the following statements regarding Telangana irrigation projects:\n\nA. Koulasnala and Boggulavagu irrigation projects are located in the Godavari basin.\nB. Kotepally Vagu and Asif Nahar irrigation projects are located in the Krishna basin.\n\nWhich of the above statements is/are correct?',
+    options: [
+      'A only',
+      'B only',
+      'Both A and B',
+      'Neither A nor B'
+    ],
+    correct: 2,
+    explanation: 'Koulasnala (Kamareddy - Manjeera/Godavari sub-basin) and Boggulavagu (Mancherial - Godavari basin) are in Godavari basin. Kotepally Vagu (Vikarabad - Kagna/Krishna sub-basin) and Asif Nahar fall in Krishna basin. Both statements are true.',
+    source: 'TGPSC Group-I 2024, Q71',
+    format: 'Multi-statement',
+    isSynthetic: false,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DAM-003',
+    question: 'Match the following major dams of India with their river and structural type:\n\nList I (Dam):\nA. Tehri Dam\nB. Bhakra Dam\nC. Hirakud Dam\nD. Sardar Sarovar Dam\n\nList II (River & Superlative):\nI. Sutlej River (Highest Gravity Dam, 226 m)\nII. Mahanadi River (Longest Earthen Dam, 25.8 km)\nIII. Bhagirathi River (Highest Rock-fill Dam, 260.5 m)\nIV. Narmada River (Major Concrete Gravity Dam)',
+    options: [
+      'A-III, B-I, C-II, D-IV',
+      'A-III, B-IV, C-II, D-I',
+      'A-I, B-III, C-II, D-IV',
+      'A-III, B-I, C-IV, D-II'
+    ],
+    correct: 0,
+    explanation: 'Tehri Dam on Bhagirathi is the highest dam in India (260.5 m, III). Bhakra Dam on Sutlej is India\'s highest gravity dam (226 m, I). Hirakud on Mahanadi is the longest earthen dam (25.8 km, II). Sardar Sarovar is on Narmada (IV).',
+    source: 'Synthetic - derived from PYQ national dam superlatives',
+    format: 'Matching',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DAM-004',
+    question: 'Consider the following statements regarding the Damodar Valley Corporation (DVC):\n\nA. It was established in 1948 as the first multipurpose river valley project of independent India.\nB. It was modeled on the Tennessee Valley Authority (TVA) of the USA.\nC. Tilaiya, Maithon, and Panchet dams are key storage dams constructed under the DVC system.\nD. The DVC project exclusively benefits only the state of Bihar.\n\nWhich of the above statements are correct?',
+    options: [
+      'A, B and C only',
+      'A and B only',
+      'B, C and D only',
+      'A, B, C and D'
+    ],
+    correct: 0,
+    explanation: 'Statements A, B, and C are correct. Statement D is false because DVC is a joint multipurpose project benefiting Jharkhand, West Bengal, and the Central Government, not exclusively Bihar.',
+    source: 'Synthetic - derived from DVC historical PYQ inventory',
+    format: 'Multi-statement',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+  {
+    uid: 'ADV-GEO-DAM-005',
+    question: 'Which of the following statements regarding historical irrigation works of Hyderabad State under Chief Engineer Nawab Ali Nawaz Jung are correct?\n\nA. Nizam Sagar Dam was constructed across the Manjeera River in Kamareddy district.\nB. Osman Sagar and Himayat Sagar were built on Musi and Esi rivers to protect Hyderabad from floods following the 1908 deluge.\nC. The Ali Sagar Lift Irrigation scheme in Nizamabad was named in honor of Nawab Ali Nawaz Jung.\nD. Kaddam Project was constructed across the Kaddam River, a left-bank tributary of Godavari.\n\nChoose the correct answer:',
+    options: [
+      'A, B, C and D',
+      'A, B and C only',
+      'B, C and D only',
+      'A and B only'
+    ],
+    correct: 0,
+    explanation: 'All four statements are correct historical and spatial facts regarding Hyderabad State irrigation architecture and the engineering legacy of Nawab Ali Nawaz Jung Bahadur.',
+    source: 'Synthetic - derived from Telangana irrigation history',
+    format: 'Multi-statement',
+    isSynthetic: true,
+    revealed: false,
+    selected: null,
+  },
+])
+
+const advAttemptedCount = computed(() => advancedPractice.filter(q => q.revealed).length)
+const advCorrectCount = computed(() => advancedPractice.filter(q => q.revealed && q.selected === q.correct).length)
+
+function advAttempt(q: AdvPractice, optIdx: number) {
+  if (q.revealed) return
+  q.selected = optIdx
+  q.revealed = true
+}
+function advReveal(q: AdvPractice) {
+  q.revealed = true
+}
+function advOptionClass(q: AdvPractice, oi: number) {
+  if (!q.revealed) return ''
+  if (oi === q.correct) return 'opt-correct'
+  if (oi === q.selected) return 'opt-wrong'
+  return 'opacity-60'
+}
 
 function attempt(q: PYQItem, oi: number) {
   if (q.revealed) return
