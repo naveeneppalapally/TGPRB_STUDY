@@ -135,10 +135,14 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { queryCollection } from '#imports'
+import { useSupabaseUser, queryCollection } from '#imports'
 
-const LS_KEY = 'studyos-ca-last-read'
+const user = useSupabaseUser()
+
+function getLsKey(): string {
+  const uid = user.value?.id || 'guest'
+  return `studyos-ca-last-read:${uid}`
+}
 
 const isOpen = ref(false)
 const loadingFull = ref(false)
@@ -175,9 +179,22 @@ async function openPanel() {
 // Track last-read timestamp (localStorage, client-only)
 const lastReadTs = ref(0)
 
+function loadLastRead() {
+  if (!import.meta.client) return
+  const key = getLsKey()
+  let stored = localStorage.getItem(key)
+  if (!stored && !user.value) {
+    stored = localStorage.getItem('studyos-ca-last-read')
+  }
+  lastReadTs.value = stored ? (parseInt(stored, 10) || 0) : 0
+}
+
 onMounted(() => {
-  const stored = localStorage.getItem(LS_KEY)
-  if (stored) lastReadTs.value = parseInt(stored, 10) || 0
+  loadLastRead()
+})
+
+watch(user, () => {
+  loadLastRead()
 })
 
 function isUnread(entry: any): boolean {
@@ -188,7 +205,9 @@ function isUnread(entry: any): boolean {
 
 function markAllRead() {
   lastReadTs.value = Date.now()
-  localStorage.setItem(LS_KEY, String(lastReadTs.value))
+  if (import.meta.client) {
+    localStorage.setItem(getLsKey(), String(lastReadTs.value))
+  }
 }
 
 const unreadCount = computed(() =>

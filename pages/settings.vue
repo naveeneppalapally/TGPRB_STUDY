@@ -8,8 +8,58 @@
         <span class="t-mid">Settings</span>
       </div>
       <h1 class="font-display text-h1 font-bold tracking-tight t-hi">Settings</h1>
-      <p class="mt-1 text-[14px] t-mid">Preferences are saved locally in your browser.</p>
+      <p class="mt-1 text-[14px] t-mid">Manage your study account, sync preferences, and interface settings.</p>
     </header>
+
+    <!-- Account & Sync Section -->
+    <section class="mb-8">
+      <h2 class="mb-1 text-[13px] font-semibold uppercase tracking-wider t-lo">Account & Sync</h2>
+      <div class="mt-3 rounded-xl border b-line bg-elev p-5">
+        <div v-if="isLoggedIn" class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-saffron-500 text-sm font-bold text-white uppercase shadow-sm">
+              {{ (displayName || 'U')[0] }}
+            </span>
+            <div>
+              <p class="text-[15px] font-medium t-hi">{{ displayName }}</p>
+              <p class="text-[12px] t-lo">{{ userEmail }}</p>
+              <span class="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">
+                <UIcon name="i-heroicons-check-circle" class="h-3.5 w-3.5" />
+                Cloud sync active (Separate tracker profile)
+              </span>
+            </div>
+          </div>
+
+          <UButton
+            color="gray"
+            variant="outline"
+            size="sm"
+            label="Sign Out"
+            icon="i-heroicons-arrow-left-on-rectangle"
+            :loading="authLoading"
+            @click="handleSignOut"
+          />
+        </div>
+
+        <div v-else class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <p class="text-[15px] font-medium t-hi">Guest Session</p>
+            <p class="mt-0.5 text-[13px] t-lo">
+              Sign in with your email to keep your FSRS review queue, topic progress, and gates separate from other users.
+            </p>
+          </div>
+
+          <UButton
+            to="/auth/login"
+            color="primary"
+            size="sm"
+            label="Sign In / Register"
+            icon="i-heroicons-arrow-right-on-rectangle"
+            class="shrink-0 font-semibold"
+          />
+        </div>
+      </div>
+    </section>
 
     <!-- Typography -->
     <section class="mb-8">
@@ -178,10 +228,20 @@
 </template>
 
 <script setup lang="ts">
+import { useAuth } from '@/composables/useAuth'
+
 useHead({ title: 'Settings - StudyOS' })
 
+const router = useRouter()
+const toast = useToast()
 const colorMode = useColorMode()
+const { user, isLoggedIn, userEmail, displayName, loading: authLoading, signOut } = useAuth()
 const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
+
+async function handleSignOut() {
+  await signOut()
+  toast.add({ title: 'Signed out successfully', color: 'gray', timeout: 2000 })
+}
 
 const flashcardUnlockOptions = [
   {

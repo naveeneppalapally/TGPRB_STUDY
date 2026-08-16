@@ -265,7 +265,7 @@ const emit = defineEmits<{
   completed: [result: { score: number; total: number; passed: boolean }]
 }>()
 
-const { mode, hasPassedQuizLocally, markGatePassed } = useFlashcardUnlock()
+const { mode, hasPassedQuizLocally, checkCloudGatePassed, markGatePassed } = useFlashcardUnlock()
 
 const fetchedQuiz = ref<GateQuizData | null>(null)
 const showOptionalQuiz = ref(false)
@@ -284,13 +284,13 @@ onMounted(async () => {
   }
 
   if (assistantNoteId.value) {
-    previouslyPassed.value = hasPassedQuizLocally(assistantNoteId.value)
+    previouslyPassed.value = await checkCloudGatePassed(assistantNoteId.value)
   }
 })
 
-watch(() => assistantNoteId.value, (newId) => {
+watch(() => assistantNoteId.value, async (newId) => {
   if (newId) {
-    previouslyPassed.value = hasPassedQuizLocally(newId)
+    previouslyPassed.value = await checkCloudGatePassed(newId)
   }
 })
 
@@ -334,7 +334,7 @@ function handleKey(e: KeyboardEvent) {
   if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prevQ() }
 }
 
-function submitGate() {
+async function submitGate() {
   if (!quiz.value) return
   let correct = 0
   quiz.value.questions.forEach((q, i) => {
@@ -348,6 +348,21 @@ function submitGate() {
   if (didPass && assistantNoteId.value) {
     markGatePassed(assistantNoteId.value)
     previouslyPassed.value = true
+  }
+
+  // Record submission in Supabase for authenticated user
+  try {
+    await $fetch('/api/gate/submit', {
+      method: 'POST',
+      body: {
+        note_id: assistantNoteId.value,
+        score: correct,
+        total: quiz.value.questions.length,
+        pass_threshold: quiz.value.pass_threshold,
+      },
+    })
+  } catch {
+    // Offline or guest mode fallback
   }
 
   emit('completed', { score: correct, total: quiz.value.questions.length, passed: didPass })

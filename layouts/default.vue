@@ -153,7 +153,7 @@
           />
         </div>
 
-        <!-- Right Section: Badges, Bell & Theme Toggle -->
+        <!-- Right Section: Badges, Bell, Theme Toggle & User Auth -->
         <div class="flex items-center gap-2">
           <span class="eyebrow hidden md:block">TGPRB · Constable / SI</span>
 
@@ -167,6 +167,34 @@
             size="sm"
             :aria-label="colorMode.value === 'dark' ? 'Switch to light' : 'Switch to dark'"
             @click="toggleTheme"
+          />
+
+          <!-- User Profile / Sign In -->
+          <UDropdown
+            v-if="isLoggedIn"
+            :items="userMenuItems"
+            :popper="{ placement: 'bottom-end' }"
+          >
+            <button
+              type="button"
+              class="flex items-center gap-1.5 rounded-full border b-line bg-sub p-1 hover:border-saffron-400 transition-colors"
+              :title="userEmail || 'Account'"
+            >
+              <span class="grid h-6 w-6 place-items-center rounded-full bg-saffron-500 text-[11px] font-bold text-white uppercase">
+                {{ (displayName || 'U')[0] }}
+              </span>
+            </button>
+          </UDropdown>
+
+          <UButton
+            v-else
+            to="/auth/login"
+            color="primary"
+            variant="soft"
+            size="xs"
+            label="Sign In"
+            icon="i-heroicons-arrow-right-on-rectangle"
+            class="font-semibold"
           />
         </div>
       </header>
@@ -219,9 +247,72 @@ const dueCount = ref(0)
 const colorMode = useColorMode()
 const toast = useToast()
 const route = useRoute()
+const router = useRouter()
+const { user, isLoggedIn, userEmail, displayName, signOut } = useAuth()
 
 /* Close the mobile drawer on navigation */
 watch(() => route.fullPath, () => { open.value = false })
+
+function updateDueCount() {
+  if (!import.meta.client) return
+  const uid = user.value?.id || 'guest'
+  const key = `studyos:fsrs:card-states:${uid}`
+  try {
+    let raw = localStorage.getItem(key)
+    if (!raw && !user.value) raw = localStorage.getItem('studyos:fsrs:card-states')
+    if (raw) {
+      const states = JSON.parse(raw)
+      const now = new Date()
+      const due = Object.values(states).filter((s: any) => {
+        return s?.fsrs?.due ? new Date(s.fsrs.due) <= now : false
+      })
+      dueCount.value = due.length
+      return
+    }
+  } catch {}
+  dueCount.value = 0
+}
+
+onMounted(() => {
+  updateDueCount()
+})
+
+watch([user, () => route.fullPath], () => {
+  updateDueCount()
+})
+
+const userMenuItems = computed(() => [
+  [
+    {
+      label: userEmail.value || 'Account',
+      slot: 'account',
+      disabled: true,
+    },
+  ],
+  [
+    {
+      label: 'Review Queue',
+      icon: 'i-heroicons-rectangle-stack',
+      click: () => router.push('/review'),
+    },
+    {
+      label: 'Settings',
+      icon: 'i-heroicons-cog-6-tooth',
+      click: () => router.push('/settings'),
+    },
+  ],
+  [
+    {
+      label: 'Sign Out',
+      icon: 'i-heroicons-arrow-left-on-rectangle',
+      click: async () => {
+        await signOut()
+        toast.add({ title: 'Signed out', color: 'gray', timeout: 2000 })
+        router.push('/')
+      },
+    },
+  ],
+])
 
 function toggleTheme() {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'

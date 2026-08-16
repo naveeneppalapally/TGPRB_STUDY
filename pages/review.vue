@@ -234,10 +234,27 @@ const activeScheduleHints = computed(() => {
   ]
 })
 
+const user = useSupabaseUser()
+
+function getStorageFsrsKey(): string {
+  const uid = user.value?.id || 'guest'
+  return `studyos:fsrs:card-states:${uid}`
+}
+
+function getTodayKey(): string {
+  const uid = user.value?.id || 'guest'
+  return `studyos:fsrs:reviewed-today:${uid}:${new Date().toISOString().slice(0, 10)}`
+}
+
 function loadSavedFSRSStates(): Record<string, any> {
   if (!import.meta.client) return {}
   try {
-    const raw = localStorage.getItem(STORAGE_FSRS_KEY)
+    const key = getStorageFsrsKey()
+    let raw = localStorage.getItem(key)
+    // Fallback to legacy key for guest/migration
+    if (!raw && !user.value) {
+      raw = localStorage.getItem('studyos:fsrs:card-states')
+    }
     return raw ? JSON.parse(raw) : {}
   } catch {
     return {}
@@ -247,6 +264,7 @@ function loadSavedFSRSStates(): Record<string, any> {
 function saveFSRSState(cardId: string, card: StudyCard) {
   if (!import.meta.client) return
   try {
+    const key = getStorageFsrsKey()
     const existing = loadSavedFSRSStates()
     existing[cardId] = {
       id: card.id,
@@ -261,7 +279,7 @@ function saveFSRSState(cardId: string, card: StudyCard) {
         last_review: card.fsrs.last_review ? card.fsrs.last_review.toISOString() : undefined,
       },
     }
-    localStorage.setItem(STORAGE_FSRS_KEY, JSON.stringify(existing))
+    localStorage.setItem(key, JSON.stringify(existing))
   } catch (e) {
     console.error('Failed to save FSRS state:', e)
   }
@@ -342,7 +360,7 @@ function toggleFlip() {
   flipped.value = !flipped.value
 }
 
-function rate(ratingNumber: number) {
+async function rate(ratingNumber: number) {
   if (!currentCard.value || !currentFSRSCard.value) return
 
   const gradeMap: Record<number, FSRSGrade> = {
@@ -363,10 +381,25 @@ function rate(ratingNumber: number) {
   // 2. Increment stats
   reviewedToday.value++
   if (import.meta.client) {
-    localStorage.setItem(TODAY_KEY, String(reviewedToday.value))
+    localStorage.setItem(getTodayKey(), String(reviewedToday.value))
   }
 
-  // 3. Handle 'Again' re-insertion or queue progression
+  // 3. Sync rating with cloud if authenticated
+  if (user.value) {
+    try {
+      await $fetch('/api/review/grade', {
+        method: 'POST',
+        body: {
+          card_id: currentCard.value.id,
+          rating: ratingNumber,
+        },
+      })
+    } catch {
+      // Offline/local fallback
+    }
+  }
+
+  // 4. Handle 'Again' re-insertion or queue progression
   const finishedCard = currentCard.value
   flipped.value = false
 
@@ -382,7 +415,7 @@ function rate(ratingNumber: number) {
     currentIndex.value = 0
   }
 
-  // 4. Update retention metric
+  // 5. Update retention metric
   const learned = Object.values(studyCardsMap.value).filter(sc => sc.fsrs.reps > 0)
   if (learned.length > 0) {
     const totalR = learned.reduce((acc, sc) => acc + engine.retrievability(sc, now), 0)
@@ -392,7 +425,7 @@ function rate(ratingNumber: number) {
 
 onMounted(async () => {
   if (import.meta.client) {
-    const savedCount = localStorage.getItem(TODAY_KEY)
+    const savedCount = localStorage.getItem(getTodayKey())
     if (savedCount) reviewedToday.value = parseInt(savedCount, 10) || 0
   }
 
@@ -405,6 +438,15 @@ onMounted(async () => {
   } catch {
     allRawCards.value = []
   }
+})
+
+watch(user, () => {
+  // Re-hydrate on user login/logout/switch
+  if (import.meta.client) {
+    const savedCount = localStorage.getItem(getTodayKey())
+    reviewedToday.value = savedCount ? (parseInt(savedCount, 10) || 0) : 0
+  }
+  hydrateCards()
 })
 
 watch(() => mode.value, () => {
