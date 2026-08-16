@@ -1,6 +1,7 @@
 # =============================================================================
 # Supabase Keepalive: prevents free-tier auto-pause (7 days no requests)
 # Pings the project every 5 days via REST / health endpoint.
+# URL is hardcoded (public, not sensitive). Only the anon key is a secret.
 # =============================================================================
 
 name: Supabase Keepalive
@@ -17,31 +18,17 @@ jobs:
     steps:
       - name: Ping Supabase
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
-          # ---- Secret presence check ----
-          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
-            echo "::error::SUPABASE_URL or SUPABASE_ANON_KEY secret is missing."
+          # URL is hardcoded - not sensitive (public API endpoint)
+          CLEAN_URL="https://fqasvhrzzhezluirnwtc.supabase.co"
+
+          if [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::SUPABASE_ANON_KEY secret is missing."
             exit 1
           fi
 
-          CLEAN_URL="${SUPABASE_URL%/}"
-          echo "URL length : ${#CLEAN_URL}"
-          echo "URL prefix : ${CLEAN_URL:0:8}"
-          echo "URL suffix : ${CLEAN_URL: -12}"
-
-          # ---- Ping with verbose curl (shows DNS, TLS, redirect details) ----
-          echo "--- curl verbose ping to ${CLEAN_URL}/rest/v1/ ---"
-          HTTP_CODE=$(curl -v --max-time 15 \
-            -o /tmp/sb_body.txt \
-            -w "%{http_code}" \
-            "${CLEAN_URL}/rest/v1/" \
-            -H "apikey: ${SUPABASE_ANON_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}" \
-            2>&1 | tee /tmp/sb_verbose.txt | tail -1)
-
-          # Re-read the http code from a clean run
+          echo "Pinging ${CLEAN_URL}/rest/v1/ ..."
           HTTP_CODE=$(curl --max-time 15 -s \
             -o /tmp/sb_body.txt \
             -w "%{http_code}" \
@@ -53,12 +40,12 @@ jobs:
           echo "Body      : $(cat /tmp/sb_body.txt)"
 
           if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
-            echo "::notice::Keepalive ping successful (HTTP ${HTTP_CODE})."
+            echo "::notice::Keepalive ping successful (HTTP ${HTTP_CODE}). Project is active."
             exit 0
           fi
 
-          # ---- Fallback: auth health ----
-          echo "--- Fallback: /auth/v1/health ---"
+          # Fallback: auth health
+          echo "REST returned ${HTTP_CODE}. Trying /auth/v1/health ..."
           AUTH_CODE=$(curl --max-time 15 -s \
             -o /tmp/sb_auth.txt \
             -w "%{http_code}" \
@@ -68,7 +55,7 @@ jobs:
           echo "Auth body : $(cat /tmp/sb_auth.txt)"
 
           if [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
-            echo "::notice::Auth keepalive successful (HTTP ${AUTH_CODE})."
+            echo "::notice::Auth keepalive successful (HTTP ${AUTH_CODE}). Project is active."
             exit 0
           fi
 
