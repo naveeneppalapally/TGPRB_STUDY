@@ -30,7 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install --retries 10 --timeout 60 requests beautifulsoup4 google-genai
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --retries 5 --timeout 30 requests beautifulsoup4 google-genai || \
+          python -m pip install --index-url https://pypi.org/simple/ requests beautifulsoup4 google-genai
 
       - name: Calculate dates
         id: dates
