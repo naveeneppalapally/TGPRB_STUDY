@@ -5,6 +5,15 @@ on:
     # Runs daily at 01:30 UTC (7:00 AM IST)
     - cron: '30 1 * * *'
   workflow_dispatch:
+    inputs:
+      from_date:
+        description: 'Start date (YYYY-MM-DD). Leave blank for auto (last 3 days).'
+        required: false
+        default: ''
+      to_date:
+        description: 'End date (YYYY-MM-DD). Leave blank for today.'
+        required: false
+        default: ''
 
 jobs:
   pib-daily-scrape:
@@ -23,13 +32,25 @@ jobs:
         run: |
           pip install requests beautifulsoup4 google-genai
 
-      - name: Calculate dates (last 3 days to catch holiday gaps)
+      - name: Calculate dates
         id: dates
         run: |
-          THREE_DAYS_AGO=$(date -d "3 days ago" +%Y-%m-%d)
-          TODAY=$(date +%Y-%m-%d)
-          echo "from_date=$THREE_DAYS_AGO" >> $GITHUB_OUTPUT
-          echo "to_date=$TODAY" >> $GITHUB_OUTPUT
+          # Use manual inputs if provided, otherwise default to last 3 days
+          if [ -n "${{ inputs.from_date }}" ]; then
+            FROM="${{ inputs.from_date }}"
+          else
+            FROM=$(date -d "3 days ago" +%Y-%m-%d)
+          fi
+
+          if [ -n "${{ inputs.to_date }}" ]; then
+            TO="${{ inputs.to_date }}"
+          else
+            TO=$(date +%Y-%m-%d)
+          fi
+
+          echo "from_date=$FROM" >> $GITHUB_OUTPUT
+          echo "to_date=$TO" >> $GITHUB_OUTPUT
+          echo "Scraping PIB from $FROM to $TO"
 
       - name: Run PIB Daily Scraper
         env:

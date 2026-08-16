@@ -386,7 +386,7 @@ def get_gemini_client():
 # ---------------------------------------------------------------------------
 # PIB archive page scraping
 # ---------------------------------------------------------------------------
-PIB_BASE    = "https://pib.gov.in"
+PIB_BASE    = "https://www.pib.gov.in"
 # ?reg=3&lang=1 = English language releases (confirmed by testing)
 PIB_ENGLISH = f"{PIB_BASE}/allRel.aspx?reg=3&lang=1"
 
@@ -467,7 +467,7 @@ def _serialize_form(soup: BeautifulSoup) -> dict:
     return data
 
 
-def get_pib_releases_for_date(target_date: date, max_retries: int = 3) -> list[dict]:
+def get_pib_releases_for_date(target_date: date, max_retries: int = 5) -> list[dict]:
     """
     Fetch English press releases from PIB for a specific date.
 
@@ -534,7 +534,7 @@ def get_pib_releases_for_date(target_date: date, max_retries: int = 3) -> list[d
         if got_day != day_str or got_month != month_str or got_year != year_str:
             print(f"  [PIB] Attempt {attempt}: server returned {got_day}/{got_month}/{got_year} "
                   f"instead of {day_str}/{month_str}/{year_str} - retrying...")
-            time.sleep(3)
+            time.sleep(2 + attempt * 2)  # Escalating delay: 4s, 6s, 8s, 10s, 12s
             continue
 
         # Date verified - extract release links
@@ -543,7 +543,7 @@ def get_pib_releases_for_date(target_date: date, max_retries: int = 3) -> list[d
 
         for link in result_soup.find_all("a", href=True):
             href = link["href"]
-            if "PressReleasePage.aspx" not in href and "PressReleseDetail.aspx" not in href:
+            if "PressReleasePage.aspx" not in href and "PressReleaseDetail.aspx" not in href and "PressReleseDetail.aspx" not in href:
                 continue
             title = link.get_text(strip=True)
             if not title or len(title) < 10:
@@ -574,7 +574,7 @@ def get_pib_releases_via_rss(target_date: date) -> list[dict]:
     Only useful for recent dates (last 2-3 weeks).
     """
     date_iso = target_date.isoformat()
-    rss_url = f"{PIB_BASE}/rss.aspx"
+    rss_url = f"{PIB_BASE}/RssMain.aspx?ModId=6&Lang=1&Regid=3"
     try:
         resp = requests.get(rss_url, headers=HEADERS, timeout=15)
         resp.raise_for_status()
