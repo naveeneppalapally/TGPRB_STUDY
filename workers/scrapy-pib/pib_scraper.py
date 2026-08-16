@@ -618,11 +618,17 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
     Fetch and extract text + ministry + publish_date from a PIB press release page.
     Returns (article_text, ministry_name, date_iso_or_None).
 
-    IMPORTANT: PIB wraps the entire article inside <form id="form1">.
-    Do NOT decompose 'form' tags or the article body will be deleted.
+    PIB has two article page types:
+    - PressReleaseDetail.aspx  = listing/Hindi page (NO English body text)
+    - PressReleasePage.aspx    = actual English article page (correct one to fetch)
+    Always convert to PressReleasePage.aspx before fetching.
     """
+    # ---- Convert Detail URL -> Page URL (English article) ----
+    article_url = url.replace("PressReleaseDetail.aspx", "PressReleasePage.aspx")
+    article_url = article_url.replace("PressReleseDetail.aspx", "PressReleasePage.aspx")
+
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=20)
+        resp = requests.get(article_url, headers=HEADERS, timeout=20)
         resp.raise_for_status()
     except Exception as e:
         print(f"    [Fetch] Failed: {e}")
@@ -660,7 +666,17 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
                          "iframe", "noscript", "header", "menu"]):
             tag.decompose()
 
-        # PIB articles are usually in the main content div
+        # Strategy 1: PIB PressReleasePage uses ContentPlaceHolder1_PNLrEL div
+        pnl = soup.find(id="ContentPlaceHolder1_PNLrEL")
+        if pnl:
+            paras = pnl.find_all("p")
+            text = "\n".join(p.get_text(strip=True) for p in paras if len(p.get_text(strip=True)) > 20)
+            if text:
+                if len(text) > 12000:
+                    text = text[:12000] + "..."
+                return text, ministry, real_date
+
+        # Strategy 2: look for content div patterns
         content = (
             soup.find("div", id=re.compile(r"content|body|main", re.I))
             or soup.find("div", class_=re.compile(r"content|body|release|press", re.I))
@@ -671,11 +687,10 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
         if not content:
             return "", ministry, real_date
 
-        # Extract paragraphs - PIB body text is well-structured
+        # Extract paragraphs
         paragraphs = content.find_all("p")
         text = "\n".join(p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 20)
 
-        # Cap at 12000 chars - long articles (award lists, reports) need room
         if len(text) > 12000:
             text = text[:12000] + "..."
 
