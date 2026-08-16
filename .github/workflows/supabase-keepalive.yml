@@ -32,24 +32,61 @@ jobs:
           # Strip trailing slash if present
           CLEAN_URL="${SUPABASE_URL%/}"
 
-          echo "Pinging Supabase REST API at ${CLEAN_URL}/rest/v1/ ..."
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+          echo "Pinging Supabase at ${CLEAN_URL} ..."
+
+          # 1. Test REST endpoint with full response body
+          echo "--- Testing REST endpoint (/rest/v1/) ---"
+          REST_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
             "${CLEAN_URL}/rest/v1/" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+          
+          REST_BODY=$(echo "$REST_RESPONSE" | sed '$d')
+          REST_CODE=$(echo "$REST_RESPONSE" | grep 'HTTP_STATUS:' | cut -d: -f2)
 
-          echo "Response HTTP Status: ${HTTP_CODE}"
+          echo "REST Status: ${REST_CODE}"
+          echo "REST Body: ${REST_BODY}"
 
-          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
-            echo "Supabase keepalive ping successful (Status: ${HTTP_CODE}). Project is active."
-          else
-            echo "::warning::Received HTTP status ${HTTP_CODE} from Supabase REST endpoint. Trying auth health check..."
-            AUTH_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${CLEAN_URL}/auth/v1/health")
-            echo "Auth health response: ${AUTH_CODE}"
-            if [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
-              echo "Supabase Auth keepalive ping successful."
-            else
-              echo "::error::Keepalive ping failed with HTTP code ${HTTP_CODE} (Rest) and ${AUTH_CODE} (Auth)."
-              exit 1
-            fi
+          if [ "$REST_CODE" -ge 200 ] && [ "$REST_CODE" -lt 400 ]; then
+            echo "::notice::Supabase REST keepalive ping successful (HTTP ${REST_CODE}). Project is active."
+            exit 0
           fi
+
+          # 2. Test Auth endpoint with apikey header
+          echo "--- Testing Auth health endpoint (/auth/v1/health) ---"
+          AUTH_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+            "${CLEAN_URL}/auth/v1/health" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+
+          AUTH_BODY=$(echo "$AUTH_RESPONSE" | sed '$d')
+          AUTH_CODE=$(echo "$AUTH_RESPONSE" | grep 'HTTP_STATUS:' | cut -d: -f2)
+
+          echo "Auth Status: ${AUTH_CODE}"
+          echo "Auth Body: ${AUTH_BODY}"
+
+          if [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
+            echo "::notice::Supabase Auth keepalive ping successful (HTTP ${AUTH_CODE}). Project is active."
+            exit 0
+          fi
+
+          # 3. Test Storage version endpoint
+          echo "--- Testing Storage endpoint (/storage/v1/version) ---"
+          STORAGE_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+            "${CLEAN_URL}/storage/v1/version" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+
+          STORAGE_BODY=$(echo "$STORAGE_RESPONSE" | sed '$d')
+          STORAGE_CODE=$(echo "$STORAGE_RESPONSE" | grep 'HTTP_STATUS:' | cut -d: -f2)
+
+          echo "Storage Status: ${STORAGE_CODE}"
+          echo "Storage Body: ${STORAGE_BODY}"
+
+          if [ "$STORAGE_CODE" -ge 200 ] && [ "$STORAGE_CODE" -lt 400 ]; then
+            echo "::notice::Supabase Storage keepalive ping successful (HTTP ${STORAGE_CODE}). Project is active."
+            exit 0
+          fi
+
+          echo "::error::All Supabase keepalive pings returned non-200. Check the response bodies above for details."
+          exit 1
