@@ -1162,9 +1162,10 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
                 stats["skipped"] += 1
                 continue
 
-            # Use real publish date from the article page
-            if real_date:
-                release["date_iso"] = real_date
+            # NOTE: Do NOT override date_iso with real_date here.
+            # _extract_article_date reads dates FROM the article HTML body, which
+            # often contains future event dates (e.g. "BRICS meeting on Aug 18").
+            # The PIB scrape date (release["date_iso"] = target_date) is always correct.
 
             if not ministry and release.get("ministry"):
                 ministry = release["ministry"]
