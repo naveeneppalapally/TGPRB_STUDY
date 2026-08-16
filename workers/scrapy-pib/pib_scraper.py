@@ -793,11 +793,24 @@ def extract_exam_fact(article_text: str, title: str, client,
             article_text=article_text[:12000],
             extra_topics_guidance=extra_topics_guidance,
         )
-        model_name = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt,
-        )
+        model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+        try:
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+            )
+        except Exception:
+            # Fallback to gemini-2.0-flash or gemini-1.5-flash for broader key compatibility
+            try:
+                response = client.models.generate_content(
+                    model="gemini-2.0-flash",
+                    contents=prompt,
+                )
+            except Exception:
+                response = client.models.generate_content(
+                    model="gemini-1.5-flash",
+                    contents=prompt,
+                )
         text = response.text.strip()
 
         if text.lower() == "null" or not text or text == "{}":
