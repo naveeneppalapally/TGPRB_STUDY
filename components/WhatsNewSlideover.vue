@@ -7,7 +7,7 @@
       variant="ghost"
       class="relative"
       aria-label="What's new"
-      @click="isOpen = true"
+      @click="openPanel"
     >
       <span
         v-if="unreadCount > 0"
@@ -45,7 +45,19 @@
 
         <!-- Entry list -->
         <div class="flex-1 overflow-y-auto px-4 py-3 space-y-3">
-          <div v-if="entriesInPanel.length">
+          <!-- Loading state -->
+          <div v-if="loadingFull" class="flex flex-col gap-3">
+            <div v-for="i in 5" :key="i" class="rounded-md border b-line bg-sub p-3 space-y-2 animate-pulse">
+              <div class="flex gap-2">
+                <div class="h-4 w-16 rounded-full bg-black/10 dark:bg-white/10" />
+                <div class="h-4 w-10 rounded-full bg-black/10 dark:bg-white/10" />
+              </div>
+              <div class="h-3 w-3/4 rounded bg-black/10 dark:bg-white/10" />
+              <div class="h-8 w-full rounded bg-black/10 dark:bg-white/10" />
+            </div>
+          </div>
+
+          <div v-else-if="entriesInPanel.length">
             <div
               v-for="entry in entriesInPanel"
               :key="entry.id"
@@ -129,18 +141,36 @@ import { queryCollection } from '#imports'
 const LS_KEY = 'studyos-ca-last-read'
 
 const isOpen = ref(false)
+const loadingFull = ref(false)
 
 const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
   .toISOString().split('T')[0]
 
-const { data: entries } = await useAsyncData('whats-new-panel', () =>
-  queryCollection('current_affair').all()
+// Lightweight query: only fetch dates for badge count (runs during SSR - fast)
+const { data: dateSummary } = await useAsyncData('whats-new-dates', () =>
+  queryCollection('current_affair').select('id', 'meta').all(),
+  { server: true, lazy: false }
 )
 
-const recent = computed(() =>
-  (entries.value ?? []).filter((e: any) => (e.meta?.date ?? '') >= cutoff)
-    .sort((a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime())
+const recentDates = computed(() =>
+  (dateSummary.value ?? []).filter((e: any) => (e.meta?.date ?? '') >= cutoff)
 )
+
+// Full data: loaded lazily on first open
+const fullEntries = ref<any[]>([])
+let fullLoaded = false
+
+async function openPanel() {
+  isOpen.value = true
+  if (!fullLoaded) {
+    loadingFull.value = true
+    fullLoaded = true
+    // Use the already-fetched data (same query) - no extra network call
+    fullEntries.value = recentDates.value
+      .sort((a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime())
+    loadingFull.value = false
+  }
+}
 
 // Track last-read timestamp (localStorage, client-only)
 const lastReadTs = ref(0)
@@ -162,10 +192,10 @@ function markAllRead() {
 }
 
 const unreadCount = computed(() =>
-  recent.value.filter((e: any) => isUnread(e)).length
+  recentDates.value.filter((e: any) => isUnread(e)).length
 )
 
-const entriesInPanel = computed(() => recent.value)
+const entriesInPanel = computed(() => fullEntries.value)
 
 function formatDate(iso: string): string {
   if (!iso) return ''
@@ -176,4 +206,5 @@ function sourceDomain(url: string): string {
   catch { return url }
 }
 </script>
+
 

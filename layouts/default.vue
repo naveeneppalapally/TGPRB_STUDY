@@ -157,27 +157,17 @@
         <div class="flex items-center gap-2">
           <span class="eyebrow hidden md:block">TGPRB · Constable / SI</span>
 
-          <!-- What's New bell -->
-          <ClientOnly>
-            <WhatsNewSlideover />
-            <template #fallback><div class="h-8 w-8" /></template>
-          </ClientOnly>
+          <!-- What's New bell - renders icon during SSR, badge hydrates client-side -->
+          <WhatsNewSlideover />
 
-          <UTooltip :text="colorMode.value === 'dark' ? 'Switch to light' : 'Switch to dark'">
-            <ClientOnly>
-              <UButton
-                :icon="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
-                color="gray"
-                variant="ghost"
-                size="sm"
-                :aria-label="colorMode.value === 'dark' ? 'Switch to light' : 'Switch to dark'"
-                @click="toggleTheme"
-              />
-              <template #fallback>
-                <div class="h-8 w-8" />
-              </template>
-            </ClientOnly>
-          </UTooltip>
+          <UButton
+            :icon="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
+            color="gray"
+            variant="ghost"
+            size="sm"
+            :aria-label="colorMode.value === 'dark' ? 'Switch to light' : 'Switch to dark'"
+            @click="toggleTheme"
+          />
         </div>
       </header>
 
