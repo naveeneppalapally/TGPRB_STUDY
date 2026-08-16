@@ -21,7 +21,7 @@ jobs:
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
           # URL is hardcoded - not sensitive (public API endpoint)
-          CLEAN_URL="https://fqasvhrzzhezluirnwtc.supabase.co"
+          CLEAN_URL="https://fqasvhrzzheziuirnwtc.supabase.co"
 
           if [ -z "$SUPABASE_ANON_KEY" ]; then
             echo "::error::SUPABASE_ANON_KEY secret is missing."
