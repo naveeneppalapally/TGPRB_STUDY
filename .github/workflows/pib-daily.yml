@@ -37,16 +37,14 @@ jobs:
       - name: Calculate dates
         id: dates
         run: |
-          # Use manual inputs if provided, otherwise default to last 3 days
+          # Manual inputs override everything
           if [ -n "${{ inputs.from_date }}" ]; then
             FROM="${{ inputs.from_date }}"
+            TO="${{ inputs.to_date || format('{0}', steps.today.outputs.today) }}"
           else
-            FROM=$(date -d "3 days ago" +%Y-%m-%d)
-          fi
-
-          if [ -n "${{ inputs.to_date }}" ]; then
-            TO="${{ inputs.to_date }}"
-          else
+            # Scheduled run: yesterday + today (2 days) is enough
+            # PIB publishes throughout the day so we include today too
+            FROM=$(date -d "1 day ago" +%Y-%m-%d)
             TO=$(date +%Y-%m-%d)
           fi
 
