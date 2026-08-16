@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install requests beautifulsoup4 google-genai
+          pip install --retries 10 --timeout 60 requests beautifulsoup4 google-genai
 
       - name: Calculate dates
         id: dates
