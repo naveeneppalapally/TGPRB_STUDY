@@ -1071,6 +1071,28 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
         print(f"\n[{current}] Fetching PIB releases...")
 
         releases = get_pib_releases_for_date(current)
+
+        # Fallback to RSS if archive POST returned 0 (e.g. holiday, today's page not yet updated)
+        if not releases:
+            print(f"  [PIB] Archive returned 0 for {current} - trying RSS fallback...")
+            rss_releases = get_pib_releases_via_rss(current)
+            if rss_releases:
+                print(f"  [PIB-RSS] Found {len(rss_releases)} releases via RSS for {current}")
+                releases = rss_releases
+            else:
+                # Last resort: if today/yesterday, try the day after (PIB sometimes posts
+                # next-day for holidays/Independence Day)
+                next_day = current + timedelta(days=1)
+                if next_day <= date.today():
+                    print(f"  [PIB] Trying adjacent date {next_day} (holiday shift)...")
+                    alt_releases = get_pib_releases_for_date(next_day)
+                    if alt_releases:
+                        # Re-tag them with the originally requested date
+                        for r in alt_releases:
+                            r["date_iso"] = current.isoformat()
+                        releases = alt_releases
+                        print(f"  [PIB] Found {len(releases)} releases on adjacent date - accepted")
+
         print(f"  Found {len(releases)} releases")
         stats["days"] += 1
         stats["releases_found"] += len(releases)

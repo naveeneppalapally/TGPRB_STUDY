@@ -23,12 +23,12 @@ jobs:
         run: |
           pip install requests beautifulsoup4 google-genai
 
-      - name: Calculate dates (yesterday to today)
+      - name: Calculate dates (last 3 days to catch holiday gaps)
         id: dates
         run: |
-          YESTERDAY=$(date -d "1 day ago" +%Y-%m-%d)
+          THREE_DAYS_AGO=$(date -d "3 days ago" +%Y-%m-%d)
           TODAY=$(date +%Y-%m-%d)
-          echo "from_date=$YESTERDAY" >> $GITHUB_OUTPUT
+          echo "from_date=$THREE_DAYS_AGO" >> $GITHUB_OUTPUT
           echo "to_date=$TODAY" >> $GITHUB_OUTPUT
 
       - name: Run PIB Daily Scraper
