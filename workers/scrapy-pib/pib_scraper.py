@@ -808,24 +808,32 @@ def extract_exam_fact(article_text: str, title: str, client,
             article_text=article_text[:12000],
             extra_topics_guidance=extra_topics_guidance,
         )
-        model_name = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-        try:
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt,
-            )
-        except Exception:
-            # Fallback to gemini-2.0-flash or gemini-1.5-flash for broader key compatibility
+        # Supported models in Google AI Studio and Vertex AI
+        preferred_model = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+        candidate_models = [preferred_model, "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-pro"]
+        # Deduplicate while preserving order
+        seen_models = set()
+        models_to_try = [m for m in candidate_models if not (m in seen_models or seen_models.add(m))]
+
+        response = None
+        last_err = None
+        for m in models_to_try:
             try:
                 response = client.models.generate_content(
-                    model="gemini-2.0-flash",
+                    model=m,
                     contents=prompt,
                 )
-            except Exception:
-                response = client.models.generate_content(
-                    model="gemini-1.5-flash",
-                    contents=prompt,
-                )
+                if response and response.text:
+                    break
+            except Exception as e:
+                last_err = e
+                continue
+
+        if not response or not response.text:
+            if last_err:
+                print(f"    [AI] Extract error: {last_err}")
+            return None
+
         text = response.text.strip()
 
         if text.lower() == "null" or not text or text == "{}":
