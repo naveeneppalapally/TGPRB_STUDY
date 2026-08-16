@@ -10,10 +10,10 @@
       @click="isOpen = true"
     >
       <span
-        v-if="newCount > 0"
+        v-if="unreadCount > 0"
         class="absolute -top-1 -right-1 h-4 min-w-[1rem] rounded-full bg-saffron-500 px-1 text-[9px] font-bold text-white flex items-center justify-center"
       >
-        {{ newCount > 99 ? '99+' : newCount }}
+        {{ unreadCount > 99 ? '99+' : unreadCount }}
       </span>
     </UButton>
 
@@ -29,7 +29,18 @@
             </p>
             <p class="text-body-xs t-lo">Last 7 days - updated 7am IST daily</p>
           </div>
-          <UButton icon="i-heroicons-x-mark" color="gray" variant="ghost" @click="isOpen = false" />
+          <div class="flex items-center gap-1">
+            <UButton
+              v-if="unreadCount > 0"
+              icon="i-heroicons-check"
+              size="xs"
+              color="primary"
+              variant="soft"
+              label="Mark all read"
+              @click="markAllRead"
+            />
+            <UButton icon="i-heroicons-x-mark" color="gray" variant="ghost" @click="isOpen = false" />
+          </div>
         </div>
 
         <!-- Entry list -->
@@ -39,12 +50,21 @@
               v-for="entry in entriesInPanel"
               :key="entry.id"
               class="rounded-md border b-line bg-sub p-3 flex flex-col gap-1.5"
-              :class="entry.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : ''"
+              :class="[
+                entry.meta?.is_telangana_focus ? 'border-l-2 border-l-saffron-500' : '',
+                isUnread(entry) ? 'ring-1 ring-saffron-400/30' : 'opacity-75'
+              ]"
             >
               <!-- Section + date row -->
               <div class="flex items-center justify-between gap-2 flex-wrap">
                 <div class="flex items-center gap-1.5">
                   <span class="chip text-[10px] uppercase font-bold">{{ entry.meta?.category || 'General' }}</span>
+                  <span
+                    v-if="isUnread(entry)"
+                    class="inline-flex items-center rounded-full bg-saffron-500 text-white px-1.5 py-0.5 text-[9px] font-bold"
+                  >
+                    NEW
+                  </span>
                   <span
                     v-if="entry.meta?.is_telangana_focus"
                     class="inline-flex items-center gap-1 rounded-full bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 px-1.5 py-0.5 text-[10px] font-semibold"
@@ -106,6 +126,8 @@
 <script setup lang="ts">
 import { queryCollection } from '#imports'
 
+const LS_KEY = 'studyos-ca-last-read'
+
 const isOpen = ref(false)
 
 const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
@@ -120,10 +142,29 @@ const recent = computed(() =>
     .sort((a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime())
 )
 
-// expose just recent in template
-const newCount = computed(() => recent.value.length)
+// Track last-read timestamp (localStorage, client-only)
+const lastReadTs = ref(0)
 
-// Override entries in template to show only recent
+onMounted(() => {
+  const stored = localStorage.getItem(LS_KEY)
+  if (stored) lastReadTs.value = parseInt(stored, 10) || 0
+})
+
+function isUnread(entry: any): boolean {
+  if (!lastReadTs.value) return true
+  const entryTime = new Date(entry.meta?.date || 0).getTime()
+  return entryTime > lastReadTs.value
+}
+
+function markAllRead() {
+  lastReadTs.value = Date.now()
+  localStorage.setItem(LS_KEY, String(lastReadTs.value))
+}
+
+const unreadCount = computed(() =>
+  recent.value.filter((e: any) => isUnread(e)).length
+)
+
 const entriesInPanel = computed(() => recent.value)
 
 function formatDate(iso: string): string {
@@ -135,3 +176,4 @@ function sourceDomain(url: string): string {
   catch { return url }
 }
 </script>
+
