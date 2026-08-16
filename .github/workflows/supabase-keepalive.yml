@@ -1,13 +1,13 @@
 # =============================================================================
-# Supabase Keepalive — prevents free-tier auto-pause (7 days no requests)
-# Pings the project every 5 days via a simple SELECT.
+# Supabase Keepalive: prevents free-tier auto-pause (7 days no requests)
+# Pings the project every 5 days via REST / health endpoint.
 # =============================================================================
 
 name: Supabase Keepalive
 
 on:
   schedule:
-    # Every 5 days at 06:00 UTC — well within the 7-day window
+    # Every 5 days at 06:00 UTC
     - cron: '0 6 */5 * *'
   workflow_dispatch: # Manual trigger for testing
 
@@ -16,11 +16,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Supabase
-        run: |
-          curl -s -o /dev/null -w "%{http_code}" \
-            "${{ secrets.SUPABASE_URL }}/rest/v1/" \
-            -H "apikey: ${{ secrets.SUPABASE_ANON_KEY }}" \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}"
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "::error::SUPABASE_URL or SUPABASE_ANON_KEY secret is missing in GitHub Repository Secrets."
+            echo "To configure:"
+            echo "1. Go to repository Settings -> Secrets and variables -> Actions"
+            echo "2. Add SUPABASE_URL (e.g. https://yourproject.supabase.co)"
+            echo "3. Add SUPABASE_ANON_KEY (your public anon key)"
+            exit 1
+          fi
+
+          # Strip trailing slash if present
+          CLEAN_URL="${SUPABASE_URL%/}"
+
+          echo "Pinging Supabase REST API at ${CLEAN_URL}/rest/v1/ ..."
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+            "${CLEAN_URL}/rest/v1/" \
+            -H "apikey: ${SUPABASE_ANON_KEY}" \
+            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+
+          echo "Response HTTP Status: ${HTTP_CODE}"
+
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
+            echo "Supabase keepalive ping successful (Status: ${HTTP_CODE}). Project is active."
+          else
+            echo "::warning::Received HTTP status ${HTTP_CODE} from Supabase REST endpoint. Trying auth health check..."
+            AUTH_CODE=$(curl -s -o /dev/null -w "%{http_code}" "${CLEAN_URL}/auth/v1/health")
+            echo "Auth health response: ${AUTH_CODE}"
+            if [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
+              echo "Supabase Auth keepalive ping successful."
+            else
+              echo "::error::Keepalive ping failed with HTTP code ${HTTP_CODE} (Rest) and ${AUTH_CODE} (Auth)."
+              exit 1
+            fi
+          fi
