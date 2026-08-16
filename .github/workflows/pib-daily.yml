@@ -37,20 +37,17 @@ jobs:
       - name: Calculate dates
         id: dates
         run: |
-          # Manual inputs override everything
           if [ -n "${{ inputs.from_date }}" ]; then
             FROM="${{ inputs.from_date }}"
-            TO="${{ inputs.to_date || format('{0}', steps.today.outputs.today) }}"
+            TO="${{ inputs.to_date || inputs.from_date }}"
           else
-            # Scheduled run: yesterday + today (2 days) is enough
-            # PIB publishes throughout the day so we include today too
+            # Daily run at 7 AM IST: yesterday's PIB releases are fully published
             FROM=$(date -d "1 day ago" +%Y-%m-%d)
-            TO=$(date +%Y-%m-%d)
+            TO=$FROM
           fi
-
           echo "from_date=$FROM" >> $GITHUB_OUTPUT
           echo "to_date=$TO" >> $GITHUB_OUTPUT
-          echo "Scraping PIB from $FROM to $TO"
+          echo "Scraping PIB for: $FROM to $TO"
 
       - name: Run PIB Daily Scraper
         env:
