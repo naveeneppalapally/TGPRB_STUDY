@@ -317,13 +317,26 @@ const tgCount = computed(() =>
 
 // Helpers
 function entryDate(e: any): string | undefined {
-  return e?.meta?.published_at || e?.meta?.event_date || e?.meta?.date
+  // event_date is the real date the news happened (what the card displays)
+  // Fall back to published_at / date only if event_date is missing
+  return e?.meta?.event_date || e?.meta?.date || e?.meta?.published_at
 }
 
 function dateCutoff(filter: string): Date {
   if (filter === 'ALL') return new Date(0)
-  const now  = new Date()
-  const days = filter === '1D' ? 1 : filter === '7D' ? 7 : filter === '1M' ? 30 : filter === '6M' ? 180 : 365
+  const now = new Date()
+  if (filter === '1D') {
+    // "Today" = this calendar day in IST (UTC+5:30)
+    const istOffset = 5.5 * 60 * 60 * 1000
+    const istNow = new Date(now.getTime() + istOffset)
+    const startOfDayIST = new Date(Date.UTC(
+      istNow.getUTCFullYear(),
+      istNow.getUTCMonth(),
+      istNow.getUTCDate()
+    ) - istOffset)
+    return startOfDayIST
+  }
+  const days = filter === '7D' ? 7 : filter === '1M' ? 30 : filter === '6M' ? 180 : 365
   return new Date(now.getTime() - days * 86400000)
 }
 </script>
