@@ -87,5 +87,9 @@ export default defineNuxtConfig({
     },
   },
 
+  experimental: {
+    appManifest: false,
+  },
+
   devtools: { enabled: !isCFBuild },
 })
