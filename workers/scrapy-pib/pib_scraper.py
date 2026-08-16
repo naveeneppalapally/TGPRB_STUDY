@@ -815,16 +815,18 @@ def resolve_available_model(client) -> str:
         model_names = [m.name.replace("models/", "") for m in models if m.name]
         print(f"[AI] Discovered {len(model_names)} available models: {', '.join(model_names[:8])}")
 
+        # Prioritize stable/latest aliases over versioned deprecated models
         preferences = [
-            "gemini-2.5-flash",
+            "gemini-flash-latest",
+            "gemini-flash-lite-latest",
             "gemini-2.0-flash",
             "gemini-2.0-flash-lite",
             "gemini-2.0-flash-exp",
             "gemini-1.5-flash-latest",
             "gemini-1.5-flash",
-            "gemini-1.5-pro",
-            "gemini-1.5-pro-latest",
         ]
+        # Skip models explicitly deprecated for new users
+        deprecated_patterns = ["gemini-2.5-flash", "gemini-2.5-pro", "gemini-1.5-pro"]
 
         for p in preferences:
             if p in model_names:
@@ -833,7 +835,7 @@ def resolve_available_model(client) -> str:
                 return _active_model
 
         for name in model_names:
-            if "flash" in name.lower():
+            if "flash" in name.lower() and not any(d in name for d in deprecated_patterns):
                 _active_model = name
                 print(f"[AI] Auto-selected flash model: {_active_model}")
                 return _active_model
@@ -868,10 +870,9 @@ def extract_exam_fact(article_text: str, title: str, client,
             article_text=article_text[:12000],
             extra_topics_guidance=extra_topics_guidance,
         )
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt,
-        )
+        # Use the Chat/Interactions API (recommended over Models.generate_content)
+        chat = client.chats.create(model=model_name)
+        response = chat.send_message(prompt)
         text = response.text.strip() if response and response.text else ""
 
         if not text or text.lower() == "null" or text == "{}":
