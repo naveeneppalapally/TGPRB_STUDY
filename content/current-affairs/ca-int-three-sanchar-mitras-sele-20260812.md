@@ -11,7 +11,7 @@ difficulty: "M"
 exam_depth: "si"
 headline: "Three Sanchar Mitras Selected as ITU Generation Connect Youth Envoys for the period 2026–2030"
 exam_fact: "Ankit Kumar Pal from Delhi, Manish Kumar Mandal from Bengaluru and Susmita Sain from Guwahati were selected as part of the third cohort of ITU Generation Connect Youth Envoys for the period 2026–2030."
-summary: "Three Sanchar Mitras from India—Ankit Kumar Pal, Manish Kumar Mandal, and Susmita Sain—have been selected as Generation Connect Youth Envoys of the International Telecommunication Union (ITU) for the period 2026–2030. Their selection under the Department of Telecommunications' Sanchar Mitra scheme highlights the growing role of Indian youth in global digital platforms."
+summary: "Three Sanchar Mitras from India-Ankit Kumar Pal, Manish Kumar Mandal, and Susmita Sain-have been selected as Generation Connect Youth Envoys of the International Telecommunication Union (ITU) for the period 2026–2030. Their selection under the Department of Telecommunications' Sanchar Mitra scheme highlights the growing role of Indian youth in global digital platforms."
 event_date: "2026-08-12"
 published_at: "2026-08-12"
 date: "2026-08-12"
@@ -30,5 +30,5 @@ mcqs:
       - "Four"
       - "Five"
     answer: 1
-    explanation: "Ankit Kumar Pal, Manish Kumar Mandal, and Susmita Sain—three Sanchar Mitras from India—were selected as part of the third cohort of ITU Generation Connect Youth Envoys for the period 2026–2030."
+    explanation: "Ankit Kumar Pal, Manish Kumar Mandal, and Susmita Sain-three Sanchar Mitras from India-were selected as part of the third cohort of ITU Generation Connect Youth Envoys for the period 2026–2030."
 ---
