@@ -135,6 +135,7 @@
   </div>
 </template>
 
+<script setup lang="ts">
 import { useSupabaseUser, queryCollection } from '#imports'
 
 const user = useSupabaseUser()
