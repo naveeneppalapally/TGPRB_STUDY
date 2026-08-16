@@ -20,73 +20,71 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
+          # ---- Secret presence check ----
           if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
-            echo "::error::SUPABASE_URL or SUPABASE_ANON_KEY secret is missing in GitHub Repository Secrets."
-            echo "To configure:"
-            echo "1. Go to repository Settings -> Secrets and variables -> Actions"
-            echo "2. Add SUPABASE_URL (e.g. https://yourproject.supabase.co)"
-            echo "3. Add SUPABASE_ANON_KEY (your public anon key)"
+            echo "::error::SUPABASE_URL or SUPABASE_ANON_KEY secret is missing."
+            echo "Go to Settings -> Secrets and variables -> Actions and add:"
+            echo "  SUPABASE_URL  = https://fqasvhrzzhezluirnwtc.supabase.co"
+            echo "  SUPABASE_ANON_KEY = (anon public key from Supabase dashboard)"
             exit 1
           fi
 
-          # Strip trailing slash if present
+          # ---- URL diagnostics (safe, no key printed) ----
           CLEAN_URL="${SUPABASE_URL%/}"
+          URL_LEN=${#CLEAN_URL}
+          URL_FIRST4="${CLEAN_URL:0:4}"
+          URL_LAST10="${CLEAN_URL: -10}"
+          echo "URL length   : ${URL_LEN}"
+          echo "URL starts   : ${URL_FIRST4}..."
+          echo "URL ends     : ...${URL_LAST10}"
+          echo "Expected end : ...supabase.co"
 
-          echo "Pinging Supabase at ${CLEAN_URL} ..."
+          # ---- Validate URL format ----
+          if [[ "$CLEAN_URL" != https://* ]]; then
+            echo "::error::SUPABASE_URL must start with https://. Got: ${URL_FIRST4}..."
+            exit 1
+          fi
 
-          # 1. Test REST endpoint with full response body
-          echo "--- Testing REST endpoint (/rest/v1/) ---"
-          REST_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+          # ---- DNS check before curl ----
+          HOSTNAME=$(echo "$CLEAN_URL" | sed 's|https://||' | cut -d/ -f1)
+          echo "Resolving hostname: ${HOSTNAME}"
+          if ! nslookup "${HOSTNAME}" > /dev/null 2>&1; then
+            echo "::error::Cannot resolve hostname '${HOSTNAME}'. Check SUPABASE_URL secret."
+            echo "It should be exactly: https://fqasvhrzzhezluirnwtc.supabase.co"
+            exit 1
+          fi
+          echo "DNS resolved OK."
+
+          # ---- Ping REST endpoint ----
+          echo "Pinging ${CLEAN_URL}/rest/v1/ ..."
+          HTTP_CODE=$(curl -s -o /tmp/sb_response.txt -w "%{http_code}" \
             "${CLEAN_URL}/rest/v1/" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
-          
-          REST_BODY=$(echo "$REST_RESPONSE" | sed '$d')
-          REST_CODE=$(echo "$REST_RESPONSE" | grep 'HTTP_STATUS:' | cut -d: -f2)
+          BODY=$(cat /tmp/sb_response.txt)
+          echo "HTTP status : ${HTTP_CODE}"
+          echo "Response    : ${BODY}"
 
-          echo "REST Status: ${REST_CODE}"
-          echo "REST Body: ${REST_BODY}"
-
-          if [ "$REST_CODE" -ge 200 ] && [ "$REST_CODE" -lt 400 ]; then
-            echo "::notice::Supabase REST keepalive ping successful (HTTP ${REST_CODE}). Project is active."
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
+            echo "::notice::Keepalive ping successful (HTTP ${HTTP_CODE}). Project is active."
             exit 0
           fi
 
-          # 2. Test Auth endpoint with apikey header
-          echo "--- Testing Auth health endpoint (/auth/v1/health) ---"
-          AUTH_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+          # ---- Fallback: Auth health endpoint ----
+          echo "REST returned ${HTTP_CODE}. Trying /auth/v1/health ..."
+          AUTH_CODE=$(curl -s -o /tmp/sb_auth.txt -w "%{http_code}" \
             "${CLEAN_URL}/auth/v1/health" \
-            -H "apikey: ${SUPABASE_ANON_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
-
-          AUTH_BODY=$(echo "$AUTH_RESPONSE" | sed '$d')
-          AUTH_CODE=$(echo "$AUTH_RESPONSE" | grep 'HTTP_STATUS:' | cut -d: -f2)
-
-          echo "Auth Status: ${AUTH_CODE}"
-          echo "Auth Body: ${AUTH_BODY}"
+            -H "apikey: ${SUPABASE_ANON_KEY}")
+          AUTH_BODY=$(cat /tmp/sb_auth.txt)
+          echo "Auth HTTP status : ${AUTH_CODE}"
+          echo "Auth Response    : ${AUTH_BODY}"
 
           if [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
-            echo "::notice::Supabase Auth keepalive ping successful (HTTP ${AUTH_CODE}). Project is active."
+            echo "::notice::Auth keepalive ping successful (HTTP ${AUTH_CODE}). Project is active."
             exit 0
           fi
 
-          # 3. Test Storage version endpoint
-          echo "--- Testing Storage endpoint (/storage/v1/version) ---"
-          STORAGE_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
-            "${CLEAN_URL}/storage/v1/version" \
-            -H "apikey: ${SUPABASE_ANON_KEY}" \
-            -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
-
-          STORAGE_BODY=$(echo "$STORAGE_RESPONSE" | sed '$d')
-          STORAGE_CODE=$(echo "$STORAGE_RESPONSE" | grep 'HTTP_STATUS:' | cut -d: -f2)
-
-          echo "Storage Status: ${STORAGE_CODE}"
-          echo "Storage Body: ${STORAGE_BODY}"
-
-          if [ "$STORAGE_CODE" -ge 200 ] && [ "$STORAGE_CODE" -lt 400 ]; then
-            echo "::notice::Supabase Storage keepalive ping successful (HTTP ${STORAGE_CODE}). Project is active."
-            exit 0
-          fi
-
-          echo "::error::All Supabase keepalive pings returned non-200. Check the response bodies above for details."
+          echo "::error::All pings failed. REST=${HTTP_CODE} Auth=${AUTH_CODE}."
+          echo "Check that SUPABASE_ANON_KEY is the 'anon public' key from:"
+          echo "Supabase Dashboard -> Project Settings -> API -> anon public"
           exit 1
