@@ -793,6 +793,64 @@ If testable facts found, return ONLY this JSON (no markdown fences, no extra tex
 If no testable fact, return exactly: null"""
 
 
+_active_model = None
+
+def resolve_available_model(client) -> str:
+    """
+    Dynamically discover available models for the authenticated client
+    and select the optimal fast model.
+    """
+    global _active_model
+    if _active_model:
+        return _active_model
+
+    env_model = os.environ.get("GEMINI_MODEL", "").strip()
+    if env_model:
+        _active_model = env_model
+        print(f"[AI] Using configured model: {_active_model}")
+        return _active_model
+
+    try:
+        models = list(client.models.list())
+        model_names = [m.name.replace("models/", "") for m in models if m.name]
+        print(f"[AI] Discovered {len(model_names)} available models: {', '.join(model_names[:8])}")
+
+        preferences = [
+            "gemini-2.5-flash",
+            "gemini-2.0-flash",
+            "gemini-2.0-flash-lite",
+            "gemini-2.0-flash-exp",
+            "gemini-1.5-flash-latest",
+            "gemini-1.5-flash",
+            "gemini-1.5-pro",
+            "gemini-1.5-pro-latest",
+        ]
+
+        for p in preferences:
+            if p in model_names:
+                _active_model = p
+                print(f"[AI] Auto-selected optimal model: {_active_model}")
+                return _active_model
+
+        for name in model_names:
+            if "flash" in name.lower():
+                _active_model = name
+                print(f"[AI] Auto-selected flash model: {_active_model}")
+                return _active_model
+
+        if model_names:
+            _active_model = model_names[0]
+            print(f"[AI] Auto-selected default model: {_active_model}")
+            return _active_model
+
+    except Exception as e:
+        print(f"[AI] Model listing notice: {e}")
+
+    _active_model = "gemini-2.0-flash"
+    print(f"[AI] Selected default model: {_active_model}")
+    return _active_model
+
+
 def extract_exam_fact(article_text: str, title: str, client,
                       extra_topics_guidance: str = "    - Otherwise leave as empty array []") -> dict | None:
     """
@@ -803,40 +861,20 @@ def extract_exam_fact(article_text: str, title: str, client,
     if not client or not article_text.strip():
         return None
 
+    model_name = resolve_available_model(client)
+
     try:
         prompt = EXTRACT_PROMPT.format(
             article_text=article_text[:12000],
             extra_topics_guidance=extra_topics_guidance,
         )
-        # Supported models in Google AI Studio and Vertex AI
-        preferred_model = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
-        candidate_models = [preferred_model, "gemini-2.0-flash", "gemini-2.0-flash-lite", "gemini-1.5-pro"]
-        # Deduplicate while preserving order
-        seen_models = set()
-        models_to_try = [m for m in candidate_models if not (m in seen_models or seen_models.add(m))]
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+        )
+        text = response.text.strip() if response and response.text else ""
 
-        response = None
-        last_err = None
-        for m in models_to_try:
-            try:
-                response = client.models.generate_content(
-                    model=m,
-                    contents=prompt,
-                )
-                if response and response.text:
-                    break
-            except Exception as e:
-                last_err = e
-                continue
-
-        if not response or not response.text:
-            if last_err:
-                print(f"    [AI] Extract error: {last_err}")
-            return None
-
-        text = response.text.strip()
-
-        if text.lower() == "null" or not text or text == "{}":
+        if not text or text.lower() == "null" or text == "{}":
             return None
 
         # Strip markdown code fences if present
