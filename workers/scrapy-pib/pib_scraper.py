@@ -797,59 +797,43 @@ _active_model = None
 
 def resolve_available_model(client) -> str:
     """
-    Dynamically discover available models for the authenticated client
-    and select the optimal fast model.
+    Resolve which Gemini model to use by probing candidates in preference order.
+    Skips slow client.models.list() to avoid network hangs on CI runners.
     """
     global _active_model
     if _active_model:
         return _active_model
 
+    # Env override takes priority
     env_model = os.environ.get("GEMINI_MODEL", "").strip()
     if env_model:
         _active_model = env_model
         print(f"[AI] Using configured model: {_active_model}")
         return _active_model
 
-    try:
-        models = list(client.models.list())
-        model_names = [m.name.replace("models/", "") for m in models if m.name]
-        print(f"[AI] Discovered {len(model_names)} available models: {', '.join(model_names[:8])}")
-
-        # Prioritize stable/latest aliases over versioned deprecated models
-        preferences = [
-            "gemini-flash-latest",
-            "gemini-flash-lite-latest",
-            "gemini-2.0-flash",
-            "gemini-2.0-flash-lite",
-            "gemini-2.0-flash-exp",
-            "gemini-1.5-flash-latest",
-            "gemini-1.5-flash",
-        ]
-        # Skip models explicitly deprecated for new users
-        deprecated_patterns = ["gemini-2.5-flash", "gemini-2.5-pro", "gemini-1.5-pro"]
-
-        for p in preferences:
-            if p in model_names:
-                _active_model = p
-                print(f"[AI] Auto-selected optimal model: {_active_model}")
+    # Probe candidates with a minimal test call - stop at first success
+    candidates = [
+        "gemini-flash-latest",
+        "gemini-flash-lite-latest",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-lite",
+        "gemini-2.0-flash-exp",
+    ]
+    probe_prompt = "Reply with one word: ready"
+    for candidate in candidates:
+        try:
+            chat = client.chats.create(model=candidate)
+            r = chat.send_message(probe_prompt)
+            if r and r.text:
+                _active_model = candidate
+                print(f"[AI] Verified model: {_active_model}")
                 return _active_model
-
-        for name in model_names:
-            if "flash" in name.lower() and not any(d in name for d in deprecated_patterns):
-                _active_model = name
-                print(f"[AI] Auto-selected flash model: {_active_model}")
-                return _active_model
-
-        if model_names:
-            _active_model = model_names[0]
-            print(f"[AI] Auto-selected default model: {_active_model}")
-            return _active_model
-
-    except Exception as e:
-        print(f"[AI] Model listing notice: {e}")
+        except Exception as e:
+            print(f"[AI] Model {candidate} unavailable: {e}")
+            continue
 
     _active_model = "gemini-2.0-flash"
-    print(f"[AI] Selected default model: {_active_model}")
+    print(f"[AI] Falling back to: {_active_model}")
     return _active_model
 
 
