@@ -73,5 +73,5 @@ jobs:
           git config user.name  "PIB Daily Bot"
           git config user.email "actions@github.com"
           git add content/current-affairs/
-          git commit -m "add: daily PIB current affairs updates (${{ steps.count.outputs.new_files }} cards) [skip ci]"
+          git commit -m "add: daily PIB current affairs updates (${{ steps.count.outputs.new_files }} cards)"
           git push
