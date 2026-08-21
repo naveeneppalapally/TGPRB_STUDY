@@ -417,7 +417,7 @@
             <!-- Godavari River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="/images/geography/godavari-river-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787323151/geography/godavari-river-map.webp"
                 alt="Godavari River Basin Map showing Pravara Manjira Penganga Wardha Wainganga Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
