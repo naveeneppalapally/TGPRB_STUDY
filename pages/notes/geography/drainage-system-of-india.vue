@@ -417,11 +417,11 @@
             <!-- Godavari River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558594/geography/godavari-river-map.webp"
-                alt="Godavari River Basin Map showing Wardha Pranhita Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
+                src="/images/geography/godavari-river-map.webp"
+                alt="Godavari River Basin Map showing Pravara Manjira Penganga Wardha Wainganga Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Godavari River Basin (Rau IAS / PMF IAS Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Godavari River Basin (RiversInsight Exam Diagram)</p>
             </div>
 
             <!-- Krishna River Basin Map -->
