@@ -44,14 +44,14 @@ function onClick() {
     variant="ghost"
     color="gray"
     size="xs"
-    class="relative opacity-100 sm:opacity-40 hover:opacity-100 focus:opacity-100 transition-opacity"
+    class="relative inline-flex items-center justify-center opacity-70 hover:opacity-100 hover:text-amber-500 transition-all"
     :aria-label="`Add or view your notes for ${sectionLabel}`"
     @click="onClick"
   >
     <span
       v-if="noteCount > 0"
-      class="absolute -top-1 -right-1 h-4 min-w-[1rem] rounded-full px-1 text-[9px] font-bold text-white flex items-center justify-center"
-      :class="hasImportant ? 'bg-saffron-500' : 'bg-gray-500 dark:bg-gray-400'"
+      class="absolute -top-1 -right-1 h-4 min-w-[1rem] rounded-full px-1 text-[9px] font-bold text-white flex items-center justify-center shadow-sm"
+      :class="hasImportant ? 'bg-amber-500' : 'bg-gray-600 dark:bg-gray-400'"
     >
       {{ noteCount > 99 ? '99+' : noteCount }}
     </span>

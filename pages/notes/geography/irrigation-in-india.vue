@@ -979,6 +979,8 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
+import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
 import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
 import type { SectionContext } from '@/types/annotations'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
