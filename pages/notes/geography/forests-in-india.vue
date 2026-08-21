@@ -81,9 +81,11 @@
           <header class="sec-head">
             <span class="sec-num">01</span>
             <h2 class="sec-title">The Visual Architecture</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="visual" section-label="The Visual Architecture" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">vegetation zones · biosphere reserves</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="visual" section-label="The Visual Architecture" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             India's vegetation spans six major bioclimatic zones determined by rainfall gradients, temperature, and relief: from the wet evergreen rainforests of the Western Ghats to the alpine meadows of the high Himalayas.
@@ -192,9 +194,11 @@
           <header class="sec-head">
             <span class="sec-num">02</span>
             <h2 class="sec-title">Introduction &amp; Forest Policies</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="intro" section-label="Introduction & Forest Policies" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">constitutional basis · statutory milestones</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="intro" section-label="Introduction & Forest Policies" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             In the Constitution of India, 'Forests' and 'Protection of Wild Animals &amp; Birds' were transferred from the <strong class="t-hi">State List to the Concurrent List (List III, 7th Schedule)</strong> by the <strong class="t-hi">42nd Constitutional Amendment Act, 1976</strong>.
@@ -249,9 +253,11 @@
           <header class="sec-head">
             <span class="sec-num">03</span>
             <h2 class="sec-title">Forest Types &amp; Vegetation Deep Dive</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="types" section-label="Forest Types & Vegetation Deep Dive" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">rainfall · species · spatial extent</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="types" section-label="Forest Types & Vegetation Deep Dive" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             Sir H. G. Champion and S. K. Seth (1968) classified India's forest vegetation into 5 major groups and 16 sub-types. The 5 major macro-types are rigorously tested in TGPRB:
@@ -423,9 +429,11 @@
           <header class="sec-head">
             <span class="sec-num">04</span>
             <h2 class="sec-title">Protected Areas &amp; Telangana Sanctuaries</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="protected-areas" section-label="Protected Areas & Telangana Sanctuaries" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">ISFR statistics · tiger reserves · wildlife</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="protected-areas" section-label="Protected Areas & Telangana Sanctuaries" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             National Parks, Wildlife Sanctuaries, and Biosphere Reserves form India's core In-Situ conservation architecture under the Wildlife Protection Act, 1972:
@@ -622,9 +630,11 @@
           <header class="sec-head">
             <span class="sec-num">05</span>
             <h2 class="sec-title">Memory Hacks &amp; Negative Marking Traps</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="traps" section-label="Memory Hacks & Negative Marking Traps" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">mnemonics · confusion pairs · 20% penalty guards</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="traps" section-label="Memory Hacks & Negative Marking Traps" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             TGPRB questions exploit common confusions between forest indicator species, biosphere reserve locations, and state forest percentages:
@@ -682,9 +692,11 @@
           <header class="sec-head">
             <span class="sec-num">06</span>
             <h2 class="sec-title">Verified PYQs Drill</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="pyqs" section-label="Verified PYQs Drill" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">10 official exam questions · 2015-2023</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="pyqs" section-label="Verified PYQs Drill" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             Solve these 10 verified questions from official TSLPRB Constable and SI papers. Click any card to reveal the official answer and analytical breakdown:
@@ -745,12 +757,14 @@
           <header class="sec-head">
             <span class="sec-num">07</span>
             <h2 class="sec-title">Advanced Practice</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="advanced-practice" section-label="Advanced Practice" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">
               {{ advancedPractice.length }} drills
               <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
             </span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="advanced-practice" section-label="Advanced Practice" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
 
           <!-- Disclaimer callout -->
           <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
@@ -841,9 +855,11 @@
           <header class="sec-head">
             <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="gate" section-label="Comprehension Gate" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="gate" section-label="Comprehension Gate" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
           <GateQuiz note-id="NOTE-GEO-FORESTS" />
         </section>
 
@@ -852,9 +868,11 @@
           <header class="sec-head">
             <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-FORESTS" section-id="current-affairs" section-label="Current Affairs" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-FORESTS" section-id="current-affairs" section-label="Current Affairs" note-title="Forests, Natural Vegetation & Protected Areas" @open="openNotesDrawer" />
           <CurrentAffairsStrip note-id="NOTE-GEO-FORESTS" />
         </section>
 
@@ -893,11 +911,27 @@
         </div>
       </aside>
     </div>
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-GEO-FORESTS"
+      note-title="Forests, Natural Vegetation & Protected Areas"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import type { SectionContext } from '@/types/annotations'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
+
+/* ── Personal notes ──────────────────────────────────────────────────────── */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 const readProgress = ref(0)
 const revealedPyqs = ref<Record<number, boolean>>({})
@@ -914,6 +948,7 @@ const updateProgress = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', updateProgress, { passive: true })
+  loadNotes()
 })
 
 onUnmounted(() => {

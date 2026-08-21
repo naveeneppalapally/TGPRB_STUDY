@@ -84,9 +84,11 @@
           <header class="sec-head">
             <span class="sec-num">01</span>
             <h2 class="sec-title">The Map</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="map" section-label="The Map" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">dual-code · spatial</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="map" section-label="The Map" note-title="Drainage System of India" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             This is your anchor. Rivers are spatial - that is how the exam tests them
@@ -138,8 +140,10 @@
           <header class="sec-head">
             <span class="sec-num">02</span>
             <h2 class="sec-title">Introduction</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="introduction" section-label="Introduction" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="introduction" section-label="Introduction" note-title="Drainage System of India" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             A <strong class="font-semibold t-hi">drainage system</strong> is the network of rivers,
@@ -182,9 +186,11 @@
           <header class="sec-head">
             <span class="sec-num">03</span>
             <h2 class="sec-title">Deep Dive</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="deep-dive" section-label="Deep Dive" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">A–E</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="deep-dive" section-label="Deep Dive" note-title="Drainage System of India" @open="openNotesDrawer" />
           <p class="mb-6 max-w-2xl text-body-sm leading-relaxed t-lo">
             Read each system, then hit <span class="locate-inline">map</span> to jump to it on the
             physical map - see the fact where it happens.
@@ -593,8 +599,10 @@
           <header class="sec-head">
             <span class="sec-num">04</span>
             <h2 class="sec-title">Data &amp; Comparisons</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="data" section-label="Data & Comparisons" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="data" section-label="Data & Comparisons" note-title="Drainage System of India" @open="openNotesDrawer" />
 
           <div class="panel panel-pad mb-5">
             <p class="eyebrow mb-3">Major rivers - quick reference</p>
@@ -643,8 +651,10 @@
           <header class="sec-head">
             <span class="sec-num">05</span>
             <h2 class="sec-title">Memory Hacks</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="memory-hacks" section-label="Memory Hacks" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="memory-hacks" section-label="Memory Hacks" note-title="Drainage System of India" @open="openNotesDrawer" />
           <p class="mb-5 max-w-2xl text-body-sm leading-relaxed t-lo">
             Mnemonics exist only for the parts the map can't carry - mostly east-to-west ordering.
             Spatial facts live on the map; these are the residual sequences.
@@ -689,12 +699,14 @@
           <header class="sec-head">
             <span class="sec-num">06</span>
             <h2 class="sec-title">PYQs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="pyqs" section-label="PYQs" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule"></span>
             <span class="sec-meta">
               {{ filteredPyqs.length }} questions
               <template v-if="attemptedCount > 0"> · {{ attemptedCount }} attempted ({{ correctCount }} correct)</template>
             </span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="pyqs" section-label="PYQs" note-title="Drainage System of India" @open="openNotesDrawer" />
 
           <div class="callout mb-5">
             <p class="callout-title">
@@ -851,12 +863,14 @@
           <header class="sec-head">
             <span class="sec-num">07</span>
             <h2 class="sec-title">Advanced Practice</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="advanced-practice" section-label="Advanced Practice" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">
               {{ advancedPractice.length }} drills
               <template v-if="advAttemptedCount > 0"> - {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
             </span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="advanced-practice" section-label="Advanced Practice" note-title="Drainage System of India" @open="openNotesDrawer" />
 
           <!-- Disclaimer callout -->
           <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
@@ -948,9 +962,11 @@
           <header class="sec-head">
             <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="gate" section-label="Comprehension Gate" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="gate" section-label="Comprehension Gate" note-title="Drainage System of India" @open="openNotesDrawer" />
           <GateQuiz note-id="NOTE-GEO-DRAINAGE" />
         </section>
 
@@ -959,9 +975,11 @@
           <header class="sec-head">
             <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DRAINAGE" section-id="current-affairs" section-label="Current Affairs" note-title="Drainage System of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="current-affairs" section-label="Current Affairs" note-title="Drainage System of India" @open="openNotesDrawer" />
           <CurrentAffairsStrip note-id="NOTE-GEO-DRAINAGE" />
         </section>
 
@@ -1014,16 +1032,37 @@
       note-title="Drainage System of India"
       :quick-prompts="aiQuickPrompts"
     />
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-GEO-DRAINAGE"
+      note-title="Drainage System of India"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import type { SectionContext } from '@/types/annotations'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
+
 useHead({
   title: 'Drainage System of India - TGPRB StudyOS',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Drainage System of India with an interactive physical river map, 28 PYQs, and 10 practice questions.' }],
 })
 
 const aiQuickPrompts = useAiPromptChips('NOTE-GEO-DRAINAGE')
+
+/* ── Personal notes ──────────────────────────────────────────────────────── */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+onMounted(() => {
+  loadNotes()
+})
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 /* Physical map component (locate-on-map from deep dive) */
 function goMap(id: string) {

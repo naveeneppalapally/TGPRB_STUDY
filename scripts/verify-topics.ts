@@ -1,6 +1,6 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
-import { ParsedPYQ } from '../types/content';
+import type { ParsedPYQ } from '../types/content';
 
 const PYQ_DIR = path.join(process.cwd(), 'content/pyq');
 

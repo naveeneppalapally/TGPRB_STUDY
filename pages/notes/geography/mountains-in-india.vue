@@ -81,9 +81,11 @@
           <header class="sec-head">
             <span class="sec-num">01</span>
             <h2 class="sec-title">The Visual Architecture</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="visual" section-label="The Visual Architecture" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">spatial · relief · ranges</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="visual" section-label="The Visual Architecture" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             India's orography is divided into two major macro-systems: the young tertiary <strong class="t-hi">Himalayan Fold Mountains</strong> in the north (created by the collision of the Indian and Eurasian tectonic plates) and the ancient relict <strong class="t-hi">Peninsular Block &amp; Ghat Ranges</strong> in the south (Pre-Cambrian crystalline shields).
@@ -242,8 +244,10 @@
           <header class="sec-head">
             <span class="sec-num">02</span>
             <h2 class="sec-title">Introduction</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="introduction" section-label="Introduction" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="introduction" section-label="Introduction" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             The physiography of India is anchored by mountain systems of two entirely different geological eras: the <strong class="font-semibold t-hi">Himalayan Arc</strong> (young, flexible, tertiary fold mountains stretching 2,400 km from the Indus gorge in the west to the Brahmaputra gorge at Namcha Barwa in the east) and the <strong class="font-semibold t-hi">Peninsular Plateau Mountain Ranges</strong> (rigid, ancient Pre-Cambrian block mountains and denuded relict ridges).
@@ -270,9 +274,11 @@
           <header class="sec-head">
             <span class="sec-num">03</span>
             <h2 class="sec-title">Deep Dive</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="deep-dive" section-label="Deep Dive" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">ranges · passes · peaks · ghats</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="deep-dive" section-label="Deep Dive" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             Master the 3 parallel Himalayan belts, regional river boundaries, strategic mountain passes, and the Peninsular mountain framework.
@@ -755,9 +761,11 @@
           <header class="sec-head">
             <span class="sec-num">04</span>
             <h2 class="sec-title">Data &amp; Comparisons</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="data" section-label="Data & Comparisons" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">ghats comparison · peak rankings</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="data" section-label="Data & Comparisons" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
             Master the contrastive distinctions between the Western Ghats and Eastern Ghats:
@@ -893,9 +901,11 @@
           <header class="sec-head">
             <span class="sec-num">05</span>
             <h2 class="sec-title">Memory Hacks</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="hacks" section-label="Memory Hacks" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">mnemonics · negative marking traps</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="hacks" section-label="Memory Hacks" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
             Negative marking traps designed by exam setters to induce errors:
@@ -935,9 +945,11 @@
           <header class="sec-head">
             <span class="sec-num">06</span>
             <h2 class="sec-title">PYQs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="pyqs" section-label="PYQs" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">2015-2023 verified papers</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="pyqs" section-label="PYQs" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <p class="mb-6 max-w-2xl text-body leading-[1.8] t-mid">
             Every question below appeared in an official TSLPRB Constable or SI paper.
@@ -1001,12 +1013,14 @@
           <header class="sec-head">
             <span class="sec-num">07</span>
             <h2 class="sec-title">Advanced Practice</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="advanced-practice" section-label="Advanced Practice" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">
               {{ advancedPractice.length }} drills
               <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
             </span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="advanced-practice" section-label="Advanced Practice" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
 
           <!-- Disclaimer callout -->
           <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
@@ -1097,9 +1111,11 @@
           <header class="sec-head">
             <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="gate" section-label="Comprehension Gate" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="gate" section-label="Comprehension Gate" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
           <GateQuiz note-id="NOTE-GEO-MOUNTAINS" />
         </section>
 
@@ -1108,9 +1124,11 @@
           <header class="sec-head">
             <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-MOUNTAINS" section-id="current-affairs" section-label="Current Affairs" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-MOUNTAINS" section-id="current-affairs" section-label="Current Affairs" note-title="Mountains, Ranges & Passes of India" @open="openNotesDrawer" />
           <CurrentAffairsStrip note-id="NOTE-GEO-MOUNTAINS" />
         </section>
 
@@ -1158,16 +1176,32 @@
         </div>
       </aside>
     </div>
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-GEO-MOUNTAINS"
+      note-title="Mountains, Ranges & Passes of India"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import type { SectionContext } from '@/types/annotations'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
   title: 'Mountains, Ranges & Passes of India - TGPRB StudyOS',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Mountains, Ranges & Passes of India with Himalayan sequence (KLZPS), Western and Eastern Ghats, Peak superlatives, Duns, Karewas, and verified PYQs.' }],
 })
+
+/* ── Personal notes ──────────────────────────────────────────────────────── */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 const readProgress = ref(0)
 const activeSection = ref('visual')
@@ -1201,6 +1235,7 @@ function scrollTo(id: string) {
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
+  loadNotes()
 })
 
 onUnmounted(() => {

@@ -331,6 +331,7 @@ function queuedFeature(name: string) {
 const mainLinks = [
   { label: 'Dashboard', to: '/', icon: 'i-heroicons-squares-2x2', exact: true },
   { label: 'Review Queue', to: '/review', icon: 'i-heroicons-rectangle-stack' },
+  { label: 'My Notes', to: '/my-notes', icon: 'i-heroicons-pencil-square' },
 ]
 
 const subjects = [
@@ -369,6 +370,7 @@ const paletteGroups = computed(() => [
     commands: [
       { id: 'dash',     label: 'Dashboard',                icon: 'i-heroicons-squares-2x2',     to: '/' },
       { id: 'review',   label: 'Review Queue',             icon: 'i-heroicons-rectangle-stack', to: '/review' },
+      { id: 'my-notes', label: 'My Notes',                 icon: 'i-heroicons-pencil-square',   to: '/my-notes' },
       { id: 'ca',       label: 'Current Affairs',          icon: 'i-heroicons-newspaper',       to: '/current-affairs', suffix: 'Updated 7am daily' },
       { id: 'geo',      label: 'Geography - all topics',   icon: 'i-heroicons-map',             to: '/notes/geography' },
       { id: 'drainage',   label: 'Drainage System of India',       icon: 'i-heroicons-book-open',       to: '/notes/geography/drainage-system-of-india' },

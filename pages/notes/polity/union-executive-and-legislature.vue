@@ -95,10 +95,14 @@
 
       <!-- SECTION 01: UNION EXECUTIVE: PRESIDENT & VICE PRESIDENT -->
       <section id="president-vp" class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 mb-6 flex items-center gap-2">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">01</span>
-          Union Executive: President & Vice President
-        </h2>
+        <div class="flex items-center justify-between pb-2 mb-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">01</span>
+            Union Executive: President & Vice President
+          </h2>
+          <SectionNotesButton note-id="NOTE-POL-UNION-EXEC" section-id="president-vp" section-label="Union Executive: President & Vice President" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="president-vp" section-label="Union Executive: President & Vice President" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
         <!-- Visual Hierarchy Component -->
         <ConstitutionalHierarchy mode="executive" class="mb-10" />
@@ -210,10 +214,14 @@
 
       <!-- SECTION 02: PRIME MINISTER & COUNCIL OF MINISTERS -->
       <section id="pm-com" class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 mb-6 flex items-center gap-2">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">02</span>
-          Prime Minister & Council of Ministers
-        </h2>
+        <div class="flex items-center justify-between pb-2 mb-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">02</span>
+            Prime Minister & Council of Ministers
+          </h2>
+          <SectionNotesButton note-id="NOTE-POL-UNION-EXEC" section-id="pm-com" section-label="Prime Minister & Council of Ministers" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="pm-com" section-label="Prime Minister & Council of Ministers" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
         <!-- Constitutional Sequence Box -->
         <div class="p-4 mb-6 rounded-xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60">
@@ -286,10 +294,14 @@
 
       <!-- SECTION 03: PARLIAMENT STRUCTURE: LOK SABHA & RAJYA SABHA -->
       <section id="parliament-structure" class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 mb-6 flex items-center gap-2">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">03</span>
-          Parliament Structure: Lok Sabha & Rajya Sabha
-        </h2>
+        <div class="flex items-center justify-between pb-2 mb-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">03</span>
+            Parliament Structure: Lok Sabha & Rajya Sabha
+          </h2>
+          <SectionNotesButton note-id="NOTE-POL-UNION-EXEC" section-id="parliament-structure" section-label="Parliament Structure: Lok Sabha & Rajya Sabha" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="parliament-structure" section-label="Parliament Structure: Lok Sabha & Rajya Sabha" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
         <!-- Comparison Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -386,10 +398,14 @@
 
       <!-- SECTION 04: OFFICERS OF PARLIAMENT & COMMITTEES -->
       <section id="officers-committees" class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 mb-6 flex items-center gap-2">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">04</span>
-          Parliamentary Officers & Committees
-        </h2>
+        <div class="flex items-center justify-between pb-2 mb-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">04</span>
+            Parliamentary Officers & Committees
+          </h2>
+          <SectionNotesButton note-id="NOTE-POL-UNION-EXEC" section-id="officers-committees" section-label="Parliamentary Officers & Committees" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="officers-committees" section-label="Parliamentary Officers & Committees" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
         <!-- Red Penalty Box for Frequent Traps -->
         <div class="p-4 mb-6 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/60">
@@ -470,10 +486,14 @@
 
       <!-- SECTION 05: MEMORY MNEMONICS & SPEED REVISION MATRIX -->
       <section id="mnemonics" class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-700 pb-2 mb-6 flex items-center gap-2">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">05</span>
-          Memory Mnemonics & Speed Revision Matrix
-        </h2>
+        <div class="flex items-center justify-between pb-2 mb-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">05</span>
+            Memory Mnemonics & Speed Revision Matrix
+          </h2>
+          <SectionNotesButton note-id="NOTE-POL-UNION-EXEC" section-id="mnemonics" section-label="Memory Mnemonics & Speed Revision Matrix" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="mnemonics" section-label="Memory Mnemonics & Speed Revision Matrix" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
         <!-- Mnemonic Box 1 -->
         <div class="p-4 mb-4 rounded-xl bg-gradient-to-r from-emerald-900 to-slate-900 text-white shadow-md">
@@ -547,8 +567,16 @@
         </div>
       </section>
 
-      <!-- Gate Quiz Component Callout -->
-      <section class="mt-12">
+      <!-- Gate Quiz Section -->
+      <section id="gate" class="mt-12 mb-12">
+        <div class="flex items-center justify-between pb-2 mb-6 border-b border-slate-200 dark:border-slate-700">
+          <h2 class="text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-emerald-600 text-white text-sm font-black">06</span>
+            Comprehension Gate
+          </h2>
+          <SectionNotesButton note-id="NOTE-POL-UNION-EXEC" section-id="gate" section-label="Comprehension Gate" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="gate" section-label="Comprehension Gate" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
         <GateQuiz note-id="NOTE-POL-UNION-EXEC" />
       </section>
 
@@ -558,6 +586,11 @@
       note-title="Union Executive and Legislature"
       :quick-prompts="aiQuickPrompts"
     />
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-POL-UNION-EXEC"
+      note-title="Union Executive & Parliament"
+    />
   </div>
 </template>
 
@@ -565,8 +598,21 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import CurrentAffairsStrip from '@/components/CurrentAffairsStrip.vue'
 import ConstitutionalHierarchy from '@/components/visual/ConstitutionalHierarchy.vue'
+import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
+import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
+import type { SectionContext } from '@/types/annotations'
 
 const aiQuickPrompts = useAiPromptChips('NOTE-POL-UNION-EXEC')
+
+/* -- Personal notes -------------------------------------------------------- */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 // Scroll progress bar indicator
 const scrollProgress = ref<number>(0)
@@ -584,6 +630,7 @@ const updateScrollProgress = () => {
 }
 
 onMounted(() => {
+  loadNotes()
   window.addEventListener('scroll', updateScrollProgress)
 })
 

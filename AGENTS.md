@@ -417,3 +417,18 @@ Whenever the user provides a prompt in the format:
 6. **Navigation Updates**: Add the live topic link to `pages/notes/[subject]/index.vue` and check default layout sidebar navigation.
 7. **Prebuild & Verification**: Run `npm run prebuild` (zero em-dashes check) and verify `HTTP 200` on the live URL. Verify that both `<GateQuiz>` and `<CurrentAffairsStrip>` render live data.
 8. **Git Commit & Push**: Commit code and images together (`git push origin main`) and pull back after GitHub Action Cloudinary conversion.
+
+## Content improvement queue - agent processing
+
+When the user says **"Process improvement queue"** or **"Process my improvements"**, the agent must:
+
+1. **Export pending items**: Run `python3 scripts/export_improvement_queue.py` to get all pending content improvement submissions as JSON.
+2. **Process each item**: For each item, read the `note_id` and `section_id` to locate the exact Vue file and section. The `item_type` determines the action:
+   - `replace_image` / `add_image`: Source the image per the Image Sourcing Workflow rules above, place in `assets-to-upload/`, and update the Vue template.
+   - `fix_fact`: Verify the claim against official sources, then edit the relevant text.
+   - `add_table`: Create a properly formatted data table in the specified section.
+   - `add_topic`: Add a new subsection with exam-relevant content.
+   - `other`: Read the description and apply judgment.
+   - If `reference_url` is provided, use it as a starting point (download the image, read the article, etc.).
+3. **Mark as done**: After processing each item, run `python3 scripts/export_improvement_queue.py mark-done <item_id> "Brief description of what was done"`.
+4. **Never silently skip items**: If an item cannot be processed (bad URL, unclear description), mark it as `skipped` with an explanation in admin_notes rather than ignoring it.

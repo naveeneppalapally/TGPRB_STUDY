@@ -82,9 +82,11 @@
           <header class="sec-head">
             <span class="sec-num">01</span>
             <h2 class="sec-title">The Visual Architecture</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="visual" section-label="The Visual Architecture" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">spatial · hierarchy</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="visual" section-label="The Visual Architecture" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             Irrigation in India is spatially divided: the <strong class="t-hi">Northern Alluvial Plains</strong> rely on Wells &amp; Perennial Canals fed by Himalayan rivers; the <strong class="t-hi">Peninsular Plateau</strong> relies on Tanks &amp; Multi-Stage Lift Irrigation due to impermeable hard basalt/granite rock.
@@ -196,8 +198,10 @@
           <header class="sec-head">
             <span class="sec-num">02</span>
             <h2 class="sec-title">Introduction</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="introduction" section-label="Introduction" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="introduction" section-label="Introduction" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             India has the <strong class="font-semibold t-hi">largest net irrigated area in the world</strong> (~70+ million hectares). Irrigation is indispensable for Indian agriculture because over 75% of total annual precipitation falls during just 100 to 120 days of the Southwest Monsoon, leaving the remaining 8 months dry.
@@ -224,9 +228,11 @@
           <header class="sec-head">
             <span class="sec-num">03</span>
             <h2 class="sec-title">Deep Dive</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="deep-dive" section-label="Deep Dive" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">projects · canals · telangana</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="deep-dive" section-label="Deep Dive" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             Master the major river valley projects, canal headworks, and Telangana's lift irrigation architecture.
@@ -599,9 +605,11 @@
           <header class="sec-head">
             <span class="sec-num">04</span>
             <h2 class="sec-title">Data & Comparisons</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="data" section-label="Data & Comparisons" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">comparison · efficiency</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="data" section-label="Data & Comparisons" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
             Micro-irrigation and precision water delivery comparison matrix:
@@ -685,9 +693,11 @@
           <header class="sec-head">
             <span class="sec-num">05</span>
             <h2 class="sec-title">Memory Hacks</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="hacks" section-label="Memory Hacks" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">negative marking traps</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="hacks" section-label="Memory Hacks" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
             Negative marking traps designed by exam setters to induce errors:
@@ -728,9 +738,11 @@
           <header class="sec-head">
             <span class="sec-num">06</span>
             <h2 class="sec-title">PYQs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="pyqs" section-label="PYQs" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">2015–2023 verified papers</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="pyqs" section-label="PYQs" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <p class="mb-6 max-w-2xl text-body leading-[1.8] t-mid">
             Every question below appeared in an official TSLPRB Constable or SI paper.
@@ -794,12 +806,14 @@
           <header class="sec-head">
             <span class="sec-num">07</span>
             <h2 class="sec-title">Advanced Practice</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="advanced-practice" section-label="Advanced Practice" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">
               {{ advancedPractice.length }} drills
               <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
             </span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="advanced-practice" section-label="Advanced Practice" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
 
           <!-- Disclaimer callout -->
           <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
@@ -890,9 +904,11 @@
           <header class="sec-head">
             <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="gate" section-label="Comprehension Gate" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="gate" section-label="Comprehension Gate" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
           <GateQuiz note-id="NOTE-GEO-IRRIGATION" />
         </section>
 
@@ -901,9 +917,11 @@
           <header class="sec-head">
             <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-IRRIGATION" section-id="current-affairs" section-label="Current Affairs" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-IRRIGATION" section-id="current-affairs" section-label="Current Affairs" note-title="Irrigation in India & Telangana" @open="openNotesDrawer" />
           <CurrentAffairsStrip note-id="NOTE-GEO-IRRIGATION" />
         </section>
 
@@ -951,16 +969,32 @@
         </div>
       </aside>
     </div>
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-GEO-IRRIGATION"
+      note-title="Irrigation in India & Telangana"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import type { SectionContext } from '@/types/annotations'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
   title: 'Irrigation in India & Telangana - TGPRB StudyOS',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Irrigation in India & Telangana with sources breakdown, multipurpose projects, canal networks, KLIP lift schemes, and verified PYQs.' }],
 })
+
+/* ── Personal notes ──────────────────────────────────────────────────────── */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 const readProgress = ref(0)
 const activeSection = ref('visual')
@@ -993,6 +1027,7 @@ function scrollTo(id: string) {
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
+  loadNotes()
 })
 
 onUnmounted(() => {

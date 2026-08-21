@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import MovementTimeline from '@/components/visual/MovementTimeline.vue'
+import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
+import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
+import type { SectionContext } from '@/types/annotations'
 
 useHead({
   title: 'Telangana Armed Struggle & Statehood Movement - TGPRB StudyOS',
@@ -8,6 +13,14 @@ useHead({
 })
 
 const aiQuickPrompts = useAiPromptChips('NOTE-TEL-MOVEMENT')
+
+/* -- Personal notes -------------------------------------------------------- */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 // Scroll progress handling
 const readingProgress = ref(0)
@@ -21,6 +34,7 @@ const updateProgress = () => {
 }
 
 onMounted(() => {
+  loadNotes()
   window.addEventListener('scroll', updateProgress)
 })
 
@@ -117,10 +131,14 @@ onUnmounted(() => {
 
       <!-- SECTION 01: ARMED STRUGGLE & OPERATION POLO -->
       <section id="section-01" class="mb-12">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">01</span>
-          <h2 class="text-2xl font-bold text-slate-100">Telangana Armed Struggle (1946-1951) & Operation Polo (1948)</h2>
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">01</span>
+            <h2 class="text-2xl font-bold text-slate-100">Telangana Armed Struggle (1946-1951) & Operation Polo (1948)</h2>
+          </div>
+          <SectionNotesButton note-id="NOTE-TEL-MOVEMENT" section-id="section-01" section-label="Telangana Armed Struggle (1946-1951) & Operation Polo (1948)" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
         </div>
+        <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="section-01" section-label="Telangana Armed Struggle (1946-1951) & Operation Polo (1948)" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
 
         <!-- Movement Visual Component -->
         <MovementTimeline mode="telangana" class="mb-10" />
@@ -204,10 +222,14 @@ onUnmounted(() => {
 
       <!-- SECTION 02: 1952 MULKI MOVEMENT & GENTLEMEN'S AGREEMENT -->
       <section id="section-02" class="mb-12">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">02</span>
-          <h2 class="text-2xl font-bold text-slate-100">1952 Mulki Agitation & Gentlemen's Agreement (1956)</h2>
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">02</span>
+            <h2 class="text-2xl font-bold text-slate-100">1952 Mulki Agitation & Gentlemen's Agreement (1956)</h2>
+          </div>
+          <SectionNotesButton note-id="NOTE-TEL-MOVEMENT" section-id="section-02" section-label="1952 Mulki Agitation & Gentlemen's Agreement (1956)" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
         </div>
+        <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="section-02" section-label="1952 Mulki Agitation & Gentlemen's Agreement (1956)" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
 
         <div class="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
           <p>
@@ -266,10 +288,14 @@ onUnmounted(() => {
 
       <!-- SECTION 03: 1969 JAI TELANGANA MOVEMENT & FORMULAS -->
       <section id="section-03" class="mb-12">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">03</span>
-          <h2 class="text-2xl font-bold text-slate-100">1969 Jai Telangana Agitation, Formulas & Committees</h2>
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">03</span>
+            <h2 class="text-2xl font-bold text-slate-100">1969 Jai Telangana Agitation, Formulas & Committees</h2>
+          </div>
+          <SectionNotesButton note-id="NOTE-TEL-MOVEMENT" section-id="section-03" section-label="1969 Jai Telangana Agitation, Formulas & Committees" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
         </div>
+        <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="section-03" section-label="1969 Jai Telangana Agitation, Formulas & Committees" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
 
         <div class="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
           <p>
@@ -348,10 +374,14 @@ onUnmounted(() => {
 
       <!-- SECTION 04: ORGANISATIONAL PHASE & CULTURAL RENAISSANCE -->
       <section id="section-04" class="mb-12">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">04</span>
-          <h2 class="text-2xl font-bold text-slate-100">Organisational Phase (1980s-1990s) & Cultural Renaissance</h2>
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">04</span>
+            <h2 class="text-2xl font-bold text-slate-100">Organisational Phase (1980s-1990s) & Cultural Renaissance</h2>
+          </div>
+          <SectionNotesButton note-id="NOTE-TEL-MOVEMENT" section-id="section-04" section-label="Organisational Phase (1980s-1990s) & Cultural Renaissance" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
         </div>
+        <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="section-04" section-label="Organisational Phase (1980s-1990s) & Cultural Renaissance" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
 
         <div class="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
           <p>
@@ -426,10 +456,14 @@ onUnmounted(() => {
 
       <!-- SECTION 05: FINAL PHASE AGITATION & FORMATION -->
       <section id="section-05" class="mb-12">
-        <div class="flex items-center gap-3 mb-4">
-          <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">05</span>
-          <h2 class="text-2xl font-bold text-slate-100">Final Phase Agitation (2009-2014) & AP Reorganisation Act</h2>
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">05</span>
+            <h2 class="text-2xl font-bold text-slate-100">Final Phase Agitation (2009-2014) & AP Reorganisation Act</h2>
+          </div>
+          <SectionNotesButton note-id="NOTE-TEL-MOVEMENT" section-id="section-05" section-label="Final Phase Agitation (2009-2014) & AP Reorganisation Act" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
         </div>
+        <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="section-05" section-label="Final Phase Agitation (2009-2014) & AP Reorganisation Act" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
 
         <div class="space-y-4 text-slate-300 leading-relaxed text-sm sm:text-base">
           <!-- Fast Unto Death & Student Role -->
@@ -526,12 +560,27 @@ onUnmounted(() => {
       </section>
 
       <!-- Gate Quiz Assessment -->
-      <GateQuiz note-id="NOTE-TEL-MOVEMENT" />
+      <section id="gate" class="mb-12">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 font-bold border border-amber-500/30">06</span>
+            <h2 class="text-2xl font-bold text-slate-100">Comprehension Gate</h2>
+          </div>
+          <SectionNotesButton note-id="NOTE-TEL-MOVEMENT" section-id="gate" section-label="Comprehension Gate" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
+        </div>
+        <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="gate" section-label="Comprehension Gate" note-title="Telangana Armed Struggle & Statehood Movement" @open="openNotesDrawer" />
+        <GateQuiz note-id="NOTE-TEL-MOVEMENT" />
+      </section>
     </main>
     <AiAssistantDrawer
       note-id="NOTE-TEL-MOVEMENT"
       note-title="Telangana Armed Struggle and Statehood Movement"
       :quick-prompts="aiQuickPrompts"
+    />
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-TEL-MOVEMENT"
+      note-title="Telangana Armed Struggle & Statehood Movement"
     />
   </div>
 </template>

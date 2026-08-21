@@ -81,9 +81,11 @@
           <header class="sec-head">
             <span class="sec-num">01</span>
             <h2 class="sec-title">The Visual Architecture</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="visual" section-label="The Visual Architecture" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">macro projects · river basins</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="visual" section-label="The Visual Architecture" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             Jawaharlal Nehru famously hailed multipurpose river valley projects as the <strong class="t-hi">"Temples of Modern India"</strong>. Dams in India serve integrated functions: flood control, canal irrigation, hydroelectricity generation, navigation, and municipal water supply.
@@ -290,8 +292,10 @@
           <header class="sec-head">
             <span class="sec-num">02</span>
             <h2 class="sec-title">Introduction</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="introduction" section-label="Introduction" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="introduction" section-label="Introduction" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             India ranks <strong class="t-hi">third globally in operational large dams</strong> (over 5,334 large dams), trailing only China and the United States. Multipurpose river valley projects constitute the backbone of India's agrarian economy, power grid stability, and disaster resilience against droughts and floods.
@@ -317,9 +321,11 @@
           <header class="sec-head">
             <span class="sec-num">03</span>
             <h2 class="sec-title">Deep Dive</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="deep-dive" section-label="Deep Dive" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">river directories · state projects · engineering landmarks</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="deep-dive" section-label="Deep Dive" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <p class="mb-5 max-w-2xl text-body leading-[1.8] t-mid">
             Master the complete river basin directory of dams, state associations, and historical milestones.
@@ -626,9 +632,11 @@
           <header class="sec-head">
             <span class="sec-num">04</span>
             <h2 class="sec-title">Data &amp; Comparisons</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="data" section-label="Data & Comparisons" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">superlative matrix · inter-state disputes</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="data" section-label="Data & Comparisons" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
             Consolidated comparison of India's major dam records and inter-state river project disputes:
@@ -761,9 +769,11 @@
           <header class="sec-head">
             <span class="sec-num">05</span>
             <h2 class="sec-title">Memory Hacks</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="hacks" section-label="Memory Hacks" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">mnemonics · negative marking traps</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="hacks" section-label="Memory Hacks" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <p class="mb-4 text-body leading-[1.8] t-mid">
             Direct recall shortcuts and negative marking traps tested in TGPRB exams:
@@ -801,9 +811,11 @@
           <header class="sec-head">
             <span class="sec-num">06</span>
             <h2 class="sec-title">PYQs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="pyqs" section-label="PYQs" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">2015-2023 verified papers</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="pyqs" section-label="PYQs" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <p class="mb-6 max-w-2xl text-body leading-[1.8] t-mid">
             Every question below appeared in an official TSLPRB Constable or SI paper.
@@ -867,12 +879,14 @@
           <header class="sec-head">
             <span class="sec-num">07</span>
             <h2 class="sec-title">Advanced Practice</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="advanced-practice" section-label="Advanced Practice" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">
               {{ advancedPractice.length }} drills
               <template v-if="advAttemptedCount > 0"> · {{ advAttemptedCount }} attempted ({{ advCorrectCount }} correct)</template>
             </span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="advanced-practice" section-label="Advanced Practice" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
 
           <!-- Disclaimer callout -->
           <div class="mb-5 rounded-xl border border-indigo-500/30 bg-indigo-500/5 p-4">
@@ -963,9 +977,11 @@
           <header class="sec-head">
             <span class="sec-num">08</span>
             <h2 class="sec-title">Comprehension Gate</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="gate" section-label="Comprehension Gate" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">pass 3/5 to unlock flashcards</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="gate" section-label="Comprehension Gate" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
           <GateQuiz note-id="NOTE-GEO-DAMS" />
         </section>
 
@@ -974,9 +990,11 @@
           <header class="sec-head">
             <span class="sec-num">09</span>
             <h2 class="sec-title">Current Affairs</h2>
+            <SectionNotesButton note-id="NOTE-GEO-DAMS" section-id="current-affairs" section-label="Current Affairs" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
             <span class="sec-rule" />
             <span class="sec-meta hidden sm:block">tagged to this topic</span>
           </header>
+          <InlineNoteStrip note-id="NOTE-GEO-DAMS" section-id="current-affairs" section-label="Current Affairs" note-title="Dams & Multipurpose Projects of India" @open="openNotesDrawer" />
           <CurrentAffairsStrip note-id="NOTE-GEO-DAMS" />
         </section>
 
@@ -1024,16 +1042,32 @@
         </div>
       </aside>
     </div>
+    <PersonalNotesDrawer
+      ref="notesDrawerRef"
+      note-id="NOTE-GEO-DAMS"
+      note-title="Dams & Multipurpose Projects of India"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
+import type { SectionContext } from '@/types/annotations'
+import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
   title: 'Dams & Multipurpose Projects of India - TGPRB StudyOS',
   meta: [{ name: 'description', content: 'Comprehensive TGPRB study note: Major dams, reservoirs, barrages, and multipurpose river valley projects of India and Telangana with verified PYQs and current affairs.' }],
 })
+
+/* ── Personal notes ──────────────────────────────────────────────────────── */
+const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
+const { loadNotes } = usePersonalNotes()
+
+function openNotesDrawer(context: SectionContext) {
+  notesDrawerRef.value?.openForSection(context)
+}
 
 const readProgress = ref(0)
 const activeSection = ref('visual')
@@ -1067,6 +1101,7 @@ function scrollTo(id: string) {
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
+  loadNotes()
 })
 
 onUnmounted(() => {

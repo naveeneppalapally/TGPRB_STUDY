@@ -47,3 +47,6 @@ __pycache__/
 workers/scrapy-pib/*.db
 workers/scrapy-pib/*.csv
 workers/scrapy-pib/__pycache__/
+
+# Agent workspace directories
+.agents/

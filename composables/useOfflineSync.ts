@@ -15,7 +15,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
  * service worker or cache application content.
  */
 
-export type OfflineMutationType = 'fsrs_review' | 'gate_passed' | 'topic_visit' | 'bookmark'
+export type OfflineMutationType = 'fsrs_review' | 'gate_passed' | 'topic_visit' | 'bookmark' | 'note_upsert' | 'improvement_create'
 export type FSRSRating = 1 | 2 | 3 | 4
 
 export interface SerializableFSRSCard {
@@ -64,6 +64,34 @@ export interface BookmarkPayload {
   updated_at: string
 }
 
+export interface NoteUpsertPayload {
+  note: {
+    id: string
+    note_id: string
+    section_id: string
+    section_label: string
+    anchor_text?: string
+    body: string
+    is_important: boolean
+    is_doubt: boolean
+    deleted: boolean
+  }
+  updated_at: string
+}
+
+export interface ImprovementCreatePayload {
+  item: {
+    id: string
+    note_id: string
+    section_id?: string
+    section_label?: string
+    item_type: string
+    reference_url?: string
+    description: string
+  }
+  created_at: string
+}
+
 export interface OfflineMutationBase<TType extends OfflineMutationType, TPayload> {
   id: string
   type: TType
@@ -78,18 +106,24 @@ export type FSRSReviewMutation = OfflineMutationBase<'fsrs_review', FSRSReviewPa
 export type GatePassedMutation = OfflineMutationBase<'gate_passed', GatePassedPayload>
 export type TopicVisitMutation = OfflineMutationBase<'topic_visit', TopicVisitPayload>
 export type BookmarkMutation = OfflineMutationBase<'bookmark', BookmarkPayload>
+export type NoteUpsertMutation = OfflineMutationBase<'note_upsert', NoteUpsertPayload>
+export type ImprovementCreateMutation = OfflineMutationBase<'improvement_create', ImprovementCreatePayload>
 
 export type OfflineMutation =
   | FSRSReviewMutation
   | GatePassedMutation
   | TopicVisitMutation
   | BookmarkMutation
+  | NoteUpsertMutation
+  | ImprovementCreateMutation
 
 type MutationPayloadByType = {
   fsrs_review: FSRSReviewPayload
   gate_passed: GatePassedPayload
   topic_visit: TopicVisitPayload
   bookmark: BookmarkPayload
+  note_upsert: NoteUpsertPayload
+  improvement_create: ImprovementCreatePayload
 }
 
 type MutationByType<TType extends OfflineMutationType> = Extract<OfflineMutation, { type: TType }>
@@ -158,6 +192,8 @@ export interface OfflineSyncEngine {
   queueGatePassed(payload: GatePassedPayload): GatePassedMutation
   queueTopicVisit(payload: TopicVisitPayload): TopicVisitMutation
   queueBookmark(payload: BookmarkPayload): BookmarkMutation
+  queueNoteUpsert(payload: NoteUpsertPayload): NoteUpsertMutation
+  queueImprovementCreate(payload: ImprovementCreatePayload): ImprovementCreateMutation
   flush(): Promise<OfflineSyncResult>
 }
 
@@ -214,9 +250,32 @@ function validatePayload(type: OfflineMutationType, payload: MutationPayloadByTy
     return
   }
 
-  const bookmark = payload as BookmarkPayload
-  if (!bookmark.content_id) throw new Error('bookmark requires content_id')
-  validDate(bookmark.updated_at, 'updated_at')
+  if (type === 'bookmark') {
+    const bookmark = payload as BookmarkPayload
+    if (!bookmark.content_id) throw new Error('bookmark requires content_id')
+    validDate(bookmark.updated_at, 'updated_at')
+    return
+  }
+
+  if (type === 'note_upsert') {
+    const note = payload as NoteUpsertPayload
+    if (!note.note?.id) throw new Error('note_upsert requires note.id')
+    if (!note.note.note_id) throw new Error('note_upsert requires note.note_id')
+    if (!note.note.section_id) throw new Error('note_upsert requires note.section_id')
+    if (typeof note.note.body !== 'string') throw new Error('note_upsert requires note.body')
+    validDate(note.updated_at, 'updated_at')
+    return
+  }
+
+  if (type === 'improvement_create') {
+    const improvement = payload as ImprovementCreatePayload
+    if (!improvement.item?.id) throw new Error('improvement_create requires item.id')
+    if (!improvement.item.note_id) throw new Error('improvement_create requires item.note_id')
+    if (!improvement.item.item_type) throw new Error('improvement_create requires item.item_type')
+    if (!improvement.item.description) throw new Error('improvement_create requires item.description')
+    validDate(improvement.created_at, 'created_at')
+    return
+  }
 }
 
 function createEventId(): string {
@@ -465,6 +524,14 @@ function isGatePassed(mutation: OfflineMutation): mutation is GatePassedMutation
 
 function isBookmark(mutation: OfflineMutation): mutation is BookmarkMutation {
   return mutation.type === 'bookmark'
+}
+
+function isNoteUpsert(mutation: OfflineMutation): mutation is NoteUpsertMutation {
+  return mutation.type === 'note_upsert'
+}
+
+function isImprovementCreate(mutation: OfflineMutation): mutation is ImprovementCreateMutation {
+  return mutation.type === 'improvement_create'
 }
 
 function latestByTimestamp<T extends { updated_at: string, event_id: string }>(left: T, right: T): T {
@@ -759,6 +826,8 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
     queueGatePassed: (payload) => enqueue('gate_passed', payload),
     queueTopicVisit: (payload) => enqueue('topic_visit', payload),
     queueBookmark: (payload) => enqueue('bookmark', payload),
+    queueNoteUpsert: (payload) => enqueue('note_upsert', payload),
+    queueImprovementCreate: (payload) => enqueue('improvement_create', payload),
     flush,
   }
 }
@@ -816,6 +885,104 @@ function mergeBookmarkMutations(mutations: OfflineMutation[]): BookmarkState[] {
   return [...bookmarks.values()]
 }
 
+/** Coalesce note mutations by note ID - only the latest version per note is synced. */
+function mergeNoteMutations(mutations: OfflineMutation[]): Array<{
+  id: string
+  note_id: string
+  section_id: string
+  section_label: string
+  anchor_text?: string
+  body: string
+  is_important: boolean
+  is_doubt: boolean
+  deleted: boolean
+  client_updated_at: string
+  event_id: string
+}> {
+  const notes = new Map<string, {
+    id: string
+    note_id: string
+    section_id: string
+    section_label: string
+    anchor_text?: string
+    body: string
+    is_important: boolean
+    is_doubt: boolean
+    deleted: boolean
+    client_updated_at: string
+    event_id: string
+  }>()
+
+  for (const mutation of mutations) {
+    if (!isNoteUpsert(mutation)) continue
+    const next = {
+      id: mutation.payload.note.id,
+      note_id: mutation.payload.note.note_id,
+      section_id: mutation.payload.note.section_id,
+      section_label: mutation.payload.note.section_label,
+      anchor_text: mutation.payload.note.anchor_text,
+      body: mutation.payload.note.body,
+      is_important: mutation.payload.note.is_important,
+      is_doubt: mutation.payload.note.is_doubt,
+      deleted: mutation.payload.note.deleted,
+      client_updated_at: mutation.payload.updated_at,
+      event_id: mutation.id,
+    }
+    const current = notes.get(next.id)
+    if (!current) {
+      notes.set(next.id, next)
+    } else {
+      // LWW: later timestamp wins, event_id breaks ties
+      const cmp = next.client_updated_at.localeCompare(current.client_updated_at)
+      if (cmp > 0 || (cmp === 0 && next.event_id > current.event_id)) {
+        notes.set(next.id, next)
+      }
+    }
+  }
+  return [...notes.values()]
+}
+
+/** Dedup improvement items by ID - each item is fire-and-forget. */
+function collectImprovementMutations(mutations: OfflineMutation[]): Array<{
+  id: string
+  note_id: string
+  section_id?: string
+  section_label?: string
+  item_type: string
+  reference_url?: string
+  description: string
+  client_created_at: string
+}> {
+  const items = new Map<string, {
+    id: string
+    note_id: string
+    section_id?: string
+    section_label?: string
+    item_type: string
+    reference_url?: string
+    description: string
+    client_created_at: string
+  }>()
+
+  for (const mutation of mutations) {
+    if (!isImprovementCreate(mutation)) continue
+    const item = mutation.payload.item
+    if (!items.has(item.id)) {
+      items.set(item.id, {
+        id: item.id,
+        note_id: item.note_id,
+        section_id: item.section_id,
+        section_label: item.section_label,
+        item_type: item.item_type,
+        reference_url: item.reference_url,
+        description: item.description,
+        client_created_at: mutation.payload.created_at,
+      })
+    }
+  }
+  return [...items.values()]
+}
+
 /**
  * Supabase transport for the schema in server/database/offline_sync_schema.sql.
  * Every write is idempotent: append-only review events use INSERT ... DO
@@ -862,6 +1029,18 @@ export function createSupabaseOfflineSyncAdapter(supabase: SupabaseClient<any>):
       if (bookmarks.length > 0) {
         const bookmarkResult = await supabase.rpc('merge_user_bookmarks', { p_bookmarks: bookmarks })
         assertSupabaseResult(bookmarkResult)
+      }
+
+      const notes = mergeNoteMutations(mutations)
+      if (notes.length > 0) {
+        const noteResult = await supabase.rpc('merge_user_notes', { p_notes: notes })
+        assertSupabaseResult(noteResult)
+      }
+
+      const improvements = collectImprovementMutations(mutations)
+      if (improvements.length > 0) {
+        const improvementResult = await supabase.rpc('insert_content_improvement_items', { p_items: improvements })
+        assertSupabaseResult(improvementResult)
       }
 
       return { syncedIds: mutations.map((mutation) => mutation.id) }
