@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Safran Aircraft Engine MRO Facility in Hyderabad"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-ECO-INFRA", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-ECO-INFRA", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

@@ -67,7 +67,7 @@ const telanganaMilestones: Milestone[] = [
     phaseLabel: 'Phase 3: 2001-2014',
     summary: 'K. Chandrashekar Rao founded the Telangana Rashtra Samithi on 27 April 2001.',
     facts: ['The organisation made statehood its central political objective.', 'The exact date, 27 April 2001, is a direct chronology fact.', 'Place this before the 2009 Union government statement and the 2014 Act.'],
-    pyqIds: ['PYQ-2022-P-172']
+    pyqIds: ['PYQ-2715']
   },
   {
     id: 'december-statement',
@@ -77,7 +77,7 @@ const telanganaMilestones: Milestone[] = [
     phaseLabel: 'Phase 3: 2001-2014',
     summary: 'The Union government announced that the process for the formation of Telangana would be initiated.',
     facts: ['The statement was made by Union Home Minister P. Chidambaram.', 'Justice B. N. Srikrishna Committee was subsequently constituted in 2010.', 'Sequence questions connect the committee, Rail Bandh and Million March to this phase.'],
-    pyqIds: ['PYQ-2022-P-181', 'PYQ-2022-P-177']
+    pyqIds: ['PYQ-2724', 'PYQ-2720']
   },
   {
     id: 'reorganisation-act',

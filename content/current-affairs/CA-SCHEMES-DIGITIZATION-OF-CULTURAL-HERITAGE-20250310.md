@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "National Mission on Monuments and Antiquities"
-related_topic_ids: ["NOTE-HIS-CULTURE", "NOTE-TEL-CULTURE", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-HIS-CULTURE", "NOTE-TEL-CULTURE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

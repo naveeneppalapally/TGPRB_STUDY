@@ -4,7 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "Canada PM Mark Carney Official Visit to India"
-related_topic_ids: ["NOTE-INT-BILATERAL", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-INT-BILATERAL", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

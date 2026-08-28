@@ -5,7 +5,7 @@ category: "schemes"
 exam_section: "Indian & World Geography"
 topic: "Atal Bhujal Yojana - Groundwater Management"
 related_topic_ids:
-  - \"NOTE-GEO-IRRIGATION\"
+  - "NOTE-GEO-IRRIGATION"
   - "NOTE-GEO-DRAINAGE"
   - "NOTE-ECO-GENERAL"
 is_telangana_focus: false

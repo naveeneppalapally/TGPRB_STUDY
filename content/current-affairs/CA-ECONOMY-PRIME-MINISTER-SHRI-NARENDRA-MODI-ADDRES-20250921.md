@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Next Generation GST Reforms"
-related_topic_ids: ["NOTE-ECO-TAXATION", "NOTE-ECO-GST", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-ECO-TAXATION", "NOTE-ECO-GST", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

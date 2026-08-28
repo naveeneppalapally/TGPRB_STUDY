@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "21st Instalment of PM-KISAN and South India Natural Farming Summit 2025"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-SCHEMES-CENTRAL", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-SCHEMES-CENTRAL", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

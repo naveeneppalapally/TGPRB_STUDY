@@ -5,9 +5,9 @@ category: "schemes"
 exam_section: "Indian & World Geography"
 topic: "Jal Jeevan Mission 2.0 - Drinking Water to Rural Households"
 related_topic_ids:
-  - \"NOTE-GEO-IRRIGATION\"
-  - \"NOTE-TEL-MOVEMENT\"
-  - \"NOTE-POL-UNION-EXEC\"
+  - "NOTE-GEO-IRRIGATION"
+  - "NOTE-TEL-MOVEMENT"
+  - "NOTE-POL-UNION-EXEC"
   - "NOTE-GEO-DRAINAGE"
   - "NOTE-ECO-GENERAL"
 is_telangana_focus: false

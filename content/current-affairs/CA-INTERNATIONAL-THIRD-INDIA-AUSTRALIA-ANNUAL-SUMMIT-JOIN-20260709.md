@@ -4,7 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "Third India-Australia Annual Summit 2026"
-related_topic_ids: ["NOTE-INT-SUMMITS", "NOTE-DEF-AGREEMENTS", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-INT-SUMMITS", "NOTE-DEF-AGREEMENTS", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

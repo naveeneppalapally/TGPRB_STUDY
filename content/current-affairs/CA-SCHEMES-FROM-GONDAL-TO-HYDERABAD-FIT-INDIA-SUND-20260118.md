@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "57th Edition of Fit India Sundays on Cycle"
-related_topic_ids: ["NOTE-SCH-FITINDIA", "NOTE-TEL-SPORTS", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-SCH-FITINDIA", "NOTE-TEL-SPORTS", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

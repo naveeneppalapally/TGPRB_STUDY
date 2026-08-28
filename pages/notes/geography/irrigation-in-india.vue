@@ -24,7 +24,7 @@
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
             <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3–4 Questions (4–5 Marks)</span>
-            <span class="chip">29 verified PYQs</span>
+            <span class="chip">10 verified PYQs</span>
             <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
@@ -157,6 +157,10 @@
                 <p class="text-[11.5px] t-lo mt-1 leading-snug">Multi-stage lift irrigation (Kaleshwaram), springs, water harvesting.</p>
               </div>
             </div>
+
+            <p class="mt-3 mb-4 text-body-xs t-lo font-mono">
+              Source: 4th &amp; 5th Minor Irrigation Census, Ministry of Jal Shakti. Verify statistical distributions against latest official publications before exam.
+            </p>
 
             <!-- Canal Alignment Schematic -->
             <div class="rounded-xl border b-line bg-sub p-4 text-[12.5px] space-y-2">
@@ -359,7 +363,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/hirakud-dam-mahanadi.webp"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728087/geography/hirakud-dam-mahanadi.webp"
                       alt="Hirakud Dam on Mahanadi River in Sambalpur Odisha"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -399,7 +403,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden flex flex-col">
                   <div class="aspect-video w-full overflow-hidden bg-inset">
                     <img
-                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/sardar-sarovar-dam-narmada.webp"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728080/geography/sardar-sarovar-dam-narmada.webp"
                       alt="Sardar Sarovar Dam on Narmada River"
                       class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
                       loading="lazy"
@@ -502,7 +506,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset flex items-center justify-center p-1 bg-white dark:bg-stone-900">
                     <img
-                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728083/geography/indira-gandhi-canal-route.webp"
+                      src="/images/geography/indira-gandhi-canal-route.webp"
                       alt="Indira Gandhi Lift Canal schematic route and distribution branches"
                       class="max-h-full max-w-full object-contain"
                       loading="lazy"
@@ -684,6 +688,9 @@
             </div>
             <p class="mt-3 text-[12px] font-mono t-lo">
               * Micro Irrigation Fund (MIF): Dedicated corpus of ₹5,000 Crore established with NABARD.
+            </p>
+            <p class="mt-2 text-body-xs t-lo font-mono">
+              Source: 4th &amp; 5th Minor Irrigation Census (Ministry of Jal Shakti) and NABARD Annual Reports. 6th Census data compilation in progress as of 2025 · verify statistical allocations before exam.
             </p>
           </div>
         </section>
@@ -1087,72 +1094,152 @@ interface Pyq {
 
 const pyqList = reactive<Pyq[]>([
   {
-    uid: 'PYQ-IRR-01',
-    exam: 'SI',
-    year: '2022',
-    source: 'SI 2022 Prelims',
-    tag: 'Multipurpose Projects',
-    question: 'Bhakra-Nangal project is constructed on the river:',
-    options: ['Ravi', 'Chenab', 'Sutlej', 'Jhelum'],
-    correct: 2,
-    explanation: 'Bhakra-Nangal project is constructed across the Sutlej river in Himachal Pradesh/Punjab. The reservoir formed behind Bhakra Dam is Govind Sagar.',
-    revealed: false,
-    selected: null
-  },
-  {
-    uid: 'PYQ-IRR-02',
-    exam: 'Constable',
-    year: '2018',
-    source: 'Constable 2018 Mains',
-    tag: 'Telangana Schemes',
-    question: 'On which river is the Rajolibanda Diversion Scheme built?',
-    options: ['Krishna', 'Tungabhadra', 'Godavari', 'Pennar'],
-    correct: 1,
-    explanation: 'Rajolibanda Diversion Scheme (RDS) is an anicut constructed across the Tungabhadra river to supply irrigation to Jogulamba Gadwal and Raichur.',
-    revealed: false,
-    selected: null
-  },
-  {
-    uid: 'PYQ-IRR-03',
-    exam: 'SI',
-    year: '2018',
-    source: 'SI 2018 Mains',
-    tag: 'Match Projects',
-    question: 'Match the Following:\n(a) Sardar Sarovar\n(b) Nagarjuna Sagar\n(c) Hirakud\n(d) Bhakra Nangal\n\nwith Rivers:\n(i) Mahanadi\n(ii) Sutlej\n(iii) Narmada\n(iv) Krishna',
-    options: [
-      '(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)',
-      '(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)',
-      '(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)',
-      '(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)'
-    ],
-    correct: 0,
-    explanation: 'Sardar Sarovar is on Narmada, Nagarjuna Sagar is on Krishna, Hirakud is on Mahanadi, and Bhakra Nangal is on Sutlej.',
-    revealed: false,
-    selected: null
-  },
-  {
-    uid: 'PYQ-IRR-04',
+    uid: 'PYQ-1532',
     exam: 'SI',
     year: '2016',
-    source: 'SI 2016 Prelims',
-    tag: 'Historical Foundation',
-    question: 'On which date did Pandit Jawaharlal Nehru lay the foundation stone for the great Nagarjuna Sagar Project?',
-    options: ['10 December 1955', '15 August 1956', '26 January 1950', '2 October 1958'],
-    correct: 0,
-    explanation: 'Pandit Jawaharlal Nehru laid the foundation stone for the Nagarjuna Sagar Dam across the Krishna River on 10 December 1955.',
+    source: 'SI 2016 Final GS Paper · Q89',
+    tag: 'Multipurpose Projects',
+    question: 'Bhakra-Nangal project is constructed on the river',
+    options: ['Ravi', 'Bias', 'Sutlej', 'Chenab'],
+    correct: 2,
+    explanation: "The Bhakra-Nangal Dam is one of India's earliest and largest multipurpose river valley projects, constructed on the Sutlej River near Bilaspur in Himachal Pradesh. The reservoir created by the dam is known as the Gobind Sagar lake.",
     revealed: false,
     selected: null
   },
   {
-    uid: 'PYQ-IRR-05',
+    uid: 'PYQ-0386',
+    exam: 'Constable',
+    year: '2015',
+    source: 'Constable 2015 Prelims · Q192',
+    tag: 'Telangana Schemes',
+    question: "On which river is the 'Rajoli Banda Diversion Scheme' built ?",
+    options: ['Krishna', 'Musi', 'Manjeera', 'Tungabhadra'],
+    correct: 3,
+    explanation: 'The Rajolibanda Diversion Scheme (RDS) is an inter-state anicut constructed across the Tungabhadra River. It provides irrigation water to parts of Karnataka (Raichur district) and Telangana (Jogulamba Gadwal district).',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-1513',
+    exam: 'SI',
+    year: '2016',
+    source: 'SI 2016 Final GS Paper · Q70',
+    tag: 'Match Projects',
+    question: 'Match the following\nList - I\nProject\na) Rihind\nb) Sileru\nc) Mettur\nd) Almatti\nList - II\nState\ni) Karnataka\nii) Tamilnadu\niii) Andhra Pradesh\niv) Uttar Pradesh',
+    options: [
+      'a:iv, b:iii, c:ii, d:i',
+      'a:i, b:ii, c:iii, d:iv',
+      'a:iv, b:iii, c:i, d:ii',
+      'a:i, b:ii, c:iv, d:iii'
+    ],
+    correct: 0,
+    explanation: 'Rihand Project is located in Uttar Pradesh on the Rihand River; Sileru Hydroelectric Project is located in Andhra Pradesh; Mettur Dam is constructed across the Cauvery River in Tamil Nadu; and Almatti Dam is built across the Krishna River in Karnataka.',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-2526',
+    exam: 'SI',
+    year: '2018',
+    source: 'SI 2018 Prelims Paper1 · Q176',
+    tag: 'Historical Foundation',
+    question: 'On which of the following dates did Pandit Jawaharlal Nehru laid the foundation stone for the construction of the great Nagarjuna Sagar Project?',
+    options: ['1 August 1955', '11 December 1955', '1 October 1956', '1 November 1956'],
+    correct: 1,
+    explanation: 'Prime Minister Pandit Jawaharlal Nehru laid the foundation stone for the Nagarjuna Sagar Dam across the Krishna River in December 1955 (commemorated on 10–11 December 1955). It remains one of the largest masonry dams and vital multipurpose irrigation projects in southern India.',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-2518',
+    exam: 'SI',
+    year: '2018',
+    source: 'SI 2018 Prelims Paper1 · Q168',
+    tag: 'Micro-Irrigation',
+    question: "Examine the following statements: (a) The Indian Government approves corpus of ₹ 5,000 crore for setting up of 'Micro Irrigation Fund' (MIF) with NABARD under Pradhan Mantri Krishi Sinchayee Yojana (PMKSY). (b) The 'Micro Irrigation Fund' would substitute 'Per Drop More Crop' (PDMC) component of PMKSY. Choose the correct answer:",
+    options: [
+      'Both (a) and (b) are correct.',
+      'Both (a) and (b) are incorrect.',
+      'Only (a) is correct.',
+      'Only (b) is correct.'
+    ],
+    correct: 2,
+    explanation: "Statement (a) is correct as the Cabinet approved an initial corpus of ₹5,000 crore with NABARD to establish the Micro Irrigation Fund (MIF). Statement (b) is incorrect because MIF does not substitute the 'Per Drop More Crop' (PDMC) component of PMKSY; instead, it supplements and mobilizes additional financial resources to boost micro-irrigation coverage.",
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-2977',
+    exam: 'SI',
+    year: '2023',
+    source: 'SI 2023 Mains General Studies · Q46',
+    tag: 'Irrigation Superlatives',
+    question: 'Which State has the largest irrigated area ?',
+    options: ['Haryana', 'Punjab', 'Uttar Pradesh', 'West Bengal'],
+    correct: 2,
+    explanation: 'Uttar Pradesh has the largest total net and gross irrigated area in India due to its extensive network of canals and tube wells across the fertile Indo-Gangetic plain. Note that while Punjab ranks highest in terms of the percentage of cropped area under irrigation (~98%), Uttar Pradesh leads in absolute total area.',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-1790',
+    exam: 'SI',
+    year: '2016',
+    source: 'SI 2016 Prelims Paper · Q121',
+    tag: 'Telangana Reservoirs',
+    question: 'Match the following\nList-I\n(a) Rajoliband Diversion Scheme\n(b) Sriram Sagar Dam\n(c) Lower Manair Dam\n(d) Kadam Reservoir\nList-II\n(i) Karimnagar\n(ii) Adilabad\n(iii) Mahabubnagar\n(iv) Nizamabad',
+    options: [
+      '(1) (i) (ii) (iii) (iv)',
+      '(2) (iii) (iv) (i) (ii)',
+      '(3) (iv) (iii) (ii) (i)',
+      '(4) (iii) (iv) (ii) (i)'
+    ],
+    correct: 1,
+    explanation: 'Rajoliband Diversion Scheme is located in undivided Mahabubnagar (Gadwal), Sriram Sagar Dam in Nizamabad (Pochampad), Lower Manair Dam in Karimnagar, and Kadam Reservoir in Adilabad (Nirmal district). Thus, the correct sequence matching (a)-(b)-(c)-(d) is (iii)-(iv)-(i)-(ii).',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-0510',
+    exam: 'Constable',
+    year: '2018',
+    source: 'Constable 2018 Mains · Q89',
+    tag: 'River Projects',
+    question: 'Matatilla Project was built on which of the following rivers?',
+    options: ['Mahanadi', 'Kosi', 'Betwa', 'Damodar'],
+    correct: 2,
+    explanation: 'The Matatilla Dam project was constructed in 1958 across the Betwa River in Lalitpur district, Uttar Pradesh. It provides water for irrigation and power generation in Uttar Pradesh and Madhya Pradesh.',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-1506',
+    exam: 'SI',
+    year: '2016',
+    source: 'SI 2016 Final GS Paper · Q63',
+    tag: 'Projects & Geography',
+    question: 'Match the following\nList - I\na) Sardar Sarovar dam\nb) Highest mountain peak in South India\nc) Todas\nd) Copper\nList - II\ni) Anaimudi\nii) Agnigundala\niii) Narmada\niv) Nilgiri',
+    options: [
+      'a-iv, b-ii, c-i, d-iii',
+      'a-ii, b-iii, c-iv, d-i',
+      'a-iii, b-i, c-iv, d-ii',
+      'a-i, b-iv, c-iii, d-ii'
+    ],
+    correct: 2,
+    explanation: 'Sardar Sarovar Dam is constructed across the Narmada River in Gujarat. Anaimudi (2,695 m) is the highest peak in Peninsular/South India. The Toda tribe resides primarily in the Nilgiri Hills, while Agnigundala in Andhra Pradesh is famous for its copper ore deposits.',
+    revealed: false,
+    selected: null
+  },
+  {
+    uid: 'PYQ-1010',
     exam: 'Constable',
     year: '2022',
-    source: 'Constable 2022 Prelims',
-    tag: 'Micro-Irrigation',
-    question: 'The Indian Government approved a corpus of ₹5,000 crore for setting up the Micro Irrigation Fund (MIF) with which apex financial institution?',
-    options: ['RBI', 'NABARD', 'SIDBI', 'SBI'],
-    correct: 1,
-    explanation: 'The ₹5,000 crore Micro Irrigation Fund (MIF) was established with NABARD under PMKSY to help states incentivize drip and sprinkler installations.',
+    source: 'Constable 2022 Prelims · Q192',
+    tag: 'Dam & River Matching',
+    question: 'Ukai dam is situated across which of the following rivers?',
+    options: ['Tapi', 'Narmada', 'Kaveri', 'Chambal'],
+    correct: 0,
+    explanation: 'The Ukai Dam, constructed across the Tapi River in the Tapi district of Gujarat, is the second largest reservoir in Gujarat after the Sardar Sarovar Dam. It is an earth-cum-masonry dam used for irrigation, power generation, and flood control.',
     revealed: false,
     selected: null
   }

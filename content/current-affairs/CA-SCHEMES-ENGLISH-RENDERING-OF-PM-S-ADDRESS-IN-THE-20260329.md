@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Gyan Bharatam Survey for Manuscript Documentation"
-related_topic_ids: ["NOTE-HIS-CULTURE", "NOTE-SCHEMES-GOVT", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-HIS-CULTURE", "NOTE-SCHEMES-GOVT", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

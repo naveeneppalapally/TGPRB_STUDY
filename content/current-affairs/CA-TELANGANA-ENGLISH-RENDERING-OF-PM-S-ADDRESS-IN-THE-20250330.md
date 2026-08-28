@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Traditional New Year Festivals and Vikram Samvat 2082"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-HIS-CULTURE", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-HIS-CULTURE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

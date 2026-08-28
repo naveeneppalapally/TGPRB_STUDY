@@ -4,7 +4,7 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "MHA Initiatives and BNS Provisions for Women Safety"
-related_topic_ids: ["NOTE-POL-CONSTITUTION", "NOTE-TEL-POLICE", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-POL-CONSTITUTION", "NOTE-TEL-POLICE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

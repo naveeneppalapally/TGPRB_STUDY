@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "DRDO 67th Foundation Day and Key Initiatives"
-related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-DEF-TECH", \"NOTE-GEO-MOUNTAINS\"]
+related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-DEF-TECH", "NOTE-GEO-MOUNTAINS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

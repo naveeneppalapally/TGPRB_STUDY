@@ -4,7 +4,7 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "International Arbitration Colloquium and Legal Framework"
-related_topic_ids: ["NOTE-POL-JUDICIARY", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

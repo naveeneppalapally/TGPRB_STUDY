@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Insolvency and Bankruptcy Code (IBC) Performance and Banking GNPAs"
-related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-IBC", \"NOTE-TEL-MOVEMENT\"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-IBC", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

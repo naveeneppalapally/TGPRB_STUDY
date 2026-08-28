@@ -24,7 +24,7 @@
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
             <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3-4 Questions (4-5 Marks)</span>
-            <span class="chip">34 verified PYQs</span>
+            <span class="chip">10 verified PYQs</span>
             <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
@@ -133,22 +133,22 @@
               </p>
             </div>
 
-            <!-- West-to-East Syntaxial Extent & 8000m Peaks -->
+            <!-- Mountain Passes & Eight-Thousander Summits Locator Map -->
             <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm flex flex-col justify-between">
               <div>
                 <div class="mb-3 flex items-center justify-between border-b b-line pb-2">
-                  <h4 class="font-display text-[14px] font-bold t-hi">West-to-East Syntaxial Extent (Nanga Parbat to Namcha Barwa)</h4>
-                  <span class="chip chip-mono text-[10px]">8000m Peaks</span>
+                  <h4 class="font-display text-[14px] font-bold t-hi">Himalayan Passes &amp; Eight-Thousander Summits</h4>
+                  <span class="chip chip-mono text-[10px]">Passes &amp; Summits</span>
                 </div>
                 <img
-                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786733965/geography/himalaya-eight-thousanders-annotated-map.webp"
-                  alt="NASA Landsat annotated showing the 14 eight-thousander peaks and syntaxial bends from Nanga Parbat to Namcha Barwa"
-                  class="w-full h-auto max-h-[380px] object-cover rounded-lg bg-inset"
+                  src="/images/geography/himalayan-passes-and-summits-map.webp"
+                  alt="High-contrast Mountain Passes and Eight-Thousander Summits Locator Map showing KLZPS order, pass connectivity, and summit heights"
+                  class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
                   loading="lazy"
                 />
               </div>
               <p class="mt-3 text-[11px] t-mid border-t b-line pt-2">
-                <strong class="t-hi font-mono">Syntaxial Terminals:</strong> Nanga Parbat (8,126 m, Indus bend) in the West to Namcha Barwa (7,782 m, Tsangpo bend) in the East.
+                <strong class="t-hi font-mono">Master Locator:</strong> Trans-Himalayan KLZPS pass connectivity (Zoji La, Rohtang, Nathu La) and 8,000m summits hierarchy.
               </p>
             </div>
           </div>
@@ -462,6 +462,18 @@
           <div class="panel p-5 sm:p-6 mb-6">
             <h3 class="font-display text-[16px] font-bold t-hi mb-3">2. Strategic Mountain Passes of India</h3>
             <p class="text-body-xs t-lo mb-3">State ↔ Mountain Pass ↔ Connected Regions tested in TGPRB match-the-following questions:</p>
+
+            <!-- Mountain Passes & Eight-Thousander Summits Locator Map -->
+            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-3 text-center shadow-sm">
+              <img
+                src="/images/geography/himalayan-passes-and-summits-map.webp"
+                alt="Himalayan Mountain Passes &amp; Eight-Thousander Summits locator diagram showing KLZPS order and peak elevations"
+                class="mx-auto block w-full max-w-3xl h-auto object-contain rounded-lg"
+                loading="lazy"
+              />
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Himalayan Mountain Passes &amp; Eight-Thousanders (TSLPRB / TGPRB Master Reference)</p>
+            </div>
+
             <div class="overflow-x-auto mb-6">
               <table class="table-note">
                 <thead>
@@ -1299,56 +1311,56 @@ interface PYQItem {
 
 const pyqList = reactive<PYQItem[]>([
   {
-    uid: 'PYQ-MNT-01',
-    source: 'Constable 2018 Prelims',
+    uid: 'PYQ-0535',
+    source: 'Constable 2018 Mains · Q114',
     tag: 'Mountain Ranges Sequence',
-    question: 'Consider the following ranges in Himalayas and find out the correct sequence from North to South:\n(a) Zaskar range\n(b) Pir Panjal range\n(c) Shivalik range\n(d) Ladakh range',
+    question: 'Consider the following ranges in Himalayas and find out the correct sequence from North to South: (a) Zaskar range (b) Pirpanjal range (c) Shivalik range (d) Ladakh range',
     options: [
-      '(d) - (a) - (b) - (c)',
-      '(a) - (d) - (b) - (c)',
-      '(d) - (b) - (a) - (c)',
-      '(b) - (d) - (a) - (c)'
+      'd-a-b-c',
+      'a-d-b-c',
+      'b-d-c-a',
+      'b-c-a-d'
     ],
     correct: 0,
-    explanation: 'The correct sequence from North to South is: Ladakh range (d) -> Zaskar range (a) -> Pir Panjal range (b) -> Shivalik range (c). Remember the mnemonic KLZPS (Karakoram, Ladakh, Zaskar, Pir Panjal, Shivalik).',
+    explanation: 'From North to South, the major mountain ranges of the northern region are Karakoram, Ladakh, Zaskar, Great Himalayas, Pir Panjal, and the Shiwalik range. Thus, the correct sequence for the given ranges is Ladakh (d) -> Zaskar (a) -> Pirpanjal (b) -> Shivalik (c).',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-02',
-    source: 'SI 2018 Mains',
+    uid: 'PYQ-0292',
+    source: 'Constable 2015 Prelims · Q93',
     tag: 'Peak & Range Matching',
-    question: 'Match the following:\nList-I (Peaks & Ranges)\n(a) Aravali Hills\n(b) Highest Peak of Nilgiris\n(c) Mahendragiri Hills\n(d) Western Ghats\n\nList-II (Geographical Formations)\n(i) Eastern Ghats\n(ii) Kondesh Hills\n(iii) Dodda Betta\n(iv) Malwa plateau',
+    question: 'Match the following\nList-I\n(a) Aravali Hills\n(b) Highest Peak of Nilgiris\n(c) Mahendragiri Hills\n(d) Western Ghats\nList-II\n(i) Eastern Ghats\n(ii) Kondesh Hills\n(iii) Dodda Betta\n(iv) Malwa plateau',
     options: [
-      '(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)',
-      '(a)-(iv), (b)-(i), (c)-(iii), (d)-(ii)',
+      '(a)-(i), (b)-(iii), (c)-(iv), (d)-(ii)',
+      '(a)-(iii), (b)-(ii), (c)-(iv), (d)-(i)',
       '(a)-(iv), (b)-(iii), (c)-(i), (d)-(ii)',
-      '(a)-(ii), (b)-(iii), (c)-(i), (d)-(iv)'
+      '(a)-(iv), (b)-(i), (c)-(iii), (d)-(ii)'
     ],
     correct: 2,
-    explanation: 'Aravalli Hills borders Malwa plateau; Highest Peak of Nilgiris is Dodda Betta (2,637 m); Mahendragiri is situated in the Eastern Ghats (Odisha); Western Ghats connects with Kondesh hills.',
+    explanation: 'Doddabetta is the highest peak in the Nilgiri Hills (2,637 m). Mahendragiri is a famous peak located in the Eastern Ghats in Odisha. The Malwa Plateau lies adjacent to the Aravalli range in the northwest, and Kondesh Hills are part of the Western Ghats region.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-03',
-    source: 'SI 2016 Prelims',
+    uid: 'PYQ-0294',
+    source: 'Constable 2015 Prelims · Q95',
     tag: 'Mountain Superlatives',
-    question: 'Match the following:\nList-I\n(a) Siachen glacier\n(b) Bundi hills\n(c) Highest point of Satpura hills\n(d) Shivalik Range\n\nList-II\n(I) Malwa plateau\n(II) Mishmi Hills\n(III) Karakoram Range\n(IV) Mahadeo Hills',
+    question: 'Match the following : List-I (a) Siachen glacier (b) Bundi hills (c) Highest point of Satpura hills (d) Shivalik Range List-II (I) Malwa plateau (II) Mishmi Hills (III) Karakoram Range (IV) Mahadeo Hills',
     options: [
-      '(a)-(I), (b)-(III), (c)-(IV), (d)-(II)',
-      '(a)-(III), (b)-(IV), (c)-(I), (d)-(II)',
-      '(a)-(III), (b)-(I), (c)-(IV), (d)-(II)',
-      '(a)-(IV), (b)-(I), (c)-(III), (d)-(II)'
+      '(1) (a) – (I), (b) – (II), (c) – (III), (d) – (IV)',
+      '(2) (a) – (II), (b) – (I), (c) – (III), (d) – (IV)',
+      '(3) (a) – (III), (b) – (I), (c) – (IV), (d) – (II)',
+      '(4) (a)-(III), (b) – (IV), (c) – (I), (d) – (II)'
     ],
     correct: 2,
-    explanation: 'Siachen glacier is in the Karakoram Range (III); Bundi hills border the Malwa plateau (I); Highest point of Satpura hills is Mount Dhupgarh in Mahadeo Hills (IV); In Arunachal Pradesh, Shivalik Range is known as Mishmi Hills (II).',
+    explanation: 'The Siachen Glacier is located in the Karakoram Range. Bundi Hills lie in the Hadoti/Malwa Plateau region of south-eastern Rajasthan. Dhupgarh, the highest point of the Satpura Range, is located in the Mahadeo Hills. Mishmi Hills form the eastern continuation of the Outer Himalayan/Shivalik system in Arunachal Pradesh.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-04',
-    source: 'Constable 2016 Mains',
+    uid: 'PYQ-3071',
+    source: 'SI 2023 Mains General Studies · Q142',
     tag: 'Karewas Landform',
     question: 'Karewas of Kashmir are generally found along the lower slopes of:',
     options: [
@@ -1358,47 +1370,47 @@ const pyqList = reactive<PYQItem[]>([
       'Kathmandu valley'
     ],
     correct: 0,
-    explanation: 'Karewas are thick lacustrine (lake clay and silt) terrace deposits formed during the Pleistocene epoch, situated along the lower slopes of the Pir Panjal range in the Kashmir Valley. They are exceptionally fertile for Saffron (Zafran) cultivation.',
+    explanation: 'Karewas are thick lacustrine (lake deposits) formations of glacial clay, silt, and sand found along the lower slopes of the Pir Panjal range in Kashmir Valley. These elevated flat-topped tablelands are extremely fertile and internationally renowned for saffron (Zafran) cultivation.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-05',
-    source: 'Constable 2022 Prelims',
+    uid: 'PYQ-2991',
+    source: 'SI 2023 Mains General Studies · Q62',
     tag: 'Duns & Longitudinal Valleys',
-    question: 'The longitudinal valleys also called Duns/Doons are found in:',
+    question: 'The longitudinal valleys also called Duns/Doons are found in :',
     options: [
       'Greater Himalayas',
-      'Trans-Himalayas',
-      'Lesser-Himalayas',
+      'Trans- Himalayas',
+      'Lesser- Himalayas',
       'Shiwalik Hills'
     ],
     correct: 3,
-    explanation: 'Duns (or Doons) are longitudinal structural valleys formed between the Lesser Himalayas (Himachal) and the Outer Himalayas (Shiwalik Hills). Examples include Dehradun, Kotli Dun, and Patli Dun.',
+    explanation: 'Duns (or Doons) are longitudinal structural valleys formed between the Lesser Himalayas (Himachal) and the Outer Himalayas (Shiwalik Hills). Examples include Dehradun, Kotli Dun, and Patli Dun, which are covered with thick gravel and alluvial deposits.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-06',
-    source: 'Constable 2016 Prelims',
-    tag: 'Western Ghats Passes',
-    question: 'Match the following:\nList - I\n(a) Guru Shikhar Peak\n(b) Dhuandhar waterfall\n(c) Thalghat gap\n(d) Coral reefs\n\nList - II\n(i) Western Ghats\n(ii) Lakshadweep\n(iii) Aravalli Range\n(iv) Narmada River',
+    uid: 'PYQ-1236',
+    source: 'Constable 2023 Set A · Q158',
+    tag: 'Western Ghats Passes & Matching',
+    question: 'Match the following:\nList - I\n(a) Guru Shikhar Peak\n(b) Dhuadhar waterfall\n(c) Thalghat gap\n(d) Coral reefs\nList - II\n(i) Lakshadweep islands\n(ii) Western ghats\n(iii) Narmada river\n(iv) Aravallis',
     options: [
-      '(a)-(i), (b)-(iv), (c)-(iii), (d)-(ii)',
-      '(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)',
-      '(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)',
-      '(a)-(iv), (b)-(iii), (c)-(i), (d)-(ii)'
+      '(1) (a) iv (b) iii (c) ii (d) i',
+      '(2) (a) iii (b) iv (c) i (d) ii',
+      '(3) (a) i (b) ii (c) iii (d) iv',
+      '(4) (a) ii (b) iii (c) i (d) iv'
     ],
-    correct: 1,
-    explanation: 'Guru Shikhar is in Aravalli Range (iii); Dhuandhar waterfall is on Narmada River (iv); Thalghat is a major pass in Western Ghats (i); Coral reefs form the Lakshadweep Islands (ii).',
+    correct: 0,
+    explanation: 'Guru Shikhar is the highest peak of the Aravalli Range (1,722 m). The Dhuandhar Falls are located on the Narmada River in Jabalpur, Madhya Pradesh. Thalghat is an important mountain pass located in the Western Ghats connecting Mumbai and Nashik, and the Lakshadweep Archipelago consists of coral reef islands.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-07',
-    source: 'SI 2022 Prelims',
+    uid: 'PYQ-3031',
+    source: 'SI 2023 Mains General Studies · Q102',
     tag: 'Greater Himalayas Peaks',
-    question: 'Gosainthan peak (Shishapangma) is situated in:',
+    question: 'Gosainthan peak is situated in :',
     options: [
       'Trans-Himalayas',
       'Greater-Himalayas',
@@ -1406,55 +1418,55 @@ const pyqList = reactive<PYQItem[]>([
       'Shiwalik Hills'
     ],
     correct: 1,
-    explanation: 'Gosainthan (Shishapangma, 8,027 m) is the 14th highest mountain in the world, located in the Greater Himalayas (Himadri) range.',
+    explanation: 'Gosainthan, also known as Shishapangma, is the 14th highest mountain peak in the world (8,027 m). It is located in Tibet, China, and belongs to the Greater Himalayas (Himadri) range.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-08',
-    source: 'Constable 2018 Mains',
+    uid: 'PYQ-0295',
+    source: 'Constable 2015 Prelims · Q96',
     tag: 'Shivalik Regional Names',
-    question: 'Read the following statements:\n(a) In Arunachal Pradesh, the Siwalik range of hills are called Mishmi hills.\n(b) Minicoy islands are located in the Arabian Sea.\n(c) Conifer wood is used as raw material to manufacture paper.\n\nThe correct answer is:',
+    question: 'Read the following statements (a) In Arunachal Pradesh, the Siwalik range of hills are called Mishimi hills. (b) Minicoy islands are located in the Arabian Sea. (c) Conifer wood is used as raw material to manufacture paper. The correct answer is',
     options: [
-      'Only (a) and (b) are correct',
-      'All (a), (b) and (c) are correct',
-      'Only (b) and (c) are correct',
-      'Only (a) and (c) are correct'
+      '(1) (a) is correct, but (b) and (c) are wrong',
+      '(2) All (a), (b) and (c) are correct',
+      '(3) (a) and (b) are correct, but (c) is wrong',
+      '(4) (b), (c) are correct, but (a) is wrong'
     ],
     correct: 1,
-    explanation: 'All three statements are correct. In Arunachal Pradesh, the Shivalik hills are called Dafla, Miri, Abor, and Mishmi hills; Minicoy is the southernmost island of Lakshadweep in Arabian Sea; Coniferous softwood from temperate Himalayas is the primary raw material for paper pulp.',
+    explanation: 'All three statements are correct: (a) In Arunachal Pradesh, the Outer Himalayas (Siwalik range) are locally known as Dafla, Miri, Abor, and Mishmi hills; (b) Minicoy Island is the southernmost island of the Lakshadweep group located in the Arabian Sea; and (c) Softwood from coniferous trees is a primary raw material used for wood pulp in paper manufacturing.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-MNT-09',
-    source: 'SI 2018 Prelims',
-    tag: 'Highest Peak South India',
-    question: 'Which is the highest peak in the Western Ghats and the entire South Indian peninsula?',
+    uid: 'PYQ-1506',
+    source: 'SI 2016 Final GS Paper · Q63',
+    tag: 'Highest Peak South India & Matching',
+    question: 'Match the following\nList - I\na) Sardar Sarovar dam\nb) Highest mountain peak in South India\nc) Todas\nd) Copper\nList - II\ni) Anaimudi\nii) Agnigundala\niii) Narmada\niv) Nilgiri',
     options: [
-      'Dodda Betta',
-      'Anamudi',
-      'Kalsubai',
-      'Mullayanagiri'
-    ],
-    correct: 1,
-    explanation: 'Anamudi (2,695 m), located in the Anamalai Hills of Kerala, is the highest peak in South India and the Western Ghats. Dodda Betta (2,637 m) is the highest peak in the Nilgiri Hills.',
-    selected: null,
-    revealed: false,
-  },
-  {
-    uid: 'PYQ-MNT-10',
-    source: 'Constable 2015 Prelims',
-    tag: 'Mountain Passes',
-    question: 'Which strategic mountain pass connects the city of Srinagar with Leh in Ladakh?',
-    options: [
-      'Shipki La',
-      'Nathu La',
-      'Zoji La',
-      'Bara-lacha La'
+      'a-iv, b-ii, c-i, d-iii',
+      'a-ii, b-iii, c-iv, d-i',
+      'a-iii, b-i, c-iv, d-ii',
+      'a-i, b-iv, c-iii, d-ii'
     ],
     correct: 2,
-    explanation: 'Zoji La (elevation 3,528 m) connects Srinagar with Dras and Leh across the Great Himalayan range on National Highway 1D.',
+    explanation: 'Sardar Sarovar Dam is constructed across the Narmada River in Gujarat. Anaimudi (2,695 m) is the highest peak in Peninsular/South India. The Toda tribe resides primarily in the Nilgiri Hills, while Agnigundala in Andhra Pradesh is famous for its copper ore deposits.',
+    selected: null,
+    revealed: false,
+  },
+  {
+    uid: 'PYQ-1821',
+    source: 'SI 2016 Prelims Paper · Q153',
+    tag: 'Mountain Passes Matching',
+    question: 'Match the following\nList-I\n(a) Banihal pass\n(b) Rohtang pass\n(c) Niti pass\n(d) Nathu La pass\nList-II\n(i) Jammu & Kashmir\n(ii) Himachal Pradesh\n(iii) Uttarakhand\n(iv) Sikkim\nCorrect answer is',
+    options: [
+      '(1) (a) (iv) (b) (iii) (c) (ii) (d) (i)',
+      '(2) (a) (i) (b) (ii) (c) (iii) (d) (iv)',
+      '(3) (a) (iv) (b) (iii) (c) (i) (d) (ii)',
+      '(4) (a) (i) (b) (ii) (c) (iv) (d) (iii)'
+    ],
+    correct: 1,
+    explanation: 'Banihal Pass connects Jammu with Srinagar in Jammu & Kashmir. Rohtang Pass is located in the Pir Panjal range in Himachal Pradesh. Niti Pass is a high mountain pass in Uttarakhand connecting to Tibet, while Nathu La is a famous pass in Sikkim.',
     selected: null,
     revealed: false,
   }

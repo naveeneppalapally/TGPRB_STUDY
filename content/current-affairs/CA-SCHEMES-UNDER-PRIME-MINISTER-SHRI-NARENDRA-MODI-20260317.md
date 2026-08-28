@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Viksit Bharat - G RAM G Scheme"
-related_topic_ids: ["NOTE-SCHEMES-RURAL", "NOTE-ECON-EMPLOYMENT", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-SCHEMES-RURAL", "NOTE-ECON-EMPLOYMENT", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

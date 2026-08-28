@@ -24,7 +24,7 @@
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
             <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 2-3 Questions (3-4 Marks)</span>
-            <span class="chip">22 verified PYQs</span>
+            <span class="chip">10 verified PYQs</span>
             <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
@@ -1170,162 +1170,162 @@ interface PYQItem {
 
 const pyqList = reactive<PYQItem[]>([
   {
-    uid: 'PYQ-DAM-01',
-    source: 'Constable 2018 Mains',
+    uid: 'PYQ-0510',
+    source: 'Constable 2018 Mains · Q89',
     tag: 'Dam ↔ River Matching',
     question: 'Matatilla Project was built on which of the following rivers?',
     options: [
-      'Ken',
-      'Chambal',
+      'Mahanadi',
+      'Kosi',
       'Betwa',
-      'Son'
+      'Damodar'
     ],
     correct: 2,
-    explanation: 'Matatilla Dam is a joint multipurpose project of Uttar Pradesh and Madhya Pradesh built on the Betwa River in Lalitpur district, UP.',
+    explanation: 'The Matatilla Dam project was constructed in 1958 across the Betwa River in Lalitpur district, Uttar Pradesh. It provides water for irrigation and power generation in Uttar Pradesh and Madhya Pradesh.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-02',
-    source: 'Constable 2022 Prelims',
+    uid: 'PYQ-1010',
+    source: 'Constable 2022 Prelims · Q192',
     tag: 'Dam ↔ River Matching',
     question: 'Ukai dam is situated across which of the following rivers?',
     options: [
       'Tapi',
       'Narmada',
-      'Sabarmati',
-      'Mahi'
+      'Kaveri',
+      'Chambal'
     ],
     correct: 0,
-    explanation: 'Ukai Dam (also known as Vallabh Sagar) is constructed across the Tapi River in Surat/Tapi district of Gujarat. It is the second largest reservoir in Gujarat after Sardar Sarovar.',
+    explanation: 'The Ukai Dam, constructed across the Tapi River in the Tapi district of Gujarat, is the second largest reservoir in Gujarat after the Sardar Sarovar Dam. It is an earth-cum-masonry dam used for irrigation, power generation, and flood control.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-03',
-    source: 'SI 2016 Final GS Paper',
+    uid: 'PYQ-1513',
+    source: 'SI 2016 Final GS Paper · Q70',
     tag: 'Project ↔ State Matching',
-    question: 'Match the following:\nList - I (Project)\n(a) Rihand\n(b) Sileru\n(c) Mettur\n(d) Almatti\n\nList - II (State)\n(i) Karnataka\n(ii) Tamil Nadu\n(iii) Andhra Pradesh\n(iv) Uttar Pradesh',
+    question: 'Match the following\nList - I\nProject\na) Rihind\nb) Sileru\nc) Mettur\nd) Almatti\nList - II\nState\ni) Karnataka\nii) Tamilnadu\niii) Andhra Pradesh\niv) Uttar Pradesh',
     options: [
-      '(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)',
-      '(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)',
-      '(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)',
-      '(a)-(i), (b)-(iii), (c)-(ii), (d)-(iv)'
+      'a:iv, b:iii, c:ii, d:i',
+      'a:i, b:ii, c:iii, d:iv',
+      'a:iv, b:iii, c:i, d:ii',
+      'a:i, b:ii, c:iv, d:iii'
     ],
     correct: 0,
-    explanation: 'Rihand Project is in Uttar Pradesh (Sonbhadra); Sileru Project is in Andhra Pradesh / Odisha border; Mettur Dam is in Tamil Nadu (Cauvery); Almatti Dam is in Karnataka (Krishna).',
+    explanation: 'Rihand Project is located in Uttar Pradesh on the Rihand River; Sileru Hydroelectric Project is located in Andhra Pradesh; Mettur Dam is constructed across the Cauvery River in Tamil Nadu; and Almatti Dam is built across the Krishna River in Karnataka.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-04',
-    source: 'Constable 2015 Prelims',
+    uid: 'PYQ-0378',
+    source: 'Constable 2015 Prelims · Q184',
     tag: 'Historical Chief Engineer',
-    question: 'Name the Chief Engineer who designed many projects in Hyderabad State in the 20th Century?',
+    question: 'Name the Chief Engineer who designed many projects in Hyderabad State in 20th Century?',
     options: [
-      'Mir Alam',
+      'Nawab Ali Yayar Jung',
       'Nawab Ali Nawaz Jung',
-      'Mokshagundam Visvesvaraya',
-      'Arthur Cotton'
+      'Nawab Mirza Nawaz Jung',
+      'Nawab Mirza Moin Jung'
     ],
     correct: 1,
-    explanation: 'Nawab Ali Nawaz Jung Bahadur was the renowned Chief Engineer of Hyderabad State who designed Nizam Sagar on Manjeera, Osmansagar and Himayatsagar on Musi/Esi, and the Rajoli Banda Diversion Scheme (RDS).',
+    explanation: 'Nawab Ali Nawaz Jung Bahadur served as the Chief Engineer of Hyderabad State under the 7th Nizam, Mir Osman Ali Khan. He designed major irrigation and infrastructure landmarks including the Nizam Sagar Dam, Osmansagar, and Himayathsagar.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-05',
-    source: 'Constable 2016 Mains',
+    uid: 'PYQ-0386',
+    source: 'Constable 2015 Prelims · Q192',
     tag: 'Diversion Schemes',
-    question: 'On which river is the "Rajoli Banda Diversion Scheme" built?',
+    question: "On which river is the 'Rajoli Banda Diversion Scheme' built ?",
     options: [
       'Krishna',
-      'Godavari',
+      'Musi',
       'Manjeera',
       'Tungabhadra'
     ],
     correct: 3,
-    explanation: 'The Rajoli Banda Diversion Scheme (RDS) is an anicut constructed across the Tungabhadra River in Manvi taluk of Raichur (Karnataka), serving Mahbubnagar/Jogulamba Gadwal district of Telangana.',
+    explanation: 'The Rajolibanda Diversion Scheme (RDS) is an inter-state anicut constructed across the Tungabhadra River. It provides irrigation water to parts of Karnataka (Raichur district) and Telangana (Jogulamba Gadwal district).',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-06',
-    source: 'SI 2018 Mains Paper 4 GS',
+    uid: 'PYQ-0715',
+    source: 'Constable 2018 Prelims · Q95',
     tag: 'Hydroelectric Project Identification',
-    question: 'Which one of the following pairs related to hydro-electricity projects and rivers is NOT correct?',
+    question: 'Which one of the following pairs related to hydro-electricity projects and rivers is not correct?',
     options: [
       'Salal - Tapi',
-      'Shivanasamudram - Cauvery',
-      'Koyna - Koyna',
-      'Balimela - Sileru'
+      'Tehri - Bhagirathi',
+      'Dul-Hasti - Chenab',
+      'Jayakwadi - Godavari'
     ],
     correct: 0,
-    explanation: 'Salal Hydroelectric Project is constructed across the Chenab River in Reasi district of Jammu and Kashmir, NOT on Tapi River. Ukai project is on Tapi.',
+    explanation: 'The Salal Hydroelectric Power Station is built on the Chenab River in Jammu and Kashmir, not the Tapi River. Tehri Dam is located on the Bhagirathi River, Dul-Hasti on the Chenab River, and Jayakwadi Dam on the Godavari River.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-07',
-    source: 'Constable 2023 Mains Official',
+    uid: 'PYQ-1204',
+    source: 'Constable 2023 Mains Official · Q190',
     tag: 'Telangana Mega Projects',
-    question: 'Identify the name of the Governor who inaugurated the Kaleshwaram project in Telangana in June 2019?',
+    question: 'Identify the name of the Governor who inaugurated the Kaleshwaram project in Telangana ?',
     options: [
       'E.S.L. Narasimhan',
-      'Tamilisai Soundararajan',
-      'C. Vidyasagar Rao',
-      'Biswabhusan Harichandan'
+      'Tamil Sai Soundararajan',
+      'ND Tiwari',
+      'None of the above'
     ],
     correct: 0,
-    explanation: 'Governor E.S.L. Narasimhan inaugurated the Kaleshwaram Lift Irrigation Project at Medigadda (Lakshmi Barrage) on June 21, 2019, in the presence of Chief Ministers of Telangana, Andhra Pradesh, and Maharashtra.',
+    explanation: 'The Kaleshwaram Lift Irrigation Scheme (KLIS) was inaugurated on June 21, 2019, by Chief Minister K. Chandrashekar Rao along with the then Governor of Telangana, E.S.L. Narasimhan. The event was also attended by Maharashtra CM Devendra Fadnavis and Andhra Pradesh CM Y.S. Jagan Mohan Reddy.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-08',
-    source: 'SI 2016 Mains Paper 2',
-    tag: 'Dam ↔ River Matching',
-    question: 'Sardar Sarovar Dam is constructed across which of the following rivers?',
+    uid: 'PYQ-1506',
+    source: 'SI 2016 Final GS Paper · Q63',
+    tag: 'Dam ↔ River & Geographic Matching',
+    question: 'Match the following\nList - I\na) Sardar Sarovar dam\nb) Highest mountain peak in South India\nc) Todas\nd) Copper\nList - II\ni) Anaimudi\nii) Agnigundala\niii) Narmada\niv) Nilgiri',
     options: [
-      'Tapi',
-      'Mahi',
-      'Narmada',
-      'Luni'
+      'a-iv, b-ii, c-i, d-iii',
+      'a-ii, b-iii, c-iv, d-i',
+      'a-iii, b-i, c-iv, d-ii',
+      'a-i, b-iv, c-iii, d-ii'
     ],
     correct: 2,
-    explanation: 'Sardar Sarovar Dam is constructed across the Narmada River near Kevadiya (Navagam) in Gujarat, delivering irrigation water to Gujarat, Rajasthan, and Madhya Pradesh.',
+    explanation: 'Sardar Sarovar Dam is constructed across the Narmada River in Gujarat. Anaimudi (2,695 m) is the highest peak in Peninsular/South India. The Toda tribe resides primarily in the Nilgiri Hills, while Agnigundala in Andhra Pradesh is famous for its copper ore deposits.',
     selected: null,
     revealed: false,
   },
   {
-    uid: 'PYQ-DAM-09',
-    source: 'Constable 2018 Mains',
+    uid: 'PYQ-2512',
+    source: 'SI 2018 Prelims Paper 1 · Q162',
     tag: 'Environment Movements & Dams',
-    question: 'The Narmada Bachao Andolan (NBA) was a prominent social movement against the construction of large dams on Narmada River, led by:',
+    question: 'Match the following: List-I (a) Narmada bachao andolan (b) Chipko movement (c) Biodiversity concept (d) Vanajeevi List - II (i) Sunderlal Bahuguna (ii) Daripally Ramaiah (iii) Medha Patkar (iv) Edward O Wilson (v) Michael Greenstone Choose the correct answer/pairs :',
     options: [
-      'Sunderlal Bahuguna',
-      'Medha Patkar and Baba Amte',
-      'Gaura Devi',
-      'Pandurang Hegde'
-    ],
-    correct: 1,
-    explanation: 'Narmada Bachao Andolan (NBA) was spearheaded by Medha Patkar and Baba Amte against the height increase and displacement caused by the Sardar Sarovar Project on the Narmada River.',
-    selected: null,
-    revealed: false,
-  },
-  {
-    uid: 'PYQ-DAM-10',
-    source: 'Constable 2016 Prelims',
-    tag: 'Dam Superlatives',
-    question: 'Which is the longest composite earthen dam in India, built across the Mahanadi River?',
-    options: [
-      'Hirakud Dam',
-      'Bhakra Dam',
-      'Tehri Dam',
-      'Nagarjuna Sagar Dam'
+      '(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)',
+      '(a)-(ii), (b)-(i), (c)-(v), (d)-(iv)',
+      '(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)',
+      '(a)-(iii), (b)-(iv), (c)-(v), (d)-(i)'
     ],
     correct: 0,
-    explanation: 'Hirakud Dam in Sambalpur, Odisha, built across the Mahanadi River, is the longest earthen dam in the world with a total length of 25.8 km (main dam 4.8 km).',
+    explanation: "Medha Patkar led the Narmada Bachao Andolan, Sunderlal Bahuguna was a prominent leader of the Chipko Movement, Edward O. Wilson popularized the concept of biodiversity, and Padma Shri Daripally Ramaiah is popularly known as 'Vanajeevi Ramaiah' for his social forestry efforts in Telangana.",
+    selected: null,
+    revealed: false,
+  },
+  {
+    uid: 'PYQ-1532',
+    source: 'SI 2016 Final GS Paper · Q89',
+    tag: 'Dam ↔ River Matching',
+    question: 'Bhakra-Nangal project is constructed on the river',
+    options: [
+      'Ravi',
+      'Bias',
+      'Sutlej',
+      'Chenab'
+    ],
+    correct: 2,
+    explanation: "The Bhakra-Nangal Dam is one of India's earliest and largest multipurpose river valley projects, constructed on the Sutlej River near Bilaspur in Himachal Pradesh. The reservoir created by the dam is known as the Gobind Sagar lake.",
     selected: null,
     revealed: false,
   }

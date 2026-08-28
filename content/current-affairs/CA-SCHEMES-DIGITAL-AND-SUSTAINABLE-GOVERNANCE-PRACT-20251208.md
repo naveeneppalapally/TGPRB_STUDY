@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "AbhiLekhAbhi App and Special Campaign 5.0 Best Practices"
-related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-GOV-EGOVERNANCE", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-GOV-EGOVERNANCE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -24,7 +24,7 @@
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
             <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3–5 Questions (4–6 Marks)</span>
-            <span class="chip">28 verified PYQs</span>
+            <span class="chip">31 verified PYQs</span>
             <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
@@ -39,7 +39,7 @@
               <UIcon name="i-heroicons-queue-list" class="h-3.5 w-3.5" />6 sections
             </span>
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
-              <UIcon name="i-heroicons-clipboard-document-list" class="h-3.5 w-3.5" />10 practice PYQs
+              <UIcon name="i-heroicons-clipboard-document-list" class="h-3.5 w-3.5" />31 practice PYQs
             </span>
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
               <UIcon name="i-heroicons-clock" class="h-3.5 w-3.5" />~16 min read
@@ -158,7 +158,7 @@
               Why this topic matters for TGPRB
             </p>
             <p class="callout-body">
-              28 verified PYQs across Constable + SI papers (2015–2023). Expect 2–3 per paper.
+              31 verified PYQs across Constable + SI papers (2015–2023). Expect 2–3 per paper.
               Top question types follow the coverage strip above: tributaries, dam–river–state,
               waterfalls, doabs and drainage termination.
             </p>
@@ -421,37 +421,37 @@
                 alt="Godavari River Basin Map showing Pravara Manjira Penganga Wardha Wainganga Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Godavari River Basin (RiversInsight Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Godavari River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Krishna River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558594/geography/krishna-river-map.webp"
+                src="/images/geography/krishna-river-map.webp"
                 alt="Krishna River Basin Map showing Bhima Musi Tungabhadra Malprabha tributaries across Maharashtra Karnataka Andhra Pradesh Telangana"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Krishna River Basin (RiversInsight Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Krishna River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Mahanadi River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558593/geography/mahanadi-river-map.webp"
+                src="/images/geography/mahanadi-river-map.webp"
                 alt="Mahanadi River System Map showing Seonath Hasdeo Mand Ib Tel Jonk tributaries"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Mahanadi River Basin (UPSC Notes Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Mahanadi River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Cauvery River Basin Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558595/geography/cauvery-river-map.webp"
+                src="/images/geography/cauvery-river-map.webp"
                 alt="Cauvery Kaveri River System Map showing Harangi Hemavati Arkavathi Kabini Bhavani Amaravathi tributaries"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Cauvery / Kaveri River Basin (Testbook Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Cauvery / Kaveri River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
           </div>
 
@@ -502,21 +502,21 @@
             <!-- Narmada River Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558593/geography/narmada-river-map.webp"
+                src="/images/geography/narmada-river-map.webp"
                 alt="Narmada River System Map showing Amarkantak origin, rift valley between Vindhya and Satpura ranges, Sardar Sarovar dam"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Narmada River System (Rau IAS Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Narmada River System (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Tapi River Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
               <img
-                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558592/geography/tapi-river-map.webp"
+                src="/images/geography/tapi-river-map.webp"
                 alt="Tapi River System Map showing Multai origin in Betul MP, Ukai dam, Gulf of Khambhat estuary"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Tapi River System (Rau IAS Exam Diagram)</p>
+              <p class="mt-2 text-[11px] text-gray-400 font-mono">Tapi River System (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
           </div>
 

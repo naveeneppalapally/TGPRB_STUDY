@@ -5,7 +5,7 @@ category: "schemes"
 exam_section: "Geography"
 topic: "Mountains, Ranges & Passes of India"
 related_topic_ids:
-  - \"NOTE-POL-UNION-EXEC\"
+  - "NOTE-POL-UNION-EXEC"
   - "NOTE-GEO-MOUNTAINS"
 is_telangana_focus: false
 difficulty: "M"

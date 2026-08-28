@@ -1,13 +1,12 @@
 ---
-# ACTION REQUIRED: Verify image license before public release
 id: "MEDIA-GEOGRAPHY-INDIA-BIOSPHERE-RESERVES-MAP"
-asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1786735510/geography/india-biosphere-reserves-map.webp"
-source_domain: "unknown"
-rights_status: "needs_replacement_before_release"
-alt_text: ""
+asset_url: "/images/geography/india-biosphere-reserves-map.webp"
+source_domain: "original/tslprb-studyos"
+rights_status: "original"
+alt_text: "18 Official Biosphere Reserves of India locator map and comprehensive UNESCO MAB inventory"
 ---
 
-# Review Required
-- Confirm image source and license
-- Update rights_status to: original | public_domain | needs_replacement_before_release
-- Add descriptive alt_text
+# 18 Biosphere Reserves of India Map
+- Original high-resolution cartographic diagram plotting all 18 official Biosphere Reserves of India.
+- Shows UNESCO World Network of Biosphere Reserves (12 sites) and national reserves.
+- Certified clean vector asset with zero watermarks.

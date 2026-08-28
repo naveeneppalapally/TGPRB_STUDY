@@ -24,7 +24,7 @@
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
             <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3-4 Questions (4-5 Marks)</span>
-            <span class="chip">38 verified PYQs</span>
+            <span class="chip">10 verified PYQs</span>
             <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
@@ -122,8 +122,8 @@
                   <span class="chip chip-mono text-[10px]">18 Reserves</span>
                 </div>
                 <img
-                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786735510/geography/india-biosphere-reserves-map.webp"
-                  alt="Biosphere Reserves in India map indicating Nilgiri, Nanda Devi, Sundarban, Gulf of Mannar, Simlipal, and Pachmarhi"
+                  src="/images/geography/india-biosphere-reserves-map.webp"
+                  alt="18 Official Biosphere Reserves of India locator map and comprehensive UNESCO MAB inventory"
                   class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
                   loading="lazy"
                 />
@@ -620,7 +620,7 @@
             </div>
 
             <p class="mt-3 text-body-xs t-lo font-mono">
-              Source: India State of Forest Report (ISFR), Forest Survey of India (Ministry of Environment, Forest and Climate Change).
+              Source: India State of Forest Report (ISFR 2021), Forest Survey of India (MoEFCC). ISFR 2023/2025 assessment data in release cycle - verify against latest official publication before exam.
             </p>
           </div>
         </section>
@@ -980,104 +980,99 @@ const sections = [
 
 const pyqDrill = [
   {
-    source: 'TSLPRB SI 2022 Prelims',
-    topic: 'Forest Cover State Ranking',
-    question: 'The state having the largest area of forest cover in India is:',
-    options: ['Arunachal Pradesh', 'Madhya Pradesh', 'Chhattisgarh', 'Maharashtra'],
-    answer: 1,
-    explanation: 'According to the Forest Survey of India (ISFR), Madhya Pradesh has the largest area of forest cover (77,493 sq km) in the country, followed by Arunachal Pradesh and Chhattisgarh.'
+    uid: 'PYQ-1815',
+    source: 'SI 2016 Prelims Paper · Q147',
+    topic: 'Forest Cover Area Ranking',
+    question: 'The state having largest area of forest cover in India is',
+    options: ['Madhya Pradesh', 'Assam', 'Arunachal Pradesh', 'Haryana'],
+    answer: 0,
+    explanation: 'According to the India State of Forest Report (ISFR), Madhya Pradesh has the largest forest cover in India in terms of area, followed by Arunachal Pradesh and Chhattisgarh. In contrast, Mizoram has the highest forest cover relative to its total geographical area (percentage basis).'
   },
   {
-    source: 'TSLPRB Constable 2018 Mains',
+    uid: 'PYQ-1533',
+    source: 'SI 2016 Final GS Paper · Q90',
     topic: 'Least Forested State',
-    question: 'The state with the least forested area (lowest percentage of forest cover) in India is:',
-    options: ['Punjab', 'Haryana', 'Rajasthan', 'Uttar Pradesh'],
-    answer: 1,
-    explanation: 'Haryana has the lowest forest cover in India as a percentage of geographical area (~3.63%), followed closely by Punjab (~3.67%).'
+    question: 'The state with least forested area is',
+    options: ['Rajasthan', 'Punjab', 'Haryana', 'Gujarat'],
+    answer: 2,
+    explanation: 'According to the India State of Forest Report (ISFR), Haryana has the lowest forest cover in terms of total area (around 1,603 sq km) as well as percentage of geographical area (~3.63%) among all Indian states. It is closely followed by Punjab.'
   },
   {
-    source: 'TSLPRB SI 2018 Mains GS',
+    uid: 'PYQ-1212',
+    source: 'Constable 2023 Mains Official · Q199',
     topic: 'Telangana Tiger Reserves',
-    question: 'Identify the declared Tiger Reserve Forests in Telangana State:',
-    options: [
-      'Kawal and Amrabad Tiger Reserves',
-      'Pakhal and Eturnagaram Sanctuaries',
-      'Pocharam and Manjira Sanctuaries',
-      'Kinnerasani and Shivaram Sanctuaries'
-    ],
-    answer: 0,
-    explanation: 'Telangana has two declared Tiger Reserves: Kawal Tiger Reserve (in Mancherial/Adilabad/KB Asifabad/Nirmal) and Amrabad Tiger Reserve (in Nagarkurnool and Nalgonda in Nallamala).'
+    question: 'Identify the Tiger Reserve Forests in Telangana State:',
+    options: ['Srisailam Tiger Reserve only', 'Kaval Tiger Reserve only', 'Amrabad Tiger Reserve only', 'All of the above'],
+    answer: 3,
+    explanation: "Telangana state features key tiger reserves including Amrabad Tiger Reserve (located in Nallamala forest track across Nagarkurnool and Nalgonda districts, formerly part of Nagarjunsagar-Srisailam Tiger Reserve) and Kawal Tiger Reserve (located in Mancherial, Asifabad, Adilabad, and Nirmal districts). Since multiple choices represent notified tiger reserves connected to Telangana's forest network, 'All of the above' is the correct answer."
   },
   {
-    source: 'TSLPRB SI 2016 Final GS Paper',
+    uid: 'PYQ-0143',
+    source: 'Constable 2015 Mains · Q143',
     topic: 'Telangana Wildlife Sanctuaries',
-    question: 'The Shivaram Wildlife Sanctuary is located in which of the following districts of Telangana?',
-    options: ['Mancherial / Peddapalli', 'Mulugu', 'Warangal Rural', 'Khammam'],
-    answer: 0,
-    explanation: 'Shivaram Wildlife Sanctuary is situated along River Godavari across Mancherial and Peddapalli districts, noted for the conservation of freshwater marsh crocodiles (Muggers).'
+    question: 'The Shivaram Wildlife Sanctuary is located in which of the following districts of Telangana',
+    options: ['Adilabad - Nizamabad', 'Mahabubnagar - Medak', 'Karimnagar - Warangal', 'Adilabad - Karimnagar'],
+    answer: 3,
+    explanation: 'Shivaram Wildlife Sanctuary is located along the banks of the Godavari River in the erstwhile undivided Adilabad and Karimnagar districts (presently Mancherial and Peddapalli). It is renowned for its riverine forest flora and population of freshwater marsh crocodiles (muggers).'
   },
   {
-    source: 'TSLPRB SI 2023 Mains GS',
-    topic: 'Protected Areas Matching',
-    question: 'Match the following National Parks with their respective States:\\n(a) Bandipur\\n(b) Corbett\\n(c) Kanha\\n(d) Dudhwa\\n\\n(i) Uttar Pradesh\\n(ii) Madhya Pradesh\\n(iii) Uttarakhand\\n(iv) Karnataka',
-    options: [
-      '(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)',
-      '(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)',
-      '(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)',
-      '(a)-(i), (b)-(iv), (c)-(ii), (d)-(iii)'
-    ],
+    uid: 'PYQ-1509',
+    source: 'SI 2016 Final GS Paper · Q66',
+    topic: 'National Parks & States',
+    question: 'Match the following List - I: a) Bandipur, b) Corbett, c) Kanha, d) Dhudwa. List - II: i) Uttar Pradesh, ii) Madhya Pradesh, iii) Uttarakhand, iv) Karnataka.',
+    options: ['a-iv, b-iii, c-ii, d-i', 'a-i, b-ii, c-iii, d-iv', 'a-iv, b-iii, c-i, d-ii', 'a-i, b-ii, c-iv, d-iii'],
     answer: 0,
-    explanation: 'Bandipur is in Karnataka; Jim Corbett is in Uttarakhand; Kanha is in Madhya Pradesh; Dudhwa is in Uttar Pradesh.'
+    explanation: 'Bandipur National Park is located in Karnataka, Jim Corbett National Park in Uttarakhand, Kanha National Park in Madhya Pradesh, and Dudhwa National Park in Uttar Pradesh.'
   },
   {
-    source: 'TSLPRB SI 2018 Prelims',
-    topic: 'Endangered Species Habitat',
-    question: "'Hangul' (Kashmir Stag) is a critically endangered species found mainly in the State / UT of:",
-    options: ['Himachal Pradesh', 'Jammu & Kashmir (Dachigam NP)', 'Uttarakhand (Valley of Flowers)', 'Sikkim (Khangchendzonga)'],
+    uid: 'PYQ-0733',
+    source: 'Constable 2018 Prelims · Q113',
+    topic: 'Endangered Species (Hangul)',
+    question: "'Hangul' is a critically endangered species found mainly in the State of",
+    options: ['Arunachal Pradesh', 'Jammu & Kashmir', 'Kerala', 'Tamil Nadu'],
     answer: 1,
-    explanation: 'Hangul (Cervus hanglu hanglu), the state animal of Jammu & Kashmir, is strictly conserved in Dachigam National Park near Srinagar.'
+    explanation: 'Hangul, also known as the Kashmir Stag, is a critically endangered subspecies of red deer native to India. It is mainly found in Dachigam National Park located near Srinagar in Jammu & Kashmir.'
   },
   {
-    source: 'TSLPRB Constable 2016 Prelims',
-    topic: 'Unique National Parks',
-    question: "'Bison' (Rajbari) National Park is situated in which Indian state?",
-    options: ['Tripura', 'Assam', 'Manipur', 'Meghalaya'],
-    answer: 0,
-    explanation: 'Bison (Rajbari) National Park is located in the Trishna Wildlife Sanctuary in South Tripura district of Tripura.'
+    uid: 'PYQ-1149',
+    source: 'Constable 2023 Mains Official · Q134',
+    topic: 'Rajbari National Park',
+    question: "'Bison' National park is situated in",
+    options: ['Madhya Pradesh', 'Tripura', 'West Bengal', 'Manipur'],
+    answer: 1,
+    explanation: 'Bison National Park (also known as Rajbari National Park) is located in the South Tripura district of Tripura. It was established within the Trishna Wildlife Sanctuary to protect the Indian Bison (Gaur) and conserve local biodiversity.'
   },
   {
-    source: 'TSLPRB SI 2016 Mains Paper 2',
+    uid: 'PYQ-1008',
+    source: 'Constable 2022 Prelims · Q190',
     topic: 'Fossil National Parks',
-    question: 'Ghughua Fossil National Park is located in:',
-    options: ['Madhya Pradesh', 'Rajasthan', 'Gujarat', 'Maharashtra'],
-    answer: 0,
-    explanation: 'Ghughua Fossil National Park is located near Dindori in Madhya Pradesh, containing plant fossils dating back 65 million years.'
+    question: 'Ghughua Fossil Park is located in',
+    options: ['Tamil Nadu', 'Rajasthan', 'Madhya Pradesh', 'Chhattisgarh'],
+    answer: 2,
+    explanation: 'Ghughua Fossil National Park is located in the Dindori district of Madhya Pradesh. It contains rare plant fossils, including petrified tree trunks and palm fossils dating back 40 to 70 million years ago.'
   },
   {
-    source: 'TSLPRB Constable 2018 Prelims',
-    topic: 'Environmental Movements',
-    question: 'Match the following Environmental Movements in India with their leaders / locations:\\n(a) Chipko Movement\\n(b) Appiko Movement\\n(c) Silent Valley Movement\\n(d) Narmada Bachao Andolan\\n\\n(i) Medha Patkar\\n(ii) Sunderlal Bahuguna / Gaura Devi (Uttarakhand)\\n(iii) Pandurang Hegde (Karnataka)\\n(iv) Kerala Sastra Sahitya Parishad',
+    uid: 'PYQ-2512',
+    source: 'SI 2018 Prelims Paper 1 · Q162',
+    topic: 'Environmental Movements Match',
+    question: 'Match the following: List-I (a) Narmada bachao andolan (b) Chipko movement (c) Biodiversity concept (d) Vanajeevi List - II (i) Sunderlal Bahuguna (ii) Daripally Ramaiah (iii) Medha Patkar (iv) Edward O Wilson (v) Michael Greenstone Choose the correct answer/pairs :',
     options: [
+      '(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)',
+      '(a)-(ii), (b)-(i), (c)-(v), (d)-(iv)',
       '(a)-(ii), (b)-(iii), (c)-(iv), (d)-(i)',
-      '(a)-(i), (b)-(iii), (c)-(iv), (d)-(ii)',
-      '(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)',
-      '(a)-(iii), (b)-(ii), (c)-(i), (d)-(iv)'
+      '(a)-(iii), (b)-(iv), (c)-(v), (d)-(i)'
     ],
     answer: 0,
-    explanation: 'Chipko was led by Bahuguna & Gaura Devi in Uttarakhand; Appiko was led by Pandurang Hegde in Western Ghats, Karnataka; Silent Valley was spearheaded by KSSP in Kerala; NBA was led by Medha Patkar & Baba Amte.'
+    explanation: "Medha Patkar led the Narmada Bachao Andolan, Sunderlal Bahuguna was a prominent leader of the Chipko Movement, Edward O. Wilson popularized the concept of biodiversity, and Padma Shri Daripally Ramaiah is popularly known as 'Vanajeevi Ramaiah' for his social forestry efforts in Telangana."
   },
   {
-    source: 'TSLPRB Constable 2022 Prelims',
-    topic: 'Biosphere Reserve Components',
-    question: "India's 'Valley of Flowers' is a constituent part of which Biosphere Reserve?",
-    options: [
-      'Nanda Devi Biosphere Reserve',
-      'Nilgiri Biosphere Reserve',
-      'Pachmarhi Biosphere Reserve',
-      'Kanchenjunga Biosphere Reserve'
-    ],
+    uid: 'PYQ-1483',
+    source: 'SI 2016 Final GS Paper · Q40',
+    topic: 'Biosphere Reserve Statements',
+    question: "Read the following statements:\nA) India's 'Valley of Flowers' is a part of Nanda Devi Biosphere Reserve.\nB) It is India's second biosphere reserve established in 1986.\nC) It is located in Tamil Nadu, Kerala and Karnataka.\nChoose the correct statements",
+    options: ['A&B', 'B & C', 'A, B & C', 'C&A'],
     answer: 0,
-    explanation: 'The Valley of Flowers National Park in Chamoli district of Uttarakhand forms the core zone of the UNESCO-inscribed Nanda Devi Biosphere Reserve.'
+    explanation: 'Valley of Flowers National Park is located in Uttarakhand and forms part of the Nanda Devi Biosphere Reserve (Statement A is correct). Statement C incorrectly claims it is located in South India (TN, Kerala, Karnataka), which describes the Nilgiri Biosphere Reserve. By eliminating Statement C, Options 2, 3, and 4 are ruled out, leaving Option 1 (A&B) as the correct choice.'
   }
 ]
 

@@ -5,7 +5,7 @@ category: "geography"
 exam_section: "Indian & World Geography"
 topic: "Groundwater Resources in India"
 related_topic_ids:
-  - \"NOTE-GEO-IRRIGATION\"
+  - "NOTE-GEO-IRRIGATION"
   - "NOTE-GEO-DRAINAGE"
   - "NOTE-GEO-ENVIRONMENT"
 is_telangana_focus: false

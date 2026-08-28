@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "3rd Regional Meeting of Urban Development Ministers"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-URBAN-DEV", \"NOTE-GEO-IRRIGATION\"]
+related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-URBAN-DEV", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

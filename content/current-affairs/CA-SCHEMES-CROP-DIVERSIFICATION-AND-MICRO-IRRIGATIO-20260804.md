@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Geography"
 topic: "ICAR Crop Diversification and Water-Intensive Crops Assessment"
-related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCH-FARMING", \"NOTE-GEO-IRRIGATION\"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCH-FARMING", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

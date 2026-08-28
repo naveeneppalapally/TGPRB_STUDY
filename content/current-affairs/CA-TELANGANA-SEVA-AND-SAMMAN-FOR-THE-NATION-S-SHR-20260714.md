@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Inauguration of ESIC Hospital OPD Block at Sanathnagar"
-related_topic_ids: ["NOTE-TEL-INFRASTRUCTURE", "NOTE-SCHEMES-HEALTH", \"NOTE-GEO-DAMS\"]
+related_topic_ids: ["NOTE-TEL-INFRASTRUCTURE", "NOTE-SCHEMES-HEALTH", "NOTE-GEO-DAMS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

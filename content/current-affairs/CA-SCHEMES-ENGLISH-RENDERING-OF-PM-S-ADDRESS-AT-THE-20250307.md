@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Surat Food Security Saturation Campaign"
-related_topic_ids: ["NOTE-SCH-FOOD", "NOTE-SCH-POVERTY", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-SCH-FOOD", "NOTE-SCH-POVERTY", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

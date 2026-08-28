@@ -18,7 +18,8 @@ published_at: "2026-08-11"
 date: "2026-08-11"
 source_name: "PIB"
 source_type: "official"
-ministry: "Ministry of Agriculture & Farmers Welfare"
+ministry: "Ministry of Agriculture &
+ Farmers Welfare"
 canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2297739&reg=3&lang=1"
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2297739&reg=3&lang=1"
 event_key: "KALANAMAK-RICE-PRODUCTION-2026"
@@ -40,7 +41,7 @@ mcqs:
       - "Buddha Rice"
       - "Terai Gold Rice"
     answer: 2
-    explanation: "Branding of Kalanamak rice as \"Buddha Rice\" promotes its cultural legacy to target high-value markets in Buddhist nations such as Japan, Thailand, Vietnam, Singapore, and Myanmar."
+    explanation: "Branding of Kalanamak rice as 'Buddha Rice' promotes its cultural legacy to target high-value markets in Buddhist nations such as Japan, Thailand, Vietnam, Singapore, and Myanmar."
   - exam_fact: "Under the PM Formalisation of Micro Food Processing Enterprises (PMFME) and One District One Product (ODOP) Margin Money Scheme, micro-units and FPOs receive credit-linked capital subsidies up to 35% (max ₹10 lakh)."
     question: "What is the maximum credit-linked capital subsidy provided for setting up Kalanamak processing/milling units under the PMFME and ODOP schemes?"
     options:

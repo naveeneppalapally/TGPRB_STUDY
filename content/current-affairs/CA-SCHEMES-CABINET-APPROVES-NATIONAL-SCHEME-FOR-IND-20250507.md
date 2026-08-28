@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "National ITI Upgradation Scheme and NCOEs"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INITIATIVES", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INITIATIVES", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

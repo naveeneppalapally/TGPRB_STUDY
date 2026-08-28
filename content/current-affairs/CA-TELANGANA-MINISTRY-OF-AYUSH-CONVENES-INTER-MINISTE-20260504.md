@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "12th International Day of Yoga 2026 Planning"
-related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-GEN-HEALTH", \"NOTE-TEL-MOVEMENT\"]
+related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-GEN-HEALTH", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

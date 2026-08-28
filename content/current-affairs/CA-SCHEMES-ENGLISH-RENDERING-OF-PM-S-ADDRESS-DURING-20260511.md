@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Somnath Amrit Mahotsav and Sardardham Projects"
-related_topic_ids: ["NOTE-GS-CULTURE", "NOTE-SCHEMES-EDU", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-GS-CULTURE", "NOTE-SCHEMES-EDU", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

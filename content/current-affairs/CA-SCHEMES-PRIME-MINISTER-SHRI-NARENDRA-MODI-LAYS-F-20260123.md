@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM SVANidhi Credit Card Launch"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ST-INNOVATION", \"NOTE-POL-UNION-EXEC\"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ST-INNOVATION", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

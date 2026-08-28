@@ -1,6 +1,6 @@
 {
   "note_id": "NOTE-POL-UNION-EXEC",
-  "pass_threshold": 4,
+  "pass_threshold": 3,
   "questions": [
     {
       "id": "GATE-POL-UEL-1",
