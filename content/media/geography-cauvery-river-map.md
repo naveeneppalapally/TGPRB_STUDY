@@ -1,7 +1,7 @@
 ---
 # ACTION REQUIRED: Verify image license before public release
 id: "MEDIA-GEOGRAPHY-CAUVERY-RIVER-MAP"
-asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1786558595/geography/cauvery-river-map.webp"
+asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1787940469/geography/cauvery-river-map.webp"
 source_domain: "unknown"
 rights_status: "needs_replacement_before_release"
 alt_text: ""

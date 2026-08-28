@@ -122,7 +122,7 @@
                   <span class="chip chip-mono text-[10px]">18 Reserves</span>
                 </div>
                 <img
-                  src="/images/geography/india-biosphere-reserves-map.webp"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940467/geography/india-biosphere-reserves-map.webp"
                   alt="18 Official Biosphere Reserves of India locator map and comprehensive UNESCO MAB inventory"
                   class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
                   loading="lazy"

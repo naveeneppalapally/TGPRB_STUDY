@@ -506,7 +506,7 @@
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
                   <div class="aspect-video w-full overflow-hidden bg-inset flex items-center justify-center p-1 bg-white dark:bg-stone-900">
                     <img
-                      src="/images/geography/indira-gandhi-canal-route.webp"
+                      src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940467/geography/indira-gandhi-canal-route.webp"
                       alt="Indira Gandhi Lift Canal schematic route and distribution branches"
                       class="max-h-full max-w-full object-contain"
                       loading="lazy"

@@ -1,7 +1,7 @@
 ---
 # ACTION REQUIRED: Verify image license before public release
 id: "MEDIA-GEOGRAPHY-TAPI-RIVER-MAP"
-asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1786558592/geography/tapi-river-map.webp"
+asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1787940463/geography/tapi-river-map.webp"
 source_domain: "unknown"
 rights_status: "needs_replacement_before_release"
 alt_text: ""

@@ -141,7 +141,7 @@
                   <span class="chip chip-mono text-[10px]">Passes &amp; Summits</span>
                 </div>
                 <img
-                  src="/images/geography/himalayan-passes-and-summits-map.webp"
+                  src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940468/geography/himalayan-passes-and-summits-map.webp"
                   alt="High-contrast Mountain Passes and Eight-Thousander Summits Locator Map showing KLZPS order, pass connectivity, and summit heights"
                   class="w-full h-auto max-h-[380px] object-contain rounded-lg bg-inset"
                   loading="lazy"
@@ -466,7 +466,7 @@
             <!-- Mountain Passes & Eight-Thousander Summits Locator Map -->
             <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-3 text-center shadow-sm">
               <img
-                src="/images/geography/himalayan-passes-and-summits-map.webp"
+                src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940468/geography/himalayan-passes-and-summits-map.webp"
                 alt="Himalayan Mountain Passes &amp; Eight-Thousander Summits locator diagram showing KLZPS order and peak elevations"
                 class="mx-auto block w-full max-w-3xl h-auto object-contain rounded-lg"
                 loading="lazy"

@@ -1,7 +1,7 @@
 ---
 # ACTION REQUIRED: Verify image license before public release
-id: "MEDIA-GEOGRAPHY-INDIRA-GANDHI-CANAL-ROUTE"
-asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1787940467/geography/indira-gandhi-canal-route.webp"
+id: "MEDIA-GEOGRAPHY-HIMALAYAN-PASSES-AND-SUMMITS-MAP"
+asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1787940468/geography/himalayan-passes-and-summits-map.webp"
 source_domain: "unknown"
 rights_status: "needs_replacement_before_release"
 alt_text: ""

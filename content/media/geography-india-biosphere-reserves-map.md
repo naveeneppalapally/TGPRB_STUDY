@@ -1,6 +1,6 @@
 ---
 id: "MEDIA-GEOGRAPHY-INDIA-BIOSPHERE-RESERVES-MAP"
-asset_url: "/images/geography/india-biosphere-reserves-map.webp"
+asset_url: "https://res.cloudinary.com/gbxjgmck/image/upload/v1787940467/geography/india-biosphere-reserves-map.webp"
 source_domain: "original/tslprb-studyos"
 rights_status: "original"
 alt_text: "18 Official Biosphere Reserves of India locator map and comprehensive UNESCO MAB inventory"
