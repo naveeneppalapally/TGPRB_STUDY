@@ -192,11 +192,13 @@
       </div>
     </section>
 
-    <!-- Color Mode -->
+    <!-- Appearance & Theme Section -->
     <section class="mb-8">
-      <h2 class="mb-1 text-[13px] font-semibold uppercase tracking-wider t-lo">Appearance</h2>
-      <div class="mt-3 rounded-xl border b-line bg-elev p-5">
-        <div class="flex items-center justify-between gap-6">
+      <h2 class="mb-1 text-[13px] font-semibold uppercase tracking-wider t-lo">Appearance & Theme</h2>
+      <div class="mt-3 rounded-xl border b-line bg-elev p-5 space-y-6">
+        
+        <!-- Color Mode -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b b-line">
           <div>
             <p class="text-[15px] font-medium t-hi">Color mode</p>
             <p class="mt-0.5 text-[13px] t-lo">Switch between light and dark themes.</p>
@@ -222,6 +224,174 @@
             </div>
           </ClientOnly>
         </div>
+
+        <!-- Theme Presets Selection Grid -->
+        <div>
+          <div class="mb-4">
+            <p class="text-[15px] font-medium t-hi">Theme Presets</p>
+            <p class="mt-0.5 text-[13px] t-lo">Choose your study interface aesthetic and tactile styling.</p>
+          </div>
+
+          <ClientOnly>
+            <div class="grid gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Theme presets">
+              <button
+                v-for="opt in themePresets"
+                :key="opt.id"
+                type="button"
+                class="group rounded-lg border p-4 text-left transition-all duration-150 flex flex-col justify-between"
+                :class="preset === opt.id
+                  ? 'border-saffron-500 bg-saffron-50/60 dark:bg-saffron-950/30 shadow-sm ring-1 ring-saffron-500/30'
+                  : 'b-line bg-sub hover:border-saffron-300 dark:hover:border-saffron-800'"
+                role="radio"
+                :aria-checked="preset === opt.id"
+                @click="setPreset(opt.id)"
+              >
+                <div>
+                  <div class="flex items-start justify-between gap-2">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <UIcon
+                        :name="opt.icon"
+                        class="h-4 w-4 shrink-0"
+                        :class="preset === opt.id ? 'text-saffron-600 dark:text-saffron-400' : 't-lo'"
+                      />
+                      <span class="text-[14px] font-semibold t-hi">{{ opt.label }}</span>
+                      <span
+                        v-if="opt.badge"
+                        class="rounded bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider font-mono"
+                      >
+                        {{ opt.badge }}
+                      </span>
+                    </div>
+
+                    <UIcon
+                      v-if="preset === opt.id"
+                      name="i-heroicons-check-circle-20-solid"
+                      class="h-5 w-5 text-saffron-600 dark:text-saffron-400 shrink-0"
+                    />
+                    <div
+                      v-else
+                      class="h-4 w-4 rounded-full border border-stone-300 dark:border-stone-600 shrink-0 mt-0.5"
+                    />
+                  </div>
+
+                  <span class="mt-1.5 block text-[12px] font-medium text-stone-700 dark:text-stone-300">
+                    {{ opt.subtitle }}
+                  </span>
+                  <span class="mt-1 block text-[12px] leading-relaxed t-lo">
+                    {{ opt.description }}
+                  </span>
+                </div>
+
+                <!-- Swatches -->
+                <div class="mt-4 flex items-center justify-between border-t b-line pt-2.5">
+                  <div class="flex items-center gap-1.5">
+                    <span
+                      v-for="(hex, idx) in (colorMode.value === 'dark' ? opt.swatches.dark : opt.swatches.light)"
+                      :key="idx"
+                      class="h-3.5 w-3.5 rounded-full border border-black/10 dark:border-white/10 shadow-xs"
+                      :style="{ backgroundColor: hex }"
+                      :title="hex"
+                    />
+                  </div>
+                  <span class="text-[10.5px] font-mono t-lo">
+                    {{ colorMode.value === 'dark' ? 'Dark' : 'Light' }} palette
+                  </span>
+                </div>
+              </button>
+            </div>
+
+            <!-- Live Theme Preview -->
+            <div class="mt-6 rounded-xl border b-line bg-base p-4 transition-all duration-200">
+              <div class="mb-3 flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="text-[11px] uppercase tracking-widest t-lo font-mono">Live Theme Preview</span>
+                  <span
+                    class="rounded px-2 py-0.5 text-[10.5px] font-mono font-semibold"
+                    :class="isNotebook
+                      ? 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30'
+                      : 'bg-stone-500/10 text-stone-700 dark:text-stone-300 border b-line'"
+                  >
+                    {{ currentPresetMeta.label }}
+                  </span>
+                </div>
+                <span class="text-[11px] font-mono t-lo">
+                  {{ colorMode.value === 'dark' ? (isNotebook ? 'Slate Chalkboard' : 'Dark Mode') : (isNotebook ? 'Ruled Paper' : 'Light Mode') }}
+                </span>
+              </div>
+
+              <!-- Sample Card Demonstration -->
+              <div
+                class="rounded-lg border p-4 transition-all duration-200"
+                :class="isNotebook
+                  ? 'border-stone-800 dark:border-stone-700 bg-[var(--bg-elevated)] shadow-[3px_3px_0_var(--text-1)] dark:shadow-[3px_3px_0_rgba(0,0,0,0.5)]'
+                  : 'b-line bg-elev shadow-sm'"
+              >
+                <!-- Sample Header & Badge -->
+                <div class="flex items-center gap-2 mb-2">
+                  <span
+                    class="inline-flex items-center gap-1 rounded px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider"
+                    :class="isNotebook
+                      ? 'bg-[var(--accent-soft)] text-[var(--accent-strong)] border border-[var(--accent-line)]'
+                      : 'bg-saffron-50 text-saffron-700 dark:bg-saffron-950/40 dark:text-saffron-300'"
+                  >
+                    <UIcon name="i-heroicons-sparkles" class="h-3 w-3" />
+                    Geography : Drainage System
+                  </span>
+                  <span class="text-[11px] font-mono t-lo">TGPRB Tier-1 Note</span>
+                </div>
+
+                <!-- Sample Note Title -->
+                <h3
+                  class="transition-all duration-150"
+                  :class="isNotebook
+                    ? 'font-hand text-[22px] font-bold t-hi leading-snug tracking-wide'
+                    : 'font-display text-h3 font-bold t-hi'"
+                >
+                  01 : The Godavari Basin & Key Tributaries
+                </h3>
+
+                <!-- Sample Text Body -->
+                <p class="mt-1.5 text-[13px] leading-relaxed t-mid">
+                  Peninsular India's largest river basin covering 3,12,812 sq km. Originates at Trimbakeshwar in the Western Ghats (Nasik district, Maharashtra).
+                </p>
+
+                <!-- Sample Tactile Action & Status Elements -->
+                <div class="mt-3.5 flex flex-wrap items-center gap-2 pt-3 border-t b-line">
+                  <button
+                    type="button"
+                    class="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[12px] font-semibold transition-all"
+                    :class="isNotebook
+                      ? 'btn-primary bg-[var(--accent)] text-[var(--text-1)]'
+                      : 'bg-saffron-500 hover:bg-saffron-600 text-white shadow-sm'"
+                  >
+                    <UIcon name="i-heroicons-bolt" class="h-3.5 w-3.5" />
+                    Pass Gate (3/5)
+                  </button>
+
+                  <span
+                    class="inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-[11.5px] font-medium"
+                    :class="isNotebook
+                      ? 'bg-[var(--jade-soft)] text-[var(--jade)] border border-[var(--jade-line)] font-bold'
+                      : 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/30 dark:text-emerald-300'"
+                  >
+                    <UIcon name="i-heroicons-check-circle" class="h-3.5 w-3.5" />
+                    12 PYQs Verified
+                  </span>
+
+                  <span
+                    class="inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-[11.5px] font-medium"
+                    :class="isNotebook
+                      ? 'bg-[var(--bg-subtle)] text-[var(--text-2)] border border-[var(--line-strong)]'
+                      : 'bg-sub text-stone-600 dark:text-stone-300 border b-line'"
+                  >
+                    <UIcon name="i-heroicons-document-text" class="h-3.5 w-3.5" />
+                    Pranhita Confluence
+                  </span>
+                </div>
+              </div>
+            </div>
+          </ClientOnly>
+        </div>
       </div>
     </section>
   </div>
@@ -229,6 +399,7 @@
 
 <script setup lang="ts">
 import { useAuth } from '@/composables/useAuth'
+import { useThemePreset } from '@/composables/useThemePreset'
 
 useHead({ title: 'Settings - StudyOS' })
 
@@ -237,6 +408,7 @@ const toast = useToast()
 const colorMode = useColorMode()
 const { user, isLoggedIn, userEmail, displayName, loading: authLoading, signOut } = useAuth()
 const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
+const { preset, isNotebook, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
 
 async function handleSignOut() {
   await signOut()

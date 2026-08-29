@@ -28,6 +28,7 @@ export default {
         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
         display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
+        hand: ['"Patrick Hand"', 'cursive', 'sans-serif'],
       },
       fontSize: {
         'h1': ['calc(30px * var(--scale-heading))', '1.1'],

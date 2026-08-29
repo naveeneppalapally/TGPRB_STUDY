@@ -65,6 +65,174 @@
   --sky-soft: rgba(96, 165, 250, 0.10);
 }
 
+/* ── 1b. Theme Presets: Warm Notebook & Chalkboard ───────────────────────── */
+.theme-notebook {
+  color-scheme: light;
+  --bg:          #F6F1E4;
+  --bg-elevated: #FFFDF7;
+  --bg-subtle:   #ECE5D4;
+  --bg-inset:    #E4D9BE;
+  --line:        rgba(32, 48, 58, 0.14);
+  --line-strong: rgba(32, 48, 58, 0.35);
+  --text-1:      #20303A;
+  --text-2:      #516373;
+  --text-3:      #7A8B99;
+  --accent:        #C99A3B;
+  --accent-strong: #A87B22;
+  --accent-soft:   #F3E6C6;
+  --accent-line:   rgba(201, 154, 59, 0.45);
+  --jade:      #2F6D5C;
+  --jade-soft: #DCEBE4;
+  --jade-line: rgba(47, 109, 92, 0.38);
+  --red:      #B5493E;
+  --red-soft: #F5DEDB;
+  --red-line: rgba(181, 73, 62, 0.38);
+  --sky:      #356B8C;
+  --sky-soft: rgba(53, 107, 140, 0.12);
+  --ink-card:      #1A252C;
+  --ink-card-line: rgba(246, 241, 228, 0.12);
+  --ink-card-text: #F6F1E4;
+  --radius: 12px;
+  --paper-line: #E4D9BE;
+}
+
+.dark.theme-notebook,
+.dark .theme-notebook {
+  color-scheme: dark;
+  --bg:          #131B20;
+  --bg-elevated: #1C2830;
+  --bg-subtle:   #18232B;
+  --bg-inset:    #0F161A;
+  --line:        rgba(220, 235, 228, 0.12);
+  --line-strong: rgba(220, 235, 228, 0.28);
+  --text-1:      #F1EFE8;
+  --text-2:      #9FB3C0;
+  --text-3:      #687D8C;
+  --accent:        #E0B253;
+  --accent-strong: #E8BE65;
+  --accent-soft:   rgba(224, 178, 83, 0.14);
+  --accent-line:   rgba(224, 178, 83, 0.38);
+  --jade:      #4EAB90;
+  --jade-soft: rgba(78, 171, 144, 0.14);
+  --jade-line: rgba(78, 171, 144, 0.38);
+  --red:      #E06D62;
+  --red-soft: rgba(224, 109, 98, 0.14);
+  --red-line: rgba(224, 109, 98, 0.38);
+  --sky:      #64A3C7;
+  --sky-soft: rgba(100, 163, 199, 0.14);
+  --ink-card:      #0D1418;
+  --ink-card-line: rgba(220, 235, 228, 0.12);
+  --ink-card-text: #F1EFE8;
+  --radius: 12px;
+  --paper-line: rgba(220, 235, 228, 0.10);
+}
+
+/* Background textures */
+.theme-notebook body {
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(var(--bg) 0px, var(--bg) 39px, var(--paper-line) 40px);
+  background-attachment: local;
+}
+
+.dark.theme-notebook body,
+.dark .theme-notebook body {
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(var(--bg) 0px, var(--bg) 39px, var(--paper-line) 40px),
+    radial-gradient(900px 340px at 75% -8%, rgba(224, 178, 83, 0.05), transparent 65%);
+  background-attachment: fixed;
+}
+
+/* Tactile Neo-Brutalist Component Overrides */
+.theme-notebook .panel,
+.theme-notebook .card {
+  border: 1.5px solid var(--text-1);
+  box-shadow: 3px 3px 0 var(--text-1);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.theme-notebook .panel-hover:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--text-1);
+}
+
+.dark.theme-notebook .panel,
+.dark .theme-notebook .panel,
+.dark.theme-notebook .card,
+.dark .theme-notebook .card {
+  border: 1.5px solid var(--line-strong);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.45);
+}
+
+.dark.theme-notebook .panel-hover:hover,
+.dark .theme-notebook .panel-hover:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.65);
+}
+
+.theme-notebook .btn-primary,
+.theme-notebook button.btn-tactile {
+  border: 1.5px solid var(--text-1);
+  box-shadow: 3px 3px 0 var(--text-1);
+  font-weight: 700;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.theme-notebook .btn-primary:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--text-1);
+}
+
+.theme-notebook .btn-primary:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--text-1);
+}
+
+.dark.theme-notebook .btn-primary,
+.dark .theme-notebook .btn-primary {
+  border: 1.5px solid var(--accent);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+  color: #131B20;
+}
+
+.dark.theme-notebook .btn-primary:active:not(:disabled),
+.dark .theme-notebook .btn-primary:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 transparent;
+}
+
+.theme-notebook .opt {
+  border: 1.5px solid var(--line-strong);
+  box-shadow: 2px 2px 0 var(--line);
+}
+
+.theme-notebook .opt:not(:disabled):hover {
+  border-color: var(--accent);
+  box-shadow: 3px 3px 0 var(--accent);
+  transform: translate(-1px, -1px);
+}
+
+.theme-notebook .callout {
+  border: 1.5px solid var(--line-strong);
+  box-shadow: 3px 3px 0 var(--accent-soft);
+}
+
+.theme-notebook .sec-head .sec-title,
+.theme-notebook .font-display-hand {
+  font-family: 'Patrick Hand', 'Space Grotesk', cursive, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.theme-notebook .sec-head .sec-num {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  font-size: 15px;
+}
+
+.font-hand {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+}
+
 /* ── 2. Base ────────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
