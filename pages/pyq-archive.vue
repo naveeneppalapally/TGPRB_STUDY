@@ -24,17 +24,16 @@
       <div class="relative">
         <UIcon name="i-heroicons-magnifying-glass" class="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 t-lo" />
         <input
-          v-model="searchQuery"
+          v-model="searchInput"
           type="text"
           placeholder="Search question text, keywords, or topics..."
-          class="w-full rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 py-2.5 pl-10 pr-4 text-body-sm t-hi placeholder:t-lo focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
-          @input="onFilterChange"
+          class="w-full rounded-lg border b-line bg-elev py-2.5 pl-10 pr-4 text-body-sm t-hi placeholder:t-lo focus:border-amber-500 focus:outline-none focus:ring-1 focus:ring-amber-500"
         />
         <button
-          v-if="searchQuery"
+          v-if="searchInput"
           type="button"
-          class="absolute right-3 top-1/2 -translate-y-1/2 text-body-xs t-lo hover:t-hi font-mono"
-          @click="searchQuery = ''; onFilterChange()"
+          class="absolute right-3 top-1/2 -translate-y-1/2 text-body-xs t-lo hover:t-hi font-mono min-h-[36px] px-2 flex items-center"
+          @click="clearSearch"
         >
           clear
         </button>
@@ -51,7 +50,7 @@
             :key="sub.id"
             type="button"
             class="px-3 py-1.5 rounded-lg text-body-xs font-medium transition-all"
-            :class="selectedSubject === sub.id ? 'bg-amber-500 text-white font-semibold shadow-sm' : 'bg-white dark:bg-gray-900 t-mid hover:t-hi border border-gray-200 dark:border-gray-800'"
+            :class="selectedSubject === sub.id ? 'bg-amber-500 text-white font-semibold shadow-sm' : 'bg-elev t-mid hover:t-hi border b-line'"
             @click="selectedSubject = sub.id; onFilterChange()"
           >
             {{ sub.label }} <span v-if="sub.count" class="opacity-75 font-mono text-[10.5px]">({{ sub.count }})</span>
@@ -59,9 +58,9 @@
         </div>
       </div>
 
-      <!-- Exam & Year Row -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-gray-200 dark:border-gray-800 pt-4">
-        <!-- Exam Type -->
+      <!-- Filters Grid -->
+      <div class="grid gap-4 sm:grid-cols-2 border-t b-line pt-4">
+        <!-- Exam Filter -->
         <div>
           <label class="mb-1.5 block font-mono text-[11px] font-semibold uppercase tracking-wider t-lo">
             Exam Type:
@@ -75,8 +74,8 @@
               ]"
               :key="examOpt.id"
               type="button"
-              class="flex-1 py-1.5 px-3 rounded-lg text-body-xs font-medium text-center transition-all"
-              :class="selectedExam === examOpt.id ? 'bg-saffron text-white font-semibold shadow-sm' : 'bg-white dark:bg-gray-900 t-mid hover:t-hi border border-gray-200 dark:border-gray-800'"
+              class="flex-1 min-h-[44px] px-3 rounded-lg text-body-xs font-medium text-center transition-all flex items-center justify-center"
+              :class="selectedExam === examOpt.id ? 'bg-saffron-500 text-white font-semibold shadow-sm' : 'bg-elev t-mid hover:t-hi border b-line'"
               @click="selectedExam = examOpt.id; onFilterChange()"
             >
               {{ examOpt.label }}
@@ -94,8 +93,8 @@
               v-for="yr in ['all', '2023', '2022', '2018', '2016', '2015']"
               :key="yr"
               type="button"
-              class="px-2.5 py-1 rounded-md text-[11.5px] font-mono transition-all"
-              :class="selectedYear === yr ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/40' : 'bg-white dark:bg-gray-900 t-lo hover:t-hi border border-gray-200 dark:border-gray-800'"
+              class="min-h-[36px] min-w-[44px] px-2.5 py-1 rounded-md text-[11.5px] font-mono transition-all flex items-center justify-center"
+              :class="selectedYear === yr ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/40' : 'bg-elev t-lo hover:t-hi border b-line'"
               @click="selectedYear = yr; onFilterChange()"
             >
               {{ yr === 'all' ? 'All' : yr }}
@@ -105,7 +104,7 @@
       </div>
 
       <!-- Active Filter Status -->
-      <div v-if="isFiltered" class="flex items-center justify-between pt-2 border-t border-gray-200 dark:border-gray-800 text-[11px] t-lo">
+      <div v-if="isFiltered" class="flex items-center justify-between pt-2 border-t b-line text-[11px] t-lo">
         <span>Found <strong>{{ totalResults }}</strong> matching questions</span>
         <button type="button" class="text-amber-600 dark:text-amber-400 hover:underline font-mono" @click="resetAllFilters">
           Reset all filters ×
@@ -216,7 +215,7 @@
         <div class="flex items-center gap-2">
           <button
             type="button"
-            class="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-800 text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40"
+            class="min-h-[44px] px-4 py-2 rounded-lg border b-line text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40 flex items-center justify-center"
             :disabled="currentPage <= 1"
             @click="changePage(currentPage - 1)"
           >
@@ -225,7 +224,7 @@
 
           <button
             type="button"
-            class="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-800 text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40"
+            class="min-h-[44px] px-4 py-2 rounded-lg border b-line text-body-xs font-medium t-mid hover:t-hi disabled:opacity-40 flex items-center justify-center"
             :disabled="currentPage >= totalPages"
             @click="changePage(currentPage + 1)"
           >
@@ -263,12 +262,29 @@ interface PyqCard {
   userRevealed?: boolean
 }
 
+const searchInput = ref('')
 const searchQuery = ref('')
 const selectedSubject = ref('all')
 const selectedExam = ref('all')
 const selectedYear = ref('all')
 const currentPage = ref(1)
 const limit = ref(20)
+let debounceTimer: ReturnType<typeof setTimeout> | null = null
+
+watch(searchInput, (val) => {
+  if (debounceTimer) clearTimeout(debounceTimer)
+  debounceTimer = setTimeout(() => {
+    searchQuery.value = val.trim()
+    currentPage.value = 1
+  }, 300)
+})
+
+function clearSearch() {
+  if (debounceTimer) clearTimeout(debounceTimer)
+  searchInput.value = ''
+  searchQuery.value = ''
+  currentPage.value = 1
+}
 
 const subjectsList = [
   { id: 'all', label: 'All Subjects', count: 3129 },
@@ -318,7 +334,7 @@ function onFilterChange() {
 }
 
 function resetAllFilters() {
-  searchQuery.value = ''
+  clearSearch()
   selectedSubject.value = 'all'
   selectedExam.value = 'all'
   selectedYear.value = 'all'

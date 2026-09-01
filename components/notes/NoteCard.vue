@@ -21,11 +21,41 @@ const formattedTime = computed(() => {
 
 function parseMarkdownLite(text: string) {
   if (!text) return ''
-  let html = text.replace(/<[^>]*>?/gm, '') // basic sanitize
-  html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-  html = html.replace(/^- (.*)$/gm, '<li>$1</li>')
-  html = html.replace(/(<li>.*<\/li>)/s, '<ul class="list-disc pl-4 space-y-1 my-1">$1</ul>')
-  return html.replace(/\n/g, '<br/>')
+  const sanitized = text.replace(/<[^>]*>?/gm, '')
+  const lines = sanitized.split('\n')
+  const result: string[] = []
+  let inList = false
+
+  for (let i = 0; i < lines.length; i++) {
+    let line = lines[i]
+    line = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    line = line.replace(/\*(.*?)\*/g, '<em>$1</em>')
+    line = line.replace(/`([^`]+)`/g, '<code class="font-mono text-xs bg-sub px-1 py-0.5 rounded">$1</code>')
+
+    const listMatch = line.match(/^[-*]\s+(.*)$/)
+    if (listMatch) {
+      if (!inList) {
+        result.push('<ul class="list-disc pl-4 space-y-1 my-1">')
+        inList = true
+      }
+      result.push(`<li>${listMatch[1]}</li>`)
+    } else {
+      if (inList) {
+        result.push('</ul>')
+        inList = false
+      }
+      if (line.trim()) {
+        result.push(line)
+        if (i < lines.length - 1 && !lines[i + 1].match(/^[-*]\s+/)) {
+          result.push('<br/>')
+        }
+      }
+    }
+  }
+  if (inList) {
+    result.push('</ul>')
+  }
+  return result.join('')
 }
 
 let autoSaveTimeout: ReturnType<typeof setTimeout> | null = null
@@ -91,8 +121,24 @@ async function remove() {
       </div>
       
       <div class="flex items-center gap-1 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
-        <UButton icon="i-heroicons-pencil" size="2xs" color="gray" variant="ghost" @click="isEditing = true" />
-        <UButton icon="i-heroicons-trash" size="2xs" color="gray" variant="ghost" @click="remove" />
+        <UButton
+          icon="i-heroicons-pencil"
+          size="xs"
+          color="gray"
+          variant="ghost"
+          class="min-h-[40px] min-w-[40px] sm:min-h-[36px] sm:min-w-[36px] p-2 flex items-center justify-center"
+          aria-label="Edit note"
+          @click="isEditing = true"
+        />
+        <UButton
+          icon="i-heroicons-trash"
+          size="xs"
+          color="gray"
+          variant="ghost"
+          class="min-h-[40px] min-w-[40px] sm:min-h-[36px] sm:min-w-[36px] p-2 flex items-center justify-center"
+          aria-label="Delete note"
+          @click="remove"
+        />
       </div>
     </div>
   </div>

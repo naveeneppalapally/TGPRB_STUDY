@@ -888,25 +888,25 @@
       </article>
 
       <!-- ══ Right TOC Sticky Sidebar ════════════════════════════════════ -->
-      <aside class="hidden xl:block xl:w-64 shrink-0">
-        <div class="sticky top-20 space-y-5 rounded-xl border b-line bg-sub p-4 text-[12px]">
-          <p class="font-display font-bold uppercase tracking-wider text-body-xs t-hi border-b b-line pb-2">
-            Table of Contents
-          </p>
-          <nav class="space-y-1.5 font-mono text-[11.5px]">
+      <aside class="hidden w-52 shrink-0 xl:block">
+        <div class="sticky top-20">
+          <p class="eyebrow mb-3">On this page</p>
+          <nav class="space-y-0.5">
             <a
-              v-for="sec in sections"
-              :key="sec.id"
-              :href="'#' + sec.id"
-              class="block py-1 px-2 rounded transition-colors hover:bg-inset hover:t-hi t-mid"
+              v-for="(section, i) in sections"
+              :key="section.id"
+              :href="`#${section.id}`"
+              class="group flex items-baseline gap-2.5 rounded-md px-2 py-1.5 text-body-xs transition-colors"
+              :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+              @click.prevent="scrollTo(section.id)"
             >
-              {{ sec.label }}
+              <span class="num font-mono text-[10px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span>{{ section.label }}</span>
             </a>
           </nav>
-
-          <div class="pt-3 border-t b-line text-[11px] t-lo font-mono">
-            <span class="block text-amber-500 font-semibold mb-1">Topic Weight: Tier 1</span>
-            <span>38 Verified PYQs · TSLPRB Constable / SI</span>
+          <div class="mt-6 border-t b-line pt-4">
+            <p class="eyebrow mb-2">Weight in paper</p>
+            <p class="text-body-xs leading-relaxed t-lo">38 Verified PYQs · TSLPRB Constable / SI</p>
           </div>
         </div>
       </aside>
@@ -916,6 +916,49 @@
       note-id="NOTE-GEO-FORESTS"
       note-title="Forests, Natural Vegetation & Protected Areas"
     />
+
+    <!-- ══ Floating Mobile/Tablet ToC Trigger & Slideover (DEF-CRIT-08) ══ -->
+    <div class="fixed bottom-6 start-6 z-20 xl:hidden">
+      <UButton
+        icon="i-heroicons-list-bullet"
+        label="Contents"
+        color="gray"
+        variant="solid"
+        size="sm"
+        class="rounded-full shadow-lg border b-line bg-elev t-hi font-semibold min-h-[44px] px-3.5"
+        @click="mobileTocOpen = true"
+      />
+    </div>
+
+    <USlideover v-model="mobileTocOpen" side="left" class="xl:hidden" :ui="{ width: 'w-72 max-w-full' }">
+      <div class="p-5 flex flex-col h-full bg-base">
+        <div class="flex items-center justify-between pb-3 border-b b-line mb-4">
+          <p class="eyebrow">On this page</p>
+          <UButton
+            icon="i-heroicons-x-mark"
+            color="gray"
+            variant="ghost"
+            size="sm"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Close table of contents"
+            @click="mobileTocOpen = false"
+          />
+        </div>
+        <nav class="space-y-1 overflow-y-auto flex-1">
+          <a
+            v-for="(section, i) in sections"
+            :key="section.id"
+            :href="`#${section.id}`"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-xs transition-colors min-h-[44px]"
+            :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+            @click.prevent="mobileTocOpen = false; scrollTo(section.id)"
+          >
+            <span class="font-mono text-[11px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span>{{ section.label }}</span>
+          </a>
+        </nav>
+      </div>
+    </USlideover>
   </div>
 </template>
 
@@ -935,6 +978,8 @@ function openNotesDrawer(context: SectionContext) {
   notesDrawerRef.value?.openForSection(context)
 }
 
+const mobileTocOpen = ref(false)
+const activeSection = ref('visual')
 const readProgress = ref(0)
 const revealedPyqs = ref<Record<number, boolean>>({})
 
@@ -942,19 +987,46 @@ const togglePyq = (idx: number) => {
   revealedPyqs.value[idx] = !revealedPyqs.value[idx]
 }
 
-const updateProgress = () => {
-  const doc = document.documentElement
-  const total = doc.scrollHeight - doc.clientHeight
-  readProgress.value = total > 0 ? Math.min(100, Math.max(0, (window.scrollY / total) * 100)) : 0
+function scrollTo(id: string) {
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    activeSection.value = id
+  }
+}
+
+function onScroll() {
+  const h = document.documentElement
+  const max = h.scrollHeight - h.clientHeight
+  readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
+
+  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
+  if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
+    activeSection.value = sections[sections.length - 1].id
+    return
+  }
+
+  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i].id)
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= 120) {
+        activeSection.value = sections[i].id
+        break
+      }
+    }
+  }
 }
 
 onMounted(() => {
-  window.addEventListener('scroll', updateProgress, { passive: true })
+  window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
   loadNotes()
 })
 
 onUnmounted(() => {
-  window.removeEventListener('scroll', updateProgress)
+  window.removeEventListener('scroll', onScroll)
 })
 
 const coverage = [

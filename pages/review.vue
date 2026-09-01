@@ -67,7 +67,7 @@
           <p class="eyebrow" :class="flipped ? 'accent' : ''">
             {{ flipped ? 'Answer' : 'Question' }}
           </p>
-          <span v-if="currentFSRSCard" class="font-mono text-[10px] text-zinc-400">
+          <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
             Reps: {{ currentFSRSCard.fsrs.reps }}
           </span>
         </div>
@@ -168,7 +168,6 @@ interface RawCard {
 }
 
 const STORAGE_FSRS_KEY = 'studyos:fsrs:card-states'
-const TODAY_KEY = `studyos:fsrs:reviewed-today:${new Date().toISOString().slice(0, 10)}`
 
 const engine = useFSRSEngine({ targets: { static: 0.9 } })
 const { mode, isGatePassed } = useFlashcardUnlock()
@@ -236,6 +235,18 @@ const activeScheduleHints = computed(() => {
 
 const user = useSupabaseUser()
 
+function getLocalDateKey(): string {
+  try {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date())
+  } catch {
+    const d = new Date()
+    const year = d.getFullYear()
+    const month = String(d.getMonth() + 1).padStart(2, '0')
+    const day = String(d.getDate()).padStart(2, '0')
+    return `${year}-${month}-${day}`
+  }
+}
+
 function getStorageFsrsKey(): string {
   const uid = user.value?.id || 'guest'
   return `studyos:fsrs:card-states:${uid}`
@@ -243,7 +254,7 @@ function getStorageFsrsKey(): string {
 
 function getTodayKey(): string {
   const uid = user.value?.id || 'guest'
-  return `studyos:fsrs:reviewed-today:${uid}:${new Date().toISOString().slice(0, 10)}`
+  return `studyos:fsrs:reviewed-today:${uid}:${getLocalDateKey()}`
 }
 
 function loadSavedFSRSStates(): Record<string, any> {
@@ -399,27 +410,33 @@ async function rate(ratingNumber: number) {
     }
   }
 
-  // 4. Handle 'Again' re-insertion or queue progression
+  // 4. Update retention metric
+  const learned = Object.values(studyCardsMap.value).filter(sc => sc.fsrs.reps > 0)
+  if (learned.length > 0) {
+    const totalR = learned.reduce((acc, sc) => acc + engine.retrievability(sc, now), 0)
+    avgRetention.value = Math.round((totalR / learned.length) * 100)
+  }
+
+  // 5. Handle 'Again' re-insertion or queue progression
   const finishedCard = currentCard.value
   flipped.value = false
 
-  if (grade === Rating.Again && dueCards.value.length > 1) {
-    // Push missed card to the back of current session
-    dueCards.value.splice(currentIndex.value, 1)
-    dueCards.value.push(finishedCard)
+  if (grade === Rating.Again) {
+    if (dueCards.value.length > 1) {
+      // Push missed card to the back of current session
+      dueCards.value.splice(currentIndex.value, 1)
+      dueCards.value.push(finishedCard)
+    } else {
+      // Single card remaining: keep in place and flip back to front for immediate re-test
+      flipped.value = false
+      return
+    }
   } else {
     dueCards.value.splice(currentIndex.value, 1)
   }
 
   if (currentIndex.value >= dueCards.value.length) {
     currentIndex.value = 0
-  }
-
-  // 5. Update retention metric
-  const learned = Object.values(studyCardsMap.value).filter(sc => sc.fsrs.reps > 0)
-  if (learned.length > 0) {
-    const totalR = learned.reduce((acc, sc) => acc + engine.retrievability(sc, now), 0)
-    avgRetention.value = Math.round((totalR / learned.length) * 100)
   }
 }
 
@@ -469,7 +486,12 @@ defineShortcuts({
 
 <style scoped>
 .rate-btn {
-  padding: 10px 0 8px;
+  min-height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 6px;
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;

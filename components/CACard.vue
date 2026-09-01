@@ -97,26 +97,40 @@
           <button
             v-for="(_, i) in mcqs"
             :key="i"
-            class="h-2 w-2 rounded-full transition-colors"
-            :class="i === currentQ
-              ? 'bg-emerald-500'
-              : answers[i] !== undefined
-                ? (answers[i] === mcqs[i].answer ? 'bg-green-400' : 'bg-red-400')
-                : 'bg-black/20 dark:bg-white/20'"
+            type="button"
+            class="flex items-center justify-center min-h-[36px] min-w-[24px] p-1"
+            :aria-label="`Question ${i + 1}`"
             @click="goToQ(i)"
-          />
+          >
+            <span
+              class="h-2 w-2 rounded-full transition-colors block"
+              :class="i === currentQ
+                ? 'bg-emerald-500'
+                : answers[i] !== undefined
+                  ? (answers[i] === mcqs[i].answer ? 'bg-green-400' : 'bg-red-400')
+                  : 'bg-black/20 dark:bg-white/20'"
+            />
+          </button>
         </div>
         <div class="flex gap-1">
           <UButton
-            size="xs" variant="ghost" color="gray"
+            size="sm"
+            variant="ghost"
+            color="gray"
             icon="i-heroicons-chevron-left"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
             :disabled="currentQ === 0"
+            aria-label="Previous question"
             @click="goToQ(currentQ - 1)"
           />
           <UButton
-            size="xs" variant="ghost" color="gray"
+            size="sm"
+            variant="ghost"
+            color="gray"
             icon="i-heroicons-chevron-right"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
             :disabled="currentQ === mcqs.length - 1"
+            aria-label="Next question"
             @click="goToQ(currentQ + 1)"
           />
         </div>

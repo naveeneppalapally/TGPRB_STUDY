@@ -186,7 +186,7 @@ function riverStroke(river: RiverSystem) {
       </div>
     </header>
 
-    <div class="overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-2 sm:p-4">
+    <div class="overflow-x-auto rounded-xl border border-white/10 bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-2 sm:p-4">
       <svg
         class="h-auto w-full min-w-[560px]"
         viewBox="0 0 760 860"
@@ -244,11 +244,11 @@ function riverStroke(river: RiverSystem) {
             class="pointer-events-none select-none fill-stone-100 text-[14px] font-semibold"
           >{{ river.name }}</text>
         </g>
-        <text x="245" y="815" class="fill-stone-500 text-[12px]">Schematic map. It shows basin relationships, not survey boundaries.</text>
+        <text x="245" y="815" class="fill-stone-400 text-[12px]">Schematic map. It shows basin relationships, not survey boundaries.</text>
       </svg>
     </div>
 
-    <p class="mt-4 text-xs leading-5 text-stone-500">PYQ badges identify questions traceable to the local verified PYQ collection. Other panel details are study facts.</p>
+    <p class="mt-4 text-xs leading-5 text-stone-400">PYQ badges identify questions traceable to the local verified PYQ collection. Other panel details are study facts.</p>
 
     <USlideover v-model="isOpen" side="right" :ui="{ width: 'w-full max-w-xl', background: 'bg-[#0c0d0e]', ring: 'ring-white/10', padding: 'p-0' }">
       <div v-if="selectedRiver" class="flex h-full flex-col bg-[#0c0d0e] text-stone-100">
@@ -265,11 +265,11 @@ function riverStroke(river: RiverSystem) {
         <div class="flex-1 overflow-y-auto px-5 py-6 sm:px-6">
           <dl class="grid gap-3 sm:grid-cols-2">
             <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <dt class="text-xs font-semibold uppercase tracking-wide text-stone-500">Origin</dt>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-stone-400">Origin</dt>
               <dd class="mt-2 text-sm leading-6 text-stone-200">{{ selectedRiver.origin }}</dd>
             </div>
             <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <dt class="text-xs font-semibold uppercase tracking-wide text-stone-500">Outflow</dt>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-stone-400">Outflow</dt>
               <dd class="mt-2 text-sm leading-6 text-stone-200">{{ selectedRiver.outflow }}</dd>
             </div>
           </dl>

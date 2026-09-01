@@ -17,7 +17,7 @@ export default defineNuxtPlugin(() => {
     // Ignore storage errors during initialization
   }
 
-  const validPreset: ThemePreset = stored === 'notebook' ? 'notebook' : 'default'
+  const validPreset: ThemePreset = (stored === 'notebook' || stored === 'forest') ? stored : 'default'
 
   const presetState = useState<ThemePreset>('studyos-theme-preset', () => validPreset)
   presetState.value = validPreset
@@ -27,10 +27,11 @@ export default defineNuxtPlugin(() => {
 
   const root = document.documentElement
   if (root) {
+    root.classList.remove('theme-notebook', 'theme-forest')
     if (validPreset === 'notebook') {
-      root.classList.add(THEME_PRESET_CLASS)
-    } else {
-      root.classList.remove(THEME_PRESET_CLASS)
+      root.classList.add('theme-notebook')
+    } else if (validPreset === 'forest') {
+      root.classList.add('theme-forest')
     }
   }
 })

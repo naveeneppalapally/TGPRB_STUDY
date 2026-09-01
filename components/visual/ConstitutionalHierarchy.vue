@@ -172,13 +172,19 @@ function selectNode(node: HierarchyNode) {
     <p class="mt-5 rounded-lg border border-white/10 bg-white/[0.025] px-3 py-2 text-xs leading-5 text-stone-400">{{ activeSystem.description }}</p>
 
     <div class="mt-5 grid gap-5 xl:grid-cols-[minmax(0,1.25fr)_minmax(300px,0.75fr)]">
-      <div class="overflow-x-auto rounded-xl border border-white/10 bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-3">
-        <svg
-          class="h-auto min-w-[800px] w-full"
-          viewBox="0 0 820 560"
-          role="img"
-          :aria-label="`${activeSystem.label} interactive hierarchy`"
-        >
+      <div class="rounded-xl border border-white/10 bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-3">
+        <!-- Mobile scroll hint (DEF-POL-01) -->
+        <div class="flex items-center gap-1.5 pb-2 text-[11px] text-stone-400 sm:hidden">
+          <UIcon name="i-heroicons-arrows-right-left" class="h-3.5 w-3.5 text-amber-400 shrink-0" />
+          <span>Scroll horizontally to explore full chart</span>
+        </div>
+        <div class="overflow-x-auto">
+          <svg
+            class="h-auto min-w-[800px] w-full"
+            viewBox="0 0 820 560"
+            role="img"
+            :aria-label="`${activeSystem.label} interactive hierarchy`"
+          >
           <title>{{ activeSystem.label }}</title>
           <desc>Select a box in the hierarchy to read the related constitutional facts.</desc>
           <g stroke="#57534e" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -207,6 +213,7 @@ function selectNode(node: HierarchyNode) {
           </g>
         </svg>
       </div>
+    </div>
 
       <aside v-if="selectedNode" class="rounded-xl border border-amber-500/30 bg-amber-500/[0.05] p-4 sm:p-5" aria-live="polite">
         <p class="text-xs font-semibold uppercase tracking-[0.16em] text-amber-400">Selected constitutional office</p>

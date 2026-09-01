@@ -37,34 +37,52 @@
 </template>
 
 <script setup lang="ts">
+import { useThemePreset } from '@/composables/useThemePreset'
+
 const props = defineProps<{ code: string }>()
 
 const el = ref<HTMLElement | null>(null)
 const ready = ref(false)
 const failed = ref(false)
 const colorMode = useColorMode()
+const { preset } = useThemePreset()
 
 let mermaidApi: any = null
 let renderSeq = 0
 
-/** Palette-matched Mermaid theme - warm paper light, warm ink dark. */
-function themeFor(mode: string) {
+/** Palette-matched Mermaid theme - preset aware. */
+function themeFor(mode: string, currentPreset: string) {
   const dark = mode === 'dark'
+
+  let primaryColor = dark ? '#241e13' : '#faf3df'
+  let primaryBorderColor = dark ? '#e5ad31' : '#cd8a14'
+  let primaryTextColor = dark ? '#f3efe4' : '#3b2e12'
+
+  if (currentPreset === 'forest') {
+    primaryColor = dark ? '#13221C' : '#FAFDF8'
+    primaryBorderColor = dark ? '#34D399' : '#247A55'
+    primaryTextColor = dark ? '#ECFDF5' : '#14271F'
+  } else if (currentPreset === 'notebook') {
+    primaryColor = dark ? '#1D2B33' : '#FFFDF7'
+    primaryBorderColor = dark ? '#F3CE72' : '#C99A3B'
+    primaryTextColor = dark ? '#F3E6C6' : '#20303A'
+  }
+
   return {
     startOnLoad: false,
     theme: 'base',
     fontFamily: 'JetBrains Mono, ui-monospace, monospace',
     themeVariables: {
       background: 'transparent',
-      primaryColor: dark ? '#241e13' : '#faf3df',
-      primaryBorderColor: dark ? '#e5ad31' : '#cd8a14',
-      primaryTextColor: dark ? '#f3efe4' : '#3b2e12',
+      primaryColor,
+      primaryBorderColor,
+      primaryTextColor,
       secondaryColor: dark ? '#1a1915' : '#f5f3ec',
       tertiaryColor: dark ? '#14120d' : '#eeebe0',
       lineColor: dark ? '#8d867a' : '#a8a29e',
       textColor: dark ? '#e9e2d2' : '#44403c',
-      mainBkg: dark ? '#241e13' : '#faf3df',
-      nodeBorder: dark ? '#e5ad31' : '#cd8a14',
+      mainBkg: primaryColor,
+      nodeBorder: primaryBorderColor,
       clusterBkg: dark ? '#1a1915' : '#f5f3ec',
       edgeLabelBackground: dark ? '#17150f' : '#fffefa',
       fontSize: '13px',
@@ -81,7 +99,7 @@ async function render() {
     if (!mermaidApi) {
       mermaidApi = (await import('mermaid')).default
     }
-    mermaidApi.initialize(themeFor(colorMode.value))
+    mermaidApi.initialize(themeFor(colorMode.value, preset.value))
     const id = `mermaid-${Math.random().toString(36).slice(2)}`
     const { svg } = await mermaidApi.render(id, props.code)
     if (seq !== renderSeq || !el.value) return
@@ -97,8 +115,8 @@ async function render() {
 
 onMounted(render)
 
-/* Re-render when the color mode flips so the diagram matches the theme. */
-watch(() => colorMode.value, () => {
+/* Re-render when the color mode or preset flips so the diagram matches the theme. */
+watch([() => colorMode.value, () => preset.value], () => {
   ready.value = false
   render()
 })

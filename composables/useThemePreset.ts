@@ -1,7 +1,7 @@
 import { computed, onMounted } from 'vue'
 import { useState } from '#imports'
 
-export type ThemePreset = 'default' | 'notebook'
+export type ThemePreset = 'default' | 'notebook' | 'forest'
 
 export interface ThemePresetOption {
   id: ThemePreset
@@ -17,6 +17,12 @@ export interface ThemePresetOption {
 }
 
 export const THEME_PRESET_STORAGE_KEY = 'studyos-theme-preset'
+export const THEME_PRESET_CLASSES = {
+  default: '',
+  notebook: 'theme-notebook',
+  forest: 'theme-forest',
+} as const
+
 export const THEME_PRESET_CLASS = 'theme-notebook'
 
 export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
@@ -29,6 +35,18 @@ export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
     swatches: {
       light: ['#f5f3ec', '#fffefa', '#e7e2d6', '#1c1917', '#cd8a14'],
       dark: ['#100f0c', '#17150f', '#2c2820', '#f3efe4', '#e5ad31'],
+    },
+  },
+  {
+    id: 'forest',
+    label: 'Botanical Sage & Forest',
+    subtitle: 'Low eye-strain & high retention',
+    description: 'Calming matcha paper, deep evergreen pine ink, eucalyptus jade accents, and Nordic midnight spruce dark mode.',
+    badge: 'Ergonomic',
+    icon: 'i-heroicons-sparkles',
+    swatches: {
+      light: ['#F1F5EE', '#FAFDF8', '#D5E8DD', '#14271F', '#247A55'],
+      dark: ['#0C1612', '#13221C', '#0F1B16', '#ECFDF5', '#34D399'],
     },
   },
   {
@@ -55,6 +73,7 @@ export function useThemePreset() {
   const hydrated = useState<boolean>('studyos-theme-preset-hydrated', () => false)
 
   const isNotebook = computed<boolean>(() => preset.value === 'notebook')
+  const isForest = computed<boolean>(() => preset.value === 'forest')
 
   const currentPresetMeta = computed<ThemePresetOption>(() => {
     return THEME_PRESET_OPTIONS.find(p => p.id === preset.value) || THEME_PRESET_OPTIONS[0]
@@ -65,10 +84,11 @@ export function useThemePreset() {
     const root = document.documentElement
     if (!root) return
 
+    root.classList.remove('theme-notebook', 'theme-forest')
     if (targetPreset === 'notebook') {
-      root.classList.add(THEME_PRESET_CLASS)
-    } else {
-      root.classList.remove(THEME_PRESET_CLASS)
+      root.classList.add('theme-notebook')
+    } else if (targetPreset === 'forest') {
+      root.classList.add('theme-forest')
     }
   }
 
@@ -85,7 +105,9 @@ export function useThemePreset() {
   }
 
   function togglePreset() {
-    setPreset(preset.value === 'notebook' ? 'default' : 'notebook')
+    if (preset.value === 'default') setPreset('forest')
+    else if (preset.value === 'forest') setPreset('notebook')
+    else setPreset('default')
   }
 
   onMounted(() => {
@@ -93,7 +115,7 @@ export function useThemePreset() {
     if (!hydrated.value) {
       try {
         const stored = localStorage.getItem(THEME_PRESET_STORAGE_KEY)
-        if (stored === 'notebook' || stored === 'default') {
+        if (stored === 'notebook' || stored === 'forest' || stored === 'default') {
           preset.value = stored
         }
       } catch {
@@ -108,6 +130,7 @@ export function useThemePreset() {
     preset,
     hydrated,
     isNotebook,
+    isForest,
     currentPresetMeta,
     setPreset,
     togglePreset,

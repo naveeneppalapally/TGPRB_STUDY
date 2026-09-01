@@ -52,7 +52,7 @@ function suiteHeader(title: string) {
 // Mock & Simulation Fixtures
 // ---------------------------------------------------------------------------
 
-export type ThemePreset = 'default' | 'notebook'
+export type ThemePreset = 'default' | 'notebook' | 'forest'
 
 export interface ThemePresetOption {
   id: ThemePreset
@@ -80,6 +80,18 @@ export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
     swatches: {
       light: ['#f5f3ec', '#fffefa', '#e7e2d6', '#1c1917', '#cd8a14'],
       dark: ['#100f0c', '#17150f', '#2c2820', '#f3efe4', '#e5ad31'],
+    },
+  },
+  {
+    id: 'forest',
+    label: 'Botanical Sage & Forest',
+    subtitle: 'Low eye-strain & high retention',
+    description: 'Calming matcha paper, deep evergreen pine ink, eucalyptus jade accents, and Nordic midnight spruce dark mode.',
+    badge: 'Ergonomic',
+    icon: 'i-heroicons-sparkles',
+    swatches: {
+      light: ['#F1F5EE', '#FAFDF8', '#D5E8DD', '#14271F', '#247A55'],
+      dark: ['#0C1612', '#13221C', '#0F1B16', '#ECFDF5', '#34D399'],
     },
   },
   {
@@ -171,6 +183,7 @@ function createMockEnvironment(options: {
     const hydrated = mockUseState<boolean>('studyos-theme-preset-hydrated', () => false)
 
     const isNotebook = computed<boolean>(() => preset.value === 'notebook')
+    const isForest = computed<boolean>(() => preset.value === 'forest')
 
     const currentPresetMeta = computed<ThemePresetOption>(() => {
       return THEME_PRESET_OPTIONS.find(p => p.id === preset.value) || THEME_PRESET_OPTIONS[0]
@@ -181,10 +194,11 @@ function createMockEnvironment(options: {
       const root = mockHtmlElement
       if (!root) return
 
+      root.classList.remove('theme-notebook', 'theme-forest')
       if (targetPreset === 'notebook') {
-        root.classList.add(THEME_PRESET_CLASS)
-      } else {
-        root.classList.remove(THEME_PRESET_CLASS)
+        root.classList.add('theme-notebook')
+      } else if (targetPreset === 'forest') {
+        root.classList.add('theme-forest')
       }
     }
 
@@ -201,7 +215,9 @@ function createMockEnvironment(options: {
     }
 
     function togglePreset() {
-      setPreset(preset.value === 'notebook' ? 'default' : 'notebook')
+      if (preset.value === 'default') setPreset('forest')
+      else if (preset.value === 'forest') setPreset('notebook')
+      else setPreset('default')
     }
 
     function mountHook() {
@@ -209,7 +225,7 @@ function createMockEnvironment(options: {
       if (!hydrated.value) {
         try {
           const stored = mockStorage?.getItem(THEME_PRESET_STORAGE_KEY)
-          if (stored === 'notebook' || stored === 'default') {
+          if (stored === 'notebook' || stored === 'forest' || stored === 'default') {
             preset.value = stored
           }
         } catch {
@@ -224,6 +240,7 @@ function createMockEnvironment(options: {
       preset,
       hydrated,
       isNotebook,
+      isForest,
       currentPresetMeta,
       setPreset,
       togglePreset,
@@ -244,7 +261,7 @@ function createMockEnvironment(options: {
       // Ignore storage errors
     }
 
-    const validPreset: ThemePreset = stored === 'notebook' ? 'notebook' : 'default'
+    const validPreset: ThemePreset = (stored === 'notebook' || stored === 'forest') ? stored : 'default'
 
     const presetState = mockUseState<ThemePreset>('studyos-theme-preset', () => validPreset)
     presetState.value = validPreset
@@ -254,10 +271,11 @@ function createMockEnvironment(options: {
 
     const root = mockHtmlElement
     if (root) {
+      root.classList.remove('theme-notebook', 'theme-forest')
       if (validPreset === 'notebook') {
-        root.classList.add(THEME_PRESET_CLASS)
-      } else {
-        root.classList.remove(THEME_PRESET_CLASS)
+        root.classList.add('theme-notebook')
+      } else if (validPreset === 'forest') {
+        root.classList.add('theme-forest')
       }
     }
   }
@@ -298,57 +316,70 @@ async function runAllStressTests() {
     assert.equal(theme.currentPresetMeta.value.swatches.dark.length, 5)
   })
 
-  await runTest('S1', 'S1.2: setPreset("notebook") updates reactive state and computed properties', () => {
+  await runTest('S1', 'S1.2: setPreset("forest") updates reactive state and computed properties', () => {
+    const env = createMockEnvironment()
+    const theme = env.createThemePresetInstance()
+
+    theme.setPreset('forest')
+    assert.equal(theme.preset.value, 'forest')
+    assert.equal(theme.isForest.value, true)
+    assert.equal(theme.isNotebook.value, false)
+    assert.equal(theme.currentPresetMeta.value.id, 'forest')
+    assert.equal(theme.currentPresetMeta.value.label, 'Botanical Sage & Forest')
+    assert.equal(theme.currentPresetMeta.value.badge, 'Ergonomic')
+    assert.equal(theme.currentPresetMeta.value.icon, 'i-heroicons-sparkles')
+    assert.equal(env.html?.classList.contains('theme-forest'), true)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
+  })
+
+  await runTest('S1', 'S1.3: setPreset("notebook") updates reactive state and computed properties', () => {
     const env = createMockEnvironment()
     const theme = env.createThemePresetInstance()
 
     theme.setPreset('notebook')
     assert.equal(theme.preset.value, 'notebook')
     assert.equal(theme.isNotebook.value, true)
+    assert.equal(theme.isForest.value, false)
     assert.equal(theme.currentPresetMeta.value.id, 'notebook')
     assert.equal(theme.currentPresetMeta.value.label, 'Warm Notebook & Chalkboard')
     assert.equal(theme.currentPresetMeta.value.badge, 'Signature')
     assert.equal(theme.currentPresetMeta.value.icon, 'i-heroicons-book-open')
+    assert.equal(env.html?.classList.contains('theme-notebook'), true)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
   })
 
-  await runTest('S1', 'S1.3: setPreset("default") restores original state', () => {
-    const env = createMockEnvironment()
-    const theme = env.createThemePresetInstance()
-
-    theme.setPreset('notebook')
-    theme.setPreset('default')
-    assert.equal(theme.preset.value, 'default')
-    assert.equal(theme.isNotebook.value, false)
-    assert.equal(theme.currentPresetMeta.value.id, 'default')
-  })
-
-  await runTest('S1', 'S1.4: togglePreset() alternates correctly default <-> notebook', () => {
+  await runTest('S1', 'S1.4: togglePreset() cycles correctly default -> forest -> notebook -> default', () => {
     const env = createMockEnvironment()
     const theme = env.createThemePresetInstance()
 
     assert.equal(theme.preset.value, 'default')
+    theme.togglePreset()
+    assert.equal(theme.preset.value, 'forest')
+    assert.equal(theme.isForest.value, true)
+
     theme.togglePreset()
     assert.equal(theme.preset.value, 'notebook')
     assert.equal(theme.isNotebook.value, true)
 
     theme.togglePreset()
     assert.equal(theme.preset.value, 'default')
+    assert.equal(theme.isForest.value, false)
     assert.equal(theme.isNotebook.value, false)
-
-    theme.togglePreset()
-    assert.equal(theme.preset.value, 'notebook')
   })
 
-  await runTest('S1', 'S1.5: Rapid 1,000 toggle stress test maintains exact parity and computed integrity', () => {
+  await runTest('S1', 'S1.5: Rapid 999 toggle stress test maintains exact 3-way parity and computed integrity', () => {
     const env = createMockEnvironment()
     const theme = env.createThemePresetInstance()
+    const cycle: ThemePreset[] = ['default', 'forest', 'notebook']
 
-    for (let i = 1; i <= 1000; i++) {
+    for (let i = 1; i <= 999; i++) {
       theme.togglePreset()
-      const expected = i % 2 === 1 ? 'notebook' : 'default'
+      const expected = cycle[i % 3]
       assert.equal(theme.preset.value, expected)
+      assert.equal(theme.isForest.value, expected === 'forest')
       assert.equal(theme.isNotebook.value, expected === 'notebook')
       assert.equal(theme.currentPresetMeta.value.id, expected)
+      assert.equal(env.html?.classList.contains('theme-forest'), expected === 'forest')
       assert.equal(env.html?.classList.contains('theme-notebook'), expected === 'notebook')
       assert.equal(env.storage?.getItem(THEME_PRESET_STORAGE_KEY), expected)
     }
@@ -692,6 +723,40 @@ async function runAllStressTests() {
     assert.ok(cssContent.includes('.theme-notebook .panel'), 'Missing .theme-notebook .panel tactile border styles')
     assert.ok(cssContent.includes('.font-hand'), 'Missing .font-hand utility class')
     assert.ok(cssContent.includes('Patrick Hand'), 'Missing Patrick Hand font-family definition')
+  })
+
+  await runTest('S4', 'S4.4: Verify CSS tokens completeness & exact values for Botanical Sage (.theme-forest) in main.css', () => {
+    const cssPath = path.resolve(process.cwd(), 'assets/css/main.css')
+    const cssContent = fs.readFileSync(cssPath, 'utf8')
+
+    // Verify .theme-forest and .dark.theme-forest selectors exist
+    assert.ok(cssContent.includes('.theme-forest {'), 'Missing .theme-forest selector in main.css')
+    assert.ok(
+      cssContent.includes('.dark.theme-forest,') && cssContent.includes('.dark .theme-forest {'),
+      'Missing .dark.theme-forest selector in main.css'
+    )
+
+    // Extract light block
+    const forestLightMatch = cssContent.match(/\.theme-forest\s*\{([^}]+)\}/)
+    assert.ok(forestLightMatch, 'Could not extract .theme-forest block')
+    const forestLightBlock = forestLightMatch[1]
+
+    assert.ok(forestLightBlock.includes('#F1F5EE'), 'Forest Light --bg should be #F1F5EE')
+    assert.ok(forestLightBlock.includes('#FAFDF8'), 'Forest Light --bg-elevated should be #FAFDF8')
+    assert.ok(forestLightBlock.includes('#14271F'), 'Forest Light --text-1 should be #14271F')
+    assert.ok(forestLightBlock.includes('#247A55'), 'Forest Light --jade should be #247A55')
+    assert.ok(forestLightBlock.includes('#D97706'), 'Forest Light --accent should be #D97706')
+
+    // Extract dark block
+    const forestDarkMatch = cssContent.match(/\.dark\.theme-forest[^{]*\{([^}]+)\}/)
+    assert.ok(forestDarkMatch, 'Could not extract .dark.theme-forest block')
+    const forestDarkBlock = forestDarkMatch[1]
+
+    assert.ok(forestDarkBlock.includes('#0C1612'), 'Forest Dark --bg should be #0C1612')
+    assert.ok(forestDarkBlock.includes('#13221C'), 'Forest Dark --bg-elevated should be #13221C')
+    assert.ok(forestDarkBlock.includes('#ECFDF5'), 'Forest Dark --text-1 should be #ECFDF5')
+    assert.ok(forestDarkBlock.includes('#34D399'), 'Forest Dark --jade should be #34D399')
+    assert.ok(forestDarkBlock.includes('#F59E0B'), 'Forest Dark --accent should be #F59E0B')
   })
 
   // -------------------------------------------------------------------------

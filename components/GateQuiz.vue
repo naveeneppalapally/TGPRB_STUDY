@@ -37,7 +37,7 @@
         tabindex="0"
       >
         <!-- Header -->
-        <div class="flex items-center justify-between px-5 py-3.5 border-b b-line">
+        <div class="flex flex-wrap items-center justify-between gap-2 px-4 py-3 sm:px-5 sm:py-3.5 border-b b-line">
           <div class="flex items-center gap-2">
             <UIcon
               :name="isUnlocked ? 'i-heroicons-lock-open' : 'i-heroicons-lock-closed'"
@@ -137,8 +137,9 @@
             <div class="flex items-center gap-2">
               <button
                 type="button"
-                class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
+                class="h-11 w-11 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30 min-h-[44px] min-w-[44px]"
                 :disabled="currentQ === 0"
+                aria-label="Previous question"
                 @click="prevQ"
               >
                 <UIcon name="i-heroicons-arrow-left" class="h-4 w-4" />
@@ -146,7 +147,8 @@
               <button
                 v-if="currentQ < quiz.questions.length - 1"
                 type="button"
-                class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
+                class="h-11 w-11 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all min-h-[44px] min-w-[44px]"
+                aria-label="Next question"
                 @click="nextQ"
               >
                 <UIcon name="i-heroicons-arrow-right" class="h-4 w-4" />
@@ -154,9 +156,9 @@
               <button
                 v-else
                 type="button"
-                class="h-8 px-4 rounded-lg text-[12px] font-semibold transition-all"
+                class="h-11 px-5 rounded-lg text-[13px] font-semibold transition-all min-h-[44px] flex items-center justify-center"
                 :class="allAnswered
-                  ? 'bg-saffron-500 text-white hover:bg-saffron-600'
+                  ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-sm'
                   : 'bg-gray-100 dark:bg-gray-800 t-lo cursor-not-allowed'"
                 :disabled="!allAnswered"
                 @click="submitGate"
@@ -352,6 +354,14 @@ async function submitGate() {
 
   // Record submission in Supabase for authenticated user
   try {
+    let flashcardIds: string[] = []
+    try {
+      const fcData = await $fetch<{ cards: Array<{ id: string }> }>(`/api/flashcards/${assistantNoteId.value}`)
+      if (fcData?.cards) {
+        flashcardIds = fcData.cards.map(c => c.id)
+      }
+    } catch {}
+
     await $fetch('/api/gate/submit', {
       method: 'POST',
       body: {
@@ -359,6 +369,7 @@ async function submitGate() {
         score: correct,
         total: quiz.value.questions.length,
         pass_threshold: quiz.value.pass_threshold,
+        flashcard_ids: flashcardIds,
       },
     })
   } catch {
@@ -394,7 +405,10 @@ function retry() {
   transition: all 0.15s;
 }
 .opt:hover { border-color: var(--border-active); }
-.opt-selected { border-color: var(--saffron); background: color-mix(in srgb, var(--saffron) 8%, transparent); }
+.opt-selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
 
 .slide-left-enter-active,
 .slide-left-leave-active,

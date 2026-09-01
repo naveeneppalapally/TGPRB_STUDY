@@ -70,12 +70,12 @@
         <div class="grid gap-6">
           
           <!-- Base Text -->
-          <div class="flex items-start justify-between gap-6">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-6">
             <div>
               <p class="text-[15px] font-medium t-hi">Base text</p>
               <p class="mt-0.5 text-[13px] t-lo">Paragraphs, lists, and standard interface text.</p>
             </div>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1">
+            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1 self-start sm:self-auto">
               <button
                 v-for="opt in sizeOptions"
                 :key="'base'+opt.value"
@@ -92,12 +92,12 @@
           </div>
 
           <!-- Headings -->
-          <div class="flex items-start justify-between gap-6">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-6">
             <div>
               <p class="text-[15px] font-medium t-hi">Headings</p>
               <p class="mt-0.5 text-[13px] t-lo">Main page titles and top-level sections (H1, H2).</p>
             </div>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1">
+            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1 self-start sm:self-auto">
               <button
                 v-for="opt in sizeOptions"
                 :key="'head'+opt.value"
@@ -114,12 +114,12 @@
           </div>
 
           <!-- Subheadings -->
-          <div class="flex items-start justify-between gap-6">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 sm:gap-6">
             <div>
               <p class="text-[15px] font-medium t-hi">Subheadings</p>
               <p class="mt-0.5 text-[13px] t-lo">Deep dive titles and subsection headers (H3, H4).</p>
             </div>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1">
+            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1 self-start sm:self-auto">
               <button
                 v-for="opt in sizeOptions"
                 :key="'sub'+opt.value"
@@ -233,7 +233,7 @@
           </div>
 
           <ClientOnly>
-            <div class="grid gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Theme presets">
+            <div class="grid gap-3 sm:grid-cols-3" role="radiogroup" aria-label="Theme presets">
               <button
                 v-for="opt in themePresets"
                 :key="opt.id"
@@ -257,7 +257,10 @@
                       <span class="text-[14px] font-semibold t-hi">{{ opt.label }}</span>
                       <span
                         v-if="opt.badge"
-                        class="rounded bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider font-mono"
+                        class="rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider font-mono"
+                        :class="opt.id === 'forest'
+                          ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
+                          : 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30'"
                       >
                         {{ opt.badge }}
                       </span>
@@ -309,13 +312,15 @@
                     class="rounded px-2 py-0.5 text-[10.5px] font-mono font-semibold"
                     :class="isNotebook
                       ? 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30'
-                      : 'bg-stone-500/10 text-stone-700 dark:text-stone-300 border b-line'"
+                      : (isForest
+                        ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
+                        : 'bg-stone-500/10 text-stone-700 dark:text-stone-300 border b-line')"
                   >
                     {{ currentPresetMeta.label }}
                   </span>
                 </div>
                 <span class="text-[11px] font-mono t-lo">
-                  {{ colorMode.value === 'dark' ? (isNotebook ? 'Slate Chalkboard' : 'Dark Mode') : (isNotebook ? 'Ruled Paper' : 'Light Mode') }}
+                  {{ colorMode.value === 'dark' ? (isNotebook ? 'Slate Chalkboard' : (isForest ? 'Midnight Spruce' : 'Dark Mode')) : (isNotebook ? 'Ruled Paper' : (isForest ? 'Matcha Cream' : 'Light Mode')) }}
                 </span>
               </div>
 
@@ -332,7 +337,9 @@
                     class="inline-flex items-center gap-1 rounded px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wider"
                     :class="isNotebook
                       ? 'bg-[var(--accent-soft)] text-[var(--accent-strong)] border border-[var(--accent-line)]'
-                      : 'bg-saffron-50 text-saffron-700 dark:bg-saffron-950/40 dark:text-saffron-300'"
+                      : (isForest
+                        ? 'bg-[var(--jade-soft)] text-[var(--jade)] border border-[var(--jade-line)]'
+                        : 'bg-saffron-50 text-saffron-700 dark:bg-saffron-950/40 dark:text-saffron-300')"
                   >
                     <UIcon name="i-heroicons-sparkles" class="h-3 w-3" />
                     Geography : Drainage System
@@ -362,7 +369,9 @@
                     class="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-[12px] font-semibold transition-all"
                     :class="isNotebook
                       ? 'btn-primary bg-[var(--accent)] text-[var(--text-1)]'
-                      : 'bg-saffron-500 hover:bg-saffron-600 text-white shadow-sm'"
+                      : (isForest
+                        ? 'bg-[var(--jade)] hover:opacity-95 text-white shadow-xs'
+                        : 'bg-saffron-500 hover:bg-saffron-600 text-white shadow-sm')"
                   >
                     <UIcon name="i-heroicons-bolt" class="h-3.5 w-3.5" />
                     Pass Gate (3/5)
@@ -408,7 +417,7 @@ const toast = useToast()
 const colorMode = useColorMode()
 const { user, isLoggedIn, userEmail, displayName, loading: authLoading, signOut } = useAuth()
 const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
-const { preset, isNotebook, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
+const { preset, isNotebook, isForest, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
 
 async function handleSignOut() {
   await signOut()

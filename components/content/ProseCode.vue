@@ -5,7 +5,7 @@
   </template>
 
   <!-- All other code blocks -->
-  <pre v-else class="overflow-x-auto rounded-lg border border-gray-100 bg-gray-50 p-4 text-sm dark:border-gray-800 dark:bg-gray-900">
+  <pre v-else class="overflow-x-auto rounded-lg border border-[var(--ink-card-line)] bg-[var(--ink-card)] p-4 text-sm text-[var(--ink-card-text)]">
     <code :class="`language-${language}`">{{ decodedCode }}</code>
   </pre>
 </template>

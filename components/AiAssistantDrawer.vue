@@ -309,10 +309,10 @@ function clearChat() {
   messages.value = []
   suggestedCards.value = []
   errorMessage.value = ''
-  if (import.meta.client) sessionStorage.removeItem(storageKey)
+  if (import.meta.client) sessionStorage.removeItem(storageKey.value)
 }
 
 function saveMessages() {
-  if (import.meta.client) sessionStorage.setItem(storageKey, JSON.stringify(messages.value.slice(-10)))
+  if (import.meta.client) sessionStorage.setItem(storageKey.value, JSON.stringify(messages.value.slice(-10)))
 }
 </script>

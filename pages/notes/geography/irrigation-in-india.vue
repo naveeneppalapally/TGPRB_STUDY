@@ -981,6 +981,49 @@
       note-id="NOTE-GEO-IRRIGATION"
       note-title="Irrigation in India & Telangana"
     />
+
+    <!-- ══ Floating Mobile/Tablet ToC Trigger & Slideover (DEF-CRIT-08) ══ -->
+    <div class="fixed bottom-6 start-6 z-20 xl:hidden">
+      <UButton
+        icon="i-heroicons-list-bullet"
+        label="Contents"
+        color="gray"
+        variant="solid"
+        size="sm"
+        class="rounded-full shadow-lg border b-line bg-elev t-hi font-semibold min-h-[44px] px-3.5"
+        @click="mobileTocOpen = true"
+      />
+    </div>
+
+    <USlideover v-model="mobileTocOpen" side="left" class="xl:hidden" :ui="{ width: 'w-72 max-w-full' }">
+      <div class="p-5 flex flex-col h-full bg-base">
+        <div class="flex items-center justify-between pb-3 border-b b-line mb-4">
+          <p class="eyebrow">On this page</p>
+          <UButton
+            icon="i-heroicons-x-mark"
+            color="gray"
+            variant="ghost"
+            size="sm"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Close table of contents"
+            @click="mobileTocOpen = false"
+          />
+        </div>
+        <nav class="space-y-1 overflow-y-auto flex-1">
+          <a
+            v-for="(section, i) in sections"
+            :key="section.id"
+            :href="`#${section.id}`"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-xs transition-colors min-h-[44px]"
+            :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+            @click.prevent="mobileTocOpen = false; scrollTo(section.id)"
+          >
+            <span class="font-mono text-[11px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span>{{ section.label }}</span>
+          </a>
+        </nav>
+      </div>
+    </USlideover>
   </div>
 </template>
 
@@ -1005,37 +1048,45 @@ function openNotesDrawer(context: SectionContext) {
   notesDrawerRef.value?.openForSection(context)
 }
 
-const readProgress = ref(0)
+const mobileTocOpen = ref(false)
 const activeSection = ref('visual')
-
-function onScroll() {
-  const h = document.documentElement
-  const b = document.body
-  const st = 'scrollTop'
-  const sh = 'scrollHeight'
-  const percent = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100
-  readProgress.value = Math.min(100, Math.max(0, percent))
-
-  // Determine active section
-  const sectionEls = sections.map(s => document.getElementById(s.id)).filter(Boolean)
-  for (let i = sectionEls.length - 1; i >= 0; i--) {
-    const el = sectionEls[i]
-    if (el && el.getBoundingClientRect().top <= 120) {
-      activeSection.value = sections[i].id
-      break
-    }
-  }
-}
+const readProgress = ref(0)
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    activeSection.value = id
+  }
+}
+
+function onScroll() {
+  const h = document.documentElement
+  const max = h.scrollHeight - h.clientHeight
+  readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
+
+  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
+  if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
+    activeSection.value = sections[sections.length - 1].id
+    return
+  }
+
+  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i].id)
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= 120) {
+        activeSection.value = sections[i].id
+        break
+      }
+    }
   }
 }
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
   loadNotes()
 })
 

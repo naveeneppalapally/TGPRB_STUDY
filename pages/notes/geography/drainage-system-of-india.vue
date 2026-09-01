@@ -97,28 +97,28 @@
           </p>
 
           <!-- High-Quality Labeled Physical River Map of India -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-4 text-center shadow-sm">
+          <div class="mb-6 rounded-xl border b-line bg-elev p-4 text-center shadow-sm">
             <img
               src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp"
               alt="Physical Map of India with labeled rivers - Indus, Ganges, Brahmaputra, Narmada, Godavari, Krishna, Kaveri"
               class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
             />
-            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 text-body-xs text-gray-500 font-mono">
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t b-line pt-3 text-body-xs t-lo font-mono">
               <span>Physical relief map with labeled river systems (Wikimedia Commons / CC BY-SA 3.0)</span>
-              <a href="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp" target="_blank" class="text-amber-600 hover:underline flex items-center gap-1 font-sans font-medium">
+              <a href="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136897/geography/india_rivers_labeled2.webp" target="_blank" class="accent hover:underline flex items-center gap-1 font-sans font-medium">
                 Open Full Res (1431×1491) ↗
               </a>
             </div>
           </div>
 
           <!-- Secondary Overview Flow Diagram -->
-          <div class="mb-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+          <div class="mb-5 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
             <img
               src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786136896/geography/india_rivers_wiki.webp"
               alt="Plan of River Systems of India - System Overview Diagram"
               class="mx-auto block w-full max-w-3xl h-auto object-contain rounded-lg"
             />
-            <p class="mt-2 text-center text-body-xs text-gray-500 font-mono">
+            <p class="mt-2 text-center text-body-xs t-lo font-mono">
               System Layout: Tributaries & Major River Basins (Wikimedia Commons / Public Domain)
             </p>
           </div>
@@ -253,13 +253,13 @@
             </div>
 
             <!-- Indus River Basin Map -->
-            <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mt-4 mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786556254/geography/indus-river-basin-map.webp"
                 alt="Indus River Basin Map showing Jhelum, Chenab, Ravi, Beas, Satluj tributaries and Pakistan India region"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Indus River Basin - Wikimedia Commons / CC BY-SA</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Indus River Basin - Wikimedia Commons / CC BY-SA</p>
             </div>
 
             <!-- 2. Ganga -->
@@ -299,13 +299,13 @@
             </div>
 
             <!-- Ganga-Yamuna River Basin Map -->
-            <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mt-4 mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558595/geography/ganga-river-map.webp"
                 alt="Ganga Yamuna River System Map showing left and right bank tributaries - Kosi, Ghaghara, Yamuna, Son, Damodar"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Ganga-Yamuna River System &amp; Tributaries (PMF IAS / Exam Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Ganga-Yamuna River System &amp; Tributaries (PMF IAS / Exam Diagram)</p>
             </div>
 
             <!-- 3. Brahmaputra -->
@@ -344,13 +344,13 @@
             </div>
 
             <!-- Brahmaputra River Basin Map -->
-            <div class="mt-4 mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mt-4 mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786558596/geography/brahmaputra-river-map.webp"
                 alt="Brahmaputra River Basin Map showing Yarlung Tsangpo in Tibet, Dihang in Arunachal, tributaries Subhansiri Lohit Manas Teesta"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Brahmaputra River System &amp; Tributaries (Civilspedia Exam Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Brahmaputra River System &amp; Tributaries (Civilspedia Exam Diagram)</p>
             </div>
           </div>
 
@@ -415,43 +415,43 @@
             </div>
 
             <!-- Godavari River Basin Map -->
-            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787323151/geography/godavari-river-map.webp"
                 alt="Godavari River Basin Map showing Pravara Manjira Penganga Wardha Wainganga Indravati Sabari tributaries across Maharashtra Telangana Andhra Pradesh"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Godavari River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Godavari River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Krishna River Basin Map -->
-            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940466/geography/krishna-river-map.webp"
                 alt="Krishna River Basin Map showing Bhima Musi Tungabhadra Malprabha tributaries across Maharashtra Karnataka Andhra Pradesh Telangana"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Krishna River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Krishna River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Mahanadi River Basin Map -->
-            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940465/geography/mahanadi-river-map.webp"
                 alt="Mahanadi River System Map showing Seonath Hasdeo Mand Ib Tel Jonk tributaries"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Mahanadi River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Mahanadi River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Cauvery River Basin Map -->
-            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940469/geography/cauvery-river-map.webp"
                 alt="Cauvery Kaveri River System Map showing Harangi Hemavati Arkavathi Kabini Bhavani Amaravathi tributaries"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Cauvery / Kaveri River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Cauvery / Kaveri River Basin (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
           </div>
 
@@ -500,23 +500,23 @@
             </div>
 
             <!-- Narmada River Map -->
-            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940464/geography/narmada-river-map.webp"
                 alt="Narmada River System Map showing Amarkantak origin, rift valley between Vindhya and Satpura ranges, Sardar Sarovar dam"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Narmada River System (TSLPRB / TGPRB Master Reference Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Narmada River System (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
 
             <!-- Tapi River Map -->
-            <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white p-3 text-center shadow-sm">
+            <div class="mb-6 rounded-xl border b-line bg-elev p-3 text-center shadow-sm">
               <img
                 src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940463/geography/tapi-river-map.webp"
                 alt="Tapi River System Map showing Multai origin in Betul MP, Ukai dam, Gulf of Khambhat estuary"
                 class="mx-auto block w-full max-w-2xl h-auto object-contain rounded-lg"
               />
-              <p class="mt-2 text-[11px] text-gray-400 font-mono">Tapi River System (TSLPRB / TGPRB Master Reference Diagram)</p>
+              <p class="mt-2 text-[11px] t-lo font-mono">Tapi River System (TSLPRB / TGPRB Master Reference Diagram)</p>
             </div>
           </div>
 
@@ -732,7 +732,7 @@
                   :key="examOpt"
                   type="button"
                   class="px-3.5 py-1.5 rounded-lg text-body-xs font-medium transition-all"
-                  :class="activeExamFilter === examOpt ? 'bg-amber-500 text-white font-semibold shadow-sm' : 'bg-white dark:bg-gray-900 t-mid hover:t-hi border border-gray-200 dark:border-gray-800'"
+                  :class="activeExamFilter === examOpt ? 'bg-amber-500 text-white font-semibold shadow-sm' : 'bg-elev t-mid hover:t-hi border b-line'"
                   @click="activeExamFilter = examOpt"
                 >
                   {{ examOpt === 'all' ? 'All Exams (' + pyqs.length + ')' : examOpt + ' (' + pyqs.filter(q => q.exam === examOpt).length + ')' }}
@@ -741,7 +741,7 @@
             </div>
 
             <!-- Row 2: Year Filter Chips -->
-            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 dark:border-gray-800 pb-3">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b b-line pb-3">
               <span class="font-mono text-body-xs font-semibold uppercase tracking-wider t-lo flex items-center gap-1.5">
                 <UIcon name="i-heroicons-calendar" class="h-4 w-4 accent" />
                 Paper Year:
@@ -752,7 +752,7 @@
                   :key="yrOpt"
                   type="button"
                   class="px-2.5 py-1 rounded-md text-[11.5px] font-mono transition-all"
-                  :class="activeYearFilter === yrOpt ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/40' : 'bg-white dark:bg-gray-900 t-lo hover:t-hi border border-gray-200 dark:border-gray-800'"
+                  :class="activeYearFilter === yrOpt ? 'bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold border border-amber-500/40' : 'bg-elev t-lo hover:t-hi border b-line'"
                   @click="activeYearFilter = yrOpt"
                 >
                   {{ yrOpt === 'all' ? 'All Years' : yrOpt }}
@@ -772,7 +772,7 @@
                   :key="rOpt.id"
                   type="button"
                   class="px-3 py-1 rounded-full text-[11.5px] font-medium transition-all"
-                  :class="activeRiverFilter === rOpt.id ? 'bg-saffron text-white font-semibold shadow-sm' : 'bg-white dark:bg-gray-900 t-mid hover:t-hi border border-gray-200 dark:border-gray-800'"
+                  :class="activeRiverFilter === rOpt.id ? 'bg-saffron-500 text-white font-semibold shadow-sm' : 'bg-elev t-mid hover:t-hi border b-line'"
                   @click="activeRiverFilter = rOpt.id"
                 >
                   {{ rOpt.label }}
@@ -1037,6 +1037,49 @@
       note-id="NOTE-GEO-DRAINAGE"
       note-title="Drainage System of India"
     />
+
+    <!-- ══ Floating Mobile/Tablet ToC Trigger & Slideover (DEF-CRIT-08) ══ -->
+    <div class="fixed bottom-6 start-6 z-20 xl:hidden">
+      <UButton
+        icon="i-heroicons-list-bullet"
+        label="Contents"
+        color="gray"
+        variant="solid"
+        size="sm"
+        class="rounded-full shadow-lg border b-line bg-elev t-hi font-semibold min-h-[44px] px-3.5"
+        @click="mobileTocOpen = true"
+      />
+    </div>
+
+    <USlideover v-model="mobileTocOpen" side="left" class="xl:hidden" :ui="{ width: 'w-72 max-w-full' }">
+      <div class="p-5 flex flex-col h-full bg-base">
+        <div class="flex items-center justify-between pb-3 border-b b-line mb-4">
+          <p class="eyebrow">On this page</p>
+          <UButton
+            icon="i-heroicons-x-mark"
+            color="gray"
+            variant="ghost"
+            size="sm"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Close table of contents"
+            @click="mobileTocOpen = false"
+          />
+        </div>
+        <nav class="space-y-1 overflow-y-auto flex-1">
+          <a
+            v-for="(section, i) in sections"
+            :key="section.id"
+            :href="`#${section.id}`"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-xs transition-colors min-h-[44px]"
+            :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+            @click.prevent="mobileTocOpen = false; scrollTo(section.id)"
+          >
+            <span class="font-mono text-[11px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span>{{ section.label }}</span>
+          </a>
+        </nav>
+      </div>
+    </USlideover>
   </div>
 </template>
 
@@ -1057,10 +1100,6 @@ const aiQuickPrompts = useAiPromptChips('NOTE-GEO-DRAINAGE')
 /* ── Personal notes ──────────────────────────────────────────────────────── */
 const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
 const { loadNotes } = usePersonalNotes()
-
-onMounted(() => {
-  loadNotes()
-})
 
 function openNotesDrawer(context: SectionContext) {
   notesDrawerRef.value?.openForSection(context)
@@ -1094,35 +1133,49 @@ const sections = [
   { id: 'current-affairs',  label: 'Current Affairs' },
 ]
 
-const activeSection = ref('map')
+const mobileTocOpen = ref(false)
+const activeSection = ref(sections[0].id)
 const readProgress = ref(0)
 
 function scrollTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    activeSection.value = id
+  }
 }
 
-let observer: IntersectionObserver | null = null
 function onScroll() {
   const h = document.documentElement
   const max = h.scrollHeight - h.clientHeight
-  readProgress.value = max > 0 ? Math.min(100, (h.scrollTop / max) * 100) : 0
+  readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
+
+  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
+  if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
+    activeSection.value = sections[sections.length - 1].id
+    return
+  }
+
+  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i].id)
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= 120) {
+        activeSection.value = sections[i].id
+        break
+      }
+    }
+  }
 }
+
 onMounted(() => {
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(e => { if (e.isIntersecting) activeSection.value = e.target.id })
-    },
-    { rootMargin: '-20% 0px -70% 0px', threshold: 0 },
-  )
-  sections.forEach(s => {
-    const el = document.getElementById(s.id)
-    if (el) observer?.observe(el)
-  })
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
+  loadNotes()
 })
+
 onUnmounted(() => {
-  observer?.disconnect()
   window.removeEventListener('scroll', onScroll)
 })
 

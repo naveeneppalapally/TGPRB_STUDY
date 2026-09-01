@@ -25,10 +25,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
-        display: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['Inter', '"Noto Sans Telugu"', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', '"Noto Sans Telugu"', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
         hand: ['"Patrick Hand"', 'cursive', 'sans-serif'],
+        telugu: ['"Noto Sans Telugu"', 'sans-serif'],
       },
       fontSize: {
         'h1': ['calc(30px * var(--scale-heading))', '1.1'],

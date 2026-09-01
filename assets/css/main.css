@@ -233,6 +233,109 @@
   font-family: 'Patrick Hand', cursive, sans-serif;
 }
 
+/* ── 1c. Theme Presets: Botanical Sage & Forest Focus ────────────────────── */
+.theme-forest {
+  color-scheme: light;
+  --bg:          #F1F5EE;
+  --bg-elevated: #FAFDF8;
+  --bg-subtle:   #E5ECE0;
+  --bg-inset:    #DAE4D5;
+  --line:        rgba(20, 39, 31, 0.12);
+  --line-strong: rgba(20, 39, 31, 0.28);
+  --text-1:      #14271F;
+  --text-2:      #3D5A4D;
+  --text-3:      #658074;
+  --accent:        #D97706;
+  --accent-strong: #B45309;
+  --accent-soft:   #FDF2DE;
+  --accent-line:   rgba(217, 119, 6, 0.40);
+  --jade:      #247A55;
+  --jade-soft: #D8EFE5;
+  --jade-line: rgba(36, 122, 85, 0.38);
+  --red:      #BD3A3A;
+  --red-soft: #F9E4E4;
+  --red-line: rgba(189, 58, 58, 0.38);
+  --sky:      #2C6B8D;
+  --sky-soft: #E0EDF5;
+  --radius: 10px;
+}
+
+.dark.theme-forest,
+.dark .theme-forest {
+  color-scheme: dark;
+  --bg:          #0C1612;
+  --bg-elevated: #13221C;
+  --bg-subtle:   #0F1B16;
+  --bg-inset:    #080F0C;
+  --line:        rgba(213, 232, 221, 0.10);
+  --line-strong: rgba(213, 232, 221, 0.24);
+  --text-1:      #ECFDF5;
+  --text-2:      #9BBAB0;
+  --text-3:      #648479;
+  --accent:        #F59E0B;
+  --accent-strong: #FBBF24;
+  --accent-soft:   rgba(245, 158, 11, 0.14);
+  --accent-line:   rgba(245, 158, 11, 0.38);
+  --jade:      #34D399;
+  --jade-soft: rgba(52, 211, 153, 0.14);
+  --jade-line: rgba(52, 211, 153, 0.38);
+  --red:      #F87171;
+  --red-soft: rgba(248, 113, 113, 0.14);
+  --red-line: rgba(248, 113, 113, 0.38);
+  --sky:      #60A5FA;
+  --sky-soft: rgba(96, 165, 250, 0.14);
+  --radius: 10px;
+}
+
+/* Botanical Background Ambience */
+.theme-forest body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 380px at 80% -5%, rgba(36, 122, 85, 0.06), transparent 70%),
+    radial-gradient(650px 320px at 15% 25%, rgba(217, 119, 6, 0.03), transparent 60%);
+  background-attachment: fixed;
+}
+
+.dark.theme-forest body,
+.dark .theme-forest body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 380px at 80% -5%, rgba(52, 211, 153, 0.07), transparent 70%),
+    radial-gradient(650px 320px at 15% 25%, rgba(245, 158, 11, 0.04), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Tactile Ergonomic Card Enhancements */
+.theme-forest .panel,
+.theme-forest .card {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 3px rgba(20, 39, 31, 0.04);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+}
+
+.theme-forest .panel-hover:hover {
+  transform: translateY(-1px);
+  border-color: var(--line-strong);
+  box-shadow: 0 4px 12px rgba(20, 39, 31, 0.08);
+}
+
+.dark.theme-forest .panel,
+.dark .theme-forest .panel,
+.dark.theme-forest .card,
+.dark .theme-forest .card {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.dark.theme-forest .panel-hover:hover,
+.dark .theme-forest .panel-hover:hover {
+  transform: translateY(-1px);
+  border-color: var(--line-strong);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
+}
+
 /* ── 2. Base ────────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
@@ -713,6 +816,10 @@ body {
 .btn-primary:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .btn-again, .btn-hard, .btn-good, .btn-easy {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 9px 0;
   border-radius: 8px;
   font-size: 12.5px;
@@ -777,6 +884,8 @@ body {
   -webkit-backface-visibility: hidden;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .flip-card-face.flip-card-back {
   transform: rotateY(180deg);
@@ -891,3 +1000,10 @@ body {
   }
 }
 
+/* Telugu script leading & matra protection */
+[lang="te"],
+.font-telugu,
+.telugu-text {
+  font-family: 'Noto Sans Telugu', 'Inter', system-ui, sans-serif;
+  line-height: 1.75;
+}

@@ -50,7 +50,7 @@
           @click="flipped = !flipped"
         >
           <div class="flip-card-inner" :class="{ 'is-flipped': flipped }">
-            <div class="flip-card-face flip-card-front panel p-6 sm:p-8">
+            <div class="flip-card-face flip-card-front panel p-4 sm:p-8">
               <p class="eyebrow mb-4">Question</p>
               <p class="flex-1 text-[15px] font-medium leading-[1.75] t-hi">
                 {{ currentCard.front }}
@@ -59,7 +59,7 @@
                 Click to reveal the answer
               </p>
             </div>
-            <div class="flip-card-face flip-card-back panel b-strong p-6 sm:p-8">
+            <div class="flip-card-face flip-card-back panel b-strong p-4 sm:p-8">
               <p class="eyebrow mb-4 accent">Answer</p>
               <p class="flex-1 text-[15px] leading-[1.75] t-hi">
                 {{ currentCard.back }}

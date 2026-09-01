@@ -25,7 +25,7 @@
         <button
           type="button"
           class="rounded-md py-1.5 text-xs font-semibold transition-all"
-          :class="method === 'magic_link' ? 'bg-elev text-hi shadow-sm' : 'text-lo hover:text-mid'"
+          :class="method === 'magic_link' ? 'bg-elev t-hi shadow-sm' : 't-lo hover:t-mid'"
           @click="method = 'magic_link'; errorMsg = ''; successMsg = ''"
         >
           Magic Link / OTP
@@ -33,7 +33,7 @@
         <button
           type="button"
           class="rounded-md py-1.5 text-xs font-semibold transition-all"
-          :class="method === 'password' ? 'bg-elev text-hi shadow-sm' : 'text-lo hover:text-mid'"
+          :class="method === 'password' ? 'bg-elev t-hi shadow-sm' : 't-lo hover:t-mid'"
           @click="method = 'password'; errorMsg = ''; successMsg = ''"
         >
           Password

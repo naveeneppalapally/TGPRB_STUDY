@@ -88,7 +88,7 @@
 
         <div class="mt-5 overflow-x-auto">
           <table class="w-full min-w-[560px] text-left text-[12px]">
-            <thead class="border-b border-white/10 font-mono text-[10px] uppercase tracking-[0.12em] text-slate-500">
+            <thead class="border-b border-white/10 font-mono text-[10px] uppercase tracking-[0.12em] text-slate-400">
               <tr>
                 <th class="pb-2 font-medium">Eliminated</th>
                 <th class="pb-2 font-medium">Remaining</th>
@@ -137,7 +137,7 @@
                   aria-hidden="true"
                 />
               </div>
-              <div class="mt-2 flex justify-between font-mono text-[9px] uppercase tracking-[0.1em] text-slate-500">
+              <div class="mt-2 flex justify-between font-mono text-[9px] uppercase tracking-[0.1em] text-slate-400">
                 <span>Leaving value</span>
                 <span>Balanced</span>
                 <span>Over-attempting</span>
@@ -148,12 +148,12 @@
               <div class="rounded-lg border border-[#ef4444]/25 bg-[#ef4444]/[0.07] p-3">
                 <p class="text-[11px] text-slate-400">Bad-guess penalties</p>
                 <p class="mt-1 font-mono text-lg font-semibold text-[#ef4444]">{{ signedMark(-simulation.marksLostToBadGuesses) }}</p>
-                <p class="mt-1 text-[10px] text-slate-500">{{ simulation.badGuessCount }} wrong with 0-1 eliminations</p>
+                <p class="mt-1 text-[10px] text-slate-400">{{ simulation.badGuessCount }} wrong with 0-1 eliminations</p>
               </div>
               <div class="rounded-lg border border-[#10b981]/25 bg-[#10b981]/[0.07] p-3">
                 <p class="text-[11px] text-slate-400">Expected skipped value</p>
                 <p class="mt-1 font-mono text-lg font-semibold text-[#10b981]">{{ signedMark(simulation.marksLeftOnTable) }}</p>
-                <p class="mt-1 text-[10px] text-slate-500">{{ simulation.skippedOpportunityCount }} skips with 2-3 eliminations</p>
+                <p class="mt-1 text-[10px] text-slate-400">{{ simulation.skippedOpportunityCount }} skips with 2-3 eliminations</p>
               </div>
             </div>
 
@@ -162,7 +162,7 @@
                 <span class="text-slate-400">Brier score</span>
                 <span class="font-mono font-semibold text-slate-100">{{ formatBrier(simulation.brierScore) }}</span>
               </div>
-              <p class="mt-1 text-[10px] leading-relaxed text-slate-500">
+              <p class="mt-1 text-[10px] leading-relaxed text-slate-400">
                 0 is perfect calibration. This uses only attempted questions, with confidence captured before feedback.
               </p>
             </div>
@@ -182,14 +182,14 @@
               <div class="rounded-lg border border-white/10 bg-black/20 p-4">
                 <p class="text-[11px] text-slate-400">Actual net score</p>
                 <p class="mt-1 font-mono text-3xl font-bold tracking-tight text-white">{{ formatMark(simulation.netScore) }}</p>
-                <p class="mt-1 text-[10px] text-slate-500">
+                <p class="mt-1 text-[10px] text-slate-400">
                   {{ simulation.correctCount }} correct, {{ simulation.incorrectCount }} incorrect, {{ simulation.skippedCount }} skipped
                 </p>
               </div>
               <div class="rounded-lg border border-[#10b981]/30 bg-[#10b981]/[0.07] p-4">
                 <p class="text-[11px] text-slate-400">EV-aware model</p>
                 <p class="mt-1 font-mono text-3xl font-bold tracking-tight text-[#10b981]">{{ formatMark(simulation.optimalStrategyScore) }}</p>
-                <p class="mt-1 text-[10px] text-slate-500">{{ signedMark(simulation.strategyImprovement) }} modelled opportunity</p>
+                <p class="mt-1 text-[10px] text-slate-400">{{ signedMark(simulation.strategyImprovement) }} modelled opportunity</p>
               </div>
             </div>
 
@@ -197,7 +197,7 @@
               The model restores observed low-information wrong-answer penalties and adds the structural EV of high-information skips. It is not a claim that every skipped answer would have been correct.
             </div>
 
-            <p v-if="simulation.missingEliminationCount > 0" class="mt-3 text-[10px] leading-relaxed text-slate-500">
+            <p v-if="simulation.missingEliminationCount > 0" class="mt-3 text-[10px] leading-relaxed text-slate-400">
               {{ simulation.missingEliminationCount }} record{{ simulation.missingEliminationCount === 1 ? '' : 's' }} lacked an elimination count and {{ simulation.missingEliminationCount === 1 ? 'was' : 'were' }} excluded from strategy-loss totals.
             </p>
           </template>

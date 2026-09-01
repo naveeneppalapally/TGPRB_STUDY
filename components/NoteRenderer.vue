@@ -5,23 +5,21 @@
       <div
         v-for="ca in currentAffairs"
         :key="ca.id"
-        class="card mb-3"
-        style="border-color: rgba(96, 165, 250, 0.3); background: rgba(96, 165, 250, 0.05)"
+        class="card mb-3 border border-sky-500/30 bg-sky-500/5"
       >
         <div class="flex items-start gap-3">
           <span class="text-lg mt-0.5">📰</span>
           <div class="flex-1">
             <div class="flex items-center gap-2 mb-1">
-              <span class="badge" style="background: rgba(96, 165, 250, 0.15); color: #93bbfd">
+              <span class="badge bg-sky-500/15 text-sky-600 dark:text-sky-400 font-semibold text-xs">
                 Current Affair
               </span>
-              <span class="text-xs" style="color: var(--text-muted)">{{ ca.date }}</span>
+              <span class="text-xs t-lo">{{ ca.date }}</span>
             </div>
-            <h4 class="font-semibold text-sm mb-1">{{ ca.headline }}</h4>
+            <h4 class="font-semibold text-sm mb-1 t-hi">{{ ca.headline }}</h4>
             <NuxtLink
               :to="`/current-affairs/${ca._path?.split('/').pop()}`"
-              class="text-xs"
-              style="color: var(--accent)"
+              class="text-xs accent font-medium hover:underline"
             >
               Read more →
             </NuxtLink>
@@ -34,15 +32,15 @@
     <div class="mb-6">
       <div class="flex items-center gap-3 mb-2">
         <span :class="tierBadgeClass">Tier {{ note.tier }}</span>
-        <span class="badge" style="background: rgba(103, 111, 143, 0.15); color: #8d93ab">
+        <span class="badge bg-stone-500/15 text-stone-600 dark:text-stone-400 font-mono text-xs">
           {{ note.exam_section }}
         </span>
-        <span class="text-xs" style="color: var(--text-muted)">
+        <span class="text-xs t-lo">
           {{ note.verified_pyq_count }} verified PYQs
         </span>
       </div>
-      <h1 class="text-2xl font-bold mb-1">{{ note.topic }}</h1>
-      <p class="text-sm" style="color: var(--text-muted)">{{ note.subtopic }}</p>
+      <h1 class="text-2xl font-bold mb-1 t-hi">{{ note.topic }}</h1>
+      <p class="text-sm t-lo">{{ note.subtopic }}</p>
     </div>
 
     <!-- Note Content (Markdown rendered) -->
@@ -61,18 +59,17 @@
     <!-- Flashcard unlock message -->
     <div
       v-else
-      class="card mt-8"
-      style="border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.05)"
+      class="card mt-8 border border-emerald-500/30 bg-emerald-500/5"
     >
       <div class="flex items-center gap-3">
         <span class="text-xl">✅</span>
         <div>
-          <h3 class="font-semibold text-sm" style="color: #34d399">
+          <h3 class="font-semibold text-sm text-emerald-600 dark:text-emerald-400">
             Gate Passed - {{ flashcardCount }} Flashcards Unlocked
           </h3>
-          <p class="text-xs mt-1" style="color: var(--text-muted)">
+          <p class="text-xs mt-1 t-lo">
             These cards are now in your FSRS review queue.
-            <NuxtLink to="/review" style="color: var(--accent)">Start reviewing →</NuxtLink>
+            <NuxtLink to="/review" class="accent font-medium hover:underline">Start reviewing →</NuxtLink>
           </p>
         </div>
       </div>

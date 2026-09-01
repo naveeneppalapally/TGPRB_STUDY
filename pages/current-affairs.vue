@@ -106,7 +106,7 @@
         </button>
       </div>
 
-      <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
+      <div class="grid grid-cols-1 min-[420px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
         <!-- ALL Categories Option -->
         <button
           class="flex items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left transition-all cursor-pointer"

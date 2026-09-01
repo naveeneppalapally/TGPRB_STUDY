@@ -78,17 +78,6 @@ function cancelAdding() {
   draftBody.value = ''
   draftAnchor.value = ''
 }
-
-let autoSaveTimeout: ReturnType<typeof setTimeout> | null = null
-function onInput() {
-  if (autoSaveTimeout) clearTimeout(autoSaveTimeout)
-  if (!draftBody.value.trim()) return
-  
-  syncStatus.value = 'Typing...'
-  autoSaveTimeout = setTimeout(() => {
-    saveNewNote()
-  }, 800)
-}
 </script>
 <template>
   <div>
@@ -105,7 +94,7 @@ function onInput() {
               {{ activeContext.noteTitle }} <span class="t-lo font-normal mx-1">/</span> <span class="text-saffron-600 dark:text-saffron-400">{{ activeContext.sectionLabel }}</span>
             </h2>
           </div>
-          <UButton icon="i-heroicons-x-mark" color="gray" variant="ghost" aria-label="Close" @click="isOpen = false" />
+          <UButton icon="i-heroicons-x-mark" color="gray" variant="ghost" aria-label="Close" class="min-h-[44px] min-w-[44px] flex items-center justify-center" @click="isOpen = false" />
         </header>
 
         <!-- Tabs -->
@@ -127,11 +116,12 @@ function onInput() {
               </div>
               <UTextarea 
                 v-model="draftBody"
-                placeholder="Type your note here..."
+                placeholder="Type your note here (Ctrl+Enter to save)..."
                 autofocus
                 :rows="3"
-                @input="onInput"
                 class="w-full focus:ring-saffron-500"
+                @keydown.ctrl.enter="saveNewNote"
+                @keydown.meta.enter="saveNewNote"
               />
               <div class="mt-2 flex justify-between items-center">
                 <span class="text-[10px] text-emerald-600 dark:text-emerald-400 font-medium flex items-center gap-1">
@@ -139,13 +129,13 @@ function onInput() {
                   {{ syncStatus }}
                 </span>
                 <div class="flex gap-2">
-                  <UButton label="Cancel" color="gray" variant="ghost" size="xs" @click="cancelAdding" />
-                  <UButton label="Save Now" color="gray" variant="soft" size="xs" class="bg-saffron-500/10 text-saffron-600 hover:bg-saffron-500/20" @click="saveNewNote" />
+                  <UButton label="Cancel" color="gray" variant="ghost" size="xs" class="min-h-[36px] px-3" @click="cancelAdding" />
+                  <UButton label="Save Note" color="gray" variant="soft" size="xs" class="bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-500/20 font-semibold min-h-[36px] px-3" @click="saveNewNote" />
                 </div>
               </div>
             </div>
             
-            <UButton v-else icon="i-heroicons-plus" label="Add note" color="gray" variant="soft" class="w-full justify-center border border-dashed border-gray-300 dark:border-gray-700 hover:border-saffron-500 transition-colors" @click="isAdding = true" />
+            <UButton v-else icon="i-heroicons-plus" label="Add note" color="gray" variant="soft" class="w-full justify-center border border-dashed border-gray-300 dark:border-gray-700 hover:border-saffron-500 transition-colors min-h-[44px]" @click="isAdding = true" />
           </div>
           
           <!-- Suggest Improvement Tab -->

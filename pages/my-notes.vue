@@ -42,7 +42,7 @@
       </UInput>
 
       <!-- Filter Tabs -->
-      <div class="flex items-center gap-1 bg-sub border b-line rounded-lg p-1 shrink-0">
+      <div class="flex items-center gap-1 bg-sub border b-line rounded-lg p-1 w-full overflow-x-auto sm:w-auto shrink-0 scrollbar-none">
         <UButton
           size="xs"
           :color="filterMode === 'all' ? 'gray' : 'gray'"

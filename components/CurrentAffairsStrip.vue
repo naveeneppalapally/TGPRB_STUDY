@@ -43,13 +43,17 @@
           v-for="(_, i) in dotsToShow"
           :key="i"
           type="button"
-          class="rounded-full transition-all duration-200"
-          :class="dotIndex(i) === currentIndex
-            ? 'w-4 h-1.5 bg-saffron-500'
-            : 'w-1.5 h-1.5 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400'"
-          @click="goTo(dotIndex(i))"
+          class="flex items-center justify-center min-h-[44px] min-w-[28px] py-2"
           :aria-label="`Card ${dotIndex(i) + 1}`"
-        />
+          @click="goTo(dotIndex(i))"
+        >
+          <span
+            class="rounded-full transition-all duration-200 block"
+            :class="dotIndex(i) === currentIndex
+              ? 'w-4 h-1.5 bg-saffron-500'
+              : 'w-1.5 h-1.5 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400'"
+          />
+        </button>
         <span v-if="items.length > 10" class="font-mono text-[10px] t-lo ml-1">
           +{{ items.length - 10 }}
         </span>
@@ -59,19 +63,19 @@
       <div class="flex items-center gap-2">
         <button
           type="button"
-          class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
+          class="h-11 w-11 min-h-[44px] min-w-[44px] rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
           :disabled="currentIndex === 0"
-          @click="prev"
           aria-label="Previous card"
+          @click="prev"
         >
           <UIcon name="i-heroicons-arrow-left" class="h-4 w-4" />
         </button>
         <button
           type="button"
-          class="h-8 w-8 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
+          class="h-11 w-11 min-h-[44px] min-w-[44px] rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
           :disabled="currentIndex === items.length - 1"
-          @click="next"
           aria-label="Next card"
+          @click="next"
         >
           <UIcon name="i-heroicons-arrow-right" class="h-4 w-4" />
         </button>
@@ -80,7 +84,7 @@
         <button
           v-if="newCount > 0"
           type="button"
-          class="h-8 px-3 rounded-lg border b-line text-[11px] font-medium t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1.5"
+          class="h-11 min-h-[44px] px-3.5 rounded-lg border b-line text-[11px] font-medium t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1.5"
           @click="handleMarkCaughtUp"
         >
           <UIcon name="i-heroicons-check" class="h-3.5 w-3.5" />
@@ -89,6 +93,10 @@
       </div>
     </div>
   </section>
+  <div v-else class="rounded-xl border b-line bg-elev p-6 text-center text-body-sm t-lo">
+    <UIcon name="i-heroicons-newspaper" class="h-6 w-6 mx-auto mb-2 opacity-50" />
+    <p>No current affairs currently tagged for this topic.</p>
+  </div>
 </template>
 
 <script setup lang="ts">

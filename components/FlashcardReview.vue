@@ -7,7 +7,7 @@
     >
       <!-- Topic badge -->
       <div class="flex items-center gap-2 mb-4">
-        <span class="badge" style="background: rgba(240, 180, 41, 0.15); color: #f9d872">
+        <span class="badge bg-saffron-500/15 text-saffron-600 dark:text-saffron-400 font-mono text-xs font-semibold">
           {{ card.exam_section }}
         </span>
         <span class="text-xs" style="color: var(--text-muted)">{{ card.subtopic }}</span>

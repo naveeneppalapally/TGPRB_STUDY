@@ -61,8 +61,10 @@ export default defineEventHandler((event) => {
     const occStr = JSON.stringify(q.occurrences || []).toLowerCase()
     
     if (exam && exam !== 'all') {
-      if (exam === 'constable' && !occStr.includes('constable')) return false
-      if (exam === 'si' && !occStr.includes('si')) return false
+      const isConstable = /(?:^|[_\s\/\-"'])constable(?:$|[_\s\/\-"'])/i.test(occStr)
+      const isSI = /(?:^|[_\s\/\-"'])si(?:$|[_\s\/\-"'])/i.test(occStr)
+      if (exam === 'constable' && !isConstable) return false
+      if (exam === 'si' && !isSI) return false
     }
 
     if (year && year !== 'all') {

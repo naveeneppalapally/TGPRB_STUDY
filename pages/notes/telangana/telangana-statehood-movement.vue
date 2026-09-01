@@ -56,8 +56,8 @@
               class="chip"
               :class="i === 0 ? 'chip-saffron' : ''"
             >
-              <span class="num font-mono">{ String(i + 1).padStart(2, '0') }</span>
-              { c.label }
+              <span class="num font-mono">{{ String(i + 1).padStart(2, '0') }}</span>
+              {{ c.label }}
             </span>
           </div>
           <p class="mt-2.5 text-body-xs t-lo">
@@ -96,9 +96,9 @@
             </p>
 
             <!-- Key Leaders Table -->
-            <div class="my-6 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-sm">
+            <div class="my-6 overflow-x-auto rounded-xl border b-line bg-elev shadow-sm">
               <table class="w-full text-left text-xs sm:text-sm">
-                <thead class="bg-slate-50 dark:bg-slate-900 accent font-semibold border-b border-slate-200 dark:border-slate-800">
+                <thead class="bg-sub accent font-semibold border-b b-line">
                   <tr>
                     <th class="p-3">Leader / Revolutionary</th>
                     <th class="p-3">Community / Region</th>
@@ -106,27 +106,27 @@
                     <th class="p-3">PYQ Reference</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Chityala Ailamma (Chakali Ilamma)</td>
+                <tbody class="divide-y divide-[var(--line)] t-mid">
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Chityala Ailamma (Chakali Ilamma)</td>
                     <td class="p-3">Palakurthi, Jangaon</td>
-                    <td class="p-3">Symbol of peasant armed struggle. Resisted land grabbing by feudal landlord <strong class="text-slate-900 dark:text-slate-100">Visnuru Ramachandra Reddy</strong> (Visnuru Dora). Her resistance sparked the rural uprising in 1946.</td>
+                    <td class="p-3">Symbol of peasant armed struggle. Resisted land grabbing by feudal landlord <strong class="t-hi">Visnuru Ramachandra Reddy</strong> (Visnuru Dora). Her resistance sparked the rural uprising in 1946.</td>
                     <td class="p-3 font-mono text-xs accent font-semibold">[PYQ-0589]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Bhukya Balya</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Bhukya Balya</td>
                     <td class="p-3">Lambada Community</td>
                     <td class="p-3">Prominent tribal/Lambada leader who led fierce resistance against Visnuru Dora's forced labor (vetti) and illegal land grabs.</td>
                     <td class="p-3 font-mono text-xs accent font-semibold">[PYQ-0145]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Doddi Komarayya</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Doddi Komarayya</td>
                     <td class="p-3">Kadavendi village</td>
                     <td class="p-3">Martyred on July 4, 1946 when Visnuru Dora's armed goons opened fire. His martyrdom triggered the full-blown armed struggle.</td>
                     <td class="p-3 font-mono text-xs t-lo">High-Yield Fact</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Konda Venkat Ranga Reddy</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Konda Venkat Ranga Reddy</td>
                     <td class="p-3">Hyderabad Congress</td>
                     <td class="p-3"><strong class="text-rose-600 dark:text-rose-400">NOT associated with Communist Armed Struggle.</strong> He was an Indian National Congress leader and former Deputy CM of AP.</td>
                     <td class="p-3 font-mono text-xs accent font-semibold">[PYQ-0608]</td>
@@ -136,7 +136,7 @@
             </div>
 
             <!-- Operation Polo Sub-section -->
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3 flex items-center gap-2">
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3 flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-amber-400"></span>
               Operation Polo (Police Action · September 1948)
             </h3>
@@ -151,16 +151,16 @@
               </div>
               <ul class="space-y-2 list-disc list-inside">
                 <li>
-                  <strong class="text-slate-900 dark:text-slate-100">Military Plan Architect:</strong> Lieutenant General <strong>Eric Goddard</strong> (GOC-in-C, Southern Command prepared the operational plan). <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0144]</span>
+                  <strong class="t-hi">Military Plan Architect:</strong> Lieutenant General <strong>Eric Goddard</strong> (GOC-in-C, Southern Command prepared the operational plan). <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0144]</span>
                 </li>
                 <li>
-                  <strong class="text-slate-900 dark:text-slate-100">GOC-in-C Southern Command during Action:</strong> Lieutenant General <strong>Rajendrasinhji Jadeja</strong> (Lt. Gen. Rajendra Singh). <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0604]</span>
+                  <strong class="t-hi">GOC-in-C Southern Command during Action:</strong> Lieutenant General <strong>Rajendrasinhji Jadeja</strong> (Lt. Gen. Rajendra Singh). <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0604]</span>
                 </li>
                 <li>
-                  <strong class="text-slate-900 dark:text-slate-100">Field Commander (Striking Force):</strong> Major General <strong>J.N. Chaudhuri</strong> (led the entry into Hyderabad and served as Military Governor 1948-1949).
+                  <strong class="t-hi">Field Commander (Striking Force):</strong> Major General <strong>J.N. Chaudhuri</strong> (led the entry into Hyderabad and served as Military Governor 1948-1949).
                 </li>
                 <li>
-                  <strong class="text-slate-900 dark:text-slate-100">Commander-in-Chief of Nizam's Army:</strong> Major General <strong>Syed Ahmed El Edroos</strong> (surrendered to Indian Army on September 17, 1948). <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0607]</span>
+                  <strong class="t-hi">Commander-in-Chief of Nizam's Army:</strong> Major General <strong>Syed Ahmed El Edroos</strong> (surrendered to Indian Army on September 17, 1948). <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0607]</span>
                 </li>
               </ul>
             </div>
@@ -183,7 +183,7 @@
               The origin of safeguards for locals traces back to Nizam rules. In <strong>1868</strong>, Prime Minister <strong>Salar Jung I</strong> issued an administrative order directing that local Mulkis must be given priority in civil services due to growing discontent over non-mulkis (Afaghis/Ghars) occupying top administrative posts <span class="font-mono accent text-xs">[PYQ-0392]</span>.
             </p>
 
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3">1952 Mulki Agitation &amp; Police Firing</h3>
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3">1952 Mulki Agitation &amp; Police Firing</h3>
             <p>
               After Hyderabad State was integrated, non-mulki personnel were recruited in large numbers into schools and government departments, violating local domicile rights (15-year residence rule).
             </p>
@@ -198,26 +198,26 @@
               </p>
             </div>
 
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3">The Gentlemen's Agreement (February 20, 1956)</h3>
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3">The Gentlemen's Agreement (February 20, 1956)</h3>
             <p>
               To merge Telangana with Andhra State and create Andhra Pradesh, leaders signed the Gentlemen's Agreement at Hyderabad House, New Delhi on February 20, 1956.
             </p>
 
             <!-- Table of Gentlemen's Agreement Signatories -->
-            <div class="my-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-sm">
+            <div class="my-4 overflow-x-auto rounded-xl border b-line bg-elev shadow-sm">
               <table class="w-full text-left text-xs sm:text-sm">
-                <thead class="bg-slate-50 dark:bg-slate-900 accent font-semibold border-b border-slate-200 dark:border-slate-800">
+                <thead class="bg-sub accent font-semibold border-b b-line">
                   <tr>
                     <th class="p-3">Region</th>
                     <th class="p-3">4 Key Signatories</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                <tbody class="divide-y divide-[var(--line)] t-mid">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-semibold accent">Telangana Region (4)</td>
                     <td class="p-3">Burgula Ramakrishna Rao (CM), K.V. Ranga Reddy, Marri Chenna Reddy, J.V. Narsing Rao</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-semibold text-sky-600 dark:text-sky-400">Andhra Region (4)</td>
                     <td class="p-3">B. Gopala Reddy (CM), Neelam Sanjiva Reddy, Gouthu Latchanna, Alluri Satyanarayana Raju</td>
                   </tr>
@@ -226,8 +226,8 @@
             </div>
 
             <!-- TRC Note -->
-            <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs sm:text-sm text-slate-700 dark:text-slate-300 shadow-sm">
-              <strong class="text-slate-900 dark:text-slate-100 block mb-1">Telangana Regional Committee (TRC):</strong>
+            <div class="p-4 rounded-xl bg-elev border b-line text-xs sm:text-sm t-mid shadow-sm">
+              <strong class="t-hi block mb-1">Telangana Regional Committee (TRC):</strong>
               As stipulated in the Gentlemen's Agreement, the Statutory TRC was created under Article 371(1). <strong class="accent">K. Achyutha Reddy</strong> served as the first Chairman/President of the Telangana Regional Committee. <span class="font-mono accent text-xs">[PYQ-0384]</span>
             </div>
           </div>
@@ -256,11 +256,11 @@
             </div>
 
             <!-- Chronology Table of Formulas & Orders -->
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3">Chronological Sequence of Political Settlement Formulas</h3>
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3">Chronological Sequence of Political Settlement Formulas</h3>
             
-            <div class="my-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-sm">
+            <div class="my-4 overflow-x-auto rounded-xl border b-line bg-elev shadow-sm">
               <table class="w-full text-left text-xs sm:text-sm">
-                <thead class="bg-slate-50 dark:bg-slate-900 accent font-semibold border-b border-slate-200 dark:border-slate-800">
+                <thead class="bg-sub accent font-semibold border-b b-line">
                   <tr>
                     <th class="p-3">Order</th>
                     <th class="p-3">Formula / Settlement</th>
@@ -269,29 +269,29 @@
                     <th class="p-3">PYQ Reference</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                <tbody class="divide-y divide-[var(--line)] t-mid">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">1</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Eight Point Formula</td>
+                    <td class="p-3 font-semibold t-hi">Eight Point Formula</td>
                     <td class="p-3">April 11, 1969</td>
                     <td class="p-3">PM Indira Gandhi in Lok Sabha</td>
                     <td class="p-3 font-mono text-xs accent" rowspan="4">[PYQ-0149]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">2</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Five Point Formula</td>
+                    <td class="p-3 font-semibold t-hi">Five Point Formula</td>
                     <td class="p-3">November 27, 1972</td>
                     <td class="p-3">PM Indira Gandhi (Post Mulki Rules SC judgment)</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">3</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Six Point Formula</td>
+                    <td class="p-3 font-semibold t-hi">Six Point Formula</td>
                     <td class="p-3">September 21, 1973</td>
                     <td class="p-3">Bilateral accord ending Jai Andhra &amp; Jai Telangana agitations</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">4</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">The Presidential Order</td>
+                    <td class="p-3 font-semibold t-hi">The Presidential Order</td>
                     <td class="p-3">October 20, 1975</td>
                     <td class="p-3">Issued under Art. 371-D (32nd Constitutional Amendment)</td>
                   </tr>
@@ -300,18 +300,18 @@
             </div>
 
             <!-- Committees Table -->
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3">Key High-Yield Committees &amp; Commissions</h3>
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3">Key High-Yield Committees &amp; Commissions</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 text-xs sm:text-sm">
-              <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="p-4 rounded-xl bg-elev border b-line shadow-sm">
                 <span class="accent font-bold block mb-1">Justice K.N. Wanchoo Committee (1969)</span>
-                <p class="text-slate-600 dark:text-slate-300">
+                <p class="t-mid">
                   Appointed by Central Government in April 1969 to recommend constitutional amendments necessary for continuing Mulki rules in recruitment after Supreme Court struck down Section 3 of Public Employment Act 1957. <span class="font-mono accent text-xs">[PYQ-0610]</span>
                 </p>
               </div>
 
-              <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="p-4 rounded-xl bg-elev border b-line shadow-sm">
                 <span class="accent font-bold block mb-1">J.M. Girglani One-Man Commission (2001)</span>
-                <p class="text-slate-600 dark:text-slate-300">
+                <p class="t-mid">
                   Appointed in June 2001 by CM N. Chandrababu Naidu to examine the total non-implementation and widespread circumvention of G.O. 610 (which directed repatriation of non-local employees from Zone V and VI). <span class="font-mono accent text-xs">[PYQ-0609]</span>
                 </p>
               </div>
@@ -336,9 +336,9 @@
             </p>
 
             <!-- Match Organization High-Yield Table -->
-            <div class="my-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-sm">
+            <div class="my-4 overflow-x-auto rounded-xl border b-line bg-elev shadow-sm">
               <table class="w-full text-left text-xs sm:text-sm">
-                <thead class="bg-slate-50 dark:bg-slate-900 accent font-semibold border-b border-slate-200 dark:border-slate-800">
+                <thead class="bg-sub accent font-semibold border-b b-line">
                   <tr>
                     <th class="p-3">Organization / Trust</th>
                     <th class="p-3">Founding Year</th>
@@ -346,51 +346,51 @@
                     <th class="p-3">PYQ Match Anchors</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Information Trust</td>
+                <tbody class="divide-y divide-[var(--line)] t-mid">
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Telangana Information Trust</td>
                     <td class="p-3 font-mono accent">1986 / 1989</td>
                     <td class="p-3">Telangana Prabhakar / Prabhakar Rao</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0150, PYQ-0390, PYQ-0408]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Students Forum</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Telangana Students Forum</td>
                     <td class="p-3 font-mono accent">1991</td>
                     <td class="p-3">Osmania University Student Activists</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0150]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Ikya Vedica</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Telangana Ikya Vedica</td>
                     <td class="p-3 font-mono accent">1997</td>
                     <td class="p-3">Prof. Jayashankar, Prof. Keshav Rao Jadhav</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0150]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Janasabha</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Telangana Janasabha</td>
                     <td class="p-3 font-mono accent">1998</td>
                     <td class="p-3">Akula Bhoomaiah</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0150]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Students Liberation Org (TSLO)</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Telangana Students Liberation Org (TSLO)</td>
                     <td class="p-3 font-mono accent">1990s</td>
                     <td class="p-3">K. Manohar Reddy</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0390, PYQ-0408]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Centre for Dalit Studies</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Centre for Dalit Studies</td>
                     <td class="p-3 font-mono accent">1990s</td>
                     <td class="p-3">Mallepally Laxmaiah</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0390, PYQ-0408]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Pragativedika</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Telangana Pragativedika</td>
                     <td class="p-3 font-mono accent">1990s</td>
                     <td class="p-3">Rapolu Ananda Bhaskar</td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0390, PYQ-0408]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Golla Kuruma Hakkula Porata Samithi</td>
+                  <tr class="hover:bg-sub/50">
+                    <td class="p-3 font-semibold t-hi">Golla Kuruma Hakkula Porata Samithi</td>
                     <td class="p-3 font-mono accent">1990s</td>
                     <td class="p-3">Dubbagatla Narsing Rao <span class="text-rose-600 dark:text-rose-400 font-normal">(NOT Munnuru Kapu)</span></td>
                     <td class="p-3 font-mono text-xs accent">[PYQ-0153]</td>
@@ -420,27 +420,27 @@
 
             <!-- TJAC & Srikrishna Committee -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4 text-xs sm:text-sm">
-              <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="p-4 rounded-xl bg-elev border b-line shadow-sm">
                 <strong class="accent block mb-1">Telangana Joint Action Committee (TJAC)</strong>
-                <p class="text-slate-600 dark:text-slate-300">
+                <p class="t-mid">
                   Formed in December 2009 with <strong>Prof. M. Kodandaram</strong> as Convener to unite political parties (TRS, CPI, BJP, CPI-ML ND) and employee/student JACs. Advocate JAC convener was <strong>Tanneru Sriranga Rao</strong> <span class="font-mono accent text-xs">[PYQ-0152, PYQ-0391]</span>.
                 </p>
               </div>
 
-              <div class="p-4 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div class="p-4 rounded-xl bg-elev border b-line shadow-sm">
                 <strong class="accent block mb-1">Justice B.N. Srikrishna Committee (2010)</strong>
-                <p class="text-slate-600 dark:text-slate-300">
+                <p class="t-mid">
                   5-member committee appointed on Feb 3, 2010. Members: Justice B.N. Srikrishna (Chairman), Prof. Ranbir Singh, Dr. Abusaleh Shariff, Prof. Ravinder Kaur, Vinod K. Duggal (Member-Secretary) <span class="font-mono accent text-xs">[PYQ-0388]</span>.
                 </p>
               </div>
             </div>
 
             <!-- Chronology of Protests Table -->
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3">Chronology of Historic Mass Agitation Programs</h3>
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3">Chronology of Historic Mass Agitation Programs</h3>
             
-            <div class="my-4 overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-sm">
+            <div class="my-4 overflow-x-auto rounded-xl border b-line bg-elev shadow-sm">
               <table class="w-full text-left text-xs sm:text-sm">
-                <thead class="bg-slate-50 dark:bg-slate-900 accent font-semibold border-b border-slate-200 dark:border-slate-800">
+                <thead class="bg-sub accent font-semibold border-b b-line">
                   <tr>
                     <th class="p-3">Order</th>
                     <th class="p-3">Historic Event / Program</th>
@@ -449,29 +449,29 @@
                     <th class="p-3">PYQ Reference</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-slate-200 dark:divide-slate-800 text-slate-600 dark:text-slate-300">
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                <tbody class="divide-y divide-[var(--line)] t-mid">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">1</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Million March</td>
+                    <td class="p-3 font-semibold t-hi">Million March</td>
                     <td class="p-3 font-mono text-xs">March 10, 2011</td>
                     <td class="p-3">Organized by TJAC on Tank Bund, Hyderabad</td>
                     <td class="p-3 font-mono text-xs accent" rowspan="4">[PYQ-0151, PYQ-0154]</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">2</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Sakala Janula Samme (All People's Strike)</td>
+                    <td class="p-3 font-semibold t-hi">Sakala Janula Samme (All People's Strike)</td>
                     <td class="p-3 font-mono text-xs">Sep 13 - Oct 24, 2011 (42 Days)</td>
                     <td class="p-3">TJAC led strike paralysis of public services</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">3</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Telangana Sagaraharam (Human Chain around Hussain Sagar)</td>
+                    <td class="p-3 font-semibold t-hi">Telangana Sagaraharam (Human Chain around Hussain Sagar)</td>
                     <td class="p-3 font-mono text-xs">September 30, 2012</td>
                     <td class="p-3">Massive human chain around Hussain Sagar Lake</td>
                   </tr>
-                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-900/40">
+                  <tr class="hover:bg-sub/50">
                     <td class="p-3 font-mono font-bold accent">4</td>
-                    <td class="p-3 font-semibold text-slate-900 dark:text-slate-100">Sadak Bandh (National Highway 7 Blockade)</td>
+                    <td class="p-3 font-semibold t-hi">Sadak Bandh (National Highway 7 Blockade)</td>
                     <td class="p-3 font-mono text-xs">March 21, 2013</td>
                     <td class="p-3">Blockade of NH-7 from Shamshabad to Alampur</td>
                   </tr>
@@ -485,22 +485,22 @@
               Veteran freedom fighter and pioneer Telangana leader <strong>Konda Laxman Bapuji</strong> undertook a 7-day Satyagraha at <strong>Jantar Mantar in Delhi</strong> in 2012 to demand statehood for Telangana. <span class="font-mono text-emerald-600 dark:text-emerald-400 text-xs">[PYQ-0611]</span>
             </div>
 
-            <h3 class="text-lg font-bold text-slate-900 dark:text-slate-100 mt-6 mb-3">AP Reorganisation Bill 2014 Key Timeline</h3>
+            <h3 class="text-lg font-bold t-hi mt-6 mb-3">AP Reorganisation Bill 2014 Key Timeline</h3>
             <ul class="space-y-2 list-disc list-inside text-xs sm:text-sm">
               <li>
-                <strong class="text-slate-900 dark:text-slate-100">Introduction in Lok Sabha:</strong> Introduced by Home Minister <strong>Sushil Kumar Shinde</strong> on <strong>February 13, 2014</strong>. <span class="font-mono accent text-xs">[PYQ-0155]</span>
+                <strong class="t-hi">Introduction in Lok Sabha:</strong> Introduced by Home Minister <strong>Sushil Kumar Shinde</strong> on <strong>February 13, 2014</strong>. <span class="font-mono accent text-xs">[PYQ-0155]</span>
               </li>
               <li>
-                <strong class="text-slate-900 dark:text-slate-100">Lok Sabha Passed:</strong> February 18, 2014
+                <strong class="t-hi">Lok Sabha Passed:</strong> February 18, 2014
               </li>
               <li>
-                <strong class="text-slate-900 dark:text-slate-100">Rajya Sabha Passed:</strong> February 20, 2014
+                <strong class="t-hi">Rajya Sabha Passed:</strong> February 20, 2014
               </li>
               <li>
-                <strong class="text-slate-900 dark:text-slate-100">Presidential Assent (Pranab Mukherjee):</strong> March 1, 2014
+                <strong class="t-hi">Presidential Assent (Pranab Mukherjee):</strong> March 1, 2014
               </li>
               <li>
-                <strong class="text-slate-900 dark:text-slate-100">Appointed Day (Telangana State Formation):</strong> <strong>June 2, 2014</strong>
+                <strong class="t-hi">Appointed Day (Telangana State Formation):</strong> <strong>June 2, 2014</strong>
               </li>
             </ul>
           </div>
@@ -518,7 +518,7 @@
           <InlineNoteStrip note-id="NOTE-TEL-MOVEMENT" section-id="pyqs" section-label="Previous Year Questions" note-title="Telangana Statehood Movement" @open="openNotesDrawer" />
 
           <!-- Filter toolbar -->
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-3 shadow-sm">
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border b-line bg-elev p-3 shadow-sm">
             <div class="flex flex-wrap items-center gap-1.5">
               <button
                 v-for="f in examFilters"
@@ -536,7 +536,7 @@
 
           <!-- PYQ Card Deck -->
           <div class="space-y-4">
-            <article v-for="(q, qi) in filteredPyqs" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700">
+            <article v-for="(q, qi) in filteredPyqs" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:b-strong">
               <div class="mb-3 flex flex-wrap items-center gap-2">
                 <span class="chip chip-saffron chip-mono">Q{{ qi + 1 }}</span>
                 <span class="chip chip-mono">{{ q.exam }} {{ q.year }}</span>
@@ -621,7 +621,7 @@
 
           <!-- Advanced Cards Deck -->
           <div class="space-y-4">
-            <article v-for="(q, qi) in advancedPractice" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700">
+            <article v-for="(q, qi) in advancedPractice" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:b-strong">
               <div class="mb-3 flex flex-wrap items-center gap-2">
                 <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10.5px] font-bold font-mono uppercase tracking-wider bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
                   {{ q.format }}
@@ -758,6 +758,49 @@
       note-id="NOTE-TEL-MOVEMENT"
       note-title="Telangana Armed Struggle &amp; Statehood Movement"
     />
+
+    <!-- ══ Floating Mobile/Tablet ToC Trigger & Slideover (DEF-CRIT-08) ══ -->
+    <div class="fixed bottom-6 start-6 z-20 xl:hidden">
+      <UButton
+        icon="i-heroicons-list-bullet"
+        label="Contents"
+        color="gray"
+        variant="solid"
+        size="sm"
+        class="rounded-full shadow-lg border b-line bg-elev t-hi font-semibold min-h-[44px] px-3.5"
+        @click="mobileTocOpen = true"
+      />
+    </div>
+
+    <USlideover v-model="mobileTocOpen" side="left" class="xl:hidden" :ui="{ width: 'w-72 max-w-full' }">
+      <div class="p-5 flex flex-col h-full bg-base">
+        <div class="flex items-center justify-between pb-3 border-b b-line mb-4">
+          <p class="eyebrow">On this page</p>
+          <UButton
+            icon="i-heroicons-x-mark"
+            color="gray"
+            variant="ghost"
+            size="sm"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Close table of contents"
+            @click="mobileTocOpen = false"
+          />
+        </div>
+        <nav class="space-y-1 overflow-y-auto flex-1">
+          <a
+            v-for="(section, i) in sections"
+            :key="section.id"
+            :href="`#${section.id}`"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-xs transition-colors min-h-[44px]"
+            :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+            @click.prevent="mobileTocOpen = false; scrollTo(section.id)"
+          >
+            <span class="font-mono text-[11px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span>{{ section.label }}</span>
+          </a>
+        </nav>
+      </div>
+    </USlideover>
   </div>
 </template>
 
@@ -801,38 +844,46 @@ const sections = [
   { id: 'current-affairs',   label: 'Current Affairs' },
 ]
 
+const mobileTocOpen = ref(false)
 const readProgress = ref(0)
 const activeSection = ref('armed-struggle')
-
-function onScroll() {
-  const h = document.documentElement
-  const b = document.body
-  const st = 'scrollTop'
-  const sh = 'scrollHeight'
-  readProgress.value = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100
-
-  const secEls = sections.map(s => document.getElementById(s.id)).filter(Boolean) as HTMLElement[]
-  const scrollPos = window.scrollY + 120
-  for (let i = secEls.length - 1; i >= 0; i--) {
-    const el = secEls[i]
-    if (el && el.offsetTop <= scrollPos) {
-      activeSection.value = sections[i].id
-      break
-    }
-  }
-}
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     activeSection.value = id
   }
 }
 
+function onScroll() {
+  const h = document.documentElement
+  const max = h.scrollHeight - h.clientHeight
+  readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
+
+  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
+  if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
+    activeSection.value = sections[sections.length - 1].id
+    return
+  }
+
+  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i].id)
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= 120) {
+        activeSection.value = sections[i].id
+        break
+      }
+    }
+  }
+}
+
 onMounted(() => {
-  loadNotes()
   window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+  loadNotes()
 })
 
 onUnmounted(() => {

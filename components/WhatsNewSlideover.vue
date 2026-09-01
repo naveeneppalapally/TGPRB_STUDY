@@ -171,7 +171,7 @@ async function openPanel() {
     loadingFull.value = true
     fullLoaded = true
     // Use the already-fetched data (same query) - no extra network call
-    fullEntries.value = recentDates.value
+    fullEntries.value = [...recentDates.value]
       .sort((a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime())
     loadingFull.value = false
   }

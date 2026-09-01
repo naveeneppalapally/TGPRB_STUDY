@@ -92,24 +92,24 @@
 
           <!-- Key Articles Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <div class="bg-elev p-4 rounded-xl border b-line shadow-sm">
               <h4 class="font-bold text-emerald-600 dark:text-emerald-400 text-sm uppercase tracking-wide mb-2">President (Articles 52 - 62)</h4>
-              <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300">
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 52:</strong> Executive Head of the Union of India.</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 53:</strong> Supreme Commander of Armed Forces.</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 54 &amp; 55:</strong> Electoral College (Elected MPs + Elected MLAs of States + UTs of Delhi, Puducherry, J&amp;K).</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 61:</strong> Impeachment Procedure for violation of the Constitution.</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 72:</strong> Pardoning Powers (Pardon, Commutation, Remission, Respite, Reprieve).</li>
+              <ul class="text-xs space-y-2 t-mid">
+                <li><strong class="t-hi">Art. 52:</strong> Executive Head of the Union of India.</li>
+                <li><strong class="t-hi">Art. 53:</strong> Supreme Commander of Armed Forces.</li>
+                <li><strong class="t-hi">Art. 54 &amp; 55:</strong> Electoral College (Elected MPs + Elected MLAs of States + UTs of Delhi, Puducherry, J&amp;K).</li>
+                <li><strong class="t-hi">Art. 61:</strong> Impeachment Procedure for violation of the Constitution.</li>
+                <li><strong class="t-hi">Art. 72:</strong> Pardoning Powers (Pardon, Commutation, Remission, Respite, Reprieve).</li>
               </ul>
             </div>
 
-            <div class="bg-white dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <div class="bg-elev p-4 rounded-xl border b-line shadow-sm">
               <h4 class="font-bold text-emerald-600 dark:text-emerald-400 text-sm uppercase tracking-wide mb-2">Vice President (Articles 63 - 70)</h4>
-              <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300">
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 63:</strong> Vice-President of India.</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 64:</strong> Ex-officio Chairman of Rajya Sabha.</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Art. 65:</strong> Acts as President during vacancy (max period 6 months).</li>
-                <li><strong class="text-slate-900 dark:text-slate-100">Electoral College:</strong> All MPs (both Elected &amp; Nominated) of Lok Sabha &amp; Rajya Sabha; MLAs do NOT vote.</li>
+              <ul class="text-xs space-y-2 t-mid">
+                <li><strong class="t-hi">Art. 63:</strong> Vice-President of India.</li>
+                <li><strong class="t-hi">Art. 64:</strong> Ex-officio Chairman of Rajya Sabha.</li>
+                <li><strong class="t-hi">Art. 65:</strong> Acts as President during vacancy (max period 6 months).</li>
+                <li><strong class="t-hi">Electoral College:</strong> All MPs (both Elected &amp; Nominated) of Lok Sabha &amp; Rajya Sabha; MLAs do NOT vote.</li>
               </ul>
             </div>
           </div>
@@ -128,11 +128,11 @@
                   The Indian President enjoys three types of Veto power: <strong>Absolute Veto</strong> (withholding assent), <strong>Suspensive Veto</strong> (returning bill for reconsideration), and <strong>Pocket Veto</strong> (keeping bill pending indefinitely).
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  <div class="bg-white dark:bg-slate-900 p-2.5 rounded border border-emerald-300 dark:border-emerald-700">
+                  <div class="bg-elev p-2.5 rounded border border-emerald-300 dark:border-emerald-700">
                     <span class="font-bold text-rose-600 dark:text-rose-400">NO Qualified Veto in India [PYQ-0753]:</span>
                     Unlike the US President, the Indian President does NOT possess a "Qualified Veto" (which requires a higher majority to override).
                   </div>
-                  <div class="bg-white dark:bg-slate-900 p-2.5 rounded border border-emerald-300 dark:border-emerald-700">
+                  <div class="bg-elev p-2.5 rounded border border-emerald-300 dark:border-emerald-700">
                     <span class="font-bold text-emerald-700 dark:text-emerald-400">Money Bills Cannot Be Returned [PYQ-0301]:</span>
                     A Money Bill is introduced ONLY with prior recommendation of the President. Therefore, the President cannot return a Money Bill for reconsideration (must give assent or withhold it).
                   </div>
@@ -143,32 +143,32 @@
 
           <!-- Table: Bills Requiring Prior Recommendation vs Not -->
           <div class="overflow-x-auto mb-6">
-            <table class="w-full text-left text-xs border-collapse bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
-              <thead class="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 uppercase font-bold">
+            <table class="w-full text-left text-xs border-collapse bg-elev rounded-xl shadow-sm border b-line">
+              <thead class="bg-sub t-mid uppercase font-bold">
                 <tr>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Category</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Prior Sanction Required?</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Relevant Article / Details [PYQ-0756]</th>
+                  <th class="p-3 border-b b-line b-line">Category</th>
+                  <th class="p-3 border-b b-line b-line">Prior Sanction Required?</th>
+                  <th class="p-3 border-b b-line b-line">Relevant Article / Details [PYQ-0756]</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200 dark:divide-slate-700 text-slate-600 dark:text-slate-300">
+              <tbody class="divide-y divide-[var(--line)] t-mid">
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Money Bills</td>
+                  <td class="p-3 font-semibold t-hi">Money Bills</td>
                   <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">YES</td>
                   <td class="p-3">Article 110 &amp; 117(1): Introduced only in Lok Sabha with prior recommendation.</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">State Reorganisation Bills</td>
+                  <td class="p-3 font-semibold t-hi">State Reorganisation Bills</td>
                   <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">YES</td>
                   <td class="p-3">Article 3: Altering state boundaries/names requires President's prior recommendation.</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Bills Affecting Taxation of States</td>
+                  <td class="p-3 font-semibold t-hi">Bills Affecting Taxation of States</td>
                   <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">YES</td>
                   <td class="p-3">Article 274: Legislation impacting state financial interests.</td>
                 </tr>
                 <tr class="bg-amber-50/50 dark:bg-amber-950/20">
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Ordinary Bills (Non-Money)</td>
+                  <td class="p-3 font-semibold t-hi">Ordinary Bills (Non-Money)</td>
                   <td class="p-3 text-rose-600 dark:text-rose-400 font-bold">NO</td>
                   <td class="p-3">Can be introduced in either House without prior recommendation [PYQ-0756].</td>
                 </tr>
@@ -177,19 +177,19 @@
           </div>
 
           <!-- Table: Officiating / Acting Presidents of India -->
-          <div class="p-4 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm mb-4">
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3 flex items-center gap-2">
+          <div class="p-4 rounded-xl bg-elev border b-line shadow-sm mb-4">
+            <h4 class="font-bold t-hi text-sm mb-3 flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
               Vice Presidents Who Acted as Officiating Presidents [PYQ-0767]
             </h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div class="p-3 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
-                <p class="font-bold text-slate-900 dark:text-white mb-1">1. V.V. Giri (1969)</p>
-                <p class="text-slate-600 dark:text-slate-300">Acted as President following the demise of Dr. Zakir Husain in May 1969. Later resigned to contest the presidential election.</p>
+              <div class="p-3 bg-sub rounded-lg border b-line">
+                <p class="font-bold t-hi mb-1">1. V.V. Giri (1969)</p>
+                <p class="t-mid">Acted as President following the demise of Dr. Zakir Husain in May 1969. Later resigned to contest the presidential election.</p>
               </div>
-              <div class="p-3 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
-                <p class="font-bold text-slate-900 dark:text-white mb-1">2. B.D. Jatti (1977)</p>
-                <p class="text-slate-600 dark:text-slate-300">Acted as President after the death of President Fakhruddin Ali Ahmed in February 1977.</p>
+              <div class="p-3 bg-sub rounded-lg border b-line">
+                <p class="font-bold t-hi mb-1">2. B.D. Jatti (1977)</p>
+                <p class="t-mid">Acted as President after the death of President Fakhruddin Ali Ahmed in February 1977.</p>
               </div>
             </div>
           </div>
@@ -230,43 +230,43 @@
 
           <!-- Table: Historical Union Ministers & Ministries (PYQ Match Matrix) -->
           <div class="overflow-x-auto mb-6">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Historical Ministers &amp; Governments Matching [PYQ-0200, PYQ-0315, PYQ-0878]</p>
-            <table class="w-full text-left text-xs border-collapse bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
-              <thead class="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold uppercase">
+            <p class="text-xs font-bold t-lo uppercase tracking-wider mb-2">Historical Ministers &amp; Governments Matching [PYQ-0200, PYQ-0315, PYQ-0878]</p>
+            <table class="w-full text-left text-xs border-collapse bg-elev rounded-xl shadow-sm border b-line">
+              <thead class="bg-sub t-mid font-bold uppercase">
                 <tr>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Union Minister</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Portfolio / Ministry</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Government / Period</th>
+                  <th class="p-3 border-b b-line b-line">Union Minister</th>
+                  <th class="p-3 border-b b-line b-line">Portfolio / Ministry</th>
+                  <th class="p-3 border-b b-line b-line">Government / Period</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200 dark:divide-slate-700 text-slate-600 dark:text-slate-300">
+              <tbody class="divide-y divide-[var(--line)] t-mid">
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">H.M. Patel</td>
+                  <td class="p-3 font-semibold t-hi">H.M. Patel</td>
                   <td class="p-3">Finance Minister</td>
                   <td class="p-3 font-semibold text-emerald-600 dark:text-emerald-400">Janata Party Govt (1977-1979) [PYQ-0200]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Indrajit Gupta</td>
+                  <td class="p-3 font-semibold t-hi">Indrajit Gupta</td>
                   <td class="p-3">Home Minister</td>
                   <td class="p-3 font-semibold text-emerald-600 dark:text-emerald-400">United Front Govt (1996-1998) [PYQ-0200]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Madhu Dandavate</td>
+                  <td class="p-3 font-semibold t-hi">Madhu Dandavate</td>
                   <td class="p-3">Finance Minister</td>
                   <td class="p-3 font-semibold text-emerald-600 dark:text-emerald-400">National Front Govt (1989-1990) [PYQ-0200]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">George Fernandes</td>
+                  <td class="p-3 font-semibold t-hi">George Fernandes</td>
                   <td class="p-3">Defence Minister</td>
                   <td class="p-3 font-semibold text-emerald-600 dark:text-emerald-400">NDA-I Govt (1998-2004) [PYQ-0200]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Dr. Virendra Kumar</td>
+                  <td class="p-3 font-semibold t-hi">Dr. Virendra Kumar</td>
                   <td class="p-3">Social Justice &amp; Empowerment</td>
                   <td class="p-3">Union Cabinet [PYQ-0878]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Dr. Mahendra Nath Pandey</td>
+                  <td class="p-3 font-semibold t-hi">Dr. Mahendra Nath Pandey</td>
                   <td class="p-3">Heavy Industries</td>
                   <td class="p-3">Union Cabinet [PYQ-0878]</td>
                 </tr>
@@ -289,12 +289,12 @@
           <!-- Comparison Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <!-- Rajya Sabha Card -->
-            <div class="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-between">
+            <div class="bg-elev p-5 rounded-xl border b-line shadow-sm">
+              <h3 class="text-base font-bold t-hi mb-3 flex items-center justify-between">
                 <span>Rajya Sabha (Council of States)</span>
                 <span class="text-xs px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300">Upper House</span>
               </h3>
-              <ul class="text-xs space-y-2.5 text-slate-600 dark:text-slate-300">
+              <ul class="text-xs space-y-2.5 t-mid">
                 <li class="flex items-start gap-2">
                   <span class="font-bold text-emerald-600">•</span>
                   <span><strong>Max Strength:</strong> 250 (238 elected from States/UTs + 12 nominated by President).</span>
@@ -315,12 +315,12 @@
             </div>
 
             <!-- Lok Sabha Card -->
-            <div class="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-3 flex items-center justify-between">
+            <div class="bg-elev p-5 rounded-xl border b-line shadow-sm">
+              <h3 class="text-base font-bold t-hi mb-3 flex items-center justify-between">
                 <span>Lok Sabha (House of the People)</span>
                 <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300">Lower House</span>
               </h3>
-              <ul class="text-xs space-y-2.5 text-slate-600 dark:text-slate-300">
+              <ul class="text-xs space-y-2.5 t-mid">
                 <li class="flex items-start gap-2">
                   <span class="font-bold text-emerald-600">•</span>
                   <span><strong>Max Strength:</strong> 550 (530 from States + 20 from UTs). Note: Anglo-Indian nomination (2 seats) abolished by 104th Constitutional Amendment Act, 2019.</span>
@@ -343,34 +343,34 @@
 
           <!-- Matching Table: Lok Sabha Term vs Prime Ministerial Government -->
           <div class="overflow-x-auto mb-6">
-            <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Lok Sabha Term vs Government Formation [PYQ-0517]</p>
-            <table class="w-full text-left text-xs border-collapse bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
-              <thead class="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold uppercase">
+            <p class="text-xs font-bold t-lo uppercase tracking-wider mb-2">Lok Sabha Term vs Government Formation [PYQ-0517]</p>
+            <table class="w-full text-left text-xs border-collapse bg-elev rounded-xl shadow-sm border b-line">
+              <thead class="bg-sub t-mid font-bold uppercase">
                 <tr>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Lok Sabha Term</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Governing Party / Front</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Key PMs / Context</th>
+                  <th class="p-3 border-b b-line b-line">Lok Sabha Term</th>
+                  <th class="p-3 border-b b-line b-line">Governing Party / Front</th>
+                  <th class="p-3 border-b b-line b-line">Key PMs / Context</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200 dark:divide-slate-700 text-slate-600 dark:text-slate-300">
+              <tbody class="divide-y divide-[var(--line)] t-mid">
                 <tr>
                   <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">6th Lok Sabha (1977-1979)</td>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Janata Party Government</td>
+                  <td class="p-3 font-semibold t-hi">Janata Party Government</td>
                   <td class="p-3">Morarji Desai / Charan Singh [PYQ-0517]</td>
                 </tr>
                 <tr>
                   <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">9th Lok Sabha (1989-1991)</td>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">National Front Government</td>
+                  <td class="p-3 font-semibold t-hi">National Front Government</td>
                   <td class="p-3">V.P. Singh / Chandra Shekhar [PYQ-0517]</td>
                 </tr>
                 <tr>
                   <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">10th Lok Sabha (1991-1996)</td>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Congress Party Government</td>
+                  <td class="p-3 font-semibold t-hi">Congress Party Government</td>
                   <td class="p-3">P.V. Narasimha Rao [PYQ-0517]</td>
                 </tr>
                 <tr>
                   <td class="p-3 font-bold text-emerald-600 dark:text-emerald-400">11th Lok Sabha (1996-1998)</td>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">United Front Government</td>
+                  <td class="p-3 font-semibold t-hi">United Front Government</td>
                   <td class="p-3">H.D. Deve Gowda / I.K. Gujral [PYQ-0517]</td>
                 </tr>
               </tbody>
@@ -396,19 +396,19 @@
               High Penalty Traps: Speaker &amp; Parliamentary Rules [PYQ-0314, PYQ-0519, PYQ-0754]
             </h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div class="p-3 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-rose-800">
+              <div class="p-3 bg-elev rounded border border-rose-200 dark:border-rose-800">
                 <span class="font-bold text-rose-700 dark:text-rose-400 block mb-1">TRAP 1: Speaker's Resignation [PYQ-0314]</span>
                 The Speaker submits his resignation letter to the <strong>Deputy Speaker of Lok Sabha</strong>, NOT to the President!
               </div>
-              <div class="p-3 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-rose-800">
+              <div class="p-3 bg-elev rounded border border-rose-200 dark:border-rose-800">
                 <span class="font-bold text-rose-700 dark:text-rose-400 block mb-1">TRAP 2: Leader of Opposition [PYQ-0314]</span>
                 The Speaker does NOT appoint the Leader of Opposition. The LoP is recognised based on statutory rule (party having at least 10% of total seats).
               </div>
-              <div class="p-3 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-rose-800">
+              <div class="p-3 bg-elev rounded border border-rose-200 dark:border-rose-800">
                 <span class="font-bold text-rose-700 dark:text-rose-400 block mb-1">TRAP 3: Casting Vote Article [PYQ-0519]</span>
                 Under <strong>Article 100(1)</strong>, the Speaker does not vote in the first instance, but exercises a <em>Casting Vote</em> in case of an equality of votes (tie).
               </div>
-              <div class="p-3 bg-white dark:bg-slate-900 rounded border border-rose-200 dark:border-rose-800">
+              <div class="p-3 bg-elev rounded border border-rose-200 dark:border-rose-800">
                 <span class="font-bold text-rose-700 dark:text-rose-400 block mb-1">TRAP 4: Opposition Deputy Speaker [PYQ-0754]</span>
                 The parliamentary convention of giving the Deputy Speaker post to the opposition party began in the <strong>11th Lok Sabha (1996)</strong>.
               </div>
@@ -416,29 +416,29 @@
           </div>
 
           <!-- Notable Speakers Grid -->
-          <div class="p-4 mb-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-2">
+          <div class="p-4 mb-6 bg-elev rounded-xl border b-line shadow-sm">
+            <h4 class="font-bold t-hi text-sm mb-2">
               Notable Speakers of Lok Sabha Verified in PYQs [PYQ-0317]
             </h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 mb-3">
+            <p class="text-xs t-mid mb-3">
               TSLPRB often presents lists of public figures and asks candidates to identify who served as Speaker of Lok Sabha.
             </p>
             <div class="flex flex-wrap gap-2 text-xs">
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Somnath Chatterjee</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Rabi Ray</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Manohar Joshi</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Sumitra Mahajan</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Meira Kumar (1st Woman)</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Shivraj Patil</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">Balram Jakhar</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">P.A. Sangma</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium">K.S. Hegde</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Somnath Chatterjee</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Rabi Ray</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Manohar Joshi</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Sumitra Mahajan</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Meira Kumar (1st Woman)</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Shivraj Patil</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">Balram Jakhar</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">P.A. Sangma</span>
+              <span class="px-2.5 py-1 rounded-md bg-sub t-hi t-mid font-medium">K.S. Hegde</span>
             </div>
           </div>
 
           <!-- Standing Committees Key Focus -->
-          <div class="bg-white dark:bg-slate-800 p-5 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-            <h4 class="font-bold text-slate-900 dark:text-white text-sm mb-3 flex items-center justify-between">
+          <div class="bg-elev p-5 rounded-xl border b-line shadow-sm">
+            <h4 class="font-bold t-hi text-sm mb-3 flex items-center justify-between">
               <span>Estimates Committee vs PAC (Parliamentary Committees)</span>
               <span class="text-xs px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
                 High-Yield PYQ Topic
@@ -447,16 +447,16 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               <div class="p-3 bg-emerald-50/50 dark:bg-emerald-950/20 rounded-lg border border-emerald-200 dark:border-emerald-800/50">
                 <span class="font-bold text-emerald-800 dark:text-emerald-300 block mb-1">Estimates Committee [PYQ-0768]</span>
-                <ul class="space-y-1 text-slate-600 dark:text-slate-300">
+                <ul class="space-y-1 t-mid">
                   <li>• <strong>30 Members</strong> (Largest committee of Parliament).</li>
                   <li>• <strong>EXCLUSIVELY from Lok Sabha</strong> (0 members from Rajya Sabha).</li>
                   <li>• Elected annually by LS members using proportional representation by single transferable vote.</li>
                   <li>• Minister cannot be elected as a member.</li>
                 </ul>
               </div>
-              <div class="p-3 bg-slate-50 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700">
-                <span class="font-bold text-slate-900 dark:text-white block mb-1">Public Accounts Committee (PAC)</span>
-                <ul class="space-y-1 text-slate-600 dark:text-slate-300">
+              <div class="p-3 bg-sub rounded-lg border b-line">
+                <span class="font-bold t-hi block mb-1">Public Accounts Committee (PAC)</span>
+                <ul class="space-y-1 t-mid">
                   <li>• <strong>22 Members</strong> (15 from Lok Sabha + 7 from Rajya Sabha).</li>
                   <li>• Examines CAG audit reports.</li>
                   <li>• Chairman is conventionally appointed from the Opposition party by the Speaker.</li>
@@ -478,15 +478,15 @@
           <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="mnemonics" section-label="Memory Mnemonics & Speed Revision Matrix" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
           <!-- Mnemonic Box 1 -->
-          <div class="p-4 mb-4 rounded-xl bg-gradient-to-r from-emerald-900 to-slate-900 text-white shadow-md">
+          <div class="p-4 mb-4 rounded-xl bg-gradient-to-r from-emerald-950 to-emerald-900 text-white shadow-md border border-emerald-800/50">
             <div class="flex items-center gap-2 mb-2">
-              <span class="px-2 py-0.5 text-xs font-bold bg-amber-400 text-slate-950 rounded">MNEMONIC</span>
+              <span class="px-2 py-0.5 text-xs font-bold bg-amber-400 text-ink-950 rounded">MNEMONIC</span>
               <h4 class="font-bold text-sm text-amber-300">Presidents Vetoes in India: "A-S-P"</h4>
             </div>
-            <p class="text-xs text-slate-200 mb-2">
+            <p class="text-xs text-emerald-100 mb-2">
               Remember <strong>ASP</strong> (Absolute, Suspensive, Pocket). India has NO Qualified Veto!
             </p>
-            <div class="text-xs bg-slate-800/80 p-2.5 rounded border border-slate-700 space-y-1">
+            <div class="text-xs bg-black/40 p-2.5 rounded border border-emerald-700/50 space-y-1">
               <p><strong class="text-emerald-400">A</strong> = <strong>Absolute Veto</strong> (Withholding assent completely)</p>
               <p><strong class="text-emerald-400">S</strong> = <strong>Suspensive Veto</strong> (Returning to Parliament; overridden by simple majority)</p>
               <p><strong class="text-emerald-400">P</strong> = <strong>Pocket Veto</strong> (Keeping bill pending with no time limit)</p>
@@ -495,52 +495,52 @@
 
           <!-- Speed Revision Table -->
           <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs border-collapse bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
-              <thead class="bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold uppercase">
+            <table class="w-full text-left text-xs border-collapse bg-elev rounded-xl shadow-sm border b-line">
+              <thead class="bg-sub t-mid font-bold uppercase">
                 <tr>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Key Fact / Article</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">Exact Value / Provision</th>
-                  <th class="p-3 border-b border-slate-200 dark:border-slate-600">PYQ Reference</th>
+                  <th class="p-3 border-b b-line b-line">Key Fact / Article</th>
+                  <th class="p-3 border-b b-line b-line">Exact Value / Provision</th>
+                  <th class="p-3 border-b b-line b-line">PYQ Reference</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-slate-200 dark:divide-slate-700 text-slate-600 dark:text-slate-300">
+              <tbody class="divide-y divide-[var(--line)] t-mid">
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Largest Constituency (Voters)</td>
+                  <td class="p-3 font-semibold t-hi">Largest Constituency (Voters)</td>
                   <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">Malkajgiri (Telangana)</td>
                   <td class="p-3">[PYQ-0326]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Smallest Constituency (Voters)</td>
+                  <td class="p-3 font-semibold t-hi">Smallest Constituency (Voters)</td>
                   <td class="p-3 text-emerald-600 dark:text-emerald-400 font-bold">Lakshadweep</td>
                   <td class="p-3">[PYQ-0191]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Speaker's Casting Vote Article</td>
+                  <td class="p-3 font-semibold t-hi">Speaker's Casting Vote Article</td>
                   <td class="p-3 font-bold">Article 100(1)</td>
                   <td class="p-3">[PYQ-0519]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Rajya Sabha Resolution for State List</td>
+                  <td class="p-3 font-semibold t-hi">Rajya Sabha Resolution for State List</td>
                   <td class="p-3 font-bold">Article 249 (2/3rd majority)</td>
                   <td class="p-3">[PYQ-0164]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Equal Rajya Sabha Seats (11 each)</td>
+                  <td class="p-3 font-semibold t-hi">Equal Rajya Sabha Seats (11 each)</td>
                   <td class="p-3 font-bold">Andhra Pradesh &amp; Gujarat</td>
                   <td class="p-3">[PYQ-0309]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Nominated RS Members Count</td>
+                  <td class="p-3 font-semibold t-hi">Nominated RS Members Count</td>
                   <td class="p-3 font-bold">12 members (Article 80)</td>
                   <td class="p-3">[PYQ-0313]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Estimates Committee Strength</td>
+                  <td class="p-3 font-semibold t-hi">Estimates Committee Strength</td>
                   <td class="p-3 font-bold">30 members (100% from Lok Sabha)</td>
                   <td class="p-3">[PYQ-0768]</td>
                 </tr>
                 <tr>
-                  <td class="p-3 font-semibold text-slate-900 dark:text-white">Speaker Resigns To</td>
+                  <td class="p-3 font-semibold t-hi">Speaker Resigns To</td>
                   <td class="p-3 font-bold text-rose-600 dark:text-rose-400">Deputy Speaker of Lok Sabha</td>
                   <td class="p-3">[PYQ-0314]</td>
                 </tr>
@@ -561,7 +561,7 @@
           <InlineNoteStrip note-id="NOTE-POL-UNION-EXEC" section-id="pyqs" section-label="Previous Year Questions" note-title="Union Executive & Parliament" @open="openNotesDrawer" />
 
           <!-- Filter toolbar -->
-          <div class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 p-3 shadow-sm">
+          <div class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl border b-line bg-elev p-3 shadow-sm">
             <div class="flex flex-wrap items-center gap-1.5">
               <button
                 v-for="f in examFilters"
@@ -579,7 +579,7 @@
 
           <!-- PYQ Card Deck -->
           <div class="space-y-4">
-            <article v-for="(q, qi) in filteredPyqs" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700">
+            <article v-for="(q, qi) in filteredPyqs" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:b-strong">
               <div class="mb-3 flex flex-wrap items-center gap-2">
                 <span class="chip chip-saffron chip-mono">Q{{ qi + 1 }}</span>
                 <span class="chip chip-mono">{{ q.exam }} {{ q.year }}</span>
@@ -664,7 +664,7 @@
 
           <!-- Advanced Cards Deck -->
           <div class="space-y-4">
-            <article v-for="(q, qi) in advancedPractice" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700">
+            <article v-for="(q, qi) in advancedPractice" :key="q.uid" class="panel panel-pad transition-all duration-200 hover:b-strong">
               <div class="mb-3 flex flex-wrap items-center gap-2">
                 <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10.5px] font-bold font-mono uppercase tracking-wider bg-indigo-500/15 text-indigo-600 dark:text-indigo-400 border border-indigo-500/30">
                   {{ q.format }}
@@ -801,6 +801,49 @@
       note-id="NOTE-POL-UNION-EXEC"
       note-title="Union Executive &amp; Parliament"
     />
+
+    <!-- ══ Floating Mobile/Tablet ToC Trigger & Slideover (DEF-CRIT-08) ══ -->
+    <div class="fixed bottom-6 start-6 z-20 xl:hidden">
+      <UButton
+        icon="i-heroicons-list-bullet"
+        label="Contents"
+        color="gray"
+        variant="solid"
+        size="sm"
+        class="rounded-full shadow-lg border b-line bg-elev t-hi font-semibold min-h-[44px] px-3.5"
+        @click="mobileTocOpen = true"
+      />
+    </div>
+
+    <USlideover v-model="mobileTocOpen" side="left" class="xl:hidden" :ui="{ width: 'w-72 max-w-full' }">
+      <div class="p-5 flex flex-col h-full bg-base">
+        <div class="flex items-center justify-between pb-3 border-b b-line mb-4">
+          <p class="eyebrow">On this page</p>
+          <UButton
+            icon="i-heroicons-x-mark"
+            color="gray"
+            variant="ghost"
+            size="sm"
+            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
+            aria-label="Close table of contents"
+            @click="mobileTocOpen = false"
+          />
+        </div>
+        <nav class="space-y-1 overflow-y-auto flex-1">
+          <a
+            v-for="(section, i) in sections"
+            :key="section.id"
+            :href="`#${section.id}`"
+            class="flex items-center gap-3 rounded-lg px-3 py-2.5 text-xs transition-colors min-h-[44px]"
+            :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+            @click.prevent="mobileTocOpen = false; scrollTo(section.id)"
+          >
+            <span class="font-mono text-[11px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+            <span>{{ section.label }}</span>
+          </a>
+        </nav>
+      </div>
+    </USlideover>
   </div>
 </template>
 
@@ -844,38 +887,46 @@ const sections = [
   { id: 'current-affairs',      label: 'Current Affairs' },
 ]
 
+const mobileTocOpen = ref(false)
 const readProgress = ref(0)
 const activeSection = ref('president-vp')
-
-function onScroll() {
-  const h = document.documentElement
-  const b = document.body
-  const st = 'scrollTop'
-  const sh = 'scrollHeight'
-  readProgress.value = (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100
-
-  const secEls = sections.map(s => document.getElementById(s.id)).filter(Boolean) as HTMLElement[]
-  const scrollPos = window.scrollY + 120
-  for (let i = secEls.length - 1; i >= 0; i--) {
-    const el = secEls[i]
-    if (el && el.offsetTop <= scrollPos) {
-      activeSection.value = sections[i].id
-      break
-    }
-  }
-}
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
-    el.scrollIntoView({ behavior: 'smooth' })
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
     activeSection.value = id
   }
 }
 
+function onScroll() {
+  const h = document.documentElement
+  const max = h.scrollHeight - h.clientHeight
+  readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
+
+  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
+  if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
+    activeSection.value = sections[sections.length - 1].id
+    return
+  }
+
+  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
+  for (let i = sections.length - 1; i >= 0; i--) {
+    const el = document.getElementById(sections[i].id)
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      if (rect.top <= 120) {
+        activeSection.value = sections[i].id
+        break
+      }
+    }
+  }
+}
+
 onMounted(() => {
-  loadNotes()
   window.addEventListener('scroll', onScroll, { passive: true })
+  onScroll()
+  loadNotes()
 })
 
 onUnmounted(() => {
