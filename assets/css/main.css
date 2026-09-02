@@ -382,13 +382,18 @@ body {
 *::-webkit-scrollbar-track { background: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html, body {
+    scroll-behavior: auto !important;
+  }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+    scroll-behavior: auto !important;
   }
 }
-
 
 /* ── 3. Token utilities (pair with Tailwind layout classes) ────────────── */
 .bg-base   { background-color: var(--bg); }
@@ -613,12 +618,15 @@ body {
   font-size: 13px;
   line-height: 1.5;
   cursor: pointer;
-  transition: border-color 0.12s ease, background-color 0.12s ease, transform 0.12s ease, opacity 0.12s ease;
+  transition: border-color 0.12s ease, background-color 0.12s ease, transform 50ms cubic-bezier(0.16, 1, 0.3, 1), opacity 0.12s ease;
 }
 .opt:not(:disabled):hover {
   border-color: var(--accent-line);
   background: var(--accent-soft);
   transform: translateY(-1px);
+}
+.opt:not(:disabled):active {
+  transform: scale(0.985);
 }
 .opt:disabled { cursor: default; }
 .opt-letter {
@@ -826,13 +834,58 @@ body {
   font-weight: 600;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: filter 0.12s ease, transform 0.12s ease;
+  transition: filter 0.12s ease, transform 50ms ease-out, box-shadow 0.12s ease, border-color 0.12s ease;
+  user-select: none;
 }
-.btn-again:hover, .btn-hard:hover, .btn-good:hover, .btn-easy:hover { filter: brightness(1.1); transform: translateY(-1px); }
-.btn-again { background: var(--red-soft); border-color: var(--red-line); color: var(--red); }
-.btn-hard  { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent-strong); }
-.btn-good  { background: var(--jade-soft); border-color: var(--jade-line); color: var(--jade); }
-.btn-easy  { background: var(--sky-soft); border-color: rgba(96,165,250,0.35); color: var(--sky); }
+.btn-again:hover:not(:disabled),
+.btn-hard:hover:not(:disabled),
+.btn-good:hover:not(:disabled),
+.btn-easy:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.btn-again:active:not(:disabled),
+.btn-hard:active:not(:disabled),
+.btn-good:active:not(:disabled),
+.btn-easy:active:not(:disabled) {
+  transform: scale(0.97) translateY(1px);
+}
+.btn-again {
+  background: var(--red-soft);
+  border-color: var(--red-line);
+  color: var(--red);
+}
+.btn-again:hover:not(:disabled) {
+  border-color: var(--red);
+  box-shadow: 0 0 0 1.5px var(--red-line), 0 2px 8px var(--red-soft);
+}
+.btn-hard {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent-strong);
+}
+.btn-hard:hover:not(:disabled) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1.5px var(--accent-line), 0 2px 8px var(--accent-soft);
+}
+.btn-good {
+  background: var(--jade-soft);
+  border-color: var(--jade-line);
+  color: var(--jade);
+}
+.btn-good:hover:not(:disabled) {
+  border-color: var(--jade);
+  box-shadow: 0 0 0 1.5px var(--jade-line), 0 2px 8px var(--jade-soft);
+}
+.btn-easy {
+  background: var(--sky-soft);
+  border-color: rgba(96,165,250,0.35);
+  color: var(--sky);
+}
+.btn-easy:hover:not(:disabled) {
+  border-color: var(--sky);
+  box-shadow: 0 0 0 1.5px rgba(96, 165, 250, 0.45), 0 2px 8px var(--sky-soft);
+}
 
 
 /* ── 6. Variant helpers ───────────────────────────────────────────────────
@@ -858,34 +911,45 @@ body {
   transition: height 320ms ease, opacity 200ms ease, margin 320ms ease;
 }
 
-/* -- 8. Flip card (flashcards) -----------------------------------------------
-   True 3D flip, not an instant text swap. .flip-card needs an explicit
-   min-height since both faces are absolutely positioned inside it.          */
+/* ── 8. Flip card (flashcards) ───────────────────────────────────────────────
+   True 3D flip with CSS Grid dual-face stacking (190ms snappy cubic-bezier).
+   Dual-face stacking dynamically auto-dimensions to max(front, back) to
+   eliminate container height collapse and zero layout shift.                */
 .flip-card {
-  position: relative;
   perspective: 1400px;
   display: block;
   width: 100%;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  transition: transform 50ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.flip-card:active {
+  transform: scale(0.985);
 }
 .flip-card-inner {
-  position: absolute;
-  inset: 0;
-  transition: transform 0.5s cubic-bezier(0.4, 0.15, 0.2, 1);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100%;
   transform-style: preserve-3d;
+  transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 .flip-card-inner.is-flipped {
   transform: rotateY(180deg);
 }
 .flip-card-face {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  width: 100%;
+  height: 100%;
 }
 .flip-card-face.flip-card-back {
   transform: rotateY(180deg);

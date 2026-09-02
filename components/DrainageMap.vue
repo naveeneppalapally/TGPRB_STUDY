@@ -199,35 +199,57 @@ const riverData: Record<string, { color: string; info: string }> = {
   Tapi: { color: '#2dd4bf', info: 'Origin: Multai, Betul · 724 km · Parallel to Narmada · West-flowing · Ukai Dam' },
 }
 
+function isReducedMotion(): boolean {
+  return typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+}
+
 function selectRiver(name: string) {
   selectedRiver.value = selectedRiver.value === name ? null : name
 }
 
 function hoverRiver(name: string) {
   hoveredRiver.value = name
+  const reduced = isReducedMotion()
   // Highlight the hovered river path
   const paths = svgMap.value?.querySelectorAll('.river-path')
   paths?.forEach(p => {
     const el = p as SVGElement
     if (el.dataset.river === name) {
-      gsap.to(el, { strokeWidth: 4, duration: 0.2 })
+      gsap.to(el, { strokeWidth: 4, duration: reduced ? 0 : 0.2 })
     } else {
-      gsap.to(el, { opacity: 0.3, duration: 0.2 })
+      gsap.to(el, { opacity: 0.3, duration: reduced ? 0 : 0.2 })
     }
   })
 }
 
 function unhoverRiver() {
   hoveredRiver.value = null
+  const reduced = isReducedMotion()
   const paths = svgMap.value?.querySelectorAll('.river-path')
   paths?.forEach(p => {
     const el = p as SVGElement
-    gsap.to(el, { strokeWidth: parseFloat(el.getAttribute('stroke-width') || '2'), opacity: 1, duration: 0.2 })
+    gsap.to(el, { strokeWidth: parseFloat(el.getAttribute('stroke-width') || '2'), opacity: 1, duration: reduced ? 0 : 0.2 })
   })
 }
 
 onMounted(() => {
   if (!import.meta.client) return
+
+  const paths = svgMap.value?.querySelectorAll('.river-path')
+
+  if (isReducedMotion()) {
+    if (indiaOutline.value) gsap.set(indiaOutline.value, { opacity: 0.6 })
+    if (himalayanGroup.value) gsap.set(himalayanGroup.value, { opacity: 1 })
+    if (peninsularEastGroup.value) gsap.set(peninsularEastGroup.value, { opacity: 1 })
+    if (peninsularWestGroup.value) gsap.set(peninsularWestGroup.value, { opacity: 1 })
+    if (labelsGroup.value) gsap.set(labelsGroup.value, { opacity: 1 })
+    paths?.forEach(path => {
+      const p = path as SVGPathElement
+      const length = p.getTotalLength?.() ?? 100
+      gsap.set(p, { strokeDasharray: length, strokeDashoffset: 0 })
+    })
+    return
+  }
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -247,7 +269,6 @@ onMounted(() => {
     .to(labelsGroup.value, { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.2')
 
   // Animate river paths drawing in
-  const paths = svgMap.value?.querySelectorAll('.river-path')
   paths?.forEach(path => {
     const p = path as SVGPathElement
     const length = p.getTotalLength()

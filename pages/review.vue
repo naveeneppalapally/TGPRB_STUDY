@@ -12,7 +12,7 @@
         <span v-if="dueCards.length > 0" class="chip chip-saffron chip-mono">
           <span class="dot" />{{ dueCards.length }} due
         </span>
-        <span v-else class="chip chip-mono bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+        <span v-else class="chip chip-jade chip-mono">
           <UIcon name="i-heroicons-check" class="h-3 w-3" /> All caught up
         </span>
       </div>
@@ -26,7 +26,11 @@
       </div>
       <div class="px-6 py-4">
         <p class="eyebrow">Estimated Retention</p>
-        <p class="num mt-1.5 font-display text-[22px] font-bold tracking-tight" :class="avgRetention > 0 ? 'text-emerald-500' : 't-lo'">
+        <p
+          class="num mt-1.5 font-display text-[22px] font-bold tracking-tight"
+          :style="avgRetention > 0 ? 'color: var(--jade);' : ''"
+          :class="avgRetention > 0 ? '' : 't-lo'"
+        >
           {{ avgRetention > 0 ? avgRetention + '%' : '90%' }}
         </p>
       </div>
@@ -56,30 +60,50 @@
         </span>
       </div>
 
-      <!-- Flashcard -->
+      <!-- Flashcard with 3D flip & CSS Grid dual-face stacking -->
       <button
         type="button"
-        class="panel panel-hover block min-h-[240px] w-full cursor-pointer p-7 text-left sm:p-9 transition-all"
-        :class="flipped ? 'b-strong' : ''"
+        class="flip-card block w-full cursor-pointer text-left"
+        :aria-label="flipped ? 'Show question' : 'Show answer'"
         @click="toggleFlip"
       >
-        <div class="flex items-center justify-between mb-4">
-          <p class="eyebrow" :class="flipped ? 'accent' : ''">
-            {{ flipped ? 'Answer' : 'Question' }}
-          </p>
-          <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
-            Reps: {{ currentFSRSCard.fsrs.reps }}
-          </span>
+        <div class="flip-card-inner" :class="{ 'is-flipped': flipped }">
+          <!-- Question Face (Front) -->
+          <div class="flip-card-face flip-card-front panel panel-hover p-7 sm:p-9 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <p class="eyebrow">Question</p>
+                <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
+                  Reps: {{ currentFSRSCard.fsrs.reps }}
+                </span>
+              </div>
+              <p class="text-[15.5px] leading-[1.75] font-medium t-hi">
+                {{ currentCard.front }}
+              </p>
+            </div>
+            <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
+              Click - or press ↵ - to reveal
+            </p>
+          </div>
+
+          <!-- Answer Face (Back) -->
+          <div class="flip-card-face flip-card-back panel panel-hover b-strong p-7 sm:p-9 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <p class="eyebrow accent">Answer</p>
+                <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
+                  Reps: {{ currentFSRSCard.fsrs.reps }}
+                </span>
+              </div>
+              <p class="text-[15.5px] leading-[1.75] font-normal t-hi">
+                {{ currentCard.back }}
+              </p>
+            </div>
+            <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
+              Rate your recall below to schedule with FSRS
+            </p>
+          </div>
         </div>
-        <p
-          class="text-[15.5px] leading-[1.75] t-hi"
-          :class="flipped ? 'font-normal' : 'font-medium'"
-        >
-          {{ flipped ? currentCard.back : currentCard.front }}
-        </p>
-        <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
-          {{ flipped ? 'Rate your recall below to schedule with FSRS' : 'Click - or press ↵ - to reveal' }}
-        </p>
       </button>
 
       <!-- Rating row -->
@@ -112,8 +136,8 @@
     <div v-else class="panel relative mx-auto max-w-xl overflow-hidden">
       <div class="bg-blueprint pointer-events-none absolute inset-0" aria-hidden="true" />
       <div class="relative px-8 py-14 text-center">
-        <span class="mx-auto mb-5 grid h-12 w-12 place-items-center rounded-xl bg-emerald-500/10">
-          <UIcon name="i-heroicons-check-badge" class="h-6 w-6 text-emerald-500" />
+        <span class="mx-auto mb-5 grid h-12 w-12 place-items-center rounded-xl" style="background: var(--jade-soft); color: var(--jade);">
+          <UIcon name="i-heroicons-check-badge" class="h-6 w-6" style="color: var(--jade);" />
         </span>
         <h3 class="font-display text-[18px] font-semibold tracking-tight t-hi mb-2">
           {{ totalActiveCards > 0 ? 'All Due Reviews Completed!' : 'Queue is Empty' }}
@@ -495,11 +519,50 @@ defineShortcuts({
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: filter 0.12s ease, transform 0.12s ease;
+  transition: filter 0.12s ease, transform 50ms ease-out, box-shadow 0.12s ease, border-color 0.12s ease;
+  user-select: none;
 }
-.rate-btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
-.rate-again { background: var(--red-soft); border-color: var(--red-line); color: var(--red); }
-.rate-hard  { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent-strong); }
-.rate-good  { background: var(--jade-soft); border-color: var(--jade-line); color: var(--jade); }
-.rate-easy  { background: var(--sky-soft); border-color: rgba(96, 165, 250, 0.35); color: var(--sky); }
+.rate-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+.rate-btn:active:not(:disabled) {
+  transform: scale(0.97) translateY(1px);
+}
+.rate-again {
+  background: var(--red-soft);
+  border-color: var(--red-line);
+  color: var(--red);
+}
+.rate-again:hover:not(:disabled) {
+  border-color: var(--red);
+  box-shadow: 0 0 0 1.5px var(--red-line), 0 2px 8px var(--red-soft);
+}
+.rate-hard {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+  color: var(--accent-strong);
+}
+.rate-hard:hover:not(:disabled) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1.5px var(--accent-line), 0 2px 8px var(--accent-soft);
+}
+.rate-good {
+  background: var(--jade-soft);
+  border-color: var(--jade-line);
+  color: var(--jade);
+}
+.rate-good:hover:not(:disabled) {
+  border-color: var(--jade);
+  box-shadow: 0 0 0 1.5px var(--jade-line), 0 2px 8px var(--jade-soft);
+}
+.rate-easy {
+  background: var(--sky-soft);
+  border-color: rgba(96, 165, 250, 0.35);
+  color: var(--sky);
+}
+.rate-easy:hover:not(:disabled) {
+  border-color: var(--sky);
+  box-shadow: 0 0 0 1.5px rgba(96, 165, 250, 0.45), 0 2px 8px var(--sky-soft);
+}
 </style>

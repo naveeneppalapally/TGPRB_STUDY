@@ -4,7 +4,7 @@
 
     <!-- ══ Unified Sidebar (Desktop Expandable & Mobile Slideover) ════════ -->
     <aside
-      class="fixed inset-y-0 start-0 z-40 flex w-64 flex-col border-e b-line bg-elev transition-transform duration-250 ease-out"
+      class="sidebar-shutter fixed inset-y-0 start-0 z-40 flex w-64 flex-col border-e b-line bg-elev"
       :class="[
         open ? 'translate-x-0 shadow-2xl' : '-translate-x-full',
         sidebarOpen ? 'lg:translate-x-0' : 'lg:-translate-x-full',
@@ -204,7 +204,7 @@
 
     <!-- ══ Main Content Area ═════════════════════════════════════════════ -->
     <div
-      class="flex min-h-screen flex-col transition-[padding] duration-250 ease-out"
+      class="flex min-h-screen flex-col"
       :class="[sidebarOpen ? 'lg:ps-64' : 'lg:ps-0']"
     >
       <!-- Topbar Header Navigation -->
@@ -494,13 +494,13 @@ const highYieldNotes = [
   { label: "Mountains & Passes in India", to: "/notes/geography/mountains-in-india", section: "GEO" },
   { label: "Forests of India", to: "/notes/geography/forests-in-india", section: "GEO" },
   { label: "Irrigation in India & TG", to: "/notes/geography/irrigation-in-india", section: "GEO" },
-  { label: "Union Executive & Legislature", to: "/notes/polity/union-executive-and-legislature", section: "POL" },
+  { label: "Constitutional Framework & Preamble", to: "/notes/polity/constitutional-framework-and-preamble", section: "POL" },
   { label: "Telangana Statehood Movement", to: "/notes/telangana/telangana-statehood-movement", section: "TEL" },
 ]
 
 const subjects = [
   { name: "Geography",       icon: "i-heroicons-map",              to: "/notes/geography/drainage-system-of-india" },
-  { name: "Polity",          icon: "i-heroicons-building-library", to: "/notes/polity/union-executive-and-legislature" },
+  { name: "Polity",          icon: "i-heroicons-building-library", to: "/notes/polity/constitutional-framework-and-preamble" },
   { name: "Telangana",       icon: "i-heroicons-map-pin",          to: "/notes/telangana/telangana-statehood-movement" },
   { name: "History",         icon: "i-heroicons-clock" },
   { name: "Science",         icon: "i-heroicons-beaker" },
@@ -572,3 +572,16 @@ defineShortcuts({
   ctrl_bracket_left: () => { toggleSidebar() },
 })
 </script>
+
+<style scoped>
+.sidebar-shutter {
+  will-change: transform;
+  transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-shutter {
+    transition: none !important;
+  }
+}
+</style>

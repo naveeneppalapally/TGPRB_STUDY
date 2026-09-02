@@ -211,10 +211,15 @@ const noteMetadata: Record<string, { title: string, section: string, route: stri
     section: 'Geography',
     route: '/notes/geography/forests-in-india',
   },
+  'NOTE-POL-CONST-FRAME': {
+    title: 'Constitutional Framework & Preamble',
+    section: 'Polity',
+    route: '/notes/polity/constitutional-framework-and-preamble',
+  },
   'NOTE-POL-UNION-EXEC': {
     title: 'Union Executive & Parliament',
     section: 'Polity',
-    route: '/notes/polity/union-executive-and-legislature',
+    route: '/notes/polity/constitutional-framework-and-preamble',
   },
   'NOTE-TEL-MOVEMENT': {
     title: 'Telangana Armed Struggle & Statehood Movement',

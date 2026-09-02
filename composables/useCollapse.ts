@@ -37,13 +37,22 @@ export function useCollapse(initialCollapsed = false) {
   function onEnter(element: Element, done: () => void) {
     const node = element as HTMLElement
     const targetHeight = node.scrollHeight
+    let called = false
+    let timer: ReturnType<typeof setTimeout> | null = null
+
     const finish = () => {
+      if (called) return
+      called = true
+      if (timer) clearTimeout(timer)
       node.removeEventListener('transitionend', finish)
       node.style.height = 'auto'
       node.style.overflow = ''
       done()
     }
+
     node.addEventListener('transitionend', finish)
+    timer = setTimeout(finish, 400)
+
     requestAnimationFrame(() => {
       node.style.height = `${targetHeight}px`
       node.style.opacity = '1'
@@ -60,11 +69,20 @@ export function useCollapse(initialCollapsed = false) {
 
   function onLeave(element: Element, done: () => void) {
     const node = element as HTMLElement
+    let called = false
+    let timer: ReturnType<typeof setTimeout> | null = null
+
     const finish = () => {
+      if (called) return
+      called = true
+      if (timer) clearTimeout(timer)
       node.removeEventListener('transitionend', finish)
       done()
     }
+
     node.addEventListener('transitionend', finish)
+    timer = setTimeout(finish, 400)
+
     requestAnimationFrame(() => {
       node.style.height = '0px'
       node.style.opacity = '0'

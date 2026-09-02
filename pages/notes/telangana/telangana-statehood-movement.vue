@@ -14,7 +14,7 @@
         <nav class="mb-6 flex items-center gap-1.5 text-body-xs t-lo" aria-label="Breadcrumb">
           <NuxtLink to="/" class="transition-colors hover:t-hi">Dashboard</NuxtLink>
           <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
-          <span class="t-lo">Telangana</span>
+          <NuxtLink to="/notes/telangana" class="transition-colors hover:t-hi">Telangana</NuxtLink>
           <UIcon name="i-heroicons-chevron-right" class="h-3 w-3" />
           <span class="t-mid">Statehood Movement</span>
         </nav>
@@ -727,17 +727,23 @@
       <aside class="hidden w-52 shrink-0 xl:block">
         <div class="sticky top-20">
           <p class="eyebrow mb-3">On this page</p>
-          <nav class="space-y-0.5">
+          <nav ref="tocNavRef" class="relative space-y-0.5">
+            <div
+              class="toc-pill pointer-events-none absolute start-0 w-full rounded-md"
+              :style="tocPillStyle"
+              aria-hidden="true"
+            />
             <a
               v-for="(section, i) in sections"
               :key="section.id"
+              :ref="(el) => setTocItemRef(section.id, el)"
               :href="`#${section.id}`"
-              class="group flex items-baseline gap-2.5 rounded-md px-2 py-1.5 text-body-xs transition-colors"
-              :class="activeSection === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-lo hover:t-mid'"
+              class="group relative z-10 flex items-baseline gap-2.5 rounded-md px-2 py-1.5 text-body-xs bg-transparent transition-colors"
+              :class="activeSection === section.id ? 't-hi font-semibold' : 't-lo hover:t-mid'"
               @click.prevent="scrollTo(section.id)"
             >
-              <span class="num font-mono text-[10px]" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
-              <span>{{ section.label }}</span>
+              <span class="num font-mono text-[10px] transition-colors" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span class="transition-colors">{{ section.label }}</span>
             </a>
           </nav>
           <div class="mt-6 border-t b-line pt-4">
@@ -805,7 +811,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
+import { computed, onMounted, onUnmounted, reactive, ref, watch, nextTick } from 'vue'
 import CurrentAffairsStrip from '@/components/CurrentAffairsStrip.vue'
 import MovementTimeline from '@/components/visual/MovementTimeline.vue'
 import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
@@ -848,6 +854,47 @@ const mobileTocOpen = ref(false)
 const readProgress = ref(0)
 const activeSection = ref('armed-struggle')
 
+const tocNavRef = ref<HTMLElement | null>(null)
+const tocItemRefs = new Map<string, HTMLElement>()
+const pillTop = ref(0)
+const pillHeight = ref(0)
+const hasPill = ref(false)
+let tocResizeObserver: ResizeObserver | null = null
+
+function setTocItemRef(id: string, el: any) {
+  if (el) {
+    const domEl = el.$el || el
+    if (domEl instanceof HTMLElement) {
+      tocItemRefs.set(id, domEl)
+    }
+  } else {
+    tocItemRefs.delete(id)
+  }
+}
+
+function updatePillPosition() {
+  const activeEl = tocItemRefs.get(activeSection.value)
+  if (activeEl && tocNavRef.value) {
+    pillTop.value = activeEl.offsetTop
+    pillHeight.value = activeEl.offsetHeight
+    hasPill.value = true
+  } else {
+    hasPill.value = false
+  }
+}
+
+const tocPillStyle = computed(() => ({
+  transform: `translateY(${pillTop.value}px)`,
+  height: `${pillHeight.value}px`,
+  opacity: hasPill.value ? 1 : 0,
+}))
+
+watch(activeSection, () => {
+  nextTick(() => {
+    updatePillPosition()
+  })
+})
+
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
@@ -861,13 +908,11 @@ function onScroll() {
   const max = h.scrollHeight - h.clientHeight
   readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
 
-  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
   if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
     activeSection.value = sections[sections.length - 1].id
     return
   }
 
-  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
   for (let i = sections.length - 1; i >= 0; i--) {
     const el = document.getElementById(sections[i].id)
     if (el) {
@@ -884,10 +929,23 @@ onMounted(() => {
   window.addEventListener('scroll', onScroll, { passive: true })
   onScroll()
   loadNotes()
+  nextTick(() => {
+    updatePillPosition()
+    if (tocNavRef.value && typeof ResizeObserver !== 'undefined') {
+      tocResizeObserver = new ResizeObserver(() => {
+        updatePillPosition()
+      })
+      tocResizeObserver.observe(tocNavRef.value)
+    }
+  })
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll)
+  if (tocResizeObserver) {
+    tocResizeObserver.disconnect()
+    tocResizeObserver = null
+  }
 })
 
 interface Pyq {
@@ -1826,3 +1884,18 @@ function advOptionClass(q: AdvPractice, optIndex: number) {
   return 'opt-dim'
 }
 </script>
+
+<style scoped>
+.toc-pill {
+  background-color: var(--accent-soft);
+  border: 1px solid var(--accent-line);
+  transition: transform 190ms cubic-bezier(0.2, 0, 0, 1), height 190ms cubic-bezier(0.2, 0, 0, 1), opacity 150ms ease;
+  will-change: transform, height;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toc-pill {
+    transition: none !important;
+  }
+}
+</style>

@@ -443,14 +443,14 @@ const predictedHighYieldTopics = [
   },
   {
     rank: 3,
-    title: 'Union Executive & Legislature (President, Parliament, Articles)',
+    title: 'Constitutional Framework & Preamble (Historical Acts, Constituent Assembly)',
     subject: 'Polity',
-    pyqs: 24,
-    projectedMarks: '4–5 Marks (3–4 Qs)',
-    likelyFormat: '4-Statement True/False | Landmark Article Traps (52–123)',
-    href: '/notes/polity/union-executive-and-legislature',
+    pyqs: 31,
+    projectedMarks: '3-4 Marks (3-4 Qs)',
+    likelyFormat: 'Chronology Sequencing | Matching British Acts (1773-1947)',
+    href: '/notes/polity/constitutional-framework-and-preamble',
     tier: 'T1',
-    confidence: '92%',
+    confidence: '94%',
     isLive: true,
   },
   {
@@ -524,7 +524,7 @@ function openSubject(s: { slug: string; name: string; noteCount: number }) {
   } else if (s.slug === 'telangana') {
     navigateTo('/notes/telangana/telangana-statehood-movement')
   } else if (s.slug === 'polity') {
-    navigateTo('/notes/polity/union-executive-and-legislature')
+    navigateTo('/notes/polity/constitutional-framework-and-preamble')
   } else {
     toast.add({
       title: `${s.name} is queued`,

@@ -1,66 +1,89 @@
 <template>
   <div class="w-full max-w-xl mx-auto">
-    <!-- Card container -->
-    <div
-      class="card relative overflow-hidden cursor-pointer select-none min-h-[280px] flex flex-col"
+    <!-- Card container with 3D Flip and CSS Grid dual-face stacking -->
+    <button
+      type="button"
+      class="flip-card w-full cursor-pointer select-none"
+      :aria-label="flipped ? 'Show question' : 'Show answer'"
       @click="toggleFlip"
     >
-      <!-- Topic badge -->
-      <div class="flex items-center gap-2 mb-4">
-        <span class="badge bg-saffron-500/15 text-saffron-600 dark:text-saffron-400 font-mono text-xs font-semibold">
-          {{ card.exam_section }}
-        </span>
-        <span class="text-xs" style="color: var(--text-muted)">{{ card.subtopic }}</span>
-      </div>
+      <div class="flip-card-inner" :class="{ 'is-flipped': flipped }">
+        <!-- Question face (Front) -->
+        <div class="flip-card-face flip-card-front panel p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="chip chip-saffron chip-mono text-xs">
+                {{ card.exam_section || 'General' }}
+              </span>
+              <span class="text-xs t-lo">{{ card.subtopic || 'Atomic fact' }}</span>
+            </div>
 
-      <!-- Card face -->
-      <div class="flex-1 flex items-center justify-center p-4">
-        <div v-if="!flipped" class="text-center animate-fade-in">
-          <p class="text-xs uppercase tracking-wider mb-3" style="color: var(--text-muted)">Question</p>
-          <p class="text-lg font-medium leading-relaxed">{{ card.front }}</p>
-        </div>
-        <div v-else class="text-center animate-fade-in">
-          <p class="text-xs uppercase tracking-wider mb-3" style="color: var(--accent)">Answer</p>
-          <p class="text-base leading-relaxed" style="color: var(--text-secondary)">{{ card.back }}</p>
-        </div>
-      </div>
+            <div class="py-4 text-center">
+              <p class="eyebrow mb-3">Question</p>
+              <p class="text-lg font-medium leading-relaxed t-hi">{{ card.front }}</p>
+            </div>
+          </div>
 
-      <!-- Flip hint -->
-      <div class="text-center py-2">
-        <p class="text-xs" style="color: var(--text-muted)">
-          {{ flipped ? 'Rate your recall below' : 'Tap to reveal answer' }}
-        </p>
+          <div class="text-center pt-3">
+            <p class="font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
+              Tap to reveal answer
+            </p>
+          </div>
+        </div>
+
+        <!-- Answer face (Back) -->
+        <div class="flip-card-face flip-card-back panel b-strong p-6 sm:p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="chip chip-saffron chip-mono text-xs">
+                {{ card.exam_section || 'General' }}
+              </span>
+              <span class="text-xs t-lo">{{ card.subtopic || 'Atomic fact' }}</span>
+            </div>
+
+            <div class="py-4 text-center">
+              <p class="eyebrow mb-3 accent">Answer</p>
+              <p class="text-base leading-relaxed t-hi">{{ card.back }}</p>
+            </div>
+          </div>
+
+          <div class="text-center pt-3">
+            <p class="font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
+              Rate your recall below
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </button>
 
     <!-- Rating buttons (only show when flipped) -->
     <div v-if="flipped" class="mt-4 animate-slide-up">
       <!-- Schedule previews -->
       <div class="grid grid-cols-4 gap-2 mb-2">
         <div v-for="(label, key) in ratingLabels" :key="key" class="text-center">
-          <p class="text-xs" style="color: var(--text-muted)">{{ schedulePreview[key] || '-' }}</p>
+          <p class="font-mono text-[9.5px] uppercase tracking-[0.08em] t-lo">{{ schedulePreview[key] || '-' }}</p>
         </div>
       </div>
 
       <!-- Buttons -->
       <div class="grid grid-cols-4 gap-2">
-        <button class="btn-again" @click="submitRating(1)">
+        <button type="button" class="btn-again" @click="submitRating(1)">
           Again
         </button>
-        <button class="btn-hard" @click="submitRating(2)">
+        <button type="button" class="btn-hard" @click="submitRating(2)">
           Hard
         </button>
-        <button class="btn-good" @click="submitRating(3)">
+        <button type="button" class="btn-good" @click="submitRating(3)">
           Good
         </button>
-        <button class="btn-easy" @click="submitRating(4)">
+        <button type="button" class="btn-easy" @click="submitRating(4)">
           Easy
         </button>
       </div>
     </div>
 
     <!-- Progress indicator -->
-    <div class="mt-6 flex items-center justify-between text-xs" style="color: var(--text-muted)">
+    <div class="mt-6 flex items-center justify-between text-xs t-lo">
       <span>Card {{ currentIndex + 1 }} of {{ totalCards }}</span>
       <span class="font-mono">{{ reviewedCount }} reviewed</span>
     </div>

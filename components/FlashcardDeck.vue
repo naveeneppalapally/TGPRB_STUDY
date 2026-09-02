@@ -45,7 +45,7 @@
       <div v-if="!collapsed" class="p-5 sm:p-6">
         <button
           type="button"
-          class="flip-card min-h-[190px] sm:min-h-[210px]"
+          class="flip-card w-full"
           :aria-label="flipped ? 'Show question' : 'Show answer'"
           @click="flipped = !flipped"
         >

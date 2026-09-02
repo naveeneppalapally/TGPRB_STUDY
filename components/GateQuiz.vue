@@ -42,7 +42,7 @@
             <UIcon
               :name="isUnlocked ? 'i-heroicons-lock-open' : 'i-heroicons-lock-closed'"
               class="h-4 w-4"
-              :class="isUnlocked ? 'text-emerald-500' : 'text-saffron-500'"
+              :style="isUnlocked ? 'color: var(--jade);' : 'color: var(--accent);'"
             />
             <h3 class="font-semibold text-[13px] t-hi">Comprehension Gate</h3>
             <span class="font-mono text-[10px] t-lo">
@@ -56,8 +56,8 @@
 
         <!-- Previously Passed State (Gate mode) -->
         <div v-if="previouslyPassed && !retrying && !submitted" class="p-6 text-center space-y-3">
-          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-500 mb-1">
-            <UIcon name="i-heroicons-check-badge" class="h-7 w-7" />
+          <div class="inline-flex h-12 w-12 items-center justify-center rounded-full mb-1" style="background: var(--jade-soft); color: var(--jade);">
+            <UIcon name="i-heroicons-check-badge" class="h-7 w-7" style="color: var(--jade);" />
           </div>
           <h4 class="text-[15px] font-semibold t-hi">Comprehension Gate Passed</h4>
           <p class="text-[12.5px] t-mid max-w-md mx-auto leading-relaxed">
@@ -81,7 +81,7 @@
             <div :key="currentQ" class="px-5 py-5">
               <!-- Question text -->
               <p class="font-medium text-[14px] leading-[1.7] t-hi mb-4">
-                <span class="font-mono text-saffron-500 mr-1.5">Q{{ currentQ + 1 }}.</span>
+                <span class="font-mono mr-1.5" style="color: var(--accent);">Q{{ currentQ + 1 }}.</span>
                 {{ quiz.questions[currentQ].question }}
               </p>
 
@@ -101,12 +101,14 @@
                     class="sr-only"
                   />
                   <span
-                    class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0"
-                    :class="answers[currentQ] === oi
-                      ? 'border-saffron-500 bg-saffron-500'
-                      : 'border-gray-300 dark:border-gray-700'"
+                    class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors duration-150"
+                    :style="answers[currentQ] === oi
+                      ? 'border-color: var(--accent); background-color: var(--accent);'
+                      : 'border-color: var(--line-strong); background-color: transparent;'"
                   >
-                    <span v-if="answers[currentQ] === oi" class="w-2 h-2 rounded-full bg-white" />
+                    <Transition name="radio-dot-spring">
+                      <span v-if="answers[currentQ] === oi" class="w-2 h-2 rounded-full bg-white radio-dot" />
+                    </Transition>
                   </span>
                   <span class="text-[13px] flex-1" :class="answers[currentQ] === oi ? 't-hi font-medium' : 't-mid'">
                     {{ opt }}
@@ -171,17 +173,33 @@
 
         <!-- Results view -->
         <div v-else class="px-5 py-5 space-y-4">
-          <!-- Score banner -->
+          <!-- Score banner with Celebratory Pass State & Shockwave Ring -->
           <div
-            class="rounded-xl p-5 text-center"
-            :class="passed
-              ? 'bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800'
-              : 'bg-red-50 dark:bg-red-950/30 border border-red-200 dark:border-red-800'"
+            class="relative overflow-hidden rounded-xl p-6 text-center transition-all"
+            :style="passed
+              ? 'background: var(--jade-soft); border: 1px solid var(--jade-line);'
+              : 'background: var(--red-soft); border: 1px solid var(--red-line);'"
           >
-            <p class="text-4xl font-bold font-mono mb-1" :class="passed ? 'text-green-500' : 'text-red-400'">
+            <!-- Celebratory Pass Graphic -->
+            <div v-if="passed" class="relative inline-flex items-center justify-center mb-3">
+              <!-- Expanding Jade Shockwave Ring -->
+              <span class="pass-ring pointer-events-none absolute inset-0 rounded-full" aria-hidden="true" />
+              <!-- Celebratory Badge Pop Icon -->
+              <div class="celebrate-badge relative z-10 grid h-14 w-14 place-items-center rounded-full" style="background: var(--jade); color: #ffffff;">
+                <UIcon name="i-heroicons-check-badge" class="h-8 w-8 text-white" />
+              </div>
+            </div>
+
+            <p
+              class="text-4xl font-bold font-mono mb-1"
+              :style="passed ? 'color: var(--jade);' : 'color: var(--red);'"
+            >
               {{ score }}/{{ quiz.questions.length }}
             </p>
-            <p class="text-[13px] font-medium" :class="passed ? 'text-green-600 dark:text-green-400' : 'text-red-500'">
+            <p
+              class="text-[13.5px] font-semibold"
+              :style="passed ? 'color: var(--jade);' : 'color: var(--red);'"
+            >
               {{ passed ? 'Gate Passed - Flashcards Unlocked!' : 'Not quite - review and try again' }}
             </p>
           </div>
@@ -190,24 +208,26 @@
           <div
             v-for="(q, qi) in quiz.questions"
             :key="q.id"
-            class="rounded-lg border b-line p-4"
-            :class="answers[qi] === q.correct_answer ? 'border-green-200 dark:border-green-900' : 'border-red-200 dark:border-red-900'"
+            class="rounded-lg border p-4"
+            :style="answers[qi] === q.correct_answer
+              ? 'border-color: var(--jade-line); background: var(--bg-elevated);'
+              : 'border-color: var(--red-line); background: var(--bg-elevated);'"
           >
             <div class="flex items-start gap-2 mb-2">
               <UIcon
                 :name="answers[qi] === q.correct_answer ? 'i-heroicons-check-circle-solid' : 'i-heroicons-x-circle-solid'"
                 class="h-4 w-4 mt-0.5 flex-shrink-0"
-                :class="answers[qi] === q.correct_answer ? 'text-green-500' : 'text-red-400'"
+                :style="answers[qi] === q.correct_answer ? 'color: var(--jade);' : 'color: var(--red);'"
               />
               <p class="font-medium text-[13px] t-hi">{{ q.question }}</p>
             </div>
             <p class="text-[12px] ml-6 t-lo">
               Your answer:
-              <span :class="answers[qi] === q.correct_answer ? 'text-green-500' : 'text-red-400'">
+              <span :style="answers[qi] === q.correct_answer ? 'color: var(--jade); font-weight: 500;' : 'color: var(--red);'">
                 {{ q.options[answers[qi]] }}
               </span>
             </p>
-            <p v-if="answers[qi] !== q.correct_answer" class="text-[12px] ml-6 text-green-500">
+            <p v-if="answers[qi] !== q.correct_answer" class="text-[12px] ml-6 font-medium" style="color: var(--jade);">
               Correct: {{ q.options[q.correct_answer] }}
             </p>
             <p v-if="q.explanation" class="text-[12px] ml-6 mt-2 t-lo italic">{{ q.explanation }}</p>
@@ -401,13 +421,86 @@ function retry() {
   padding: 10px 14px;
   border-radius: 8px;
   border: 1px solid var(--border-subtle);
+  background: var(--bg-elevated);
   cursor: pointer;
-  transition: all 0.15s;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 50ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+  user-select: none;
 }
 .opt:hover { border-color: var(--border-active); }
+.opt:active {
+  transform: scale(0.985);
+}
 .opt-selected {
   border-color: var(--accent);
   background: var(--accent-soft);
+}
+
+/* Radio dot 12% spring overshoot */
+.radio-dot-spring-enter-active {
+  animation: radioDotSpring 200ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.radio-dot-spring-leave-active {
+  animation: radioDotCollapse 120ms ease-in forwards;
+}
+
+@keyframes radioDotSpring {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes radioDotCollapse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+/* Celebratory Pass Badge Pop (220ms) & Expanding Jade Shockwave Ring */
+.celebrate-badge {
+  animation: badgePop 220ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.pass-ring {
+  border: 2px solid var(--jade);
+  animation: passRingExpand 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes passRingExpand {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.85;
+    box-shadow: 0 0 0 0 var(--jade-soft);
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+    box-shadow: 0 0 24px 12px transparent;
+  }
 }
 
 .slide-left-enter-active,
