@@ -833,8 +833,19 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
 }
 
 /** Vue lifecycle wrapper for the engine. */
-export function useOfflineSync(options: OfflineSyncOptions): OfflineSyncEngine {
-  const engine = createOfflineSyncEngine({ ...options, autoStart: options.autoStart ?? true })
+export function useOfflineSync(options?: Partial<OfflineSyncOptions>): OfflineSyncEngine {
+  if (!options || !options.getUserId || !options.adapter) {
+    return {
+      pendingCount: ref(0),
+      isSyncing: ref(false),
+      lastError: ref(null),
+      initialize: async () => {},
+      start: () => {},
+      stop: () => {},
+      enqueue: () => ({} as any),
+    }
+  }
+  const engine = createOfflineSyncEngine({ ...options as OfflineSyncOptions, autoStart: options.autoStart ?? true })
   onScopeDispose(() => engine.stop())
   return engine
 }

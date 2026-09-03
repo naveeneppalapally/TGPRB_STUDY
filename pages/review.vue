@@ -60,75 +60,88 @@
         </span>
       </div>
 
-      <!-- Flashcard with 3D flip & CSS Grid dual-face stacking -->
-      <button
-        type="button"
-        class="flip-card block w-full cursor-pointer text-left"
-        :aria-label="flipped ? 'Show question' : 'Show answer'"
-        @click="toggleFlip"
-      >
-        <div class="flip-card-inner" :class="{ 'is-flipped': flipped }">
-          <!-- Question Face (Front) -->
-          <div class="flip-card-face flip-card-front panel panel-hover p-7 sm:p-9 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <p class="eyebrow">Question</p>
-                <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
-                  Reps: {{ currentFSRSCard.fsrs.reps }}
-                </span>
-              </div>
-              <p class="text-[15.5px] leading-[1.75] font-medium t-hi">
-                {{ currentCard.front }}
-              </p>
-            </div>
-            <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
-              Click - or press ↵ - to reveal
-            </p>
-          </div>
-
-          <!-- Answer Face (Back) -->
-          <div class="flip-card-face flip-card-back panel panel-hover b-strong p-7 sm:p-9 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <p class="eyebrow accent">Answer</p>
-                <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
-                  Reps: {{ currentFSRSCard.fsrs.reps }}
-                </span>
-              </div>
-              <p class="text-[15.5px] leading-[1.75] font-normal t-hi">
-                {{ currentCard.back }}
-              </p>
-            </div>
-            <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
-              Rate your recall below to schedule with FSRS
-            </p>
-          </div>
-        </div>
-      </button>
-
-      <!-- Rating row -->
-      <div v-if="flipped" class="mt-4 animate-slide-up">
-        <div class="mb-1.5 grid grid-cols-4 gap-2">
-          <p v-for="hint in activeScheduleHints" :key="hint.label" class="text-center font-mono text-[9.5px] uppercase tracking-[0.08em] t-lo">
-            {{ hint.when }}
-          </p>
-        </div>
-        <div class="grid grid-cols-4 gap-2">
+      <!-- Directional Card Glide Transition (Decoupled Card Advance & Answer Leak Elimination) -->
+      <Transition name="card-glide" mode="out-in">
+        <div :key="currentCard.id" class="w-full">
+          <!-- Flashcard with 3D flip & CSS Grid dual-face stacking -->
           <button
-            v-for="(hint, i) in activeScheduleHints"
-            :key="hint.label"
             type="button"
-            class="rate-btn"
-            :class="hint.cls"
-            @click.stop="rate(i + 1)"
+            class="flip-card block w-full cursor-pointer text-left select-none"
+            :aria-label="flipped ? 'Show question' : 'Show answer'"
+            @click="toggleFlip"
           >
-            <span class="block text-[13px] font-semibold">{{ hint.label }}</span>
-            <span class="mt-0.5 block font-mono text-[9.5px] opacity-70">{{ i + 1 }}</span>
+            <div class="flip-card-inner" :class="{ 'is-flipped': flipped }">
+              <!-- Question Face (Front) -->
+              <div class="flip-card-face flip-card-front panel panel-hover p-7 sm:p-9 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <p class="eyebrow">Question</p>
+                    <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
+                      Reps: {{ currentFSRSCard.fsrs.reps }}
+                    </span>
+                  </div>
+                  <p class="text-[15.5px] leading-[1.75] font-medium t-hi">
+                    {{ currentCard.front }}
+                  </p>
+                </div>
+                <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
+                  Click - or press ↵ - to reveal
+                </p>
+              </div>
+
+              <!-- Answer Face (Back) -->
+              <div class="flip-card-face flip-card-back panel panel-hover b-strong p-7 sm:p-9 flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <p class="eyebrow accent">Answer</p>
+                    <span v-if="currentFSRSCard" class="font-mono text-[10px] t-lo">
+                      Reps: {{ currentFSRSCard.fsrs.reps }}
+                    </span>
+                  </div>
+                  <p class="text-[15.5px] leading-[1.75] font-normal t-hi">
+                    {{ currentCard.back }}
+                  </p>
+                </div>
+                <p class="mt-6 font-mono text-[10px] uppercase tracking-[0.14em] t-lo">
+                  Rate your recall below to schedule with FSRS
+                </p>
+              </div>
+            </div>
           </button>
         </div>
-        <p class="mt-3 text-center text-[11px] t-lo">
-          Keys <UKbd>1</UKbd>-<UKbd>4</UKbd> rate · <UKbd>↵</UKbd> flips
-        </p>
+      </Transition>
+
+      <!-- Zero-Layout-Shift Pre-Reserved Rating Dock (CLS = 0.0000) -->
+      <div
+        class="mt-4 grid transition-[grid-template-rows,opacity] duration-160 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        :class="flipped ? 'grid-rows-[1fr] opacity-100 pointer-events-auto' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
+      >
+        <div class="min-h-0 overflow-hidden">
+          <div class="min-h-[84px] pt-1">
+            <div class="mb-1.5 grid grid-cols-4 gap-2">
+              <p v-for="hint in activeScheduleHints" :key="hint.label" class="text-center font-mono text-[9.5px] uppercase tracking-[0.08em] t-lo">
+                {{ hint.when }}
+              </p>
+            </div>
+            <div class="grid grid-cols-4 gap-2">
+              <button
+                v-for="(hint, i) in activeScheduleHints"
+                :key="hint.label"
+                type="button"
+                class="rate-btn"
+                :class="hint.cls"
+                :tabindex="flipped ? 0 : -1"
+                @click.stop="rate(i + 1)"
+              >
+                <span class="block text-[13px] font-semibold">{{ hint.label }}</span>
+                <span class="mt-0.5 block font-mono text-[9.5px] opacity-70">{{ i + 1 }}</span>
+              </button>
+            </div>
+            <p class="mt-3 text-center text-[11px] t-lo">
+              Keys <UKbd>1</UKbd>-<UKbd>4</UKbd> rate · <UKbd>↵</UKbd> flips
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -564,5 +577,34 @@ defineShortcuts({
 .rate-easy:hover:not(:disabled) {
   border-color: var(--sky);
   box-shadow: 0 0 0 1.5px rgba(96, 165, 250, 0.45), 0 2px 8px var(--sky-soft);
+}
+
+/* -- Directional Card Glide Transitions ------------------------------ */
+.card-glide-enter-active,
+.card-glide-leave-active {
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), opacity 120ms ease;
+  will-change: transform, opacity;
+}
+
+.card-glide-enter-from {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+.card-glide-leave-to {
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+}
+
+.flip-card {
+  perspective: 1200px;
+}
+.flip-card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  transform-style: flat;
+}
+.flip-card-inner {
+  transform-style: preserve-3d;
 }
 </style>

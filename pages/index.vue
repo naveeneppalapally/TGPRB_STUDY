@@ -18,9 +18,12 @@
         <!-- Due count -->
         <div class="flex flex-col">
           <p class="eyebrow">Cards due today</p>
-          <p class="num mt-3 font-display text-[72px] font-bold leading-none tracking-tighter t-hi sm:text-[88px]">
-            {{ dueCount ?? '-' }}
-          </p>
+          <div class="mt-3">
+            <TactileOdometer
+              :value="dueCount"
+              class="font-display text-[72px] font-bold leading-none tracking-tighter t-hi sm:text-[88px]"
+            />
+          </div>
           <p class="mt-3 max-w-xs text-[13px] leading-relaxed t-lo">
             FSRS-scheduled across all subjects. The queue fills in once your
             first note gate is passed.
@@ -69,8 +72,10 @@
             </div>
             <div class="h-1 w-full overflow-hidden rounded-full bg-inset">
               <div
-                class="h-full rounded-full bg-gradient-to-r from-saffron-500 to-saffron-400"
-                :style="{ width: (notesLive / subjects.length * 100) + '%' }"
+                class="h-full w-full rounded-full bg-gradient-to-r from-saffron-500 to-saffron-400 origin-left transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform"
+                :style="{
+                  transform: `scaleX(${Math.min(1, Math.max(0, notesLive / subjects.length))})`
+                }"
               />
             </div>
           </div>
@@ -83,7 +88,7 @@
       <div v-for="stat in stats" :key="stat.label" class="px-6 py-5">
         <p class="eyebrow">{{ stat.label }}</p>
         <p class="num mt-2 font-display text-[26px] font-bold tracking-tight" :class="stat.dim ? 't-lo' : 't-hi'">
-          {{ stat.value }}
+          <TactileOdometer :value="stat.value" />
         </p>
         <p class="mt-1 text-[11.5px] t-lo">{{ stat.hint }}</p>
       </div>
@@ -185,7 +190,7 @@
         <div
           v-for="topic in predictedHighYieldTopics"
           :key="topic.rank"
-          class="flex flex-col gap-3 p-4 transition-colors hover:bg-sub sm:flex-row sm:items-center sm:justify-between"
+          class="flex flex-col gap-3 p-4 transition-colors hover:bg-sub sm:flex-row sm:items-center sm:justify-between transition-transform duration-100 active:scale-[0.99]"
         >
           <!-- Left: Rank + Info -->
           <div class="flex items-start gap-3 min-w-0">
@@ -259,7 +264,7 @@
             <tr
               v-for="(s, i) in rankedSubjects"
               :key="s.slug"
-              class="cursor-pointer"
+              class="cursor-pointer transition-transform duration-100 active:scale-[0.99]"
               @click="openSubject(s)"
             >
               <td class="font-mono text-[11px] t-lo num">{{ String(i + 1).padStart(2, '0') }}</td>
@@ -301,7 +306,7 @@
     <!-- ── Continue reading ────────────────────────────────────────────── -->
     <NuxtLink
       to="/notes/geography/drainage-system-of-india"
-      class="panel panel-hover group mt-6 flex items-center gap-4 p-5 sm:p-6"
+      class="panel panel-hover group mt-6 flex items-center gap-4 p-5 sm:p-6 transition-transform duration-100 active:scale-[0.99]"
     >
       <span class="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-accent-soft">
         <UIcon name="i-heroicons-book-open" class="h-5 w-5 accent" />
@@ -520,11 +525,11 @@ function tierChip(tier: string) {
 
 function openSubject(s: { slug: string; name: string; noteCount: number }) {
   if (s.slug === 'geography') {
-    navigateTo('/notes/geography/drainage-system-of-india')
+    navigateTo('/notes/geography')
   } else if (s.slug === 'telangana') {
-    navigateTo('/notes/telangana/telangana-statehood-movement')
+    navigateTo('/notes/telangana')
   } else if (s.slug === 'polity') {
-    navigateTo('/notes/polity/constitutional-framework-and-preamble')
+    navigateTo('/notes/polity')
   } else {
     toast.add({
       title: `${s.name} is queued`,

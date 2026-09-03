@@ -541,7 +541,7 @@
   },
   {
     "q_no": 46,
-    "question": "In a Geometrical figure if radius is 7 units and height is 6 units, match the following (assuming suitable units and take π = 22/7).\nList—I\n(a) Area of the circle\n(b) Volume of the cone\n(c) Volume of the cylinder\n(d) Curved surface area of the cylinder\nList—II\n(i) 264\n(ii) 924\n(iii) 154\n(iv) 308",
+    "question": "In a Geometrical figure if radius is 7 units and height is 6 units, match the following (assuming suitable units and take π = 22/7).\nList-I\n(a) Area of the circle\n(b) Volume of the cone\n(c) Volume of the cylinder\n(d) Curved surface area of the cylinder\nList-II\n(i) 264\n(ii) 924\n(iii) 154\n(iv) 308",
     "options": [
       "(1) (a) (ii), (b) (iii), (c) (iv), (d) (i)",
       "(2) (a) (iii), (b) (iv), (c) (ii), (d) (i)",
@@ -553,7 +553,7 @@
   },
   {
     "q_no": 47,
-    "question": "Match the following\nList—I\n(a) Cuboid\n(b) Cube\n(c) Sphere\n(d) Cone\nList—II\n(i) Square\n(ii) Circle\n(iii) Triangle\n(iv) Rectangle",
+    "question": "Match the following\nList-I\n(a) Cuboid\n(b) Cube\n(c) Sphere\n(d) Cone\nList-II\n(i) Square\n(ii) Circle\n(iii) Triangle\n(iv) Rectangle",
     "options": [
       "(1) (a) (i), (b) (iv), (c) (iii), (d) (ii)",
       "(2) (a) (iv), (b) (i), (c) (ii), (d) (iii)",
@@ -1293,10 +1293,10 @@
     "q_no": 112,
     "question": "Which one of the following is not correctly matched ?",
     "options": [
-      "Vitamin B₁ — Beriberi",
-      "Vitamin B₂ — Pellagra",
-      "Vitamin B₆ — Loss of appetite",
-      "Vitamin B₁₂ — Pernicious anaemia"
+      "Vitamin B₁ - Beriberi",
+      "Vitamin B₂ - Pellagra",
+      "Vitamin B₆ - Loss of appetite",
+      "Vitamin B₁₂ - Pernicious anaemia"
     ],
     "has_image": false,
     "source_page": 29
@@ -1351,7 +1351,7 @@
   },
   {
     "q_no": 117,
-    "question": "Which of the following is/are not correct? (a) First Five Year Plan — 1951-1956 (b) Third Five Year Plan — 1966-1971 (c) Sixth Five Year Plan — 1980-1985 (d) Tenth Five Year Plan — 2002-2007",
+    "question": "Which of the following is/are not correct? (a) First Five Year Plan - 1951-1956 (b) Third Five Year Plan - 1966-1971 (c) Sixth Five Year Plan - 1980-1985 (d) Tenth Five Year Plan - 2002-2007",
     "options": [
       "(a) and (c)",
       "(b) only",
@@ -1509,10 +1509,10 @@
     "q_no": 130,
     "question": "Who has won the 2016 William E. Colby Award for best military book? What is the title of the book ?",
     "options": [
-      "Nisid Hazari — Midnight Furies: The deadly legacy of India's partition",
-      "Logon Beirne — Blood of tyrants",
-      "Douglas Mastriano — A new Biography of the Hero of the Argonne",
-      "Thomas McKenna — Science and Technology in Military"
+      "Nisid Hazari - Midnight Furies: The deadly legacy of India's partition",
+      "Logon Beirne - Blood of tyrants",
+      "Douglas Mastriano - A new Biography of the Hero of the Argonne",
+      "Thomas McKenna - Science and Technology in Military"
     ],
     "has_image": false,
     "source_page": 35
@@ -1807,7 +1807,7 @@
   },
   {
     "q_no": 155,
-    "question": "Match the following List—I (a) Manganese (b) Nickel (c) Lead-zinc (d) Asbestos List—II (i) Madhya Pradesh (ii) Odisha (iii) Rajasthan (iv) Telangana",
+    "question": "Match the following List-I (a) Manganese (b) Nickel (c) Lead-zinc (d) Asbestos List-II (i) Madhya Pradesh (ii) Odisha (iii) Rajasthan (iv) Telangana",
     "options": [
       "(1) (a) (i) (b) (iii) (c) (ii) (d) (iv)",
       "(2) (a) (iv) (b) (iii) (c) (ii) (d) (i)",
@@ -2061,10 +2061,10 @@
     "q_no": 176,
     "question": "Find out the wrong pair concerned with Burgula Ramakrishna Rao Ministry in 1952.",
     "options": [
-      "Mehdi Nawaz Jung — Public Health and Public Works",
-      "M. Chenna Reddy — Agriculture and Planning",
-      "Digambar Rao Bindu — Home",
-      "Shanker Dev — Education and Village Development"
+      "Mehdi Nawaz Jung - Public Health and Public Works",
+      "M. Chenna Reddy - Agriculture and Planning",
+      "Digambar Rao Bindu - Home",
+      "Shanker Dev - Education and Village Development"
     ],
     "has_image": false,
     "source_page": 50
@@ -2227,7 +2227,7 @@
   },
   {
     "q_no": 190,
-    "question": "Match the following\nList—I\n(a) Metpally\n(b) Pembarthi\n(c) Gadwal\n(d) Hyderabad\nList—II\n(i) Bronze works\n(ii) Khadi\n(iii) Bangles\n(iv) Handloom Sarees",
+    "question": "Match the following\nList-I\n(a) Metpally\n(b) Pembarthi\n(c) Gadwal\n(d) Hyderabad\nList-II\n(i) Bronze works\n(ii) Khadi\n(iii) Bangles\n(iv) Handloom Sarees",
     "options": [
       "(a) (ii) (b) (i) (c) (iv) (d) (iii)",
       "(a) (iv) (b) (ii) (c) (i) (d) (iii)",
@@ -2263,7 +2263,7 @@
   },
   {
     "q_no": 193,
-    "question": "Match the following\nList-I\n(a) My Telugu Roots : Telangana State demand — A Bhasmasura wish\n(b) Battleground of Telangana\n(c) The fall and rise of Telangana\n(d) Telangana—United Andhra Illusions\nList-II\n(i) Nalamotu Chakravarthy\n(ii) Gautham Pingali\n(iii) Venugopal\n(iv) Kingshuk Nag",
+    "question": "Match the following\nList-I\n(a) My Telugu Roots : Telangana State demand - A Bhasmasura wish\n(b) Battleground of Telangana\n(c) The fall and rise of Telangana\n(d) Telangana-United Andhra Illusions\nList-II\n(i) Nalamotu Chakravarthy\n(ii) Gautham Pingali\n(iii) Venugopal\n(iv) Kingshuk Nag",
     "options": [
       "(1) (iv) (ii) (i) (iii)",
       "(2) (i) (ii) (iii) (iv)",
@@ -2349,10 +2349,10 @@
     "q_no": 200,
     "question": "Which of the following is not correctly matched ?",
     "options": [
-      "(1) Lambadi Hakkula Porata Samithi — Bellaiah Naik",
-      "(2) Gouda Jana Hakkula Porata Samithi — Elkakatte Vijayakumar Goud",
-      "(3) Vaddera Hakkula Porata Samithi — Dubbagatla Narsing Rao",
-      "(4) Chakali Hakkula Porata Samithi — Poosapally Saidulu"
+      "(1) Lambadi Hakkula Porata Samithi - Bellaiah Naik",
+      "(2) Gouda Jana Hakkula Porata Samithi - Elkakatte Vijayakumar Goud",
+      "(3) Vaddera Hakkula Porata Samithi - Dubbagatla Narsing Rao",
+      "(4) Chakali Hakkula Porata Samithi - Poosapally Saidulu"
     ],
     "has_image": false,
     "source_page": 60

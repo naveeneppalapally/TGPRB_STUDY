@@ -6,6 +6,7 @@ import irrigationInIndia from '~/content/data/gates/irrigation-in-india.json'
 import mountainsInIndia from '~/content/data/gates/mountains-in-india.json'
 import damsInIndia from '~/content/data/gates/dams-in-india.json'
 import forestsOfIndia from '~/content/data/gates/forests-of-india.json'
+import constitutionalFrameworkAndPreamble from '~/content/data/gates/constitutional-framework-and-preamble.json'
 
 /**
  * Comprehension gate quiz registry, keyed by NOTE-ID.
@@ -20,6 +21,7 @@ import forestsOfIndia from '~/content/data/gates/forests-of-india.json'
  */
 const GATES: Record<string, unknown> = {
   [(drainageSystem as { note_id: string }).note_id]: drainageSystem,
+  [(constitutionalFrameworkAndPreamble as { note_id: string }).note_id]: constitutionalFrameworkAndPreamble,
   [(unionExecutiveAndLegislature as { note_id: string }).note_id]: unionExecutiveAndLegislature,
   [(telanganaStatehoodMovement as { note_id: string }).note_id]: telanganaStatehoodMovement,
   [(irrigationInIndia as { note_id: string }).note_id]: irrigationInIndia,

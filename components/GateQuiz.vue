@@ -77,7 +77,7 @@
 
         <!-- Question view (one at a time) -->
         <div v-else-if="!submitted">
-          <Transition :name="slideDir" mode="out-in">
+          <Transition :name="slideDir">
             <div :key="currentQ" class="px-5 py-5">
               <!-- Question text -->
               <p class="font-medium text-[14px] leading-[1.7] t-hi mb-4">
@@ -90,7 +90,7 @@
                 <label
                   v-for="(opt, oi) in quiz.questions[currentQ].options"
                   :key="oi"
-                  class="opt"
+                  class="opt cursor-pointer select-none transition-transform duration-45 active:scale-[0.985]"
                   :class="answers[currentQ] === oi ? 'opt-selected' : ''"
                 >
                   <input
@@ -100,15 +100,9 @@
                     v-model="answers[currentQ]"
                     class="sr-only"
                   />
-                  <span
-                    class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 transition-colors duration-150"
-                    :style="answers[currentQ] === oi
-                      ? 'border-color: var(--accent); background-color: var(--accent);'
-                      : 'border-color: var(--line-strong); background-color: transparent;'"
-                  >
-                    <Transition name="radio-dot-spring">
-                      <span v-if="answers[currentQ] === oi" class="w-2 h-2 rounded-full bg-white radio-dot" />
-                    </Transition>
+                  <!-- Radio Circle Indicator -->
+                  <span class="radio-indicator-circle">
+                    <span v-if="answers[currentQ] === oi" class="radio-indicator-dot" />
                   </span>
                   <span class="text-[13px] flex-1" :class="answers[currentQ] === oi ? 't-hi font-medium' : 't-mid'">
                     {{ opt }}
@@ -183,7 +177,7 @@
             <!-- Celebratory Pass Graphic -->
             <div v-if="passed" class="relative inline-flex items-center justify-center mb-3">
               <!-- Expanding Jade Shockwave Ring -->
-              <span class="pass-ring pointer-events-none absolute inset-0 rounded-full" aria-hidden="true" />
+              <span class="pass-ring pass-shockwave pointer-events-none absolute inset-0 rounded-full" aria-hidden="true" />
               <!-- Celebratory Badge Pop Icon -->
               <div class="celebrate-badge relative z-10 grid h-14 w-14 place-items-center rounded-full" style="background: var(--jade); color: #ffffff;">
                 <UIcon name="i-heroicons-check-badge" class="h-8 w-8 text-white" />
@@ -250,12 +244,19 @@
         <p class="text-[12px] t-lo">Comprehension gate not available for this note yet.</p>
       </div>
 
-      <!-- Flashcard Deck (Rendered whenever unlocked via Direct mode, Gate pass, or previous pass) -->
-      <FlashcardDeck
-        v-if="isUnlocked && assistantNoteId"
-        :note-id="assistantNoteId"
-        :unlock-mode="mode"
-      />
+      <!-- Flashcard Deck (ZLS Fractional Row Expansion Wrapper) -->
+      <div
+        class="grid transition-[grid-template-rows,opacity] duration-220 ease-[cubic-bezier(0.16,1,0.3,1)]"
+        :class="isUnlocked && assistantNoteId ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
+      >
+        <div class="min-h-0 overflow-hidden">
+          <FlashcardDeck
+            v-if="isUnlocked && assistantNoteId"
+            :note-id="assistantNoteId"
+            :unlock-mode="mode"
+          />
+        </div>
+      </div>
     </div>
   </ClientOnly>
 </template>
@@ -423,7 +424,7 @@ function retry() {
   border: 1px solid var(--border-subtle);
   background: var(--bg-elevated);
   cursor: pointer;
-  transition: border-color 0.15s ease, background-color 0.15s ease, transform 50ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 45ms cubic-bezier(0, 0, 0.2, 1);
   user-select: none;
 }
 .opt:hover { border-color: var(--border-active); }
@@ -435,12 +436,30 @@ function retry() {
   background: var(--accent-soft);
 }
 
-/* Radio dot 12% spring overshoot */
-.radio-dot-spring-enter-active {
-  animation: radioDotSpring 200ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+/* Radio indicator circle and 12% spring overshoot dot */
+.radio-indicator-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  border: 2px solid var(--line-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: border-color 120ms ease, background-color 120ms ease;
 }
-.radio-dot-spring-leave-active {
-  animation: radioDotCollapse 120ms ease-in forwards;
+
+.opt-selected .radio-indicator-circle {
+  border-color: var(--accent);
+  background-color: var(--accent);
+}
+
+.radio-indicator-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  animation: radioDotSpring 200ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @keyframes radioDotSpring {
@@ -454,23 +473,13 @@ function retry() {
   }
 }
 
-@keyframes radioDotCollapse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
-/* Celebratory Pass Badge Pop (220ms) & Expanding Jade Shockwave Ring */
+/* Celebratory Pass Badge Pop (220ms) and Expanding Jade Shockwave Ring */
 .celebrate-badge {
   animation: badgePop 220ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
-.pass-ring {
+.pass-ring,
+.pass-shockwave {
   border: 2px solid var(--jade);
   animation: passRingExpand 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -503,14 +512,30 @@ function retry() {
   }
 }
 
+/* Hardware-Accelerated Snappy Question Slide */
 .slide-left-enter-active,
 .slide-left-leave-active,
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 140ms cubic-bezier(0.16, 1, 0.3, 1), opacity 120ms ease;
+  will-change: transform, opacity;
 }
-.slide-left-enter-from { opacity: 0; transform: translateX(28px); }
-.slide-left-leave-to   { opacity: 0; transform: translateX(-28px); }
-.slide-right-enter-from { opacity: 0; transform: translateX(-28px); }
-.slide-right-leave-to   { opacity: 0; transform: translateX(28px); }
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translate3d(24px, 0, 0);
+}
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translate3d(-24px, 0, 0);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translate3d(-24px, 0, 0);
+}
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translate3d(24px, 0, 0);
+}
 </style>

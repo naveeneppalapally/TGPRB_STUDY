@@ -93,9 +93,6 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: ['ts-fsrs'],
     },
-    build: {
-      manifest: true,
-    },
   },
 
   experimental: {

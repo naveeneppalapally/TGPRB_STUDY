@@ -27,5 +27,15 @@ if [ $EXIT_CODE -ne 0 ]; then
   exit 1
 fi
 
-echo "pre-push: up to date. Proceeding with push."
+echo "pre-push: verifying topic integrity and data contracts..."
+npm run verify:integrity
+
+INTEGRITY_EXIT=$?
+if [ $INTEGRITY_EXIT -ne 0 ]; then
+  echo ""
+  echo "pre-push: topic integrity verification failed! Fix defective gate/flashcards before pushing."
+  exit 1
+fi
+
+echo "pre-push: up to date and integrity verified. Proceeding with push."
 exit 0

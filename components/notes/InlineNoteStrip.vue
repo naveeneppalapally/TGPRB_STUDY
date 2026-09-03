@@ -59,70 +59,77 @@ function onClick() {
 </script>
 
 <template>
+  <!-- CSS Grid Fractional Row Expansion (CLS = 0 on Main Canvas) -->
   <div
-    v-if="sectionNotes.length > 0"
-    role="button"
-    tabindex="0"
-    :aria-label="`View ${noteCount} note${noteCount !== 1 ? 's' : ''} for ${sectionLabel}`"
-    class="group mb-4 flex items-center justify-between gap-2.5 rounded-lg border b-line bg-elev px-3 py-2 text-xs transition-all hover:border-saffron-500/40 hover:bg-saffron-500/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 cursor-pointer select-none"
-    @click="onClick"
-    @keydown.enter="onClick"
-    @keydown.space.prevent="onClick"
+    class="grid transition-[grid-template-rows,opacity] duration-180 ease-[cubic-bezier(0.16,1,0.3,1)]"
+    :class="sectionNotes.length > 0 ? 'grid-rows-[1fr] opacity-100 mb-4' : 'grid-rows-[0fr] opacity-0 mb-0 pointer-events-none'"
   >
-    <!-- Left: Icon + Tag Chips + Snippet -->
-    <div class="flex min-w-0 flex-1 items-center gap-2">
-      <!-- Pencil Icon -->
-      <UIcon
-        name="i-heroicons-pencil-square"
-        class="h-3.5 w-3.5 shrink-0 text-saffron-600 dark:text-saffron-400 group-hover:scale-110 transition-transform"
-      />
+    <div class="min-h-0 overflow-hidden">
+      <div
+        role="button"
+        tabindex="0"
+        :aria-label="`View ${noteCount} note${noteCount !== 1 ? 's' : ''} for ${sectionLabel}`"
+        class="group flex items-center justify-between gap-2.5 rounded-lg border b-line bg-elev px-3 py-2 text-xs transition-colors hover:border-saffron-500/40 hover:bg-saffron-500/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-saffron-500 cursor-pointer select-none active:scale-[0.99]"
+        @click="onClick"
+        @keydown.enter="onClick"
+        @keydown.space.prevent="onClick"
+      >
+        <!-- Left: Icon + Tag Chips + Snippet -->
+        <div class="flex min-w-0 flex-1 items-center gap-2">
+          <!-- Pencil Icon -->
+          <UIcon
+            name="i-heroicons-pencil-square"
+            class="h-3.5 w-3.5 shrink-0 text-saffron-600 dark:text-saffron-400 group-hover:scale-110 transition-transform"
+          />
 
-      <!-- Status Tag Chips -->
-      <div v-if="hasImportant || hasDoubt" class="flex shrink-0 items-center gap-1.5">
-        <span
-          v-if="hasImportant"
-          class="chip chip-saffron text-[10px] py-0 px-1.5 leading-4 gap-1"
-          title="Important note"
-        >
-          <UIcon name="i-heroicons-star-solid" class="h-2.5 w-2.5 text-saffron-500" />
-          <span>Imp</span>
-        </span>
-        <span
-          v-if="hasDoubt"
-          class="chip chip-red text-[10px] py-0 px-1.5 leading-4 gap-1"
-          title="Marked doubt"
-        >
-          <UIcon name="i-heroicons-question-mark-circle-solid" class="h-2.5 w-2.5 text-red-500" />
-          <span>Doubt</span>
-        </span>
+          <!-- Status Tag Chips -->
+          <div v-if="hasImportant || hasDoubt" class="flex shrink-0 items-center gap-1.5">
+            <span
+              v-if="hasImportant"
+              class="chip chip-saffron text-[10px] py-0 px-1.5 leading-4 gap-1"
+              title="Important note"
+            >
+              <UIcon name="i-heroicons-star-solid" class="h-2.5 w-2.5 text-saffron-500" />
+              <span>Imp</span>
+            </span>
+            <span
+              v-if="hasDoubt"
+              class="chip chip-red text-[10px] py-0 px-1.5 leading-4 gap-1"
+              title="Marked doubt"
+            >
+              <UIcon name="i-heroicons-question-mark-circle-solid" class="h-2.5 w-2.5 text-red-500" />
+              <span>Doubt</span>
+            </span>
+          </div>
+
+          <!-- Anchor Quote Preview (Optional inline cue if present) -->
+          <span
+            v-if="latestNote?.anchor_text && latestNote?.body"
+            class="hidden sm:inline-block shrink-0 max-w-[140px] truncate text-[11px] font-normal italic text-saffron-600/80 dark:text-saffron-400/80 pl-1 border-l-2 border-saffron-500/40"
+          >
+            "{{ latestNote.anchor_text }}"
+          </span>
+
+          <!-- Note Body Snippet -->
+          <span class="min-w-0 flex-1 truncate font-normal t-hi group-hover:text-saffron-600 dark:group-hover:text-saffron-400 transition-colors">
+            {{ snippet }}
+          </span>
+        </div>
+
+        <!-- Right: Count Badge & Expand Chevron -->
+        <div class="flex shrink-0 items-center gap-1.5 pl-1">
+          <span
+            v-if="noteCount > 1"
+            class="chip text-[10px] py-0 px-1.5 leading-4 font-mono font-medium t-mid"
+          >
+            {{ noteCount }} notes
+          </span>
+          <UIcon
+            name="i-heroicons-chevron-right"
+            class="h-3.5 w-3.5 t-lo transition-transform group-hover:translate-x-0.5 group-hover:text-saffron-500"
+          />
+        </div>
       </div>
-
-      <!-- Anchor Quote Preview (Optional inline cue if present) -->
-      <span
-        v-if="latestNote?.anchor_text && latestNote?.body"
-        class="hidden sm:inline-block shrink-0 max-w-[140px] truncate text-[11px] font-normal italic text-saffron-600/80 dark:text-saffron-400/80 pl-1 border-l-2 border-saffron-500/40"
-      >
-        "{{ latestNote.anchor_text }}"
-      </span>
-
-      <!-- Note Body Snippet -->
-      <span class="min-w-0 flex-1 truncate font-normal t-hi group-hover:text-saffron-600 dark:group-hover:text-saffron-400 transition-colors">
-        {{ snippet }}
-      </span>
-    </div>
-
-    <!-- Right: Count Badge & Expand Chevron -->
-    <div class="flex shrink-0 items-center gap-1.5 pl-1">
-      <span
-        v-if="noteCount > 1"
-        class="chip text-[10px] py-0 px-1.5 leading-4 font-mono font-medium t-mid"
-      >
-        {{ noteCount }} notes
-      </span>
-      <UIcon
-        name="i-heroicons-chevron-right"
-        class="h-3.5 w-3.5 t-lo transition-transform group-hover:translate-x-0.5 group-hover:text-saffron-500"
-      />
     </div>
   </div>
 </template>

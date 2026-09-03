@@ -1164,35 +1164,11 @@
       </article>
 
       <!-- ══ Sticky ToC ══════════════════════════════════════════════════ -->
-      <aside class="hidden w-52 shrink-0 xl:block">
-        <div class="sticky top-20">
-          <p class="eyebrow mb-3">On this page</p>
-          <nav ref="tocNavRef" class="relative space-y-0.5">
-            <div
-              class="toc-pill pointer-events-none absolute start-0 w-full rounded-md"
-              :style="tocPillStyle"
-              aria-hidden="true"
-            />
-            <a
-              v-for="(section, i) in sections"
-              :key="section.id"
-              :ref="(el) => setTocItemRef(section.id, el)"
-              :href="`#${section.id}`"
-              class="group relative z-10 flex items-baseline gap-2.5 rounded-md px-2 py-1.5 text-body-xs bg-transparent transition-colors"
-              :class="activeSection === section.id ? 't-hi font-semibold' : 't-lo hover:t-mid'"
-              @click.prevent="scrollTo(section.id)"
-            >
-              <span class="num font-mono text-[10px] transition-colors" :class="activeSection === section.id ? 'accent' : 't-lo'">{{ String(i + 1).padStart(2, '0') }}</span>
-              <span class="transition-colors">{{ section.label }}</span>
-            </a>
-          </nav>
-
-          <div class="mt-6 border-t b-line pt-4">
-            <p class="eyebrow mb-2">Weight in paper</p>
-            <p class="text-body-xs leading-relaxed t-lo">2-4 questions per paper, every year since 2015.</p>
-          </div>
-        </div>
-      </aside>
+      <TableOfContents
+        v-model="activeSection"
+        :sections="sections"
+        weight-text="2-4 questions per paper, every year since 2015."
+      />
     </div>
     <PersonalNotesDrawer
       ref="notesDrawerRef"
@@ -1247,6 +1223,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, reactive, ref, watch, nextTick } from 'vue'
+import TableOfContents from '@/components/TableOfContents.vue'
 import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
 import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
 import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
@@ -1270,47 +1247,6 @@ const mobileTocOpen = ref(false)
 const activeSection = ref('visual')
 const readProgress = ref(0)
 
-const tocNavRef = ref<HTMLElement | null>(null)
-const tocItemRefs = new Map<string, HTMLElement>()
-const pillTop = ref(0)
-const pillHeight = ref(0)
-const hasPill = ref(false)
-let tocResizeObserver: ResizeObserver | null = null
-
-function setTocItemRef(id: string, el: any) {
-  if (el) {
-    const domEl = el.$el || el
-    if (domEl instanceof HTMLElement) {
-      tocItemRefs.set(id, domEl)
-    }
-  } else {
-    tocItemRefs.delete(id)
-  }
-}
-
-function updatePillPosition() {
-  const activeEl = tocItemRefs.get(activeSection.value)
-  if (activeEl && tocNavRef.value) {
-    pillTop.value = activeEl.offsetTop
-    pillHeight.value = activeEl.offsetHeight
-    hasPill.value = true
-  } else {
-    hasPill.value = false
-  }
-}
-
-const tocPillStyle = computed(() => ({
-  transform: `translateY(${pillTop.value}px)`,
-  height: `${pillHeight.value}px`,
-  opacity: hasPill.value ? 1 : 0,
-}))
-
-watch(activeSection, () => {
-  nextTick(() => {
-    updatePillPosition()
-  })
-})
-
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
@@ -1323,24 +1259,6 @@ function onScroll() {
   const h = document.documentElement
   const max = h.scrollHeight - h.clientHeight
   readProgress.value = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0
-
-  // Bottom-scroll detector for #gate & #current-affairs (DEF-PCUT-14)
-  if (window.innerHeight + window.scrollY >= h.scrollHeight - 50) {
-    activeSection.value = sections[sections.length - 1].id
-    return
-  }
-
-  // Robust getBoundingClientRect top evaluation (DEF-PCUT-13)
-  for (let i = sections.length - 1; i >= 0; i--) {
-    const el = document.getElementById(sections[i].id)
-    if (el) {
-      const rect = el.getBoundingClientRect()
-      if (rect.top <= 120) {
-        activeSection.value = sections[i].id
-        break
-      }
-    }
-  }
 }
 
 onMounted(() => {
@@ -1712,18 +1630,3 @@ function optionClass(q: PYQItem, oi: number) {
   return 'opacity-60'
 }
 </script>
-
-<style scoped>
-.toc-pill {
-  background-color: var(--accent-soft);
-  border: 1px solid var(--accent-line);
-  transition: transform 190ms cubic-bezier(0.2, 0, 0, 1), height 190ms cubic-bezier(0.2, 0, 0, 1), opacity 150ms ease;
-  will-change: transform, height;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .toc-pill {
-    transition: none !important;
-  }
-}
-</style>

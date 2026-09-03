@@ -1,0 +1,197 @@
+{
+  "note_id": "NOTE-POL-CONST-FRAME",
+  "topic_id": "POL-CONST-FRAME",
+  "cards": [
+    {
+      "id": "FC-POL-CFP-01",
+      "front": "Which Act made the Governor of Bengal the Governor-General of Bengal, and who was the first to hold this post?",
+      "back": "Regulating Act of 1773. Lord Warren Hastings was the first Governor-General of Bengal.",
+      "key_fact": "Regulating Act 1773 created Governor-General of Bengal (Warren Hastings).",
+      "tags": [
+        "Historical Acts",
+        "1773",
+        "Company Rule"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-02",
+      "front": "Under which British Act was the Supreme Court established at Fort William in Calcutta?",
+      "back": "Regulating Act of 1773 (established in 1774, comprising 1 Chief Justice and 3 other Judges). Sir Elijah Impey was the first Chief Justice.",
+      "key_fact": "Supreme Court at Calcutta established in 1774 under Regulating Act 1773.",
+      "tags": [
+        "Historical Acts",
+        "Judiciary",
+        "1773"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-03",
+      "front": "Which Act established the system of Double Government (Court of Directors for commercial, Board of Control for political affairs)?",
+      "back": "Pitt's India Act of 1784.",
+      "key_fact": "Pitt's India Act 1784 established Double Government with Board of Control.",
+      "tags": [
+        "Historical Acts",
+        "1784",
+        "Company Rule"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-04",
+      "front": "Which Act completely ended the commercial monopoly of the East India Company, including tea and trade with China?",
+      "back": "Charter Act of 1833. It made the Company a purely administrative body.",
+      "key_fact": "Charter Act 1833 ended all commercial monopolies of the East India Company.",
+      "tags": [
+        "Historical Acts",
+        "1833",
+        "Charter Acts"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-05",
+      "front": "Who was designated as the first Governor-General of India under the Charter Act of 1833?",
+      "back": "Lord William Bentinck was the first Governor-General of India.",
+      "key_fact": "Charter Act 1833 created Governor-General of India (Lord William Bentinck).",
+      "tags": [
+        "Historical Acts",
+        "1833",
+        "Governance"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-06",
+      "front": "Which Act introduced an open competition system for the selection and recruitment of civil servants (Macaulay Committee 1854)?",
+      "back": "Charter Act of 1853.",
+      "key_fact": "Charter Act 1853 introduced open civil service competition (Macaulay Committee).",
+      "tags": [
+        "Historical Acts",
+        "1853",
+        "Civil Services"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-07",
+      "front": "Which Act is known as the Act for the Good Government of India, and what major title was created by it?",
+      "back": "Government of India Act 1858. It abolished the EIC and created the Viceroy of India (first Viceroy was Lord Canning).",
+      "key_fact": "GoI Act 1858 transferred power to the British Crown and created the office of Viceroy.",
+      "tags": [
+        "Historical Acts",
+        "1858",
+        "Crown Rule"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-08",
+      "front": "Which Act introduced communal representation (separate electorates) for Muslims for the first time?",
+      "back": "Indian Councils Act of 1909 (Morley-Minto Reforms). Lord Minto came to be known as the Father of Communal Electorate.",
+      "key_fact": "1909 Morley-Minto Reforms introduced separate electorates for Muslims.",
+      "tags": [
+        "Historical Acts",
+        "1909",
+        "Elections"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-09",
+      "front": "Which Act introduced Dyarchy (dual governance: Transferred and Reserved subjects) at the provincial level?",
+      "back": "Government of India Act 1919 (Montagu-Chelmsford Reforms).",
+      "key_fact": "GoI Act 1919 introduced Dyarchy in provinces and bicameralism at the centre.",
+      "tags": [
+        "Historical Acts",
+        "1919",
+        "Dyarchy"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-10",
+      "front": "Which Act abolished provincial Dyarchy and introduced Provincial Autonomy, while proposing an All-India Federation?",
+      "back": "Government of India Act 1935.",
+      "key_fact": "GoI Act 1935 introduced Provincial Autonomy and divided powers into 3 lists.",
+      "tags": [
+        "Historical Acts",
+        "1935",
+        "Federalism"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-11",
+      "front": "Under the Government of India Act 1935, where were the residuary legislative powers vested?",
+      "back": "In the Governor-General (Viceroy). Note: Under the Indian Constitution (Art 248), residuary powers are vested in Parliament.",
+      "key_fact": "Residuary powers in 1935 were with the Viceroy; in modern India they belong to Parliament.",
+      "tags": [
+        "Historical Acts",
+        "1935",
+        "Traps"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-12",
+      "front": "Who was elected as the temporary President of the Constituent Assembly in its first meeting on December 9, 1946?",
+      "back": "Dr. Sachchidananda Sinha, following the French practice of electing the oldest member.",
+      "key_fact": "Dr. Sachchidananda Sinha was temporary President on 9 Dec 1946.",
+      "tags": [
+        "Constituent Assembly",
+        "Leadership"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-13",
+      "front": "Who were elected as the permanent President and Vice-Presidents of the Constituent Assembly on December 11, 1946?",
+      "back": "Dr. Rajendra Prasad was elected President. H.C. Mukherjee and V.T. Krishnamachari were elected Vice-Presidents.",
+      "key_fact": "Dr. Rajendra Prasad was permanent President; Assembly had two Vice-Presidents.",
+      "tags": [
+        "Constituent Assembly",
+        "Leadership"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-14",
+      "front": "Who was appointed as the Constitutional Advisor (Legal Advisor) to the Constituent Assembly?",
+      "back": "Sir B.N. Rau.",
+      "key_fact": "Sir B.N. Rau prepared the initial draft as Constitutional Advisor.",
+      "tags": [
+        "Constituent Assembly",
+        "Key Figures"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-15",
+      "front": "Who was the Chairman of the Drafting Committee, and how many total members were in the committee?",
+      "back": "Dr. B.R. Ambedkar was Chairman. The committee had a total of 7 members (set up 29 August 1947).",
+      "key_fact": "Drafting Committee had 7 members chaired by Dr. B.R. Ambedkar.",
+      "tags": [
+        "Drafting Committee",
+        "Key Figures"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-16",
+      "front": "On what date was the Constitution adopted and enacted, and when did it come into full force?",
+      "back": "Adopted: 26 November 1949 (celebrated as Constitution Day). Full commencement: 26 January 1950 (Republic Day).",
+      "key_fact": "Adopted 26 Nov 1949; commenced 26 Jan 1950 to commemorate Purna Swaraj Day (1930).",
+      "tags": [
+        "Constitution Dates",
+        "Timeline"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-17",
+      "front": "What is the exact opening sequence of descriptors in the Preamble of the Indian Constitution?",
+      "back": "Sovereign, Socialist, Secular, Democratic, Republic.",
+      "key_fact": "Preamble keyword order: Sovereign, Socialist, Secular, Democratic, Republic.",
+      "tags": [
+        "Preamble",
+        "Keywords"
+      ]
+    },
+    {
+      "id": "FC-POL-CFP-18",
+      "front": "In which landmark case did the Supreme Court hold that the Preamble is an integral part of the Constitution and can be amended under Article 368 without altering the Basic Structure?",
+      "back": "Kesavananda Bharati v. State of Kerala (1973). Overruled the 1960 Berubari Union case.",
+      "key_fact": "Kesavananda Bharati (1973) established Preamble is part of Constitution and subject to Basic Structure.",
+      "tags": [
+        "Judicial Precedents",
+        "Preamble"
+      ]
+    }
+  ]
+}

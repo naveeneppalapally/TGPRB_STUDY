@@ -14,10 +14,10 @@
   "options": [
     "(a) iscorrect but (b) and (c) are wrong",
     "(a)and (c) are correct but (b) is wrong",
-    "— All(a), (b), (c) are correct",
+    "- All(a), (b), (c) are correct",
     "(a) SOGSO SPA (b) HOakv (c) HOGHSD Sra",
     "(a) KoBcho (c) SOGHD SD (b) SOGLSE sveso",
-    "— (b) Saab (c) HOGND SN (a) SOSA srevo",
+    "- (b) Saab (c) HOGND SN (a) SOSA srevo",
     "(a), (b), (c) eX SODSD"
   ],
   "is_duplicate": false,

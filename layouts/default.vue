@@ -204,7 +204,7 @@
 
     <!-- ══ Main Content Area ═════════════════════════════════════════════ -->
     <div
-      class="flex min-h-screen flex-col"
+      class="content-shell flex min-h-screen flex-col"
       :class="[sidebarOpen ? 'lg:ps-64' : 'lg:ps-0']"
     >
       <!-- Topbar Header Navigation -->
@@ -222,24 +222,19 @@
             @click="open = !open"
           />
 
-          <!-- Desktop Sidebar Expand Toggle & Logo (Visible ONLY when sidebar is collapsed) -->
-          <template v-if="!sidebarOpen">
-            <UTooltip text="Open sidebar (⌘[)" :popper="{ placement: 'bottom-start' }">
+          <!-- ZLS Bounded Expand Button (Pre-Reserved 36px Container) -->
+          <div class="hidden lg:flex w-9 h-9 items-center justify-center shrink-0">
+            <UTooltip v-if="!sidebarOpen" text="Open sidebar (⌘[)" :popper="{ placement: 'bottom-start' }">
               <button
                 type="button"
-                class="hidden lg:flex h-9 w-9 items-center justify-center rounded-lg border b-line bg-sub text-mid hover:t-hi hover:b-strong hover:bg-elev transition-colors active:scale-95"
+                class="flex h-9 w-9 items-center justify-center rounded-lg border b-line bg-sub text-mid hover:t-hi hover:b-strong hover:bg-elev transition-colors active:scale-95"
                 aria-label="Open sidebar"
                 @click="toggleSidebar"
               >
                 <SidebarToggleIcon size="sm" />
               </button>
             </UTooltip>
-
-            <NuxtLink to="/" class="hidden lg:flex items-center gap-2 font-display text-[15px] font-bold tracking-tight t-hi hover:opacity-90 transition-opacity">
-              <StudyOsIcon size="xs" />
-              <span>Study<span class="accent">OS</span></span>
-            </NuxtLink>
-          </template>
+          </div>
 
           <span class="eyebrow hidden sm:block truncate">
             TGPRB · Constable & SI
@@ -343,13 +338,15 @@
 
     <!-- ══ Command Palette ════════════════════════════════════════════════ -->
     <UModal v-model="paletteOpen" :ui="{ padding: 'p-0 sm:p-0' }">
-      <UCommandPalette
-        :groups="paletteGroups"
-        placeholder="Search notes, subjects, practice questions, actions…"
-        :autoselect="true"
-        @update:model-value="onCommand"
-        @close="paletteOpen = false"
-      />
+      <div class="command-palette-container">
+        <UCommandPalette
+          :groups="paletteGroups"
+          placeholder="Search notes, subjects, practice questions, actions…"
+          :autoselect="true"
+          @update:model-value="onCommand"
+          @close="paletteOpen = false"
+        />
+      </div>
     </UModal>
 
     <UNotifications />
@@ -499,9 +496,9 @@ const highYieldNotes = [
 ]
 
 const subjects = [
-  { name: "Geography",       icon: "i-heroicons-map",              to: "/notes/geography/drainage-system-of-india" },
-  { name: "Polity",          icon: "i-heroicons-building-library", to: "/notes/polity/constitutional-framework-and-preamble" },
-  { name: "Telangana",       icon: "i-heroicons-map-pin",          to: "/notes/telangana/telangana-statehood-movement" },
+  { name: "Geography",       icon: "i-heroicons-map",              to: "/notes/geography" },
+  { name: "Polity",          icon: "i-heroicons-building-library", to: "/notes/polity" },
+  { name: "Telangana",       icon: "i-heroicons-map-pin",          to: "/notes/telangana" },
   { name: "History",         icon: "i-heroicons-clock" },
   { name: "Science",         icon: "i-heroicons-beaker" },
   { name: "Economy",         icon: "i-heroicons-banknotes" },
@@ -579,9 +576,35 @@ defineShortcuts({
   transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@media (min-width: 1024px) {
+  .content-shell {
+    contain: layout;
+  }
+}
+
+/* -- Raycast/Linear-Calibrated ⌘K Scale-Spring Physics ---------------- */
+.command-palette-container {
+  animation: modalScaleSpring 160ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes modalScaleSpring {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .sidebar-shutter {
     transition: none !important;
+  }
+  .command-palette-container {
+    animation: none !important;
   }
 }
 </style>

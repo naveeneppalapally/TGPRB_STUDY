@@ -101,3 +101,58 @@ Integrity mode: development
 - [ ] `npm run prebuild` completes with 0 em-dashes detected.
 - [ ] Test suites pass cleanly (`npm test` and `scripts/test-theme-preset-stress.ts`).
 - [ ] `npx nuxi build` completes with exit code 0.
+
+## 2026-09-03T03:21:47Z
+
+Implement the Master Design Engineering Blueprint across TSLPRB StudyOS to elevate the platform to top-tier interface craft (Linear, Raycast, Stripe Docs, Vercel Geist), achieving zero layout shift (CLS = 0.0000), instant tactile contact (45ms), quartic deceleration, and continuous GPU-composited gliders with zero external animation libraries.
+
+Working directory: `/home/naveen/Documents/TGPRB`  
+Integrity mode: development
+
+## Requirements
+
+### R1. Hardware-Composited Motion Tokens & Universal Reduced-Motion Safety
+- Establish `assets/css/tokens-motion.css` defining the standardized timing budgets (`--motion-dur-contact: 45ms`, `--motion-dur-fast: 120ms`, `--motion-dur-glide: 140ms`, `--motion-dur-primary: 160ms`, `--motion-dur-card-flip: 190ms`, `--motion-dur-settle: 100ms`, `--motion-dur-odometer: 350ms`) and asymmetric quartic easing curves (`cubic-bezier(0.16, 1, 0.3, 1)`).
+- Enforce strict universal `@media (prefers-reduced-motion: reduce)` overrides across all components.
+- Integrate tokens into `assets/css/main.css`.
+
+### R2. Zero-Reflow App Shell & Layout Containment
+- In `layouts/default.vue`, eliminate document-wide CPU reflow caused by `transition-[padding]`.
+- Convert the desktop layout shell into a pure CSS Grid shutter (`grid-template-columns: 256px 1fr` transitioning to `0px 1fr` via quartic easing) with CSS layout containment (`contain: layout`).
+- Ensure sidebar child content retains a fixed width (`256px`) during track collapse to eliminate text line re-wrapping during animations.
+
+### R3. Tactile 3D Flashcard Deck with Keyed Isolation & Pre-Reserved Dock
+- In `components/FlashcardReview.vue`, implement 190ms 3D flip rotation (`perspective: 1200px`, `transform-style: preserve-3d`) with instant 45ms contact compression (`scale(0.985)`).
+- Implement multi-face CSS Grid area stacking (`grid-area: 1 / 1`) to eliminate geometry changes between question and answer states.
+- Eliminate answer leaks on rapid keyboard navigation by keying card instances and decoupling flip reset from card advance.
+- Pre-reserve the FSRS rating dock using CSS Grid fractional track expansion (`grid-template-rows: 0fr -> 1fr`) to ensure CLS = 0.0000 when revealing rating buttons.
+
+### R4. Tactile Comprehension Gate & Spring-Damped Selection
+- In `components/GateQuiz.vue`, implement 45ms `:active` contact depression on quiz options.
+- Add spring-damped radio dot indicator (`cubic-bezier(0.34, 1.56, 0.64, 1)` with 12% spring overshoot).
+- Add celebratory pass shockwave ring (`pass-shockwave`) on successful 3/5 gate unlock.
+
+### R5. Continuous Magnetic TOC Glider & Delta-Resistant Scrollspy
+- In `components/TableOfContents.vue` (and note page table-of-contents surfaces), replace individual static highlights with a single GPU-composited magnetic indicator pill that glides continuously on `translate3d(0, y, 0)`.
+- Implement a dual-zone `IntersectionObserver` with an internal state `Map` to prevent W3C delta-array loss and indicator jumping during rapid scroll-up.
+
+### R6. Tabular Odometer Reels for Study Counters
+- Implement `components/TactileOdometer.vue` supporting rolling digit reels (`tabular-nums`) with staggered 35ms quartic rolling delays for cards due, reviewed count, and streak metrics.
+
+## Acceptance Criteria
+
+### Interaction & Animation Quality
+- [ ] Active press feedback registers in <= 45ms across flashcards, quiz options, and action buttons.
+- [ ] No layout shifts occur on flashcard flip or rating dock reveal (CLS = 0.0000).
+- [ ] Rapid keyboard card advance (repeated Space / 1-4) does not leak back-face answers mid-transition.
+- [ ] Desktop sidebar collapse produces zero CPU reflows / padding recalculations on the document canvas.
+- [ ] Table of contents magnetic pill glides smoothly without jitter during both down and up scrolling.
+- [ ] With `prefers-reduced-motion: reduce` enabled, all flips, glides, and reels resolve instantly without motion.
+
+### Architecture & Theme Invariants
+- [ ] Zero external animation libraries added (no Framer Motion, no GSAP; pure modern CSS + Vue 3 transitions).
+- [ ] Strict Zero Em-Dash Rule: `npm run prebuild` completes with 0 em-dashes found.
+- [ ] All 3 theme presets (Classic, Botanical Sage, Warm Notebook) render cleanly in both Light and Dark modes.
+- [ ] All existing automated tests pass (`npm test`, `scripts/test-theme-preset-stress.ts`, and `scripts/test-challenger-pol-ui.ts`).
+- [ ] Production build (`npx nuxi build`) succeeds with exit code 0.
+

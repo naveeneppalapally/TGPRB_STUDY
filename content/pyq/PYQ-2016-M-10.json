@@ -10,12 +10,12 @@
   "year": 2016,
   "stage": "Mains",
   "question_number": 10,
-  "question_text": "From the following pairs of words, select the one which is synonymous :\n————————————————————————————————————————",
+  "question_text": "From the following pairs of words, select the one which is synonymous :\n----------------------------------------",
   "options": [
-    "Colloquial — grammatical",
-    "Excess — surplus",
-    "Fair — strong",
-    "Alert — inactive"
+    "Colloquial - grammatical",
+    "Excess - surplus",
+    "Fair - strong",
+    "Alert - inactive"
   ],
   "is_duplicate": true,
   "duplicate_of": "PYQ-2015-P-10",

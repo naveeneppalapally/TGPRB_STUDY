@@ -119,6 +119,14 @@ The forensic audit (`docs/forensic-paper-setting-evolution-audit-2026-08-15.md`)
 - **Synthetic multi-statement/matching questions must be labelled as "TGPSC-style advanced practice"** - never present them as reflecting the confirmed TGPRB format. The verified TGPRB format (2022-2023) is 92-93.5% direct factual MCQs. Multi-statement drills are supplementary hardening, not the primary question type.
 - Current affairs are a separate content type, never edited into a note's markdown file.
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
+- **Mandatory Topic Delivery Integrity Gate (Zero Half-Baked Notes)**:
+  A note page is NEVER complete just because its `.vue` file was authored. Every topic note page MUST satisfy the full contract:
+  1. `content/data/gates/<topic>.json` with at least 5 factual MCQs, registered in `server/api/gate/[noteId].get.ts`.
+  2. `content/data/flashcards/<subject>/<topic>.json` with at least 10 atomic flashcards, with `note_id` property, registered in `server/api/flashcards/[noteId].get.ts`.
+  3. Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching the registered `note-id`.
+  4. Both 'gate' and 'current-affairs' registered in the TOC `sections` array.
+  5. `npm run verify:integrity` MUST pass with exit code 0 before any note task is considered done.
+- **Subject Banks navigation invariant**: All subject links in `layouts/default.vue` (`const subjects`) and `pages/index.vue` (`openSubject`) must route to Subject Hubs (`/notes/<subject>`), never directly bypassing to an individual note topic.
 
 ## Fact verification - never assume, always cite the data year
 

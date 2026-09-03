@@ -75,20 +75,12 @@
               <p class="text-[15px] font-medium t-hi">Base text</p>
               <p class="mt-0.5 text-[13px] t-lo">Paragraphs, lists, and standard interface text.</p>
             </div>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1 self-start sm:self-auto">
-              <button
-                v-for="opt in sizeOptions"
-                :key="'base'+opt.value"
-                type="button"
-                class="rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors"
-                :class="scaleBase === opt.value
-                  ? 'bg-elev shadow-sm t-hi border b-line'
-                  : 't-lo hover:t-mid'"
-                @click="setScale('base', opt.value)"
-              >
-                {{ opt.label }}
-              </button>
-            </div>
+            <SegmentedControl
+              :options="sizeOptions"
+              :model-value="scaleBase"
+              class="self-start sm:self-auto"
+              @update:model-value="setScale('base', $event)"
+            />
           </div>
 
           <!-- Headings -->
@@ -97,20 +89,12 @@
               <p class="text-[15px] font-medium t-hi">Headings</p>
               <p class="mt-0.5 text-[13px] t-lo">Main page titles and top-level sections (H1, H2).</p>
             </div>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1 self-start sm:self-auto">
-              <button
-                v-for="opt in sizeOptions"
-                :key="'head'+opt.value"
-                type="button"
-                class="rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors"
-                :class="scaleHeading === opt.value
-                  ? 'bg-elev shadow-sm t-hi border b-line'
-                  : 't-lo hover:t-mid'"
-                @click="setScale('heading', opt.value)"
-              >
-                {{ opt.label }}
-              </button>
-            </div>
+            <SegmentedControl
+              :options="sizeOptions"
+              :model-value="scaleHeading"
+              class="self-start sm:self-auto"
+              @update:model-value="setScale('heading', $event)"
+            />
           </div>
 
           <!-- Subheadings -->
@@ -119,20 +103,12 @@
               <p class="text-[15px] font-medium t-hi">Subheadings</p>
               <p class="mt-0.5 text-[13px] t-lo">Deep dive titles and subsection headers (H3, H4).</p>
             </div>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1 self-start sm:self-auto">
-              <button
-                v-for="opt in sizeOptions"
-                :key="'sub'+opt.value"
-                type="button"
-                class="rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors"
-                :class="scaleSubheading === opt.value
-                  ? 'bg-elev shadow-sm t-hi border b-line'
-                  : 't-lo hover:t-mid'"
-                @click="setScale('subheading', opt.value)"
-              >
-                {{ opt.label }}
-              </button>
-            </div>
+            <SegmentedControl
+              :options="sizeOptions"
+              :model-value="scaleSubheading"
+              class="self-start sm:self-auto"
+              @update:model-value="setScale('subheading', $event)"
+            />
           </div>
           
         </div>
@@ -204,24 +180,11 @@
             <p class="mt-0.5 text-[13px] t-lo">Switch between light and dark themes.</p>
           </div>
           <ClientOnly>
-            <div class="flex shrink-0 items-center gap-1 rounded-lg border b-line bg-sub p-1">
-              <button
-                v-for="mode in ['light', 'dark']"
-                :key="mode"
-                type="button"
-                class="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-[13px] font-medium transition-colors"
-                :class="colorMode.value === mode
-                  ? 'bg-elev shadow-sm t-hi border b-line'
-                  : 't-lo hover:t-mid'"
-                @click="colorMode.preference = mode"
-              >
-                <UIcon
-                  :name="mode === 'light' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
-                  class="h-3.5 w-3.5"
-                />
-                {{ mode.charAt(0).toUpperCase() + mode.slice(1) }}
-              </button>
-            </div>
+            <SegmentedControl
+              :options="colorModeOptions"
+              :model-value="colorMode.value"
+              @update:model-value="colorMode.preference = $event"
+            />
           </ClientOnly>
         </div>
 
@@ -304,7 +267,7 @@
             </div>
 
             <!-- Live Theme Preview -->
-            <div class="mt-6 rounded-xl border b-line bg-base p-4 transition-all duration-200">
+            <div class="mt-6 rounded-xl border b-line bg-base p-4 transition-all duration-200 contain-layout-paint min-h-[220px]">
               <div class="mb-3 flex items-center justify-between flex-wrap gap-2">
                 <div class="flex items-center gap-2">
                   <span class="text-[11px] uppercase tracking-widest t-lo font-mono">Live Theme Preview</span>
@@ -409,6 +372,7 @@
 <script setup lang="ts">
 import { useAuth } from '@/composables/useAuth'
 import { useThemePreset } from '@/composables/useThemePreset'
+import SegmentedControl from '@/components/ui/SegmentedControl.vue'
 
 useHead({ title: 'Settings - StudyOS' })
 
@@ -418,6 +382,11 @@ const colorMode = useColorMode()
 const { user, isLoggedIn, userEmail, displayName, loading: authLoading, signOut } = useAuth()
 const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
 const { preset, isNotebook, isForest, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
+
+const colorModeOptions = [
+  { label: 'Light', value: 'light', icon: 'i-heroicons-sun' },
+  { label: 'Dark', value: 'dark', icon: 'i-heroicons-moon' },
+]
 
 async function handleSignOut() {
   await signOut()

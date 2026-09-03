@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-POL-CONST-FRAME",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-POL-CFP-01",
+      "question": "Which British Act designated the Governor of Bengal as the 'Governor-General of Bengal' and established the Supreme Court at Calcutta?",
+      "options": [
+        "Regulating Act of 1773",
+        "Pitt's India Act of 1784",
+        "Charter Act of 1833",
+        "Government of India Act 1858"
+      ],
+      "correct_answer": 0,
+      "explanation": "The Regulating Act of 1773 created the office of Governor-General of Bengal (Lord Warren Hastings) and established the Supreme Court at Calcutta in 1774 with Sir Elijah Impey as Chief Justice."
+    },
+    {
+      "id": "GATE-POL-CFP-02",
+      "question": "Who was the first person to propose the idea of a Constituent Assembly for India in 1934?",
+      "options": [
+        "Mahatma Gandhi",
+        "M.N. Roy",
+        "Jawaharlal Nehru",
+        "Dr. B.R. Ambedkar"
+      ],
+      "correct_answer": 1,
+      "explanation": "M.N. Roy, a pioneer of the communist movement in India, first put forward the idea of a Constituent Assembly in 1934. The Indian National Congress officially demanded it in 1935."
+    },
+    {
+      "id": "GATE-POL-CFP-03",
+      "question": "The historic 'Objectives Resolution', which formed the basis of the Preamble, was introduced in the Constituent Assembly on December 13, 1946 by whom?",
+      "options": [
+        "Dr. Rajendra Prasad",
+        "Dr. B.R. Ambedkar",
+        "Jawaharlal Nehru",
+        "Sardar Vallabhbhai Patel"
+      ],
+      "correct_answer": 2,
+      "explanation": "Jawaharlal Nehru moved the historic Objectives Resolution on December 13, 1946. It was unanimously adopted by the Assembly on January 22, 1947, and its modified version forms the Preamble."
+    },
+    {
+      "id": "GATE-POL-CFP-04",
+      "question": "Which constitutional amendment added the words 'Socialist', 'Secular', and 'Integrity' to the Preamble of the Indian Constitution?",
+      "options": [
+        "24th Amendment Act, 1971",
+        "42nd Amendment Act, 1976",
+        "44th Amendment Act, 1978",
+        "52nd Amendment Act, 1985"
+      ],
+      "correct_answer": 1,
+      "explanation": "The 42nd Constitutional Amendment Act of 1976 amended the Preamble for the first and only time, adding three words: Socialist, Secular, and Integrity."
+    },
+    {
+      "id": "GATE-POL-CFP-05",
+      "question": "The Drafting Committee of the Constituent Assembly was appointed on August 29, 1947 under the chairmanship of:",
+      "options": [
+        "Dr. Sachchidananda Sinha",
+        "B.N. Rau",
+        "Dr. B.R. Ambedkar",
+        "Alladi Krishnaswamy Iyer"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Drafting Committee, consisting of 7 members, was set up on August 29, 1947 under the chairmanship of Dr. B.R. Ambedkar. B.N. Rau was the Constitutional Advisor."
+    }
+  ]
+}

@@ -111,10 +111,10 @@
     "q_no": 10,
     "question": "From the following pairs of words, select the one which is synonymous :",
     "options": [
-      "(1) Colloquial — grammatical",
-      "(2) Excess — surplus",
-      "(3) Fair — strong",
-      "(4) Alert — inactive"
+      "(1) Colloquial - grammatical",
+      "(2) Excess - surplus",
+      "(3) Fair - strong",
+      "(4) Alert - inactive"
     ],
     "source_page": 2,
     "has_image": false
@@ -530,7 +530,7 @@
   },
   {
     "q_no": 45,
-    "question": "The ratios of surface areas of 2 cubes are given in List—I. In List-II, the ratios of their volumes are given. Match them : List-I (a) 1:16 (b) 1:25 (c) 1:9 List-II (i) 1:125 (ii) 1:27 (iii) 1: 36 (iv) 1:64 The correct match is",
+    "question": "The ratios of surface areas of 2 cubes are given in List-I. In List-II, the ratios of their volumes are given. Match them : List-I (a) 1:16 (b) 1:25 (c) 1:9 List-II (i) 1:125 (ii) 1:27 (iii) 1: 36 (iv) 1:64 The correct match is",
     "options": [
       "(a) → (iv), (b) → (i), (c) → (ii)",
       "(a) → (iii), (b) → (i), (c) → (ii)",
@@ -830,7 +830,7 @@
   },
   {
     "q_no": 70,
-    "question": "Read the following statements\n(A) In stratosphere Cl atoms are released from CFC molecules by the action of U.V. rays\n(B) U.V.—A rays damage DNA and induce mutations\n(C) U.V.—B rays cause ageing of skin and damage skin cells\n(D) U.V.—C rays cause inflammation of cornea called Snow blindness\nCorrect statements are",
+    "question": "Read the following statements\n(A) In stratosphere Cl atoms are released from CFC molecules by the action of U.V. rays\n(B) U.V.-A rays damage DNA and induce mutations\n(C) U.V.-B rays cause ageing of skin and damage skin cells\n(D) U.V.-C rays cause inflammation of cornea called Snow blindness\nCorrect statements are",
     "options": [
       "(A), (B) and (C)",
       "(B) and (D)",
@@ -880,10 +880,10 @@
     "q_no": 74,
     "question": "Identify the correct pair",
     "options": [
-      "(1) \"Give me blood, I will give you freedom\" — Mahatma Gandhi",
-      "(2) \"Do or Die\" — Subhash Chandra Bose",
-      "(3) \"Independence through non-voilence must be our Aim\" — Jawaharlal Nehru",
-      "(4) \"Swaraj is my birth right\" — Gopalakrishna Gokhale"
+      "(1) \"Give me blood, I will give you freedom\" - Mahatma Gandhi",
+      "(2) \"Do or Die\" - Subhash Chandra Bose",
+      "(3) \"Independence through non-voilence must be our Aim\" - Jawaharlal Nehru",
+      "(4) \"Swaraj is my birth right\" - Gopalakrishna Gokhale"
     ],
     "source_page": 21,
     "has_image": false
@@ -1048,10 +1048,10 @@
     "q_no": 88,
     "question": "Which of the following is wrongly matched ?",
     "options": [
-      "Minto-Morley Reforms — 1909",
-      "Montague declaration — 1917",
-      "Gandhi-Irwin Pact — 1931",
-      "Cripps Mission — 1940"
+      "Minto-Morley Reforms - 1909",
+      "Montague declaration - 1917",
+      "Gandhi-Irwin Pact - 1931",
+      "Cripps Mission - 1940"
     ],
     "source_page": 26,
     "has_image": false

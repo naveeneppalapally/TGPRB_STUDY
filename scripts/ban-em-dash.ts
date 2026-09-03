@@ -2,8 +2,8 @@ import fs from 'fs'
 import { globSync } from 'glob'
 
 const EM_DASH = String.fromCharCode(8212)
-const files = globSync('**/*.{vue,md,ts,js}', {
-  ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'dist/**', 'scripts/ban-em-dash.ts'],
+const files = globSync('**/*.{vue,md,ts,js,json}', {
+  ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'dist/**', 'scripts/ban-em-dash.ts', 'package-lock.json'],
 })
 
 let replacedCount = 0
