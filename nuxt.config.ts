@@ -1,8 +1,12 @@
+import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 // CF_PAGES=1 is auto-injected by Cloudflare's build environment.
 // Local dev keeps node-server; production builds use cloudflare-pages.
 const isCFBuild = !!process.env.CF_PAGES
+let cachedManifest: unknown = null
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -92,6 +96,62 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: ['ts-fsrs'],
+    },
+    build: {
+      manifest: 'manifest.json',
+    },
+  },
+
+  hooks: {
+    'build:manifest': (manifest) => {
+      cachedManifest = manifest
+      try {
+        const clientDist = resolve('.nuxt/dist/client')
+        if (!existsSync(clientDist)) {
+          mkdirSync(clientDist, { recursive: true })
+        }
+        writeFileSync(resolve(clientDist, 'manifest.json'), JSON.stringify(manifest, null, 2), 'utf-8')
+      } catch {
+        // Safe fallback if client directory not yet available
+      }
+    },
+    'vite:compiled': () => {
+      try {
+        const clientDist = resolve('.nuxt/dist/client')
+        const manifestPath = resolve(clientDist, 'manifest.json')
+        const dotViteManifest = resolve(clientDist, '.vite/manifest.json')
+        if (!existsSync(clientDist)) {
+          mkdirSync(clientDist, { recursive: true })
+        }
+        if (!existsSync(manifestPath)) {
+          if (existsSync(dotViteManifest)) {
+            copyFileSync(dotViteManifest, manifestPath)
+          } else if (cachedManifest) {
+            writeFileSync(manifestPath, JSON.stringify(cachedManifest, null, 2), 'utf-8')
+          }
+        }
+      } catch {
+        // Safe fallback
+      }
+    },
+    'nitro:build:before': () => {
+      try {
+        const clientDist = resolve('.nuxt/dist/client')
+        const manifestPath = resolve(clientDist, 'manifest.json')
+        const dotViteManifest = resolve(clientDist, '.vite/manifest.json')
+        if (!existsSync(clientDist)) {
+          mkdirSync(clientDist, { recursive: true })
+        }
+        if (!existsSync(manifestPath)) {
+          if (existsSync(dotViteManifest)) {
+            copyFileSync(dotViteManifest, manifestPath)
+          } else if (cachedManifest) {
+            writeFileSync(manifestPath, JSON.stringify(cachedManifest, null, 2), 'utf-8')
+          }
+        }
+      } catch {
+        // Safe fallback
+      }
     },
   },
 

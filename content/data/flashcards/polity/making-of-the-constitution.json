@@ -1,0 +1,146 @@
+{
+  "note_id": "NOTE-POL-MAKING-CONST",
+  "topic_id": "POL-MAKING-CONST",
+  "cards": [
+    {
+      "id": "FC-POL-MC-01",
+      "front": "Who was the first person to advocate the idea of an elected Constituent Assembly for India, and in which year?",
+      "back": "M.N. Roy in 1934. The Indian National Congress officially demanded it for the first time in 1935.",
+      "key_fact": "M.N. Roy proposed Constituent Assembly in 1934; INC officially demanded it in 1935.",
+      "tags": ["Constituent Assembly", "Demand Timeline", "M.N. Roy"]
+    },
+    {
+      "id": "FC-POL-MC-02",
+      "front": "Which British declaration accepted for the first time the demand for a Constituent Assembly consisting 'mainly of Indians'?",
+      "back": "The 'August Offer' of 1940, announced by Viceroy Lord Linlithgow.",
+      "key_fact": "August Offer 1940 first conceded the principle of an Indian Constituent Assembly.",
+      "tags": ["Constitutional History", "1940", "August Offer"]
+    },
+    {
+      "id": "FC-POL-MC-03",
+      "front": "Who were the three members of the Cabinet Mission that arrived in India in March 1946?",
+      "back": "1. Lord Pethick-Lawrence (Secretary of State for India)\n2. Sir Stafford Cripps (President of Board of Trade)\n3. A.V. Alexander (First Lord of Admiralty)",
+      "key_fact": "Cabinet Mission 1946 members: Pethick-Lawrence, Stafford Cripps, A.V. Alexander.",
+      "tags": ["Cabinet Mission", "1946", "British Acts"]
+    },
+    {
+      "id": "FC-POL-MC-04",
+      "front": "What was the total initial strength of the Constituent Assembly under the Cabinet Mission Plan, and how were seats divided?",
+      "back": "389 total seats: 296 seats for British India (292 from Governors' provinces + 4 from Chief Commissioners' provinces) and 93 seats for Princely States.",
+      "key_fact": "Cabinet Mission Plan strength was 389 (296 British India + 93 Princely States).",
+      "tags": ["Constituent Assembly", "Composition", "Seats"]
+    },
+    {
+      "id": "FC-POL-MC-05",
+      "front": "How were the members of the Constituent Assembly from British Indian provinces elected?",
+      "back": "Indirectly elected by the members of the Provincial Legislative Assemblies using the Single Transferable Vote (STV) system of proportional representation.",
+      "key_fact": "Assembly was partly indirectly elected (provinces) and partly nominated (princely states).",
+      "tags": ["Elections", "Single Transferable Vote", "Provinces"]
+    },
+    {
+      "id": "FC-POL-MC-06",
+      "front": "To what number was the membership of the Constituent Assembly reduced following the partition of India under the Mountbatten Plan?",
+      "back": "299 members (229 representing British Indian provinces and 70 representing Princely States).",
+      "key_fact": "Post-partition strength fell from 389 to 299 (229 provinces + 70 princely states).",
+      "tags": ["Partition", "Mountbatten Plan", "Assembly Seats"]
+    },
+    {
+      "id": "FC-POL-MC-07",
+      "front": "Who was elected as the temporary President of the Constituent Assembly on December 9, 1946, and following which convention?",
+      "back": "Dr. Sachchidananda Sinha, following the French practice of appointing the oldest member as temporary chairman.",
+      "key_fact": "Dr. Sachchidananda Sinha was temporary Chairman on Dec 9, 1946 (French practice).",
+      "tags": ["First Sitting", "Dec 9 1946", "Sachchidananda Sinha"]
+    },
+    {
+      "id": "FC-POL-MC-08",
+      "front": "Who were elected as the permanent President and the two Vice-Presidents of the Constituent Assembly on December 11, 1946?",
+      "back": "President: Dr. Rajendra Prasad.\nTwo Vice-Presidents: Dr. H.C. Mukherjee and V.T. Krishnamachari.",
+      "key_fact": "Assembly had one President (Dr. Rajendra Prasad) and two Vice-Presidents (H.C. Mukherjee and V.T. Krishnamachari).",
+      "tags": ["Rajendra Prasad", "Officers", "Vice-Presidents"]
+    },
+    {
+      "id": "FC-POL-MC-09",
+      "front": "Who served as the Constitutional Advisor (Legal Advisor) to the Constituent Assembly?",
+      "back": "Sir B.N. Rau (Benegal Narsing Rau), who prepared the initial draft of the Constitution.",
+      "key_fact": "Sir B.N. Rau was the Constitutional Advisor to the Constituent Assembly.",
+      "tags": ["Constitutional Advisor", "B.N. Rau"]
+    },
+    {
+      "id": "FC-POL-MC-10",
+      "front": "When was the historic 'Objectives Resolution' moved and adopted in the Constituent Assembly?",
+      "back": "Moved by Jawaharlal Nehru on December 13, 1946; unanimously adopted on January 22, 1947.",
+      "key_fact": "Objectives Resolution moved Dec 13, 1946; adopted Jan 22, 1947 (became Preamble).",
+      "tags": ["Objectives Resolution", "Dates", "Nehru"]
+    },
+    {
+      "id": "FC-POL-MC-11",
+      "front": "When was the Drafting Committee appointed, and who was its Chairman?",
+      "back": "Appointed on August 29, 1947, consisting of 7 members under the chairmanship of Dr. B.R. Ambedkar.",
+      "key_fact": "Drafting Committee was appointed on August 29, 1947 under Dr. B.R. Ambedkar.",
+      "tags": ["Drafting Committee", "Ambedkar", "Aug 29 1947"]
+    },
+    {
+      "id": "FC-POL-MC-12",
+      "front": "Which two members of the Drafting Committee were replaced, and by whom?",
+      "back": "1. N. Madhava Rau replaced B.L. Mitter (who resigned due to ill health).\n2. T.T. Krishnamachari replaced D.P. Khaitan (who died in 1948).",
+      "key_fact": "Replacements: N. Madhava Rau for B.L. Mitter; T.T. Krishnamachari for D.P. Khaitan.",
+      "tags": ["Drafting Committee", "Replacements", "Exam Trap"]
+    },
+    {
+      "id": "FC-POL-MC-13",
+      "front": "Who was the Chairman of the States Committee (Committee for Negotiating with States) in the Constituent Assembly?",
+      "back": "Jawaharlal Nehru. (Sardar Patel chaired the Provincial Constitution Committee and Advisory Committee).",
+      "key_fact": "States Committee was chaired by Jawaharlal Nehru, NOT Sardar Patel.",
+      "tags": ["Committees", "Nehru", "States Committee"]
+    },
+    {
+      "id": "FC-POL-MC-14",
+      "front": "Who chaired the Advisory Committee on Fundamental Rights, Minorities and Tribal and Excluded Areas, and who chaired the Fundamental Rights Sub-Committee?",
+      "back": "Main Advisory Committee: Sardar Vallabhbhai Patel.\nFundamental Rights Sub-Committee: J.B. Kripalani.\nMinorities Sub-Committee: H.C. Mukherjee.",
+      "key_fact": "Patel chaired main Advisory Committee; J.B. Kripalani chaired Fundamental Rights Sub-Committee.",
+      "tags": ["Committees", "Patel", "Fundamental Rights"]
+    },
+    {
+      "id": "FC-POL-MC-15",
+      "front": "How long did the Constituent Assembly take to complete the Constitution, and how many sessions were held?",
+      "back": "2 years, 11 months, and 18 days across 11 sessions (spending 114 days on the draft constitution, at a cost of approximately Rs. 64 lakh).",
+      "key_fact": "Total duration: 2 years, 11 months, 18 days; 11 sessions; Rs. 64 lakh total expenditure.",
+      "tags": ["Timeline", "Duration", "Sessions"]
+    },
+    {
+      "id": "FC-POL-MC-16",
+      "front": "What did the original Indian Constitution contain when adopted on November 26, 1949?",
+      "back": "A Preamble, 395 Articles (arranged into 22 Parts), and 8 Schedules.",
+      "key_fact": "Adopted Nov 26, 1949: Preamble + 395 Articles + 22 Parts + 8 Schedules.",
+      "tags": ["Adoption", "Nov 26 1949", "Original Structure"]
+    },
+    {
+      "id": "FC-POL-MC-17",
+      "front": "Which constitutional provision brought Citizenship and Election provisions into force immediately on November 26, 1949?",
+      "back": "Article 394 enforced Articles 5-9 (Citizenship), 60 (Presidential Oath), 324 (Elections), 366, 367, 379-380, 388, and 391-393 on Nov 26, 1949.",
+      "key_fact": "Article 394 enacted citizenship (5-9) and elections (324) immediately on Nov 26, 1949.",
+      "tags": ["Article 394", "Immediate Provisions", "Citizenship"]
+    },
+    {
+      "id": "FC-POL-MC-18",
+      "front": "Why was January 26 specifically selected as the Date of Commencement of the Indian Constitution?",
+      "back": "To commemorate the declaration of Purna Swaraj (Complete Independence Day) celebrated on January 26, 1930 pursuant to the 1929 Lahore Congress resolution.",
+      "key_fact": "Jan 26 was chosen to commemorate Purna Swaraj Day (Jan 26, 1930).",
+      "tags": ["Commencement", "Jan 26 1950", "Purna Swaraj"]
+    },
+    {
+      "id": "FC-POL-MC-19",
+      "front": "What animal was adopted as the official seal (symbol) of the Constituent Assembly?",
+      "back": "The Elephant.",
+      "key_fact": "The official symbol and seal of the Constituent Assembly was the Elephant.",
+      "tags": ["Symbols", "Seal", "Elephant"]
+    },
+    {
+      "id": "FC-POL-MC-20",
+      "front": "Who was the calligrapher of the original handwritten English Constitution, and which artists illuminated it?",
+      "back": "Calligrapher: Prem Behari Narain Raizada (in flowing italic style).\nIlluminators: Shantiniketan artists under Acharya Nand Lal Bose and Beohar Rammanohar Sinha.",
+      "key_fact": "Raizada was the English calligrapher; Nand Lal Bose and Rammanohar Sinha illuminated it.",
+      "tags": ["Calligraphy", "Raizada", "Nand Lal Bose"]
+    }
+  ]
+}

@@ -156,3 +156,66 @@ Integrity mode: development
 - [ ] All existing automated tests pass (`npm test`, `scripts/test-theme-preset-stress.ts`, and `scripts/test-challenger-pol-ui.ts`).
 - [ ] Production build (`npx nuxi build`) succeeds with exit code 0.
 
+## 2026-09-03T14:20:48Z
+
+Conduct exhaustive primary-source research and implement a production-grade, high-yield study note page for **"Making of the Indian Constitution"** (`NOTE-POL-MAKING-CONST`) for TGPRB SI & Constable exam preparation in TSLPRB StudyOS, satisfying the complete Topic Delivery Integrity Gate with full verified PYQ drills, TGPSC hardening, comprehension gate, and atomic flashcards.
+
+Working directory: `/home/naveen/Documents/TGPRB`  
+Integrity mode: development
+
+## Requirements
+
+### R1. Primary-Source Deep Research & Fact Verification
+- Conduct forensic primary-source research across Constituent Assembly Debates, official TGPRB/TGPSC PYQ papers, and constitutional authority texts (NCERT, M. Laxmikanth, D.D. Basu) to resolve historical ambiguities:
+  1. **Demand Timeline**: M.N. Roy (1934), INC official demand (1935), August Offer (1940), Cripps Mission (1942), Cabinet Mission Plan (1946: Pethick-Lawrence, Cripps, Alexander).
+  2. **Assembly Composition & Architecture**: 389 initial seats (296 British India, 93 Princely States); indirect election by Provincial Legislative Assemblies via Single Transferable Vote (proportional representation); post-partition reduction to 299 seats (229 provinces, 70 states).
+  3. **Milestone Sittings & Officers**: Dec 9, 1946 (interim President Dr. Sachchidananda Sinha); Dec 11, 1946 (permanent President Dr. Rajendra Prasad; Vice-Presidents H.C. Mukherjee and V.T. Krishnamachari; Constitutional Advisor Sir B.N. Rau); Dec 13, 1946 (Objectives Resolution moved by Jawaharlal Nehru, adopted Jan 22, 1947).
+  4. **The 8 Major Committees & Rosters**: Drafting Committee (7 members under Dr. B.R. Ambedkar; replacements N. Madhava Rau for B.L. Mitter, T.T. Krishnamachari for D.P. Khaitan); Union Powers & Union Constitution (Nehru); Provincial Constitution & Advisory on FR/Minorities (Patel); Steering Committee (Prasad).
+  5. **Timeline Constants & Transitional Articles**: 2 years, 11 months, 18 days (11 sessions, 165 sitting days, 60 constitutions studied, ~₹64 lakh); Nov 26, 1949 adoption vs Jan 26, 1950 commencement (Purna Swaraj Day commemoration); immediate enforcement of Articles 5-9, 60, 324, 366, 367, 379, 380, 388, 391-393.
+  6. **Calligraphy, Art & Official Symbols**: Elephant seal; Prem Behari Narain Raizada (original English italic calligraphy); Nand Lal Bose & Beohar Rammanohar Sinha (illustrations); Vasant Krishnan Vaidya (Hindi calligraphy).
+
+### R2. Pedagogical Note Architecture & Visual Framework
+- Build the comprehensive note page at `pages/notes/polity/making-of-the-constitution.vue` with NOTE ID: `NOTE-POL-MAKING-CONST`.
+- Structure the content strictly following the **Polity 4-Tier Cognitive Architecture**:
+  1. **Visual Roadmap & Evolution**: Interactive timeline of milestones (1934 to 1950).
+  2. **Assembly Formulation & Composition**: Seat allocations, communal quotas, and indirect election mechanics.
+  3. **Working of the Assembly & Major Committees**: Detailed table of the 8 major committees, chairs, and Drafting Committee members.
+  4. **Enactment, Enforcement & Immediate Provisions**: Nov 26 vs Jan 26 distinctions and citizenship/election articles.
+  5. **TGPRB Exam Trap Matrix**: Side-by-side contrastive tables for high-frequency PYQ confusions (Interim vs Permanent President, Committee Chairs, Replacement Members, Enacted vs Commenced).
+
+### R3. Mandatory 4-Stage Evaluation Block & TOC Integration
+- Terminate the page with the standardized sequential evaluation block registered in the Table of Contents:
+  1. **PYQs (`#pyqs`)**: Interactive TGPRB verified questions with exam filters (Constable vs SI) and explanations.
+  2. **Advanced Practice (`#advanced-practice`)**: TGPSC-style hardening drills (multi-statement, matching) in distinct indigo theme styling (`border-indigo-500/30 bg-indigo-500/5`) with pedagogical disclaimer.
+  3. **Comprehension Gate (`#gate`)**: `<GateQuiz note-id="NOTE-POL-MAKING-CONST" />` (5 factual MCQs, pass 3/5).
+  4. **Current Affairs (`#current-affairs`)**: `<CurrentAffairsStrip note-id="NOTE-POL-MAKING-CONST" />`.
+- Register all sections in the right-sidebar Table of Contents (`<TableOfContents />`).
+
+### R4. Topic Delivery Integrity Gate & Data Contracts
+- Create `content/data/gates/making-of-the-constitution.json` with at least 5 factual MCQs following the gate schema and register in `server/api/gate/[noteId].get.ts`.
+- Create `content/data/flashcards/polity/making-of-the-constitution.json` with at least 15 atomic flashcards (with `note_id: "NOTE-POL-MAKING-CONST"`) and register in `server/api/flashcards/[noteId].get.ts`.
+- Add the note link to the Indian Polity Subject Hub (`pages/notes/polity/index.vue`).
+- Ensure `npm run verify:integrity` passes with 0 defects.
+
+### R5. Formatting & Architectural Invariants
+- Strict Zero Em-Dash Rule: Never use em-dashes. Use hyphens (`-`) or colons (`:`).
+- Multi-theme compatibility: Must render cleanly across all 3 theme presets (StudyOS Classic, Botanical Sage, Warm Notebook) in both Light and Dark modes.
+- Touch ergonomics: All interactive targets meet minimum 44x44px touch bounding boxes.
+- Zero layout shift (CLS = 0.0000) and 45ms tactile press feedback.
+
+## Acceptance Criteria
+
+### Content & Verification
+- [ ] Note page exists at `pages/notes/polity/making-of-the-constitution.vue` with `NOTE-POL-MAKING-CONST`.
+- [ ] `content/data/gates/making-of-the-constitution.json` exists with >= 5 verified questions and is registered in `server/api/gate/[noteId].get.ts`.
+- [ ] `content/data/flashcards/polity/making-of-the-constitution.json` exists with >= 15 atomic flashcards and is registered in `server/api/flashcards/[noteId].get.ts`.
+- [ ] All 4 closing sections (`#pyqs`, `#advanced-practice`, `#gate`, `#current-affairs`) exist and are registered in TOC.
+- [ ] Topic is linked and accessible from the Indian Polity Subject Hub (`/notes/polity`).
+
+### Automated Quality Gates
+- [ ] `npm run verify:integrity` passes with exit code 0 across all notes.
+- [ ] `npx tsx scripts/ban-em-dash.ts` completes with 0 em-dashes found.
+- [ ] All automated test suites (`npm test`) pass cleanly with exit code 0.
+- [ ] Production build (`npx nuxi build`) succeeds with exit code 0.
+
+

@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-POL-MAKING-CONST",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-POL-MC-01",
+      "question": "Under which official British plan was the Constituent Assembly of India formulated in November 1946?",
+      "options": [
+        "Cripps Mission Plan 1942",
+        "Wavell Plan 1945",
+        "Cabinet Mission Plan 1946",
+        "Mountbatten Plan 1947"
+      ],
+      "correct_answer": 2,
+      "explanation": "The Constituent Assembly of India was formulated in November 1946 under the scheme put forward by the Cabinet Mission Plan (comprising Lord Pethick-Lawrence, Sir Stafford Cripps, and A.V. Alexander)."
+    },
+    {
+      "id": "GATE-POL-MC-02",
+      "question": "Who presided over the inaugural sitting of the Constituent Assembly on December 9, 1946 as its temporary Chairman?",
+      "options": [
+        "Dr. Rajendra Prasad",
+        "Dr. Sachchidananda Sinha",
+        "Dr. B.R. Ambedkar",
+        "Sir B.N. Rau"
+      ],
+      "correct_answer": 1,
+      "explanation": "Following the French practice of electing the oldest member, Dr. Sachchidananda Sinha was elected as the temporary Chairman on December 9, 1946. Dr. Rajendra Prasad was elected permanent President on December 11, 1946."
+    },
+    {
+      "id": "GATE-POL-MC-03",
+      "question": "On which date did the Constituent Assembly unanimously adopt the historic 'Objectives Resolution' moved by Jawaharlal Nehru?",
+      "options": [
+        "December 13, 1946",
+        "January 22, 1947",
+        "August 15, 1947",
+        "November 26, 1949"
+      ],
+      "correct_answer": 1,
+      "explanation": "Jawaharlal Nehru moved the historic Objectives Resolution on December 13, 1946, and it was unanimously adopted by the Constituent Assembly on January 22, 1947. Its modified text became the Preamble."
+    },
+    {
+      "id": "GATE-POL-MC-04",
+      "question": "Who among the following was appointed as the Chairman of the States Committee (Committee for Negotiating with States) of the Constituent Assembly?",
+      "options": [
+        "Sardar Vallabhbhai Patel",
+        "Jawaharlal Nehru",
+        "Dr. Rajendra Prasad",
+        "Dr. B.R. Ambedkar"
+      ],
+      "correct_answer": 1,
+      "explanation": "Jawaharlal Nehru was the Chairman of the States Committee (Committee for Negotiating with States). Sardar Patel chaired the Provincial Constitution Committee and the Advisory Committee on Fundamental Rights and Minorities."
+    },
+    {
+      "id": "GATE-POL-MC-05",
+      "question": "Which of the following constitutional provisions was enforced immediately on November 26, 1949 under Article 394?",
+      "options": [
+        "Fundamental Rights (Part III)",
+        "Directive Principles of State Policy (Part IV)",
+        "Elections under Article 324",
+        "Emergency Provisions (Part XVIII)"
+      ],
+      "correct_answer": 2,
+      "explanation": "Under Article 394, Articles 5, 6, 7, 8, 9 (Citizenship), 60 (Oath of President), 324 (Election Commission), 366, 367, 379, 380, 388, 391, 392, and 393 came into force immediately on November 26, 1949. All remaining provisions came into effect on January 26, 1950."
+    }
+  ]
+}
