@@ -4,7 +4,7 @@ type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"
 topic: "Books and Literary Events"
-related_topic_ids: ["NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

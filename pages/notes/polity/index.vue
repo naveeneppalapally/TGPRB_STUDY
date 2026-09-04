@@ -27,18 +27,18 @@
       <p class="eyebrow mb-3">Live notes</p>
       <div class="panel divide-y divide-[var(--line)]">
         <NuxtLink
-          to="/notes/polity/constitutional-framework-and-preamble"
+          to="/notes/polity/historical-background-1773-1947"
           class="panel-hover group flex items-center gap-4 px-5 py-4"
         >
           <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
             <UIcon name="i-heroicons-scale" class="h-4 w-4 accent" />
           </span>
           <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Constitutional Framework &amp; Preamble</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Historical Acts (1773-1947), Constituent Assembly, Borrowed Features, Preamble &amp; 12 Schedules</p>
+            <p class="text-[14px] font-semibold t-hi">Historical Background: Company Rule &amp; Crown Rule (1773-1947)</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Company Rule (1773-1853), Crown Rule (1858-1947), 1919 Dyarchy, 1935 Provincial Autonomy &amp; 3 Lists</p>
           </div>
           <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">31 PYQs</span>
+          <span class="num font-mono text-[11px] t-lo">12 PYQs</span>
           <UIcon
             name="i-heroicons-arrow-right"
             class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"

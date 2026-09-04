@@ -4,7 +4,7 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "Constitutional Provisions on Delimitation"
-related_topic_ids: ["NOTE-POL-AMENDMENTS", "NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-POL-AMENDMENTS", "NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
-related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-CONST-FRAME"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-HIST-ACTS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

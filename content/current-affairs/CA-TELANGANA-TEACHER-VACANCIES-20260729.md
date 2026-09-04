@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Pupil Teacher Ratio in Telangana under NEP 2020"
-related_topic_ids: ["NOTE-GS-POLITY", "NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC", "NOTE-TEL-EDUCATION"]
+related_topic_ids: ["NOTE-GS-POLITY", "NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC", "NOTE-TEL-EDUCATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

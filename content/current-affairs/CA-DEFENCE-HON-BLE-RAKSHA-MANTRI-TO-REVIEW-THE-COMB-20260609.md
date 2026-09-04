@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Commissioning of First Batch of NDA Women Cadets at AFA Dundigal"
-related_topic_ids: ["NOTE-DEF-IAF", "NOTE-POL-CONST-FRAME", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: ["NOTE-DEF-IAF", "NOTE-POL-HIST-ACTS", "NOTE-TEL-HYDERABAD"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Polity"
 topic: "XV Finance Commission Grants for Panchayati Raj Institutions"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-CONST-FRAME", "NOTE-POL-JUDICIARY", "NOTE-POL-PANCHAYAT", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-POL-PANCHAYAT", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

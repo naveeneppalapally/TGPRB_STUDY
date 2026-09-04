@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "National Mission on Interdisciplinary Cyber-Physical Systems (NM-ICPS)"
-related_topic_ids: ["NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-SCI-MISSIONS"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-SCI-MISSIONS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

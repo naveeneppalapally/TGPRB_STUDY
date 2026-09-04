@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
-related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

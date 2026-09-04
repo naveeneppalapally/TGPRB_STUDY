@@ -132,7 +132,9 @@ const route = useRoute()
 
 const ROUTE_NOTE_MAP: Record<string, { noteId: string; title: string }> = {
   '/notes/geography/drainage-system-of-india': { noteId: 'NOTE-GEO-DRAINAGE', title: 'Drainage System of India' },
-  '/notes/polity/constitutional-framework-and-preamble': { noteId: 'NOTE-POL-CONST-FRAME', title: 'Constitutional Framework & Preamble' },
+  '/notes/polity/historical-background-1773-1947': { noteId: 'NOTE-POL-HIST-ACTS', title: 'Historical Background: Company Rule & Crown Rule (1773-1947)' },
+  '/notes/polity/making-of-the-constitution': { noteId: 'NOTE-POL-MAKING-CONST', title: 'Making of the Indian Constitution' },
+  '/notes/polity/constitutional-framework-and-preamble': { noteId: 'NOTE-POL-HIST-ACTS', title: 'Historical Background: Company Rule & Crown Rule (1773-1947)' },
   '/notes/telangana/telangana-statehood-movement': { noteId: 'NOTE-TEL-MOVEMENT', title: 'Telangana Statehood Movement' },
 }
 

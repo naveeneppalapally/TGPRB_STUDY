@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

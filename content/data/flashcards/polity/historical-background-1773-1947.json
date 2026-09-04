@@ -1,142 +1,142 @@
 {
-  "note_id": "NOTE-POL-CONST-FRAME",
-  "topic_id": "POL-CONST-FRAME",
+  "note_id": "NOTE-POL-HIST-ACTS",
+  "topic_id": "POL-HIST-ACTS",
   "cards": [
     {
-      "id": "FC-POL-CFP-01",
+      "id": "FC-POL-HIST-01",
       "front": "Which British Act designated the Governor of Bengal as the 'Governor-General of Bengal', and who was the first to hold this office?",
       "back": "Regulating Act of 1773. Lord Warren Hastings became the first Governor-General of Bengal, assisted by an Executive Council of four members.",
       "key_fact": "Regulating Act 1773 created Governor-General of Bengal (Lord Warren Hastings).",
       "tags": ["Company Rule", "1773", "Executive"]
     },
     {
-      "id": "FC-POL-CFP-02",
+      "id": "FC-POL-HIST-02",
       "front": "Under which Act was the Supreme Court established at Fort William in Calcutta, and who was its first Chief Justice?",
       "back": "Regulating Act of 1773 (established in 1774). Sir Elijah Impey was appointed as the first Chief Justice, accompanied by three other judges.",
       "key_fact": "Supreme Court at Calcutta established in 1774 under Regulating Act 1773.",
       "tags": ["Company Rule", "1773", "Judiciary"]
     },
     {
-      "id": "FC-POL-CFP-03",
+      "id": "FC-POL-HIST-03",
       "front": "Which Act established the system of 'Double Government' by separating commercial and political functions between the Court of Directors and Board of Control?",
       "back": "Pitt's India Act of 1784. The Court of Directors managed commercial affairs, while the newly created Board of Control supervised civil, military, and revenue affairs.",
       "key_fact": "Pitt's India Act 1784 established Double Government with the Board of Control.",
       "tags": ["Company Rule", "1784", "Double Government"]
     },
     {
-      "id": "FC-POL-CFP-04",
+      "id": "FC-POL-HIST-04",
       "front": "Under which enactment were the Company's territories in India referred to for the very first time as 'British possessions in India'?",
       "back": "Pitt's India Act of 1784. It asserted the British Crown's supreme control over Company administration in India.",
       "key_fact": "Pitt's India Act 1784 first used the term 'British possessions in India'.",
       "tags": ["Company Rule", "1784", "Crown Sovereignty"]
     },
     {
-      "id": "FC-POL-CFP-05",
+      "id": "FC-POL-HIST-05",
       "front": "Which Charter Act mandated that the salaries and expenses of the Board of Control and their staff be paid out of Indian revenues?",
       "back": "Charter Act of 1793. This initiated the financial drain known as 'Home Charges' from Indian revenues.",
       "key_fact": "Charter Act 1793 charged Board of Control expenses to Indian revenues.",
       "tags": ["Company Rule", "1793", "Finance"]
     },
     {
-      "id": "FC-POL-CFP-06",
+      "id": "FC-POL-HIST-06",
       "front": "Which Charter Act abolished the East India Company's trade monopoly with India, except for the trade in tea and trade with China?",
       "back": "Charter Act of 1813. It threw open Indian trade to all British merchants while preserving the Company's monopoly over tea and China trade for 20 more years.",
       "key_fact": "Charter Act 1813 ended Indian trade monopoly except tea and China trade.",
       "tags": ["Company Rule", "1813", "Trade Monopoly"]
     },
     {
-      "id": "FC-POL-CFP-07",
+      "id": "FC-POL-HIST-07",
       "front": "Which Act allocated an annual grant of Rs 1 Lakh for education and literature, and permitted Christian missionaries to enter India?",
       "back": "Charter Act of 1813. It allocated Rs 1,00,000 for the revival and promotion of literature and encouragement of learned natives of India (PYQ-0925).",
       "key_fact": "Charter Act 1813 allocated Rs 1 Lakh for education and permitted missionaries.",
       "tags": ["Company Rule", "1813", "Education"]
     },
     {
-      "id": "FC-POL-CFP-08",
+      "id": "FC-POL-HIST-08",
       "front": "Which Act created the office of 'Governor-General of India' with exclusive civil and military powers, and who was the first Governor-General of India?",
       "back": "Charter Act of 1833. Lord William Bentinck was appointed as the first Governor-General of India.",
       "key_fact": "Charter Act 1833 created Governor-General of India (Lord William Bentinck).",
       "tags": ["Company Rule", "1833", "Centralization"]
     },
     {
-      "id": "FC-POL-CFP-09",
+      "id": "FC-POL-HIST-09",
       "front": "Which Act completely ended all commercial activities of the East India Company (including tea and trade with China), making it a purely administrative body?",
       "back": "Charter Act of 1833. It extinguished all remaining commercial monopolies, rendering the Company a trustee for the Crown.",
       "key_fact": "Charter Act 1833 completely ended EIC commercial operations.",
       "tags": ["Company Rule", "1833", "Administration"]
     },
     {
-      "id": "FC-POL-CFP-010",
+      "id": "FC-POL-HIST-010",
       "front": "Who was added as the fourth member (Law Member) to the Governor-General's Council under the Charter Act of 1833?",
       "back": "Lord Thomas Babington Macaulay was appointed as the first Law Member (without voting power in executive matters), leading to the First Law Commission (1834).",
       "key_fact": "Charter Act 1833 added Law Member (Lord Macaulay) to Governor-General's Council.",
       "tags": ["Company Rule", "1833", "Law Commission"]
     },
     {
-      "id": "FC-POL-CFP-011",
+      "id": "FC-POL-HIST-011",
       "front": "Which Act separated the legislative and executive functions of the Governor-General's Council by creating a 6-member Indian Legislative Council?",
       "back": "Charter Act of 1853. It established the Indian (Central) Legislative Council, functioning as a mini-parliament on the British model.",
       "key_fact": "Charter Act 1853 separated executive and legislative wings of Governor-General's Council.",
       "tags": ["Company Rule", "1853", "Legislature"]
     },
     {
-      "id": "FC-POL-CFP-012",
+      "id": "FC-POL-HIST-012",
       "front": "Which Act introduced an open competition system for the selection and recruitment of civil servants, leading to the Macaulay Committee of 1854?",
       "back": "Charter Act of 1853. The Committee on the Indian Civil Service (Macaulay Committee) was appointed in 1854 to implement open competitive examinations.",
       "key_fact": "Charter Act 1853 introduced open competition for civil services (Macaulay Committee 1854).",
       "tags": ["Company Rule", "1853", "Civil Services"]
     },
     {
-      "id": "FC-POL-CFP-013",
+      "id": "FC-POL-HIST-013",
       "front": "Which Act is titled the 'Act for the Better Government of India', and what was its core constitutional effect?",
       "back": "Government of India Act 1858. It abolished East India Company rule following the 1857 revolt and transferred sovereignty, territories, and revenues directly to the British Crown.",
       "key_fact": "GoI Act 1858 transferred Indian governance from Company to British Crown.",
       "tags": ["Crown Rule", "1858", "Crown Transfer"]
     },
     {
-      "id": "FC-POL-CFP-014",
+      "id": "FC-POL-HIST-014",
       "front": "Which two major administrative offices were created by the Government of India Act 1858 to replace the Board of Control and Court of Directors?",
       "back": "The Viceroy of India (Lord Canning was first) as direct Crown representative, and the Secretary of State for India in London, assisted by a 15-member Council of India.",
       "key_fact": "GoI Act 1858 created Viceroy (Lord Canning) and Secretary of State for India.",
       "tags": ["Crown Rule", "1858", "Offices"]
     },
     {
-      "id": "FC-POL-CFP-015",
+      "id": "FC-POL-HIST-015",
       "front": "Which Act initiated legislative decentralization by restoring law-making powers to Bombay and Madras Presidencies, and recognized the Portfolio system?",
       "back": "Indian Councils Act of 1861. It reversed the centralization trend of 1833 and legalized the Portfolio system introduced by Lord Canning in 1859.",
       "key_fact": "Indian Councils Act 1861 initiated decentralization and legalized the Portfolio system.",
       "tags": ["Crown Rule", "1861", "Decentralization"]
     },
     {
-      "id": "FC-POL-CFP-016",
+      "id": "FC-POL-HIST-016",
       "front": "Which three Indian non-official members were nominated to the Viceroy's Legislative Council by Lord Canning under the Indian Councils Act 1861?",
       "back": "The Raja of Benaras, the Maharaja of Patiala, and Sir Dinkar Rao were nominated in 1862.",
       "key_fact": "1861 Councils Act nominated Raja of Benaras, Maharaja of Patiala, and Sir Dinkar Rao.",
       "tags": ["Crown Rule", "1861", "Indian Representation"]
     },
     {
-      "id": "FC-POL-CFP-017",
+      "id": "FC-POL-HIST-017",
       "front": "Which Act empowered legislative council members to discuss the annual budget and address questions to the executive for the first time?",
       "back": "Indian Councils Act of 1892. It expanded legislative functions, though members could not vote on the budget or ask supplementary questions (PYQ-0520).",
       "key_fact": "Indian Councils Act 1892 granted powers to discuss budget and question executive.",
       "tags": ["Crown Rule", "1892", "Budget Powers"]
     },
     {
-      "id": "FC-POL-CFP-018",
+      "id": "FC-POL-HIST-018",
       "front": "Which Act introduced communal representation (separate electorates) for Muslims, and who became known as the 'Father of Communal Electorate'?",
       "back": "Indian Councils Act of 1909 (Morley-Minto Reforms). Lord Minto (Viceroy) came to be known as the Father of Communal Electorate (PYQ-0758, PYQ-3073).",
       "key_fact": "1909 Morley-Minto Reforms introduced separate electorates for Muslims.",
       "tags": ["Crown Rule", "1909", "Separate Electorates"]
     },
     {
-      "id": "FC-POL-CFP-019",
+      "id": "FC-POL-HIST-019",
       "front": "What were the 'Reserved' versus 'Transferred' subjects under the Dyarchy system introduced by the Government of India Act 1919?",
       "back": "Reserved subjects (Police, Land Revenue, Justice) were administered by Governor + Executive Council without assembly accountability. Transferred subjects (Local Self-Govt, Health, Education) were administered by Governor with elected Ministers (PYQ-0690, PYQ-0759).",
       "key_fact": "1919 Act introduced provincial Dyarchy with Reserved (Police/Revenue) and Transferred (Local Self-Govt) lists.",
       "tags": ["Crown Rule", "1919", "Dyarchy"]
     },
     {
-      "id": "FC-POL-CFP-020",
+      "id": "FC-POL-HIST-020",
       "front": "Which Act introduced 'Provincial Autonomy', divided powers into Federal, Provincial, and Concurrent Lists, and where did it vest residuary powers?",
       "back": "Government of India Act of 1935. It abolished provincial dyarchy, granted autonomy to provinces, divided powers into 3 lists, and vested residuary powers in the Governor-General (Viceroy).",
       "key_fact": "GoI Act 1935 introduced Provincial Autonomy, 3 Lists, and vested residuary powers in the Viceroy.",

@@ -5,6 +5,7 @@ import damsInIndia from '~/content/data/flashcards/geography/dams-in-india.json'
 import irrigationInIndia from '~/content/data/flashcards/geography/irrigation-in-india.json'
 import forestsInIndia from '~/content/data/flashcards/geography/forests-in-india.json'
 import constitutionalFrameworkAndPreamble from '~/content/data/flashcards/polity/constitutional-framework-and-preamble.json'
+import historicalActsFlashcards from '~/content/data/flashcards/polity/historical-background-1773-1947.json'
 import unionExecutiveAndLegislature from '~/content/data/flashcards/polity/union-executive-and-legislature.json'
 import makingOfTheConstitutionFlashcards from '~/content/data/flashcards/polity/making-of-the-constitution.json'
 import telanganaStatehoodMovement from '~/content/data/flashcards/telangana/telangana-statehood-movement.json'
@@ -27,7 +28,8 @@ const DECKS: Record<string, unknown> = {
   'NOTE-GEO-DAMS': damsInIndia,
   'NOTE-GEO-IRRIGATION': irrigationInIndia,
   'NOTE-GEO-FORESTS': forestsInIndia,
-  'NOTE-POL-CONST-FRAME': constitutionalFrameworkAndPreamble,
+  'NOTE-POL-HIST-ACTS': historicalActsFlashcards,
+  'NOTE-POL-CONST-FRAME': historicalActsFlashcards,
   'NOTE-POL-MAKING-CONST': makingOfTheConstitutionFlashcards,
   'NOTE-POL-UNION-EXEC': unionExecutiveAndLegislature,
   'NOTE-TEL-MOVEMENT': telanganaStatehoodMovement,
@@ -39,7 +41,8 @@ const DECK_META: Record<string, { exam_section: string; topic: string }> = {
   'NOTE-GEO-DAMS': { exam_section: 'Geography', topic: 'Dams in India' },
   'NOTE-GEO-IRRIGATION': { exam_section: 'Geography', topic: 'Irrigation in India' },
   'NOTE-GEO-FORESTS': { exam_section: 'Geography', topic: 'Forests of India' },
-  'NOTE-POL-CONST-FRAME': { exam_section: 'Polity', topic: 'Constitutional Framework & Preamble' },
+  'NOTE-POL-HIST-ACTS': { exam_section: 'Polity', topic: 'Historical Background: Company Rule & Crown Rule (1773-1947)' },
+  'NOTE-POL-CONST-FRAME': { exam_section: 'Polity', topic: 'Historical Background: Company Rule & Crown Rule (1773-1947)' },
   'NOTE-POL-MAKING-CONST': { exam_section: 'Polity', topic: 'Making of the Indian Constitution' },
   'NOTE-POL-UNION-EXEC': { exam_section: 'Polity', topic: 'Union Executive and Legislature' },
   'NOTE-TEL-MOVEMENT': { exam_section: 'Telangana', topic: 'Telangana Statehood Movement' },

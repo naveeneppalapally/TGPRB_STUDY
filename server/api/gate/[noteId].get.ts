@@ -7,6 +7,7 @@ import mountainsInIndia from '~/content/data/gates/mountains-in-india.json'
 import damsInIndia from '~/content/data/gates/dams-in-india.json'
 import forestsOfIndia from '~/content/data/gates/forests-of-india.json'
 import constitutionalFrameworkAndPreamble from '~/content/data/gates/constitutional-framework-and-preamble.json'
+import historicalActsGate from '~/content/data/gates/historical-background-1773-1947.json'
 import makingOfTheConstitutionGate from '~/content/data/gates/making-of-the-constitution.json'
 
 /**
@@ -22,6 +23,9 @@ import makingOfTheConstitutionGate from '~/content/data/gates/making-of-the-cons
  */
 const GATES: Record<string, unknown> = {
   [(drainageSystem as { note_id: string }).note_id]: drainageSystem,
+  'NOTE-POL-HIST-ACTS': historicalActsGate,
+  'NOTE-POL-CONST-FRAME': historicalActsGate,
+  [(historicalActsGate as { note_id: string }).note_id]: historicalActsGate,
   [(constitutionalFrameworkAndPreamble as { note_id: string }).note_id]: constitutionalFrameworkAndPreamble,
   [(makingOfTheConstitutionGate as { note_id: string }).note_id]: makingOfTheConstitutionGate,
   'NOTE-POL-MAKING-CONST': makingOfTheConstitutionGate,

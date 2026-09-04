@@ -211,10 +211,15 @@ const noteMetadata: Record<string, { title: string, section: string, route: stri
     section: 'Geography',
     route: '/notes/geography/forests-in-india',
   },
-  'NOTE-POL-CONST-FRAME': {
-    title: 'Constitutional Framework & Preamble',
+  'NOTE-POL-HIST-ACTS': {
+    title: 'Historical Background: Company Rule & Crown Rule (1773-1947)',
     section: 'Polity',
-    route: '/notes/polity/constitutional-framework-and-preamble',
+    route: '/notes/polity/historical-background-1773-1947',
+  },
+  'NOTE-POL-CONST-FRAME': {
+    title: 'Historical Background: Company Rule & Crown Rule (1773-1947)',
+    section: 'Polity',
+    route: '/notes/polity/historical-background-1773-1947',
   },
   'NOTE-POL-MAKING-CONST': {
     title: 'Making of the Indian Constitution',
@@ -224,7 +229,7 @@ const noteMetadata: Record<string, { title: string, section: string, route: stri
   'NOTE-POL-UNION-EXEC': {
     title: 'Union Executive & Parliament',
     section: 'Polity',
-    route: '/notes/polity/constitutional-framework-and-preamble',
+    route: '/notes/polity',
   },
   'NOTE-TEL-MOVEMENT': {
     title: 'Telangana Armed Struggle & Statehood Movement',

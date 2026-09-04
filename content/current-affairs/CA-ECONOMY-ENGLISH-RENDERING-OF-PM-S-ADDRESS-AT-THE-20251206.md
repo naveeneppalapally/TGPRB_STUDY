@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Hindustan Times Leadership Summit and Indian Economic Growth"
-related_topic_ids: ["NOTE-ECO-GDP", "NOTE-HIS-MODERN", "NOTE-POL-AMBEDKAR", "NOTE-POL-CONST-FRAME", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-ECO-GDP", "NOTE-HIS-MODERN", "NOTE-POL-AMBEDKAR", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

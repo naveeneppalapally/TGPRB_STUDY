@@ -5,7 +5,10 @@ export default defineContentConfig({
     // Notes collection - study content
     content: defineCollection({
       type: 'page',
-      source: '**/*.md',
+      source: {
+        include: '**/*.md',
+        exclude: ['current-affairs/**'],
+      },
     }),
     // Current affairs linked to study notes
     current_affair: defineCollection({

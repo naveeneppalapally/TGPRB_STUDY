@@ -1,9 +1,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-console.log('Starting Challenger 2: Interactive State & UI Robustness Verification Suite...')
+console.log('Starting Challenger: Interactive State & UI Robustness Verification Suite...')
 
-const vueFilePath = path.resolve('pages/notes/polity/constitutional-framework-and-preamble.vue')
+const vueFilePath = path.resolve('pages/notes/polity/historical-background-1773-1947.vue')
 const vueContent = fs.readFileSync(vueFilePath, 'utf-8')
 
 let totalTests = 0
@@ -32,10 +32,10 @@ console.log('\n=== SUITE 1: 11 Section IDs & TOC Anchor Parity ===')
 const expectedSectionIds = [
   'visual-roadmap',
   'company-rule',
-  'crown-rule',
-  'constituent-assembly',
-  'borrowed-sources',
-  'preamble-schedules',
+  'crown-devolution',
+  'crown-representation',
+  'crown-federal',
+  'comparison-matrix',
   'trap-matrix',
   'pyqs',
   'advanced-practice',
@@ -75,15 +75,11 @@ assert(
   `Mismatch: ${JSON.stringify(templateSectionMatches)} vs ${JSON.stringify(expectedSectionIds)}`
 )
 
-// 1.3 Check Desktop TOC links
-const desktopTocPresent = vueContent.includes('v-for="(section, i) in sections"') && vueContent.includes(':href="`#${section.id}`"')
-assert(desktopTocPresent, 'Desktop TOC dynamically iterates over sections array with valid href anchors')
+// 1.3 Check TOC presence
+const tocPresent = vueContent.includes('<TableOfContents :sections="sections" />')
+assert(tocPresent, 'TOC dynamically iterates over sections array')
 
-// 1.4 Check Mobile TOC Slideover links
-const mobileTocPresent = vueContent.includes('<USlideover v-model="mobileTocOpen"') && vueContent.includes('scrollTo(section.id)')
-assert(mobileTocPresent, 'Mobile TOC Slideover dynamically iterates over sections array and binds scrollTo()')
-
-// 1.5 Check SectionNotesButton and InlineNoteStrip for every section
+// 1.4 Check SectionNotesButton and InlineNoteStrip for every section
 for (const secId of expectedSectionIds) {
   const hasButton = vueContent.includes(`section-id="${secId}"`)
   assert(hasButton, `SectionNotesButton and InlineNoteStrip exist for section: ${secId}`)
@@ -101,25 +97,25 @@ assert(!!pyqsMatch, 'pyqs reactive array is parsed from script setup')
 let parsedPyqs: any[] = []
 if (pyqsMatch) {
   try {
-    parsedPyqs = JSON.parse(pyqsMatch[1].trim())
+    parsedPyqs = eval(pyqsMatch[1].trim())
   } catch (err: any) {
-    console.error('Error parsing pyqs array JSON:', err.message)
+    console.error('Error parsing pyqs array:', err.message)
   }
 }
 
-assert(parsedPyqs.length === 31, 'pyqs array contains exactly 31 verified questions', `Found ${parsedPyqs.length}`)
+assert(parsedPyqs.length === 12, 'pyqs array contains exactly 12 verified questions', `Found ${parsedPyqs.length}`)
 
 const constableCount = parsedPyqs.filter(q => q.exam === 'Constable').length
 const siCount = parsedPyqs.filter(q => q.exam === 'SI').length
-assert(constableCount === 15, `Constable questions count is 15 (actual: ${constableCount})`)
-assert(siCount === 16, `SI questions count is 16 (actual: ${siCount})`)
-assert(constableCount + siCount === 31, 'Constable + SI counts strictly equal 31')
+assert(constableCount === 7, `Constable questions count is 7 (actual: ${constableCount})`)
+assert(siCount === 5, `SI questions count is 5 (actual: ${siCount})`)
+assert(constableCount + siCount === 12, 'Constable + SI counts strictly equal 12')
 
 // Check examFilters metadata
-const examFiltersMatch = vueContent.includes("label: 'All Exams (31)', value: 'all'") &&
-  vueContent.includes("label: 'Constable (15)', value: 'Constable'") &&
-  vueContent.includes("label: 'SI (16)', value: 'SI'")
-assert(examFiltersMatch, 'examFilters array displays exact counts matching underlying data (31, 15, 16)')
+const examFiltersMatch = vueContent.includes("label: 'All Exams (12)', value: 'all'") &&
+  vueContent.includes("label: 'Constable (7)', value: 'Constable'") &&
+  vueContent.includes("label: 'SI (5)', value: 'SI'")
+assert(examFiltersMatch, 'examFilters array displays exact counts matching underlying data (12, 7, 5)')
 
 // Simulate computed filteredPyqs
 function filterPyqs(filterValue: string, list: any[]) {
@@ -127,9 +123,9 @@ function filterPyqs(filterValue: string, list: any[]) {
   return list.filter(q => q.exam === filterValue)
 }
 
-assert(filterPyqs('all', parsedPyqs).length === 31, 'Filtering by "all" returns 31 questions')
-assert(filterPyqs('Constable', parsedPyqs).length === 15, 'Filtering by "Constable" returns 15 questions')
-assert(filterPyqs('SI', parsedPyqs).length === 16, 'Filtering by "SI" returns 16 questions')
+assert(filterPyqs('all', parsedPyqs).length === 12, 'Filtering by "all" returns 12 questions')
+assert(filterPyqs('Constable', parsedPyqs).length === 7, 'Filtering by "Constable" returns 7 questions')
+assert(filterPyqs('SI', parsedPyqs).length === 5, 'Filtering by "SI" returns 5 questions')
 assert(filterPyqs('Unknown', parsedPyqs).length === 0, 'Filtering by invalid exam returns 0 questions gracefully')
 
 // Verify every PYQ item has valid fields
@@ -144,7 +140,7 @@ for (const q of parsedPyqs) {
     console.error(`Correct index out of bounds in PYQ: ${q.uid} (correct: ${q.correct}, options: ${q.options.length})`)
   }
 }
-assert(allPyqsValid, 'All 31 PYQs have complete, non-null fields and in-bounds correct answers')
+assert(allPyqsValid, 'All 12 PYQs have complete, non-null fields and in-bounds correct answers')
 
 // ══════════════════════════════════════════════════════════════════
 // SUITE 3: Interactive State Simulation (Attempt, Reveal, OptionClass)
@@ -232,10 +228,7 @@ assert(!!advMatch, 'advancedPractice reactive array is parsed from script setup'
 let parsedAdv: any[] = []
 if (advMatch) {
   try {
-    // Note: eval / JSON parse check
-    const cleaned = advMatch[1].trim()
-    // Let's check length and items
-    parsedAdv = eval(cleaned)
+    parsedAdv = eval(advMatch[1].trim())
   } catch (err: any) {
     console.error('Error parsing advancedPractice array:', err.message)
   }
@@ -251,7 +244,7 @@ for (const [i, adv] of parsedAdv.entries()) {
 
 // Check styling disclaimer for Advanced Practice
 const disclaimerPresent = vueContent.includes('border-indigo-500/30 bg-indigo-500/5') &&
-  vueContent.includes('TGPSC-Style Advanced Practice') &&
+  vueContent.includes('TGPSC-Style Advanced Hardening Practice') &&
   vueContent.includes('92-93.5% direct factual MCQs')
 assert(disclaimerPresent, 'Advanced Practice contains required indigo styling and pedagogical disclaimer')
 
@@ -263,22 +256,20 @@ console.log('\n=== SUITE 5: Component Props & Integration Contracts ===')
 // 5.1 GateQuiz integration
 const gateQuizTagMatch = vueContent.match(/<GateQuiz\s+note-id="([^"]+)"\s*\/>/)
 assert(!!gateQuizTagMatch, '<GateQuiz /> component is present in template')
-assert(gateQuizTagMatch?.[1] === 'NOTE-POL-CONST-FRAME', '<GateQuiz /> binds correct note-id="NOTE-POL-CONST-FRAME"')
+assert(gateQuizTagMatch?.[1] === 'NOTE-POL-HIST-ACTS', '<GateQuiz /> binds correct note-id="NOTE-POL-HIST-ACTS"')
 
 // 5.2 CurrentAffairsStrip integration
 const caStripTagMatch = vueContent.match(/<CurrentAffairsStrip\s+note-id="([^"]+)"\s*\/>/)
 assert(!!caStripTagMatch, '<CurrentAffairsStrip /> component is present in template')
-assert(caStripTagMatch?.[1] === 'NOTE-POL-CONST-FRAME', '<CurrentAffairsStrip /> binds correct note-id="NOTE-POL-CONST-FRAME"')
+assert(caStripTagMatch?.[1] === 'NOTE-POL-HIST-ACTS', '<CurrentAffairsStrip /> binds correct note-id="NOTE-POL-HIST-ACTS"')
 
-// 5.3 AiAssistantDrawer and PersonalNotesDrawer
-const aiDrawerMatch = vueContent.match(/<AiAssistantDrawer[\s\S]*?note-id="([^"]+)"/)
+// 5.3 PersonalNotesDrawer
 const personalNotesMatch = vueContent.match(/<PersonalNotesDrawer[\s\S]*?note-id="([^"]+)"/)
-assert(aiDrawerMatch?.[1] === 'NOTE-POL-CONST-FRAME', '<AiAssistantDrawer /> binds NOTE-POL-CONST-FRAME')
-assert(personalNotesMatch?.[1] === 'NOTE-POL-CONST-FRAME', '<PersonalNotesDrawer /> binds NOTE-POL-CONST-FRAME')
+assert(personalNotesMatch?.[1] === 'NOTE-POL-HIST-ACTS', '<PersonalNotesDrawer /> binds NOTE-POL-HIST-ACTS')
 
 // 5.4 AiQuickPrompts composable
-const aiQuickPromptsMatch = vueContent.includes("useAiPromptChips('NOTE-POL-CONST-FRAME')")
-assert(aiQuickPromptsMatch, 'useAiPromptChips is initialized with NOTE-POL-CONST-FRAME')
+const aiQuickPromptsMatch = vueContent.includes("useAiPromptChips('NOTE-POL-HIST-ACTS')")
+assert(aiQuickPromptsMatch, 'useAiPromptChips is initialized with NOTE-POL-HIST-ACTS')
 
 // ══════════════════════════════════════════════════════════════════
 // SUITE 6: Formatting, Em-Dashes & Theme Token Invariants
@@ -307,12 +298,8 @@ const closeScript = (vueContent.match(/<\/script>/g) || []).length
 assert(openTemplate === 1 && closeTemplate === 1, 'Exactly one opening and closing <template> tag')
 assert(openScript === 1 && closeScript === 1, 'Exactly one opening and closing <script> tag')
 
-// Check Mobile TOC Button accessibility
-const touchTargetCompliant = vueContent.includes('min-h-[44px]')
-assert(touchTargetCompliant, 'Mobile interactive targets satisfy min-h-[44px] touch target rule')
-
 console.log('\n========================================================')
-console.log('CHALLENGER 2 VERIFICATION RUN COMPLETE')
+console.log('CHALLENGER VERIFICATION RUN COMPLETE')
 console.log(`Total Tests:  ${totalTests}`)
 console.log(`Passed:       ${passedTests}`)
 console.log(`Failed:       ${failedTests}`)

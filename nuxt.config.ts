@@ -31,12 +31,31 @@ export default defineNuxtConfig({
       inline: [/@iconify-json/],
     },
 
-    // Pre-render the homepage and crawl all linked routes.
-    // On CF Pages this produces fully-static HTML for all note pages,
-    // so they load at edge speed even before a user is authenticated.
+    // Pre-render active notes and subject hubs statically.
+    // Explicit routes array avoids slow recursive crawling and V8 heap limits.
     prerender: {
-      routes: ['/'],
-      crawlLinks: true,
+      routes: [
+        '/',
+        '/notes/polity',
+        '/notes/polity/historical-background-1773-1947',
+        '/notes/polity/making-of-the-constitution',
+        '/notes/geography',
+        '/notes/geography/drainage-system-of-india',
+        '/notes/geography/dams-in-india',
+        '/notes/geography/mountains-in-india',
+        '/notes/geography/forests-in-india',
+        '/notes/geography/irrigation-in-india',
+        '/notes/telangana',
+        '/notes/telangana/telangana-statehood-movement',
+        '/pyq-archive',
+      ],
+      crawlLinks: false,
+    },
+  },
+
+  routeRules: {
+    '/notes/polity/constitutional-framework-and-preamble': {
+      redirect: { to: '/notes/polity/historical-background-1773-1947', statusCode: 301 },
     },
   },
 

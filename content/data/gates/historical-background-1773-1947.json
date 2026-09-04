@@ -1,9 +1,9 @@
 {
-  "note_id": "NOTE-POL-CONST-FRAME",
+  "note_id": "NOTE-POL-HIST-ACTS",
   "pass_threshold": 3,
   "questions": [
     {
-      "id": "GATE-POL-CFP-01",
+      "id": "GATE-POL-HIST-01",
       "question": "Which British enactment designated the Governor of Bengal as the 'Governor-General of Bengal' and provided for the establishment of a Supreme Court at Fort William in Calcutta?",
       "options": [
         "Regulating Act of 1773",
@@ -15,7 +15,7 @@
       "explanation": "The Regulating Act of 1773 was the first parliamentary control over the East India Company. It designated the Governor of Bengal as the Governor-General of Bengal (Lord Warren Hastings) and created a Supreme Court at Calcutta in 1774 with Sir Elijah Impey as Chief Justice."
     },
     {
-      "id": "GATE-POL-CFP-02",
+      "id": "GATE-POL-HIST-02",
       "question": "The system of 'Double Government', which established the Board of Control to supervise political and military affairs while leaving commercial operations to the Court of Directors, was introduced by which Act?",
       "options": [
         "Charter Act of 1813",
@@ -27,7 +27,7 @@
       "explanation": "Pitt's India Act of 1784 established Double Government. The Court of Directors managed commercial affairs, while a new 6-member Board of Control supervised civil, military, and revenue affairs. It also termed Company possessions as 'British possessions in India' for the first time."
     },
     {
-      "id": "GATE-POL-CFP-03",
+      "id": "GATE-POL-HIST-03",
       "question": "Which Charter Act marked the culmination of legislative centralization in British India by creating the office of 'Governor-General of India' and completely ending the commercial activities of the East India Company?",
       "options": [
         "Charter Act of 1813",
@@ -39,7 +39,7 @@
       "explanation": "The Charter Act of 1833 made the Governor-General of Bengal the Governor-General of India (Lord William Bentinck was the first). It abolished all remaining commercial monopolies of the EIC (tea and China trade), making it purely an administrative body, and added a Law Member (Lord Macaulay) to the Governor-General's Council."
     },
     {
-      "id": "GATE-POL-CFP-04",
+      "id": "GATE-POL-HIST-04",
       "question": "Under the Government of India Act 1919 (Montagu-Chelmsford Reforms), Dyarchy was introduced at the provincial level. Which of the following subjects was classified as a 'Transferred' subject rather than a 'Reserved' subject?",
       "options": [
         "Police",
@@ -51,7 +51,7 @@
       "explanation": "Under the 1919 Act, provincial subjects were divided into Reserved and Transferred. Transferred subjects (administered by the Governor with the advice of elected Ministers) included Local Self-Government, Health, and Education. Reserved subjects (administered by the Governor and his Executive Council without legislative accountability) included Police, Land Revenue, and Justice (PYQ-0759)."
     },
     {
-      "id": "GATE-POL-CFP-05",
+      "id": "GATE-POL-HIST-05",
       "question": "The Government of India Act of 1935 abolished provincial Dyarchy and introduced 'Provincial Autonomy'. Where were the residuary legislative powers vested under this Act?",
       "options": [
         "Federal Legislature",

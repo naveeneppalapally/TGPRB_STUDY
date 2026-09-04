@@ -491,7 +491,8 @@ const highYieldNotes = [
   { label: "Mountains & Passes in India", to: "/notes/geography/mountains-in-india", section: "GEO" },
   { label: "Forests of India", to: "/notes/geography/forests-in-india", section: "GEO" },
   { label: "Irrigation in India & TG", to: "/notes/geography/irrigation-in-india", section: "GEO" },
-  { label: "Constitutional Framework & Preamble", to: "/notes/polity/constitutional-framework-and-preamble", section: "POL" },
+  { label: "Historical Background (1773-1947)", to: "/notes/polity/historical-background-1773-1947", section: "POL" },
+  { label: "Making of the Constitution", to: "/notes/polity/making-of-the-constitution", section: "POL" },
   { label: "Telangana Statehood Movement", to: "/notes/telangana/telangana-statehood-movement", section: "TEL" },
 ]
 
