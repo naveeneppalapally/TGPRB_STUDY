@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "General Studies"
 topic: "Rashtriya Ekta Diwas 2025 and 150th Birth Anniversary of Sardar Patel"
-related_topic_ids: ["NOTE-TEL-HISTORY", "NOTE-POL-HISTORY"]
+related_topic_ids: ["NOTE-HIS-MODERN", "NOTE-POL-HISTORY", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

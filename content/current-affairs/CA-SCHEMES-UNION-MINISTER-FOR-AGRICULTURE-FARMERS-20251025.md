@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Pradhan Mantri Dhan Dhaanya Krishi Yojana (PM-DDKY)"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-SCHEMES-CENTRAL"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "SARTHI Taskforce for ITI Transformation"
-related_topic_ids: ["NOTE-SCHEMES-SKILL", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCHEMES-SKILL", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

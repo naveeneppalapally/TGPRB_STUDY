@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Swadesh Darshan Scheme and Tourism Sector Statistics"
-related_topic_ids: ["NOTE-ECO-TOURISM", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-TOURISM"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

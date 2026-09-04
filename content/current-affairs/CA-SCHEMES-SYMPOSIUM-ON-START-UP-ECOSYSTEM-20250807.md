@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Venture Capital Fund for Scheduled Tribes"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-SCHEMES", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

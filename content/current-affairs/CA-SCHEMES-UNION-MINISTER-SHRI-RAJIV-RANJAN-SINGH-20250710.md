@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Launch of 17 New Fisheries Clusters Under PMMSY"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

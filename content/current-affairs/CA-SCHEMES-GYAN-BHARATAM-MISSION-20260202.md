@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Gyan Bharatam Mission"
-related_topic_ids: ["NOTE-SCHEMES-GOVT", "NOTE-TEL-CULTURE"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-SCHEMES-GOVT", "NOTE-TEL-CULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

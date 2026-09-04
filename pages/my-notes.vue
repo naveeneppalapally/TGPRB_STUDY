@@ -216,6 +216,11 @@ const noteMetadata: Record<string, { title: string, section: string, route: stri
     section: 'Polity',
     route: '/notes/polity/constitutional-framework-and-preamble',
   },
+  'NOTE-POL-MAKING-CONST': {
+    title: 'Making of the Indian Constitution',
+    section: 'Polity',
+    route: '/notes/polity/making-of-the-constitution',
+  },
   'NOTE-POL-UNION-EXEC': {
     title: 'Union Executive & Parliament',
     section: 'Polity',

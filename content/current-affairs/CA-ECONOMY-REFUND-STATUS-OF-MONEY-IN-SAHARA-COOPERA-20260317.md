@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "CRCS-Sahara Refund Portal and MSCS Act 2002"
-related_topic_ids: ["NOTE-ECO-COOPERATIVES", "NOTE-POL-JUDICIARY"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-COOPERATIVES", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

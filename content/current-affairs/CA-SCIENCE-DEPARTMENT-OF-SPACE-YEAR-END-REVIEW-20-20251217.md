@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "ISRO SPADEX and CROPS Space Missions"
-related_topic_ids: ["NOTE-SCI-SPACE"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

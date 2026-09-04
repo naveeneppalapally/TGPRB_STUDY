@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM SVANidhi Scheme Details and Impact Study"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-TEL-HYDERABAD"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

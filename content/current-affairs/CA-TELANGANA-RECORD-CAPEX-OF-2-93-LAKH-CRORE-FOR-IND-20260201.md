@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "7 High-Speed Rail Corridors and Railway CapEx"
-related_topic_ids: ["NOTE-TEL-INFRA", "NOTE-ECO-INFRA"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-INFRA", "NOTE-TEL-INFRA"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

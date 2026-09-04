@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Geography"
 topic: "IWDC 3.0 Meeting and Inland Waterways Infrastructure"
-related_topic_ids: ["NOTE-GEO-INFRASTRUCTURE", "NOTE-TEL-GEOGRAPHY"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-INFRASTRUCTURE", "NOTE-TEL-GEOGRAPHY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

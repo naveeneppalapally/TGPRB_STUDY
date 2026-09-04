@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "10 Years of Skill India Mission and Launch of SOAR Initiative"
-related_topic_ids: ["NOTE-ECO-SKILLING", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-SKILLING", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

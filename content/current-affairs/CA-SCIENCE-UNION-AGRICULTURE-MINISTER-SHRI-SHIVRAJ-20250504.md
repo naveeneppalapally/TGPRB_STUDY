@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "India's First Genome-Edited Rice Varieties"
-related_topic_ids: ["NOTE-SCI-AGRI", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-SCI-AGRI", "NOTE-TEL-INSTITUTES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

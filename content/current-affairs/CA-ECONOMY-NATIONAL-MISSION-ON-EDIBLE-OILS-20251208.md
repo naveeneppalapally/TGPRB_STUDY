@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "National Mission on Edible Oils and Agriculture Trends"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GS-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

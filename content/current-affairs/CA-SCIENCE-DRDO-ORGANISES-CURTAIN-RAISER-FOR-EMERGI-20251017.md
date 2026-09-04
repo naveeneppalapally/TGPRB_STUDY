@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "ESTIC-2025 Curtain Raiser at DRDL Hyderabad"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-DEF-DRDO"]
+related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

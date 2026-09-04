@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "3rd National Mining Ministers Conference in Konark"
-related_topic_ids: ["NOTE-ECO-MINERALS", "NOTE-GEO-RESOURCES"]
+related_topic_ids: ["NOTE-ECO-MINERALS", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

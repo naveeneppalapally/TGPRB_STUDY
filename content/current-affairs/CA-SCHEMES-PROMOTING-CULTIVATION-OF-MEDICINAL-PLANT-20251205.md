@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "e-CHARAK Portal and Medicinal Plants Cultivation Schemes"
-related_topic_ids: ["NOTE-GOVT-SCHEMES", "NOTE-AGRI-HORTICULTURE"]
+related_topic_ids: ["NOTE-AGRI-HORTICULTURE", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-GOVT-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

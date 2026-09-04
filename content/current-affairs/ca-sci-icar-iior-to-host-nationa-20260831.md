@@ -4,8 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Science and Space"
-related_topic_ids:
-  - "NOTE-SCI-GENERAL"
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-GENERAL"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "si"
@@ -17,7 +16,8 @@ published_at: "2026-08-31"
 date: "2026-08-31"
 source_name: "PIB"
 source_type: "official"
-ministry: "Ministry of Agriculture & Farmers Welfare"
+ministry: "Ministry of Agriculture &
+ Farmers Welfare"
 canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2304989&reg=3&lang=1"
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2304989&reg=3&lang=1"
 event_key: "ICAR-IIOR-OILSEED-MEET-2026"

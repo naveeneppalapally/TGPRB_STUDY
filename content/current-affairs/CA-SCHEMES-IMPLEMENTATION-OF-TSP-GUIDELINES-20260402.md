@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Development Action Plan for Scheduled Tribes (DAPST)"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-SCHEMES", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-POL-SCHEMES", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

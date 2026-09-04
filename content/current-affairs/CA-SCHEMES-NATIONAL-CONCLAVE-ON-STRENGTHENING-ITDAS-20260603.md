@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Space Labs in 75 EMRSs and Semiconductor Training Fab at IISc Bengaluru"
-related_topic_ids: ["NOTE-SCHEMES-TRIBAL", "NOTE-SCI-TECH"]
+related_topic_ids: ["NOTE-SCHEMES-TRIBAL", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

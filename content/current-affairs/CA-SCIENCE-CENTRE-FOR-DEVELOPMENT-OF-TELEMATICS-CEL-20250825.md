@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "C-DOT 42nd Foundation Day and NIDHI Initiative"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "National Workshop on Fisheries Cooperative Societies in Hyderabad"
-related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-ECO-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

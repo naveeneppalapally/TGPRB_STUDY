@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Left-Wing Extremism and Anti-Naxal Operations"
-related_topic_ids: ["NOTE-DEF-INTERNAL-SECURITY", "NOTE-POL-PARLIAMENT"]
+related_topic_ids: ["NOTE-DEF-INTERNAL-SECURITY", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

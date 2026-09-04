@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "BharatGen Sovereign Multilingual AI Stack"
-related_topic_ids: ["NOTE-SCI-AI", "NOTE-SCI-TECH"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-POL-CONST-FRAME", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

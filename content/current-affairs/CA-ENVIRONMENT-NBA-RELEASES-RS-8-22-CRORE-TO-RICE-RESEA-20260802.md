@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "General Studies"
 topic: "National Biodiversity Authority ABS Disbursement"
-related_topic_ids: ["NOTE-GEO-ENVIRONMENT", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-TEL-INSTITUTIONS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

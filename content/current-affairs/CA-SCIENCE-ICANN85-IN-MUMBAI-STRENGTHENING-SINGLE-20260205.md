@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "ICANN 85th Public Meeting in Mumbai"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-INT-ORGS"]
+related_topic_ids: ["NOTE-INT-ORGS", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

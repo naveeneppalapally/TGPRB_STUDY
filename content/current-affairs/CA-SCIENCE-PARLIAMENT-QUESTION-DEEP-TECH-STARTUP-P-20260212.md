@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Deep Tech Policy and RDI Scheme"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GOVT-SCHEMES"]
+related_topic_ids: ["NOTE-GOVT-SCHEMES", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

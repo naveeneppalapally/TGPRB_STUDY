@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "SARAS Ajeevika Mela 2025"
-related_topic_ids: ["NOTE-SCH-DAYNRLM", "NOTE-TEL-CULTURE"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-JUDICIARY", "NOTE-POL-PANCHAYAT", "NOTE-SCH-DAYNRLM", "NOTE-TEL-CULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

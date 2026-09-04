@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Polity"
 topic: "National Panchayati Raj Day 2025"
-related_topic_ids: ["NOTE-POL-PANCHAYATI-RAJ", "NOTE-TEL-GOVERNANCE"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-CONST-FRAME", "NOTE-POL-PANCHAYAT", "NOTE-POL-PANCHAYATI-RAJ", "NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

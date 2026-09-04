@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Bharatiya Vayuyan Adhiniyam 2024 and Civil Aviation Achievements"
-related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-POL-LEGISLATION"]
+related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-POL-LEGISLATION", "NOTE-POL-MAKING-CONST"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

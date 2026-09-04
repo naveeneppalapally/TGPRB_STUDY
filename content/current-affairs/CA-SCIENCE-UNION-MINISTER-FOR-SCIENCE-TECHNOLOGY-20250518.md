@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "SPRINT Deep-Tech Startup Initiative and Innovation Progress"
-related_topic_ids: ["NOTE-ST-STARTUPS", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ST-STARTUPS", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "Viksit Krishi Sankalp Abhiyan in Telangana"
-related_topic_ids: ["NOTE-TEL-SCHEMES", "NOTE-ECO-AGRICULTURE"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

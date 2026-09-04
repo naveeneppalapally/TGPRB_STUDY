@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Nd-Fe-B Rare Earth Permanent Magnets Pilot Plant at ARCI Hyderabad"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-HYDERABAD"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

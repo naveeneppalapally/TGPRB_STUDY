@@ -4,8 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids:
-  - "NOTE-ECO-GENERAL"
+related_topic_ids: ["NOTE-ECO-GENERAL", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

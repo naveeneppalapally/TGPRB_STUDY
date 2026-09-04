@@ -4,7 +4,7 @@ import json
 import sqlite3
 import re
 from datetime import datetime, UTC
-from typing import List, Optional
+from typing import List, Optional, Literal
 from pydantic import BaseModel, Field
 
 # Ensure imports work
@@ -13,11 +13,23 @@ sys.path.insert(0, os.path.abspath('.'))
 from scripts.pyq_pipeline.run_pipeline import load_env, get_client
 from google.genai import types
 
-DB_PATH = 'workers/scrapy-pib/pib_master_2025_2026.db'
-MANIFEST_PATH = 'data/pib_scored_manifest.json'
-OUTPUT_DIR = 'content/current-affairs'
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
+DB_PATH = os.path.join(ROOT_DIR, 'workers/scrapy-pib/pib_master_2025_2026.db')
+MANIFEST_PATH = os.path.join(ROOT_DIR, 'data/pib_scored_manifest.json')
+OUTPUT_DIR = os.path.join(ROOT_DIR, 'content/current-affairs')
+TOPICS_MASTER_PATH = os.path.join(ROOT_DIR, 'data/topics_master.json')
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+if os.path.exists(TOPICS_MASTER_PATH):
+    with open(TOPICS_MASTER_PATH, 'r', encoding='utf-8') as f:
+        TOPICS_MASTER = json.load(f)
+else:
+    TOPICS_MASTER = []
+
+ALIAS_MAP = {alias: t['id'] for t in TOPICS_MASTER for alias in t.get('aliases', [])}
+VALID_NOTE_IDS = tuple(t['id'] for t in TOPICS_MASTER) if TOPICS_MASTER else ("NOTE-GEO-DRAINAGE",)
+ValidNoteId = Literal.__getitem__(VALID_NOTE_IDS)
 
 class MCQSchema(BaseModel):
     question: str = Field(description="Exact exam-style question in who/what/where/which format")
@@ -30,7 +42,7 @@ class CACardSchema(BaseModel):
     category: str = Field(description="One of: appointments, international, economy, awards, sports, telangana, schemes, defence, judiciary, science, books, environment")
     exam_section: str = Field(description="One of: Polity, Geography, Economy, General Studies, Science & Technology, Telangana")
     topic: str = Field(description="Short, specific topic title")
-    related_topic_ids: List[str] = Field(default=[], description="Matching note IDs e.g. NOTE-GEO-ENVIRONMENT, NOTE-POL-PARLIAMENT, NOTE-TEL-CULTURE")
+    related_topic_ids: List[ValidNoteId] = Field(default=[], description="Matching note IDs strictly from the closed list of valid study topics. Use [] if none match.")
     is_telangana_focus: bool = Field(description="True if article specifically mentions Telangana state, Hyderabad, or state initiatives")
     difficulty: str = Field(description="F for Famous/Easy, M for Medium, O for Obscure/Hard")
     headline: str = Field(description="One-sentence clear summary headline")
@@ -38,7 +50,9 @@ class CACardSchema(BaseModel):
     summary: str = Field(description="2-3 sentence background context for students")
     mcqs: List[MCQSchema] = Field(description="1 to 2 exam-ready MCQs derived from the text", min_length=1)
 
-EXTRACTION_SYSTEM_PROMPT = """
+topics_list_str = "\n".join(f"- {t['id']}: {t['title']} ({t['subject']})" for t in TOPICS_MASTER)
+
+EXTRACTION_SYSTEM_PROMPT = f"""
 You are the Chief Psychometrician and Current Affairs Content Director for TSLPRB StudyOS (Telangana Police Constable & SI Exams).
 
 Your job is to read an official government press release and determine if it contains an EXAM-TESTABLE FACT for competitive exams.
@@ -54,7 +68,11 @@ CRITICAL RULES:
    - Options MUST be 4 distinct, plausible options.
    - Answer index (0-3) must be the exact correct option.
    - Explanation must cite the fact from the text.
-7. NO EM-DASHES (—). Use hyphens (-) or colons (:).
+7. NO EM-DASHES. Use hyphens (-) or colons (:).
+8. RELATED TOPIC IDS:
+   You MUST ONLY assign `related_topic_ids` from the following closed list of registered study topics:
+{topics_list_str}
+   Do NOT invent, abbreviate, or hallucinate other topic IDs. If the article does not strongly relate to any of these specific topics, return an empty array [].
 """
 
 def fetch_full_article(prid: int) -> Optional[dict]:
@@ -79,13 +97,22 @@ def write_ca_markdown(card_data: dict, full_art: dict) -> str:
     filename = f"{card_id}.md"
     filepath = os.path.join(OUTPUT_DIR, filename)
 
+    valid_ids_set = set(VALID_NOTE_IDS)
+    raw_ids = card_data.get('related_topic_ids', [])
+    sanitized_ids = []
+    for tid in raw_ids:
+        tid_str = str(tid).strip()
+        canonical = ALIAS_MAP.get(tid_str, tid_str)
+        if canonical in valid_ids_set and canonical not in sanitized_ids:
+            sanitized_ids.append(canonical)
+
     frontmatter = {
         'id': card_id,
         'type': 'current_affair',
         'category': card_data['category'],
         'exam_section': card_data['exam_section'],
         'topic': card_data['topic'],
-        'related_topic_ids': card_data.get('related_topic_ids', []),
+        'related_topic_ids': sanitized_ids,
         'is_telangana_focus': card_data['is_telangana_focus'],
         'difficulty': card_data['difficulty'],
         'exam_depth': 'both',

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "National Quantum Mission and S&T Entrepreneurship Initiatives"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

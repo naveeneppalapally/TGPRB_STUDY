@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "IN-SPACe Seed Fund and SwetchaSat V0 Satellite"
-related_topic_ids: ["NOTE-SCI-SPACE", "NOTE-SCI-TECH"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

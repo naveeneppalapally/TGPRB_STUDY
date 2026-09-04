@@ -4,9 +4,7 @@ type: "current_affair"
 category: "geography"
 exam_section: "Indian & World Geography"
 topic: "Flood Management in India - Northeast Rivers"
-related_topic_ids:
-  - "NOTE-GEO-IRRIGATION"
-  - "NOTE-GEO-DRAINAGE"
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-CONST-FRAME"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

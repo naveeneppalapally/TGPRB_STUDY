@@ -40,6 +40,87 @@ console.log(`Found ${notePages.length} active topic note pages to audit:`)
 notePages.forEach(p => console.log(`  - ${p}`))
 console.log('')
 
+// Read Topics Master registry
+const topicsMasterPath = path.join(ROOT, 'data/topics_master.json')
+interface MasterTopic {
+  id: string
+  subject: string
+  title: string
+  keywords: string[]
+  aliases: string[]
+}
+
+const masterTopicsMap = new Map<string, MasterTopic>()
+if (!fs.existsSync(topicsMasterPath)) {
+  addDefect('data/topics_master.json', 'Missing single source of truth registry: data/topics_master.json')
+} else {
+  try {
+    const rawTopics: MasterTopic[] = JSON.parse(fs.readFileSync(topicsMasterPath, 'utf-8'))
+    if (!Array.isArray(rawTopics) || rawTopics.length === 0) {
+      addDefect('data/topics_master.json', 'data/topics_master.json must be a non-empty array.')
+    } else {
+      for (const t of rawTopics) {
+        if (!t.id) addDefect('data/topics_master.json', 'Topic entry missing "id".')
+        if (!t.subject) addDefect('data/topics_master.json', `Topic "${t.id}" missing "subject".`)
+        if (!t.title) addDefect('data/topics_master.json', `Topic "${t.id}" missing "title".`)
+        if (!Array.isArray(t.keywords)) addDefect('data/topics_master.json', `Topic "${t.id}" missing "keywords".`)
+        if (!Array.isArray(t.aliases)) addDefect('data/topics_master.json', `Topic "${t.id}" missing "aliases".`)
+        masterTopicsMap.set(t.id, t)
+        for (const alias of (t.aliases || [])) {
+          masterTopicsMap.set(alias, t)
+        }
+      }
+    }
+  } catch (e: any) {
+    addDefect('data/topics_master.json', `Corrupted topics_master.json syntax: ${e.message}`)
+  }
+}
+
+// Read Current Affairs cards to index topic coverage
+const caFiles = globSync('content/current-affairs/*.md', { cwd: ROOT })
+const caTopicCounts = new Map<string, number>()
+for (const cf of caFiles) {
+  try {
+    const raw = fs.readFileSync(path.join(ROOT, cf), 'utf-8')
+    const jsonMatch = raw.match(/related_topic_ids:\s*(\[[^\]]*\])/)
+    if (jsonMatch) {
+      try {
+        const ids = JSON.parse(jsonMatch[1])
+        for (const id of ids) {
+          caTopicCounts.set(id, (caTopicCounts.get(id) || 0) + 1)
+        }
+      } catch {
+        const rawItems = jsonMatch[1].match(/["']([^"']+)["']/g) || []
+        for (const item of rawItems) {
+          const val = item.replace(/^["']|["']$/g, '')
+          caTopicCounts.set(val, (caTopicCounts.get(val) || 0) + 1)
+        }
+      }
+    } else {
+      const lines = raw.split('\n')
+      let inList = false
+      for (const line of lines) {
+        if (line.startsWith('related_topic_ids:')) {
+          inList = true
+          continue
+        }
+        if (inList) {
+          if (line.startsWith('  - ') || line.startsWith('    - ') || line.startsWith('- ')) {
+            const val = line.replace(/^\s*-\s*/, '').trim().replace(/^["']|["']$/g, '')
+            if (val) {
+              caTopicCounts.set(val, (caTopicCounts.get(val) || 0) + 1)
+            }
+          } else if (line.trim() === '' || line.startsWith('---') || /^[a-zA-Z0-9_]+:/.test(line)) {
+            break
+          }
+        }
+      }
+    }
+  } catch (e: any) {
+    addDefect(cf, `Corrupted Current Affairs card syntax: ${e.message}`)
+  }
+}
+
 // Read API registries
 const gateApiContent = fs.readFileSync(path.join(ROOT, 'server/api/gate/[noteId].get.ts'), 'utf-8')
 const fcApiContent = fs.readFileSync(path.join(ROOT, 'server/api/flashcards/[noteId].get.ts'), 'utf-8')
@@ -107,6 +188,24 @@ for (const notePage of notePages) {
   // Validate format
   if (!/^NOTE-[A-Z]+-[A-Z0-9-]+$/.test(noteId)) {
     addDefect(notePage, `Malformed note-id "${noteId}". Must follow "NOTE-{SECTION}-{TOPIC}".`)
+  }
+
+  // Verify registration in data/topics_master.json
+  const masterEntry = masterTopicsMap.get(noteId)
+  if (!masterEntry) {
+    addDefect(notePage, `Note ID "${noteId}" is NOT registered in data/topics_master.json.`)
+  } else if (masterEntry.id !== noteId) {
+    addDefect(notePage, `Note ID "${noteId}" is a legacy alias for canonical ID "${masterEntry.id}". Note pages must use canonical topic IDs.`)
+  }
+
+  // Verify Current Affairs coverage
+  const allowedIds = masterEntry ? [masterEntry.id, ...(masterEntry.aliases || [])] : [noteId]
+  let directCaCount = 0
+  for (const id of allowedIds) {
+    directCaCount += (caTopicCounts.get(id) || 0)
+  }
+  if (directCaCount === 0) {
+    addDefect(notePage, `Note ID "${noteId}" has 0 tagged current affairs cards. Run "npm run sync:ca-topics" to tag cards.`)
   }
 
   // Check CurrentAffairsStrip
@@ -235,6 +334,8 @@ if (defects.length > 0) {
 }
 
 console.log(`✔ ALL ${verifiedCount} ACTIVE TOPIC NOTE PAGES FULLY VERIFIED.`)
+console.log('✔ Master Topics registry verified (data/topics_master.json).')
+console.log('✔ Current Affairs coverage verified for all active topic pages.')
 console.log('✔ Comprehension Gate JSONs present and valid (>= 5 questions with options and explanations).')
 console.log('✔ Nitro /api/gate/[noteId] API endpoints registered.')
 console.log('✔ Atomic Flashcard decks present and valid (>= 10 cards with front/back).')

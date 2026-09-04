@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "General Studies"
 topic: "Sri Sathya Sai Baba Centenary Celebrations"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-GEO-RIVERS", "NOTE-GEO-IRRIGATION"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

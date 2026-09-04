@@ -121,11 +121,13 @@ The forensic audit (`docs/forensic-paper-setting-evolution-audit-2026-08-15.md`)
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
 - **Mandatory Topic Delivery Integrity Gate (Zero Half-Baked Notes)**:
   A note page is NEVER complete just because its `.vue` file was authored. Every topic note page MUST satisfy the full contract:
-  1. `content/data/gates/<topic>.json` with at least 5 factual MCQs, registered in `server/api/gate/[noteId].get.ts`.
-  2. `content/data/flashcards/<subject>/<topic>.json` with at least 10 atomic flashcards, with `note_id` property, registered in `server/api/flashcards/[noteId].get.ts`.
-  3. Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching the registered `note-id`.
-  4. Both 'gate' and 'current-affairs' registered in the TOC `sections` array.
-  5. `npm run verify:integrity` MUST pass with exit code 0 before any note task is considered done.
+  1. `data/topics_master.json` registration: Entry must exist with canonical `id`, `subject`, `title`, `keywords`, and `aliases`.
+  2. `content/data/gates/<topic>.json` with at least 5 factual MCQs, registered in `server/api/gate/[noteId].get.ts`.
+  3. `content/data/flashcards/<subject>/<topic>.json` with at least 10 atomic flashcards, with `note_id` property, registered in `server/api/flashcards/[noteId].get.ts`.
+  4. Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching the registered `note-id`.
+  5. Both 'gate' and 'current-affairs' registered in the TOC `sections` array.
+  6. Current affairs coverage: Topic must be tagged in `content/current-affairs/*.md` via `npm run sync:ca-topics`.
+  7. `npm run verify:integrity` MUST pass with exit code 0 before any note task is considered done.
 - **Subject Banks navigation invariant**: All subject links in `layouts/default.vue` (`const subjects`) and `pages/index.vue` (`openSubject`) must route to Subject Hubs (`/notes/<subject>`), never directly bypassing to an individual note topic.
 
 ## Fact verification - never assume, always cite the data year
@@ -305,9 +307,68 @@ Example bottom-of-page layout structure:
 </section>
 ```
 
+### 5-Pillar Topic Mapping Architecture (Permanent Solution)
+
+To solve current affairs topic mapping permanently across all present and future study topics, the pipeline enforces a 5-pillar architecture:
+
+1. **Pillar 1: data/topics_master.json (Single Source of Truth)**:
+   - Central JSON registry of all study topics across TSLPRB StudyOS.
+   - Closed universe of canonical `NOTE-ID`s.
+   - Every topic entry requires 5 mandatory fields:
+     - `id`: Unique identifier (e.g. `NOTE-GEO-DRAINAGE`). Format: `NOTE-{SECTION}-{TOPIC}`.
+     - `subject`: High-level subject area (e.g. `Geography`, `Polity`, `Telangana`, `Economy`, `Science & Technology`, `History`).
+     - `title`: Human-readable topic title.
+     - `keywords`: Array of pinpoint, exam-relevant search phrases used for deterministic matching.
+     - `aliases`: Recognized legacy or alternate topic tags mapped to the canonical `id`.
+
+2. **Pillar 2: Closed Enum Extraction (extract_ca_cards.py)**:
+   - `extract_ca_cards.py` reads `data/topics_master.json` directly.
+   - Gemini 3.6 Flash structured output schema enforces `related_topic_ids: List[ValidNoteId]` where `ValidNoteId` is a typed `Literal` enum matching only registered topic IDs.
+   - The extraction prompt explicitly lists all valid topics with subjects and titles. Hallucinated or arbitrary topic IDs are strictly prevented.
+
+3. **Pillar 3: Deterministic Sync Pipeline (scripts/pib_ca_pipeline/sync_ca_topics.py & npm run sync:ca-topics)**:
+   - Fast, idempotent script that audits all markdown cards in `content/current-affairs/*.md`.
+   - Retroactively normalizes legacy aliases to canonical `NOTE-ID`s.
+   - Evaluates card text against `topics_master.json` keywords using regex word boundaries (`\b`) to eliminate false substring positives.
+   - Must be executed after modifying `data/topics_master.json` or running card extraction batches:
+     ```bash
+     npm run sync:ca-topics
+     ```
+
+4. **Pillar 4: Tier 2 Subject Digest Fallback (CurrentAffairsStrip.vue)**:
+   - `CurrentAffairsStrip.vue` imports `data/topics_master.json` directly to resolve aliases.
+   - If a topic has fewer than 3 directly tagged cards, it automatically activates the **Subject Digest Fallback**.
+   - Pulls recent high-yield current affairs from the broader subject section (e.g., `POLITY DIGEST`, `GEOGRAPHY DIGEST`, `TELANGANA DIGEST`).
+   - Renders an informative subject digest chip in the strip header, ensuring no student ever sees an empty current affairs container.
+
+5. **Pillar 5: Gatekeeper Enforcement (scripts/verify-topic-integrity.ts)**:
+   - Automated contract verification executed in `prebuild`, `predev`, and `npm test`.
+   - Verifies that every note page's `note-id` is registered in `data/topics_master.json` and uses canonical topic IDs (never aliases).
+   - Verifies that every note topic has verified current affairs coverage in `content/current-affairs/*.md`.
+
+### Topic Creation Workflow (Step-by-Step Contract)
+
+Whenever adding a new study topic note to TSLPRB StudyOS, follow this strict sequence:
+1. **Register in `data/topics_master.json`**:
+   - Assign canonical ID (`NOTE-{SECTION}-{TOPIC}`).
+   - Define human-readable `title` and canonical `subject`.
+   - Provide 15-30 pinpoint `keywords` for deterministic matching.
+   - List any legacy or alternative tags under `aliases`.
+2. **Sync Current Affairs**:
+   - Run `npm run sync:ca-topics` to retroactively tag existing cards and normalize aliases across `content/current-affairs/*.md`.
+3. **Author Note Page**:
+   - Follow the subject-specific cognitive scaffold (`docs/tslprb-pyq-processing-engine-research-report.md`).
+   - Conclude with the mandatory 4-stage closing block: PYQs, Advanced Practice, Comprehension Gate, and Current Affairs Strip.
+   - Register `'gate'` and `'current-affairs'` in the right-side Table of Contents `sections` array.
+4. **Author Gate & Flashcards**:
+   - Gate: `content/data/gates/<topic>.json` (>= 5 MCQs) + register in `server/api/gate/[noteId].get.ts`.
+   - Flashcards: `content/data/flashcards/<subject>/<topic>.json` (>= 10 cards) + register in `server/api/flashcards/[noteId].get.ts`.
+5. **Enforce Integrity**:
+   - Run `npm run verify:integrity` and ensure exit code 0 before finalizing.
+
 ### Does the extractor auto-tag topics?
 
-**Yes - Gemini reads each article and tags matching NOTE-IDs.** `extract_ca_cards.py` sends the full article text to Gemini 3.6 Flash, which reads the content and assigns matching `related_topic_ids` (e.g. `NOTE-GEO-DRAINAGE` for a river/dam article) from the known NOTE-ID list.
+**Yes - Gemini reads each article and tags matching NOTE-IDs from topics_master.json.** `extract_ca_cards.py` sends the full article text to Gemini 3.6 Flash, which reads the content and assigns matching `related_topic_ids` strictly from the closed enum in `data/topics_master.json`.
 
 After bulk generation, run the Telangana retagger to normalize `is_telangana_focus`:
 ```bash

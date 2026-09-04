@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "PM MITRA Parks and SITP Scheme"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-GOVT-SCHEMES"]
+related_topic_ids: ["NOTE-GOVT-SCHEMES", "NOTE-TEL-CULTURE", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

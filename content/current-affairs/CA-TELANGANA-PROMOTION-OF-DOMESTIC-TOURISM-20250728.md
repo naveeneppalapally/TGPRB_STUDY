@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Swadesh Darshan 2.0 Tourism Projects in Telangana"
-related_topic_ids: ["NOTE-TEL-TOURISM", "NOTE-GOI-SCHEMES", "NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-FORESTS", "NOTE-GOI-SCHEMES", "NOTE-TEL-CULTURE", "NOTE-TEL-TOURISM"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

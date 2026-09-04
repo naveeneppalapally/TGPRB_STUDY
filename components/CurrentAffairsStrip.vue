@@ -2,11 +2,23 @@
   <section v-if="items.length" class="rounded-xl border b-line bg-sub overflow-hidden">
     <!-- Header bar -->
     <div class="flex items-center justify-between px-5 py-3.5 border-b b-line">
-      <p class="eyebrow flex items-center gap-1.5 m-0">
-        <UIcon name="i-heroicons-newspaper" class="h-3.5 w-3.5" />
-        Current Affairs
-        <span class="font-mono text-[10px] t-lo">({{ currentIndex + 1 }}/{{ items.length }})</span>
-      </p>
+      <div class="flex flex-wrap items-center gap-2">
+        <p class="eyebrow flex items-center gap-1.5 m-0">
+          <UIcon name="i-heroicons-newspaper" class="h-3.5 w-3.5" />
+          Current Affairs
+          <span class="font-mono text-[10px] t-lo">({{ currentIndex + 1 }}/{{ items.length }})</span>
+        </p>
+
+        <!-- Subject Digest Fallback Badge -->
+        <span
+          v-if="isSubjectDigest"
+          class="inline-flex items-center gap-1 rounded-full bg-primary-500/10 border border-primary-500/30 px-2 py-0.5 text-[10px] font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wider"
+          :title="`Showing high-yield ${topicSubject} updates (< 3 direct cards tagged)`"
+        >
+          <UIcon name="i-heroicons-sparkles" class="h-3 w-3" />
+          {{ digestBadgeLabel }}
+        </span>
+      </div>
 
       <span
         v-if="newCount > 0"
@@ -103,6 +115,15 @@
 import { ref, computed, onMounted } from 'vue'
 import { queryCollection } from '#imports'
 import { useTopicVisits } from '@/composables/useTopicVisits'
+import topicsMaster from '~/data/topics_master.json'
+
+interface TopicEntry {
+  id: string
+  subject: string
+  title: string
+  keywords: string[]
+  aliases: string[]
+}
 
 const props = defineProps<{
   noteId: string
@@ -115,19 +136,108 @@ const { data: allEntries } = await useAsyncData(
   () => queryCollection('current_affair').all(),
 )
 
+const typedTopics = (topicsMaster || []) as TopicEntry[]
+
+const SECTION_TO_SUBJECT: Record<string, string> = {
+  POL: 'Polity',
+  GEO: 'Geography',
+  TEL: 'Telangana',
+  ECO: 'Economy',
+  SCI: 'Science & Technology',
+  HIS: 'History',
+}
+
+const topicEntry = computed(() => {
+  return typedTopics.find(
+    t => t.id === props.noteId || (Array.isArray(t.aliases) && t.aliases.includes(props.noteId)),
+  )
+})
+
+const topicSubject = computed(() => {
+  if (topicEntry.value?.subject) return topicEntry.value.subject
+  const parts = props.noteId.split('-')
+  if (parts.length >= 2 && SECTION_TO_SUBJECT[parts[1]]) {
+    return SECTION_TO_SUBJECT[parts[1]]
+  }
+  return ''
+})
+
+const validIds = computed<string[]>(() => {
+  if (!topicEntry.value) return [props.noteId]
+  const list = [topicEntry.value.id, ...(topicEntry.value.aliases || [])]
+  return Array.from(new Set(list))
+})
+
+function getCardTime(item: any): number {
+  const dateStr = item.meta?.published_at || item.published_at || item.meta?.event_date || item.event_date || item.meta?.date || item.date || ''
+  const t = dateStr ? new Date(dateStr).getTime() : 0
+  return Number.isNaN(t) ? 0 : t
+}
+
+function matchesSubject(item: any, subjectName: string): boolean {
+  if (!subjectName) return false
+  const sec = (item.meta?.exam_section || item.exam_section || '').toLowerCase()
+  const cat = (item.meta?.category || item.category || '').toLowerCase()
+  const subLower = subjectName.toLowerCase()
+
+  if (subLower === 'polity') {
+    return sec.includes('polity') || cat === 'judiciary' || cat === 'appointments'
+  }
+  if (subLower === 'geography') {
+    return sec.includes('geography') || cat === 'environment' || cat === 'geography'
+  }
+  if (subLower === 'telangana') {
+    return sec.includes('telangana') || cat.includes('telangana') || item.meta?.is_telangana_focus === true || item.is_telangana_focus === true
+  }
+  if (subLower === 'economy') {
+    return sec.includes('economy') || cat === 'economy' || cat === 'schemes'
+  }
+  if (subLower.includes('science')) {
+    return sec.includes('science') || cat === 'science' || cat === 'defence'
+  }
+  if (subLower === 'history') {
+    return sec.includes('history') || cat === 'books' || cat === 'awards' || cat === 'culture'
+  }
+  return sec.includes(subLower)
+}
+
+// Direct items specifically tagged with this note ID or its aliases
+const directItems = computed(() => {
+  if (!allEntries.value) return []
+  const allowed = validIds.value
+  return allEntries.value.filter((e: any) => {
+    const ids: string[] = e.meta?.related_topic_ids ?? e.related_topic_ids ?? []
+    return Array.isArray(ids) && ids.some((id: string) => allowed.includes(id))
+  })
+})
+
+// Activate Subject Digest fallback if fewer than 3 direct cards are tagged
+const isSubjectDigest = computed(() => {
+  return directItems.value.length < 3 && !!topicSubject.value
+})
+
+const digestBadgeLabel = computed(() => {
+  const s = topicSubject.value ? topicSubject.value.toUpperCase() : 'SUBJECT'
+  return `${s} DIGEST`
+})
+
 // All entries for this note, sorted newest first
 const items = computed(() => {
   if (!allEntries.value) return []
-  return allEntries.value
-    .filter((e: any) => {
-      const ids: string[] = e.meta?.related_topic_ids ?? e.related_topic_ids ?? []
-      return Array.isArray(ids) && ids.includes(props.noteId)
-    })
-    .sort((a: any, b: any) => {
-      const dateA = a.meta?.published_at || a.published_at || a.meta?.event_date || a.event_date || a.meta?.date || a.date || ''
-      const dateB = b.meta?.published_at || b.published_at || b.meta?.event_date || b.event_date || b.meta?.date || b.date || ''
-      return new Date(dateB).getTime() - new Date(dateA).getTime()
-    })
+  const direct = [...directItems.value]
+
+  let combined = direct
+  if (direct.length < 3 && topicSubject.value) {
+    const directIds = new Set(direct.map((e: any) => e.id))
+    const subjectItems = allEntries.value
+      .filter((e: any) => !directIds.has(e.id) && matchesSubject(e, topicSubject.value))
+      .sort((a: any, b: any) => getCardTime(b) - getCardTime(a))
+
+    const needed = Math.max(5, 10 - direct.length)
+    combined = [...direct, ...subjectItems.slice(0, needed)]
+  }
+
+  return combined.sort((a: any, b: any) => getCardTime(b) - getCardTime(a))
 })
 
 // New / Earlier split

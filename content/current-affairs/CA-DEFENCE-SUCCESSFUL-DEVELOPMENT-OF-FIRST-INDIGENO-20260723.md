@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "First Indigenous 350 kg Thrust Class Expendable Turbo Jet Engine"
-related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-TEL-INDUSTRY"]
+related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-SCI-SPACE", "NOTE-TEL-INDUSTRY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

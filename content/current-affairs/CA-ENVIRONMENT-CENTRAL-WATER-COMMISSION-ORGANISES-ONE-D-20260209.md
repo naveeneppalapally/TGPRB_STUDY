@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "CWC Workshop on Flood Forecasting and Flood Management"
-related_topic_ids: ["NOTE-GEO-ENVIRONMENT", "NOTE-GEO-DISASTER"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DISASTER", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Pradhan Mantri Anusuchit Jaati Abhyuday Yojana Review"
-related_topic_ids: ["NOTE-SCHEMES-PMAJAY", "NOTE-SOC-JUSTICE"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCHEMES-PMAJAY", "NOTE-SOC-JUSTICE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

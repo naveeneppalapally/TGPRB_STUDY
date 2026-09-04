@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "ICAR-NAARM and Administrative Outcome Frameworks"
-related_topic_ids: ["NOTE-TEL-INSTITUTIONS", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INSTITUTIONS"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

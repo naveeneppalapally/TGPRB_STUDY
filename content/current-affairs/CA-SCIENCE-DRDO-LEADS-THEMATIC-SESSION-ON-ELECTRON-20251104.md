@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "ESTIC 2025 and Rs 1 Lakh Crore R&D Innovation Fund"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-DEF-DRDO"]
+related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

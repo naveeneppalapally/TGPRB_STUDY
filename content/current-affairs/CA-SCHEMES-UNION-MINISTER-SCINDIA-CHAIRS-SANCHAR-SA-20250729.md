@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "Sanchar Saathi Portal and Cyber Safety Initiatives"
-related_topic_ids: ["NOTE-SCI-CYBER", "NOTE-TEL-GOVERNANCE"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-SCI-CYBER", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

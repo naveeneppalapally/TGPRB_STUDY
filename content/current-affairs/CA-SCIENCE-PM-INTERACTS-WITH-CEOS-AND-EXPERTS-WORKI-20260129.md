@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "IndiaAI Impact Summit and National AI Mission"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-SCI-AI", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

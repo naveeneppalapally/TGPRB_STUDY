@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "National Quantum Mission Targets and Outlay"
-related_topic_ids: ["NOTE-SCI-QUANTUM", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,13 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Environment"
-related_topic_ids:
-  - "NOTE-GEO-ENVIRONMENT"
-  - "NOTE-GEO-DAMS"
-  - "NOTE-GEO-FORESTS"
-  - "NOTE-GEO-DRAINAGE"
-  - "NOTE-GEO-MOUNTAINS"
-  - "NOTE-GEO-IRRIGATION"
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"
@@ -22,7 +16,8 @@ published_at: "2026-08-12"
 date: "2026-08-12"
 source_name: "PIB"
 source_type: "official"
-ministry: "Ministry of Agriculture & Farmers Welfare"
+ministry: "Ministry of Agriculture &
+ Farmers Welfare"
 canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2298322&reg=3&lang=1"
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2298322&reg=3&lang=1"
 event_key: "HARIYALI-AMAVASYA-PLANTATION-2024"

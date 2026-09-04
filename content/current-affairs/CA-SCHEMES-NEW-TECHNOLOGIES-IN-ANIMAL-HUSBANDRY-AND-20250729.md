@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "Indigenously Developed Genomic Chips and Bovine IVF Technologies"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Agriculture Sector GDP Share and Employment Data"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SURVEY"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES", "NOTE-ECO-SURVEY", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

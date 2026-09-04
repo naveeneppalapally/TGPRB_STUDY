@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "IndiaAI Working Group Meeting at IIT Hyderabad"
-related_topic_ids: ["NOTE-SCI-AI", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

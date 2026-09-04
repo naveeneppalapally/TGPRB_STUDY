@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Science & Technology"
 topic: "NAPCC National Missions and Climate Research Initiatives"
-related_topic_ids: ["NOTE-GEO-ENVIRONMENT", "NOTE-SCI-TECH"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

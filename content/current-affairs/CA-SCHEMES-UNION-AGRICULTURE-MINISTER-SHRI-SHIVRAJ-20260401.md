@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM-AASHA Scheme and Farmer ID Progress"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-TEL-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-AGRI"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

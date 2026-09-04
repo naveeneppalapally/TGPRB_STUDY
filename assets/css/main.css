@@ -401,6 +401,10 @@ body {
     transition: none !important;
   }
   
+  .flip-card-inner:not(.is-flipped) .flip-card-back {
+    display: none !important;
+  }
+
   .flip-card-inner.is-flipped .flip-card-front {
     display: none !important;
   }
@@ -966,12 +970,16 @@ body {
   grid-area: 1 / 1;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
 }
+.flip-card-front,
+.flip-card-face.flip-card-front {
+  transform: rotateY(0deg);
+}
+.flip-card-back,
 .flip-card-face.flip-card-back {
   transform: rotateY(180deg);
 }

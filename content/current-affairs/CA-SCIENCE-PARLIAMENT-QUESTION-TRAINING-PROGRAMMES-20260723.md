@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Nuclear Technology Training Infrastructure in India"
-related_topic_ids: ["NOTE-SCI-NUCLEAR", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-POL-UNION-EXEC", "NOTE-SCI-NUCLEAR", "NOTE-SCI-SPACE", "NOTE-TEL-INSTITUTES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Bharat International Rice Conference (BIRC) 2025"
-related_topic_ids: ["NOTE-ECO-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-BANKING", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

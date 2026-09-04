@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Telecom Technology Advisory Group Roadmap"
-related_topic_ids: ["NOTE-SCI-TELECOM", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION", "NOTE-SCI-TELECOM"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

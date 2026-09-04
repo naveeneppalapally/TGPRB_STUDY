@@ -4,11 +4,7 @@ type: "current_affair"
 category: "geography"
 exam_section: "Indian & World Geography"
 topic: "Water Conservation and Rainwater Harvesting"
-related_topic_ids:
-  - "NOTE-GEO-IRRIGATION"
-  - "NOTE-GEO-DRAINAGE"
-  - "NOTE-GEO-ENVIRONMENT"
-  - NOTE-GEO-FORESTS
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-POL-CONST-FRAME"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "National Disaster Mitigation Fund and Urban Flood Risk Management"
-related_topic_ids: ["NOTE-GEO-ENVIRONMENT", "NOTE-POL-GOVERNANCE"]
+related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-POL-GOVERNANCE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "DESH Scheme for Cultural Heritage Sites"
-related_topic_ids: ["NOTE-GS-CULTURE", "NOTE-SCHEMES-CULTURE"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-GS-CULTURE", "NOTE-SCHEMES-CULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

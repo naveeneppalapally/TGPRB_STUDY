@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "India Defence Exports and DRDO Indigenisation"
-related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-DEF-EXPORTS"]
+related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-DEF-EXPORTS", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "CERT-In and BITS Pilani Cybersecurity MoU"
-related_topic_ids: ["NOTE-SCI-CYBER", "NOTE-TEL-EDU"]
+related_topic_ids: ["NOTE-SCI-CYBER", "NOTE-SCI-INNOVATION", "NOTE-TEL-EDU"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

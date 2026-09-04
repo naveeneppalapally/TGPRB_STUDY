@@ -4,7 +4,7 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "National Sports Day 2025 and Fit India Initiative"
-related_topic_ids: ["NOTE-SPO-NATIONAL", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-SPO-NATIONAL", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

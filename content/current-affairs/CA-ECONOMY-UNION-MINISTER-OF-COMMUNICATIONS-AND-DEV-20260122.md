@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Post Q3 FY 2025-26 Performance Review and Revenue Targets"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

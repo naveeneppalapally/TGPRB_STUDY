@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "BHEL Modernisation and Capital Goods Scheme Facilities"
-related_topic_ids: ["NOTE-ECO-PSU", "NOTE-TEL-INDUSTRY"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-PSU", "NOTE-SCI-SPACE", "NOTE-TEL-INDUSTRY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Bharat Tex 2026 Global Textile Expo"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

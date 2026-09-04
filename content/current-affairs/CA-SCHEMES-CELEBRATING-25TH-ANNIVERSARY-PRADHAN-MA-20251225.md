@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "25 Years of Pradhan Mantri Gram Sadak Yojana (PMGSY)"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

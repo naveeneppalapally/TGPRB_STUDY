@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Dumpsite Remediation Accelerator Programme (DRAP) and Urban Initiatives 2025"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-ENV-SWACHH"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ENV-SWACHH"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "General Studies"
 topic: "National Cyber Forensic Laboratory and Cyber Security Initiatives"
-related_topic_ids: ["NOTE-TEL-POLICE", "NOTE-GS-CYBERSECURITY"]
+related_topic_ids: ["NOTE-GS-CYBERSECURITY", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-POLICE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

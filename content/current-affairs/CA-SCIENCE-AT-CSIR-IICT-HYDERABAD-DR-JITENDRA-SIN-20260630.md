@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "CSIR-IICT Hyderabad R&D Facilities Inauguration"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

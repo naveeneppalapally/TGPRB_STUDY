@@ -4,7 +4,7 @@ type: "current_affair"
 category: "awards"
 exam_section: "Science & Technology"
 topic: "National Geoscience Awards 2024"
-related_topic_ids: ["NOTE-SCI-AWARDS", "NOTE-GEO-MINERALS"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-DRAINAGE", "NOTE-SCI-AWARDS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

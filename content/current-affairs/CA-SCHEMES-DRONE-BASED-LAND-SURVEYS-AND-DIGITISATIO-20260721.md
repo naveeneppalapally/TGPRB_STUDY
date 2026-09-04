@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "SVAMITVA Scheme Implementation and Impact Evaluation"
-related_topic_ids: ["NOTE-SCH-SVAMITVA", "NOTE-GOV-RURAL"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GOV-RURAL", "NOTE-POL-PANCHAYAT", "NOTE-SCH-SVAMITVA", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

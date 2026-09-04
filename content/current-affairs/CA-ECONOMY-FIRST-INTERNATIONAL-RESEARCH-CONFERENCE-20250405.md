@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "First International Research Conference on Pension (IRCP) 2025"
-related_topic_ids: ["NOTE-ECO-FINANCE", "NOTE-ECO-PENSION"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-PENSION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

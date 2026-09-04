@@ -4,7 +4,7 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "Jeevan Raksha Padak Series of Awards 2024"
-related_topic_ids: ["NOTE-AWARDS-CIVILIAN", "NOTE-TEL-AWARDS"]
+related_topic_ids: ["NOTE-AWARDS-CIVILIAN", "NOTE-POL-UNION-EXEC", "NOTE-TEL-AWARDS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "sports"
 exam_section: "Telangana"
 topic: "4th National EMRS Sports Meet 2025"
-related_topic_ids: ["NOTE-TEL-SPORTS", "NOTE-SCHEMES-EMRS"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCHEMES-EMRS", "NOTE-TEL-SPORTS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

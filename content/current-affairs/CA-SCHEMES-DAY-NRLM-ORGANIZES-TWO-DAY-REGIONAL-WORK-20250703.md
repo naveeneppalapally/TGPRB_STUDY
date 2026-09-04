@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "DAY-NRLM Regional Workshop on FNHW"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-SOC-HEALTH"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SOC-HEALTH"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

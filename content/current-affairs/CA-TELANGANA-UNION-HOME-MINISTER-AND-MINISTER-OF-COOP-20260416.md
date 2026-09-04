@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Polity"
 topic: "Delimitation Bill 2026 Lok Sabha Seat Expansion"
-related_topic_ids: ["NOTE-POL-PARLIAMENT", "NOTE-TEL-POLITY"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-POLITY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

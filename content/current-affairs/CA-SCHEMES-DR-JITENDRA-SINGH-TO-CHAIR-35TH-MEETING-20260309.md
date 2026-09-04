@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "35th SCOVA Meeting and Standing Committee of Voluntary Agencies"
-related_topic_ids: ["NOTE-POL-COMMITTEES", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-COMMITTEES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

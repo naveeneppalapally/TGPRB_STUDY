@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Parliamentary Rules and NeVA Implementation"
-related_topic_ids: ["NOTE-POL-PARLIAMENT", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

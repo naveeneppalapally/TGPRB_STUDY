@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Swadesh Darshan 2.0 and CBDD Schemes"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-ECO-TOURISM"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-TOURISM"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

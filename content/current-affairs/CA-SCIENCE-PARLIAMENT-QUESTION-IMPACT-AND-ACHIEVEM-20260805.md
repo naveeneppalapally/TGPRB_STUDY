@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Deep Ocean Mission and MATSYA-6000 Submersible"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GEO-OCEAN"]
+related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-OCEAN", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

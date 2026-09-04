@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "25th CLCC Meeting of DAY-NRLM in Hyderabad"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

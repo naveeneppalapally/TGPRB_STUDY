@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "RudraM-II Air-to-Surface Missile Flight Test"
-related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-TEL-INSTITUTES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

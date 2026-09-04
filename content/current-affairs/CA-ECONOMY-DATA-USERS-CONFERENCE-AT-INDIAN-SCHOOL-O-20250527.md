@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "MoSPI Data Users Conference 2025 at ISB Hyderabad"
-related_topic_ids: ["NOTE-ECO-SURVEYS", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SURVEYS", "NOTE-TEL-HYDERABAD"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

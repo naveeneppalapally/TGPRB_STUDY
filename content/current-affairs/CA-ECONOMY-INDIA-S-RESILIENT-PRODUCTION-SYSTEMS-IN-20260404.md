@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Agricultural Statistics 2024-25"
-related_topic_ids: ["NOTE-ECO-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

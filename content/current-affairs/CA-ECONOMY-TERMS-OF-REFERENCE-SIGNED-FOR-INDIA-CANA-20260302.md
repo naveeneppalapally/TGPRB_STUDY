@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India-Canada CEPA Negotiations"
-related_topic_ids: ["NOTE-ECO-TRADE"]
+related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

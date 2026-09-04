@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "Establishment of Day Care Cancer Centres"
-related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-SCHEMES-HEALTH"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-SCHEMES-HEALTH", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Electric Mobility Ecosystem in India"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-ENV-CLIMATE"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-ENV-CLIMATE", "NOTE-GEO-CLIMATE", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "DGCA Flying Training Organizations (FTO) Ranking Phase 2"
-related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-POL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-POL-JUDICIARY", "NOTE-POL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

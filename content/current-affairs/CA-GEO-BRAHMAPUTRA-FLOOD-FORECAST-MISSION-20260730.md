@@ -4,8 +4,7 @@ type: "current_affair"
 category: "geography"
 exam_section: "Indian & World Geography"
 topic: "Brahmaputra River - Floods and Disaster Management"
-related_topic_ids:
-  - "NOTE-GEO-DRAINAGE"
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-CLIMATE", "NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

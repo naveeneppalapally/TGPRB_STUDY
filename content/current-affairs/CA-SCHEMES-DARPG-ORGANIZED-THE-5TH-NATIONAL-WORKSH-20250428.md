@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "5th National Workshop on Sevottam and Public Grievance Redressal"
-related_topic_ids: ["NOTE-POL-GOVERNANCE", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-POL-GOVERNANCE", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Naxalmukt Bharat Abhiyan and LWE Reduction Target"
-related_topic_ids: ["NOTE-TEL-GOVT", "NOTE-POL-SECURITY"]
+related_topic_ids: ["NOTE-POL-SECURITY", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

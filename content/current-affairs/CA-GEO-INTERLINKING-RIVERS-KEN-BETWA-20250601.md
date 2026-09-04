@@ -4,11 +4,7 @@ type: "current_affair"
 category: "geography"
 exam_section: "Geography"
 topic: "Interlinking of Rivers - Ken-Betwa Project"
-related_topic_ids:
-  - "NOTE-GEO-IRRIGATION"
-  - "NOTE-GEO-DAMS"
-  - "NOTE-GEO-DRAINAGE"
-  - "NOTE-GEO-ENVIRONMENT"
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

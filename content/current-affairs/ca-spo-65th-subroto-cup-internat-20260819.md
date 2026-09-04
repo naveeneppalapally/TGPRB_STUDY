@@ -4,8 +4,7 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Knowledge"
 topic: "Sports Results"
-related_topic_ids:
-  - ""
+related_topic_ids: ["NOTE-POL-MAKING-CONST"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

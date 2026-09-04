@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Inland Waterways Development and Jalvahak Scheme"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-GEO-RIVERS"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

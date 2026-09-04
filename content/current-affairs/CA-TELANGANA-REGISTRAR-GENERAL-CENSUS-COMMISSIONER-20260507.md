@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "General Studies"
 topic: "Census 2027 Self-Enumeration and Houselisting Phase"
-related_topic_ids: ["NOTE-GS-CENSUS", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-GS-CENSUS", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

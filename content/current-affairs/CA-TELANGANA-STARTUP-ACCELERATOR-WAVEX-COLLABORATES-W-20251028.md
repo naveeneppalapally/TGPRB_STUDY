@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "WaveX and T-Hub MoU for AVGC-XR Sector"
-related_topic_ids: ["NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-TEL-ECONOMY", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

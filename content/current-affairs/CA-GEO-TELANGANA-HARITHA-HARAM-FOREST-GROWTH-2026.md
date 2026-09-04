@@ -4,7 +4,7 @@ type: current_affair
 category: state_telangana
 exam_section: Geography
 topic: Forests of India
-related_topic_ids:
+related_topic_ids: ["NOTE-GEO-FORESTS"]
 - NOTE-GEO-FORESTS
 - NOTE-GEO-ENVIRONMENT
 is_telangana_focus: true

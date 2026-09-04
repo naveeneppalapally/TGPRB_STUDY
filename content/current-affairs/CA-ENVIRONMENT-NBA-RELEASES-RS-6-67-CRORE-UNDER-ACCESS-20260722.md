@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "General Studies"
 topic: "NBA Access and Benefit Sharing Allocation"
-related_topic_ids: ["NOTE-GEO-ENVIRONMENT", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Minimum Support Prices Determination and Crop Coverage"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-MSP"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-MSP", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

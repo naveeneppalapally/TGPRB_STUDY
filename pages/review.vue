@@ -598,13 +598,17 @@ defineShortcuts({
 .flip-card {
   perspective: 1200px;
 }
+.flip-card-inner {
+  transform-style: preserve-3d;
+}
 .flip-card-face {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  transform-style: flat;
 }
-.flip-card-inner {
-  transform-style: preserve-3d;
+.flip-card-front {
+  transform: rotateY(0deg);
+}
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 </style>

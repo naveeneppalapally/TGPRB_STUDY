@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM E-DRIVE and Automotive PLI Schemes Review"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-INDUSTRY"]
+related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

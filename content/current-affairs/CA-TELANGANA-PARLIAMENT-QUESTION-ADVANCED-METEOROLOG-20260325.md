@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Meteorological and Flood Infrastructure in Warangal"
-related_topic_ids: ["NOTE-TEL-GEO", "NOTE-GEO-ENVIRONMENT"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-FORESTS", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC", "NOTE-TEL-GEOGRAPHY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

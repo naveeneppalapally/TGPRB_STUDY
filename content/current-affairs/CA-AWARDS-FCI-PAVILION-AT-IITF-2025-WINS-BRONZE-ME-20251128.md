@@ -4,7 +4,7 @@ type: "current_affair"
 category: "awards"
 exam_section: "Economy"
 topic: "FCI Pavilion at IITF 2025"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-TEL-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-AGRI"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

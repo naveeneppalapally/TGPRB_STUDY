@@ -4,8 +4,7 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"
 topic: "Awards and Honours"
-related_topic_ids:
-  - ""
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

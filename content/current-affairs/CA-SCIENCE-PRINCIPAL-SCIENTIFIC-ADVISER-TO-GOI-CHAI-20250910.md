@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "3rd All S&T Clusters Meet"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

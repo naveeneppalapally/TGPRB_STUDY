@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Enterprise Development Service Cadre"
-related_topic_ids: ["NOTE-ECO-MSME", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: ["NOTE-ECO-MSME", "NOTE-ECO-SCHEMES", "NOTE-TEL-INSTITUTES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

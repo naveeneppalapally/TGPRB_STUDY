@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Atmanirbhar Panchayat Program"
-related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-SCHEMES-GOI"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-PANCHAYAT", "NOTE-SCHEMES-GOI"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

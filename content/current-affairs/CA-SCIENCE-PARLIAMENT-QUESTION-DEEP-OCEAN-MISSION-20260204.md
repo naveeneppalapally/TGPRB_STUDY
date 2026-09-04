@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Deep Ocean Mission and INCOIS"
-related_topic_ids: ["NOTE-SCI-OCEAN", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-OCEAN", "NOTE-TEL-INSTITUTIONS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

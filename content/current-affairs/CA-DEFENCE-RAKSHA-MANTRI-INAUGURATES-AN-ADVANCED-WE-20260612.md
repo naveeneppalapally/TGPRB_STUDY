@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "Advanced Weapon System Complex at DRDL Hyderabad"
-related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-TEL-HYDERABAD", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-TEL-HYDERABAD", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

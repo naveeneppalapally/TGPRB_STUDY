@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Women Empowerment Mandates in Central Rural Schemes"
-related_topic_ids: ["NOTE-SCHEMES-WOMEN", "NOTE-ECO-RURAL"]
+related_topic_ids: ["NOTE-ECO-RURAL", "NOTE-ECO-SCHEMES", "NOTE-HIS-MODERN", "NOTE-SCHEMES-WOMEN"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM E-DRIVE Scheme and EV Charging Infrastructure"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-SCHEMES-CENTRAL"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

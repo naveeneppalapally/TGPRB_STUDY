@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "DRDO ULPGM-V3 Missile Trials"
-related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-TEL-HYD-LABS"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-TEL-HYD-LABS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Viksit Krishi Sankalp Abhiyan"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-AGRI-INITIATIVES"]
+related_topic_ids: ["NOTE-AGRI-INITIATIVES", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

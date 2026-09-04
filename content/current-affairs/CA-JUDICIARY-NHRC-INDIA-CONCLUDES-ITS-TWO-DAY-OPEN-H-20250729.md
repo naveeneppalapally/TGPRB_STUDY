@@ -4,7 +4,7 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "NHRC Open Hearing and Camp Sitting at Hyderabad"
-related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-TEL-GOVERNANCE"]
+related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

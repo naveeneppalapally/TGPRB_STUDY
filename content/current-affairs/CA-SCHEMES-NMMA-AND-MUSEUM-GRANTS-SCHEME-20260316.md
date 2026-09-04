@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "NMMA and Museum Grant Scheme Implementation"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

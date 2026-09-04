@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "Maiden Salvo Launch of NASM-SR Missile"
-related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-TEL-DEFENCE"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-TEL-DEFENCE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Ramagundam Fertilizers and Urea Production Capacity"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-ECO-AGRICULTURE", "NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

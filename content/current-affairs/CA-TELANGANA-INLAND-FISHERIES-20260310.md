@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "PMMSY Inland Fisheries and Murrel Cluster in Telangana"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-GOVT-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GOVT-SCHEMES", "NOTE-POL-UNION-EXEC", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

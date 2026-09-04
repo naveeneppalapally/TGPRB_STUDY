@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "Vigyan Dhara Unified Scheme"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

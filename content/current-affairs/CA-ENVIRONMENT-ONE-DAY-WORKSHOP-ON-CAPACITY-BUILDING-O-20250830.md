@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Economy"
 topic: "Development of Ocean Accounts Workshop 2025"
-related_topic_ids: ["NOTE-ECO-NATIONAL-INCOME", "NOTE-GEO-ENVIRONMENT"]
+related_topic_ids: ["NOTE-ECO-NATIONAL-INCOME", "NOTE-GEO-FORESTS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

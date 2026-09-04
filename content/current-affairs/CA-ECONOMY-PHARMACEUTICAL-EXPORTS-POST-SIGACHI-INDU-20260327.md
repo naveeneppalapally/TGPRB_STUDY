@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Pharmaceutical Exports CY 2025"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-POL-UNION-EXEC", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Digital Transformation in Indian Museums and Cultural Institutions"
-related_topic_ids: ["NOTE-SCT-TECH", "NOTE-GS-CULTURE"]
+related_topic_ids: ["NOTE-GS-CULTURE", "NOTE-SCI-INNOVATION", "NOTE-SCT-TECH"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

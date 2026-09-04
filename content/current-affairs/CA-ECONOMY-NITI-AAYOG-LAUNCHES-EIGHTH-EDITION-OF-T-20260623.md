@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "NITI Aayog Trade Watch Quarterly 8th Edition"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-POL-JUDICIARY", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

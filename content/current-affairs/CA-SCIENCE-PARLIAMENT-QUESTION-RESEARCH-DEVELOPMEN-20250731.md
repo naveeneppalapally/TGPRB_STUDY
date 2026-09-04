@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "NM-ICPS Deep Tech Initiatives and Bharat-Gen AI Project"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-INFRA"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-INFRA"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

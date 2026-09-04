@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "MY Bharat National Youth Volunteers Convention"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-GS-YOUTH"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GS-YOUTH"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

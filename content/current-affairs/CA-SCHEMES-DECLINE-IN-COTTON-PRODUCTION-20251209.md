@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Mission for Cotton Productivity and CICR Project"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-TEL-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-BUDGET", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-TEL-AGRI"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

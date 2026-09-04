@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM-AASHA Kharif 2025-26 Pulses and Oilseeds Procurement"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

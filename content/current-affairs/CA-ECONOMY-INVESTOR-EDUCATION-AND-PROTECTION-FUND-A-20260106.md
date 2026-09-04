@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "IEPFA Organises Niveshak Shivir in Bengaluru"
-related_topic_ids: ["NOTE-ECO-FINANCE", "NOTE-ECO-MARKETS"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-MARKETS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

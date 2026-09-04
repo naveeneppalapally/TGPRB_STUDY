@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "6th Ramnath Goenka Lecture"
-related_topic_ids: ["NOTE-TEL-HISTORY", "NOTE-HIS-MODERN", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-HIS-MODERN", "NOTE-POL-UNION-EXEC", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

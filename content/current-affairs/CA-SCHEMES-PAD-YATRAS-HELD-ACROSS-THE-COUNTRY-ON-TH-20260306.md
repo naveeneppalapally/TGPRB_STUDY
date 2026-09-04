@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Pradhan Mantri Bhartiya Janaushadhi Pariyojana Targets"
-related_topic_ids: ["NOTE-SCHEMES-HEALTH", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCHEMES-HEALTH", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

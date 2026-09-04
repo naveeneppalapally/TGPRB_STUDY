@@ -4,8 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"
 topic: "Defence and Security"
-related_topic_ids:
-  - ""
+related_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

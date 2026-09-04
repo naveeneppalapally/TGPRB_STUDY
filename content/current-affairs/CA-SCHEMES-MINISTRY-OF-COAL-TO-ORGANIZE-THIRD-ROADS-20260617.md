@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Surface Coal and Lignite Gasification Scheme Roadshow"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ENG-ENERGY", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ENG-ENERGY", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

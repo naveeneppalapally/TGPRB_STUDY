@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "ULPGM-V3 Missile Flight-Trials"
-related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-ST-DEFENCE"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-ST-DEFENCE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

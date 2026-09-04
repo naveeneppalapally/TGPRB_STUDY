@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "INCOIS Tsunami Early Warning System and HPC Tarang"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GEO-DISASTER"]
+related_topic_ids: ["NOTE-GEO-DISASTER", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Digital Communication Theme for ESTIC-2025 and Bharat 6G Alliance"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-EDU"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-EDU"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

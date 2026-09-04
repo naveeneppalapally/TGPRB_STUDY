@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Yoga Mahotsav 2026 at Kanha Shanti Vanam"
-related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-GS-YOGA"]
+related_topic_ids: ["NOTE-GS-YOGA", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

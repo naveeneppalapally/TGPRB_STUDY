@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "105th NPG Meeting under PM GatiShakti"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-ECONOMY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

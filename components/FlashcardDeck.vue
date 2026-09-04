@@ -195,16 +195,31 @@ watch(() => props.noteId, () => {
   transform: translate3d(24px, 0, 0);
 }
 
+.glide-next-enter-to,
+.glide-prev-enter-to {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.glide-next-leave-from,
+.glide-prev-leave-from {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 .flip-card {
   perspective: 1200px;
+}
+.flip-card-inner {
+  transform-style: preserve-3d;
 }
 .flip-card-face {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  transform-style: flat;
 }
-.flip-card-inner {
-  transform-style: preserve-3d;
+.flip-card-front {
+  transform: rotateY(0deg);
+}
+.flip-card-back {
+  transform: rotateY(180deg);
 }
 </style>

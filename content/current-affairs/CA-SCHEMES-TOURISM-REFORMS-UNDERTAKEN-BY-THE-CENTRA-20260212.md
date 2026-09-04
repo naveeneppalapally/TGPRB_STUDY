@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Ministry of Tourism Initiatives for Tourist Safety"
-related_topic_ids: ["NOTE-GOV-SCHEMES", "NOTE-TEL-GOVERNANCE"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

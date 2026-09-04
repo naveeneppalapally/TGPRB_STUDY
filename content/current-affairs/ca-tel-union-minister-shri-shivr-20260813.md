@@ -4,9 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Telangana State"
-related_topic_ids:
-  - "NOTE-TEL-GENERAL"
-  - "NOTE-TEL-MOVEMENT"
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-GENERAL", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "si"
@@ -18,7 +16,8 @@ published_at: "2026-08-13"
 date: "2026-08-13"
 source_name: "PIB"
 source_type: "official"
-ministry: "Ministry of Agriculture & Farmers Welfare"
+ministry: "Ministry of Agriculture &
+ Farmers Welfare"
 canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2298937&reg=3&lang=1"
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2298937&reg=3&lang=1"
 event_key: "CHOUHAN-APPROVES-PMRKVY-2026"

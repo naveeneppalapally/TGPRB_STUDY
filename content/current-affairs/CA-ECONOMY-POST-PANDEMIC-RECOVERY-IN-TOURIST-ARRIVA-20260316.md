@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Tourism Sector Performance and Recovery in India"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-GOVT"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

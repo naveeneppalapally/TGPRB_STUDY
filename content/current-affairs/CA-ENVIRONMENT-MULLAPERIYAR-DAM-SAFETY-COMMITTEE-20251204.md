@@ -4,8 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Dams, Reservoirs & Multipurpose Projects of India"
-related_topic_ids:
-  - "NOTE-GEO-DAMS"
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

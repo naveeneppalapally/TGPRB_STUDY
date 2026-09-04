@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "Indigenous UGRAM Assault Rifle"
-related_topic_ids: ["NOTE-DEFENCE-INDIGENOUS", "NOTE-TEL-INDUSTRY"]
+related_topic_ids: ["NOTE-DEFENCE-INDIGENOUS", "NOTE-SCI-SPACE", "NOTE-TEL-INDUSTRY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

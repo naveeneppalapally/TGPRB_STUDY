@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "STPI 35th Foundation Day & Sayuj App Launch"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-ECO-IT"]
+related_topic_ids: ["NOTE-ECO-IT", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

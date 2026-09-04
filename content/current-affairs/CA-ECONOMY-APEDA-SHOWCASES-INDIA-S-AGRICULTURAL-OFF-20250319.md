@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "APEDA at IFE London 2025"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-ECO-EXPORTS"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-ECO-EXPORTS", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

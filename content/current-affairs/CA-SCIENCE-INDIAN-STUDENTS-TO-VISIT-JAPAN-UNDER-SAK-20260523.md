@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Sakura Science Programme 2026"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-SCH-EDU"]
+related_topic_ids: ["NOTE-SCH-EDU", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,13 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Environment"
-related_topic_ids:
-  - "NOTE-GEO-ENVIRONMENT"
-  - "NOTE-GEO-DAMS"
-  - "NOTE-GEO-FORESTS"
-  - "NOTE-GEO-DRAINAGE"
-  - "NOTE-GEO-MOUNTAINS"
-  - "NOTE-GEO-IRRIGATION"
+related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

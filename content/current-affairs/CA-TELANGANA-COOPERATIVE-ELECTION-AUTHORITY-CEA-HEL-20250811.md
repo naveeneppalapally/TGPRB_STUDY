@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Polity"
 topic: "Cooperative Election Authority Consultative Meeting"
-related_topic_ids: ["NOTE-POL-COOPERATIVES", "NOTE-TEL-GOVERNANCE"]
+related_topic_ids: ["NOTE-POL-COOPERATIVES", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

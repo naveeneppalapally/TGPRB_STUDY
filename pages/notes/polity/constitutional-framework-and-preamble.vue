@@ -31,7 +31,7 @@
             Constitutional Framework &amp; Preamble
           </h1>
           <p class="mt-3 max-w-xl text-body leading-relaxed t-mid">
-            Comprehensive study notes covering the Historical Evolution (1773-1947), Constituent Assembly milestones, Borrowed Features, Preamble keywords, 12 Schedules ("TEARS OF OLD PM"), Union &amp; Territory (Arts 1-4), and State Reorganisation tested in TGPRB SI &amp; Constable Exams.
+            Comprehensive study notes covering the Historical Evolution (1773-1947), Constituent Assembly transition, Borrowed Features, Preamble keywords, 12 Schedules ("TEARS OF OLD PM"), Union &amp; Territory (Arts 1-4), and State Reorganisation tested in TGPRB SI &amp; Constable Exams.
           </p>
           <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
@@ -360,116 +360,133 @@
           </div>
         </section>
 
-        <!-- ── 04 · Making of the Constitution & Committees ────────────── -->
+        <!-- ── 04 · Making of the Constitution: Transitional Bridge ──── -->
         <section id="constituent-assembly" class="mb-14 scroll-mt-20">
           <header class="sec-head">
             <span class="sec-num">04</span>
-            <h2 class="sec-title">Making of the Constitution &amp; Committees</h2>
-            <SectionNotesButton note-id="NOTE-POL-CONST-FRAME" section-id="constituent-assembly" section-label="Making of the Constitution & Committees" note-title="Constitutional Framework & Preamble" @open="openNotesDrawer" />
+            <h2 class="sec-title">Making of the Constitution: Transition &amp; Bridge</h2>
+            <SectionNotesButton note-id="NOTE-POL-CONST-FRAME" section-id="constituent-assembly" section-label="Making of the Constitution" note-title="Constitutional Framework & Preamble" @open="openNotesDrawer" />
             <span class="sec-rule" />
-            <span class="sec-meta hidden sm:block">Cabinet Mission · Drafting</span>
+            <span class="sec-meta hidden sm:block">Colonial Acts to Sovereign Republic</span>
           </header>
-          <InlineNoteStrip note-id="NOTE-POL-CONST-FRAME" section-id="constituent-assembly" section-label="Making of the Constitution & Committees" note-title="Constitutional Framework & Preamble" @open="openNotesDrawer" />
+          <InlineNoteStrip note-id="NOTE-POL-CONST-FRAME" section-id="constituent-assembly" section-label="Making of the Constitution" note-title="Constitutional Framework & Preamble" @open="openNotesDrawer" />
 
-          <!-- High-Yield Chronology & Facts -->
+          <!-- Introductory Narrative Bridge -->
+          <p class="text-sm leading-relaxed t-mid mb-6">
+            The constitutional framework of modern India forms an unbroken evolutionary arc. Following the British statutory enactments (1773 to 1947 detailed in Sections 02 and 03), legislative authority transitioned to an indigenous Constituent Assembly. Moving beyond colonial statutes, the Assembly synthesized administrative mechanisms from the Government of India Act 1935 with democratic principles drawn from global constitutions.
+          </p>
+
+          <!-- Prominent Dedicated Note Callout Card -->
+          <div class="panel panel-pad bg-saffron-500/5 dark:bg-saffron-500/10 border border-saffron-500/30 rounded-xl mb-6 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-5">
+              <div class="flex items-start gap-3.5">
+                <div class="p-2.5 rounded-xl bg-saffron-500/15 text-saffron-600 dark:text-saffron-400 shrink-0 mt-0.5">
+                  <UIcon name="i-heroicons-academic-cap" class="h-6 w-6" />
+                </div>
+                <div>
+                  <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                    <span class="chip chip-saffron text-[10px] uppercase font-bold tracking-wider">Dedicated Deep-Dive Module</span>
+                    <span class="chip chip-mono text-[10px]">Tier 1 Priority</span>
+                    <span class="chip text-[10px]">10 Dedicated Sections</span>
+                  </div>
+                  <h3 class="text-base sm:text-lg font-bold t-hi">
+                    Making of the Indian Constitution
+                  </h3>
+                  <p class="mt-1 text-xs sm:text-sm t-mid leading-relaxed max-w-2xl">
+                    For exhaustive forensic coverage of the Constituent Assembly demand timeline (1934 to 1946), Cabinet Mission Plan composition (389 seats), all 8 major committee chairpersons, 7-member Drafting Committee breakdown, dual assembly functions, calligraphy, and verified TGPRB PYQs, explore our standalone core note.
+                  </p>
+                </div>
+              </div>
+              <div class="shrink-0 md:self-center">
+                <NuxtLink
+                  to="/notes/polity/making-of-the-constitution"
+                  class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-saffron-500 hover:bg-saffron-600 text-white font-semibold text-xs sm:text-sm transition-all shadow-sm hover:shadow group min-h-[44px]"
+                >
+                  <span>Open Making of Constitution</span>
+                  <UIcon name="i-heroicons-arrow-right" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Transitional Anchors Connecting Framework to Preamble & Borrowed Features -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-            <div class="p-3 rounded-xl bg-elev border b-line shadow-sm">
-              <span class="eyebrow text-amber-600 dark:text-amber-400">Demands Evolution</span>
-              <ul class="mt-2 text-xs space-y-1.5 t-mid">
-                <li><strong class="t-hi">1934:</strong> M.N. Roy first proposed Constituent Assembly.</li>
-                <li><strong class="t-hi">1935:</strong> INC officially demanded it.</li>
-                <li><strong class="t-hi">1938:</strong> Nehru declared adult franchise framing.</li>
-                <li><strong class="t-hi">1940:</strong> August Offer accepted in principle.</li>
-                <li><strong class="t-hi">1946 [PYQ-3037]:</strong> Cabinet Mission Plan framed scheme.</li>
-              </ul>
+            <!-- Anchor 1: Demand to Assembly Scheme -->
+            <div class="panel panel-pad bg-elev border b-line">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">Demand Arc</span>
+                <span class="chip chip-mono text-[10px]">1934 to 1946</span>
+              </div>
+              <h4 class="text-xs font-bold t-hi mb-1.5">Origin of the Constituent Assembly</h4>
+              <p class="text-xs t-mid leading-relaxed mb-2">
+                First conceptualized by <strong class="t-hi">M.N. Roy</strong> in 1934 and officially demanded by the INC in 1935, the Assembly was ultimately constituted under the <strong class="t-hi">Cabinet Mission Plan of 1946 [PYQ-3037]</strong> to frame the supreme law of independent India.
+              </p>
+              <div class="p-2 rounded bg-sub border b-line text-[11px] t-lo">
+                <strong class="t-hi">Bridge Context:</strong> Formed the sovereign drafting body that replaced the British parliamentary legislative mechanism.
+              </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-elev border b-line shadow-sm">
-              <span class="eyebrow text-emerald-600 dark:text-emerald-400">Composition (389 Seats)</span>
-              <ul class="mt-2 text-xs space-y-1.5 t-mid">
-                <li><strong class="t-hi">296 British India:</strong> 292 provinces + 4 Chief Commissioners.</li>
-                <li><strong class="t-hi">93 Princely States:</strong> Nominated by rulers.</li>
-                <li><strong class="t-hi">Ratio:</strong> 1 seat per 1 million population.</li>
-                <li><strong class="t-hi">Communities:</strong> Muslims, Sikhs, General.</li>
-                <li><strong class="t-hi">Post-Partition:</strong> Reduced to 299 seats.</li>
-              </ul>
+            <!-- Anchor 2: Objectives Resolution to Preamble -->
+            <div class="panel panel-pad bg-elev border b-line">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-saffron-600 dark:text-saffron-400">Philosophical Key</span>
+                <span class="chip chip-saffron text-[10px]">PYQ-0766</span>
+              </div>
+              <h4 class="text-xs font-bold t-hi mb-1.5">Objectives Resolution to Preamble</h4>
+              <p class="text-xs t-mid leading-relaxed mb-2">
+                Moved by <strong class="t-hi">Jawaharlal Nehru</strong> on December 13, 1946 and unanimously adopted on <strong class="t-hi">January 22, 1947</strong>, the Objectives Resolution laid down the foundational philosophy that became the <strong class="t-hi">Preamble</strong> (detailed in Section 06).
+              </p>
+              <div class="p-2 rounded bg-sub border b-line text-[11px] t-lo">
+                <strong class="t-hi">Direct Forward Link:</strong> Establishes the Sovereign, Socialist, Secular, Democratic Republic framework studied below.
+              </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-elev border b-line shadow-sm">
-              <span class="eyebrow text-sky-600 dark:text-sky-400">Constitutional Facts</span>
-              <ul class="mt-2 text-xs space-y-1.5 t-mid">
-                <li><strong class="t-hi">Time Taken:</strong> 2 yrs, 11 mos, 18 days (11 sessions).</li>
-                <li><strong class="t-hi">Total Cost:</strong> ~Rs 64 Lakhs.</li>
-                <li><strong class="t-hi">Symbol / Seal:</strong> Elephant.</li>
-                <li><strong class="t-hi">Advisor:</strong> Sir B.N. Rau.</li>
-                <li><strong class="t-hi">English Calligraphy:</strong> Prem Behari Raizada.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Landmark Milestone Timeline -->
-          <div class="panel panel-pad bg-elev border b-line mb-6">
-            <h3 class="text-sm font-bold t-hi mb-3">Constituent Assembly Milestone Timeline</h3>
-            <div class="space-y-2.5 text-xs">
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">Dec 9, 1946</span>
-                <span class="t-mid">First meeting (211 members). <strong class="t-hi">Dr. Sachchidananda Sinha</strong> elected interim President (French practice).</span>
+            <!-- Anchor 3: Drafting & Synthesis -->
+            <div class="panel panel-pad bg-elev border b-line">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Synthesis Engine</span>
+                <span class="chip chip-mono text-[10px]">1947 to 1950</span>
               </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">Dec 11, 1946</span>
-                <span class="t-mid"><strong class="t-hi">Dr. Rajendra Prasad</strong> elected permanent President; H.C. Mukherjee &amp; V.T. Krishnamachari elected Vice-Presidents; Sir B.N. Rau appointed Advisor.</span>
-              </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-saffron font-bold shrink-0">Dec 13, 1946 / Jan 22, 1947 [PYQ-0766]</span>
-                <span class="t-mid">Nehru moved <strong class="t-hi">Objectives Resolution</strong> on Dec 13, 1946; <strong class="t-hi">unanimously adopted on January 22, 1947</strong> (became Preamble).</span>
-              </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">July 22, 1947</span>
-                <span class="t-mid">National Flag adopted (Tri-color with 24-spoke Ashoka Chakra, ratio 3:2, designed by <strong class="t-hi">Pingali Venkayya</strong>).</span>
-              </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">Aug 29, 1947</span>
-                <span class="t-mid"><strong class="t-hi">Drafting Committee</strong> appointed under Chairmanship of <strong class="t-hi">Dr. B.R. Ambedkar</strong> (7 members).</span>
-              </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">Nov 26, 1949</span>
-                <span class="t-mid">Constitution adopted &amp; enacted (<strong class="t-hi">Constitution Day</strong>). Contained Preamble, 395 Articles, 8 Schedules, 22 Parts (signed by 284 members).</span>
-              </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">Jan 24, 1950</span>
-                <span class="t-mid">National Anthem ("Jana Gana Mana") &amp; Song ("Vande Mataram") adopted; Dr. Rajendra Prasad elected first President.</span>
-              </div>
-              <div class="flex items-start gap-3 p-2.5 rounded bg-sub border b-line">
-                <span class="chip chip-mono font-bold shrink-0">Jan 26, 1950</span>
-                <span class="t-mid">Constitution commenced in full (<strong class="t-hi">Republic Day</strong>), commemorating Lahore Congress Purna Swaraj Day (Jan 26, 1930).</span>
+              <h4 class="text-xs font-bold t-hi mb-1.5">Drafting &amp; Global Borrowing</h4>
+              <p class="text-xs t-mid leading-relaxed mb-2">
+                Under the Chairmanship of <strong class="t-hi">Dr. B.R. Ambedkar</strong> (appointed August 29, 1947), the Drafting Committee synthesized the Government of India Act 1935 with 10 global constitutions into our composite document (detailed in Section 05).
+              </p>
+              <div class="p-2 rounded bg-sub border b-line text-[11px] t-lo">
+                <strong class="t-hi">Enactment Target:</strong> Adopted Nov 26, 1949 (Constitution Day); commenced Jan 26, 1950 (Republic Day).
               </div>
             </div>
           </div>
 
-          <!-- Drafting Committee 7 Members & Major Committees -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="panel panel-pad bg-elev border b-line">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-saffron-600 dark:text-saffron-400 mb-2">The 7 Drafting Committee Members</h4>
-              <ol class="list-decimal list-inside text-xs space-y-1.5 t-mid">
-                <li><strong class="t-hi">Dr. B.R. Ambedkar</strong> (Chairman - "Modern Manu")</li>
-                <li><strong class="t-hi">N. Gopalaswamy Ayyangar</strong></li>
-                <li><strong class="t-hi">Alladi Krishnaswamy Iyer</strong></li>
-                <li><strong class="t-hi">Dr. K.M. Munshi</strong> (Only active INC member throughout)</li>
-                <li><strong class="t-hi">Syed Mohammad Saadulla</strong> (Only Muslim League member)</li>
-                <li><strong class="t-hi">N. Madhava Rau</strong> (Replaced B.L. Mitter due to ill-health)</li>
-                <li><strong class="t-hi">T.T. Krishnamachari</strong> (Replaced D.P. Khaitan on his death)</li>
-              </ol>
-            </div>
+          <!-- Note Scope Demarcation Guide -->
+          <div class="panel panel-pad bg-sub/60 border b-line rounded-xl">
+            <h4 class="text-xs font-bold uppercase tracking-wider t-lo mb-3">Topic Scope &amp; Study Guide</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <div class="flex items-center gap-2 mb-1.5 font-bold t-hi text-saffron-600 dark:text-saffron-400">
+                  <UIcon name="i-heroicons-document-text" class="h-4 w-4 shrink-0" />
+                  <span>Coverage in This Note (NOTE-POL-CONST-FRAME)</span>
+                </div>
+                <ul class="space-y-1 t-mid pl-6 list-disc">
+                  <li>Evolutionary arc of British Acts: Company Rule (1773 to 1853) and Crown Rule (1858 to 1947)</li>
+                  <li>10-Nation Borrowed Features Matrix and Government of India Act 1935 structural backbone</li>
+                  <li>Preamble philosophy, 42nd Amendment additions, Berubari vs Kesavananda doctrine</li>
+                  <li>12 Schedules and Seventh Schedule 3-List demarcation (Union, State, Concurrent)</li>
+                </ul>
+              </div>
 
-            <div class="panel panel-pad bg-elev border b-line">
-              <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-2">Key Assembly Committees</h4>
-              <ul class="text-xs space-y-1.5 t-mid">
-                <li><strong class="t-hi">Jawaharlal Nehru:</strong> Union Powers, Union Constitution, States Committee.</li>
-                <li><strong class="t-hi">Dr. Rajendra Prasad:</strong> Rules of Procedure, Steering, Finance &amp; Staff.</li>
-                <li><strong class="t-hi">Sardar Patel:</strong> Provincial Constitution, Advisory Committee on FR/Minorities/Tribals.</li>
-                <li><strong class="t-hi">J.B. Kripalani:</strong> Fundamental Rights Sub-Committee.</li>
-                <li><strong class="t-hi">H.C. Mukherjee:</strong> Minorities Sub-Committee.</li>
-              </ul>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <div class="flex items-center gap-2 mb-1.5 font-bold t-hi text-emerald-600 dark:text-emerald-400">
+                  <UIcon name="i-heroicons-building-library" class="h-4 w-4 shrink-0" />
+                  <span>Coverage in Dedicated Note (NOTE-POL-MAKING-CONST)</span>
+                </div>
+                <ul class="space-y-1 t-mid pl-6 list-disc">
+                  <li>Twelve-year demand progression (1934 Roy, 1935 INC, 1938 Nehru, 1940 Offer, 1942 Cripps)</li>
+                  <li>Cabinet Mission Scheme: 389-seat formula, Provincial vs Princely quota, post-partition 299</li>
+                  <li>8 Major Committees and Chairs (Patel, Nehru, Prasad, Ambedkar) plus key sub-committees</li>
+                  <li>Drafting Committee 7-member roster, replacement history (Mitter to Rau, Khaitan to TTK)</li>
+                  <li>Dual functions (Constituent vs Legislative with Mavalankar) and calligraphy heritage</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>

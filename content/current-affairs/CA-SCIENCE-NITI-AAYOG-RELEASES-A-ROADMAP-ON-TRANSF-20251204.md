@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "NITI Aayog Quantum Economy Roadmap"
-related_topic_ids: ["NOTE-SCI-QUANTUM", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

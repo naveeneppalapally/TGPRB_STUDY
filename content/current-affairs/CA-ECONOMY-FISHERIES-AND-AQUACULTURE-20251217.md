@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India's Fisheries Sector Growth and PMMSY Initiatives"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

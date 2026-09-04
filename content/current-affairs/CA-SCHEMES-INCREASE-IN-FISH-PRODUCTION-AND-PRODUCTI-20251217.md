@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PMMSY Fish Production and Inland Fisheries Ranking"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-SCH-CENTRAL"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-POL-PANCHAYAT", "NOTE-SCH-CENTRAL"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

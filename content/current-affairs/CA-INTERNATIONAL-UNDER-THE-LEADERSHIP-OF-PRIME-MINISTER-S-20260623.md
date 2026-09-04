@@ -4,7 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "12th International Day of Yoga 2026"
-related_topic_ids: ["NOTE-GS-YOGA", "NOTE-GS-DAYS", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GS-DAYS", "NOTE-GS-YOGA", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

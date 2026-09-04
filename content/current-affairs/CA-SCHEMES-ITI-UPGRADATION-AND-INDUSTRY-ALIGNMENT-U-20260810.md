@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM-SETU Scheme and ITI Upgradation"
-related_topic_ids: ["NOTE-TEL-SCHEMES", "NOTE-ECO-SKILLING"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-SKILLING", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

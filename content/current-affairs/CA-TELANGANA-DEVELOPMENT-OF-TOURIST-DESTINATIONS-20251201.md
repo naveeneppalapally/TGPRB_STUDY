@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Swadesh Darshan 2.0 Telangana Destinations"
-related_topic_ids: ["NOTE-TEL-GEO", "NOTE-SCHEMES-TOURISM", "NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-FORESTS", "NOTE-SCHEMES-TOURISM", "NOTE-TEL-CULTURE", "NOTE-TEL-GEOGRAPHY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

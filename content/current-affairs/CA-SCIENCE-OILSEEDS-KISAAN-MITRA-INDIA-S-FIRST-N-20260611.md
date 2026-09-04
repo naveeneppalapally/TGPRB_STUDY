@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Oilseeds Kisaan Mitra WhatsApp AI Advisory"
-related_topic_ids: ["NOTE-SCI-AI", "NOTE-TEL-AGRI"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-INNOVATION", "NOTE-TEL-AGRI"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

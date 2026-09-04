@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Establishment of Centres of Excellence at NSTI Hyderabad and Chennai"
-related_topic_ids: ["NOTE-ECO-SKILLING", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ECO-SKILLING", "NOTE-POL-JUDICIARY", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

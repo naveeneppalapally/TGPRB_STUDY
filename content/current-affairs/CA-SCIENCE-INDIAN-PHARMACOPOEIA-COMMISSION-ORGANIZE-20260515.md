@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Indian Pharmacopoeia 2026 Scientific Conclave"
-related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

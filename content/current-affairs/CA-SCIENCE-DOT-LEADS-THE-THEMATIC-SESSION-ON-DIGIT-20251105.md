@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Bharat 6G Vision and Digital Communication at ESTIC 2025"
-related_topic_ids: ["NOTE-SCI-TECH-6G", "NOTE-SCI-TECH-TELECOM"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-TECH-6G", "NOTE-SCI-TECH-TELECOM"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

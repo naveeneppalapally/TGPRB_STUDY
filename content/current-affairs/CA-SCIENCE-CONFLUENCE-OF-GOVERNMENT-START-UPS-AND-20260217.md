@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "India AI Impact Summit 2026 and AVGC Initiatives"
-related_topic_ids: ["NOTE-SCI-AI", "NOTE-ECO-BUDGET"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

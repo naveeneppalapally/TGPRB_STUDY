@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "GST Rate Rationalisation on Handicrafts and Leather"
-related_topic_ids: ["NOTE-ECO-TAXATION", "NOTE-ECO-MSME"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-MSME", "NOTE-ECO-TAXATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

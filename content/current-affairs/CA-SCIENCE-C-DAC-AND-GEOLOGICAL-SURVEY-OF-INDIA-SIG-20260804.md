@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "C-DAC and GSI MoU on Geoscience and AI/HPC"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GEO-DISASTER"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-DISASTER", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "CRCS Sahara Refund Portal"
-related_topic_ids: ["NOTE-ECO-BANKING"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

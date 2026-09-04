@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India as Partner Country at Gulfood 2026"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-ECO-AGRICULTURE"]
+related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-ECO-TRADE", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

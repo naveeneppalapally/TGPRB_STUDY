@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "CBC Southern Regional Consultative Workshop in Hyderabad"
-related_topic_ids: ["NOTE-TEL-GOVERNANCE", "NOTE-POL-ADMINISTRATION"]
+related_topic_ids: ["NOTE-POL-ADMINISTRATION", "NOTE-POL-PANCHAYAT", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Project Seabird Phase IIA Karwar Naval Base"
-related_topic_ids: ["NOTE-DEF-NAVY", "NOTE-GEO-PORTS"]
+related_topic_ids: ["NOTE-DEF-NAVY", "NOTE-GEO-DRAINAGE", "NOTE-GEO-PORTS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

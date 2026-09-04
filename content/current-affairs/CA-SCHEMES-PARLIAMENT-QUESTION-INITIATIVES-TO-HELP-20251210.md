@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "Research Development and Innovation (RDI) Scheme and DST Initiatives"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-GOV-SCHEMES", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

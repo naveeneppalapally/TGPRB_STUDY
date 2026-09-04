@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "DRDO Salvo Launch of Pralay Missile"
-related_topic_ids: ["NOTE-SCI-DEFENCE", "NOTE-TEL-SCIENCE"]
+related_topic_ids: ["NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-TEL-SCIENCE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

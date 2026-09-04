@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "PM-SETU Conclave and NSTI Collaborations"
-related_topic_ids: ["NOTE-ECO-SKILL", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-SKILL", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

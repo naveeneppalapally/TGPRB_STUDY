@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "CSIR-CRRI Road Technologies and CSIR Innovations"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-ENV-INFRA"]
+related_topic_ids: ["NOTE-ENV-INFRA", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

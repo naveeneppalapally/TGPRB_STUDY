@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Unani Medicine Institutes and WHO Global Summit"
-related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-HEALTH"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

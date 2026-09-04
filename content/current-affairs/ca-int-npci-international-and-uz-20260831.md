@@ -4,8 +4,7 @@ type: "current_affair"
 category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
-related_topic_ids:
-  - "NOTE-POL-CONSTITUTION"
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-CONST-FRAME"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

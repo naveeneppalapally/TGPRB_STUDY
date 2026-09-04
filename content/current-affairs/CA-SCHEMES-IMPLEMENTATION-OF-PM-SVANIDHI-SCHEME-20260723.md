@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM SVANidhi Scheme Implementation and ISB Impact Study"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-TEL-INSTITUTIONS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "DRDO MPATGM Flight Test"
-related_topic_ids: ["NOTE-SCI-DEFENCE", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: ["NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE", "NOTE-TEL-HYDERABAD"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Coal and Lignite Gasification Projects Roadshow"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-HYD"]
+related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-HYD"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

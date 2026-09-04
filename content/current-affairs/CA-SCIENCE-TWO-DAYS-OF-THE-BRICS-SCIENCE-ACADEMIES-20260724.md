@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "BRICS Science Academies Forum Meeting 2026"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-TEL-EDU"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-EDU"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Cotton Production and Species in India"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-CROPS"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "NAKSHA Programme for Urban Land Mapping"
-related_topic_ids: ["NOTE-SCH-DILRMP", "NOTE-GEO-GIS"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-GIS", "NOTE-SCH-DILRMP"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

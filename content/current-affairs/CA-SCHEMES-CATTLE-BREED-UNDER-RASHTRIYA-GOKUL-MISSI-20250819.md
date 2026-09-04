@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Rashtriya Gokul Mission Revision and Milk Production Growth"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-AGRI"]
+related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

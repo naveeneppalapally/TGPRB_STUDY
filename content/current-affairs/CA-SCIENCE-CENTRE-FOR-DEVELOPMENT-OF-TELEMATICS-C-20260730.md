@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "C-DOT Centre of Excellence at IISc Bengaluru"
-related_topic_ids: ["NOTE-SCI-TELECOM"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-TELECOM"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

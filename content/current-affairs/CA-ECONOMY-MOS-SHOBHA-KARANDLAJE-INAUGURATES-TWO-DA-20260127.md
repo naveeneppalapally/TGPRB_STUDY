@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Regional Conference on Labour Codes in Vijayawada"
-related_topic_ids: ["NOTE-ECO-LABOUR", "NOTE-GOV-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-LABOUR", "NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

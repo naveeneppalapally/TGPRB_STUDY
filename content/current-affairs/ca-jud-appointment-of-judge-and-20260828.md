@@ -4,9 +4,7 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "Judiciary and Law"
-related_topic_ids:
-  - "NOTE-POL-CONSTITUTION"
-  - "NOTE-POL-UNION-EXEC"
+related_topic_ids: ["NOTE-POL-CONST-FRAME", "NOTE-POL-JUDICIARY", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

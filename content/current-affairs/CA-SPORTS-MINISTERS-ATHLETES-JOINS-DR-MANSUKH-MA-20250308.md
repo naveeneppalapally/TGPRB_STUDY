@@ -4,7 +4,7 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "ASMITA Newsletter Launch and Women's Day Cycle Rally"
-related_topic_ids: ["NOTE-TEL-INITIATIVES", "NOTE-SPT-SCHEMES"]
+related_topic_ids: ["NOTE-SPT-SCHEMES", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

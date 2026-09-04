@@ -15,6 +15,7 @@
     "tier": "npx tsx scripts/tier.ts",
     "verify": "npx tsx scripts/verify-topics.ts",
     "verify:integrity": "npx tsx scripts/verify-topic-integrity.ts",
+    "sync:ca-topics": "python3 scripts/pib_ca_pipeline/sync_ca_topics.py",
     "test:exam-strategy": "npx tsx scripts/test-exam-strategy.ts",
     "test:offline-sync": "npx tsx scripts/test-offline-sync.ts",
     "test:personal-notes": "npx tsx scripts/test-personal-notes-e2e.ts",

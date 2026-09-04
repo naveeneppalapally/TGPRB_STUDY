@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "NHCX Hackathon and ABDM Innovation Meet"
-related_topic_ids: ["NOTE-SCH-ABDM", "NOTE-SCI-HEALTH"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCH-ABDM", "NOTE-SCI-HEALTH"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

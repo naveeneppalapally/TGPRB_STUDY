@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PMAY-U 2.0 Sanctions and Targets"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INITIATIVES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

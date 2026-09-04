@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "DRDO APJ Abdul Kalam Missile Complex"
-related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-TEL-HYD"]
+related_topic_ids: ["NOTE-DEF-DRDO", "NOTE-SCI-SPACE", "NOTE-TEL-HYD"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

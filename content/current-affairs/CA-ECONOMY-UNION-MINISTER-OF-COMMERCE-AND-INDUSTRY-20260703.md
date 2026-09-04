@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Board of Trade Meeting and BHAVYA Scheme"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-ECO-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-TRADE", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

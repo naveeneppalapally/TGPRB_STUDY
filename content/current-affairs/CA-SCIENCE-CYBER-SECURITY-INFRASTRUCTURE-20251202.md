@@ -4,7 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Cyber Security Infrastructure and Forensic Labs"
-related_topic_ids: ["NOTE-SCI-CYBER", "NOTE-POL-ITACT"]
+related_topic_ids: ["NOTE-POL-ITACT", "NOTE-SCI-CYBER", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

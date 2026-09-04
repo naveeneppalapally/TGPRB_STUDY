@@ -4,7 +4,7 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "XV Finance Commission Grants to Rural Local Bodies"
-related_topic_ids: ["NOTE-ECO-FINANCE-COMMISSION", "NOTE-POL-PANCHAYATI-RAJ"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-FINANCE-COMMISSION", "NOTE-POL-CONST-FRAME", "NOTE-POL-JUDICIARY", "NOTE-POL-PANCHAYAT", "NOTE-POL-PANCHAYATI-RAJ"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

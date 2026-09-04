@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "DRDO Actively Cooled Scramjet Engine Test"
-related_topic_ids: ["NOTE-SCI-TECH", "NOTE-DEF-MISSILES"]
+related_topic_ids: ["NOTE-DEF-MISSILES", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

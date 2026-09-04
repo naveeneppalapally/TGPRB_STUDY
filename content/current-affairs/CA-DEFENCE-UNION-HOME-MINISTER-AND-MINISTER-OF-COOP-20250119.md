@@ -4,7 +4,7 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "20th NDRF Raising Day and Infrastructure Projects"
-related_topic_ids: ["NOTE-DEF-NDRF", "NOTE-TEL-POLICE"]
+related_topic_ids: ["NOTE-DEF-NDRF", "NOTE-GEO-MOUNTAINS", "NOTE-TEL-POLICE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

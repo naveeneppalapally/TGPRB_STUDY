@@ -4,7 +4,7 @@ type: "current_affair"
 category: "environment"
 exam_section: "General Studies"
 topic: "NBA Access and Benefit Sharing Funds for Red Sanders"
-related_topic_ids: ["NOTE-GEO-ENVIRONMENT", "NOTE-TEL-ENVIRONMENT"]
+related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-TEL-ENVIRONMENT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

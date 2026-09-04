@@ -4,9 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
-related_topic_ids:
-  - "NOTE-POL-CONSTITUTION"
-  - "NOTE-POL-UNION-EXEC"
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-POL-CONST-FRAME", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
@@ -18,7 +16,8 @@ published_at: "2026-08-11"
 date: "2026-08-11"
 source_name: "PIB"
 source_type: "official"
-ministry: "Ministry of Agriculture & Farmers Welfare"
+ministry: "Ministry of Agriculture &
+ Farmers Welfare"
 canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2297658&reg=3&lang=1"
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2297658&reg=3&lang=1"
 event_key: "DGCES-PHASED-EXPANSION-2023"

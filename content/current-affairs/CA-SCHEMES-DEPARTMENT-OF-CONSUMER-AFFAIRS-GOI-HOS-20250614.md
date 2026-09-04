@@ -4,7 +4,7 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "e-Jagriti Platform and Regional Workshop on Consumer Protection"
-related_topic_ids: ["NOTE-POL-CONSUMER", "NOTE-GS-GOVERNANCE"]
+related_topic_ids: ["NOTE-GS-GOVERNANCE", "NOTE-POL-CONSUMER", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

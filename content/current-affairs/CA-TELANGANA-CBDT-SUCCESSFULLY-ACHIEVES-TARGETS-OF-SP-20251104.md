@@ -4,7 +4,7 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "CBDT Special Campaign 5.0 and QR Code File Inventory App"
-related_topic_ids: ["NOTE-TEL-GOVERNANCE", "NOTE-ECO-TAXATION"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-TAXATION", "NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"
