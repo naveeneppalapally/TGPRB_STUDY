@@ -50,3 +50,4 @@ workers/scrapy-pib/__pycache__/
 
 # Agent workspace directories
 .agents/
+core

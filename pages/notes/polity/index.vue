@@ -65,6 +65,32 @@
       </div>
     </section>
 
+    <!-- ── Study screen (new 3-zone reader) ──────────────────────────── -->
+    <section class="mb-8">
+      <div class="mb-3 flex items-baseline justify-between">
+        <p class="eyebrow">Study mode</p>
+        <span class="chip chip-jade chip-mono">New</span>
+      </div>
+      <NuxtLink
+        to="/study/parliament"
+        class="panel panel-hover group flex items-center gap-4 px-5 py-4"
+      >
+        <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+          <UIcon name="i-heroicons-book-open" class="h-4 w-4 accent" />
+        </span>
+        <div class="min-w-0 flex-1">
+          <p class="text-[14px] font-semibold t-hi">Parliament of India</p>
+          <p class="mt-0.5 text-[11.5px] t-lo">Art. 79-81, Rajya Sabha vs Lok Sabha, Speaker & Chairman, Money Bills, Question Hour & committees. Section-bound PYQs, cards, notes and trap duels.</p>
+        </div>
+        <span class="chip chip-saffron chip-mono hidden sm:inline-flex">6 sections</span>
+        <span class="num font-mono text-[11px] t-lo">18 PYQs</span>
+        <UIcon
+          name="i-heroicons-arrow-right"
+          class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+        />
+      </NuxtLink>
+    </section>
+
     <!-- ── Queued topics ──────────────────────────────────────────────── -->
     <section>
       <div class="mb-3 flex items-baseline justify-between">
