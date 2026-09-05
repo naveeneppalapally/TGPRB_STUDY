@@ -3,6 +3,8 @@ import fs from 'node:fs'
 import path from 'node:path'
 import type { StudyChapter, StudyChapterResolved, StudyPyq, StudyPyqRef } from '~/types/study'
 import parliament from '~/content/data/study/polity/parliament'
+import historicalBackground from '~/content/data/study/polity/historical-background-1773-1947'
+import makingOfTheConstitution from '~/content/data/study/polity/making-of-the-constitution'
 import staticPyqs from '~/content/data/study/pyqs.json'
 
 /**
@@ -14,6 +16,8 @@ import staticPyqs from '~/content/data/study/pyqs.json'
  */
 const CHAPTERS: Record<string, StudyChapter> = {
   [parliament.slug]: parliament,
+  [historicalBackground.slug]: historicalBackground,
+  [makingOfTheConstitution.slug]: makingOfTheConstitution,
 }
 
 interface MasterPyq {

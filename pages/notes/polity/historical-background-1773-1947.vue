@@ -21,11 +21,21 @@
 
         <!-- Title block -->
         <header class="mb-8 border-b b-line pb-7">
-          <div class="mb-4 flex flex-wrap items-center gap-2">
-            <span class="chip chip-saffron"><span class="dot" />T1 · High priority</span>
-            <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 2-3 Questions (2-3 Marks)</span>
-            <span class="chip">{{ pyqs.length }} verified PYQs</span>
-            <span class="chip">Polity</span>
+          <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="chip chip-saffron"><span class="dot" />T1 · High priority</span>
+              <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 2-3 Questions (2-3 Marks)</span>
+              <span class="chip">{{ pyqs.length }} verified PYQs</span>
+              <span class="chip">Polity</span>
+            </div>
+            <NuxtLink
+              to="/study/historical-background-1773-1947"
+              class="inline-flex items-center gap-2 rounded-lg border border-saffron-500/40 bg-saffron-500/10 px-3 py-1.5 text-xs font-semibold text-saffron-700 dark:text-saffron-300 transition-colors hover:bg-saffron-500/20"
+            >
+              <UIcon name="i-heroicons-book-open" class="h-4 w-4" />
+              <span>Study Mode (3-Zone)</span>
+              <UIcon name="i-heroicons-arrow-right" class="h-3.5 w-3.5" />
+            </NuxtLink>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
             Historical Background: Company Rule &amp; Crown Rule (1773-1947)
@@ -45,6 +55,31 @@
             </span>
           </div>
         </header>
+
+        <!-- Study Mode Switcher Banner -->
+        <div class="mb-10 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-saffron-500/30 bg-saffron-500/5 p-4 sm:p-5">
+          <div class="flex items-center gap-3.5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-saffron-500/15 text-saffron-600 dark:text-saffron-400">
+              <UIcon name="i-heroicons-book-open" class="h-5 w-5" />
+            </span>
+            <div>
+              <div class="flex items-center gap-2">
+                <p class="text-[13.5px] font-bold t-hi">Prefer active recall study?</p>
+                <span class="chip chip-jade chip-mono text-[10px]">Study Mode Live</span>
+              </div>
+              <p class="mt-0.5 text-[12px] t-mid leading-relaxed">
+                Step through 6 screen-sized stages with section-bound PYQs, flashcards, and trap duels.
+              </p>
+            </div>
+          </div>
+          <NuxtLink
+            to="/study/historical-background-1773-1947"
+            class="inline-flex items-center gap-2 rounded-lg bg-saffron-500 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition-all hover:bg-saffron-600 dark:text-stone-900"
+          >
+            <UIcon name="i-heroicons-bolt" class="h-4 w-4" />
+            <span>Open in Study Mode</span>
+          </NuxtLink>
+        </div>
 
         <!-- ══ Coverage strip · how TGPRB tests this topic ══ -->
         <section class="mb-10">
@@ -843,6 +878,28 @@
           <InlineNoteStrip note-id="NOTE-POL-HIST-ACTS" section-id="current-affairs" section-label="Current Affairs" note-title="Historical Background (1773-1947)" @open="openNotesDrawer" />
           <CurrentAffairsStrip note-id="NOTE-POL-HIST-ACTS" />
         </section>
+
+        <!-- Study Mode Transition Banner -->
+        <div class="mt-12 mb-6 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-saffron-500/30 bg-saffron-500/5 p-4 sm:p-5">
+          <div class="flex items-center gap-3.5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-saffron-500/15 text-saffron-600 dark:text-saffron-400">
+              <UIcon name="i-heroicons-bolt" class="h-5 w-5" />
+            </span>
+            <div>
+              <p class="text-[13.5px] font-bold t-hi">Ready to master this topic?</p>
+              <p class="mt-0.5 text-[12px] t-mid leading-relaxed">
+                Step through 6 screen-sized stages with section-bound PYQs, flashcards, and trap duels.
+              </p>
+            </div>
+          </div>
+          <NuxtLink
+            to="/study/historical-background-1773-1947"
+            class="inline-flex items-center gap-2 rounded-lg bg-saffron-500 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition-all hover:bg-saffron-600 dark:text-stone-900"
+          >
+            <UIcon name="i-heroicons-bolt" class="h-4 w-4" />
+            <span>Start Study Mode</span>
+          </NuxtLink>
+        </div>
       </article>
 
       <!-- ══ Right TOC ═══════════════════════════════════════════════════ -->

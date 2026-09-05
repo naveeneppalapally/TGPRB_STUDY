@@ -128,6 +128,8 @@ export interface StudyChapter {
   subjectSlug: string
   title: string
   summary: string
+  /** Whether a full note page exists at /notes/:subjectSlug/:slug */
+  hasNote?: boolean
   sections: StudySection[]
 }
 

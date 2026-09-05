@@ -69,26 +69,64 @@
     <section class="mb-8">
       <div class="mb-3 flex items-baseline justify-between">
         <p class="eyebrow">Study mode</p>
-        <span class="chip chip-jade chip-mono">New</span>
+        <span class="chip chip-jade chip-mono">3 Chapters Live</span>
       </div>
-      <NuxtLink
-        to="/study/parliament"
-        class="panel panel-hover group flex items-center gap-4 px-5 py-4"
-      >
-        <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-          <UIcon name="i-heroicons-book-open" class="h-4 w-4 accent" />
-        </span>
-        <div class="min-w-0 flex-1">
-          <p class="text-[14px] font-semibold t-hi">Parliament of India</p>
-          <p class="mt-0.5 text-[11.5px] t-lo">Art. 79-81, Rajya Sabha vs Lok Sabha, Speaker & Chairman, Money Bills, Question Hour & committees. Section-bound PYQs, cards, notes and trap duels.</p>
-        </div>
-        <span class="chip chip-saffron chip-mono hidden sm:inline-flex">6 sections</span>
-        <span class="num font-mono text-[11px] t-lo">18 PYQs</span>
-        <UIcon
-          name="i-heroicons-arrow-right"
-          class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-        />
-      </NuxtLink>
+      <div class="panel divide-y divide-[var(--line)]">
+        <NuxtLink
+          to="/study/historical-background-1773-1947"
+          class="panel-hover group flex items-center gap-4 px-5 py-4"
+        >
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+            <UIcon name="i-heroicons-scale" class="h-4 w-4 accent" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[14px] font-semibold t-hi">Historical Background (1773-1947)</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Company Rule to Crown Rule, 1858 takeover, Morley-Minto, 1919 Dyarchy &amp; 1935 Provincial Autonomy. Section-bound PYQs, cards, notes and trap duels.</p>
+          </div>
+          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">6 sections</span>
+          <span class="num font-mono text-[11px] t-lo">12 PYQs</span>
+          <UIcon
+            name="i-heroicons-arrow-right"
+            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+          />
+        </NuxtLink>
+        <NuxtLink
+          to="/study/making-of-the-constitution"
+          class="panel-hover group flex items-center gap-4 px-5 py-4"
+        >
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+            <UIcon name="i-heroicons-document-text" class="h-4 w-4 accent" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[14px] font-semibold t-hi">Making of the Indian Constitution</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Demand Timeline (1934-1946), Cabinet Mission 389-seat architecture, 8 Major Committees, Drafting Committee roster &amp; Art. 394 enforcement.</p>
+          </div>
+          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">6 sections</span>
+          <span class="num font-mono text-[11px] t-lo">9 PYQs</span>
+          <UIcon
+            name="i-heroicons-arrow-right"
+            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+          />
+        </NuxtLink>
+        <NuxtLink
+          to="/study/parliament"
+          class="panel-hover group flex items-center gap-4 px-5 py-4"
+        >
+          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
+            <UIcon name="i-heroicons-book-open" class="h-4 w-4 accent" />
+          </span>
+          <div class="min-w-0 flex-1">
+            <p class="text-[14px] font-semibold t-hi">Parliament of India</p>
+            <p class="mt-0.5 text-[11.5px] t-lo">Art. 79-81, Rajya Sabha vs Lok Sabha, Speaker &amp; Chairman, Money Bills, Question Hour &amp; committees. Section-bound PYQs, cards, notes and trap duels.</p>
+          </div>
+          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">6 sections</span>
+          <span class="num font-mono text-[11px] t-lo">18 PYQs</span>
+          <UIcon
+            name="i-heroicons-arrow-right"
+            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
+          />
+        </NuxtLink>
+      </div>
     </section>
 
     <!-- ── Queued topics ──────────────────────────────────────────────── -->

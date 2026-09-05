@@ -29,6 +29,18 @@
 
     <!-- Right: controls -->
     <div class="ml-auto flex items-center gap-1.5">
+      <!-- Note view link (if full note exists) -->
+      <UTooltip v-if="noteUrl" text="Open full reference note" :popper="{ placement: 'bottom' }">
+        <NuxtLink
+          :to="noteUrl"
+          aria-label="Open full reference note"
+          class="flex h-8 items-center gap-1.5 rounded-lg border b-line bg-sub px-2 text-[12px] font-medium t-mid transition-colors hover:t-hi"
+        >
+          <UIcon name="i-heroicons-document-text" class="h-3.5 w-3.5" />
+          <span class="hidden sm:inline">Note</span>
+        </NuxtLink>
+      </UTooltip>
+
       <!-- Cloze toggle -->
       <UTooltip text="Cloze: blank out the marked facts (C)" :popper="{ placement: 'bottom' }">
         <button
@@ -69,6 +81,17 @@ import { useStudySession } from '~/composables/useStudySession'
 
 const { chapter, sections, activeIndex, chapterPercent, clozeOn, elapsedSeconds } = useStudySession()
 const colorMode = useColorMode()
+
+const fullNoteSlugs = new Set([
+  'historical-background-1773-1947',
+  'making-of-the-constitution',
+])
+const noteUrl = computed(() => {
+  if (!chapter.value?.slug) return null
+  return (chapter.value.hasNote || fullNoteSlugs.has(chapter.value.slug))
+    ? `/notes/${chapter.value.subjectSlug}/${chapter.value.slug}`
+    : null
+})
 
 const clock = computed(() => {
   const s = elapsedSeconds.value
