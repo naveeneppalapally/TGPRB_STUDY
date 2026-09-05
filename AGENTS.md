@@ -119,15 +119,24 @@ The forensic audit (`docs/forensic-paper-setting-evolution-audit-2026-08-15.md`)
 - **Synthetic multi-statement/matching questions must be labelled as "TGPSC-style advanced practice"** - never present them as reflecting the confirmed TGPRB format. The verified TGPRB format (2022-2023) is 92-93.5% direct factual MCQs. Multi-statement drills are supplementary hardening, not the primary question type.
 - Current affairs are a separate content type, never edited into a note's markdown file.
 - **A topic is not done until its tagged current-affairs entries visibly render on its live note page** - not just exist as a content file. Check this in the browser for every topic, the same way you would check the gate.
-- **Mandatory Topic Delivery Integrity Gate (Zero Half-Baked Notes)**:
-  A note page is NEVER complete just because its `.vue` file was authored. Every topic note page MUST satisfy the full contract:
+- **Mandatory Topic Delivery Integrity Gate (Dual-Mode Delivery: Note + Study Mode)**:
+  A topic is NEVER complete just because its `.vue` file was authored. Every syllabus topic MUST deliver BOTH modalities:
   1. `data/topics_master.json` registration: Entry must exist with canonical `id`, `subject`, `title`, `keywords`, and `aliases`.
   2. `content/data/gates/<topic>.json` with at least 5 factual MCQs, registered in `server/api/gate/[noteId].get.ts`.
   3. `content/data/flashcards/<subject>/<topic>.json` with at least 10 atomic flashcards, with `note_id` property, registered in `server/api/flashcards/[noteId].get.ts`.
   4. Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching the registered `note-id`.
   5. Both 'gate' and 'current-affairs' registered in the TOC `sections` array.
   6. Current affairs coverage: Topic must be tagged in `content/current-affairs/*.md` via `npm run sync:ca-topics`.
-  7. `npm run verify:integrity` MUST pass with exit code 0 before any note task is considered done.
+  7. **3-Zone Study Mode Chapter (`content/data/study/<subject>/<slug>.ts`)**:
+     - Authored with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels.
+     - Registered in `server/api/study/[chapter].get.ts` under `CHAPTERS`.
+     - Referenced PYQ records appended into `content/data/study/pyqs.json` for 0ms Cloudflare Pages edge runtime resolution.
+     - Both `/study/<slug>` and `/api/study/<slug>` added to `nitro.prerender.routes` in `nuxt.config.ts`.
+  8. **Bidirectional Switchers**:
+     - Top and bottom transition banners in `pages/notes/<subject>/<slug>.vue` linking to `/study/<slug>`.
+     - Study chapter sets `hasNote: true` so `StudyTopbar.vue` links back to `/notes/<subject>/<slug>`.
+  9. **Subject Hub**: Both the Note card and Study Mode card listed in `pages/notes/<subject>/index.vue`.
+  10. `npm run verify:integrity` and `npm test` MUST pass with exit code 0 before any topic task is considered done.
 - **Subject Banks navigation invariant**: All subject links in `layouts/default.vue` (`const subjects`) and `pages/index.vue` (`openSubject`) must route to Subject Hubs (`/notes/<subject>`), never directly bypassing to an individual note topic.
 
 ## Fact verification - never assume, always cite the data year
@@ -472,20 +481,28 @@ Cards split automatically into "New since last visit" (saffron highlight) and "E
 - This file is the standing constitution. Task prompts should point back to a section here ("per the image rules in AGENTS.md"), not restate it.
 - `docs/build-prompt.md` holds the full one-time spec (schema, Tier-1 template, settings, deployment). Update it when an architecture decision actually changes - not for routine topic-by-topic work.
 - No em-dashes anywhere in the codebase. Use standard hyphens only. The `predev`/`prebuild` hooks enforce this automatically.
+- **Pre-Update Communication Invariant**: Every time an agent performs work or applies architectural updates, it must explicitly summarize what was updated (the changes, root causes, and verification results) to the user before proceeding to the next update.
 
-## Standard Workflow: One-Line Topic Generation Directive
+## Standard Workflow: One-Line Topic Generation Directive (Dual-Mode Delivery)
 
 Whenever the user provides a prompt in the format:
-`Topic - [Topic Name] ([Subject])` (e.g., `Topic - Forests of India (Geography)`), the agent must immediately execute the complete topic creation pipeline without asking any clarifying questions:
+`Topic - [Topic Name] ([Subject])` (e.g., `Topic - Forests of India (Geography)`), the agent must immediately execute the complete dual-mode topic creation pipeline without asking any clarifying questions:
 
 1. **PYQ Extraction & Tier Determination**: Query `data/pyq_enriched_master.json` for verified PYQs matching the topic to compute the Tier and load question content.
 2. **Authentic Image Sourcing**: Search online first (Wikipedia/Wikimedia Commons/government portals) for real maps, diagrams, and photographs. Download directly to `assets-to-upload/[subject]/` and preview in `public/images/[subject]/`.
 3. **Comprehensive Current Affairs Attachment (All Matching Cards)**: Scan the entire `content/current-affairs/*.md` database and tag **every matching card** to `NOTE-[SECTION]-[TOPIC]`. If no cards exist in the database, extract or create official cards from PIB/State sources. Every matching card must be attached - never an arbitrary subset.
-4. **Generate Full Note Page**: Generate `pages/notes/[subject]/[topic-slug].vue` structuring the conceptual content according to the **Subject-Specific Scaffold** (e.g. Geography 6-point, History causal chain, Polity architecture), followed by the **Standard 4-Stage Closing Block** (Interactive PYQs, TGPSC-Style Advanced Practice, Comprehension Gate, Current Affairs).
-5. **Comprehension Gate Setup**: Generate the 5-MCQ Gate Quiz JSON at `content/data/gates/[topic-slug].json` and register the NOTE-ID in `server/api/gate/[noteId].get.ts`.
-6. **Navigation Updates**: Add the live topic link to `pages/notes/[subject]/index.vue` and check default layout sidebar navigation.
-7. **Prebuild & Verification**: Run `npm run prebuild` (zero em-dashes check) and verify `HTTP 200` on the live URL. Verify that both `<GateQuiz>` and `<CurrentAffairsStrip>` render live data.
-8. **Git Commit & Push**: Commit code and images together (`git push origin main`) and pull back after GitHub Action Cloudinary conversion.
+4. **Generate Full Note Page**: Generate `pages/notes/[subject]/[topic-slug].vue` structuring the conceptual content according to the **Subject-Specific Scaffold** (e.g. Geography 6-point, History causal chain, Polity architecture), followed by the **Standard 4-Stage Closing Block** (Interactive PYQs, TGPSC-Style Advanced Practice, Comprehension Gate, Current Affairs). Include top and bottom Study Mode transition banners.
+5. **Comprehension Gate & Atomic Flashcards**:
+   - Generate the 5-MCQ Gate Quiz JSON at `content/data/gates/[topic-slug].json` and register the NOTE-ID in `server/api/gate/[noteId].get.ts`.
+   - Generate at least 10 atomic flashcards at `content/data/flashcards/[subject]/[topic-slug].json` and register in `server/api/flashcards/[noteId].get.ts`.
+6. **Generate 3-Zone Study Mode Chapter**:
+   - Create `content/data/study/[subject]/[topic-slug].ts` (`StudyChapter`) with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels.
+   - Register chapter in `server/api/study/[chapter].get.ts` under `CHAPTERS`.
+   - Append referenced PYQ records into `content/data/study/pyqs.json` for 0ms Cloudflare Pages edge runtime resolution.
+   - Add `/study/[topic-slug]` and `/api/study/[topic-slug]` to `nitro.prerender.routes` in `nuxt.config.ts`.
+7. **Navigation & Hub Updates**: Add both the Note link and Study Mode link to `pages/notes/[subject]/index.vue` and check default layout sidebar navigation.
+8. **Prebuild & Verification**: Run `npm run prebuild` (zero em-dashes check), `npm run verify:integrity`, and `npm test`. Verify `HTTP 200` on both the note URL and study URL.
+9. **Git Commit & Push**: Commit code and images together (`git push origin main`) and pull back after GitHub Action Cloudinary conversion.
 
 ## Content improvement queue - agent processing
 
