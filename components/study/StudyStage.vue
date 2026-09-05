@@ -223,6 +223,7 @@ function calloutIcon(tone: string) {
 function onKey(e: KeyboardEvent) {
   const t = e.target as HTMLElement | null
   if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return
+  if (e.ctrlKey || e.metaKey || e.altKey) return
   if (e.key === 'ArrowRight' || e.key === 'j' || e.key === 'J') { e.preventDefault(); go('next') }
   else if (e.key === 'ArrowLeft' || e.key === 'k' || e.key === 'K') { e.preventDefault(); go('prev') }
   else if (e.key === 'c' || e.key === 'C') { clozeOn.value = !clozeOn.value }

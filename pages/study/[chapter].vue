@@ -33,7 +33,10 @@ import { computed, onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
 import type { StudyChapterResolved } from '~/types/study'
 import { createStudySession } from '~/composables/useStudySession'
 
-definePageMeta({ layout: 'study' })
+definePageMeta({
+  layout: 'study',
+  key: route => route.fullPath,
+})
 
 const route = useRoute()
 const slug = computed(() => String(route.params.chapter))
@@ -59,5 +62,5 @@ onMounted(() => {
 onBeforeUnmount(() => mq.value?.removeEventListener('change', sync))
 
 /* Stage bottom padding so the peek bar never hides the checkpoint on phones */
-const trayPad = '72px'
+const trayPad = 'calc(72px + env(safe-area-inset-bottom, 0px))'
 </script>

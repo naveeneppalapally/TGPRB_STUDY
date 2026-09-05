@@ -1,7 +1,17 @@
 <template>
   <div class="flex h-full flex-col">
-    <div v-if="!section.traps.length" class="grid flex-1 place-items-center p-6 text-center">
+    <div v-if="!section.traps.length && !wrongPyqs.length" class="grid flex-1 place-items-center p-6 text-center">
       <p class="text-[13px] t-mid">No confusing pairs flagged for this section.</p>
+    </div>
+
+    <div v-else-if="!section.traps.length" class="flex flex-1 flex-col overflow-y-auto p-4">
+      <div class="callout callout-red mb-4">
+        <p class="callout-title"><UIcon name="i-heroicons-exclamation-triangle" class="h-3.5 w-3.5" />{{ wrongPyqs.length }} PYQ{{ wrongPyqs.length > 1 ? 's' : '' }} missed in this section</p>
+        <ul class="callout-body list-disc pl-4">
+          <li v-for="w in wrongPyqs" :key="w.uid" class="line-clamp-2">{{ w.question }}</li>
+        </ul>
+      </div>
+      <p class="text-center text-[12.5px] t-mid">No confusing pair duels for this section. Review your missed PYQs above.</p>
     </div>
 
     <template v-else>

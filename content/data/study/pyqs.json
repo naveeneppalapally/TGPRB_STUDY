@@ -1,0 +1,617 @@
+[
+  {
+    "uid": "PYQ-0164",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "assertion_reason",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 0.95,
+    "explanation": "Both statements are correct facts. Under Article 249, Parliament can make laws on items in the State List if the Rajya Sabha passes a resolution by a two-thirds majority declaring it to be in the national interest; however, merely stating that Rajya Sabha is part of Parliament does not explain this specific constitutional mechanism.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Mains.json",
+        "q_no": 164,
+        "source_page": 38
+      }
+    ],
+    "has_image": false,
+    "question_text": "Assertion (A): The Parliament can legislate matters in State List in national interest. Reason (R) : Rajya Sabha is part of Parliament. The correct answer is",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation of (A)",
+      "(A) is true and (R) is false",
+      "(A) is false and (R) is true"
+    ],
+    "enriched_at": "2026-08-11T12:38:34.393026Z"
+  },
+  {
+    "uid": "PYQ-0191",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "Lakshadweep is the smallest Lok Sabha constituency in India in terms of the total number of electors, having around 55,000 to 60,000 voters. In contrast, Malkajgiri in Telangana is the largest constituency by number of electors, and Ladakh is the largest by area.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Mains.json",
+        "q_no": 191,
+        "source_page": 47
+      },
+      {
+        "source_file": "Constable_2023_Set_A.json",
+        "q_no": 191,
+        "source_page": 46
+      }
+    ],
+    "has_image": false,
+    "question_text": "Smallest parliamentary constituency in terms of number of electors is",
+    "options": [
+      "Ladak",
+      "Daman and Diu",
+      "Lakshadweep",
+      "Andaman and Nicobar island"
+    ],
+    "enriched_at": "2026-08-11T12:42:02.213919Z"
+  },
+  {
+    "uid": "PYQ-0301",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Legislative Procedure & Money Bills",
+    "question_type": "assertion_reason",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "Both statements are true. A Money Bill is introduced in the Lok Sabha only with the prior recommendation (permission) of the President, which is why the President generally gives assent and cannot return it to Parliament for reconsideration under Article 111.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 102,
+        "source_page": 33
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 102,
+        "source_page": 31
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 102,
+        "source_page": 31
+      }
+    ],
+    "has_image": false,
+    "question_text": "Assertion (A): Money bill cannot be returned by the President to the Parliament\nReason (R) : Money bill is presented in the Lok Sabha with the permission of the President",
+    "options": [
+      "(1) Both (A) and (R) are true and (R) is the correct explanation of (A)",
+      "(2) Both (A) and (R) are true but (R) is not the correct explanation of (A)",
+      "(3) (A) is true but (R) is false",
+      "(4) (A) is false but (R) is true"
+    ],
+    "enriched_at": "2026-08-11T12:56:27.458463Z"
+  },
+  {
+    "uid": "PYQ-0309",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "Andhra Pradesh and Gujarat both have 11 seats in the Rajya Sabha, making statement (a) correct. Rajasthan has 25 Lok Sabha seats while Odisha has 21, making statement (b) incorrect. Under Article 93, the Deputy Speaker of Lok Sabha is elected by the members of the House from amongst themselves, not appointed by the Speaker, making statement (c) incorrect.",
+    "recommended_memory_technique": "representation_framework",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 111,
+        "source_page": 37
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 111,
+        "source_page": 35
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 111,
+        "source_page": 35
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements\n(a) Andhra Pradesh and Gujarat have equal number of seats in Rajya Sabha\n(b) Rajasthan and Odisha have equal number of seats in Lok Sabha\n(c) Deputy Speaker of Lok Sabha is appointed by the Speaker\nThe correct answer is",
+    "options": [
+      "(a) is correct but (b) and (c) are wrong",
+      "(c) and (a) are correct but (b) is wrong",
+      "(a), (b) and (c) are correct",
+      "(a), (b) and (c) are wrong"
+    ],
+    "enriched_at": "2026-08-11T12:57:25.668963Z"
+  },
+  {
+    "uid": "PYQ-0313",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 0.95,
+    "explanation": "Under Article 80 of the Indian Constitution, the President nominates 12 members to the Rajya Sabha for their contributions to art, literature, science, and social services. Both K.T. Tulsi and K. Parasaran served as nominated members of the Rajya Sabha during their respective tenure.",
+    "recommended_memory_technique": "deliberate_practice",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 116,
+        "source_page": 38
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 116,
+        "source_page": 36
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 116,
+        "source_page": 36
+      }
+    ],
+    "has_image": false,
+    "question_text": "Who among the following are nominated members of Rajya Sabha ?",
+    "options": [
+      "(1) K.T. Tulsi, K. Parasaran",
+      "(2) Smt. B. Jayashree, Smt. Smriti Irani",
+      "(3) M. Venkaiah Naidu, Javed Akhtar",
+      "(4) P. Goverdhan Reddy, Sachin Tendulkar"
+    ],
+    "enriched_at": "2026-08-11T12:57:59.474719Z"
+  },
+  {
+    "uid": "PYQ-0314",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "Statement (B) is incorrect because the President (not the Speaker) previously nominated two Anglo-Indian members to the Lok Sabha. Statement (C) is incorrect because under Article 94(b), the Speaker addresses their resignation letter to the Deputy Speaker, not the President.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 117,
+        "source_page": 38
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 117,
+        "source_page": 36
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 117,
+        "source_page": 36
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements\n(A) Speaker appoints the leader of Opposition\n(B) Speaker nominates two members to Lok Sabha\n(C) Speaker submits his resignation to President\nWhich of the statements given above is/are not correct ?",
+    "options": [
+      "(1) (A) and (B)",
+      "(2) (A) and (C)",
+      "(3) (B) and (C)",
+      "(4) (A) only"
+    ],
+    "enriched_at": "2026-08-11T12:58:09.492333Z"
+  },
+  {
+    "uid": "PYQ-0326",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Malkajgiri Lok Sabha constituency in Telangana is the largest Parliamentary constituency in India in terms of the number of electors/voters. Conversely, Lakshadweep is the smallest constituency by number of voters, while Ladakh is the largest by geographic area.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 129,
+        "source_page": 42
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 129,
+        "source_page": 40
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 129,
+        "source_page": 40
+      }
+    ],
+    "has_image": false,
+    "question_text": "The largest Parliamentary constituency in terms of number of voters is in",
+    "options": [
+      "Uttar Pradesh",
+      "Telangana",
+      "Andhra Pradesh",
+      "Madhya Pradesh"
+    ],
+    "enriched_at": "2026-08-11T12:59:39.976853Z"
+  },
+  {
+    "uid": "PYQ-0519",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "Article 100(1) of the Indian Constitution grants the Speaker of Lok Sabha (or Chairman of Rajya Sabha) a 'casting vote' in the case of an equality of votes (a tie). The Presiding Officer does not vote in the first instance.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 98,
+        "source_page": 29
+      }
+    ],
+    "has_image": false,
+    "question_text": "'Casting Vote' to the Speaker of Lok Sabha is given in which Article of the Constitution?",
+    "options": [
+      "Article 100",
+      "Article 101",
+      "Article 102",
+      "Article 103"
+    ],
+    "enriched_at": "2026-08-11T13:26:32.297924Z"
+  },
+  {
+    "uid": "PYQ-0754",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "Since the 11th Lok Sabha (1996), a parliamentary convention was established wherein the Speaker of the Lok Sabha is chosen from the ruling party or coalition, while the post of Deputy Speaker is offered to the main opposition party.",
+    "recommended_memory_technique": "narrative_chain",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 134,
+        "source_page": 45
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 134,
+        "source_page": 43
+      }
+    ],
+    "has_image": false,
+    "question_text": "During which Lok Sabha's tenure the tradition of giving the post of Deputy Speaker to the nominee of opposition party began ?",
+    "options": [
+      "11th Lok Sabha",
+      "12th Lok Sabha",
+      "9th Lok Sabha",
+      "10th Lok Sabha"
+    ],
+    "enriched_at": "2026-08-11T13:57:57.515216Z"
+  },
+  {
+    "uid": "PYQ-0768",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "The Estimates Committee consists of 30 members who are exclusively elected from the Lok Sabha annually using proportional representation by single transferable vote. The Public Accounts Committee has 22 members (15 Lok Sabha, 7 Rajya Sabha), and the Committee on Home Affairs is a Departmentally Related Standing Committee (DRSC), not a JPC.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 148,
+        "source_page": 48
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 148,
+        "source_page": 46
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which one of the following statement is correct with regard to parliamentary committees?",
+    "options": [
+      "The members of the Estimates Committees are elected by Lok Shabha.",
+      "Public Accounts Committee consists of 30 members.",
+      "Committee on Empowerment of women is a departmentally related committee.",
+      "Committee on Home affairs is a Joint Parliamentary Committee."
+    ],
+    "enriched_at": "2026-08-11T13:59:31.582098Z"
+  },
+  {
+    "uid": "PYQ-0998",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "According to Article 80 of the Indian Constitution, the maximum sanctioned strength of the Rajya Sabha (Council of States) is fixed at 250 members. Out of these 250 members, 238 represent the States and Union Territories, while 12 are nominated by the President of India.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2022_Prelims.json",
+        "q_no": 180,
+        "source_page": 35
+      }
+    ],
+    "has_image": false,
+    "question_text": "The total sanctioned strength of the Rajya Sabha is _________ members.",
+    "options": [
+      "210",
+      "230",
+      "250",
+      "280"
+    ],
+    "enriched_at": "2026-08-11T14:30:49.821021Z"
+  },
+  {
+    "uid": "PYQ-1077",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 0,
+    "confidence": 0.95,
+    "explanation": "Under the Constitution of India (Article 81 and Article 331), the maximum permitted strength of the Lok Sabha was fixed at 552 members (530 representing States, 20 representing Union Territories, and 2 nominated Anglo-Indians). The 104th Constitutional Amendment Act, 2019 discontinued the nomination of Anglo-Indians.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "Constable_2023_Mains_Official.json",
+        "q_no": 59,
+        "source_page": 14
+      }
+    ],
+    "has_image": false,
+    "question_text": "As per the constitution of India, how many Members of Parliament (MPs) memberships are allotted for India Parliament?",
+    "options": [
+      "552",
+      "543",
+      "529",
+      "None of the above"
+    ],
+    "enriched_at": "2026-08-11T14:42:21.427287Z"
+  },
+  {
+    "uid": "PYQ-1107",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Legislative Procedure & Money Bills",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "According to Article 109(1) of the Indian Constitution, a Money Bill cannot be introduced in the Council of States (Rajya Sabha). It can only be introduced in the House of the People (Lok Sabha) on the prior recommendation of the President.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2023_Mains_Official.json",
+        "q_no": 90,
+        "source_page": 23
+      }
+    ],
+    "has_image": false,
+    "question_text": "Identify the following in which Money Bill cannot be introduced",
+    "options": [
+      "House of the People only",
+      "Council of States only",
+      "Both (1) and (2)",
+      "None of the above"
+    ],
+    "enriched_at": "2026-08-11T14:49:21.831629Z"
+  },
+  {
+    "uid": "PYQ-1182",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "Under Article 80 of the Constitution of India, the President can nominate 12 members to the Rajya Sabha. These individuals are chosen for their special knowledge or practical experience in fields such as Literature, Science, Art, and Social Service.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2023_Mains_Official.json",
+        "q_no": 167,
+        "source_page": 42
+      }
+    ],
+    "has_image": false,
+    "question_text": "How many members can be nominated to Rajya Sabha by using His/Her powers of President of India?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "enriched_at": "2026-08-11T14:59:03.264344Z"
+  },
+  {
+    "uid": "PYQ-1834",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees); Legislative Procedure & Money Bills",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 0.95,
+    "explanation": "Question Hour is the first hour of every parliamentary sitting dedicated to asking and answering questions. Zero Hour is an informal device introduced in 1962 as an Indian parliamentary innovation. Judicial control over administrative actions is grounded in natural law principles, such as natural justice and rule of law.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2016_Prelims_Paper.json",
+        "q_no": 166,
+        "source_page": 46
+      },
+      {
+        "source_file": "SI_2016_Prelims_Paper1.json",
+        "q_no": 166,
+        "source_page": 48
+      },
+      {
+        "source_file": "SI_2016_Prelims_Paper2.json",
+        "q_no": 166,
+        "source_page": 48
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements\n(a) The first hour of every parliament day is reserved for questions\n(b) Zero hour is a typical Indian innovation in the field of parliamentary practice\n(c) Judicial control over administrative acts stem from natural law\nThe correct answer is/are",
+    "options": [
+      "(1) (a) is correct, (b) and (c) are wrong",
+      "(2) All (a), (b) and (c) are correct",
+      "(3) All (a), (b) and (c) are wrong",
+      "(4) (a) and (c) are wrong and (b) is correct"
+    ],
+    "enriched_at": "2026-08-11T17:07:38.942137Z"
+  },
+  {
+    "uid": "PYQ-2203",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "The Chairman of Rajya Sabha (Vice-President of India) never presides over a joint sitting of Parliament because he is not a member of either House. In the absence of the Deputy Chairman, a member agreed upon by the members present at the sitting presides.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Mains_Paper2.json",
+        "q_no": 101,
+        "source_page": 33
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which one among the following is not true with regard to joint sitting of the Parliament?",
+    "options": [
+      "In the absence of Speaker, Deputy Speaker presides over it.",
+      "In the absence of Deputy Sepaker, Deputy Chairman of Rajya Sabha presides over it.",
+      "In the absence of Deputy Chairman, the Chairman of Rajya Sabha presides over it.",
+      "It is presided over by Speaker."
+    ],
+    "enriched_at": "2026-08-11T18:23:28.252784Z"
+  },
+  {
+    "uid": "PYQ-2517",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Legislative Procedure & Money Bills",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Statement (a) is incorrect because Money Bills (Article 110) and Financial Bills Type I (Article 117(1)) can only be introduced in the Lok Sabha, not in either house. Statements (b), (c), and (d) are correct according to parliamentary procedures, where prior publication in the Gazette dispenses with the need for a motion for leave to introduce the bill under House Rules.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Prelims_Paper1.json",
+        "q_no": 167,
+        "source_page": 45
+      }
+    ],
+    "has_image": false,
+    "question_text": "Parliament enacts laws. In this regard, examine the following statements : (a) All bills including finance bills can be introduced in either house of the parliament. (b) All members of the parliament have the right to introduce bills in their respective houses. (c) A bill may be introduced either by a minister or by a private member. (d) If a bill has been published in the official gazette before its introduction, no motion for leave to introduce the bill is necessary. Choose the correct answer:",
+    "options": [
+      "(a), (b) and (c) only",
+      "(b), (c) and (d) only",
+      "(a), (b) and (d) only",
+      "(a), (c) and (d) only"
+    ],
+    "enriched_at": "2026-08-12T08:16:55.099959Z"
+  },
+  {
+    "uid": "PYQ-2699",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-UNION-EXEC-LEG",
+    "topic_name": "Union Executive & Legislature",
+    "sub_topic": "Parliament (Lok Sabha, Rajya Sabha, Parliamentary Committees)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "According to Article 79 of the Indian Constitution, the Parliament consists of the President and the two Houses: the Rajya Sabha (Council of States) and the Lok Sabha (House of the People). Although the President is not a member of either House, he is an integral part of Parliament as no bill can become law without his assent.",
+    "recommended_memory_technique": "representation_framework",
+    "occurrences": [
+      {
+        "source_file": "SI_2022_Prelims.json",
+        "q_no": 155,
+        "source_page": 40
+      }
+    ],
+    "has_image": false,
+    "question_text": "Parliament means",
+    "options": [
+      "The Lok Sabha",
+      "The Rajya Sabha",
+      "The President",
+      "All the above"
+    ],
+    "enriched_at": "2026-08-12T08:49:21.315351Z"
+  }
+]

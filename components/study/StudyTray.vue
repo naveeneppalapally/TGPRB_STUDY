@@ -10,7 +10,7 @@
   <div
     class="study-tray fixed inset-x-0 bottom-0 z-40 flex flex-col rounded-t-2xl border-t b-strong bg-elev shadow-pop"
     :class="{ 'is-dragging': dragging }"
-    :style="{ height: heightPx + 'px' }"
+    :style="{ height: `calc(${heightPx}px + env(safe-area-inset-bottom, 0px))` }"
     role="region"
     aria-label="Work tray"
   >

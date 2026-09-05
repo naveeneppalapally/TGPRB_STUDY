@@ -38,16 +38,20 @@ const source = computed(() => props.html ?? escape(props.text ?? ''))
 
 const rendered = computed(() => {
   if (!clozeOn.value) return source.value
-  // 1. Whole <strong> spans become chips
-  let out = source.value.replace(/<strong>([\s\S]*?)<\/strong>/g, (_m, inner: string) =>
-    `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${inner}</span></button>`)
-  // 2. Bare numbers outside tags become chips
-  out = out.split(/(<[^>]+>)/g).map((chunk) => {
-    if (chunk.startsWith('<')) return chunk
-    return chunk.replace(NUM_RE, (m: string) =>
-      `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${m}</span></button>`)
-  }).join('')
-  return out
+  // Split on strong tags and other HTML tags to prevent nested cloze buttons
+  return source.value
+    .split(/(<strong>[\s\S]*?<\/strong>|<[^>]+>)/g)
+    .map((chunk) => {
+      if (!chunk) return ''
+      if (chunk.startsWith('<strong>')) {
+        const inner = chunk.slice(8, -9)
+        return `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${inner}</span></button>`
+      }
+      if (chunk.startsWith('<')) return chunk
+      return chunk.replace(NUM_RE, (m: string) =>
+        `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${m}</span></button>`)
+    })
+    .join('')
 })
 
 function onClick(e: MouseEvent) {

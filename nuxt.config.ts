@@ -48,6 +48,8 @@ export default defineNuxtConfig({
         '/notes/telangana',
         '/notes/telangana/telangana-statehood-movement',
         '/pyq-archive',
+        '/study/parliament',
+        '/api/study/parliament',
       ],
       crawlLinks: false,
     },

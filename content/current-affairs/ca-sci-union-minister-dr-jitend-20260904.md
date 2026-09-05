@@ -39,5 +39,5 @@ mcqs:
       - "Council of Scientific and Industrial Research"
       - "Ministry of Earth Sciences"
     answer: 1
-    explanation: "The Earth Science Olympiad begins with an all-India test—facilitated by the Geological Society of India (GSI)—which saw approximately 17,800 students appear across 500 centers nationwide."
+    explanation: "The Earth Science Olympiad begins with an all-India test-facilitated by the Geological Society of India (GSI)-which saw approximately 17,800 students appear across 500 centers nationwide."
 ---

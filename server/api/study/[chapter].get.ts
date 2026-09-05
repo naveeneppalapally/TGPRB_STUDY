@@ -3,12 +3,14 @@ import fs from 'node:fs'
 import path from 'node:path'
 import type { StudyChapter, StudyChapterResolved, StudyPyq, StudyPyqRef } from '~/types/study'
 import parliament from '~/content/data/study/polity/parliament'
+import staticPyqs from '~/content/data/study/pyqs.json'
 
 /**
  * Study chapter registry.
  * Chapter files live in content/data/study/<subject>/<slug>.ts. They reference
  * PYQs by uid only; this endpoint resolves them against
- * data/pyq_enriched_master.json (single source of truth, never duplicated).
+ * data/pyq_enriched_master.json (single source of truth, never duplicated)
+ * and staticPyqs for edge runtimes (Cloudflare Pages).
  */
 const CHAPTERS: Record<string, StudyChapter> = {
   [parliament.slug]: parliament,
@@ -29,11 +31,23 @@ let masterIndex: Map<string, MasterPyq> | null = null
 function loadMasterIndex(): Map<string, MasterPyq> {
   if (masterIndex) return masterIndex
   masterIndex = new Map()
-  const filePath = path.resolve(process.cwd(), 'data/pyq_enriched_master.json')
-  if (fs.existsSync(filePath)) {
-    const all: MasterPyq[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-    for (const q of all) masterIndex.set(q.uid, q)
+
+  // 1. Seed with bundled static PYQs (guarantees Cloudflare Pages edge runtime resolution)
+  if (Array.isArray(staticPyqs)) {
+    for (const q of staticPyqs as MasterPyq[]) masterIndex.set(q.uid, q)
   }
+
+  // 2. Supplement from data/pyq_enriched_master.json if running in Node.js environment
+  try {
+    const filePath = path.resolve(process.cwd(), 'data/pyq_enriched_master.json')
+    if (fs.existsSync(filePath)) {
+      const all: MasterPyq[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+      for (const q of all) masterIndex.set(q.uid, q)
+    }
+  } catch {
+    // Edge runtime fallback - continue with bundled staticPyqs
+  }
+
   return masterIndex
 }
 
