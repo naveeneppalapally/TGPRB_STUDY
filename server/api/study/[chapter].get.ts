@@ -36,20 +36,9 @@ function loadMasterIndex(): Map<string, MasterPyq> {
   if (masterIndex) return masterIndex
   masterIndex = new Map()
 
-  // 1. Seed with bundled static PYQs (guarantees Cloudflare Pages edge runtime resolution)
+  // 1. Seed with bundled static PYQs (guarantees Cloudflare Pages edge runtime resolution and instant startup)
   if (Array.isArray(staticPyqs)) {
     for (const q of staticPyqs as MasterPyq[]) masterIndex.set(q.uid, q)
-  }
-
-  // 2. Supplement from data/pyq_enriched_master.json if running in Node.js environment
-  try {
-    const filePath = path.resolve(process.cwd(), 'data/pyq_enriched_master.json')
-    if (fs.existsSync(filePath)) {
-      const all: MasterPyq[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-      for (const q of all) masterIndex.set(q.uid, q)
-    }
-  } catch {
-    // Edge runtime fallback - continue with bundled staticPyqs
   }
 
   return masterIndex
@@ -66,7 +55,20 @@ function paperLabel(sourceFile: string): string {
 }
 
 function resolvePyq(ref: StudyPyqRef, index: Map<string, MasterPyq>): StudyPyq | null {
-  const q = index.get(ref.uid)
+  let q = index.get(ref.uid)
+  // On-demand development fallback: only read master file if UID is not in staticPyqs cache
+  if (!q && process.env.NODE_ENV !== 'production') {
+    try {
+      const filePath = path.resolve(process.cwd(), 'data/pyq_enriched_master.json')
+      if (fs.existsSync(filePath)) {
+        const all: MasterPyq[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+        for (const item of all) index.set(item.uid, item)
+        q = index.get(ref.uid)
+      }
+    } catch {
+      // Edge runtime fallback
+    }
+  }
   if (!q) return null
   const papers = Array.from(new Set((q.occurrences || []).map(o => paperLabel(o.source_file))))
   return {

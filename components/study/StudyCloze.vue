@@ -26,9 +26,9 @@ const { clozeOn } = useStudySession()
 
 /**
  * Matches: 250 · 1/3 · 83(1) · Art. 110(3) · 104th · 79 to 122 (as two chips)
- * Does not swallow a closing paren that belongs to the sentence.
+ * Excludes list enumerators (1., 2.), trailing commas, and HTML entities.
  */
-const NUM_RE = /(?<![\w<>"'=/-])((?:Art(?:icle)?\.?\s*)?\d[\d,]*(?:\(\d+\))?(?:[/-]\d+)?(?:st|nd|rd|th)?)(?![\w"'=;-])/g
+const NUM_RE = /(?<![&#\w<>"'=/-])((?:Art(?:icle)?\.?\s*)?\d+(?:,\d+)*(?:\(\d+\))?(?:[/-]\d+)?(?:st|nd|rd|th)?)(?![\w"'=-])/g
 
 function escape(s: string) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -38,18 +38,42 @@ const source = computed(() => props.html ?? escape(props.text ?? ''))
 
 const rendered = computed(() => {
   if (!clozeOn.value) return source.value
-  // Split on strong tags and other HTML tags to prevent nested cloze buttons
+  // Split on strong tags, hot spans, and other HTML tags to prevent nested cloze buttons
   return source.value
-    .split(/(<strong>[\s\S]*?<\/strong>|<[^>]+>)/g)
+    .split(/(<strong>[\s\S]*?<\/strong>|<span class="hot">[\s\S]*?<\/span>|<[^>]+>)/g)
     .map((chunk) => {
       if (!chunk) return ''
       if (chunk.startsWith('<strong>')) {
         const inner = chunk.slice(8, -9)
         return `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${inner}</span></button>`
       }
+      if (chunk.startsWith('<span class="hot">')) {
+        const inner = chunk.slice(18, -7)
+        return `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${inner}</span></button>`
+      }
       if (chunk.startsWith('<')) return chunk
-      return chunk.replace(NUM_RE, (m: string) =>
-        `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${m}</span></button>`)
+      return chunk.replace(NUM_RE, (match, _val, offset, fullStr) => {
+        // Exclude list enumerators (e.g. "1. ", "2. ", "1) ", "2) ", "(1)", "[1]", "1: ") from becoming chips
+        const isArticle = match.startsWith('Art')
+        const isFraction = match.includes('/') || (match.includes('-') && !match.startsWith('-'))
+        const isOrdinal = /st|nd|rd|th$/i.test(match)
+        const isShortNum = /^\d{1,2}$/.test(match)
+
+        if (isShortNum && !isArticle && !isFraction && !isOrdinal) {
+          const remainder = fullStr.slice(offset + match.length)
+          // If followed by '.', ')', or ':' (optionally followed by whitespace or end of chunk)
+          if (/^[.):](?:\s|$)/.test(remainder) || /^[.):]$/.test(remainder)) {
+            return match
+          }
+          // If wrapped in parentheses like (1) or brackets like [1]
+          const before = fullStr.slice(0, offset)
+          if (/[(\[]\s*$/.test(before) && /^\s*[)\]]/.test(remainder)) {
+            return match
+          }
+        }
+
+        return `<button type="button" class="cloze-chip" data-cloze="1"><span class="cloze-hidden">${match}</span></button>`
+      })
     })
     .join('')
 })

@@ -68,7 +68,7 @@
                 >
                   <span class="absolute -left-[26px] top-1.5 h-2.5 w-2.5 rounded-full bg-saffron-500 ring-4 ring-[var(--bg)]" />
                   <span class="mr-2 font-mono text-[12px] font-semibold accent-strong num"><StudyCloze :text="ev.year" /></span>
-                  <span class="text-[15px] t-hi"><StudyCloze :text="ev.label" /></span>
+                  <span class="text-[15px] t-hi"><StudyCloze :html="ev.label" /></span>
                 </li>
               </ol>
             </figure>

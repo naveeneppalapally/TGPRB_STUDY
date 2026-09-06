@@ -41,9 +41,17 @@
       </div>
 
       <!-- Alerts -->
-      <div v-if="errorMsg" class="mb-5 rounded-lg border border-red-500/30 bg-red-50 dark:bg-red-950/30 p-3 text-xs text-red-600 dark:text-red-400 flex items-start gap-2">
+      <div v-if="errorMsg" class="mb-5 rounded-lg border border-red-500/30 bg-red-50 dark:bg-red-950/30 p-3.5 text-xs text-red-600 dark:text-red-400 flex items-start gap-2.5">
         <UIcon name="i-heroicons-exclamation-circle" class="h-4 w-4 shrink-0 mt-0.5" />
-        <span>{{ errorMsg }}</span>
+        <div class="space-y-1.5 flex-1">
+          <p class="font-medium">{{ errorMsg }}</p>
+          <div v-if="isNetworkError" class="rounded-md bg-red-100/60 dark:bg-red-900/30 p-2 text-[11px] text-red-700 dark:text-red-300">
+            <p class="font-semibold mb-1">How to restore connection:</p>
+            <p>1. Open your <a href="https://supabase.com/dashboard/project/fqasvhrzzheziuirnwtc" target="_blank" rel="noopener" class="underline font-bold text-red-800 dark:text-red-200">Supabase Project Dashboard</a></p>
+            <p>2. Click <b>"Restore project"</b> to unpause the database</p>
+            <p>3. Wait ~1 minute for DNS activation and retry</p>
+          </div>
+        </div>
       </div>
 
       <div v-if="successMsg" class="mb-5 rounded-lg border border-emerald-500/30 bg-emerald-50 dark:bg-emerald-950/30 p-3 text-xs text-emerald-700 dark:text-emerald-300 flex items-start gap-2">
@@ -227,6 +235,17 @@ const otpSent = ref(false)
 
 const errorMsg = ref('')
 const successMsg = ref('')
+const isNetworkError = ref(false)
+
+function formatAuthError(err: any): string {
+  const msg = err?.message || ''
+  if (/NetworkError|Failed to fetch|fetch resource|Network request failed/i.test(msg)) {
+    isNetworkError.value = true
+    return 'Unable to reach the authentication server. The backend Supabase database appears to be paused due to inactivity.'
+  }
+  isNetworkError.value = false
+  return msg || 'Authentication failed. Please verify credentials.'
+}
 
 async function handleSendOtp() {
   errorMsg.value = ''
@@ -236,7 +255,7 @@ async function handleSendOtp() {
     otpSent.value = true
     successMsg.value = `We sent a login code and magic link to ${email.value}. Check your inbox!`
   } catch (err: any) {
-    errorMsg.value = err.message || 'Failed to send login code. Please check the email.'
+    errorMsg.value = formatAuthError(err)
   }
 }
 
@@ -249,7 +268,7 @@ async function handleVerifyOtp() {
     const next = (route.query.redirect as string) || '/'
     setTimeout(() => router.replace(next), 600)
   } catch (err: any) {
-    errorMsg.value = err.message || 'Invalid or expired code. Please try again.'
+    errorMsg.value = formatAuthError(err)
   }
 }
 
@@ -269,7 +288,7 @@ async function handlePasswordAuth() {
       setTimeout(() => router.replace(next), 800)
     }
   } catch (err: any) {
-    errorMsg.value = err.message || 'Authentication failed. Please verify credentials.'
+    errorMsg.value = formatAuthError(err)
   }
 }
 </script>

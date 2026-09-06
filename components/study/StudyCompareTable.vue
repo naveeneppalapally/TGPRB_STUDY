@@ -21,8 +21,8 @@
             :class="{ 'is-flashing': row.lineId && row.lineId === flashLineId }"
           >
             <td class="cell-key">{{ row.label }}</td>
-            <td><StudyCloze :text="row.a" /></td>
-            <td><StudyCloze :text="row.b" /></td>
+            <td><StudyCloze :html="row.a" /></td>
+            <td><StudyCloze :html="row.b" /></td>
           </tr>
         </tbody>
       </table>
@@ -57,11 +57,11 @@
           <div class="grid gap-2" :class="mode === 'both' ? 'grid-cols-2' : 'grid-cols-1'">
             <div v-if="mode !== 'b'" class="min-w-0">
               <span class="block font-mono text-[9.5px] uppercase tracking-wider accent">{{ block.colA }}</span>
-              <span class="block text-[13.5px] leading-snug t-hi"><StudyCloze :text="row.a" /></span>
+              <span class="block text-[13.5px] leading-snug t-hi"><StudyCloze :html="row.a" /></span>
             </div>
             <div v-if="mode === 'both' || mode === 'b'" class="min-w-0">
               <span class="block font-mono text-[9.5px] uppercase tracking-wider text-sky-600 dark:text-sky-400">{{ block.colB }}</span>
-              <span class="block text-[13.5px] leading-snug t-hi"><StudyCloze :text="row.b" /></span>
+              <span class="block text-[13.5px] leading-snug t-hi"><StudyCloze :html="row.b" /></span>
             </div>
             <!-- Quiz: left column shown, right column tap-to-reveal -->
             <button
@@ -72,7 +72,7 @@
               @click="revealed[row.label] = !revealed[row.label]"
             >
               <span class="font-mono text-[9.5px] uppercase tracking-wider">{{ block.colB }}</span>
-              <span v-if="revealed[row.label]">{{ row.b }}</span>
+              <span v-if="revealed[row.label]"><StudyCloze :html="row.b" /></span>
               <span v-else class="italic">tap to reveal</span>
             </button>
           </div>
