@@ -16,7 +16,7 @@ import type {
  */
 
 export interface StudySession {
-  chapter: Ref<StudyChapterResolved>
+  chapter: Ref<StudyChapterResolved | null>
   sections: ComputedRef<StudySectionResolved[]>
   section: ComputedRef<StudySectionResolved>
   activeSectionId: Ref<string>
@@ -59,13 +59,24 @@ export interface StudySession {
   flashLine: (lineId?: string) => void
   captureAnchor: (text: string, tab?: DockTab) => void
   sectionStatus: (sectionId: string) => 'todo' | 'reading' | 'read' | 'cleared'
-  sectionCounts: (s: StudySectionResolved) => { pyqs: number; cards: number; traps: number; wrong: number }
+  sectionCounts: (s?: StudySectionResolved) => { pyqs: number; cards: number; traps: number; wrong: number }
 }
 
 const KEY: InjectionKey<StudySession> = Symbol('study-session')
 
 function emptyProgress(): SectionProgress {
   return { read: false, answers: {}, cards: {}, traps: {} }
+}
+
+const fallbackSection: StudySectionResolved = {
+  id: '',
+  title: '',
+  short: '',
+  estMinutes: 0,
+  blocks: [],
+  pyqs: [],
+  cards: [],
+  traps: [],
 }
 
 interface PersistedState {
@@ -75,13 +86,13 @@ interface PersistedState {
   clozeOn: boolean
 }
 
-export function createStudySession(chapter: Ref<StudyChapterResolved>): StudySession {
-  const storageKey = computed(() => `studyos:study:${chapter.value.slug}`)
+export function createStudySession(chapter: Ref<StudyChapterResolved | null>): StudySession {
+  const storageKey = computed(() => `studyos:study:${chapter.value?.slug || 'unknown'}`)
 
-  const sections = computed(() => chapter.value.sections)
+  const sections = computed(() => chapter.value?.sections || [])
   const activeSectionId = ref(sections.value[0]?.id ?? '')
   const activeIndex = computed(() => Math.max(0, sections.value.findIndex(s => s.id === activeSectionId.value)))
-  const section = computed(() => sections.value[activeIndex.value] ?? sections.value[0])
+  const section = computed(() => sections.value[activeIndex.value] ?? sections.value[0] ?? fallbackSection)
   const hasPrev = computed(() => activeIndex.value > 0)
   const hasNext = computed(() => activeIndex.value < sections.value.length - 1)
 
@@ -111,6 +122,12 @@ export function createStudySession(chapter: Ref<StudyChapterResolved>): StudySes
     }
     return progress.value[sectionId]
   }
+
+  watch(sections, (s) => {
+    if (s.length > 0 && (!activeSectionId.value || !s.some(x => x.id === activeSectionId.value))) {
+      activeSectionId.value = s[0].id
+    }
+  }, { immediate: true })
 
   // ── Navigation: this is the re-bind point ─────────────────────────────
   function goTo(sectionId: string) {
@@ -186,11 +203,12 @@ export function createStudySession(chapter: Ref<StudyChapterResolved>): StudySes
   }
 
   function sectionStatus(sectionId: string): 'todo' | 'reading' | 'read' | 'cleared' {
+    if (!sectionId) return 'todo'
     const p = progress.value[sectionId]
     const s = sections.value.find(x => x.id === sectionId)
     if (sectionId === activeSectionId.value && !p?.read) return 'reading'
     if (!p?.read) return 'todo'
-    if (s && s.pyqs.length > 0) {
+    if (s && s.pyqs && s.pyqs.length > 0) {
       const allAnswered = s.pyqs.every(q => p.answers[q.uid] !== undefined)
       const allRight = s.pyqs.every(q => p.answers[q.uid] === q.answer)
       if (allAnswered && allRight) return 'cleared'
@@ -198,15 +216,21 @@ export function createStudySession(chapter: Ref<StudyChapterResolved>): StudySes
     return 'read'
   }
 
-  function sectionCounts(s: StudySectionResolved) {
+  function sectionCounts(s?: StudySectionResolved) {
+    if (!s || !s.id) return { pyqs: 0, cards: 0, traps: 0, wrong: 0 }
     const p = progress.value[s.id]
-    const wrong = p ? s.pyqs.filter(q => p.answers[q.uid] !== undefined && p.answers[q.uid] !== q.answer).length : 0
-    return { pyqs: s.pyqs.length, cards: s.cards.length, traps: s.traps.length, wrong }
+    const pyqs = s.pyqs || []
+    const cards = s.cards || []
+    const traps = s.traps || []
+    const wrong = p ? pyqs.filter(q => p.answers[q.uid] !== undefined && p.answers[q.uid] !== q.answer).length : 0
+    return { pyqs: pyqs.length, cards: cards.length, traps: traps.length, wrong }
   }
 
   // ── Persistence ───────────────────────────────────────────────────────
   let timer: ReturnType<typeof setInterval> | null = null
-  onMounted(() => {
+
+  function restoreState() {
+    if (!import.meta.client || storageKey.value === 'studyos:study:unknown') return
     try {
       const raw = localStorage.getItem(storageKey.value)
       if (raw) {
@@ -219,15 +243,24 @@ export function createStudySession(chapter: Ref<StudyChapterResolved>): StudySes
         if (typeof saved.clozeOn === 'boolean') clozeOn.value = saved.clozeOn
       }
     } catch { /* ignore corrupt state */ }
+  }
+
+  onMounted(() => {
+    restoreState()
     timer = setInterval(() => { elapsedSeconds.value += 1 }, 1000)
   })
+
+  watch(storageKey, (key) => {
+    if (key !== 'studyos:study:unknown') restoreState()
+  })
+
   onBeforeUnmount(() => {
     if (timer) clearInterval(timer)
     if (flashTimer) clearTimeout(flashTimer)
   })
 
   watch([activeSectionId, progress, railPinned, clozeOn], () => {
-    if (!import.meta.client) return
+    if (!import.meta.client || storageKey.value === 'studyos:study:unknown') return
     const state: PersistedState = {
       activeSectionId: activeSectionId.value,
       progress: progress.value,

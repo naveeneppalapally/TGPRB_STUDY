@@ -63,6 +63,12 @@ export default defineNuxtConfig({
     '/notes/polity/constitutional-framework-and-preamble': {
       redirect: { to: '/notes/polity/historical-background-1773-1947', statusCode: 301 },
     },
+    '/api/**': {
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Access-Control-Allow-Origin': '*',
+      },
+    },
   },
 
   // Supabase module config.

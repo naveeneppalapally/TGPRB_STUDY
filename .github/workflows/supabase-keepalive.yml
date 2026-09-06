@@ -1,6 +1,6 @@
 # =============================================================================
 # Supabase Keepalive: prevents free-tier auto-pause (7 days no requests)
-# Pings the project every 5 days via REST / health endpoint.
+# Pings the project every 3 days via REST / health endpoint.
 # URL is hardcoded (public, not sensitive). Only the anon key is a secret.
 # =============================================================================
 
@@ -8,8 +8,8 @@ name: Supabase Keepalive
 
 on:
   schedule:
-    # Every 5 days at 06:00 UTC
-    - cron: '0 6 */5 * *'
+    # Every 3 days at 06:00 UTC (Supabase free tier pauses after 7 days)
+    - cron: '0 6 */3 * *'
   workflow_dispatch: # Manual trigger for testing
 
 jobs:
@@ -20,44 +20,65 @@ jobs:
         env:
           SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
         run: |
-          # URL is hardcoded - not sensitive (public API endpoint)
+          set +e
           CLEAN_URL="https://fqasvhrzzheziuirnwtc.supabase.co"
 
           if [ -z "$SUPABASE_ANON_KEY" ]; then
             echo "::error::SUPABASE_ANON_KEY secret is missing."
+            echo "### Supabase Keepalive: Secret Missing" >> $GITHUB_STEP_SUMMARY
+            echo "SUPABASE_ANON_KEY GitHub repository secret is missing." >> $GITHUB_STEP_SUMMARY
             exit 1
           fi
 
           echo "Pinging ${CLEAN_URL}/rest/v1/ ..."
-          HTTP_CODE=$(curl --max-time 15 -s \
-            -o /tmp/sb_body.txt \
-            -w "%{http_code}" \
+          HTTP_OUTPUT=$(curl --max-time 15 -s -w "\nHTTP_STATUS:%{http_code}" \
             "${CLEAN_URL}/rest/v1/" \
             -H "apikey: ${SUPABASE_ANON_KEY}" \
             -H "Authorization: Bearer ${SUPABASE_ANON_KEY}")
+          CURL_EXIT=$?
+          HTTP_CODE=$(echo "$HTTP_OUTPUT" | grep "^HTTP_STATUS:" | cut -d: -f2)
+          BODY=$(echo "$HTTP_OUTPUT" | grep -v "^HTTP_STATUS:")
 
-          echo "HTTP code : ${HTTP_CODE}"
-          echo "Body      : $(cat /tmp/sb_body.txt)"
+          echo "Curl exit code: ${CURL_EXIT}"
+          echo "HTTP code     : ${HTTP_CODE}"
+          echo "Body snippet  : $(echo "$BODY" | head -c 200)"
 
-          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
+          if [ "$CURL_EXIT" -eq 6 ]; then
+            echo "::error::Supabase project DNS cannot be resolved (curl error 6). Project is currently PAUSED or inactive on Supabase."
+            echo "### Supabase Keepalive Warning: Project is PAUSED" >> $GITHUB_STEP_SUMMARY
+            echo "Supabase has paused the free-tier database for project \`fqasvhrzzheziuirnwtc\`." >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "**Action Required**: Visit the Supabase Dashboard to unpause and restore the project:" >> $GITHUB_STEP_SUMMARY
+            echo "- [Restore Project in Supabase Dashboard](https://supabase.com/dashboard/project/fqasvhrzzheziuirnwtc)" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Once unpaused, Supabase will re-register the DNS and future keepalive pings will succeed." >> $GITHUB_STEP_SUMMARY
+            exit 1
+          fi
+
+          if [ -n "$HTTP_CODE" ] && [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 400 ]; then
             echo "::notice::Keepalive ping successful (HTTP ${HTTP_CODE}). Project is active."
+            echo "### Supabase Keepalive: SUCCESS (HTTP ${HTTP_CODE})" >> $GITHUB_STEP_SUMMARY
+            echo "Project is active and keepalive succeeded." >> $GITHUB_STEP_SUMMARY
             exit 0
           fi
 
           # Fallback: auth health
           echo "REST returned ${HTTP_CODE}. Trying /auth/v1/health ..."
-          AUTH_CODE=$(curl --max-time 15 -s \
-            -o /tmp/sb_auth.txt \
-            -w "%{http_code}" \
+          AUTH_OUTPUT=$(curl --max-time 15 -s -w "\nHTTP_STATUS:%{http_code}" \
             "${CLEAN_URL}/auth/v1/health" \
             -H "apikey: ${SUPABASE_ANON_KEY}")
-          echo "Auth code : ${AUTH_CODE}"
-          echo "Auth body : $(cat /tmp/sb_auth.txt)"
+          AUTH_CURL_EXIT=$?
+          AUTH_CODE=$(echo "$AUTH_OUTPUT" | grep "^HTTP_STATUS:" | cut -d: -f2)
 
-          if [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
+          if [ -n "$AUTH_CODE" ] && [ "$AUTH_CODE" -ge 200 ] && [ "$AUTH_CODE" -lt 400 ]; then
             echo "::notice::Auth keepalive successful (HTTP ${AUTH_CODE}). Project is active."
+            echo "### Supabase Keepalive: SUCCESS (HTTP ${AUTH_CODE})" >> $GITHUB_STEP_SUMMARY
+            echo "Project is active via auth health endpoint." >> $GITHUB_STEP_SUMMARY
             exit 0
           fi
 
           echo "::error::All pings failed. REST=${HTTP_CODE} Auth=${AUTH_CODE}."
+          echo "### Supabase Keepalive Failed" >> $GITHUB_STEP_SUMMARY
+          echo "All keepalive pings failed. REST HTTP code: ${HTTP_CODE}, Auth HTTP code: ${AUTH_CODE}." >> $GITHUB_STEP_SUMMARY
+          echo "Check [Supabase Dashboard](https://supabase.com/dashboard/project/fqasvhrzzheziuirnwtc)." >> $GITHUB_STEP_SUMMARY
           exit 1

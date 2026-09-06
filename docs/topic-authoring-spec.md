@@ -612,6 +612,23 @@ export interface SectionProgress {
    - The chapter must be registered in the `CHAPTERS` map in `server/api/study/[chapter].get.ts`.
    - Both `/study/<slug>` and `/api/study/<slug>` must be added to `nitro.prerender.routes` in `nuxt.config.ts`.
 
+### 2.3 Universal Cloze Active Recall Architecture Across All Subject Types
+
+Study Mode features an interactive cloze toggle (`StudyCloze.vue`) allowing students to hide high-yield keywords behind clickable chips for active recall drills.
+
+#### 1. Entity-First Recall Hierarchy (Universal Standard)
+Cloze active recall is universal across ALL subjects, not just Polity. Primary recall chips must be tagged with `<strong>` (or `<span class="hot">`) around key subject anchors:
+- **Indian Polity**: Key leaders, committee chairs & members, milestone acts, constitutional articles, landmark Supreme Court cases, constitutional bodies.
+- **Indian History**: Historical figures, viceroys, governor-generals, treaties, milestone dates & years, organizations, revolutionary movements.
+- **Geography**: River origins, tributaries, passes, mountain peaks & ranges, dams, project locations, soil types, forest classifications, boundary states.
+- **Telangana Movement**: Martyrs, historical agreements (Gentlemen's Agreement, 8-point, 6-point formulas), key dates, committees (Bhargava, Wanchoo, Srikrishna), leaders, organizations.
+- **Economy**: Key institutions (RBI, SEBI, NABARD), scheme launch years, policy rates, budget metrics, five-year plans.
+- **Science & Tech**: Discoveries, scientists, missions (ISRO, DRDO), scientific units, laws, diseases & pathogens.
+
+#### 2. Number Protection Invariant
+- **Structural List Enumerators Are Forbidden as Cloze Chips**: Never blank list counters (`1.`, `2.`, `(1)`, `[1]`, `1:`). Forcing a student to tap `[1]` to reveal `1` adds cognitive clutter with zero recall value.
+- **Numbers as Secondary Cues**: Plain numbers are secondary cloze targets and only active for standalone quantities, years, percentages, or articles outside of list counters.
+
 ---
 
 ## 3. Canonical JSON Schemas

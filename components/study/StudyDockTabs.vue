@@ -41,7 +41,7 @@ const tabs = computed<Array<{ id: DockTab; label: string; icon: string; count?: 
   return [
     { id: 'pyq', label: 'PYQ', icon: 'i-heroicons-clipboard-document-check', count: c.pyqs },
     { id: 'cards', label: 'Cards', icon: 'i-heroicons-rectangle-stack', count: c.cards },
-    { id: 'notes', label: 'Notes', icon: 'i-heroicons-pencil-square', count: getCountForSection(chapter.value.noteId, section.value.id) },
+    { id: 'notes', label: 'Notes', icon: 'i-heroicons-pencil-square', count: getCountForSection(chapter.value?.noteId || '', section.value?.id || '') },
     { id: 'traps', label: 'Traps', icon: 'i-heroicons-exclamation-triangle', count: c.traps + c.wrong, alert: c.wrong > 0 },
   ]
 })

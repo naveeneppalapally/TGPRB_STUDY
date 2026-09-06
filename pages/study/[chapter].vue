@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-full flex-col">
-    <template v-if="chapter">
+    <template v-if="chapterReady">
       <StudyTopbar />
 
       <!-- Desktop (lg+): rail | stage | dock -->
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, type Ref } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import type { StudyChapterResolved } from '~/types/study'
 import { createStudySession } from '~/composables/useStudySession'
 
@@ -41,14 +41,43 @@ definePageMeta({
 const route = useRoute()
 const slug = computed(() => String(route.params.chapter))
 
-const { data: chapter, error } = await useFetch<StudyChapterResolved>(() => `/api/study/${slug.value}`, {
+// Provide study session synchronously during setup to prevent Vue injection context loss
+const chapterContainer = ref<StudyChapterResolved | null>(null)
+createStudySession(chapterContainer)
+
+// Enforce responseType json so Cloudflare Pages octet-stream responses are parsed as JSON
+const { data: rawChapter, error } = await useFetch<any>(() => `/api/study/${slug.value}`, {
   key: `study-${slug.value}`,
+  responseType: 'json',
 })
 
-if (chapter.value) {
-  createStudySession(chapter as Ref<StudyChapterResolved>)
-  useHead({ title: `${chapter.value.title} - Study - TGPRB StudyOS` })
+function syncChapter(val: any) {
+  if (!val) {
+    chapterContainer.value = null
+    return
+  }
+  let parsed = val
+  if (typeof val === 'string') {
+    try { parsed = JSON.parse(val) } catch { parsed = null }
+  }
+  if (parsed && typeof parsed === 'object' && Array.isArray(parsed.sections)) {
+    chapterContainer.value = parsed as StudyChapterResolved
+  }
 }
+
+watch(rawChapter, syncChapter, { immediate: true })
+
+const chapterReady = computed(() => {
+  return !!chapterContainer.value && Array.isArray(chapterContainer.value.sections) && chapterContainer.value.sections.length > 0
+})
+
+useHead({
+  title: computed(() => {
+    return chapterContainer.value?.title
+      ? `${chapterContainer.value.title} - Study - TGPRB StudyOS`
+      : 'Study - TGPRB StudyOS'
+  }),
+})
 
 /* lg breakpoint = 1024px. Below it the dock becomes the tray. */
 const isMobile = ref(false)

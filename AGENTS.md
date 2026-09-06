@@ -110,7 +110,9 @@ A topic is NEVER complete just because its `.vue` file was authored. Every sylla
 4. **Component Wireup**: Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching canonical `note-id`.
 5. **TOC Registration**: Both `'gate'` and `'current-affairs'` registered in the sticky TOC `sections` array.
 6. **Current Affairs Coverage**: Topic tagged in `content/current-affairs/*.md` via `npm run sync:ca-topics`.
-7. **3-Zone Study Chapter**: `content/data/study/<subject>/<slug>.ts` (`StudyChapter`) with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels. Registered in `server/api/study/[chapter].get.ts`, referenced PYQs in `content/data/study/pyqs.json`, routes in `nuxt.config.ts`.
+7. **3-Zone Study Chapter & Universal Cloze**: `content/data/study/<subject>/<slug>.ts` (`StudyChapter`) with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels. Registered in `server/api/study/[chapter].get.ts`, referenced PYQs in `content/data/study/pyqs.json`, routes in `nuxt.config.ts`.
+   - *Universal Cloze (All Subjects)*: Active recall applies to all subjects, not just Polity. High-yield subject anchors (`<strong>` or `<span class="hot">`) must be primary cloze targets (leaders, committees, acts, treaties, river origins, passes, dams, martyrs, institutions, laws).
+   - *Number Protection Invariant*: Structural list enumerators (`1.`, `2.`, `(1)`, `[1]`, `1:`) must NEVER be converted into cloze chips. Standalone numbers are secondary cues only.
 8. **Bidirectional Switchers**: Note page includes top and bottom transition banners linking to `/study/<slug>`. Study Mode topbar links back to `/notes/<subject>/<slug>`.
 9. **Subject Hub**: Both Note card and Study Mode card listed in `pages/notes/<subject>/index.vue`.
 10. **Gatekeeper Verification**: `npm run verify:integrity` and `npm test` MUST pass with exit code 0.

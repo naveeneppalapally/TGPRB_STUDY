@@ -83,7 +83,7 @@ const ta = ref<any>(null)
 const canSave = computed(() => draft.value.trim().length > 0 || !!pendingAnchor.value)
 
 /** Bound to the active section: changing section changes the list. */
-const list = computed(() => getNotesForSection(chapter.value.noteId, section.value.id))
+const list = computed(() => getNotesForSection(chapter.value?.noteId || '', section.value?.id || ''))
 
 interface Stamp { label: string; icon: string; cls: string; body: string; flag?: 'doubt' | 'important' }
 const stamps: Stamp[] = [
@@ -95,11 +95,11 @@ const stamps: Stamp[] = [
 
 function context() {
   return {
-    noteId: chapter.value.noteId,
-    noteTitle: chapter.value.title,
+    noteId: chapter.value?.noteId || '',
+    noteTitle: chapter.value?.title || '',
     route: route.path,
-    sectionId: section.value.id,
-    sectionLabel: section.value.title,
+    sectionId: section.value?.id || '',
+    sectionLabel: section.value?.title || '',
   }
 }
 
