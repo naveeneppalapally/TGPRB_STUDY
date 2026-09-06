@@ -793,32 +793,38 @@ If testable facts found, return ONLY this JSON (no markdown fences, no extra tex
 If no testable fact, return exactly: null"""
 
 
+# ---------------------------------------------------------------------------
+# AI Model Selection & Dynamic Fallback Pool
+# ---------------------------------------------------------------------------
+MODEL_CANDIDATES = [
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-flash-latest",
+    "gemini-flash-lite-latest",
+    "gemini-3.6-flash",
+]
+_exhausted_models = set()
 _active_model = None
+
+
+def get_candidate_models() -> list[str]:
+    """Return model candidates with any user env override first."""
+    env_model = os.environ.get("GEMINI_MODEL", "").strip()
+    if env_model:
+        return [env_model] + [m for m in MODEL_CANDIDATES if m != env_model]
+    return list(MODEL_CANDIDATES)
+
 
 def resolve_available_model(client) -> str:
     """
     Resolve which Gemini model to use by probing candidates in preference order.
     Skips slow client.models.list() to avoid network hangs on CI runners.
     """
-    global _active_model
-    if _active_model:
+    global _active_model, _exhausted_models
+    if _active_model and _active_model not in _exhausted_models:
         return _active_model
 
-    # Env override takes priority
-    env_model = os.environ.get("GEMINI_MODEL", "").strip()
-    if env_model:
-        _active_model = env_model
-        print(f"[AI] Using configured model: {_active_model}")
-        return _active_model
-
-    # Probe candidates with a minimal test call - stop at first success
-    candidates = [
-        "gemini-3.6-flash",
-        "gemini-2.5-flash",
-        "gemini-2.5-flash-lite",
-        "gemini-flash-latest",
-        "gemini-flash-lite-latest",
-    ]
+    candidates = [m for m in get_candidate_models() if m not in _exhausted_models]
     probe_prompt = "Reply with one word: ready"
     for candidate in candidates:
         try:
@@ -829,11 +835,15 @@ def resolve_available_model(client) -> str:
                 print(f"[AI] Verified model: {_active_model}")
                 return _active_model
         except Exception as e:
-            print(f"[AI] Model {candidate} unavailable: {e}")
+            err_str = str(e)
+            print(f"[AI] Model {candidate} unavailable: {err_str[:100]}")
+            if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "404" in err_str or "NOT_FOUND" in err_str:
+                _exhausted_models.add(candidate)
             continue
 
-    _active_model = "gemini-3.6-flash"
-    print(f"[AI] Falling back to: {_active_model}")
+    fallback = "gemini-2.5-flash"
+    _active_model = fallback
+    print(f"[AI] Falling back to default: {_active_model}")
     return _active_model
 
 
@@ -847,72 +857,97 @@ def extract_exam_fact(article_text: str, title: str, client,
     if not client or not article_text.strip():
         return None
 
-    model_name = resolve_available_model(client)
+    global _active_model, _exhausted_models
 
-    try:
-        prompt = EXTRACT_PROMPT.format(
-            article_text=article_text[:12000],
-            extra_topics_guidance=extra_topics_guidance,
-        )
-        # Use the Chat/Interactions API (recommended over Models.generate_content)
-        chat = client.chats.create(model=model_name)
-        response = chat.send_message(prompt)
-        text = response.text.strip() if response and response.text else ""
+    prompt = EXTRACT_PROMPT.format(
+        article_text=article_text[:12000],
+        extra_topics_guidance=extra_topics_guidance,
+    )
 
-        if not text or text.lower() == "null" or text == "{}":
-            return None
-
-        # Strip markdown code fences if present
-        if "```" in text:
-            text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
-
-        ai = json.loads(text)
-
-        # Backward compat: wrap legacy single mcq into mcqs array
-        if "mcq" in ai and "mcqs" not in ai:
-            legacy_mcq = ai.pop("mcq")
-            legacy_mcq["exam_fact"] = ai.get("exam_fact", "")
-            ai["mcqs"] = [legacy_mcq]
-
-        # Validate mcqs array
-        mcqs = ai.get("mcqs")
-        if not mcqs or not isinstance(mcqs, list):
-            return None
-
-        # Validate each MCQ in the array
-        valid_mcqs = []
-        for mcq in mcqs[:3]:  # cap at 3
-            if not isinstance(mcq, dict):
-                continue
-            if not mcq.get("question") or len(mcq.get("options", [])) != 4:
-                continue
-            if not mcq.get("exam_fact"):
-                continue
-            # Ensure answer index is valid
-            answer = mcq.get("answer", 0)
-            if not isinstance(answer, int) or answer < 0 or answer > 3:
-                mcq["answer"] = 0
-            valid_mcqs.append(mcq)
-
-        if not valid_mcqs:
-            return None
-
-        ai["mcqs"] = valid_mcqs
-        # Set top-level exam_fact from first MCQ for backward compat
-        ai["exam_fact"] = valid_mcqs[0].get("exam_fact", "")
-
-        # Validate category
-        if ai.get("category") not in VALID_CATEGORIES:
-            ai["category"] = DEFAULT_CATEGORY
-
-        return ai
-
-    except json.JSONDecodeError as e:
-        print(f"    [AI] JSON parse error: {e}")
+    models_to_try = [m for m in get_candidate_models() if m not in _exhausted_models]
+    if not models_to_try:
+        print("    [AI] All candidate models exhausted for today.")
         return None
-    except Exception as e:
-        print(f"    [AI] Extract error: {e}")
-        return None
+
+    for model_name in models_to_try:
+        for attempt in range(2):
+            try:
+                chat = client.chats.create(model=model_name)
+                response = chat.send_message(prompt)
+                text = response.text.strip() if response and response.text else ""
+
+                if not text or text.lower() == "null" or text == "{}":
+                    return None
+
+                # Strip markdown code fences if present
+                if "```" in text:
+                    text = re.sub(r"^```(?:json)?|```$", "", text, flags=re.MULTILINE).strip()
+
+                ai = json.loads(text)
+
+                # Backward compat: wrap legacy single mcq into mcqs array
+                if "mcq" in ai and "mcqs" not in ai:
+                    legacy_mcq = ai.pop("mcq")
+                    legacy_mcq["exam_fact"] = ai.get("exam_fact", "")
+                    ai["mcqs"] = [legacy_mcq]
+
+                # Validate mcqs array
+                mcqs = ai.get("mcqs")
+                if not mcqs or not isinstance(mcqs, list):
+                    return None
+
+                # Validate each MCQ in the array
+                valid_mcqs = []
+                for mcq in mcqs[:3]:  # cap at 3
+                    if not isinstance(mcq, dict):
+                        continue
+                    if not mcq.get("question") or len(mcq.get("options", [])) != 4:
+                        continue
+                    if not mcq.get("exam_fact"):
+                        continue
+                    # Ensure answer index is valid
+                    answer = mcq.get("answer", 0)
+                    if not isinstance(answer, int) or answer < 0 or answer > 3:
+                        mcq["answer"] = 0
+                    valid_mcqs.append(mcq)
+
+                if not valid_mcqs:
+                    return None
+
+                ai["mcqs"] = valid_mcqs
+                # Set top-level exam_fact from first MCQ for backward compat
+                ai["exam_fact"] = valid_mcqs[0].get("exam_fact", "")
+
+                # Validate category
+                if ai.get("category") not in VALID_CATEGORIES:
+                    ai["category"] = DEFAULT_CATEGORY
+
+                _active_model = model_name
+                return ai
+
+            except json.JSONDecodeError as e:
+                print(f"    [AI] JSON parse error with {model_name}: {e}")
+                return None
+            except Exception as e:
+                err_str = str(e)
+                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
+                    if "Daily" in err_str or "limit: 20" in err_str or "PerModel-FreeTier" in err_str:
+                        print(f"    [AI] Model {model_name} daily quota exhausted. Rotating candidate model...")
+                        _exhausted_models.add(model_name)
+                        break
+                    else:
+                        delay_match = re.search(r"retry in ([0-9.]+)\s*s", err_str, re.IGNORECASE)
+                        sleep_time = float(delay_match.group(1)) + 1.0 if delay_match else 12.0
+                        print(f"    [AI] Model {model_name} rate limited (RPM). Pausing {sleep_time:.1f}s before retry...")
+                        time.sleep(sleep_time)
+                        continue
+                else:
+                    print(f"    [AI] Extract error with {model_name}: {e}")
+                    if "404" in err_str or "NOT_FOUND" in err_str:
+                        _exhausted_models.add(model_name)
+                    break
+
+    return None
 
 
 # ---------------------------------------------------------------------------

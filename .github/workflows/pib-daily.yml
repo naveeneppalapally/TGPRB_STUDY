@@ -54,7 +54,6 @@ jobs:
           GOOGLE_CLOUD_PROJECT:               ${{ secrets.GOOGLE_CLOUD_PROJECT }}
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SA_KEY }}
           GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL:                       "gemini-3.6-flash"
           PYTHONUNBUFFERED:                   "1"
         run: |
           python3 workers/scrapy-pib/pib_scraper.py \
