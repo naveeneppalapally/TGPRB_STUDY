@@ -31,7 +31,7 @@ mcqs:
     answer: 1
     explanation: "e-Jagriti is an initiative of the Ministry of Consumer Affairs that establishes a unified digital ecosystem for consumer dispute resolution across Consumer Commissions."
   - exam_fact: "AgriStack is built around three core registries: the Farmers' Registry, Crop Sown Registry, and Geo-referenced Village Maps."
-    question: "Which agricultural e-governance initiative is built around three core registries—Farmers' Registry, Crop Sown Registry, and Geo-referenced Village Maps?"
+    question: "Which agricultural e-governance initiative is built around three core registries-Farmers' Registry, Crop Sown Registry, and Geo-referenced Village Maps?"
     options:
       - "e-NAM"
       - "PM-KISAN"
