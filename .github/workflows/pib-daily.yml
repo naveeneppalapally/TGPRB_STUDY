@@ -41,9 +41,9 @@ jobs:
             FROM="${{ inputs.from_date }}"
             TO="${{ inputs.to_date || inputs.from_date }}"
           else
-            # Daily run at 7 AM IST: yesterday's PIB releases are fully published
-            FROM=$(date -d "1 day ago" +%Y-%m-%d)
-            TO=$FROM
+            # Look back 3 days to automatically backfill any missed runs, weekend lag, or transient errors
+            FROM=$(date -d "3 days ago" +%Y-%m-%d)
+            TO=$(date +%Y-%m-%d)
           fi
           echo "from_date=$FROM" >> $GITHUB_OUTPUT
           echo "to_date=$TO" >> $GITHUB_OUTPUT
@@ -54,12 +54,17 @@ jobs:
           GOOGLE_CLOUD_PROJECT:               ${{ secrets.GOOGLE_CLOUD_PROJECT }}
           GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SA_KEY }}
           GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL:                       "gemini-3.6-flash"
           PYTHONUNBUFFERED:                   "1"
         run: |
           python3 workers/scrapy-pib/pib_scraper.py \
             --from "${{ steps.dates.outputs.from_date }}" \
             --to "${{ steps.dates.outputs.to_date }}" \
             --max-per-day 30
+
+      - name: Sync Topic Mappings
+        run: |
+          python3 scripts/pib_ca_pipeline/sync_ca_topics.py
 
       - name: Count new files
         id: count

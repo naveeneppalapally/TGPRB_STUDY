@@ -20,6 +20,50 @@ export default defineNuxtConfig({
   // CSS
   css: ['~/assets/css/main.css'],
 
+  // Nuxt Icon configuration: pre-bundle all heroicons into client bundle to prevent missing icons on edge hosting
+  icon: {
+    serverBundle: {
+      collections: ['heroicons'],
+    },
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 1024,
+      icons: [
+        'heroicons:sun',
+        'heroicons:moon',
+        'heroicons:arrow-right-on-rectangle',
+        'heroicons:bars-3',
+        'heroicons:x-mark',
+        'heroicons:magnifying-glass',
+        'heroicons:bolt',
+        'heroicons:bell',
+        'heroicons:chevron-left',
+        'heroicons:chevron-right',
+        'heroicons:chevron-double-left',
+        'heroicons:bars-3-bottom-left',
+        'heroicons:clipboard-document-check',
+        'heroicons:rectangle-stack',
+        'heroicons:pencil-square',
+        'heroicons:exclamation-triangle',
+        'heroicons:question-mark-circle',
+        'heroicons:hashtag',
+        'heroicons:language',
+        'heroicons:check',
+        'heroicons:home',
+        'heroicons:book-open',
+        'heroicons:clock',
+        'heroicons:academic-cap',
+        'heroicons:archive-box',
+        'heroicons:squares-2x2',
+        'heroicons:newspaper',
+        'heroicons:document-text',
+        'heroicons:scale',
+        'heroicons:arrow-right',
+        'heroicons:chat-bubble-bottom-center-text',
+      ],
+    },
+  },
+
   // Nitro server config
   nitro: {
     // Switch preset based on build environment

@@ -279,15 +279,20 @@
           <WhatsNewSlideover />
 
           <!-- Theme Mode Switcher -->
-          <UButton
-            :icon="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
-            color="gray"
-            variant="ghost"
-            size="sm"
-            class="min-h-[44px] min-w-[44px] flex items-center justify-center"
-            :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-            @click="toggleTheme"
-          />
+          <ClientOnly>
+            <UButton
+              :icon="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
+              color="gray"
+              variant="ghost"
+              size="sm"
+              class="min-h-[44px] min-w-[44px] flex items-center justify-center"
+              :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+              @click="toggleTheme"
+            />
+            <template #fallback>
+              <div class="min-h-[44px] min-w-[44px]" />
+            </template>
+          </ClientOnly>
 
           <!-- User Profile Dropdown -->
           <UDropdown

@@ -62,15 +62,20 @@
       </span>
 
       <!-- Theme -->
-      <UButton
-        :icon="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
-        color="gray"
-        variant="ghost"
-        size="sm"
-        class="h-8 w-8 justify-center"
-        :aria-label="colorMode.value === 'dark' ? 'Light mode' : 'Dark mode'"
-        @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
-      />
+      <ClientOnly>
+        <UButton
+          :icon="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'"
+          color="gray"
+          variant="ghost"
+          size="sm"
+          class="h-8 w-8 justify-center"
+          :aria-label="colorMode.value === 'dark' ? 'Light mode' : 'Dark mode'"
+          @click="colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'"
+        />
+        <template #fallback>
+          <div class="h-8 w-8" />
+        </template>
+      </ClientOnly>
     </div>
   </header>
 </template>

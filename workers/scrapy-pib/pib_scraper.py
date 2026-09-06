@@ -813,11 +813,11 @@ def resolve_available_model(client) -> str:
 
     # Probe candidates with a minimal test call - stop at first success
     candidates = [
+        "gemini-3.6-flash",
+        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
         "gemini-flash-latest",
         "gemini-flash-lite-latest",
-        "gemini-2.0-flash",
-        "gemini-2.0-flash-lite",
-        "gemini-2.0-flash-exp",
     ]
     probe_prompt = "Reply with one word: ready"
     for candidate in candidates:
@@ -832,7 +832,7 @@ def resolve_available_model(client) -> str:
             print(f"[AI] Model {candidate} unavailable: {e}")
             continue
 
-    _active_model = "gemini-2.0-flash"
+    _active_model = "gemini-3.6-flash"
     print(f"[AI] Falling back to: {_active_model}")
     return _active_model
 
