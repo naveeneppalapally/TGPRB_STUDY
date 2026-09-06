@@ -5,6 +5,8 @@ import damsInIndia from '~/content/data/flashcards/geography/dams-in-india.json'
 import irrigationInIndia from '~/content/data/flashcards/geography/irrigation-in-india.json'
 import forestsInIndia from '~/content/data/flashcards/geography/forests-in-india.json'
 import unionExecutiveAndLegislature from '~/content/data/flashcards/polity/union-executive-and-legislature.json'
+import historicalActsFlashcards from '~/content/data/flashcards/polity/historical-background-1773-1947.json'
+import makingOfTheConstitutionFlashcards from '~/content/data/flashcards/polity/making-of-the-constitution.json'
 import telanganaStatehoodMovement from '~/content/data/flashcards/telangana/telangana-statehood-movement.json'
 
 interface FlashcardRecord {
@@ -60,6 +62,18 @@ const DECKS: DeckMeta[] = [
     examSection: 'Polity',
     topic: 'Union Executive and Legislature',
     deck: unionExecutiveAndLegislature,
+  },
+  {
+    noteId: 'NOTE-POL-HIST-ACTS',
+    examSection: 'Polity',
+    topic: 'Historical Background: Company Rule & Crown Rule (1773-1947)',
+    deck: historicalActsFlashcards,
+  },
+  {
+    noteId: 'NOTE-POL-MAKING-CONST',
+    examSection: 'Polity',
+    topic: 'Making of the Indian Constitution',
+    deck: makingOfTheConstitutionFlashcards,
   },
   {
     noteId: 'NOTE-TEL-MOVEMENT',
