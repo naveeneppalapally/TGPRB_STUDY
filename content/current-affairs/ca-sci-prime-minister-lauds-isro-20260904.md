@@ -4,8 +4,7 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Science and Space"
-related_topic_ids:
-  - "NOTE-SCI-GENERAL"
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-GENERAL", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"
