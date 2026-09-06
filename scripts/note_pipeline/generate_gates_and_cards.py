@@ -20,7 +20,7 @@ class GateQuestion(BaseModel):
 # note_id must match the NOTE-ID used in the note page's <GateQuiz note-id="..." /> tag.
 class GateConfig(BaseModel):
     note_id: str
-    pass_threshold: int = 4
+    pass_threshold: int = 3
     questions: List[GateQuestion]
 
 class AtomicFlashcard(BaseModel):
@@ -65,9 +65,9 @@ Rules:
     )
 
     gate_data = json.loads(resp_gate.text)
-    # Force the exact note_id regardless of what the model echoed back, so the
-    # server API lookup by note_id is guaranteed to match the page's note-id prop.
+    # Force the exact note_id and standard pass_threshold (3/5) regardless of model echo
     gate_data['note_id'] = note_id
+    gate_data['pass_threshold'] = 3
     gate_dir = 'content/data/gates'
     os.makedirs(gate_dir, exist_ok=True)
     gate_file = os.path.join(gate_dir, f"{topic_slug}.json")
@@ -83,7 +83,7 @@ Rules:
 - Each card must be atomic (tests exactly ONE pinpoint fact).
 - Front: Crisp prompt / question.
 - Back: Concise 1-sentence answer.
-- NO EM-DASHES (—).
+- NO EM-DASHES (-).
 """
 
     print(f"Generating FSRS Atomic Flashcards for {note_id}...")
@@ -99,6 +99,7 @@ Rules:
     )
 
     fc_data = json.loads(resp_fc.text)
+    fc_data['note_id'] = note_id
     fc_dir = os.path.join('content/data/flashcards', subject_slug)
     os.makedirs(fc_dir, exist_ok=True)
     fc_file = os.path.join(fc_dir, f"{topic_slug}.json")
@@ -107,4 +108,10 @@ Rules:
     print(f"  ✓ Saved Flashcards to: {fc_file}")
 
 if __name__ == '__main__':
-    generate_gate_and_cards('NOTE-TEL-MOVEMENT', 'telangana-statehood-movement', 'telangana', 'Telangana Armed Struggle & Statehood Movement')
+    if len(sys.argv) >= 5:
+        generate_gate_and_cards(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    elif len(sys.argv) > 1:
+        print("Usage: python3 scripts/note_pipeline/generate_gates_and_cards.py <note_id> <topic_slug> <subject_slug> <title>")
+        sys.exit(1)
+    else:
+        generate_gate_and_cards('NOTE-TEL-MOVEMENT', 'telangana-statehood-movement', 'telangana', 'Telangana Armed Struggle & Statehood Movement')

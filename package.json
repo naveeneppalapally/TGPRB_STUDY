@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npx tsx scripts/generate-ai-context.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-topic-integrity.ts",
+    "prebuild": "npx tsx scripts/generate-ai-context.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
     "generate:ai-context": "npx tsx scripts/generate-ai-context.ts",
     "build": "nuxt build",
-    "predev": "npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-topic-integrity.ts",
+    "predev": "npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -14,12 +14,13 @@
     "ingest": "npx tsx scripts/ingest.ts",
     "tier": "npx tsx scripts/tier.ts",
     "verify": "npx tsx scripts/verify-topics.ts",
+    "verify:constitution": "npx tsx scripts/verify-constitution-size.ts",
     "verify:integrity": "npx tsx scripts/verify-topic-integrity.ts",
     "sync:ca-topics": "python3 scripts/pib_ca_pipeline/sync_ca_topics.py",
     "test:exam-strategy": "npx tsx scripts/test-exam-strategy.ts",
     "test:offline-sync": "npx tsx scripts/test-offline-sync.ts",
     "test:personal-notes": "npx tsx scripts/test-personal-notes-e2e.ts",
-    "test": "npx tsx scripts/verify-topic-integrity.ts && npx tsx scripts/test-personal-notes-e2e.ts && npx tsx scripts/test-offline-sync.ts && npx tsx scripts/test-exam-strategy.ts"
+    "test": "npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts && npx tsx scripts/test-personal-notes-e2e.ts && npx tsx scripts/test-offline-sync.ts && npx tsx scripts/test-exam-strategy.ts"
   },
   "dependencies": {
     "@google/genai": "^2.17.0",

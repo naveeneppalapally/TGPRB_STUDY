@@ -1,4 +1,5 @@
 import fs from 'fs'
+import path from 'path'
 import { globSync } from 'glob'
 
 const EM_DASH = String.fromCharCode(8212)
@@ -24,4 +25,17 @@ if (replacedCount > 0) {
   console.log(`BANNED EM-DASH: Found and replaced em-dashes in ${replacedCount} files.`)
 } else {
   console.log('Em-dash check passed. No em-dashes found.')
+}
+
+// Enforce AGENTS.md constitution size limit (<= 16,000 bytes)
+const constitutionPath = fs.existsSync('AGENTS.md')
+  ? 'AGENTS.md'
+  : path.resolve(__dirname, '..', 'AGENTS.md')
+
+if (fs.existsSync(constitutionPath)) {
+  const constitutionSize = fs.statSync(constitutionPath).size
+  if (constitutionSize > 16000) {
+    console.error(`BANNED SIZE: AGENTS.md exceeds 16,000 bytes (${constitutionSize} bytes)!`)
+    process.exit(1)
+  }
 }
