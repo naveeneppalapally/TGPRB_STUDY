@@ -12,59 +12,69 @@
   --scale-heading: 1;
   --scale-subheading: 1;
   --scale-base: 1;
-  
+
+  /* App shell geometry (read by layouts/default.vue) */
+  --shell-sidebar-w: 264px;
+  --shell-rail-w: 68px;
+  --shell-header-h: 56px;
+
+  /* Light: soft warm-neutral paper, near-black ink, one restrained accent. */
   color-scheme: light;
-  --bg:          #f5f3ec;
-  --bg-elevated: #fffefa;
-  --bg-subtle:   #eeebe0;
-  --bg-inset:    #e9e5d7;
-  --line:        rgba(28, 25, 23, 0.09);
-  --line-strong: rgba(28, 25, 23, 0.17);
-  --text-1: #1c1917;
-  --text-2: #565049;
-  --text-3: #8d867a;
-  --accent:        #cd8a14;
-  --accent-strong: #a86a0c;
-  --accent-soft:   rgba(205, 138, 20, 0.10);
-  --accent-line:   rgba(205, 138, 20, 0.35);
-  --jade:      #187a57;
-  --jade-soft: rgba(24, 122, 87, 0.10);
-  --jade-line: rgba(24, 122, 87, 0.32);
-  --red:      #dc2626;
-  --red-soft: rgba(220, 38, 38, 0.07);
-  --red-line: rgba(220, 38, 38, 0.30);
-  --sky:      #2563eb;
-  --sky-soft: rgba(37, 99, 235, 0.08);
-  /* Dark "artifact" card — used in both modes for field-manual panels */
-  --ink-card:      #17140f;
-  --ink-card-line: rgba(245, 240, 230, 0.10);
-  --ink-card-text: #e9e2d2;
+  --bg:          #f6f5f2;
+  --bg-elevated: #ffffff;
+  --bg-subtle:   #efeeea;
+  --bg-inset:    #e7e5e0;
+  --line:        rgba(30, 32, 36, 0.08);
+  --line-strong: rgba(30, 32, 36, 0.16);
+  --text-1: #1e2024;
+  --text-2: #4f545c;
+  --text-3: #80868f;
+  --accent:        #b9781a;
+  --accent-strong: #935d0f;
+  --accent-soft:   rgba(185, 120, 26, 0.10);
+  --accent-line:   rgba(185, 120, 26, 0.32);
+  --jade:      #1f7e53;
+  --jade-soft: rgba(31, 126, 83, 0.10);
+  --jade-line: rgba(31, 126, 83, 0.30);
+  --red:      #c93b3b;
+  --red-soft: rgba(201, 59, 59, 0.08);
+  --red-line: rgba(201, 59, 59, 0.28);
+  --sky:      #2b6cb0;
+  --sky-soft: rgba(43, 108, 176, 0.09);
+  /* Dark "artifact" card - used in both modes for field-manual panels */
+  --ink-card:      #1b1e23;
+  --ink-card-line: rgba(240, 240, 238, 0.10);
+  --ink-card-text: #e6e7ea;
   --radius: 10px;
 }
 
 .dark {
+  /* Dark: neutral graphite (no blue or purple tint), lifted text contrast. */
   color-scheme: dark;
-  --bg:          #100f0c;
-  --bg-elevated: #17150f;
-  --bg-subtle:   #14120d;
-  --bg-inset:    #0b0a08;
-  --line:        rgba(245, 240, 230, 0.08);
-  --line-strong: rgba(245, 240, 230, 0.15);
-  --text-1: #f3efe4;
-  --text-2: #b6ae9d;
-  --text-3: #7e7767;
-  --accent:        #e5ad31;
-  --accent-strong: #ecc555;
-  --accent-soft:   rgba(229, 173, 49, 0.11);
-  --accent-line:   rgba(229, 173, 49, 0.38);
-  --jade:      #4ab488;
-  --jade-soft: rgba(74, 180, 136, 0.11);
-  --jade-line: rgba(74, 180, 136, 0.35);
-  --red:      #f87171;
-  --red-soft: rgba(248, 113, 113, 0.09);
-  --red-line: rgba(248, 113, 113, 0.32);
-  --sky:      #60a5fa;
-  --sky-soft: rgba(96, 165, 250, 0.10);
+  --bg:          #16171a;
+  --bg-elevated: #1d1f23;
+  --bg-subtle:   #1a1c1f;
+  --bg-inset:    #111214;
+  --line:        rgba(235, 236, 238, 0.08);
+  --line-strong: rgba(235, 236, 238, 0.15);
+  --text-1: #ececea;
+  --text-2: #b1b4b9;
+  --text-3: #7e8288;
+  --accent:        #d9a441;
+  --accent-strong: #e6b85e;
+  --accent-soft:   rgba(217, 164, 65, 0.12);
+  --accent-line:   rgba(217, 164, 65, 0.36);
+  --jade:      #4cb884;
+  --jade-soft: rgba(76, 184, 132, 0.12);
+  --jade-line: rgba(76, 184, 132, 0.34);
+  --red:      #ef7272;
+  --red-soft: rgba(239, 114, 114, 0.10);
+  --red-line: rgba(239, 114, 114, 0.32);
+  --sky:      #74aefc;
+  --sky-soft: rgba(116, 174, 252, 0.11);
+  --ink-card:      #111214;
+  --ink-card-line: rgba(235, 236, 238, 0.10);
+  --ink-card-text: #e6e7ea;
 }
 
 /* ── 1b. Theme Presets: Warm Notebook & Chalkboard ───────────────────────── */
@@ -358,17 +368,14 @@ body {
   background-color: var(--bg);
   color: var(--text-1);
   font-feature-settings: 'cv11', 'ss01';
-  transition: background-color 0.25s ease, color 0.25s ease;
-}
-.dark body {
-  background-image:
-    radial-gradient(900px 340px at 75% -8%, rgba(229, 173, 49, 0.05), transparent 65%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 ::selection {
-  background: rgba(229, 173, 49, 0.30);
+  background: rgba(185, 120, 26, 0.26);
   color: inherit;
+}
+.dark ::selection {
+  background: rgba(217, 164, 65, 0.30);
 }
 *:focus-visible {
   outline: 2px solid var(--accent);
@@ -434,6 +441,18 @@ body {
 .accent-strong { color: var(--accent-strong); }
 .bg-accent-soft { background-color: var(--accent-soft); }
 .num { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum'; }
+
+/* Tactile press: one shared contact response for buttons and nav rows */
+.press {
+  transition: transform 80ms cubic-bezier(0.16, 1, 0.3, 1), background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+.press:active { transform: scale(0.975); }
+
+/* Neutral hairline focus for the shell (replaces the loud accent ring) */
+.shell-focus:focus-visible {
+  outline: 2px solid var(--line-strong);
+  outline-offset: 2px;
+}
 
 /* Mono micro eyebrow — the app's signature label style */
 .eyebrow {
