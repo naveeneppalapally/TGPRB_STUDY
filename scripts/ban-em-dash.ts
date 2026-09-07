@@ -3,7 +3,7 @@ import path from 'path'
 import { globSync } from 'glob'
 
 const EM_DASH = String.fromCharCode(8212)
-const files = globSync('**/*.{vue,md,ts,js,json}', {
+const files = globSync('**/*.{vue,md,ts,js,json,css}', {
   ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'dist/**', 'scripts/ban-em-dash.ts', 'package-lock.json'],
 })
 

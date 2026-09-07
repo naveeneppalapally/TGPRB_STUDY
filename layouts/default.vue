@@ -163,7 +163,8 @@
     </Transition>
 
     <!-- ══ Content column ═══════════════════════════════════════════════ -->
-    <div class="shell-content flex min-h-screen flex-col">
+    <div class="shell-content content-shell flex min-h-screen flex-col">
+      <!-- Topbar Header Navigation -->
       <header class="shell-header sticky top-0 z-20 flex h-[var(--shell-header-h)] items-center gap-2 border-b b-line px-3 sm:px-5">
         <button
           type="button"
@@ -173,6 +174,20 @@
         >
           <UIcon name="i-heroicons-bars-3" class="h-5 w-5" />
         </button>
+
+        <!-- ZLS Bounded Expand Button (Pre-Reserved 36px Container) -->
+        <div class="hidden lg:flex w-9 h-9 items-center justify-center shrink-0">
+          <UTooltip v-if="!sidebarOpen" text="Open sidebar (Ctrl+[)" :popper="{ placement: 'bottom-start' }">
+            <button
+              type="button"
+              class="press shell-focus flex h-8 w-8 items-center justify-center rounded-lg border b-line bg-sub t-mid hover:t-hi hover:b-strong hover:bg-elev"
+              aria-label="Expand sidebar"
+              @click="toggleSidebar"
+            >
+              <UIcon name="i-heroicons-chevron-double-right" class="h-4 w-4" />
+            </button>
+          </UTooltip>
+        </div>
 
         <!-- Breadcrumb-style context -->
         <div class="flex min-w-0 flex-1 items-center gap-2 text-[13px]">
@@ -254,13 +269,15 @@
 
     <!-- ══ Command palette ═════════════════════════════════════════════ -->
     <UModal v-model="paletteOpen" :ui="{ padding: 'p-0 sm:p-0', width: 'w-full sm:max-w-lg' }">
-      <UCommandPalette
-        :groups="paletteGroups"
-        placeholder="Search pages, subjects, actions"
-        :autoselect="true"
-        @update:model-value="onCommand"
-        @close="paletteOpen = false"
-      />
+      <div class="command-palette-container">
+        <UCommandPalette
+          :groups="paletteGroups"
+          placeholder="Search pages, subjects, actions"
+          :autoselect="true"
+          @update:model-value="onCommand"
+          @close="paletteOpen = false"
+        />
+      </div>
     </UModal>
 
     <UNotifications />
@@ -460,9 +477,12 @@ defineShortcuts({
   -webkit-backdrop-filter: saturate(1.1) blur(8px);
 }
 @media (min-width: 1024px) {
+  .content-shell {
+    contain: layout;
+  }
   .shell-content {
+    contain: layout;
     padding-inline-start: var(--shell-sidebar-w);
-    transition: padding-inline-start 200ms cubic-bezier(0.16, 1, 0.3, 1);
   }
   .is-rail .shell-sidebar { width: var(--shell-rail-w); }
   .is-rail .shell-content { padding-inline-start: var(--shell-rail-w); }
@@ -472,6 +492,18 @@ defineShortcuts({
   .is-rail .rail-only { display: block; }
   .is-rail .nav-row { justify-content: center; padding-inline: 0; }
   .is-rail .brand-mark { margin-inline: auto; }
+
+  /* Desktop rail dot: preserves numeric count in full-width mobile drawer */
+  .due-pill.rail-dot {
+    position: absolute;
+    top: 7px;
+    right: 14px;
+    min-width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    background: var(--accent);
+  }
 }
 .rail-only { display: none; }
 
@@ -546,16 +578,6 @@ defineShortcuts({
   background: var(--accent-soft);
   border: 1px solid var(--accent-line);
 }
-.due-pill.rail-dot {
-  position: absolute;
-  top: 7px;
-  right: 14px;
-  min-width: 8px;
-  height: 8px;
-  padding: 0;
-  border: 0;
-  background: var(--accent);
-}
 
 .avatar {
   display: grid;
@@ -609,7 +631,27 @@ defineShortcuts({
 .scrim-enter-active, .scrim-leave-active { transition: opacity 180ms ease; }
 .scrim-enter-from, .scrim-leave-to { opacity: 0; }
 
+/* Command palette modal container physics */
+.command-palette-container {
+  animation: modalScaleSpring 160ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes modalScaleSpring {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .shell-sidebar, .shell-content { transition: none !important; }
+  .command-palette-container {
+    animation: none !important;
+  }
 }
 </style>
