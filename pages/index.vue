@@ -18,7 +18,7 @@
           <div class="mt-3 flex items-baseline gap-3">
             <ClientOnly>
               <TactileOdometer
-                :value="dueCount ?? 0"
+                :value="dueCount"
                 class="text-[84px] font-semibold leading-none tracking-tighter t-hi sm:text-[104px]"
               />
               <template #fallback>
@@ -64,7 +64,12 @@
           <div v-for="stat in stats" :key="stat.label" class="flex flex-col justify-center px-5 py-5 sm:px-6">
             <dt class="eyebrow">{{ stat.label }}</dt>
             <dd class="num mt-1.5 text-[22px] font-semibold tracking-tight" :class="stat.dim ? 't-lo' : 't-hi'">
-              {{ stat.value }}
+              <ClientOnly>
+                <TactileOdometer :value="stat.value" />
+                <template #fallback>
+                  <span>{{ stat.value }}</span>
+                </template>
+              </ClientOnly>
             </dd>
             <dd class="mt-0.5 hidden text-[11.5px] t-lo sm:block">{{ stat.hint }}</dd>
           </div>
@@ -95,10 +100,12 @@
         <ol class="panel divide-y divide-[var(--line)] overflow-hidden">
           <li v-for="topic in predictedHighYieldTopics" :key="topic.rank">
             <component
-              :is="topic.isLive ? NuxtLink : 'div'"
+              :is="topic.isLive ? NuxtLink : 'button'"
               :to="topic.isLive ? topic.href : undefined"
-              class="row-item press"
-              :class="topic.isLive ? 'hover:bg-sub' : 'cursor-default opacity-70'"
+              :type="topic.isLive ? undefined : 'button'"
+              class="row-item press w-full text-left"
+              :class="topic.isLive ? 'hover:bg-sub' : 'cursor-pointer opacity-75 hover:bg-sub'"
+              @click="!topic.isLive ? onQueuedTopic(topic) : undefined"
             >
               <span class="rank num">{{ String(topic.rank).padStart(2, '0') }}</span>
               <div class="min-w-0 flex-1">
@@ -404,7 +411,6 @@ const predictedHighYieldTopics = [
     pyqs: 22,
     projectedMarks: '4-6 marks',
     likelyFormat: 'Causal chains, leader and organisation pairing',
-    href: '/notes/history',
     isLive: false,
   },
   {
@@ -414,10 +420,19 @@ const predictedHighYieldTopics = [
     pyqs: 35,
     projectedMarks: '8-10 marks',
     likelyFormat: 'Speed-accuracy calculation, multi-step word problems',
-    href: '/notes/arithmetic',
     isLive: false,
   },
 ]
+
+function onQueuedTopic(topic: { title: string }) {
+  toast.add({
+    title: `${topic.title} is queued`,
+    description: 'Note is in preparation. Verified PYQs are available in the Question Archive now.',
+    icon: 'i-heroicons-clock',
+    color: 'gray',
+    timeout: 2600,
+  })
+}
 
 const continueNote = {
   title: 'Drainage System of India',

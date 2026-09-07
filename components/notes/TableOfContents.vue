@@ -5,7 +5,7 @@
       <nav ref="navRef" class="relative space-y-0.5">
         <!-- High-Performance GPU-Composited Magnetic Indicator Pill -->
         <div
-          class="toc-pill pointer-events-none absolute start-0 w-full rounded-md bg-accent-soft border border-accent-line will-change-transform"
+          class="toc-pill pointer-events-none absolute start-0 w-full rounded-md bg-accent-soft border border-[var(--accent-line)] will-change-transform"
           :style="pillStyle"
           aria-hidden="true"
         />

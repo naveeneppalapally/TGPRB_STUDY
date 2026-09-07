@@ -454,7 +454,7 @@ body {
   outline-offset: 2px;
 }
 
-/* Mono micro eyebrow — the app's signature label style */
+/* Mono micro eyebrow - the app's signature label style */
 .eyebrow {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
   font-size: 10px;
@@ -464,7 +464,7 @@ body {
   color: var(--text-3);
 }
 
-/* Hairline surface — replaces generic "gray card" chrome */
+/* Hairline surface - replaces generic "gray card" chrome */
 .panel {
   background-color: var(--bg-elevated);
   border: 1px solid var(--line);
@@ -485,7 +485,7 @@ body {
   mask-image: radial-gradient(ellipse 90% 100% at 30% 0%, black 30%, transparent 78%);
 }
 
-/* Numbered section header (01 — Introduction ————) */
+/* Numbered section header (01 - Introduction ----) */
 .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 22px; }
 .sec-head .sec-num {
   font-family: 'JetBrains Mono', ui-monospace, monospace;
@@ -517,7 +517,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* Chips — deliberate replacement for default badges */
+/* Chips - deliberate replacement for default badges */
 .chip {
   display: inline-flex;
   align-items: center;
@@ -544,7 +544,7 @@ body {
 .chip-sky     { border-color: rgba(96, 165, 250, 0.35); background: var(--sky-soft); color: var(--sky); }
 .chip .dot { width: 5px; height: 5px; border-radius: 999px; background: currentColor; }
 
-/* Callout — hairline panel with a 2px accent rail (replaces UAlert in notes) */
+/* Callout - hairline panel with a 2px accent rail (replaces UAlert in notes) */
 .callout {
   position: relative;
   border: 1px solid var(--line);
@@ -620,7 +620,7 @@ body {
   white-space: nowrap;
 }
 
-/* "Hot" marker — PYQ-examined fact (replaces ⚡ emoji markers) */
+/* "Hot" marker - PYQ-examined fact (replaces ⚡ emoji markers) */
 .hot { color: var(--accent-strong); font-weight: 600; }
 .hot-tag {
   display: inline-block;
@@ -637,7 +637,7 @@ body {
   vertical-align: 1px;
 }
 
-/* Dark artifact panel — field-manual card, same in both modes */
+/* Dark artifact panel - field-manual card, same in both modes */
 .artifact {
   background: var(--ink-card);
   border: 1px solid var(--ink-card-line);
@@ -878,7 +878,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: filter 0.12s ease, transform 50ms ease-out, box-shadow 0.12s ease, border-color 0.12s ease;
+  transition: filter 0.12s ease, transform 45ms ease-out, box-shadow 0.12s ease, border-color 0.12s ease;
   user-select: none;
 }
 .btn-again:hover:not(:disabled),

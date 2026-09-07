@@ -532,7 +532,7 @@ defineShortcuts({
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: filter 0.12s ease, transform 50ms ease-out, box-shadow 0.12s ease, border-color 0.12s ease;
+  transition: filter 0.12s ease, transform 45ms ease-out, box-shadow 0.12s ease, border-color 0.12s ease;
   user-select: none;
 }
 .rate-btn:hover:not(:disabled) {
