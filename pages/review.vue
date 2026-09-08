@@ -606,10 +606,10 @@ defineShortcuts({
   backface-visibility: hidden;
 }
 .flip-card-front {
-  transform: rotateY(0deg) translateZ(1px);
+  transform: rotateY(0deg);
 }
 .flip-card-back {
-  transform: rotateY(180deg) translateZ(1px);
+  transform: rotateY(180deg);
 }
 
 .card-glide-leave-active .flip-card-inner {

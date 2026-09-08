@@ -44,7 +44,7 @@ const props = defineProps<{ code: string }>()
 const el = ref<HTMLElement | null>(null)
 const ready = ref(false)
 const failed = ref(false)
-const colorMode = useColorMode()
+const colorMode = typeof useColorMode === 'function' ? useColorMode() : { value: 'dark', preference: 'system' }
 const { preset } = useThemePreset()
 
 let mermaidApi: any = null
