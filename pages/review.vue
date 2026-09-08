@@ -596,19 +596,29 @@ defineShortcuts({
 }
 
 .flip-card {
-  perspective: 1200px;
+  perspective: none;
 }
 .flip-card-inner {
-  transform-style: preserve-3d;
-}
-.flip-card-face {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  transform-style: flat;
 }
 .flip-card-front {
-  transform: rotateY(0deg);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 .flip-card-back {
-  transform: rotateY(180deg);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.flip-card-inner.is-flipped .flip-card-front {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.flip-card-inner.is-flipped .flip-card-back {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 </style>
