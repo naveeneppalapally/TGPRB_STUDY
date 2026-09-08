@@ -16,7 +16,12 @@
 
 echo "pre-push: pulling latest remote changes first..."
 
-git pull --rebase origin main
+BRANCH=$(git branch --show-current)
+if [ -n "$BRANCH" ]; then
+  git pull --rebase origin "$BRANCH"
+else
+  git pull --rebase origin main
+fi
 
 EXIT_CODE=$?
 
