@@ -74,8 +74,8 @@ const chapterReady = computed(() => {
 useHead({
   title: computed(() => {
     return chapterContainer.value?.title
-      ? `${chapterContainer.value.title} - Study - TGPRB StudyOS`
-      : 'Study - TGPRB StudyOS'
+      ? `${chapterContainer.value.title} - Study - BeatBook`
+      : 'Study - BeatBook'
   }),
 })
 

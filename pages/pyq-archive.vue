@@ -238,7 +238,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'TGPRB PYQ Archive · 3,129 Verified Questions | StudyOS',
+  title: 'TGPRB PYQ Archive · 3,129 Verified Questions | BeatBook',
   meta: [
     { name: 'description', content: 'Browse and practice 3,129 verified official TGPRB Constable and SI previous year questions (2015-2023).' }
   ]

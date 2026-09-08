@@ -149,7 +149,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Geography - TGPRB StudyOS' })
+useHead({ title: 'Geography - BeatBook' })
 
 const pending = [
   { name: 'Telangana Geography',        tier: 'T2', pyqs: '4' },

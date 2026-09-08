@@ -8,17 +8,17 @@
     <div
       class="relative grid place-items-center rounded-lg p-1.5 transition-all duration-300"
       :class="[
-        contained ? 'border b-line bg-elev shadow-sm group-hover:border-saffron-400' : ''
+        contained ? 'border b-line bg-elev shadow-sm group-hover:border-amber-400' : ''
       ]"
     >
-      <StudyOsIcon :size="iconSize" />
+      <BeatBookIcon :size="iconSize" class="text-amber-500" />
     </div>
 
     <!-- Wordmark -->
     <div v-if="!iconOnly" class="flex flex-col">
       <div class="flex items-center gap-1.5">
         <span class="font-display font-bold tracking-tight t-hi leading-none" :class="textClass">
-          Study<span class="accent">OS</span>
+          Beat<span class="accent">Book</span>
         </span>
         <span v-if="badge" class="chip chip-mono text-[9px] px-1.5 py-0.5 font-semibold">
           {{ badge }}
@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import StudyOsIcon from '@/components/icons/StudyOsIcon.vue'
+import BeatBookIcon from '@/components/icons/BeatBookIcon.vue'
 
 const props = withDefaults(
   defineProps<{
@@ -48,8 +48,8 @@ const props = withDefaults(
     iconOnly: false,
     contained: false,
     badge: '',
-    subtitle: '',
-    ariaLabel: 'StudyOS Home',
+    subtitle: 'Police SI & Constable OS',
+    ariaLabel: 'BeatBook Home',
   }
 )
 

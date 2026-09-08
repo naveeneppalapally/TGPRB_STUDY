@@ -163,7 +163,7 @@ import { usePersonalNotes } from '@/composables/usePersonalNotes'
 import type { PersonalNote, NoteFilterMode } from '@/types/annotations'
 
 useHead({
-  title: 'My Notes - TGPRB StudyOS',
+  title: 'My Notes - BeatBook',
   meta: [{ name: 'description', content: 'View and search all your personal study notes across topics.' }],
 })
 

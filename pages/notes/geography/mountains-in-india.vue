@@ -1231,7 +1231,7 @@ import type { SectionContext } from '@/types/annotations'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
-  title: 'Mountains, Ranges & Passes of India - TGPRB StudyOS',
+  title: 'Mountains, Ranges & Passes of India - BeatBook',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Mountains, Ranges & Passes of India with Himalayan sequence (KLZPS), Western and Eastern Ghats, Peak superlatives, Duns, Karewas, and verified PYQs.' }],
 })
 

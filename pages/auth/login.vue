@@ -3,11 +3,11 @@
     <!-- Header -->
     <div class="text-center mb-8">
       <NuxtLink to="/" class="inline-flex items-center gap-2.5 mb-4">
-        <span class="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-saffron-300 to-saffron-600 shadow-sm">
-          <UIcon name="i-heroicons-bolt-solid" class="h-5 w-5 text-ink-950" />
+        <span class="grid h-9 w-9 place-items-center rounded-lg bg-zinc-900 border border-white/10 shadow-sm text-amber-500">
+          <BeatBookIcon size="md" class="h-5 w-5 text-amber-500" />
         </span>
         <span class="font-display text-xl font-bold tracking-tight t-hi">
-          Study<span class="accent">OS</span>
+          Beat<span class="accent">Book</span>
         </span>
       </NuxtLink>
       <h1 class="font-display text-2xl font-bold tracking-tight t-hi">
@@ -209,9 +209,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useAuth } from '@/composables/useAuth'
+import BeatBookIcon from '@/components/icons/BeatBookIcon.vue'
 
 useHead({
-  title: 'Sign In - TGPRB StudyOS',
+  title: 'Sign In - BeatBook',
 })
 
 const route = useRoute()

@@ -11,10 +11,12 @@
       <!-- Brand row -->
       <div class="flex h-[var(--shell-header-h)] shrink-0 items-center gap-2 border-b b-line px-3">
         <NuxtLink to="/" class="press flex min-w-0 flex-1 items-center gap-2.5 rounded-lg px-1.5 py-1" @click="mobileOpen = false">
-          <span class="brand-mark grid h-8 w-8 shrink-0 place-items-center rounded-lg text-[13px] font-bold">TG</span>
+          <span class="brand-mark grid h-8 w-8 shrink-0 place-items-center rounded-lg">
+            <BeatBookIcon size="sm" class="h-5 w-5 text-amber-500" />
+          </span>
           <span class="rail-hide min-w-0">
-            <span class="block truncate text-[14px] font-semibold tracking-tight t-hi leading-tight">StudyOS</span>
-            <span class="block truncate font-mono text-[10px] uppercase tracking-[0.12em] t-lo leading-tight">Police SI &amp; Constable</span>
+            <span class="block truncate text-[14px] font-semibold tracking-tight t-hi leading-tight">BeatBook</span>
+            <span class="block truncate font-mono text-[10px] uppercase tracking-[0.12em] t-lo leading-tight">Police SI &amp; Constable OS</span>
           </span>
         </NuxtLink>
 
@@ -242,7 +244,7 @@
 
       <footer class="hidden border-t b-line sm:block">
         <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-5 py-3.5 sm:px-8">
-          <span class="text-[11.5px] t-lo">StudyOS for Telangana State Police exams</span>
+          <span class="text-[11.5px] t-lo">BeatBook for Telangana Police SI &amp; Constable exams</span>
           <span class="font-mono text-[10.5px] t-lo">Ctrl K search</span>
         </div>
       </footer>
@@ -286,6 +288,7 @@
 
 <script setup lang="ts">
 import SidebarToggleIcon from '@/components/icons/SidebarToggleIcon.vue'
+import BeatBookIcon from '@/components/icons/BeatBookIcon.vue'
 const mobileOpen = ref(false)
 const sidebarOpen = ref(true)
 const paletteOpen = ref(false)
@@ -510,9 +513,9 @@ defineShortcuts({
 
 /* ── Brand ── */
 .brand-mark {
-  background: var(--text-1);
-  color: var(--bg-elevated);
-  letter-spacing: -0.02em;
+  background: #18181b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* ── Nav rows ── */

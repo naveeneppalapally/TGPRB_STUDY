@@ -928,7 +928,7 @@ import { useAiPromptChips } from '@/composables/useAiPromptChips'
 import type { SectionContext } from '@/types/annotations'
 
 useHead({
-  title: 'Historical Background: Company Rule & Crown Rule (1773-1947) - TGPRB StudyOS',
+  title: 'Historical Background: Company Rule & Crown Rule (1773-1947) - BeatBook',
   meta: [
     {
       name: 'description',

@@ -73,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Telangana - TGPRB StudyOS' })
+useHead({ title: 'Telangana - BeatBook' })
 
 const pending = [
   { name: 'Telangana History & Dynasties (Satavahanas, Kakatiyas, Qutb Shahis, Asaf Jahis)', tier: 'T1', pyqs: '150' },

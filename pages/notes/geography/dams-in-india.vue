@@ -1085,7 +1085,7 @@ import type { SectionContext } from '@/types/annotations'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
-  title: 'Dams & Multipurpose Projects of India - TGPRB StudyOS',
+  title: 'Dams & Multipurpose Projects of India - BeatBook',
   meta: [{ name: 'description', content: 'Comprehensive TGPRB study note: Major dams, reservoirs, barrages, and multipurpose river valley projects of India and Telangana with verified PYQs and current affairs.' }],
 })
 

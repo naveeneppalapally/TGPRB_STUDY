@@ -167,12 +167,13 @@ export default defineNuxtConfig({
   // App-level head tags
   app: {
     head: {
-      title: 'TSLPRB StudyOS',
+      title: 'BeatBook - Police SI & Constable OS',
       meta: [
-        { name: 'description', content: 'Spaced-repetition study system for TSLPRB Constable/SI exam prep' },
+        { name: 'description', content: 'Spaced-repetition study system for Telangana Police SI & Constable exam prep' },
         { name: 'robots', content: 'noindex, nofollow' }, // unlisted until exam release
       ],
       link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         {

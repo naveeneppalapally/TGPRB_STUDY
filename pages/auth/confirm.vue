@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-useHead({ title: 'Confirming sign in - StudyOS' })
+useHead({ title: 'Confirming sign in - BeatBook' })
 
 const user = useSupabaseUser()
 const router = useRouter()

@@ -192,7 +192,7 @@ import { Rating, type Card as FSRSCard } from 'ts-fsrs'
 import { useFSRSEngine, type StudyCard, type FSRSGrade } from '@/composables/useFSRSEngine'
 import { useFlashcardUnlock } from '@/composables/useFlashcardUnlock'
 
-useHead({ title: 'Review Queue - TGPRB StudyOS' })
+useHead({ title: 'Review Queue - BeatBook' })
 
 interface RawCard {
   id: string

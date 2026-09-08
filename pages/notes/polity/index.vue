@@ -155,7 +155,7 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Indian Polity - TGPRB StudyOS' })
+useHead({ title: 'Indian Polity - BeatBook' })
 
 const pending = [
   { name: 'Judiciary & Constitutional/Statutory Bodies (Supreme Court, CAG, ECI, UPSC)', tier: 'T1', pyqs: '58' },

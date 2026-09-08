@@ -1392,7 +1392,7 @@ import { useAiPromptChips } from '@/composables/useAiPromptChips'
 import type { SectionContext } from '@/types/annotations'
 
 useHead({
-  title: 'Making of the Indian Constitution - TGPRB StudyOS',
+  title: 'Making of the Indian Constitution - BeatBook',
   meta: [{ name: 'description', content: 'Comprehensive TGPRB study note: Making of the Indian Constitution with Constituent Assembly milestones, Drafting Committee, and verified PYQs.' }],
 })
 

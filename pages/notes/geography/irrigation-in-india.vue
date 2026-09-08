@@ -1019,7 +1019,7 @@ import type { SectionContext } from '@/types/annotations'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
-  title: 'Irrigation in India & Telangana - TGPRB StudyOS',
+  title: 'Irrigation in India & Telangana - BeatBook',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Irrigation in India & Telangana with sources breakdown, multipurpose projects, canal networks, KLIP lift schemes, and verified PYQs.' }],
 })
 

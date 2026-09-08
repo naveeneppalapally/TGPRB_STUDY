@@ -382,7 +382,7 @@ import { useAuth } from '@/composables/useAuth'
 import { useThemePreset } from '@/composables/useThemePreset'
 import SegmentedControl from '@/components/ui/SegmentedControl.vue'
 
-useHead({ title: 'Settings - StudyOS' })
+useHead({ title: 'Settings - BeatBook' })
 
 const router = useRouter()
 const toast = useToast()

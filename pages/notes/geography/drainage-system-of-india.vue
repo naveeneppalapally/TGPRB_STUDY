@@ -1074,7 +1074,7 @@ import type { SectionContext } from '@/types/annotations'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
-  title: 'Drainage System of India - TGPRB StudyOS',
+  title: 'Drainage System of India - BeatBook',
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Drainage System of India with an interactive physical river map, 28 PYQs, and 10 practice questions.' }],
 })
 

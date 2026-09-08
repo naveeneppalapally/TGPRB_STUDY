@@ -212,7 +212,7 @@ import { queryCollection } from '#imports'
 import { useCACategories } from '@/composables/useCACategories'
 
 useHead({
-  title: 'Current Affairs - TGPRB StudyOS',
+  title: 'Current Affairs - BeatBook',
   meta: [{ name: 'description', content: 'Daily exam-relevant current affairs for TGPRB/TSPSC Police Constable and SI exams. Updated every morning.' }],
 })
 

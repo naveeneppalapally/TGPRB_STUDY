@@ -242,8 +242,8 @@ import { NuxtLink } from '#components'
 import { queryCollection } from '#imports'
 
 useHead({
-  title: 'Dashboard - TGPRB StudyOS',
-  meta: [{ name: 'description', content: 'Personal TGPRB Constable/SI study dashboard.' }],
+  title: 'Dashboard - BeatBook',
+  meta: [{ name: 'description', content: 'Personal Telangana Police Constable/SI study dashboard.' }],
 })
 
 const toast = useToast()
