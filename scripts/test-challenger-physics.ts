@@ -61,7 +61,7 @@ assertTest(
 
 // Test 1.2: 3D Flip Card Interruptibility
 const flipCardUsesTransition = mainCssContent.includes('.flip-card-inner') &&
-  mainCssContent.includes('transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1)')
+  mainCssContent.includes('transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1)')
 
 assertTest(
   'Suite 1: Vector Interruptibility',
