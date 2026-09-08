@@ -1,6 +1,6 @@
 import { defineNuxtPlugin, useState } from '#imports'
 import type { ThemePreset } from '~/composables/useThemePreset'
-import { THEME_PRESET_STORAGE_KEY, THEME_PRESET_CLASS } from '~/composables/useThemePreset'
+import { THEME_PRESET_STORAGE_KEY, THEME_PRESET_CLASSES } from '~/composables/useThemePreset'
 
 /**
  * Client plugin executed early during boot to eliminate flash of unstyled content (FOUC).
@@ -17,7 +17,7 @@ export default defineNuxtPlugin(() => {
     // Ignore storage errors during initialization
   }
 
-  const validPreset: ThemePreset = (stored === 'notebook' || stored === 'forest') ? stored : 'default'
+  const validPreset: ThemePreset = (stored === 'notebook' || stored === 'forest' || stored === 'graphite') ? stored : 'default'
 
   const presetState = useState<ThemePreset>('studyos-theme-preset', () => validPreset)
   presetState.value = validPreset
@@ -27,11 +27,10 @@ export default defineNuxtPlugin(() => {
 
   const root = document.documentElement
   if (root) {
-    root.classList.remove('theme-notebook', 'theme-forest')
-    if (validPreset === 'notebook') {
-      root.classList.add('theme-notebook')
-    } else if (validPreset === 'forest') {
-      root.classList.add('theme-forest')
+    root.classList.remove('theme-notebook', 'theme-forest', 'theme-graphite')
+    const cls = THEME_PRESET_CLASSES[validPreset]
+    if (cls) {
+      root.classList.add(cls)
     }
   }
 })

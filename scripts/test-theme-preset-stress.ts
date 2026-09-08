@@ -52,7 +52,7 @@ function suiteHeader(title: string) {
 // Mock & Simulation Fixtures
 // ---------------------------------------------------------------------------
 
-export type ThemePreset = 'default' | 'notebook' | 'forest'
+export type ThemePreset = 'default' | 'graphite' | 'forest' | 'notebook'
 
 export interface ThemePresetOption {
   id: ThemePreset
@@ -74,18 +74,30 @@ export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
   {
     id: 'default',
     label: 'StudyOS Classic',
-    subtitle: 'Academic modern & high density',
-    description: 'Modern academic interface with crisp hairlines, neutral paper tones, and marigold saffron accents.',
+    subtitle: 'Warm creamy paper & saffron',
+    description: 'Original academic interface with warm creamy paper tones, crisp hairlines, and marigold saffron accents.',
     icon: 'i-heroicons-academic-cap',
     swatches: {
-      light: ['#f5f3ec', '#fffefa', '#e7e2d6', '#1c1917', '#cd8a14'],
-      dark: ['#100f0c', '#17150f', '#2c2820', '#f3efe4', '#e5ad31'],
+      light: ['#f5f3ec', '#fffefa', '#e9e5d7', '#1c1917', '#cd8a14'],
+      dark: ['#100f0c', '#17150f', '#0b0a08', '#f3efe4', '#e5ad31'],
+    },
+  },
+  {
+    id: 'graphite',
+    label: 'Calm Paper & Graphite',
+    subtitle: 'Neutral paper & tint-free graphite',
+    description: 'Clean neutral paper, pure graphite dark mode with lifted text contrast, and restrained ochre accents.',
+    badge: 'Calmer',
+    icon: 'i-heroicons-document-text',
+    swatches: {
+      light: ['#f6f5f2', '#ffffff', '#e7e5e0', '#1e2024', '#b9781a'],
+      dark: ['#16171a', '#1d1f23', '#111214', '#ececea', '#d9a441'],
     },
   },
   {
     id: 'forest',
     label: 'Botanical Sage & Forest',
-    subtitle: 'Low eye-strain & high retention',
+    subtitle: 'Matcha green & eucalyptus jade',
     description: 'Calming matcha paper, deep evergreen pine ink, eucalyptus jade accents, and Nordic midnight spruce dark mode.',
     badge: 'Ergonomic',
     icon: 'i-heroicons-sparkles',
@@ -97,7 +109,7 @@ export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
   {
     id: 'notebook',
     label: 'Warm Notebook & Chalkboard',
-    subtitle: 'Tactile vintage classroom & slate',
+    subtitle: 'Vintage ruled paper & chalkboard slate',
     description: 'Vintage ruled paper, dark slate chalkboard, Patrick Hand handwriting accents, and tactile ink borders.',
     badge: 'Signature',
     icon: 'i-heroicons-book-open',
@@ -182,6 +194,7 @@ function createMockEnvironment(options: {
     const preset = mockUseState<ThemePreset>('studyos-theme-preset', () => 'default')
     const hydrated = mockUseState<boolean>('studyos-theme-preset-hydrated', () => false)
 
+    const isGraphite = computed<boolean>(() => preset.value === 'graphite')
     const isNotebook = computed<boolean>(() => preset.value === 'notebook')
     const isForest = computed<boolean>(() => preset.value === 'forest')
 
@@ -194,11 +207,13 @@ function createMockEnvironment(options: {
       const root = mockHtmlElement
       if (!root) return
 
-      root.classList.remove('theme-notebook', 'theme-forest')
+      root.classList.remove('theme-notebook', 'theme-forest', 'theme-graphite')
       if (targetPreset === 'notebook') {
         root.classList.add('theme-notebook')
       } else if (targetPreset === 'forest') {
         root.classList.add('theme-forest')
+      } else if (targetPreset === 'graphite') {
+        root.classList.add('theme-graphite')
       }
     }
 
@@ -215,7 +230,8 @@ function createMockEnvironment(options: {
     }
 
     function togglePreset() {
-      if (preset.value === 'default') setPreset('forest')
+      if (preset.value === 'default') setPreset('graphite')
+      else if (preset.value === 'graphite') setPreset('forest')
       else if (preset.value === 'forest') setPreset('notebook')
       else setPreset('default')
     }
@@ -225,7 +241,7 @@ function createMockEnvironment(options: {
       if (!hydrated.value) {
         try {
           const stored = mockStorage?.getItem(THEME_PRESET_STORAGE_KEY)
-          if (stored === 'notebook' || stored === 'forest' || stored === 'default') {
+          if (stored === 'notebook' || stored === 'forest' || stored === 'graphite' || stored === 'default') {
             preset.value = stored
           }
         } catch {
@@ -239,6 +255,7 @@ function createMockEnvironment(options: {
     return {
       preset,
       hydrated,
+      isGraphite,
       isNotebook,
       isForest,
       currentPresetMeta,
@@ -261,7 +278,7 @@ function createMockEnvironment(options: {
       // Ignore storage errors
     }
 
-    const validPreset: ThemePreset = (stored === 'notebook' || stored === 'forest') ? stored : 'default'
+    const validPreset: ThemePreset = (stored === 'notebook' || stored === 'forest' || stored === 'graphite') ? stored : 'default'
 
     const presetState = mockUseState<ThemePreset>('studyos-theme-preset', () => validPreset)
     presetState.value = validPreset
@@ -271,11 +288,13 @@ function createMockEnvironment(options: {
 
     const root = mockHtmlElement
     if (root) {
-      root.classList.remove('theme-notebook', 'theme-forest')
+      root.classList.remove('theme-notebook', 'theme-forest', 'theme-graphite')
       if (validPreset === 'notebook') {
         root.classList.add('theme-notebook')
       } else if (validPreset === 'forest') {
         root.classList.add('theme-forest')
+      } else if (validPreset === 'graphite') {
+        root.classList.add('theme-graphite')
       }
     }
   }
@@ -324,12 +343,32 @@ async function runAllStressTests() {
     assert.equal(theme.preset.value, 'forest')
     assert.equal(theme.isForest.value, true)
     assert.equal(theme.isNotebook.value, false)
+    assert.equal(theme.isGraphite.value, false)
     assert.equal(theme.currentPresetMeta.value.id, 'forest')
     assert.equal(theme.currentPresetMeta.value.label, 'Botanical Sage & Forest')
     assert.equal(theme.currentPresetMeta.value.badge, 'Ergonomic')
     assert.equal(theme.currentPresetMeta.value.icon, 'i-heroicons-sparkles')
     assert.equal(env.html?.classList.contains('theme-forest'), true)
     assert.equal(env.html?.classList.contains('theme-notebook'), false)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+  })
+
+  await runTest('S1', 'S1.2b: setPreset("graphite") updates reactive state and computed properties', () => {
+    const env = createMockEnvironment()
+    const theme = env.createThemePresetInstance()
+
+    theme.setPreset('graphite')
+    assert.equal(theme.preset.value, 'graphite')
+    assert.equal(theme.isGraphite.value, true)
+    assert.equal(theme.isForest.value, false)
+    assert.equal(theme.isNotebook.value, false)
+    assert.equal(theme.currentPresetMeta.value.id, 'graphite')
+    assert.equal(theme.currentPresetMeta.value.label, 'Calm Paper & Graphite')
+    assert.equal(theme.currentPresetMeta.value.badge, 'Calmer')
+    assert.equal(theme.currentPresetMeta.value.icon, 'i-heroicons-document-text')
+    assert.equal(env.html?.classList.contains('theme-graphite'), true)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
   })
 
   await runTest('S1', 'S1.3: setPreset("notebook") updates reactive state and computed properties', () => {
@@ -340,19 +379,25 @@ async function runAllStressTests() {
     assert.equal(theme.preset.value, 'notebook')
     assert.equal(theme.isNotebook.value, true)
     assert.equal(theme.isForest.value, false)
+    assert.equal(theme.isGraphite.value, false)
     assert.equal(theme.currentPresetMeta.value.id, 'notebook')
     assert.equal(theme.currentPresetMeta.value.label, 'Warm Notebook & Chalkboard')
     assert.equal(theme.currentPresetMeta.value.badge, 'Signature')
     assert.equal(theme.currentPresetMeta.value.icon, 'i-heroicons-book-open')
     assert.equal(env.html?.classList.contains('theme-notebook'), true)
     assert.equal(env.html?.classList.contains('theme-forest'), false)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
   })
 
-  await runTest('S1', 'S1.4: togglePreset() cycles correctly default -> forest -> notebook -> default', () => {
+  await runTest('S1', 'S1.4: togglePreset() cycles correctly default -> graphite -> forest -> notebook -> default', () => {
     const env = createMockEnvironment()
     const theme = env.createThemePresetInstance()
 
     assert.equal(theme.preset.value, 'default')
+    theme.togglePreset()
+    assert.equal(theme.preset.value, 'graphite')
+    assert.equal(theme.isGraphite.value, true)
+
     theme.togglePreset()
     assert.equal(theme.preset.value, 'forest')
     assert.equal(theme.isForest.value, true)
@@ -363,22 +408,25 @@ async function runAllStressTests() {
 
     theme.togglePreset()
     assert.equal(theme.preset.value, 'default')
+    assert.equal(theme.isGraphite.value, false)
     assert.equal(theme.isForest.value, false)
     assert.equal(theme.isNotebook.value, false)
   })
 
-  await runTest('S1', 'S1.5: Rapid 999 toggle stress test maintains exact 3-way parity and computed integrity', () => {
+  await runTest('S1', 'S1.5: Rapid 1000 toggle stress test maintains exact 4-way parity and computed integrity', () => {
     const env = createMockEnvironment()
     const theme = env.createThemePresetInstance()
-    const cycle: ThemePreset[] = ['default', 'forest', 'notebook']
+    const cycle: ThemePreset[] = ['default', 'graphite', 'forest', 'notebook']
 
-    for (let i = 1; i <= 999; i++) {
+    for (let i = 1; i <= 1000; i++) {
       theme.togglePreset()
-      const expected = cycle[i % 3]
+      const expected = cycle[i % 4]
       assert.equal(theme.preset.value, expected)
+      assert.equal(theme.isGraphite.value, expected === 'graphite')
       assert.equal(theme.isForest.value, expected === 'forest')
       assert.equal(theme.isNotebook.value, expected === 'notebook')
       assert.equal(theme.currentPresetMeta.value.id, expected)
+      assert.equal(env.html?.classList.contains('theme-graphite'), expected === 'graphite')
       assert.equal(env.html?.classList.contains('theme-forest'), expected === 'forest')
       assert.equal(env.html?.classList.contains('theme-notebook'), expected === 'notebook')
       assert.equal(env.storage?.getItem(THEME_PRESET_STORAGE_KEY), expected)
@@ -410,6 +458,38 @@ async function runAllStressTests() {
     assert.equal(theme.isNotebook.value, true)
     assert.equal(theme.hydrated.value, true)
     assert.equal(env.html?.classList.contains('theme-notebook'), true)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
+  })
+
+  await runTest('S2', 'S2.1b: Clean mount with "graphite" in localStorage recovers "graphite"', () => {
+    const env = createMockEnvironment({
+      initialStorage: { [THEME_PRESET_STORAGE_KEY]: 'graphite' }
+    })
+    const theme = env.createThemePresetInstance()
+    theme.mountHook()
+
+    assert.equal(theme.preset.value, 'graphite')
+    assert.equal(theme.isGraphite.value, true)
+    assert.equal(theme.hydrated.value, true)
+    assert.equal(env.html?.classList.contains('theme-graphite'), true)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
+  })
+
+  await runTest('S2', 'S2.1c: Clean mount with "forest" in localStorage recovers "forest"', () => {
+    const env = createMockEnvironment({
+      initialStorage: { [THEME_PRESET_STORAGE_KEY]: 'forest' }
+    })
+    const theme = env.createThemePresetInstance()
+    theme.mountHook()
+
+    assert.equal(theme.preset.value, 'forest')
+    assert.equal(theme.isForest.value, true)
+    assert.equal(theme.hydrated.value, true)
+    assert.equal(env.html?.classList.contains('theme-forest'), true)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
   })
 
   await runTest('S2', 'S2.2: Clean mount with "default" in localStorage recovers "default"', () => {
@@ -421,8 +501,12 @@ async function runAllStressTests() {
 
     assert.equal(theme.preset.value, 'default')
     assert.equal(theme.isNotebook.value, false)
+    assert.equal(theme.isGraphite.value, false)
+    assert.equal(theme.isForest.value, false)
     assert.equal(theme.hydrated.value, true)
     assert.equal(env.html?.classList.contains('theme-notebook'), false)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
   })
 
   await runTest('S2', 'S2.3: Clean mount with missing (null) localStorage defaults to "default"', () => {
@@ -432,8 +516,12 @@ async function runAllStressTests() {
 
     assert.equal(theme.preset.value, 'default')
     assert.equal(theme.isNotebook.value, false)
+    assert.equal(theme.isGraphite.value, false)
+    assert.equal(theme.isForest.value, false)
     assert.equal(theme.hydrated.value, true)
     assert.equal(env.html?.classList.contains('theme-notebook'), false)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
   })
 
   await runTest('S2', 'S2.4: Corrupt string values fall back safely to "default"', () => {
@@ -538,6 +626,29 @@ async function runAllStressTests() {
     assert.equal(env.html?.classList.contains('theme-notebook'), false)
   })
 
+  await runTest('S3', 'S3.1b: Setting "graphite" and "forest" presets accurately adds and removes corresponding classes', () => {
+    const env = createMockEnvironment()
+    const theme = env.createThemePresetInstance()
+
+    // Test Graphite
+    theme.setPreset('graphite')
+    assert.equal(env.html?.classList.contains('theme-graphite'), true)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
+
+    // Switch directly to Forest
+    theme.setPreset('forest')
+    assert.equal(env.html?.classList.contains('theme-forest'), true)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
+
+    // Return to Default
+    theme.setPreset('default')
+    assert.equal(env.html?.classList.contains('theme-forest'), false)
+    assert.equal(env.html?.classList.contains('theme-graphite'), false)
+    assert.equal(env.html?.classList.contains('theme-notebook'), false)
+  })
+
   await runTest('S3', 'S3.2: Setting same preset repeatedly is idempotent on DOM classList', () => {
     const env = createMockEnvironment()
     const theme = env.createThemePresetInstance()
@@ -610,6 +721,26 @@ async function runAllStressTests() {
     theme.setPreset('default')
     assert.ok(env.html?.classList.contains('dark'))
     assert.ok(!env.html?.classList.contains('theme-notebook'))
+  })
+
+  await runTest('S4', 'S4.1b: Dark mode class ".dark" coexists seamlessly with ".theme-graphite"', () => {
+    const env = createMockEnvironment({
+      initialHtmlClasses: ['dark']
+    })
+    const theme = env.createThemePresetInstance()
+
+    assert.ok(env.html?.classList.contains('dark'))
+    assert.ok(!env.html?.classList.contains('theme-graphite'))
+
+    // Activate graphite preset while in dark mode
+    theme.setPreset('graphite')
+    assert.ok(env.html?.classList.contains('dark'))
+    assert.ok(env.html?.classList.contains('theme-graphite'))
+
+    // Deactivate graphite preset: dark mode must remain intact
+    theme.setPreset('default')
+    assert.ok(env.html?.classList.contains('dark'))
+    assert.ok(!env.html?.classList.contains('theme-graphite'))
   })
 
   await runTest('S4', 'S4.2: Toggling dark mode while in notebook preset retains ".theme-notebook"', () => {
@@ -757,6 +888,40 @@ async function runAllStressTests() {
     assert.ok(forestDarkBlock.includes('#ECFDF5'), 'Forest Dark --text-1 should be #ECFDF5')
     assert.ok(forestDarkBlock.includes('#34D399'), 'Forest Dark --jade should be #34D399')
     assert.ok(forestDarkBlock.includes('#F59E0B'), 'Forest Dark --accent should be #F59E0B')
+  })
+
+  await runTest('S4', 'S4.5: Verify CSS tokens completeness & exact values for Calm Paper & Graphite (.theme-graphite) in main.css', () => {
+    const cssPath = path.resolve(process.cwd(), 'assets/css/main.css')
+    const cssContent = fs.readFileSync(cssPath, 'utf8')
+
+    // Verify .theme-graphite and .dark.theme-graphite selectors exist
+    assert.ok(cssContent.includes('.theme-graphite {'), 'Missing .theme-graphite selector in main.css')
+    assert.ok(
+      cssContent.includes('.dark.theme-graphite,') && cssContent.includes('.dark .theme-graphite {'),
+      'Missing .dark.theme-graphite selector in main.css'
+    )
+
+    // Extract light block
+    const graphiteLightMatch = cssContent.match(/\.theme-graphite\s*\{([^}]+)\}/)
+    assert.ok(graphiteLightMatch, 'Could not extract .theme-graphite block')
+    const graphiteLightBlock = graphiteLightMatch[1]
+
+    assert.ok(graphiteLightBlock.includes('#f6f5f2'), 'Graphite Light --bg should be #f6f5f2')
+    assert.ok(graphiteLightBlock.includes('#ffffff'), 'Graphite Light --bg-elevated should be #ffffff')
+    assert.ok(graphiteLightBlock.includes('#1e2024'), 'Graphite Light --text-1 should be #1e2024')
+    assert.ok(graphiteLightBlock.includes('#1f7e53'), 'Graphite Light --jade should be #1f7e53')
+    assert.ok(graphiteLightBlock.includes('#b9781a'), 'Graphite Light --accent should be #b9781a')
+
+    // Extract dark block
+    const graphiteDarkMatch = cssContent.match(/\.dark\.theme-graphite[^{]*\{([^}]+)\}/)
+    assert.ok(graphiteDarkMatch, 'Could not extract .dark.theme-graphite block')
+    const graphiteDarkBlock = graphiteDarkMatch[1]
+
+    assert.ok(graphiteDarkBlock.includes('#16171a'), 'Graphite Dark --bg should be #16171a')
+    assert.ok(graphiteDarkBlock.includes('#1d1f23'), 'Graphite Dark --bg-elevated should be #1d1f23')
+    assert.ok(graphiteDarkBlock.includes('#ececea'), 'Graphite Dark --text-1 should be #ececea')
+    assert.ok(graphiteDarkBlock.includes('#4cb884'), 'Graphite Dark --jade should be #4cb884')
+    assert.ok(graphiteDarkBlock.includes('#d9a441'), 'Graphite Dark --accent should be #d9a441')
   })
 
   // -------------------------------------------------------------------------
