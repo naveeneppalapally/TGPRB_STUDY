@@ -207,29 +207,24 @@ watch(() => props.noteId, () => {
 }
 
 .flip-card {
-  perspective: none;
+  perspective: 1200px;
 }
 .flip-card-inner {
-  transform-style: flat;
+  transform-style: preserve-3d;
+}
+.flip-card-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .flip-card-front {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
+  transform: rotateY(0deg) translateZ(1px);
 }
 .flip-card-back {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  transform: rotateY(180deg) translateZ(1px);
 }
-.flip-card-inner.is-flipped .flip-card-front {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-}
-.flip-card-inner.is-flipped .flip-card-back {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
+
+.glide-next-leave-active .flip-card-inner,
+.glide-prev-leave-active .flip-card-inner {
+  transition: none !important;
 }
 </style>
