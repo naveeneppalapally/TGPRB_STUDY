@@ -34,11 +34,11 @@ console.log('Starting Tactile Micro-Animations & Reduced-Motion Invariant Suite.
 console.log('=== SUITE 1: R1 Flashcard 190ms Dual-Grid Stack & Tactile FSRS Rating ===')
 const mainCss = fs.readFileSync(path.join(ROOT, 'assets/css/main.css'), 'utf-8')
 
-// Check 190ms flip curve
+// Check 350ms flip curve
 assert(
-  mainCss.includes('190ms cubic-bezier(0.16, 1, 0.3, 1)') && mainCss.includes('.flip-card-inner'),
+  mainCss.includes('350ms cubic-bezier(0.2, 0.8, 0.2, 1)') && mainCss.includes('.flip-card-inner'),
   'S1.1',
-  'main.css defines .flip-card-inner with 190ms cubic-bezier(0.16, 1, 0.3, 1) transition'
+  'main.css defines .flip-card-inner with 350ms cubic-bezier(0.2, 0.8, 0.2, 1) transition'
 )
 
 // Check CSS Grid dual-face stacking

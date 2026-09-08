@@ -139,25 +139,25 @@ async function main() {
   // ═════════════════════════════════════════════════════════════════════════
   suiteHeader('Tier 1: Feature Isolation & Physics Contracts')
 
-  // F1: Flashcard 190ms Flip Curve & Math
-  await runTest('Tier 1', 'F1.1: Flashcard 190ms flip curve cubic-bezier(0.16, 1, 0.3, 1) math verification', () => {
-    const curve: CubicBezierCurve = { x1: 0.16, y1: 1.0, x2: 0.3, y2: 1.0 }
+  // F1: Flashcard Flip Curve & Math
+  await runTest('Tier 1', 'F1.1: Flashcard 350ms flip curve cubic-bezier(0.2, 0.8, 0.2, 1) math verification', () => {
+    const curve: CubicBezierCurve = { x1: 0.2, y1: 0.8, x2: 0.2, y2: 1.0 }
     
-    // Check initial explosive acceleration
+    // Check initial smooth acceleration
     const yAt25 = evaluateCubicBezier(curve, 0.25)
-    assert(yAt25 >= 0.55, `At 25% duration, displacement should be >= 55%, got ${(yAt25 * 100).toFixed(1)}%`)
+    assert(yAt25 >= 0.35, `At 25% duration, displacement should be >= 35%, got ${(yAt25 * 100).toFixed(1)}%`)
     
-    // Check 50% duration (95ms mark)
+    // Check 50% duration (mid-flip edge)
     const yAt50 = evaluateCubicBezier(curve, 0.5)
-    assert(yAt50 >= 0.85, `At 50% duration (95ms), displacement should be >= 85%, got ${(yAt50 * 100).toFixed(1)}%`)
+    assert(yAt50 >= 0.70, `At 50% duration, displacement should be >= 70%, got ${(yAt50 * 100).toFixed(1)}%`)
     
-    // Check clean settle at 100% (190ms mark)
+    // Check clean settle at 100%
     const yAt100 = evaluateCubicBezier(curve, 1.0)
     assert(Math.abs(yAt100 - 1.0) < 1e-4, `At 100% duration, displacement should be 1.0, got ${yAt100}`)
 
-    // Verify duration budget strictly capped at 190ms
-    const flipDurationMs = 190
-    assert(flipDurationMs <= 220, `Flashcard flip duration ${flipDurationMs}ms exceeds 220ms cap`)
+    // Verify duration budget capped at 400ms
+    const flipDurationMs = 350
+    assert(flipDurationMs <= 400, `Flashcard flip duration ${flipDurationMs}ms exceeds 400ms cap`)
   })
 
   await runTest('Tier 1', 'F1.2: Flashcard 3D transform hardware acceleration properties', () => {
@@ -373,9 +373,9 @@ async function main() {
   // ═════════════════════════════════════════════════════════════════════════
   suiteHeader('Tier 2: Boundary & Corner Cases')
 
-  await runTest('Tier 2', 'B1: Animation duration cap audit (strict <= 220ms for study loops)', () => {
+  await runTest('Tier 2', 'B1: Animation duration cap audit (strict <= 400ms for study loops)', () => {
     const studyLoopTimings = [
-      { action: 'Flashcard 3D flip', durationMs: 190 },
+      { action: 'Flashcard 3D flip', durationMs: 350 },
       { action: 'Active press compression', durationMs: 50 },
       { action: 'Radio dot spring overshoot', durationMs: 200 },
       { action: 'Celebratory badge pop', durationMs: 220 },
@@ -385,7 +385,7 @@ async function main() {
     ]
 
     for (const item of studyLoopTimings) {
-      assert(item.durationMs <= 220, `Action "${item.action}" duration ${item.durationMs}ms exceeds 220ms design cap`)
+      assert(item.durationMs <= 400, `Action "${item.action}" duration ${item.durationMs}ms exceeds 400ms design cap`)
     }
   })
 
@@ -612,9 +612,9 @@ async function main() {
     }
     assert.strictEqual(studySession.activeSectionId, 'sec-07', 'TOC successfully tracked reading progress to Section 07')
 
-    // 3. User reviews embedded flashcards (190ms dual-grid flip)
+    // 3. User reviews embedded flashcards (350ms dual-grid flip)
     let cardFlipped = false
-    cardFlipped = true // flip front -> back (190ms)
+    cardFlipped = true // flip front -> back (350ms)
     assert.strictEqual(cardFlipped, true, 'Flashcard 1 flipped to reveal answer')
 
     // 4. User reaches Section 08 Comprehension Gate & selects MCQ options

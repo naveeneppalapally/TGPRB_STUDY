@@ -211,6 +211,7 @@ watch(() => props.noteId, () => {
 }
 .flip-card-inner {
   transform-style: preserve-3d;
+  transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .flip-card-face {
   -webkit-backface-visibility: hidden;

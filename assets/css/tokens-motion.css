@@ -10,7 +10,7 @@
   --motion-dur-fast:        120ms;  /* Micro-toggles, icon fades, border transitions */
   --motion-dur-glide:       140ms;  /* Snappy list cursor glide & TOC tracking */
   --motion-dur-primary:     160ms;  /* Primary spatial motion, sliding tabs, drawer */
-  --motion-dur-card-flip:   190ms;  /* 3D Flashcard flip rotation */
+  --motion-dur-card-flip:   350ms;  /* 3D Flashcard flip rotation */
   --motion-dur-settle:      100ms;  /* Settle, secondary border & glow */
   --motion-dur-modal:       180ms;  /* Command palette & modal entrance */
   --motion-dur-odometer:    350ms;  /* Tabular digit rolling duration */
