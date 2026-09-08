@@ -32,7 +32,6 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useSupabaseUser } from '#imports'
 
 useHead({ title: 'Confirming sign in - StudyOS' })
 

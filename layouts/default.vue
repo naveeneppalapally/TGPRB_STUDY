@@ -290,7 +290,7 @@ const mobileOpen = ref(false)
 const sidebarOpen = ref(true)
 const paletteOpen = ref(false)
 const dueCount = ref(0)
-const colorMode = useColorMode()
+const colorMode = typeof useColorMode === 'function' ? useColorMode() : { value: 'dark', preference: 'system' }
 const toast = useToast()
 const route = useRoute()
 const router = useRouter()

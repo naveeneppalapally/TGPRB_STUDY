@@ -217,10 +217,10 @@ watch(() => props.noteId, () => {
   backface-visibility: hidden;
 }
 .flip-card-front {
-  transform: rotateY(0deg) translateZ(1px);
+  transform: rotateY(0deg);
 }
 .flip-card-back {
-  transform: rotateY(180deg) translateZ(1px);
+  transform: rotateY(180deg);
 }
 
 .glide-next-leave-active .flip-card-inner,

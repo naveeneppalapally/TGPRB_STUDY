@@ -85,7 +85,7 @@ import { computed } from 'vue'
 import { useStudySession } from '~/composables/useStudySession'
 
 const { chapter, sections, activeIndex, chapterPercent, clozeOn, elapsedSeconds } = useStudySession()
-const colorMode = useColorMode()
+const colorMode = typeof useColorMode === 'function' ? useColorMode() : { value: 'dark', preference: 'system' }
 
 const fullNoteSlugs = new Set([
   'historical-background-1773-1947',

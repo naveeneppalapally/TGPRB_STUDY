@@ -386,7 +386,7 @@ useHead({ title: 'Settings - StudyOS' })
 
 const router = useRouter()
 const toast = useToast()
-const colorMode = useColorMode()
+const colorMode = typeof useColorMode === 'function' ? useColorMode() : { value: 'dark', preference: 'system' }
 const { user, isLoggedIn, userEmail, displayName, loading: authLoading, signOut } = useAuth()
 const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
 const { preset, isGraphite, isNotebook, isForest, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
