@@ -10,13 +10,12 @@
     >
       <!-- Brand row -->
       <div class="flex h-[var(--shell-header-h)] shrink-0 items-center gap-2 border-b b-line px-3">
-        <NuxtLink to="/" class="press flex min-w-0 flex-1 items-center gap-2.5 rounded-lg px-1.5 py-1" @click="mobileOpen = false">
+        <NuxtLink to="/" class="press flex min-w-0 flex-1 items-center gap-2.5 rounded-lg px-2 py-1.5" @click="mobileOpen = false">
           <span class="brand-mark grid h-8 w-8 shrink-0 place-items-center rounded-lg">
             <BeatBookIcon size="sm" class="h-5 w-5 text-amber-500" />
           </span>
-          <span class="rail-hide min-w-0">
-            <span class="block truncate text-[14px] font-semibold tracking-tight t-hi leading-tight">BeatBook</span>
-            <span class="block truncate font-mono text-[10px] uppercase tracking-[0.12em] t-lo leading-tight">Police SI &amp; Constable OS</span>
+          <span class="rail-hide min-w-0 font-display text-[16.5px] font-bold tracking-tight t-hi leading-none">
+            Beat<span class="accent">Book</span>
           </span>
         </NuxtLink>
 
@@ -222,19 +221,14 @@
 
           <WhatsNewSlideover />
 
-          <ClientOnly>
-            <button
-              type="button"
-              class="press shell-focus grid h-10 w-10 place-items-center rounded-lg t-mid hover:t-hi hover:bg-sub"
-              :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
-              @click="toggleTheme"
-            >
-              <UIcon :name="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'" class="h-[18px] w-[18px]" />
-            </button>
-            <template #fallback>
-              <span class="h-10 w-10" />
-            </template>
-          </ClientOnly>
+          <button
+            type="button"
+            class="press shell-focus grid h-10 w-10 place-items-center rounded-lg t-mid hover:t-hi hover:bg-sub"
+            :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+            @click="toggleTheme"
+          >
+            <UIcon :name="colorMode.value === 'dark' ? 'i-heroicons-sun' : 'i-heroicons-moon'" class="h-[18px] w-[18px]" />
+          </button>
         </div>
       </header>
 

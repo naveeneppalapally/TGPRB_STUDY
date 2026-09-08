@@ -48,7 +48,7 @@ const props = withDefaults(
     iconOnly: false,
     contained: false,
     badge: '',
-    subtitle: 'Police SI & Constable OS',
+    subtitle: '',
     ariaLabel: 'BeatBook Home',
   }
 )
