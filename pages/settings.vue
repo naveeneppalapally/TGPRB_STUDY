@@ -196,7 +196,7 @@
           </div>
 
           <ClientOnly>
-            <div class="grid gap-3 sm:grid-cols-3" role="radiogroup" aria-label="Theme presets">
+            <div class="grid gap-3 sm:grid-cols-2" role="radiogroup" aria-label="Theme presets">
               <button
                 v-for="opt in themePresets"
                 :key="opt.id"
@@ -223,7 +223,9 @@
                         class="rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider font-mono"
                         :class="opt.id === 'forest'
                           ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
-                          : 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30'"
+                          : (opt.id === 'graphite'
+                            ? 'bg-stone-500/15 text-stone-700 dark:text-stone-300 border border-stone-500/30'
+                            : 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30')"
                       >
                         {{ opt.badge }}
                       </span>
@@ -277,13 +279,15 @@
                       ? 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30'
                       : (isForest
                         ? 'bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/30'
-                        : 'bg-stone-500/10 text-stone-700 dark:text-stone-300 border b-line')"
+                        : (isGraphite
+                          ? 'bg-stone-500/15 text-stone-700 dark:text-stone-300 border border-stone-500/30'
+                          : 'bg-stone-500/10 text-stone-700 dark:text-stone-300 border b-line'))"
                   >
                     {{ currentPresetMeta.label }}
                   </span>
                 </div>
                 <span class="text-[11px] font-mono t-lo">
-                  {{ colorMode.value === 'dark' ? (isNotebook ? 'Slate Chalkboard' : (isForest ? 'Midnight Spruce' : 'Dark Mode')) : (isNotebook ? 'Ruled Paper' : (isForest ? 'Matcha Cream' : 'Light Mode')) }}
+                  {{ colorMode.value === 'dark' ? (isNotebook ? 'Slate Chalkboard' : (isForest ? 'Midnight Spruce' : (isGraphite ? 'Neutral Graphite' : 'Classic Dark'))) : (isNotebook ? 'Ruled Paper' : (isForest ? 'Matcha Cream' : (isGraphite ? 'Neutral Paper' : 'Warm Cream'))) }}
                 </span>
               </div>
 
@@ -302,7 +306,9 @@
                       ? 'bg-[var(--accent-soft)] text-[var(--accent-strong)] border border-[var(--accent-line)]'
                       : (isForest
                         ? 'bg-[var(--jade-soft)] text-[var(--jade)] border border-[var(--jade-line)]'
-                        : 'bg-saffron-50 text-saffron-700 dark:bg-saffron-950/40 dark:text-saffron-300')"
+                        : (isGraphite
+                          ? 'bg-[var(--accent-soft)] text-[var(--accent-strong)] border border-[var(--accent-line)]'
+                          : 'bg-saffron-50 text-saffron-700 dark:bg-saffron-950/40 dark:text-saffron-300'))"
                   >
                     <UIcon name="i-heroicons-sparkles" class="h-3 w-3" />
                     Geography : Drainage System
@@ -334,7 +340,9 @@
                       ? 'btn-primary bg-[var(--accent)] text-[var(--text-1)]'
                       : (isForest
                         ? 'bg-[var(--jade)] hover:opacity-95 text-white shadow-xs'
-                        : 'bg-saffron-500 hover:bg-saffron-600 text-white shadow-sm')"
+                        : (isGraphite
+                          ? 'bg-[var(--accent)] hover:opacity-95 text-white shadow-xs'
+                          : 'bg-saffron-500 hover:bg-saffron-600 text-white shadow-sm'))"
                   >
                     <UIcon name="i-heroicons-bolt" class="h-3.5 w-3.5" />
                     Pass Gate (3/5)
@@ -381,7 +389,7 @@ const toast = useToast()
 const colorMode = useColorMode()
 const { user, isLoggedIn, userEmail, displayName, loading: authLoading, signOut } = useAuth()
 const { mode: flashcardUnlockMode, setMode: setFlashcardUnlockMode } = useFlashcardUnlock()
-const { preset, isNotebook, isForest, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
+const { preset, isGraphite, isNotebook, isForest, currentPresetMeta, setPreset, presets: themePresets } = useThemePreset()
 
 const colorModeOptions = [
   { label: 'Light', value: 'light', icon: 'i-heroicons-sun' },

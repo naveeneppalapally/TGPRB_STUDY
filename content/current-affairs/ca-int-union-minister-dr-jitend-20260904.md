@@ -38,7 +38,7 @@ mcqs:
       - "Eleven medals"
       - "Five medals"
     answer: 1
-    explanation: "Competing against participants from 39 countries, Team India secured a historic haul of nine medals—comprising 4 Gold, 3 Silver, and 2 Bronze medals."
+    explanation: "Competing against participants from 39 countries, Team India secured a historic haul of nine medals-comprising 4 Gold, 3 Silver, and 2 Bronze medals."
   - exam_fact: "The Earth Science Olympiad all-India test is facilitated by the Geological Society of India (GSI)."
     question: "Which organization facilitates the all-India test for the Earth Science Olympiad selection process?"
     options:
@@ -47,5 +47,5 @@ mcqs:
       - "Council of Scientific and Industrial Research (CSIR)"
       - "Ministry of Earth Sciences (MoES)"
     answer: 0
-    explanation: "The Earth Science Olympiad begins with an all-India test—facilitated by the Geological Society of India (GSI)—which saw approximately 17,800 students appear across 500 centers nationwide."
+    explanation: "The Earth Science Olympiad begins with an all-India test-facilitated by the Geological Society of India (GSI)-which saw approximately 17,800 students appear across 500 centers nationwide."
 ---

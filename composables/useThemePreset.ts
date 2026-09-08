@@ -1,7 +1,7 @@
 import { computed, onMounted } from 'vue'
 import { useState } from '#imports'
 
-export type ThemePreset = 'default' | 'notebook' | 'forest'
+export type ThemePreset = 'default' | 'graphite' | 'forest' | 'notebook'
 
 export interface ThemePresetOption {
   id: ThemePreset
@@ -19,8 +19,9 @@ export interface ThemePresetOption {
 export const THEME_PRESET_STORAGE_KEY = 'studyos-theme-preset'
 export const THEME_PRESET_CLASSES = {
   default: '',
-  notebook: 'theme-notebook',
+  graphite: 'theme-graphite',
   forest: 'theme-forest',
+  notebook: 'theme-notebook',
 } as const
 
 export const THEME_PRESET_CLASS = 'theme-notebook'
@@ -29,18 +30,30 @@ export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
   {
     id: 'default',
     label: 'StudyOS Classic',
-    subtitle: 'Academic modern & high density',
-    description: 'Modern academic interface with crisp hairlines, neutral paper tones, and marigold saffron accents.',
+    subtitle: 'Warm creamy paper & saffron',
+    description: 'Original academic interface with warm creamy paper tones, crisp hairlines, and marigold saffron accents.',
     icon: 'i-heroicons-academic-cap',
     swatches: {
-      light: ['#f5f3ec', '#fffefa', '#e7e2d6', '#1c1917', '#cd8a14'],
-      dark: ['#100f0c', '#17150f', '#2c2820', '#f3efe4', '#e5ad31'],
+      light: ['#f5f3ec', '#fffefa', '#e9e5d7', '#1c1917', '#cd8a14'],
+      dark: ['#100f0c', '#17150f', '#0b0a08', '#f3efe4', '#e5ad31'],
+    },
+  },
+  {
+    id: 'graphite',
+    label: 'Calm Paper & Graphite',
+    subtitle: 'Neutral paper & tint-free graphite',
+    description: 'Clean neutral paper, pure graphite dark mode with lifted text contrast, and restrained ochre accents.',
+    badge: 'Calmer',
+    icon: 'i-heroicons-document-text',
+    swatches: {
+      light: ['#f6f5f2', '#ffffff', '#e7e5e0', '#1e2024', '#b9781a'],
+      dark: ['#16171a', '#1d1f23', '#111214', '#ececea', '#d9a441'],
     },
   },
   {
     id: 'forest',
     label: 'Botanical Sage & Forest',
-    subtitle: 'Low eye-strain & high retention',
+    subtitle: 'Matcha green & eucalyptus jade',
     description: 'Calming matcha paper, deep evergreen pine ink, eucalyptus jade accents, and Nordic midnight spruce dark mode.',
     badge: 'Ergonomic',
     icon: 'i-heroicons-sparkles',
@@ -52,7 +65,7 @@ export const THEME_PRESET_OPTIONS: ThemePresetOption[] = [
   {
     id: 'notebook',
     label: 'Warm Notebook & Chalkboard',
-    subtitle: 'Tactile vintage classroom & slate',
+    subtitle: 'Vintage ruled paper & chalkboard slate',
     description: 'Vintage ruled paper, dark slate chalkboard, Patrick Hand handwriting accents, and tactile ink borders.',
     badge: 'Signature',
     icon: 'i-heroicons-book-open',
@@ -72,6 +85,7 @@ export function useThemePreset() {
   const preset = useState<ThemePreset>('studyos-theme-preset', () => 'default')
   const hydrated = useState<boolean>('studyos-theme-preset-hydrated', () => false)
 
+  const isGraphite = computed<boolean>(() => preset.value === 'graphite')
   const isNotebook = computed<boolean>(() => preset.value === 'notebook')
   const isForest = computed<boolean>(() => preset.value === 'forest')
 
@@ -84,11 +98,10 @@ export function useThemePreset() {
     const root = document.documentElement
     if (!root) return
 
-    root.classList.remove('theme-notebook', 'theme-forest')
-    if (targetPreset === 'notebook') {
-      root.classList.add('theme-notebook')
-    } else if (targetPreset === 'forest') {
-      root.classList.add('theme-forest')
+    root.classList.remove('theme-notebook', 'theme-forest', 'theme-graphite')
+    const cls = THEME_PRESET_CLASSES[targetPreset]
+    if (cls) {
+      root.classList.add(cls)
     }
   }
 
@@ -105,7 +118,8 @@ export function useThemePreset() {
   }
 
   function togglePreset() {
-    if (preset.value === 'default') setPreset('forest')
+    if (preset.value === 'default') setPreset('graphite')
+    else if (preset.value === 'graphite') setPreset('forest')
     else if (preset.value === 'forest') setPreset('notebook')
     else setPreset('default')
   }
@@ -115,7 +129,7 @@ export function useThemePreset() {
     if (!hydrated.value) {
       try {
         const stored = localStorage.getItem(THEME_PRESET_STORAGE_KEY)
-        if (stored === 'notebook' || stored === 'forest' || stored === 'default') {
+        if (stored === 'notebook' || stored === 'forest' || stored === 'graphite' || stored === 'default') {
           preset.value = stored
         }
       } catch {
@@ -129,6 +143,7 @@ export function useThemePreset() {
   return {
     preset,
     hydrated,
+    isGraphite,
     isNotebook,
     isForest,
     currentPresetMeta,

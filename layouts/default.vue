@@ -25,7 +25,7 @@
           :title="sidebarOpen ? 'Collapse sidebar (Ctrl+[)' : 'Expand sidebar (Ctrl+[)'"
           @click="toggleSidebar"
         >
-          <UIcon name="i-heroicons-chevron-double-left" class="h-4 w-4" />
+          <SidebarToggleIcon size="sm" />
         </button>
 
         <button
@@ -184,7 +184,7 @@
               aria-label="Expand sidebar"
               @click="toggleSidebar"
             >
-              <UIcon name="i-heroicons-chevron-double-right" class="h-4 w-4" />
+              <SidebarToggleIcon size="sm" />
             </button>
           </UTooltip>
         </div>
@@ -285,6 +285,7 @@
 </template>
 
 <script setup lang="ts">
+import SidebarToggleIcon from '@/components/icons/SidebarToggleIcon.vue'
 const mobileOpen = ref(false)
 const sidebarOpen = ref(true)
 const paletteOpen = ref(false)
@@ -442,7 +443,7 @@ const paletteGroups = computed(() => [
       {
         id: 'sidebar',
         label: sidebarOpen.value ? 'Collapse sidebar' : 'Expand sidebar',
-        icon: 'i-heroicons-chevron-double-left',
+        icon: sidebarOpen.value ? 'i-heroicons-bars-3-bottom-left' : 'i-heroicons-bars-3',
         action: toggleSidebar,
       },
     ],
