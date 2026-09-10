@@ -8,7 +8,7 @@ related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-GENERAL", "NOTE-SCI-INNOVA
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"
-headline: "AI Keeps an Eye on the ‘Cattle of the Hills’ — and It Could Change How Farmers Watch Their Herds"
+headline: "AI Keeps an Eye on the ‘Cattle of the Hills’ - and It Could Change How Farmers Watch Their Herds"
 exam_fact: "Researchers at the ICAR-National Research Centre on Mithun (ICAR-NRC on Mithun) in Nagaland developed an artificial intelligence-based system for real-time detection and tracking of Mithun behaviour."
 summary: "Researchers at the ICAR-National Research Centre on Mithun (ICAR-NRC on Mithun) in Nagaland, in collaboration with NIT Nagaland, Nagaland University, and CHRIST University, have developed an AI-based system using YOLOv8n and DeepSORT models for real-time detection and tracking of Mithun behaviour. The animal, known as the 'Cattle of the Hills', holds significant importance for tribal communities across Northeast India."
 event_date: "2026-09-08"
