@@ -148,12 +148,12 @@ function selectNode(node: HierarchyNode) {
 </script>
 
 <template>
-  <section class="rounded-2xl border border-white/10 bg-[#0c0d0e] p-4 text-stone-100 shadow-2xl shadow-black/20 sm:p-6">
+  <section class="rounded-2xl border border-white/10 bg-[var(--ink-card)] p-4 text-[var(--ink-card-text)] shadow-2xl shadow-black/20 sm:p-6">
     <header class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400">Hierarchical anchor</p>
-        <h2 class="mt-1 text-xl font-bold tracking-tight text-white">Constitutional hierarchy</h2>
-        <p class="mt-1 max-w-2xl text-sm leading-6 text-stone-400">Choose a node for Articles, appointment, oath, tenure and removal details.</p>
+        <h2 class="mt-1 text-xl font-bold tracking-tight text-[var(--ink-card-text)]">Constitutional hierarchy</h2>
+        <p class="mt-1 max-w-2xl text-sm leading-6 text-[var(--ink-card-muted)]">Choose a node for Articles, appointment, oath, tenure and removal details.</p>
       </div>
       <div class="flex gap-2" role="tablist" aria-label="Choose constitutional system">
         <UButton
@@ -169,12 +169,12 @@ function selectNode(node: HierarchyNode) {
       </div>
     </header>
 
-    <p class="mt-5 rounded-lg border border-white/10 bg-white/[0.025] px-3 py-2 text-xs leading-5 text-stone-400">{{ activeSystem.description }}</p>
+    <p class="mt-5 rounded-lg border border-white/10 bg-white/[0.025] px-3 py-2 text-xs leading-5 text-[var(--ink-card-muted)]">{{ activeSystem.description }}</p>
 
     <div class="mt-5 grid gap-5 xl:grid-cols-[minmax(0,1.25fr)_minmax(300px,0.75fr)]">
-      <div class="rounded-xl border border-white/10 bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-3">
+      <div class="rounded-xl border border-white/10 bg-gradient-to-br from-[var(--ink-card)] via-[var(--ink-card)] to-[var(--ink-card)] p-3">
         <!-- Mobile scroll hint (DEF-POL-01) -->
-        <div class="flex items-center gap-1.5 pb-2 text-[11px] text-stone-400 sm:hidden">
+        <div class="flex items-center gap-1.5 pb-2 text-[11px] text-[var(--ink-card-muted)] sm:hidden">
           <UIcon name="i-heroicons-arrows-right-left" class="h-3.5 w-3.5 text-amber-400 shrink-0" />
           <span>Scroll horizontally to explore full chart</span>
         </div>
@@ -209,7 +209,7 @@ function selectNode(node: HierarchyNode) {
               @keydown.space.prevent="selectNode(node)"
             />
             <text :x="node.x + node.width / 2" :y="node.y + 28" text-anchor="middle" class="pointer-events-none fill-white text-[15px] font-bold">{{ node.label }}</text>
-            <text :x="node.x + node.width / 2" :y="node.y + 48" text-anchor="middle" :class="selectedNodeId === node.id ? 'fill-stone-900' : 'fill-stone-400'" class="pointer-events-none text-[11px]">{{ node.subtitle }}</text>
+            <text :x="node.x + node.width / 2" :y="node.y + 48" text-anchor="middle" :class="selectedNodeId === node.id ? 'fill-stone-900' : 'fill-[var(--ink-card-muted)]'" class="pointer-events-none text-[11px]">{{ node.subtitle }}</text>
           </g>
         </svg>
       </div>
@@ -217,26 +217,26 @@ function selectNode(node: HierarchyNode) {
 
       <aside v-if="selectedNode" class="rounded-xl border border-amber-500/30 bg-amber-500/[0.05] p-4 sm:p-5" aria-live="polite">
         <p class="text-xs font-semibold uppercase tracking-[0.16em] text-amber-400">Selected constitutional office</p>
-        <h3 class="mt-1 text-xl font-bold text-white">{{ selectedNode.label }}</h3>
+        <h3 class="mt-1 text-xl font-bold text-[var(--ink-card-text)]">{{ selectedNode.label }}</h3>
         <div class="mt-4 flex flex-wrap gap-2" aria-label="Related constitutional Articles">
           <UBadge v-for="article in selectedNode.articles" :key="article" color="amber" variant="subtle">{{ article }}</UBadge>
         </div>
         <dl class="mt-5 space-y-4 text-sm leading-6">
           <div>
-            <dt class="font-semibold text-stone-200">Appointment authority</dt>
-            <dd class="mt-1 text-stone-400">{{ selectedNode.appointment }}</dd>
+            <dt class="font-semibold text-[var(--ink-card-text)]">Appointment authority</dt>
+            <dd class="mt-1 text-[var(--ink-card-muted)]">{{ selectedNode.appointment }}</dd>
           </div>
           <div>
-            <dt class="font-semibold text-stone-200">Oath administrator</dt>
-            <dd class="mt-1 text-stone-400">{{ selectedNode.oath }}</dd>
+            <dt class="font-semibold text-[var(--ink-card-text)]">Oath administrator</dt>
+            <dd class="mt-1 text-[var(--ink-card-muted)]">{{ selectedNode.oath }}</dd>
           </div>
           <div>
-            <dt class="font-semibold text-stone-200">Term</dt>
-            <dd class="mt-1 text-stone-400">{{ selectedNode.tenure }}</dd>
+            <dt class="font-semibold text-[var(--ink-card-text)]">Term</dt>
+            <dd class="mt-1 text-[var(--ink-card-muted)]">{{ selectedNode.tenure }}</dd>
           </div>
           <div>
-            <dt class="font-semibold text-stone-200">Removal procedure</dt>
-            <dd class="mt-1 text-stone-400">{{ selectedNode.removal }}</dd>
+            <dt class="font-semibold text-[var(--ink-card-text)]">Removal procedure</dt>
+            <dd class="mt-1 text-[var(--ink-card-muted)]">{{ selectedNode.removal }}</dd>
           </div>
         </dl>
       </aside>

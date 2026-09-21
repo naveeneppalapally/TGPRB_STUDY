@@ -45,6 +45,7 @@
   --ink-card:      #17140f;
   --ink-card-line: rgba(245, 240, 230, 0.10);
   --ink-card-text: #e9e2d2;
+  --ink-card-muted: rgba(233, 226, 210, 0.62);
   --radius: 10px;
 }
 
@@ -75,6 +76,7 @@
   --ink-card:      #17140f;
   --ink-card-line: rgba(245, 240, 230, 0.10);
   --ink-card-text: #e9e2d2;
+  --ink-card-muted: rgba(233, 226, 210, 0.62);
 }
 
 /* ── 1b. Theme Presets: Warm Notebook & Chalkboard ───────────────────────── */
@@ -1035,7 +1037,7 @@ body {
 
 /* ── 8. Flip card (flashcards) ───────────────────────────────────────────────
    True 3D flip with CSS Grid dual-face stacking (smooth tactile flip motion).
-   190ms cubic-bezier(0.16, 1, 0.3, 1) active contact profile; 400ms rotation.
+   190ms cubic-bezier(0.16, 1, 0.3, 1) active contact profile and rotation.
    Dual-face stacking dynamically auto-dimensions to max(front, back) to
    eliminate container height collapse and zero layout shift.                */
 .flip-card {
@@ -1058,7 +1060,7 @@ body {
   grid-template-rows: 1fr;
   width: 100%;
   transform-style: preserve-3d;
-  transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
   will-change: transform;
 }
 .flip-card-inner.is-flipped {
@@ -1075,11 +1077,11 @@ body {
 }
 .flip-card-front,
 .flip-card-face.flip-card-front {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg) translateZ(1px);
 }
 .flip-card-back,
 .flip-card-face.flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
 }
 .flip-card-inner:not(.is-flipped) .flip-card-back {
   pointer-events: none;

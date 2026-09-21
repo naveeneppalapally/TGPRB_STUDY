@@ -719,9 +719,9 @@
           </div>
 
           <!-- ── Interactive Filter Controls ──────────────────────────────── -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-sub p-4 space-y-4 shadow-sm">
+          <div class="mb-6 rounded-xl border b-line bg-sub p-4 space-y-4 shadow-sm">
             <!-- Row 1: Exam Type Tabs -->
-            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-gray-200 dark:border-gray-800 pb-3">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b b-line pb-3">
               <span class="font-mono text-body-xs font-semibold uppercase tracking-wider t-lo flex items-center gap-1.5">
                 <UIcon name="i-heroicons-academic-cap" class="h-4 w-4 accent" />
                 Exam Type:
@@ -781,7 +781,7 @@
             </div>
 
             <!-- Active Filter Reset Bar -->
-            <div v-if="activeExamFilter !== 'all' || activeYearFilter !== 'all' || activeRiverFilter !== 'all'" class="pt-2 flex items-center justify-between text-[11px] t-lo border-t border-gray-200 dark:border-gray-800">
+            <div v-if="activeExamFilter !== 'all' || activeYearFilter !== 'all' || activeRiverFilter !== 'all'" class="pt-2 flex items-center justify-between text-[11px] t-lo border-t b-line">
               <span>Showing {{ filteredPyqs.length }} of {{ pyqs.length }} total questions</span>
               <button type="button" class="text-amber-600 dark:text-amber-400 hover:underline font-mono" @click="resetPYQFilters()">
                 Reset all filters ×
@@ -801,7 +801,7 @@
 
           <!-- PYQ Cards List -->
           <div v-else class="space-y-4">
-            <article v-for="(q, qi) in filteredPyqs" :key="q.uid || qi" class="panel panel-pad transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-700">
+            <article v-for="(q, qi) in filteredPyqs" :key="q.uid || qi" class="panel panel-pad panel-hover transition-all duration-200">
               <div class="mb-3 flex flex-wrap items-center gap-2">
                 <span class="chip chip-saffron chip-mono">Q{{ qi + 1 }}</span>
                 <span class="chip chip-mono">{{ q.exam }} {{ q.year }}</span>
@@ -894,7 +894,7 @@
             <article
               v-for="(q, qi) in advancedPractice"
               :key="q.uid"
-              class="panel panel-pad transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-700"
+              class="panel panel-pad panel-hover transition-all duration-200"
             >
               <!-- Card header -->
               <div class="mb-3 flex flex-wrap items-center gap-2">

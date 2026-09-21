@@ -31,9 +31,9 @@ export default defineAppConfig({
 
     card: {
       base: 'overflow-hidden',
-      background: 'bg-white dark:bg-ink-900',
-      divide: 'divide-y divide-stone-200 dark:divide-stone-800',
-      ring: 'ring-1 ring-stone-900/[0.07] dark:ring-white/[0.07]',
+      background: 'bg-[var(--bg-elevated)]',
+      divide: 'divide-y divide-[var(--line)]',
+      ring: 'ring-1 ring-[var(--line)]',
       rounded: 'rounded-xl',
       shadow: 'shadow-none',
       header: {
@@ -110,8 +110,8 @@ export default defineAppConfig({
 
     modal: {
       width: 'w-full sm:max-w-xl',
-      background: 'bg-white dark:bg-ink-900',
-      ring: 'ring-1 ring-stone-900/10 dark:ring-white/10',
+      background: 'bg-[var(--bg-elevated)]',
+      ring: 'ring-1 ring-[var(--line-strong)]',
       rounded: 'rounded-2xl',
       shadow: 'shadow-pop',
       overlay: {

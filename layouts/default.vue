@@ -134,7 +134,7 @@
             <p class="truncate text-[11px] t-lo leading-tight">Synced</p>
           </div>
           <UDropdown :items="userMenuItems" :popper="{ placement: 'top-end' }" class="rail-hide">
-            <button type="button" class="press shell-focus grid h-8 w-8 place-items-center rounded-lg t-lo hover:t-hi hover:bg-sub" aria-label="Account menu">
+            <button type="button" class="press shell-focus grid h-11 w-11 place-items-center rounded-lg t-lo hover:t-hi hover:bg-sub" aria-label="Account menu">
               <UIcon name="i-heroicons-ellipsis-horizontal" class="h-4 w-4" />
             </button>
           </UDropdown>

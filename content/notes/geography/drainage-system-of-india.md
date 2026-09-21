@@ -147,43 +147,11 @@ Indian rivers are classified into two major groups based on their origin:
 
 ## Part 3: Visual Map
 
-### Mermaid Mind Map
+### Static System Map
 
-```mermaid
-mindmap
-  root((Indian Drainage))
-    Himalayan Rivers
-      Indus System
-        Jhelum / Vitasta
-        Chenab / Asikni
-        Ravi / Iravati
-        Beas / Vipasha
-        Sutlej / Shatudri
-      Ganga System
-        Yamuna
-        Kosi
-        Son
-        Ghaghara
-        Gandak
-      Brahmaputra System
-        Tsangpo in Tibet
-        Teesta
-        Subansiri
-    Peninsular Rivers
-      East Flowing → Bay of Bengal
-        Godavari 1465km
-        Krishna 1400km
-        Cauvery 800km
-        Mahanadi 858km
-      West Flowing → Arabian Sea
-        Narmada 1312km
-        Tapi 724km
-        Sabarmati 371km
-        Luni → Rann of Kutch
-      No Delta
-        Narmada → estuary
-        Tapi → estuary
-```
+![Plan of River Systems of India - System Overview Diagram](https://res.cloudinary.com/gbxjgmck/image/upload/v1786136896/geography/india_rivers_wiki.webp)
+
+Source: Wikimedia Commons, public domain. Use the labeled map and text hierarchy below for exam recall.
 
 ### Text Hierarchy
 

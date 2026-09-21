@@ -1,4 +1,62 @@
 <template>
+  <ClientOnly>
+    <!-- Mobile / tablet section navigation. Fixed so the aside's grid position does not matter. -->
+    <div class="xl:hidden">
+    <button
+      type="button"
+      class="fixed bottom-20 right-4 z-40 inline-flex h-11 items-center gap-2 rounded-full border b-line bg-elev px-4 text-[12px] font-semibold t-hi shadow-pop press"
+      :aria-expanded="mobileOpen"
+      aria-controls="mobile-toc-panel"
+      @click="mobileOpen = true"
+    >
+      <UIcon name="i-heroicons-bars-3-bottom-left" class="h-4 w-4 accent" />
+      Sections
+    </button>
+
+    <Teleport to="body">
+      <div
+        v-if="mobileOpen"
+        class="fixed inset-0 z-50 xl:hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-label="On this page"
+      >
+        <button
+          type="button"
+          class="absolute inset-0 bg-ink-950/60"
+          aria-label="Close section navigation"
+          @click="closeMobile"
+        />
+        <div id="mobile-toc-panel" class="absolute inset-x-0 bottom-0 max-h-[72vh] overflow-y-auto rounded-t-2xl border-t b-line bg-elev p-4 shadow-pop">
+          <div class="mb-3 flex items-center justify-between gap-3">
+            <p class="eyebrow">On this page</p>
+            <button type="button" class="chip press" @click="closeMobile">Close</button>
+          </div>
+          <nav class="space-y-1">
+            <button
+              v-for="(section, i) in sections"
+              :key="section.id"
+              type="button"
+              class="flex min-h-[44px] w-full items-center gap-3 rounded-lg px-3 text-left text-body-sm transition-colors"
+              :class="activeId === section.id ? 'bg-accent-soft t-hi font-semibold' : 't-mid hover:bg-sub hover:t-hi'"
+              @click="goToSection(section.id)"
+            >
+              <span class="font-mono text-[11px]" :class="activeId === section.id ? 'accent' : 't-lo'">
+                {{ String(i + 1).padStart(2, '0') }}
+              </span>
+              <span class="truncate">{{ section.label }}</span>
+            </button>
+          </nav>
+          <div v-if="weightText" class="mt-4 border-t b-line pt-3">
+            <p class="eyebrow mb-1.5">Weight in paper</p>
+            <p class="text-body-xs leading-relaxed t-lo">{{ weightText }}</p>
+          </div>
+        </div>
+      </div>
+    </Teleport>
+    </div>
+  </ClientOnly>
+
   <aside class="hidden w-52 shrink-0 xl:block">
     <div class="sticky top-20">
       <p class="eyebrow mb-3">On this page</p>
@@ -76,6 +134,7 @@ const itemRefs = new Map<string, HTMLElement>()
 const pillTop = ref(0)
 const pillHeight = ref(28)
 const hasPill = ref(false)
+const mobileOpen = ref(false)
 
 function setItemRef(id: string, el: any) {
   if (el) {
@@ -125,6 +184,10 @@ let observer: IntersectionObserver | null = null
 let sentinelObserver: IntersectionObserver | null = null
 let resizeObserver: ResizeObserver | null = null
 
+function closeMobile() {
+  mobileOpen.value = false
+}
+
 function scrollTo(id: string) {
   const el = document.getElementById(id)
   if (el) {
@@ -132,6 +195,16 @@ function scrollTo(id: string) {
     el.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 }
+
+function goToSection(id: string) {
+  closeMobile()
+  scrollTo(id)
+}
+
+watch(mobileOpen, (open) => {
+  if (!import.meta.client) return
+  document.body.style.overflow = open ? 'hidden' : ''
+})
 
 defineExpose({ scrollTo })
 
@@ -201,6 +274,9 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('resize', updatePill)
+  if (import.meta.client) {
+    document.body.style.overflow = ''
+  }
   if (resizeObserver) {
     resizeObserver.disconnect()
     resizeObserver = null

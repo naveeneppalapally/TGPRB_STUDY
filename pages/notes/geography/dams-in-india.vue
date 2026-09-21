@@ -92,7 +92,7 @@
           </p>
 
           <!-- Primary National Spatial Anchor: Major Rivers and Dams of India Map -->
-          <div class="mb-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm">
+          <div class="mb-8 rounded-xl border b-line bg-elev p-4 shadow-sm">
             <div class="mb-3 flex items-center justify-between border-b b-line pb-2.5">
               <div>
                 <p class="font-display text-[15px] font-bold t-hi">Master River Basin &amp; Dam Locator Map of India</p>
@@ -106,7 +106,7 @@
               class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
               loading="eager"
             />
-            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 dark:border-gray-800 pt-3 text-body-xs text-gray-500 dark:text-gray-400 font-mono">
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t b-line pt-3 text-body-xs t-lo font-mono">
               <span>Source: Survey of India &amp; Central Water Commission Basin Architecture</span>
               <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Essential Spatial Reference for TGPRB River Valley Questions</span>
             </div>

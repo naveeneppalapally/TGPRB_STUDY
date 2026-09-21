@@ -208,7 +208,6 @@
 </template>
 
 <script setup lang="ts">
-import { queryCollection } from '#imports'
 import { useCACategories } from '@/composables/useCACategories'
 
 useHead({
@@ -227,13 +226,11 @@ function scrollToResults() {
   })
 }
 
-// Fetch all current affairs - select only frontmatter fields needed for display
-const { data: allEntries, pending } = await useAsyncData(
-  'current-affairs-page',
-  () => queryCollection('current_affair').select(
-    'id', 'meta'
-  ).all(),
-)
+// Fetch all current affairs from the Nitro feed (keeps sqlite wasm off the client)
+const { data: allEntries, pending } = await useFetch('/api/ca/feed', {
+  key: 'current-affairs-page',
+  transform: (res: any) => res?.items ?? [],
+})
 
 // Filters state
 const activeCategory   = ref('ALL')

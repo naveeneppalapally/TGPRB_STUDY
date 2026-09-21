@@ -1,7 +1,7 @@
 <template>
   <div class="w-full max-w-xl mx-auto">
     <!-- Directional Card Glide Transition (Decoupled Card Advance & Answer Leak Elimination) -->
-    <Transition name="card-glide" mode="out-in">
+    <Transition name="card-glide" mode="out-in" @after-leave="handleAfterLeave">
       <div :key="card.id" class="w-full">
         <!-- Card container with 3D Flip and CSS Grid dual-face stacking -->
         <button
@@ -64,7 +64,7 @@
     <!-- Zero-Layout-Shift Pre-Reserved Rating Dock (CLS = 0.000) -->
     <div
       class="mt-4 grid transition-[grid-template-rows,opacity] duration-160 ease-[cubic-bezier(0.16,1,0.3,1)]"
-      :class="flipped ? 'grid-rows-[1fr] opacity-100 pointer-events-auto' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
+      :class="flipped && !isTransitioning ? 'grid-rows-[1fr] opacity-100 pointer-events-auto' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
     >
       <div class="min-h-0 overflow-hidden">
         <div class="min-h-[84px] pt-1">
@@ -80,7 +80,8 @@
             <button
               type="button"
               class="btn-again focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
-              :tabindex="flipped ? 0 : -1"
+              :tabindex="flipped && !isTransitioning ? 0 : -1"
+              :disabled="isTransitioning"
               @click.stop="submitRating(1)"
             >
               Again <span class="ms-1 font-mono text-[10px] opacity-70">(1)</span>
@@ -88,7 +89,8 @@
             <button
               type="button"
               class="btn-hard focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
-              :tabindex="flipped ? 0 : -1"
+              :tabindex="flipped && !isTransitioning ? 0 : -1"
+              :disabled="isTransitioning"
               @click.stop="submitRating(2)"
             >
               Hard <span class="ms-1 font-mono text-[10px] opacity-70">(2)</span>
@@ -96,7 +98,8 @@
             <button
               type="button"
               class="btn-good focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--jade)]"
-              :tabindex="flipped ? 0 : -1"
+              :tabindex="flipped && !isTransitioning ? 0 : -1"
+              :disabled="isTransitioning"
               @click.stop="submitRating(3)"
             >
               Good <span class="ms-1 font-mono text-[10px] opacity-70">(3)</span>
@@ -104,7 +107,8 @@
             <button
               type="button"
               class="btn-easy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--sky)]"
-              :tabindex="flipped ? 0 : -1"
+              :tabindex="flipped && !isTransitioning ? 0 : -1"
+              :disabled="isTransitioning"
               @click.stop="submitRating(4)"
             >
               Easy <span class="ms-1 font-mono text-[10px] opacity-70">(4)</span>
@@ -147,13 +151,21 @@ const emit = defineEmits<{
 }>()
 
 const flipped = ref(false)
+const isTransitioning = ref(false)
 
 function toggleFlip() {
+  if (isTransitioning.value) return
   flipped.value = !flipped.value
 }
 
-function submitRating(rating: number) {
+function handleAfterLeave() {
   flipped.value = false
+  isTransitioning.value = false
+}
+
+function submitRating(rating: number) {
+  if (isTransitioning.value) return
+  isTransitioning.value = true
   emit('rated', rating)
 }
 
@@ -164,9 +176,18 @@ const ratingLabels = {
   easy: 'Easy',
 }
 
+function isTextTarget(target: EventTarget | null): boolean {
+  return target instanceof HTMLElement && !!target.closest('input, textarea, select, [contenteditable="true"]')
+}
+
+function isNativeActivationTarget(target: EventTarget | null): boolean {
+  return target instanceof HTMLElement && !!target.closest('button, a')
+}
+
 function handleKeyDown(e: KeyboardEvent) {
-  if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return
+  if (isTextTarget(e.target) || isTransitioning.value) return
   if (e.key === ' ' || e.key === 'Enter') {
+    if (isNativeActivationTarget(e.target)) return
     e.preventDefault()
     toggleFlip()
   } else if (flipped.value) {
@@ -187,7 +208,9 @@ onUnmounted(() => {
 
 // Reset flip state when card changes
 watch(() => props.card.id, () => {
-  flipped.value = false
+  if (!isTransitioning.value) {
+    flipped.value = false
+  }
 })
 </script>
 
@@ -213,17 +236,17 @@ watch(() => props.card.id, () => {
 }
 .flip-card-inner {
   transform-style: preserve-3d;
-  transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .flip-card-face {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .flip-card-front {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg) translateZ(1px);
 }
 .flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
 }
 
 .card-glide-leave-active .flip-card-inner {

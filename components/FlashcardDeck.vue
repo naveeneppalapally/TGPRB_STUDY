@@ -43,7 +43,7 @@
       <div class="min-h-0 overflow-hidden">
         <div class="p-5 sm:p-6">
           <!-- Directional Card Glide Container -->
-          <Transition :name="glideDirection" mode="out-in">
+          <Transition :name="glideDirection" mode="out-in" @after-leave="flipped = false">
             <div :key="currentIndex" class="w-full">
               <button
                 type="button"
@@ -152,7 +152,6 @@ function toggleCollapse() {
 function navigateCard(newIndex: number, direction: 'next' | 'prev') {
   if (newIndex < 0 || newIndex >= cards.value.length) return
   glideDirection.value = direction === 'next' ? 'glide-next' : 'glide-prev'
-  flipped.value = false
   currentIndex.value = newIndex
 }
 
@@ -211,17 +210,17 @@ watch(() => props.noteId, () => {
 }
 .flip-card-inner {
   transform-style: preserve-3d;
-  transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .flip-card-face {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .flip-card-front {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg) translateZ(1px);
 }
 .flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
 }
 
 .glide-next-leave-active .flip-card-inner,

@@ -88,7 +88,6 @@ export default defineNuxtConfig({
     // Here we make sure iconify JSON is inlined regardless of preset.
     externals: {
       inline: [/@iconify-json/],
-      external: ['mermaid'],
     },
 
     // Pre-render active notes and subject hubs statically.
@@ -191,6 +190,13 @@ export default defineNuxtConfig({
     },
     build: {
       manifest: 'manifest.json',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            supabase: ['@supabase/supabase-js'],
+          },
+        },
+      },
     },
   },
 

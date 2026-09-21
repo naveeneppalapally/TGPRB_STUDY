@@ -149,11 +149,12 @@ const loadingFull = ref(false)
 const cutoff = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
   .toISOString().split('T')[0]
 
-// Lightweight query: only fetch dates for badge count (runs during SSR - fast)
-const { data: dateSummary } = await useAsyncData('whats-new-dates', () =>
-  queryCollection('current_affair').select('id', 'meta').all(),
-  { server: true, lazy: false }
-)
+// Lightweight query: only fetch recent dates for badge count (served by Nitro)
+const { data: dateSummary } = await useFetch('/api/ca/recent', {
+  key: 'whats-new-dates',
+  query: { days: 7 },
+  transform: (res: any) => res?.items ?? [],
+})
 
 const recentDates = computed(() =>
   (dateSummary.value ?? []).filter((e: any) => (e.meta?.date ?? '') >= cutoff)

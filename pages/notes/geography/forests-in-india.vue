@@ -92,7 +92,7 @@
           </p>
 
           <!-- 1. Primary National Spatial Anchor Map: Natural Vegetation & Forest Types of India -->
-          <div class="mb-8 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm">
+          <div class="mb-8 rounded-xl border b-line bg-elev p-4 shadow-sm">
             <div class="mb-3 flex items-center justify-between border-b b-line pb-2.5">
               <div>
                 <p class="font-display text-[15px] font-bold t-hi">Master Natural Vegetation &amp; Forest Zones Map of India</p>
@@ -106,7 +106,7 @@
               class="mx-auto block w-full h-auto max-h-[700px] object-contain rounded-lg bg-inset"
               loading="eager"
             />
-            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 dark:border-gray-800 pt-3 text-body-xs text-gray-500 dark:text-gray-400 font-mono">
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t b-line pt-3 text-body-xs t-lo font-mono">
               <span>Source: Survey of India &amp; National Atlas and Thematic Mapping Organisation (NATMO)</span>
               <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Essential Spatial Anchor for TGPRB Vegetation Questions</span>
             </div>
@@ -115,7 +115,7 @@
           <!-- 2. Dual Spatial Diagrams: Biosphere Reserves of India & Nilgiri Tripartite Junction -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
             <!-- Biosphere Reserves Locator Map -->
-            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm flex flex-col justify-between">
+            <div class="rounded-xl border b-line bg-elev p-4 shadow-sm flex flex-col justify-between">
               <div>
                 <div class="mb-3 flex items-center justify-between border-b b-line pb-2">
                   <h4 class="font-display text-[14px] font-bold t-hi">18 Biosphere Reserves of India (UNESCO MAB Network)</h4>
@@ -134,7 +134,7 @@
             </div>
 
             <!-- Nilgiri Tripartite Cluster Map -->
-            <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 shadow-sm flex flex-col justify-between">
+            <div class="rounded-xl border b-line bg-elev p-4 shadow-sm flex flex-col justify-between">
               <div>
                 <div class="mb-3 flex items-center justify-between border-b b-line pb-2">
                   <h4 class="font-display text-[14px] font-bold t-hi">Nilgiri Biosphere Complex (TN - Kerala - Karnataka Tri-Junction)</h4>

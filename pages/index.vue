@@ -105,6 +105,7 @@
               :type="topic.isLive ? undefined : 'button'"
               class="row-item press w-full text-left"
               :class="topic.isLive ? 'hover:bg-sub' : 'cursor-pointer opacity-75 hover:bg-sub'"
+              :aria-disabled="!topic.isLive"
               @click="!topic.isLive ? onQueuedTopic(topic) : undefined"
             >
               <span class="rank num">{{ String(topic.rank).padStart(2, '0') }}</span>
@@ -112,7 +113,7 @@
                 <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
                   <p class="text-[14px] font-medium leading-snug t-hi">{{ topic.title }}</p>
                   <span class="chip chip-mono">{{ topic.subject }}</span>
-                  <span v-if="!topic.isLive" class="text-[11px] italic t-lo">note in preparation</span>
+                  <span v-if="!topic.isLive" class="chip chip-mono border-dashed">Queued</span>
                 </div>
                 <p class="mt-1 text-[12.5px] leading-relaxed t-lo">{{ topic.likelyFormat }}</p>
               </div>
@@ -239,8 +240,6 @@
 
 <script setup lang="ts">
 import { NuxtLink } from '#components'
-import { queryCollection } from '#imports'
-
 useHead({
   title: 'Dashboard - BeatBook',
   meta: [{ name: 'description', content: 'Personal Telangana Police Constable/SI study dashboard.' }],
@@ -275,27 +274,12 @@ function readFsrsStats() {
 onMounted(readFsrsStats)
 watch(user, readFsrsStats)
 
-/* ── Current affairs (TG focus first, then newest) ──────────────────────── */
-const { data: allCA } = await useAsyncData('dashboard-ca', () =>
-  queryCollection('current_affair').all()
-)
+/* ── Current affairs (TG focus first, then newest, served by Nitro) ──────── */
+const { data: caBriefs } = await useFetch('/api/ca/briefs', { key: 'dashboard-ca' })
 
-const todayISO = new Date().toISOString().split('T')[0]
-
-const briefItems = computed(() => {
-  if (!allCA.value) return []
-  const sorted = [...allCA.value].sort(
-    (a: any, b: any) => new Date(b.meta?.date).getTime() - new Date(a.meta?.date).getTime()
-  )
-  const tg    = sorted.filter((e: any) => e.meta?.is_telangana_focus)
-  const other = sorted.filter((e: any) => !e.meta?.is_telangana_focus)
-  return [...tg, ...other].slice(0, 6)
-})
-
-const addedToday = computed(() =>
-  (allCA.value ?? []).filter((e: any) => (e.meta?.date ?? '') === todayISO).length
-)
-const totalCA = computed(() => (allCA.value ?? []).length)
+const briefItems = computed(() => caBriefs.value?.items ?? [])
+const addedToday = computed(() => caBriefs.value?.addedToday ?? 0)
+const totalCA = computed(() => caBriefs.value?.total ?? 0)
 
 function formatBriefDate(iso: string): string {
   if (!iso) return ''

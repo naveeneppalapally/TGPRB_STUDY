@@ -173,20 +173,20 @@ function riverStroke(river: RiverSystem) {
 </script>
 
 <template>
-  <section class="rounded-2xl border border-white/10 bg-[#0c0d0e] p-4 text-stone-100 shadow-2xl shadow-black/20 sm:p-6">
+  <section class="rounded-2xl border border-[var(--ink-card-line)] bg-[var(--ink-card)] p-4 text-[var(--ink-card-text)] shadow-2xl shadow-black/20 sm:p-6">
     <header class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
       <div>
         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400">Spatial anchor</p>
-        <h2 class="mt-1 text-xl font-bold tracking-tight text-white">India river systems</h2>
-        <p class="mt-1 max-w-2xl text-sm leading-6 text-stone-400">Select a river for basin facts, tributary banks and major projects.</p>
+        <h2 class="mt-1 text-xl font-bold tracking-tight text-[var(--ink-card-text)]">India river systems</h2>
+        <p class="mt-1 max-w-2xl text-sm leading-6 text-[var(--ink-card-muted)]">Select a river for basin facts, tributary banks and major projects.</p>
       </div>
-      <div class="flex items-center gap-3 text-xs text-stone-400" aria-label="Map legend">
+      <div class="flex items-center gap-3 text-xs text-[var(--ink-card-muted)]" aria-label="Map legend">
         <span class="flex items-center gap-1.5"><i class="h-2.5 w-2.5 rounded-full bg-sky-400" /> River</span>
         <span class="flex items-center gap-1.5"><i class="h-2.5 w-2.5 rounded-full bg-amber-500" /> Active</span>
       </div>
     </header>
 
-    <div class="overflow-x-auto rounded-xl border border-white/10 bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-2 sm:p-4">
+    <div class="overflow-x-auto rounded-xl border border-[var(--ink-card-line)] bg-gradient-to-br from-slate-950 via-[#111417] to-slate-900 p-2 sm:p-4">
       <svg
         class="h-auto w-full min-w-[560px]"
         viewBox="0 0 760 860"
@@ -241,22 +241,22 @@ function riverStroke(river: RiverSystem) {
             :x="river.labelX"
             :y="river.labelY"
             :text-anchor="river.labelAnchor ?? 'middle'"
-            class="pointer-events-none select-none fill-stone-100 text-[14px] font-semibold"
+            class="pointer-events-none select-none fill-[var(--ink-card-text)] text-[14px] font-semibold"
           >{{ river.name }}</text>
         </g>
-        <text x="245" y="815" class="fill-stone-400 text-[12px]">Schematic map. It shows basin relationships, not survey boundaries.</text>
+        <text x="245" y="815" class="fill-[var(--ink-card-muted)] text-[12px]">Schematic map. It shows basin relationships, not survey boundaries.</text>
       </svg>
     </div>
 
-    <p class="mt-4 text-xs leading-5 text-stone-400">PYQ badges identify questions traceable to the local verified PYQ collection. Other panel details are study facts.</p>
+    <p class="mt-4 text-xs leading-5 text-[var(--ink-card-muted)]">PYQ badges identify questions traceable to the local verified PYQ collection. Other panel details are study facts.</p>
 
-    <USlideover v-model="isOpen" side="right" :ui="{ width: 'w-full max-w-xl', background: 'bg-[#0c0d0e]', ring: 'ring-white/10', padding: 'p-0' }">
-      <div v-if="selectedRiver" class="flex h-full flex-col bg-[#0c0d0e] text-stone-100">
-        <header class="border-b border-white/10 px-5 py-5 sm:px-6">
+    <USlideover v-model="isOpen" side="right" :ui="{ width: 'w-full max-w-xl', background: 'bg-[var(--ink-card)]', ring: 'ring-white/10', padding: 'p-0' }">
+      <div v-if="selectedRiver" class="flex h-full flex-col bg-[var(--ink-card)] text-[var(--ink-card-text)]">
+        <header class="border-b border-[var(--ink-card-line)] px-5 py-5 sm:px-6">
           <div class="flex items-start justify-between gap-4">
             <div>
               <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400">{{ selectedRiver.basin }} system</p>
-              <h3 class="mt-1 text-2xl font-bold text-white">{{ selectedRiver.name }} River</h3>
+              <h3 class="mt-1 text-2xl font-bold text-[var(--ink-card-text)]">{{ selectedRiver.name }} River</h3>
             </div>
             <UButton icon="i-heroicons-x-mark" color="gray" variant="ghost" aria-label="Close river facts" @click="isOpen = false" />
           </div>
@@ -264,40 +264,40 @@ function riverStroke(river: RiverSystem) {
 
         <div class="flex-1 overflow-y-auto px-5 py-6 sm:px-6">
           <dl class="grid gap-3 sm:grid-cols-2">
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <dt class="text-xs font-semibold uppercase tracking-wide text-stone-400">Origin</dt>
-              <dd class="mt-2 text-sm leading-6 text-stone-200">{{ selectedRiver.origin }}</dd>
+            <div class="rounded-xl border border-[var(--ink-card-line)] bg-white/[0.03] p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--ink-card-muted)]">Origin</dt>
+              <dd class="mt-2 text-sm leading-6 text-[var(--ink-card-text)]">{{ selectedRiver.origin }}</dd>
             </div>
-            <div class="rounded-xl border border-white/10 bg-white/[0.03] p-4">
-              <dt class="text-xs font-semibold uppercase tracking-wide text-stone-400">Outflow</dt>
-              <dd class="mt-2 text-sm leading-6 text-stone-200">{{ selectedRiver.outflow }}</dd>
+            <div class="rounded-xl border border-[var(--ink-card-line)] bg-white/[0.03] p-4">
+              <dt class="text-xs font-semibold uppercase tracking-wide text-[var(--ink-card-muted)]">Outflow</dt>
+              <dd class="mt-2 text-sm leading-6 text-[var(--ink-card-text)]">{{ selectedRiver.outflow }}</dd>
             </div>
           </dl>
 
           <div class="mt-5 grid gap-4 sm:grid-cols-2">
-            <section class="rounded-xl border border-white/10 p-4" :aria-label="`${selectedRiver.name} left-bank tributaries`">
+            <section class="rounded-xl border border-[var(--ink-card-line)] p-4" :aria-label="`${selectedRiver.name} left-bank tributaries`">
               <h4 class="text-sm font-bold text-amber-400">Left-bank tributaries</h4>
-              <ul class="mt-3 space-y-2 text-sm text-stone-300">
+              <ul class="mt-3 space-y-2 text-sm text-[var(--ink-card-text)]">
                 <li v-for="tributary in selectedRiver.leftBank" :key="tributary" class="flex gap-2"><span class="text-amber-500">•</span>{{ tributary }}</li>
               </ul>
             </section>
-            <section class="rounded-xl border border-white/10 p-4" :aria-label="`${selectedRiver.name} right-bank tributaries`">
+            <section class="rounded-xl border border-[var(--ink-card-line)] p-4" :aria-label="`${selectedRiver.name} right-bank tributaries`">
               <h4 class="text-sm font-bold text-sky-300">Right-bank tributaries</h4>
-              <ul class="mt-3 space-y-2 text-sm text-stone-300">
+              <ul class="mt-3 space-y-2 text-sm text-[var(--ink-card-text)]">
                 <li v-for="tributary in selectedRiver.rightBank" :key="tributary" class="flex gap-2"><span class="text-sky-400">•</span>{{ tributary }}</li>
               </ul>
             </section>
           </div>
 
-          <section class="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4" aria-label="Major projects">
-            <h4 class="text-sm font-bold text-white">Major dams and projects</h4>
-            <ul class="mt-3 space-y-2 text-sm leading-6 text-stone-300">
+          <section class="mt-5 rounded-xl border border-[var(--ink-card-line)] bg-white/[0.03] p-4" aria-label="Major projects">
+            <h4 class="text-sm font-bold text-[var(--ink-card-text)]">Major dams and projects</h4>
+            <ul class="mt-3 space-y-2 text-sm leading-6 text-[var(--ink-card-text)]">
               <li v-for="project in selectedRiver.projects" :key="project" class="flex gap-2"><span class="text-emerald-400">•</span>{{ project }}</li>
             </ul>
           </section>
 
           <section v-if="selectedRiver.pyqIds.length" class="mt-5" aria-label="Verified PYQ references">
-            <h4 class="text-sm font-bold text-white">Verified PYQ references</h4>
+            <h4 class="text-sm font-bold text-[var(--ink-card-text)]">Verified PYQ references</h4>
             <div class="mt-3 flex flex-wrap gap-2">
               <UBadge v-for="pyqId in selectedRiver.pyqIds" :key="pyqId" color="amber" variant="subtle">{{ pyqId }}</UBadge>
             </div>

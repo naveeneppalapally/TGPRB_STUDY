@@ -187,12 +187,12 @@ function toggleMilestone(id: string) {
 </script>
 
 <template>
-  <section class="rounded-2xl border border-white/10 bg-[#0c0d0e] p-4 text-stone-100 shadow-2xl shadow-black/20 sm:p-6">
+  <section class="rounded-2xl border border-white/10 bg-[var(--ink-card)] p-4 text-[var(--ink-card-text)] shadow-2xl shadow-black/20 sm:p-6">
     <header class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
       <div>
         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-amber-400">Chronological anchor</p>
         <h2 class="mt-1 text-xl font-bold tracking-tight text-white">{{ heading }}</h2>
-        <p class="mt-1 max-w-2xl text-sm leading-6 text-stone-400">Open a milestone to turn dates, leaders, committees and safeguards into recall cues.</p>
+        <p class="mt-1 max-w-2xl text-sm leading-6 text-[var(--ink-card-muted)]">Open a milestone to turn dates, leaders, committees and safeguards into recall cues.</p>
       </div>
       <div class="flex flex-wrap gap-2" aria-label="Filter timeline phases">
         <UButton size="xs" :color="activePhase === 'all' ? 'primary' : 'gray'" :variant="activePhase === 'all' ? 'solid' : 'soft'" @click="activePhase = 'all'">All phases</UButton>
@@ -209,7 +209,7 @@ function toggleMilestone(id: string) {
 
     <ol class="relative mt-8 border-s border-white/15 ps-6 sm:ps-8" aria-label="Interactive movement timeline">
       <li v-for="milestone in visibleMilestones" :key="milestone.id" class="relative pb-7 last:pb-0">
-        <span class="absolute -start-[34px] top-1 flex h-5 w-5 items-center justify-center rounded-full border-4 border-[#0c0d0e] bg-amber-500 shadow-[0_0_0_1px_rgba(245,158,11,0.55)] sm:-start-[42px]" aria-hidden="true" />
+        <span class="absolute -start-[34px] top-1 flex h-5 w-5 items-center justify-center rounded-full border-4 border-[var(--ink-card)] bg-amber-500 shadow-[0_0_0_1px_rgba(245,158,11,0.55)] sm:-start-[42px]" aria-hidden="true" />
         <article class="overflow-hidden rounded-xl border transition-colors" :class="expandedId === milestone.id ? 'border-amber-500/50 bg-amber-500/[0.06]' : 'border-white/10 bg-white/[0.025]'">
           <button
             type="button"
@@ -221,17 +221,17 @@ function toggleMilestone(id: string) {
             <span class="min-w-14 font-mono text-lg font-bold text-amber-400">{{ milestone.year }}</span>
             <span class="min-w-0 flex-1">
               <span class="block text-base font-bold text-white">{{ milestone.title }}</span>
-              <span class="mt-1 block text-sm leading-6 text-stone-400">{{ milestone.summary }}</span>
+              <span class="mt-1 block text-sm leading-6 text-[var(--ink-card-muted)]">{{ milestone.summary }}</span>
             </span>
-            <UIcon :name="expandedId === milestone.id ? 'i-heroicons-chevron-up' : 'i-heroicons-chevron-down'" class="mt-1 h-4 w-4 shrink-0 text-stone-400" aria-hidden="true" />
+            <UIcon :name="expandedId === milestone.id ? 'i-heroicons-chevron-up' : 'i-heroicons-chevron-down'" class="mt-1 h-4 w-4 shrink-0 text-[var(--ink-card-muted)]" aria-hidden="true" />
           </button>
 
           <div v-if="expandedId === milestone.id" :id="`milestone-${milestone.id}`" class="border-t border-white/10 px-4 pb-4 pt-3 sm:ps-[88px]">
-            <ul class="space-y-2 text-sm leading-6 text-stone-300">
+            <ul class="space-y-2 text-sm leading-6 text-[var(--ink-card-text)]">
               <li v-for="fact in milestone.facts" :key="fact" class="flex gap-2"><span class="mt-0.5 text-emerald-400">•</span><span>{{ fact }}</span></li>
             </ul>
             <div v-if="milestone.pyqIds.length" class="mt-4 flex flex-wrap items-center gap-2">
-              <span class="text-xs font-medium text-stone-500">Verified local PYQ</span>
+              <span class="text-xs font-medium text-[var(--ink-card-muted)]">Verified local PYQ</span>
               <UBadge v-for="pyqId in milestone.pyqIds" :key="pyqId" color="amber" variant="subtle">{{ pyqId }}</UBadge>
             </div>
           </div>

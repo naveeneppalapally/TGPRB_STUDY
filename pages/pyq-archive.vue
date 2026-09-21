@@ -19,7 +19,7 @@
     </header>
 
     <!-- Search & Filter Controls -->
-    <div class="mb-8 space-y-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-sub p-5 shadow-sm">
+    <div class="mb-8 space-y-4 rounded-xl border b-line bg-sub p-5 shadow-sm">
       <!-- Search Input -->
       <div class="relative">
         <UIcon name="i-heroicons-magnifying-glass" class="absolute left-3.5 top-1/2 -translate-y-1/2 h-5 w-5 t-lo" />
@@ -115,10 +115,10 @@
     <!-- Questions Feed / Skeleton -->
     <div v-if="pending" class="space-y-4">
       <div v-for="i in 4" :key="i" class="panel panel-pad animate-pulse space-y-3">
-        <div class="h-4 w-1/3 bg-gray-200 dark:bg-gray-800 rounded"></div>
-        <div class="h-6 w-full bg-gray-200 dark:bg-gray-800 rounded"></div>
+        <div class="h-4 w-1/3 rounded bg-inset"></div>
+        <div class="h-6 w-full rounded bg-inset"></div>
         <div class="grid grid-cols-2 gap-2">
-          <div v-for="j in 4" :key="j" class="h-10 bg-gray-200 dark:bg-gray-800 rounded"></div>
+          <div v-for="j in 4" :key="j" class="h-10 rounded bg-inset"></div>
         </div>
       </div>
     </div>
@@ -138,7 +138,7 @@
       <article
         v-for="(q, idx) in pyqsList"
         :key="q.uid || idx"
-        class="panel panel-pad transition-all duration-200 hover:border-gray-300 dark:hover:border-gray-700"
+        class="panel panel-pad panel-hover transition-all duration-200"
       >
         <!-- Card Meta Header -->
         <div class="mb-3 flex flex-wrap items-center gap-2">
@@ -207,7 +207,7 @@
       </article>
 
       <!-- Pagination Controls -->
-      <div v-if="totalPages > 1" class="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 dark:border-gray-800 pt-6">
+      <div v-if="totalPages > 1" class="mt-8 flex flex-wrap items-center justify-between gap-4 border-t b-line pt-6">
         <p class="font-mono text-body-xs t-lo">
           Page {{ currentPage }} of {{ totalPages }} ({{ totalResults }} items)
         </p>

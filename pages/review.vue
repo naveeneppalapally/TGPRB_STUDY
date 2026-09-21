@@ -31,7 +31,7 @@
           :style="avgRetention > 0 ? 'color: var(--jade);' : ''"
           :class="avgRetention > 0 ? '' : 't-lo'"
         >
-          {{ avgRetention > 0 ? avgRetention + '%' : '90%' }}
+          {{ avgRetention > 0 ? avgRetention + '%' : 'Target 90%' }}
         </p>
       </div>
       <div class="px-6 py-4">
@@ -61,7 +61,7 @@
       </div>
 
       <!-- Directional Card Glide Transition (Decoupled Card Advance & Answer Leak Elimination) -->
-      <Transition name="card-glide" mode="out-in">
+      <Transition name="card-glide" mode="out-in" @after-leave="handleAfterLeave">
         <div :key="currentCard.id" class="w-full">
           <!-- Flashcard with 3D flip & CSS Grid dual-face stacking -->
           <button
@@ -114,7 +114,7 @@
       <!-- Zero-Layout-Shift Pre-Reserved Rating Dock (CLS = 0.0000) -->
       <div
         class="mt-4 grid transition-[grid-template-rows,opacity] duration-160 ease-[cubic-bezier(0.16,1,0.3,1)]"
-        :class="flipped ? 'grid-rows-[1fr] opacity-100 pointer-events-auto' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
+        :class="flipped && !isTransitioning ? 'grid-rows-[1fr] opacity-100 pointer-events-auto' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
       >
         <div class="min-h-0 overflow-hidden">
           <div class="min-h-[84px] pt-1">
@@ -130,7 +130,8 @@
                 type="button"
                 class="rate-btn"
                 :class="hint.cls"
-                :tabindex="flipped ? 0 : -1"
+                :tabindex="flipped && !isTransitioning ? 0 : -1"
+                :disabled="isTransitioning"
                 @click.stop="rate(i + 1)"
               >
                 <span class="block text-[13px] font-semibold">{{ hint.label }}</span>
@@ -187,7 +188,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted, watch } from 'vue'
+import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
 import { Rating, type Card as FSRSCard } from 'ts-fsrs'
 import { useFSRSEngine, type StudyCard, type FSRSGrade } from '@/composables/useFSRSEngine'
 import { useFlashcardUnlock } from '@/composables/useFlashcardUnlock'
@@ -214,6 +215,7 @@ const studyCardsMap = ref<Record<string, StudyCard>>({})
 const dueCards = ref<RawCard[]>([])
 const currentIndex = ref(0)
 const flipped = ref(false)
+const isTransitioning = ref(false)
 const reviewedToday = ref(0)
 const avgRetention = ref(0)
 
@@ -405,11 +407,17 @@ function hydrateCards() {
 }
 
 function toggleFlip() {
+  if (isTransitioning.value) return
   flipped.value = !flipped.value
 }
 
+function handleAfterLeave() {
+  flipped.value = false
+  isTransitioning.value = false
+}
+
 async function rate(ratingNumber: number) {
-  if (!currentCard.value || !currentFSRSCard.value) return
+  if (!currentCard.value || !currentFSRSCard.value || isTransitioning.value) return
 
   const gradeMap: Record<number, FSRSGrade> = {
     1: Rating.Again,
@@ -456,11 +464,10 @@ async function rate(ratingNumber: number) {
 
   // 5. Handle 'Again' re-insertion or queue progression
   const finishedCard = currentCard.value
-  flipped.value = false
 
   if (grade === Rating.Again) {
     if (dueCards.value.length > 1) {
-      // Push missed card to the back of current session
+      isTransitioning.value = true
       dueCards.value.splice(currentIndex.value, 1)
       dueCards.value.push(finishedCard)
     } else {
@@ -469,7 +476,15 @@ async function rate(ratingNumber: number) {
       return
     }
   } else {
-    dueCards.value.splice(currentIndex.value, 1)
+    if (dueCards.value.length > 1) {
+      isTransitioning.value = true
+      dueCards.value.splice(currentIndex.value, 1)
+    } else {
+      // Final card completed: empty queue
+      dueCards.value.splice(currentIndex.value, 1)
+      flipped.value = false
+      isTransitioning.value = false
+    }
   }
 
   if (currentIndex.value >= dueCards.value.length) {
@@ -508,16 +523,42 @@ watch(() => mode.value, () => {
 })
 
 watch(() => currentCard.value?.id, () => {
-  flipped.value = false
+  if (!isTransitioning.value) {
+    flipped.value = false
+  }
 })
 
-/* Keyboard shortcuts: ↵ flips, 1-4 rate once revealed */
-defineShortcuts({
-  enter: () => { if (currentCard.value) toggleFlip() },
-  '1': () => { if (flipped.value) rate(1) },
-  '2': () => { if (flipped.value) rate(2) },
-  '3': () => { if (flipped.value) rate(3) },
-  '4': () => { if (flipped.value) rate(4) },
+/* Keyboard shortcuts: Enter/Space flips, 1-4 rate once revealed.
+   Interactive targets are ignored so a focused card or rating button does not
+   fire both native click activation and this global listener. */
+function isTextTarget(target: EventTarget | null): boolean {
+  return target instanceof HTMLElement && !!target.closest('input, textarea, select, [contenteditable="true"]')
+}
+
+function isNativeActivationTarget(target: EventTarget | null): boolean {
+  return target instanceof HTMLElement && !!target.closest('button, a')
+}
+
+function handleReviewKeydown(e: KeyboardEvent) {
+  if (isTextTarget(e.target) || isTransitioning.value) return
+  if (e.key === 'Enter' || e.key === ' ') {
+    if (!currentCard.value || isNativeActivationTarget(e.target)) return
+    e.preventDefault()
+    toggleFlip()
+  } else if (flipped.value) {
+    if (e.key === '1') rate(1)
+    else if (e.key === '2') rate(2)
+    else if (e.key === '3') rate(3)
+    else if (e.key === '4') rate(4)
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', handleReviewKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', handleReviewKeydown)
 })
 </script>
 
@@ -600,17 +641,17 @@ defineShortcuts({
 }
 .flip-card-inner {
   transform-style: preserve-3d;
-  transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 190ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .flip-card-face {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .flip-card-front {
-  transform: rotateY(0deg);
+  transform: rotateY(0deg) translateZ(1px);
 }
 .flip-card-back {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(1px);
 }
 
 .card-glide-leave-active .flip-card-inner {

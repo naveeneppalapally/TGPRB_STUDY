@@ -93,13 +93,13 @@
           </p>
 
           <!-- Master Visual Architecture Map of India -->
-          <div class="mb-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-stone-900 p-4 text-center shadow-sm">
+          <div class="mb-6 rounded-xl border b-line bg-elev p-4 text-center shadow-sm">
             <img
               src="https://res.cloudinary.com/gbxjgmck/image/upload/v1786728085/geography/india-irrigation-zones-map.webp"
               alt="India Irrigation Sources, Major Canals & Multipurpose Dam Headworks"
               class="mx-auto block w-full max-w-4xl h-auto object-contain rounded-lg"
             />
-            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 dark:border-gray-800 pt-3 text-body-xs text-gray-500 dark:text-gray-400 font-mono">
+            <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t b-line pt-3 text-body-xs t-lo font-mono">
               <span>National Irrigation Zones, Canal Networks &amp; Key Headworks</span>
               <span class="font-sans font-medium text-amber-600 dark:text-amber-400">Core TGPRB Spatial Anchor</span>
             </div>
@@ -504,7 +504,7 @@
 
                 <!-- Indira Gandhi Canal Route Diagram -->
                 <div class="rounded-xl border b-line bg-sub overflow-hidden">
-                  <div class="aspect-video w-full overflow-hidden bg-inset flex items-center justify-center p-1 bg-white dark:bg-stone-900">
+                  <div class="aspect-video w-full overflow-hidden bg-inset flex items-center justify-center p-1">
                     <img
                       src="https://res.cloudinary.com/gbxjgmck/image/upload/v1787940467/geography/indira-gandhi-canal-route.webp"
                       alt="Indira Gandhi Lift Canal schematic route and distribution branches"

@@ -63,11 +63,11 @@
             class="rounded-full transition-all duration-200 block"
             :class="dotIndex(i) === currentIndex
               ? 'w-4 h-1.5 bg-saffron-500'
-              : 'w-1.5 h-1.5 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400'"
+              : 'w-1.5 h-1.5 bg-inset hover:bg-sub'"
           />
         </button>
         <span v-if="items.length > 10" class="font-mono text-[10px] t-lo ml-1">
-          +{{ items.length - 10 }}
+          {{ dotWindowStart + 1 }}-{{ dotWindowStart + dotsToShow.length }} of {{ items.length }}
         </span>
       </div>
 
@@ -75,7 +75,7 @@
       <div class="flex items-center gap-2">
         <button
           type="button"
-          class="h-11 w-11 min-h-[44px] min-w-[44px] rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
+          class="h-11 w-11 min-h-[44px] min-w-[44px] rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-sub transition-all disabled:opacity-30"
           :disabled="currentIndex === 0"
           aria-label="Previous card"
           @click="prev"
@@ -84,7 +84,7 @@
         </button>
         <button
           type="button"
-          class="h-11 w-11 min-h-[44px] min-w-[44px] rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30"
+          class="h-11 w-11 min-h-[44px] min-w-[44px] rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-sub transition-all disabled:opacity-30"
           :disabled="currentIndex === items.length - 1"
           aria-label="Next card"
           @click="next"
@@ -96,7 +96,7 @@
         <button
           v-if="newCount > 0"
           type="button"
-          class="h-11 min-h-[44px] px-3.5 rounded-lg border b-line text-[11px] font-medium t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-1.5"
+          class="h-11 min-h-[44px] px-3.5 rounded-lg border b-line text-[11px] font-medium t-mid hover:t-hi hover:bg-sub transition-all flex items-center gap-1.5"
           @click="handleMarkCaughtUp"
         >
           <UIcon name="i-heroicons-check" class="h-3.5 w-3.5" />
@@ -113,7 +113,6 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { queryCollection } from '#imports'
 import { useTopicVisits } from '@/composables/useTopicVisits'
 import topicsMaster from '~/data/topics_master.json'
 
@@ -133,7 +132,10 @@ const { getSplitEntries, markCaughtUp } = useTopicVisits()
 
 const { data: allEntries } = await useAsyncData(
   `ca-strip-${props.noteId}`,
-  () => queryCollection('current_affair').all(),
+  async () => {
+    const response = await $fetch<{ items: any[] }>(`/api/ca/topic/${props.noteId}`)
+    return response.items
+  },
 )
 
 const typedTopics = (topicsMaster || []) as TopicEntry[]
@@ -256,13 +258,14 @@ const slideDir = ref<'slide-left' | 'slide-right'>('slide-left')
 const currentItem = computed(() => items.value[currentIndex.value])
 const isCurrentNew = computed(() => currentItem.value && newIds.value.has(currentItem.value.id))
 
-// Dots: show max 10
+// Dots: show max 10 in a sliding window
 const dotsToShow = computed(() => Array.from({ length: Math.min(items.value.length, 10) }))
+const dotWindowStart = computed(() => {
+  if (items.value.length <= 10) return 0
+  return Math.max(0, Math.min(currentIndex.value - 4, items.value.length - 10))
+})
 function dotIndex(i: number): number {
-  // When past the first 10, shift window to keep current dot visible
-  if (items.value.length <= 10) return i
-  const start = Math.max(0, Math.min(currentIndex.value - 4, items.value.length - 10))
-  return start + i
+  return dotWindowStart.value + i
 }
 
 function prev() {

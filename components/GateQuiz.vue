@@ -66,7 +66,7 @@
           <div class="pt-2">
             <button
               type="button"
-              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border b-line text-[11.5px] font-mono font-medium t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border b-line text-[11.5px] font-mono font-medium t-mid hover:t-hi hover:bg-sub transition-colors"
               @click="startRetake"
             >
               <UIcon name="i-heroicons-arrow-path" class="h-3.5 w-3.5" />
@@ -124,7 +124,7 @@
                   i === currentQ ? 'w-4 h-1.5 bg-saffron-500' : 'w-1.5 h-1.5',
                   answers[i] !== undefined
                     ? 'bg-saffron-400'
-                    : 'bg-gray-300 dark:bg-gray-700'
+                    : 'bg-inset'
                 ]"
               />
             </div>
@@ -133,7 +133,7 @@
             <div class="flex items-center gap-2">
               <button
                 type="button"
-                class="h-11 w-11 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all disabled:opacity-30 min-h-[44px] min-w-[44px]"
+                class="h-11 w-11 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-sub transition-all disabled:opacity-30 min-h-[44px] min-w-[44px]"
                 :disabled="currentQ === 0"
                 aria-label="Previous question"
                 @click="prevQ"
@@ -143,7 +143,7 @@
               <button
                 v-if="currentQ < quiz.questions.length - 1"
                 type="button"
-                class="h-11 w-11 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-gray-100 dark:hover:bg-gray-800 transition-all min-h-[44px] min-w-[44px]"
+                class="h-11 w-11 rounded-lg border b-line flex items-center justify-center t-mid hover:t-hi hover:bg-sub transition-all min-h-[44px] min-w-[44px]"
                 aria-label="Next question"
                 @click="nextQ"
               >
@@ -155,7 +155,7 @@
                 class="h-11 px-5 rounded-lg text-[13px] font-semibold transition-all min-h-[44px] flex items-center justify-center"
                 :class="allAnswered
                   ? 'bg-saffron-500 text-white hover:bg-saffron-600 shadow-sm'
-                  : 'bg-gray-100 dark:bg-gray-800 t-lo cursor-not-allowed'"
+                  : 'bg-sub t-lo cursor-not-allowed'"
                 :disabled="!allAnswered"
                 @click="submitGate"
               >
@@ -231,7 +231,7 @@
           <button
             v-if="!passed"
             type="button"
-            class="w-full py-2.5 rounded-lg border b-line text-[12px] font-medium t-mid hover:t-hi hover:bg-gray-50 dark:hover:bg-gray-900 transition-all"
+            class="w-full py-2.5 rounded-lg border b-line text-[12px] font-medium t-mid hover:t-hi hover:bg-sub transition-all"
             @click="retry"
           >
             Try again
