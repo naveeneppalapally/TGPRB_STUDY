@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_CAZRI_MOTH_BEAN_VARIETIES_2026091"
+id: "CA-PIB-CA_SCI_CAZRI_MOTH_BEAN_VARIETIES_20260913"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

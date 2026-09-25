@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_MSDE_IN_COLLABORATION_WIT_2026083"
+id: "CA-PIB-CA_SCH_MSDE_IN_COLLABORATION_WIT_20260830"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

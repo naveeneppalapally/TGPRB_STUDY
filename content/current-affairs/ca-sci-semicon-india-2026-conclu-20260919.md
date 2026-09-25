@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_SEMICON_INDIA_2026_CONCLU_2026091"
+id: "CA-PIB-CA_SCI_SEMICON_INDIA_2026_CONCLU_20260919"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

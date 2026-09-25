@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_APPROVES_TR_2026082"
+id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_APPROVES_TR_20260825"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

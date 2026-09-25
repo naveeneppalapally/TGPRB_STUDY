@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_MINISTRY_OF_AYUSH_ADVANCE_2026091"
+id: "CA-PIB-CA_SCI_MINISTRY_OF_AYUSH_ADVANCE_20260919"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

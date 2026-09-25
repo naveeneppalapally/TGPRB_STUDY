@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PM_AJAY_ACCELERATES_SOCIO_2026091"
+id: "CA-PIB-CA_SCH_PM_AJAY_ACCELERATES_SOCIO_20260919"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

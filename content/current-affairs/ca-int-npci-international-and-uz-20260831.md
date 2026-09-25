@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_NPCI_INTERNATIONAL_AND_UZ_2026083"
+id: "CA-PIB-CA_INT_NPCI_INTERNATIONAL_AND_UZ_20260831"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

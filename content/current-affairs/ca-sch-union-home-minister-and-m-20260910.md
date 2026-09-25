@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_HOME_MINISTER_AND_M_2026091"
+id: "CA-PIB-CA_SCH_UNION_HOME_MINISTER_AND_M_20260910"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

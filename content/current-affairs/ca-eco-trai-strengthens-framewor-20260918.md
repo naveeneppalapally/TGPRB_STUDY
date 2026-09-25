@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_TRAI_STRENGTHENS_FRAMEWOR_2026091"
+id: "CA-PIB-CA_ECO_TRAI_STRENGTHENS_FRAMEWOR_20260918"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

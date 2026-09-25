@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_HON_BLE_VICE_PRESIDENT_OF_2026083"
+id: "CA-PIB-CA_SCH_HON_BLE_VICE_PRESIDENT_OF_20260830"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

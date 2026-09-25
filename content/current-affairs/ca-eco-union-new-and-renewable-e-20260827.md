@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_UNION_NEW_AND_RENEWABLE_E_2026082"
+id: "CA-PIB-CA_ECO_UNION_NEW_AND_RENEWABLE_E_20260827"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

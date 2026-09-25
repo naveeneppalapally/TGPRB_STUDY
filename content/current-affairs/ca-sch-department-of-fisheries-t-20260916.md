@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DEPARTMENT_OF_FISHERIES_T_2026091"
+id: "CA-PIB-CA_SCH_DEPARTMENT_OF_FISHERIES_T_20260916"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

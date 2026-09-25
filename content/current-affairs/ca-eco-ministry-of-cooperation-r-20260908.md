@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_MINISTRY_OF_COOPERATION_R_2026090"
+id: "CA-PIB-CA_ECO_MINISTRY_OF_COOPERATION_R_20260908"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_SECL_TRANSFORMATION_SINCE_2026091"
+id: "CA-PIB-CA_ECO_SECL_TRANSFORMATION_SINCE_20260912"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

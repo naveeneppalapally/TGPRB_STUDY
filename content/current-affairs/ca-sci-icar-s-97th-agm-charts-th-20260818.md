@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_ICAR_S_97TH_AGM_CHARTS_TH_2026081"
+id: "CA-PIB-CA_SCI_ICAR_S_97TH_AGM_CHARTS_TH_20260818"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

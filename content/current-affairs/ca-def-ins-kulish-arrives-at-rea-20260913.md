@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INS_KULISH_ARRIVES_AT_REA_2026091"
+id: "CA-PIB-CA_DEF_INS_KULISH_ARRIVES_AT_REA_20260913"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

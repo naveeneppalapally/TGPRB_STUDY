@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_PRIME_MINISTER_CONGRATULA_2026091"
+id: "CA-PIB-CA_AWA_PRIME_MINISTER_CONGRATULA_20260916"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_REGIONAL_MANTHAN_CONFEREN_2026082"
+id: "CA-PIB-CA_SCH_REGIONAL_MANTHAN_CONFEREN_20260824"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

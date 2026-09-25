@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_DR_JITENDRA_SINGH_AND_FRE_2026090"
+id: "CA-PIB-CA_SCI_DR_JITENDRA_SINGH_AND_FRE_20260904"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

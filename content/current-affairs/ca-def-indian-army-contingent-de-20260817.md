@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INDIAN_ARMY_CONTINGENT_DE_2026081"
+id: "CA-PIB-CA_DEF_INDIAN_ARMY_CONTINGENT_DE_20260817"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PENSION_SAKHIS_TO_TAKE_RE_2026091"
+id: "CA-PIB-CA_SCH_PENSION_SAKHIS_TO_TAKE_RE_20260915"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

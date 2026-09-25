@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_INDIAN_PHARMACOPOEIA_COMM_2026082"
+id: "CA-PIB-CA_SCI_INDIAN_PHARMACOPOEIA_COMM_20260828"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

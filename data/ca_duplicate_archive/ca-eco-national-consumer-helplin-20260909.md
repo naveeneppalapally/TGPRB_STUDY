@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_NATIONAL_CONSUMER_HELPLIN_2026090"
+id: "CA-PIB-CA_ECO_NATIONAL_CONSUMER_HELPLIN_20260909"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

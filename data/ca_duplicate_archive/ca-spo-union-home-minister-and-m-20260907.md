@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SPO_UNION_HOME_MINISTER_AND_M_2026090"
+id: "CA-PIB-CA_SPO_UNION_HOME_MINISTER_AND_M_20260907"
 type: "current_affair"
 category: "sports"
 exam_section: "General Knowledge"

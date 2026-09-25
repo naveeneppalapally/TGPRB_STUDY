@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_INDIA_TO_HOST_WORLD_CIRCU_2026091"
+id: "CA-PIB-CA_ENV_INDIA_TO_HOST_WORLD_CIRCU_20260913"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

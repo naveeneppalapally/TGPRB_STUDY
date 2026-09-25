@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_INDORA_CHOWK_DIGHORI_FLYO_2026091"
+id: "CA-PIB-CA_SCH_INDORA_CHOWK_DIGHORI_FLYO_20260919"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

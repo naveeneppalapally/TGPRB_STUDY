@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_NATIONAL_BIODIVERSITY_AUT_2026090"
+id: "CA-PIB-CA_ENV_NATIONAL_BIODIVERSITY_AUT_20260905"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_SHRI_SHIVRAJ_SINGH_CHOUHA_2026091"
+id: "CA-PIB-CA_SCH_SHRI_SHIVRAJ_SINGH_CHOUHA_20260910"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_NEXT_GEN_AQUACULTURE_IN_I_2026090"
+id: "CA-PIB-CA_ECO_NEXT_GEN_AQUACULTURE_IN_I_20260907"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

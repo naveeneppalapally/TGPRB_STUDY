@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_MINISTER_OF_CULTURE_2026091"
+id: "CA-PIB-CA_SCH_UNION_MINISTER_OF_CULTURE_20260916"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

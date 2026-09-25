@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_FOCUS_AREAS_FOR_STRENGTHE_2026081"
+id: "CA-PIB-CA_SCH_FOCUS_AREAS_FOR_STRENGTHE_20260811"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_NCPCR_RESCUES_OVER_3800_C_2026090"
+id: "CA-PIB-CA_SCH_NCPCR_RESCUES_OVER_3800_C_20260904"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

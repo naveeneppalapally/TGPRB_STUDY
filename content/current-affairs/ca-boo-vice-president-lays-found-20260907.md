@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_VICE_PRESIDENT_LAYS_FOUND_2026090"
+id: "CA-PIB-CA_BOO_VICE_PRESIDENT_LAYS_FOUND_20260907"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

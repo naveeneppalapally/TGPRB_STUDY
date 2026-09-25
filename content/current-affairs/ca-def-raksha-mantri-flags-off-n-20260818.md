@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_FLAGS_OFF_N_2026081"
+id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_FLAGS_OFF_N_20260818"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

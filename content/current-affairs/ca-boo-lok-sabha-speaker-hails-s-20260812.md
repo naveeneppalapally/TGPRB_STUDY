@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_LOK_SABHA_SPEAKER_HAILS_S_2026081"
+id: "CA-PIB-CA_BOO_LOK_SABHA_SPEAKER_HAILS_S_20260812"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

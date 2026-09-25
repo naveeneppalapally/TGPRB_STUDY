@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_PM_INTERACTS_WITH_WINNERS_2026090"
+id: "CA-PIB-CA_AWA_PM_INTERACTS_WITH_WINNERS_20260905"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

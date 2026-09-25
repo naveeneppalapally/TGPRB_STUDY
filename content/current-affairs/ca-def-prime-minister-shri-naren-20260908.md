@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_PRIME_MINISTER_SHRI_NAREN_2026090"
+id: "CA-PIB-CA_DEF_PRIME_MINISTER_SHRI_NAREN_20260908"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

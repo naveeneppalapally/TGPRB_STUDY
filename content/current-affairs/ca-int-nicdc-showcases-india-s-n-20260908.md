@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_NICDC_SHOWCASES_INDIA_S_N_2026090"
+id: "CA-PIB-CA_INT_NICDC_SHOWCASES_INDIA_S_N_20260908"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

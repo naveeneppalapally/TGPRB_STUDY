@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_COMMERCIAL_COAL_MINE_AUCT_2026091"
+id: "CA-PIB-CA_ECO_COMMERCIAL_COAL_MINE_AUCT_20260914"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_AYURVEDA_AT_THE_CROSSROAD_2026091"
+id: "CA-PIB-CA_INT_AYURVEDA_AT_THE_CROSSROAD_20260914"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

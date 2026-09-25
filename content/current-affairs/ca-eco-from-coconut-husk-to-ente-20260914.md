@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_FROM_COCONUT_HUSK_TO_ENTE_2026091"
+id: "CA-PIB-CA_ECO_FROM_COCONUT_HUSK_TO_ENTE_20260914"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INDIAN_NAVY_SET_TO_COMMIS_2026082"
+id: "CA-PIB-CA_DEF_INDIAN_NAVY_SET_TO_COMMIS_20260825"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

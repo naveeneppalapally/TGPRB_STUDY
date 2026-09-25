@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_TEL_UNION_MINISTER_SHRI_PRATA_2026090"
+id: "CA-PIB-CA_TEL_UNION_MINISTER_SHRI_PRATA_20260909"
 type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"

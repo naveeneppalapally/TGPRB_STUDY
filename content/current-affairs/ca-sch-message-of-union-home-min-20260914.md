@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_MESSAGE_OF_UNION_HOME_MIN_2026091"
+id: "CA-PIB-CA_SCH_MESSAGE_OF_UNION_HOME_MIN_20260914"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

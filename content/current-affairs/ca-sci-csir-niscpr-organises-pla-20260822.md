@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_CSIR_NISCPR_ORGANISES_PLA_2026082"
+id: "CA-PIB-CA_SCI_CSIR_NISCPR_ORGANISES_PLA_20260822"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

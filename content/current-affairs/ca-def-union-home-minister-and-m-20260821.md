@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_UNION_HOME_MINISTER_AND_M_2026082"
+id: "CA-PIB-CA_DEF_UNION_HOME_MINISTER_AND_M_20260821"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

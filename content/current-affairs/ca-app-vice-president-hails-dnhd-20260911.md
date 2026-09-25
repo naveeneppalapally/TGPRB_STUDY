@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_APP_VICE_PRESIDENT_HAILS_DNHD_2026091"
+id: "CA-PIB-CA_APP_VICE_PRESIDENT_HAILS_DNHD_20260911"
 type: "current_affair"
 category: "appointments"
 exam_section: "Polity"

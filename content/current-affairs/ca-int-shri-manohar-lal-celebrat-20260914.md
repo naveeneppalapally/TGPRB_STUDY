@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_SHRI_MANOHAR_LAL_CELEBRAT_2026091"
+id: "CA-PIB-CA_INT_SHRI_MANOHAR_LAL_CELEBRAT_20260914"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

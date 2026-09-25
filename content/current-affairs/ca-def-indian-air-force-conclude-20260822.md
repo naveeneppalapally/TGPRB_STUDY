@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INDIAN_AIR_FORCE_CONCLUDE_2026082"
+id: "CA-PIB-CA_DEF_INDIAN_AIR_FORCE_CONCLUDE_20260822"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

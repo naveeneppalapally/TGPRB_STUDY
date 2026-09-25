@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_UNION_MINISTER_ASHWINI_VA_2026091"
+id: "CA-PIB-CA_ECO_UNION_MINISTER_ASHWINI_VA_20260918"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

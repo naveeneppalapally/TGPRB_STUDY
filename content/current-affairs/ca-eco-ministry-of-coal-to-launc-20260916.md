@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_MINISTRY_OF_COAL_TO_LAUNC_2026091"
+id: "CA-PIB-CA_ECO_MINISTRY_OF_COAL_TO_LAUNC_20260916"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

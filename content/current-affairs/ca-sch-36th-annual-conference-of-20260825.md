@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_36TH_ANNUAL_CONFERENCE_OF_2026082"
+id: "CA-PIB-CA_SCH_36TH_ANNUAL_CONFERENCE_OF_20260825"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

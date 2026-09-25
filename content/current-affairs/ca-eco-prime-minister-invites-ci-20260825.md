@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PRIME_MINISTER_INVITES_CI_2026082"
+id: "CA-PIB-CA_ECO_PRIME_MINISTER_INVITES_CI_20260825"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

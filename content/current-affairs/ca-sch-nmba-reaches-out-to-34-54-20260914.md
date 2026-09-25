@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_NMBA_REACHES_OUT_TO_34_54_2026091"
+id: "CA-PIB-CA_SCH_NMBA_REACHES_OUT_TO_34_54_20260914"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PRIME_MINISTER_CONGRATULA_2026090"
+id: "CA-PIB-CA_ECO_PRIME_MINISTER_CONGRATULA_20260901"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

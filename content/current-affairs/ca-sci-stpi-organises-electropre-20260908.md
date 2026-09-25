@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_STPI_ORGANISES_ELECTROPRE_2026090"
+id: "CA-PIB-CA_SCI_STPI_ORGANISES_ELECTROPRE_20260908"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

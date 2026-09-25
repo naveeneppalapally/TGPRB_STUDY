@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_IICT_AND_NETFLIX_TO_SUPPO_2026082"
+id: "CA-PIB-CA_SCH_IICT_AND_NETFLIX_TO_SUPPO_20260826"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

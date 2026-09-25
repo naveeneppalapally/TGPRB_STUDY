@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_PRIME_MINISTER_HOLDS_OFFI_2026083"
+id: "CA-PIB-CA_INT_PRIME_MINISTER_HOLDS_OFFI_20260830"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

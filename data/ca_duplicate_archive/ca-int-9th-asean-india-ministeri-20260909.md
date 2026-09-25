@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_9TH_ASEAN_INDIA_MINISTERI_2026090"
+id: "CA-PIB-CA_INT_9TH_ASEAN_INDIA_MINISTERI_20260909"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PRESS_RELEASE_ON_392ND_RE_2026081"
+id: "CA-PIB-CA_SCH_PRESS_RELEASE_ON_392ND_RE_20260811"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

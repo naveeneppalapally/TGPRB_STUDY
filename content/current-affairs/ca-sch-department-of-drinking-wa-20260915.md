@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DEPARTMENT_OF_DRINKING_WA_2026091"
+id: "CA-PIB-CA_SCH_DEPARTMENT_OF_DRINKING_WA_20260915"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_AND_BRAZIL_SIGN_MEM_2026082"
+id: "CA-PIB-CA_INT_INDIA_AND_BRAZIL_SIGN_MEM_20260821"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

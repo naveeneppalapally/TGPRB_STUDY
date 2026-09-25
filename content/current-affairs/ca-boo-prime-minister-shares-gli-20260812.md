@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_PRIME_MINISTER_SHARES_GLI_2026081"
+id: "CA-PIB-CA_BOO_PRIME_MINISTER_SHARES_GLI_20260812"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

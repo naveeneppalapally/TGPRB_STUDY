@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_PRIME_MINISTER_PARTICIPAT_2026090"
+id: "CA-PIB-CA_INT_PRIME_MINISTER_PARTICIPAT_20260901"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

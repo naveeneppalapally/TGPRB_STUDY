@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INDIA_ADVANCING_TOWARDS_V_2026091"
+id: "CA-PIB-CA_DEF_INDIA_ADVANCING_TOWARDS_V_20260918"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

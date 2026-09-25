@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_PRIME_MINISTER_SHRI_NAREN_2026091"
+id: "CA-PIB-CA_INT_PRIME_MINISTER_SHRI_NAREN_20260918"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

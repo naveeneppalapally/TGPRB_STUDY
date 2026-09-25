@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_OPU_IVF_CALF_BORN_IN_BADR_2026091"
+id: "CA-PIB-CA_SCI_OPU_IVF_CALF_BORN_IN_BADR_20260912"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

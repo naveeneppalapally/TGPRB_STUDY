@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_APEDA_AND_GOVERNMENT_OF_T_2026081"
+id: "CA-PIB-CA_INT_APEDA_AND_GOVERNMENT_OF_T_20260814"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

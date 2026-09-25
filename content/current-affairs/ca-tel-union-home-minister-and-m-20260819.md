@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_TEL_UNION_HOME_MINISTER_AND_M_2026081"
+id: "CA-PIB-CA_TEL_UNION_HOME_MINISTER_AND_M_20260819"
 type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"

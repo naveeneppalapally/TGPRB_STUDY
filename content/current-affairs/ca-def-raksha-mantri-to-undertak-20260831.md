@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_TO_UNDERTAK_2026083"
+id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_TO_UNDERTAK_20260831"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

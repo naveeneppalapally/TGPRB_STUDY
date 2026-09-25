@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_INDIAN_RAILWAYS_EXPANDS_P_2026091"
+id: "CA-PIB-CA_ECO_INDIAN_RAILWAYS_EXPANDS_P_20260913"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

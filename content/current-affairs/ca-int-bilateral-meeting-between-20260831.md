@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_BILATERAL_MEETING_BETWEEN_2026083"
+id: "CA-PIB-CA_INT_BILATERAL_MEETING_BETWEEN_20260831"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_MINISTER_SHRI_RAMDA_2026090"
+id: "CA-PIB-CA_SCH_UNION_MINISTER_SHRI_RAMDA_20260904"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

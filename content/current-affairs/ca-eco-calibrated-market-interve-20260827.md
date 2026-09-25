@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_CALIBRATED_MARKET_INTERVE_2026082"
+id: "CA-PIB-CA_ECO_CALIBRATED_MARKET_INTERVE_20260827"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

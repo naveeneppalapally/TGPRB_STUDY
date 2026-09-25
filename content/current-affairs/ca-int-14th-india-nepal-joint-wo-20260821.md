@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_14TH_INDIA_NEPAL_JOINT_WO_2026082"
+id: "CA-PIB-CA_INT_14TH_INDIA_NEPAL_JOINT_WO_20260821"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

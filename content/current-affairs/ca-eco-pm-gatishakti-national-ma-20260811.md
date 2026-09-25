@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PM_GATISHAKTI_NATIONAL_MA_2026081"
+id: "CA-PIB-CA_ECO_PM_GATISHAKTI_NATIONAL_MA_20260811"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

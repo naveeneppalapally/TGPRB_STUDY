@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_PRINCIPAL_SCIENTIFIC_ADVI_2026091"
+id: "CA-PIB-CA_SCI_PRINCIPAL_SCIENTIFIC_ADVI_20260917"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

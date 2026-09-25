@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_FROM_GREEN_STEMS_TO_GREEN_2026091"
+id: "CA-PIB-CA_SCH_FROM_GREEN_STEMS_TO_GREEN_20260912"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

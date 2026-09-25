@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_JAPAN_INVESTMENT_PA_2026082"
+id: "CA-PIB-CA_INT_INDIA_JAPAN_INVESTMENT_PA_20260825"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

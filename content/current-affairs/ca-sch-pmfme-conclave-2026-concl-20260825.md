@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PMFME_CONCLAVE_2026_CONCL_2026082"
+id: "CA-PIB-CA_SCH_PMFME_CONCLAVE_2026_CONCL_20260825"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

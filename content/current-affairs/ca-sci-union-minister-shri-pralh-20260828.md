@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_UNION_MINISTER_SHRI_PRALH_2026082"
+id: "CA-PIB-CA_SCI_UNION_MINISTER_SHRI_PRALH_20260828"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

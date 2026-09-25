@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_ESTABLISHMENT_OF_NEW_AYUS_2026081"
+id: "CA-PIB-CA_SCH_ESTABLISHMENT_OF_NEW_AYUS_20260811"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

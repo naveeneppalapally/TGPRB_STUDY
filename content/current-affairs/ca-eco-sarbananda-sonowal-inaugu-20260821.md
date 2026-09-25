@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_SARBANANDA_SONOWAL_INAUGU_2026082"
+id: "CA-PIB-CA_ECO_SARBANANDA_SONOWAL_INAUGU_20260821"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

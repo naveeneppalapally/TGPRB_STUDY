@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_RAKSHA_MANTRI_CALLS_ON_SR_2026090"
+id: "CA-PIB-CA_INT_RAKSHA_MANTRI_CALLS_ON_SR_20260908"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_INDIA_MUST_BUILD_RESILIEN_2026090"
+id: "CA-PIB-CA_ECO_INDIA_MUST_BUILD_RESILIEN_20260906"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

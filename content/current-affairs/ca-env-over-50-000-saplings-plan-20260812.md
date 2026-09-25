@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_OVER_50_000_SAPLINGS_PLAN_2026081"
+id: "CA-PIB-CA_ENV_OVER_50_000_SAPLINGS_PLAN_20260812"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

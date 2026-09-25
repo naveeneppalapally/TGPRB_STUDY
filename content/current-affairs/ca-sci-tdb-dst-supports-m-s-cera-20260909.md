@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_TDB_DST_SUPPORTS_M_S_CERA_2026090"
+id: "CA-PIB-CA_SCI_TDB_DST_SUPPORTS_M_S_CERA_20260909"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

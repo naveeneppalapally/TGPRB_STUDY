@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_CELEBRATING_GRASSROOTS_IN_2026082"
+id: "CA-PIB-CA_SCH_CELEBRATING_GRASSROOTS_IN_20260826"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

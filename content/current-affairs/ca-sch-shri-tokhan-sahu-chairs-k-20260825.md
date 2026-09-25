@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_SHRI_TOKHAN_SAHU_CHAIRS_K_2026082"
+id: "CA-PIB-CA_SCH_SHRI_TOKHAN_SAHU_CHAIRS_K_20260825"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

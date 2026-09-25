@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_DEPARTMENT_OF_CONSUMER_AF_2026083"
+id: "CA-PIB-CA_SCI_DEPARTMENT_OF_CONSUMER_AF_20260830"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

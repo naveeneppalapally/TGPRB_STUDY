@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_NHRIMH_KOTTAYAM_ORGANISES_2026083"
+id: "CA-PIB-CA_SCI_NHRIMH_KOTTAYAM_ORGANISES_20260831"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

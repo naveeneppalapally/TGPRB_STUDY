@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_ENGLISH_RENDERING_OF_PM_S_2026091"
+id: "CA-PIB-CA_ECO_ENGLISH_RENDERING_OF_PM_S_20260917"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

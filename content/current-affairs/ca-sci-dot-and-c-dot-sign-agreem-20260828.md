@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_DOT_AND_C_DOT_SIGN_AGREEM_2026082"
+id: "CA-PIB-CA_SCI_DOT_AND_C_DOT_SIGN_AGREEM_20260828"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

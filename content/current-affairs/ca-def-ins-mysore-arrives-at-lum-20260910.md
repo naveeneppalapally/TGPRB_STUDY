@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INS_MYSORE_ARRIVES_AT_LUM_2026091"
+id: "CA-PIB-CA_DEF_INS_MYSORE_ARRIVES_AT_LUM_20260910"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

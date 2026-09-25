@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_INTERNATIONAL_LITERACY_DA_2026090"
+id: "CA-PIB-CA_SCH_INTERNATIONAL_LITERACY_DA_20260908"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

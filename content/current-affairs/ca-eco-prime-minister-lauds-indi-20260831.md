@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PRIME_MINISTER_LAUDS_INDI_2026083"
+id: "CA-PIB-CA_ECO_PRIME_MINISTER_LAUDS_INDI_20260831"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

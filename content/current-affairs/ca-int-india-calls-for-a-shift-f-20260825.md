@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_CALLS_FOR_A_SHIFT_F_2026082"
+id: "CA-PIB-CA_INT_INDIA_CALLS_FOR_A_SHIFT_F_20260825"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SPO_65TH_SUBROTO_CUP_INTERNAT_2026081"
+id: "CA-PIB-CA_SPO_65TH_SUBROTO_CUP_INTERNAT_20260819"
 type: "current_affair"
 category: "sports"
 exam_section: "General Knowledge"

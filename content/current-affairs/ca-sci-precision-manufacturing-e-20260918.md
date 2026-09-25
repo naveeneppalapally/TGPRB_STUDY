@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_PRECISION_MANUFACTURING_E_2026091"
+id: "CA-PIB-CA_SCI_PRECISION_MANUFACTURING_E_20260918"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

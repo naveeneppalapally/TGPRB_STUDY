@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PM_TO_VISIT_GUJARAT_AND_M_2026090"
+id: "CA-PIB-CA_ECO_PM_TO_VISIT_GUJARAT_AND_M_20260907"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

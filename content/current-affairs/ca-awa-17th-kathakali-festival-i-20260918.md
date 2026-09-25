@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_17TH_KATHAKALI_FESTIVAL_I_2026091"
+id: "CA-PIB-CA_AWA_17TH_KATHAKALI_FESTIVAL_I_20260918"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

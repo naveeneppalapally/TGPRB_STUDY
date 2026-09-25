@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_PRIME_MINISTER_NARENDRA_M_2026091"
+id: "CA-PIB-CA_INT_PRIME_MINISTER_NARENDRA_M_20260910"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

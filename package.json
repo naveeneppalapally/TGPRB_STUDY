@@ -17,6 +17,8 @@
     "verify:constitution": "npx tsx scripts/verify-constitution-size.ts",
     "verify:integrity": "npx tsx scripts/verify-topic-integrity.ts",
     "sync:ca-topics": "python3 scripts/pib_ca_pipeline/sync_ca_topics.py",
+    "backfill:ca-ids": "python3 scripts/pib_ca_pipeline/backfill_ca_ids.py",
+    "dedup:ca": "python3 scripts/pib_ca_pipeline/archive_duplicate_ca_cards.py",
     "test:exam-strategy": "npx tsx scripts/test-exam-strategy.ts",
     "test:offline-sync": "npx tsx scripts/test-offline-sync.ts",
     "test:personal-notes": "npx tsx scripts/test-personal-notes-e2e.ts",

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_TEL_SHRI_SHIVRAJ_SINGH_CHOUHA_2026091"
+id: "CA-PIB-CA_TEL_SHRI_SHIVRAJ_SINGH_CHOUHA_20260918"
 type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"

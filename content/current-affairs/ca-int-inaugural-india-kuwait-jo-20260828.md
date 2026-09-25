@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INAUGURAL_INDIA_KUWAIT_JO_2026082"
+id: "CA-PIB-CA_INT_INAUGURAL_INDIA_KUWAIT_JO_20260828"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

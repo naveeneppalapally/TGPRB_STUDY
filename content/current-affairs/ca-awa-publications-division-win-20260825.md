@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_PUBLICATIONS_DIVISION_WIN_2026082"
+id: "CA-PIB-CA_AWA_PUBLICATIONS_DIVISION_WIN_20260825"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

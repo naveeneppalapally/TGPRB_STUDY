@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PRADHAN_MANTRI_FASAL_BIMA_2026082"
+id: "CA-PIB-CA_SCH_PRADHAN_MANTRI_FASAL_BIMA_20260829"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

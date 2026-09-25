@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_SURYAKIRAN_AEROBATIC_TEAM_2026092"
+id: "CA-PIB-CA_DEF_SURYAKIRAN_AEROBATIC_TEAM_20260920"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

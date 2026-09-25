@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_MINISTER_SHRI_RAJIV_2026083"
+id: "CA-PIB-CA_SCH_UNION_MINISTER_SHRI_RAJIV_20260831"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

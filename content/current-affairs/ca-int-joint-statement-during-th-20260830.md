@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_JOINT_STATEMENT_DURING_TH_2026083"
+id: "CA-PIB-CA_INT_JOINT_STATEMENT_DURING_TH_20260830"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

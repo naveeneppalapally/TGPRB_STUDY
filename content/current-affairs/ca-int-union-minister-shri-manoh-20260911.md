@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_UNION_MINISTER_SHRI_MANOH_2026091"
+id: "CA-PIB-CA_INT_UNION_MINISTER_SHRI_MANOH_20260911"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

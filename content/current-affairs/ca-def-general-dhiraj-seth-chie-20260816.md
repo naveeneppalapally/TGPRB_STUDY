@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_GENERAL_DHIRAJ_SETH_CHIE_20260819"
+id: "CA-PIB-CA_DEF_GENERAL_DHIRAJ_SETH_CHIE_20260816"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

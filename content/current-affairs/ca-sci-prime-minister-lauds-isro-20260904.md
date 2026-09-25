@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_PRIME_MINISTER_LAUDS_ISRO_2026090"
+id: "CA-PIB-CA_SCI_PRIME_MINISTER_LAUDS_ISRO_20260904"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

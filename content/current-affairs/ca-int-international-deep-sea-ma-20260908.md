@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INTERNATIONAL_DEEP_SEA_MA_2026090"
+id: "CA-PIB-CA_INT_INTERNATIONAL_DEEP_SEA_MA_20260908"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

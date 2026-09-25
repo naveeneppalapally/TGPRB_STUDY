@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_MILITARY_MODERNISATION_DR_2026081"
+id: "CA-PIB-CA_DEF_MILITARY_MODERNISATION_DR_20260814"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

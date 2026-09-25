@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_UNION_MINISTER_OF_COMMUNI_2026082"
+id: "CA-PIB-CA_SCI_UNION_MINISTER_OF_COMMUNI_20260825"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

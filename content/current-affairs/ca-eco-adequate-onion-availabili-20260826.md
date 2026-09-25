@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_ADEQUATE_ONION_AVAILABILI_2026082"
+id: "CA-PIB-CA_ECO_ADEQUATE_ONION_AVAILABILI_20260826"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

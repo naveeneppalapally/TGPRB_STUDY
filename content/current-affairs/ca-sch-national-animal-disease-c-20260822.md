@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_NATIONAL_ANIMAL_DISEASE_C_2026082"
+id: "CA-PIB-CA_SCH_NATIONAL_ANIMAL_DISEASE_C_20260822"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

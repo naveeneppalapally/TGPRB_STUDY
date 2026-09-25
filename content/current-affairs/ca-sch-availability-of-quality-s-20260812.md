@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_AVAILABILITY_OF_QUALITY_S_2026081"
+id: "CA-PIB-CA_SCH_AVAILABILITY_OF_QUALITY_S_20260812"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

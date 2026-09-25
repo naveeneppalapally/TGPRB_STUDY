@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_TRIBUTE_TO_GOA_LIBERATION_2026082"
+id: "CA-PIB-CA_DEF_TRIBUTE_TO_GOA_LIBERATION_20260826"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

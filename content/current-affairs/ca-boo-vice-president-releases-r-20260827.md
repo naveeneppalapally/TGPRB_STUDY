@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_VICE_PRESIDENT_RELEASES_R_2026082"
+id: "CA-PIB-CA_BOO_VICE_PRESIDENT_RELEASES_R_20260827"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

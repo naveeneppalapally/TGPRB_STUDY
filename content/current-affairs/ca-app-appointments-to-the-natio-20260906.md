@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_APP_APPOINTMENTS_TO_THE_NATIO_2026090"
+id: "CA-PIB-CA_APP_APPOINTMENTS_TO_THE_NATIO_20260906"
 type: "current_affair"
 category: "appointments"
 exam_section: "Polity"

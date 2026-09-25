@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_IAF_S_SARANG_HELICOPTER_T_2026090"
+id: "CA-PIB-CA_DEF_IAF_S_SARANG_HELICOPTER_T_20260906"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_WORLD_CIRCULAR_ECONOMY_FO_2026091"
+id: "CA-PIB-CA_ENV_WORLD_CIRCULAR_ECONOMY_FO_20260916"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

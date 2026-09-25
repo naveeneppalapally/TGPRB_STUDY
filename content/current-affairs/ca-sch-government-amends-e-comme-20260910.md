@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_GOVERNMENT_AMENDS_E_COMME_2026091"
+id: "CA-PIB-CA_SCH_GOVERNMENT_AMENDS_E_COMME_20260910"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

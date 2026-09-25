@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_PRIME_MINISTER_HIGHLIGHTS_2026081"
+id: "CA-PIB-CA_ENV_PRIME_MINISTER_HIGHLIGHTS_20260812"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

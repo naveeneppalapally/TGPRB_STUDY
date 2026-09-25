@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_BELGIUM_JOINT_STATE_2026090"
+id: "CA-PIB-CA_INT_INDIA_BELGIUM_JOINT_STATE_20260903"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

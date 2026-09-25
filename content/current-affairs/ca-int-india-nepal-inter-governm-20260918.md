@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_NEPAL_INTER_GOVERNM_2026091"
+id: "CA-PIB-CA_INT_INDIA_NEPAL_INTER_GOVERNM_20260918"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

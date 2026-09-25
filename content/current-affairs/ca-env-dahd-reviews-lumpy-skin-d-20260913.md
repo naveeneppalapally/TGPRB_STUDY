@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_DAHD_REVIEWS_LUMPY_SKIN_D_2026091"
+id: "CA-PIB-CA_ENV_DAHD_REVIEWS_LUMPY_SKIN_D_20260913"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

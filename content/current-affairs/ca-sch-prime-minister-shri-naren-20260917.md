@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PRIME_MINISTER_SHRI_NAREN_2026091"
+id: "CA-PIB-CA_SCH_PRIME_MINISTER_SHRI_NAREN_20260917"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UIDAI_SPECIAL_DRIVE_COMPL_2026081"
+id: "CA-PIB-CA_SCH_UIDAI_SPECIAL_DRIVE_COMPL_20260818"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

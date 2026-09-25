@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_EU_FTA_OPENS_HUGE_O_2026090"
+id: "CA-PIB-CA_INT_INDIA_EU_FTA_OPENS_HUGE_O_20260904"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_ICAR_IIOR_TO_HOST_NATIONA_2026083"
+id: "CA-PIB-CA_SCI_ICAR_IIOR_TO_HOST_NATIONA_20260831"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

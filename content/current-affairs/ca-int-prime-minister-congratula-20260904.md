@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_PRIME_MINISTER_CONGRATULA_2026090"
+id: "CA-PIB-CA_INT_PRIME_MINISTER_CONGRATULA_20260904"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

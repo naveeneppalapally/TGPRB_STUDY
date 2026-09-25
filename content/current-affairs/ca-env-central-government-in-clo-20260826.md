@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_CENTRAL_GOVERNMENT_IN_CLO_2026082"
+id: "CA-PIB-CA_ENV_CENTRAL_GOVERNMENT_IN_CLO_20260826"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

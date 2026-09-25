@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_CSIR_NISCPR_LEVERAGES_SAR_2026091"
+id: "CA-PIB-CA_SCI_CSIR_NISCPR_LEVERAGES_SAR_20260915"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

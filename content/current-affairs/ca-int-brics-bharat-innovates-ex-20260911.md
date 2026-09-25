@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_BRICS_BHARAT_INNOVATES_EX_2026091"
+id: "CA-PIB-CA_INT_BRICS_BHARAT_INNOVATES_EX_20260911"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

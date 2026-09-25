@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_ENDORSES_THE_CALL_T_2026090"
+id: "CA-PIB-CA_INT_INDIA_ENDORSES_THE_CALL_T_20260909"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

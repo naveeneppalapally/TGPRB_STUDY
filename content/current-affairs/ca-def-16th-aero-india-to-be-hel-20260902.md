@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_16TH_AERO_INDIA_TO_BE_HEL_2026090"
+id: "CA-PIB-CA_DEF_16TH_AERO_INDIA_TO_BE_HEL_20260902"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

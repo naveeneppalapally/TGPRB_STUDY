@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_UNION_MINISTER_OF_COMMERC_2026081"
+id: "CA-PIB-CA_INT_UNION_MINISTER_OF_COMMERC_20260818"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

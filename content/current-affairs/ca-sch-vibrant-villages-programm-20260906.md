@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_VIBRANT_VILLAGES_PROGRAMM_2026090"
+id: "CA-PIB-CA_SCH_VIBRANT_VILLAGES_PROGRAMM_20260906"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

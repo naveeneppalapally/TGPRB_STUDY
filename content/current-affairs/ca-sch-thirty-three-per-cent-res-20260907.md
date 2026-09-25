@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_THIRTY_THREE_PER_CENT_RES_2026090"
+id: "CA-PIB-CA_SCH_THIRTY_THREE_PER_CENT_RES_20260907"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

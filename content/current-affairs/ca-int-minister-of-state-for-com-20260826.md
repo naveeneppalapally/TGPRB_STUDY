@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_MINISTER_OF_STATE_FOR_COM_2026082"
+id: "CA-PIB-CA_INT_MINISTER_OF_STATE_FOR_COM_20260826"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

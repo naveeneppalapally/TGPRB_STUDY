@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_ENGLISH_TRANSLATION_OF_PR_2026083"
+id: "CA-PIB-CA_INT_ENGLISH_TRANSLATION_OF_PR_20260830"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

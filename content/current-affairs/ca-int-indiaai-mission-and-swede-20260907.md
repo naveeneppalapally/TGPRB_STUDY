@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIAAI_MISSION_AND_SWEDE_2026090"
+id: "CA-PIB-CA_INT_INDIAAI_MISSION_AND_SWEDE_20260907"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

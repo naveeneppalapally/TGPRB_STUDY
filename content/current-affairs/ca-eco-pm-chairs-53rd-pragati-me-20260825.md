@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PM_CHAIRS_53RD_PRAGATI_ME_2026082"
+id: "CA-PIB-CA_ECO_PM_CHAIRS_53RD_PRAGATI_ME_20260825"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

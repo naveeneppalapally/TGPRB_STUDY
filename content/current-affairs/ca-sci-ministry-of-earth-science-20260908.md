@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_MINISTRY_OF_EARTH_SCIENCE_2026090"
+id: "CA-PIB-CA_SCI_MINISTRY_OF_EARTH_SCIENCE_20260908"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

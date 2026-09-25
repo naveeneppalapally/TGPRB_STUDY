@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_UNION_MINISTER_SHRI_GAJEN_2026082"
+id: "CA-PIB-CA_BOO_UNION_MINISTER_SHRI_GAJEN_20260825"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

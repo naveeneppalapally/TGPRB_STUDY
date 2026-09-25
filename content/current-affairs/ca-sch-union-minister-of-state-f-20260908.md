@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_MINISTER_OF_STATE_F_2026090"
+id: "CA-PIB-CA_SCH_UNION_MINISTER_OF_STATE_F_20260908"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

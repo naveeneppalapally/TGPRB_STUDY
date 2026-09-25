@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_DAC_CLEARS_CAPITAL_ACQUIS_2026090"
+id: "CA-PIB-CA_DEF_DAC_CLEARS_CAPITAL_ACQUIS_20260907"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

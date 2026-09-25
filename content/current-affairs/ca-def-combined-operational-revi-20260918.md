@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_COMBINED_OPERATIONAL_REVI_2026091"
+id: "CA-PIB-CA_DEF_COMBINED_OPERATIONAL_REVI_20260918"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

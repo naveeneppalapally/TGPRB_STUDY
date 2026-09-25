@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_JUD_UNION_HEALTH_MINISTRY_ISS_2026091"
+id: "CA-PIB-CA_JUD_UNION_HEALTH_MINISTRY_ISS_20260917"
 type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_DATA_CENTRES_IN_INDIA_INF_2026091"
+id: "CA-PIB-CA_ECO_DATA_CENTRES_IN_INDIA_INF_20260914"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

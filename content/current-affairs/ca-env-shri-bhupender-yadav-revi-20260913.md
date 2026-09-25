@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_SHRI_BHUPENDER_YADAV_REVI_2026091"
+id: "CA-PIB-CA_ENV_SHRI_BHUPENDER_YADAV_REVI_20260913"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

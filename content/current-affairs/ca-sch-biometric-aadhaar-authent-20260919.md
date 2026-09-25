@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_BIOMETRIC_AADHAAR_AUTHENT_2026091"
+id: "CA-PIB-CA_SCH_BIOMETRIC_AADHAAR_AUTHENT_20260919"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

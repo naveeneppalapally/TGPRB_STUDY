@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_MEETING_OF_PRIME_MINISTER_2026083"
+id: "CA-PIB-CA_INT_MEETING_OF_PRIME_MINISTER_20260831"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

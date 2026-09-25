@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_HEALTH_MINISTRY_PRO_2026091"
+id: "CA-PIB-CA_SCH_UNION_HEALTH_MINISTRY_PRO_20260917"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

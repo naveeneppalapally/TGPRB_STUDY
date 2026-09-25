@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_APP_UNION_HOME_MINISTER_AND_M_2026090"
+id: "CA-PIB-CA_APP_UNION_HOME_MINISTER_AND_M_20260907"
 type: "current_affair"
 category: "appointments"
 exam_section: "Polity"

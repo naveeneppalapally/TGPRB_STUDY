@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_NET_PROFIT_OF_REGIONAL_RU_2026082"
+id: "CA-PIB-CA_ECO_NET_PROFIT_OF_REGIONAL_RU_20260825"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

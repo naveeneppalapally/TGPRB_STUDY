@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_RASHTRIYA_SANKALP_SAMAROH_2026092"
+id: "CA-PIB-CA_SCH_RASHTRIYA_SANKALP_SAMAROH_20260920"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

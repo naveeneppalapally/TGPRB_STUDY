@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_FRESH_IMPETUS_TO_INDIA_MO_2026090"
+id: "CA-PIB-CA_DEF_FRESH_IMPETUS_TO_INDIA_MO_20260908"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

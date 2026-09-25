@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_TEL_SOUTH_ZONAL_AGRICULTURE_C_2026091"
+id: "CA-PIB-CA_TEL_SOUTH_ZONAL_AGRICULTURE_C_20260917"
 type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"

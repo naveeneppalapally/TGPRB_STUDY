@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_UNUSUAL_WAVE_LIKE_HEAT_TR_2026091"
+id: "CA-PIB-CA_SCI_UNUSUAL_WAVE_LIKE_HEAT_TR_20260914"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

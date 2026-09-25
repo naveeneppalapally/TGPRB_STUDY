@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_SIDBI_ORGANIZES_A_CONCLAV_2026082"
+id: "CA-PIB-CA_ECO_SIDBI_ORGANIZES_A_CONCLAV_20260826"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

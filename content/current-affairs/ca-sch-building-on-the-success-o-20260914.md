@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_BUILDING_ON_THE_SUCCESS_O_2026091"
+id: "CA-PIB-CA_SCH_BUILDING_ON_THE_SUCCESS_O_20260914"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

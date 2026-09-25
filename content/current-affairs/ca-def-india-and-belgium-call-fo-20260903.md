@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INDIA_AND_BELGIUM_CALL_FO_2026090"
+id: "CA-PIB-CA_DEF_INDIA_AND_BELGIUM_CALL_FO_20260903"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_S_BIGGEST_SEMICONDU_2026081"
+id: "CA-PIB-CA_INT_INDIA_S_BIGGEST_SEMICONDU_20260818"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_TEL_COAL_INDIA_ADVANCES_TECHN_2026092"
+id: "CA-PIB-CA_TEL_COAL_INDIA_ADVANCES_TECHN_20260920"
 type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"

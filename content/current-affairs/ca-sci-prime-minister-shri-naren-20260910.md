@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_PRIME_MINISTER_SHRI_NAREN_2026091"
+id: "CA-PIB-CA_SCI_PRIME_MINISTER_SHRI_NAREN_20260910"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

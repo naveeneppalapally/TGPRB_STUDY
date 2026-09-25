@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_PRIME_MINISTER_SHRI_NAREN_2026091"
+id: "CA-PIB-CA_ENV_PRIME_MINISTER_SHRI_NAREN_20260919"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

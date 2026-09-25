@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_INDIA_POST_ACCELERATES_DI_2026082"
+id: "CA-PIB-CA_SCH_INDIA_POST_ACCELERATES_DI_20260824"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

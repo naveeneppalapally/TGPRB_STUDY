@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_DRI_SEIZES_TWO_LEOPARD_PE_2026090"
+id: "CA-PIB-CA_ENV_DRI_SEIZES_TWO_LEOPARD_PE_20260908"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

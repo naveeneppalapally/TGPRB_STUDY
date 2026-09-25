@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_VISIT_OF_PRIME_MINISTER_S_2026082"
+id: "CA-PIB-CA_INT_VISIT_OF_PRIME_MINISTER_S_20260828"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

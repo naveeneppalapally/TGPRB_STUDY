@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_16TH_NATIONAL_MEET_OF_STA_2026090"
+id: "CA-PIB-CA_ENV_16TH_NATIONAL_MEET_OF_STA_20260906"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

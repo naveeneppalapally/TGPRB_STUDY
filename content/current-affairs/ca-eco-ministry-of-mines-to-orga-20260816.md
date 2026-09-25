@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_MINISTRY_OF_MINES_TO_ORGA_2026081"
+id: "CA-PIB-CA_ECO_MINISTRY_OF_MINES_TO_ORGA_20260816"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

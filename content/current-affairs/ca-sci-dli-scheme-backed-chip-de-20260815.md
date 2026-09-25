@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_DLI_SCHEME_BACKED_CHIP_DE_2026081"
+id: "CA-PIB-CA_SCI_DLI_SCHEME_BACKED_CHIP_DE_20260815"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

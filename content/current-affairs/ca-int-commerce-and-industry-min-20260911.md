@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_COMMERCE_AND_INDUSTRY_MIN_2026091"
+id: "CA-PIB-CA_INT_COMMERCE_AND_INDUSTRY_MIN_20260911"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_PM_TO_INAUGURATE_INTERNAT_2026091"
+id: "CA-PIB-CA_ENV_PM_TO_INAUGURATE_INTERNAT_20260918"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

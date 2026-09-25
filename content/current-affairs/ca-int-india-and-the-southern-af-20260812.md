@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_AND_THE_SOUTHERN_AF_2026081"
+id: "CA-PIB-CA_INT_INDIA_AND_THE_SOUTHERN_AF_20260812"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

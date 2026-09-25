@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SPO_PRIME_MINISTER_EXTENDS_GR_2026082"
+id: "CA-PIB-CA_SPO_PRIME_MINISTER_EXTENDS_GR_20260829"
 type: "current_affair"
 category: "sports"
 exam_section: "General Knowledge"

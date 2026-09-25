@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_INDIA_REAFFIRMS_COMMITMEN_2026091"
+id: "CA-PIB-CA_ENV_INDIA_REAFFIRMS_COMMITMEN_20260916"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

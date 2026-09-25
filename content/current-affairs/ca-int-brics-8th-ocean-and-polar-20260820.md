@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_BRICS_8TH_OCEAN_AND_POLAR_2026082"
+id: "CA-PIB-CA_INT_BRICS_8TH_OCEAN_AND_POLAR_20260820"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

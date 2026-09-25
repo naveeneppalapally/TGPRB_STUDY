@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_TURNING_THE_WHEEL_OF_HERI_2026082"
+id: "CA-PIB-CA_INT_TURNING_THE_WHEEL_OF_HERI_20260826"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_INDORE_METRO_PRIORITY_COR_2026090"
+id: "CA-PIB-CA_SCH_INDORE_METRO_PRIORITY_COR_20260905"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

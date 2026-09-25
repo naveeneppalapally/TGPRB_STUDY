@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_RESEARCH_CAPACITY_BUILDIN_2026081"
+id: "CA-PIB-CA_SCH_RESEARCH_CAPACITY_BUILDIN_20260811"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_MINISTRY_OF_COAL_URGES_UT_2026091"
+id: "CA-PIB-CA_ECO_MINISTRY_OF_COAL_URGES_UT_20260917"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

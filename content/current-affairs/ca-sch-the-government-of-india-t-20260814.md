@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_THE_GOVERNMENT_OF_INDIA_T_2026081"
+id: "CA-PIB-CA_SCH_THE_GOVERNMENT_OF_INDIA_T_20260814"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

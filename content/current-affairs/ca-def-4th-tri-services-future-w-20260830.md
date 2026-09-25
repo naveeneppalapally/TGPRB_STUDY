@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_4TH_TRI_SERVICES_FUTURE_W_2026083"
+id: "CA-PIB-CA_DEF_4TH_TRI_SERVICES_FUTURE_W_20260830"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

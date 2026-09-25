@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_INDIA_CALLS_FOR_COMMUNITY_2026082"
+id: "CA-PIB-CA_ENV_INDIA_CALLS_FOR_COMMUNITY_20260826"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_KEEL_LAYING_OF_FIRST_NEXT_2026091"
+id: "CA-PIB-CA_DEF_KEEL_LAYING_OF_FIRST_NEXT_20260919"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

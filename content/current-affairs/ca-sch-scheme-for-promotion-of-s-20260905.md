@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_SCHEME_FOR_PROMOTION_OF_S_2026090"
+id: "CA-PIB-CA_SCH_SCHEME_FOR_PROMOTION_OF_S_20260905"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

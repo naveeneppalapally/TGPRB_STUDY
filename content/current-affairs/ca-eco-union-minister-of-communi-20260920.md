@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_UNION_MINISTER_OF_COMMUNI_2026092"
+id: "CA-PIB-CA_ECO_UNION_MINISTER_OF_COMMUNI_20260920"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

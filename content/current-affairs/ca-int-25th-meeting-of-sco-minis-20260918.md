@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_25TH_MEETING_OF_SCO_MINIS_2026091"
+id: "CA-PIB-CA_INT_25TH_MEETING_OF_SCO_MINIS_20260918"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

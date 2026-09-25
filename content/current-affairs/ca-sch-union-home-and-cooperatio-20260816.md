@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_HOME_AND_COOPERATIO_2026081"
+id: "CA-PIB-CA_SCH_UNION_HOME_AND_COOPERATIO_20260816"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

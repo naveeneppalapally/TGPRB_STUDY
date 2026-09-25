@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_COAL_INDIA_OUTPUT_AND_DIS_2026090"
+id: "CA-PIB-CA_ECO_COAL_INDIA_OUTPUT_AND_DIS_20260905"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_MOD_INKS_CONTRACT_WITH_GE_2026081"
+id: "CA-PIB-CA_DEF_MOD_INKS_CONTRACT_WITH_GE_20260817"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

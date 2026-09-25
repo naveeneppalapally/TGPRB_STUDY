@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_SECURE_SEA_LANES_AND_FREE_2026090"
+id: "CA-PIB-CA_INT_SECURE_SEA_LANES_AND_FREE_20260908"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

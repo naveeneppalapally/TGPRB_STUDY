@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_THREE_SANCHAR_MITRAS_SELE_2026081"
+id: "CA-PIB-CA_INT_THREE_SANCHAR_MITRAS_SELE_20260812"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

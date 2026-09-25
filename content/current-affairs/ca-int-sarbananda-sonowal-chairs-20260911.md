@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_SARBANANDA_SONOWAL_CHAIRS_2026091"
+id: "CA-PIB-CA_INT_SARBANANDA_SONOWAL_CHAIRS_20260911"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

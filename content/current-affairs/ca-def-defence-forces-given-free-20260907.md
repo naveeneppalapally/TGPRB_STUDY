@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_DEFENCE_FORCES_GIVEN_FREE_2026090"
+id: "CA-PIB-CA_DEF_DEFENCE_FORCES_GIVEN_FREE_20260907"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

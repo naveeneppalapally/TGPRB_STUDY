@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_PRESIDENT_APPROVES_78_GAL_2026081"
+id: "CA-PIB-CA_DEF_PRESIDENT_APPROVES_78_GAL_20260814"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_SWACHHATA_PLEDGE_ADMINIST_2026091"
+id: "CA-PIB-CA_SCH_SWACHHATA_PLEDGE_ADMINIST_20260919"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

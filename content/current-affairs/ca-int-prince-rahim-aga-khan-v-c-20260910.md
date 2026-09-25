@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_PRINCE_RAHIM_AGA_KHAN_V_C_2026091"
+id: "CA-PIB-CA_INT_PRINCE_RAHIM_AGA_KHAN_V_C_20260910"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

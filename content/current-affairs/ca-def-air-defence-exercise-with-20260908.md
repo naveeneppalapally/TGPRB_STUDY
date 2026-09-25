@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_AIR_DEFENCE_EXERCISE_WITH_2026090"
+id: "CA-PIB-CA_DEF_AIR_DEFENCE_EXERCISE_WITH_20260908"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

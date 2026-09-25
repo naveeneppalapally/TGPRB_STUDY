@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_UNION_MINISTER_ASHWINI_VA_2026083"
+id: "CA-PIB-CA_SCH_UNION_MINISTER_ASHWINI_VA_20260831"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

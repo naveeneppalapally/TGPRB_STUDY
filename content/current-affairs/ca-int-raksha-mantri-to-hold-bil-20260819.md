@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_RAKSHA_MANTRI_TO_HOLD_BIL_2026081"
+id: "CA-PIB-CA_INT_RAKSHA_MANTRI_TO_HOLD_BIL_20260819"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

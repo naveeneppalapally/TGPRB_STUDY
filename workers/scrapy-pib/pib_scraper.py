@@ -965,15 +965,35 @@ def make_slug(category: str, title: str, date_str: str) -> str:
     return f"ca-{cat.lower()}-{slug.lower()}-{date_str.replace('-', '')}"
 
 
-def event_key_exists(event_key: str) -> bool:
-    if not event_key:
-        return False
+def normalize_title(title: str) -> str:
+    """Collapse punctuation and case so re-extractions compare equal."""
+    return re.sub(r"[^a-z0-9]+", " ", title.lower()).strip()
+
+
+def card_exists(event_key: str, title: str, source_url: str = "") -> bool:
+    """
+    Skip a card when its PIB release, event key, or normalized title already exists.
+
+    The AI-generated event_key is not stable across runs, so the same press
+    release re-extracted on another day can produce a different key
+    (DRI-WILDLIFE-SEIZURES-2026 vs DRI-WILDLIFE-SEIZURE-2026). The PRID in the
+    source URL is stable, so it is checked first, then the event key, then the
+    normalized PIB title.
+    """
+    norm = normalize_title(title)
+    prid = re.search(r"PRID=(\d+)", source_url or "", re.IGNORECASE)
     for path in CONTENT_DIR.glob("*.md"):
         try:
-            if f'event_key: "{event_key}"' in path.read_text(encoding="utf-8"):
-                return True
+            text = path.read_text(encoding="utf-8")
         except Exception:
-            pass
+            continue
+        if prid and f"PRID={prid.group(1)}" in text:
+            return True
+        if event_key and f'event_key: "{event_key}"' in text:
+            return True
+        hit = re.search(r'^headline:\s*"?(.*?)"?\s*$', text, re.MULTILINE)
+        if norm and hit and normalize_title(hit.group(1)) == norm:
+            return True
     return False
 
 
@@ -995,8 +1015,8 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
                 note_ids.append(t)
 
     # Deduplication by event_key
-    if event_key and event_key_exists(event_key):
-        print(f"    [Skip] Duplicate event_key: {event_key}")
+    if card_exists(event_key, title, release.get("url", "")):
+        print(f"    [Skip] Duplicate card: {event_key or title}")
         return None
 
     # Always use PIB publication date - never trust Gemini's extracted event_date
@@ -1008,7 +1028,10 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     if out_path.exists():
         return None
 
-    item_id = f"CA-PIB-{slug.upper().replace('-', '_')[:40]}"
+    # Derive the id from the full slug. Never truncate: the slug ends with the
+    # publication date, so a fixed-width cut collapses consecutive days onto the
+    # same id (2026-09-08 and 2026-09-09 both became ..._2026090).
+    item_id = f"CA-PIB-{slug.upper().replace('-', '_')}"
     related = "\n".join(f'  - "{t}"' for t in note_ids) if note_ids else '  - ""'
 
     is_tg = bool(ai.get("is_telangana_focus", False))

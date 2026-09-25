@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_AND_SEYCHELLES_SHAR_2026090"
+id: "CA-PIB-CA_INT_INDIA_AND_SEYCHELLES_SHAR_20260902"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

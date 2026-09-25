@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_DIGITAL_INDIA_BHASHINI_CE_2026091"
+id: "CA-PIB-CA_SCI_DIGITAL_INDIA_BHASHINI_CE_20260912"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

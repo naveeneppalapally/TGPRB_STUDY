@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_DPIIT_SIGNS_MOUS_WITH_PHO_2026082"
+id: "CA-PIB-CA_ECO_DPIIT_SIGNS_MOUS_WITH_PHO_20260820"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

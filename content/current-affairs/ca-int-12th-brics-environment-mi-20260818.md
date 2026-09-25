@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_12TH_BRICS_ENVIRONMENT_MI_2026081"
+id: "CA-PIB-CA_INT_12TH_BRICS_ENVIRONMENT_MI_20260818"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

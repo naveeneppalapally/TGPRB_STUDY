@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INS_NIPUN_COMMISSIONED_IN_2026083"
+id: "CA-PIB-CA_DEF_INS_NIPUN_COMMISSIONED_IN_20260831"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

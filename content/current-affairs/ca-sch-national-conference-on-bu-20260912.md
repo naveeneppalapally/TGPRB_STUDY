@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_NATIONAL_CONFERENCE_ON_BU_2026091"
+id: "CA-PIB-CA_SCH_NATIONAL_CONFERENCE_ON_BU_20260912"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

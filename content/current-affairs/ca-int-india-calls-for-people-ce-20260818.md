@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_CALLS_FOR_PEOPLE_CE_2026081"
+id: "CA-PIB-CA_INT_INDIA_CALLS_FOR_PEOPLE_CE_20260818"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIAN_PARLIAMENTARY_DELE_2026091"
+id: "CA-PIB-CA_INT_INDIAN_PARLIAMENTARY_DELE_20260915"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

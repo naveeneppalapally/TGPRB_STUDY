@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_ENGLISH_RENDERING_OF_PM_S_2026090"
+id: "CA-PIB-CA_INT_ENGLISH_RENDERING_OF_PM_S_20260906"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

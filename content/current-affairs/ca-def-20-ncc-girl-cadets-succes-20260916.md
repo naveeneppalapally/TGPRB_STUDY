@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_20_NCC_GIRL_CADETS_SUCCES_2026091"
+id: "CA-PIB-CA_DEF_20_NCC_GIRL_CADETS_SUCCES_20260916"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

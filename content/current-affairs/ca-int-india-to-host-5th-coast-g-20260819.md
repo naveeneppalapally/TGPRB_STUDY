@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_TO_HOST_5TH_COAST_G_2026081"
+id: "CA-PIB-CA_INT_INDIA_TO_HOST_5TH_COAST_G_20260819"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

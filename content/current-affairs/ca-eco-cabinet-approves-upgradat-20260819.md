@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_CABINET_APPROVES_UPGRADAT_2026081"
+id: "CA-PIB-CA_ECO_CABINET_APPROVES_UPGRADAT_20260819"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

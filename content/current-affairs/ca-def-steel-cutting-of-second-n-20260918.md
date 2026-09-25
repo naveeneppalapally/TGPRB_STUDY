@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_STEEL_CUTTING_OF_SECOND_N_2026091"
+id: "CA-PIB-CA_DEF_STEEL_CUTTING_OF_SECOND_N_20260918"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

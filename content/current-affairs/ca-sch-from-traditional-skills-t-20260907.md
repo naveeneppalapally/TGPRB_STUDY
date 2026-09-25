@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_FROM_TRADITIONAL_SKILLS_T_2026090"
+id: "CA-PIB-CA_SCH_FROM_TRADITIONAL_SKILLS_T_20260907"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

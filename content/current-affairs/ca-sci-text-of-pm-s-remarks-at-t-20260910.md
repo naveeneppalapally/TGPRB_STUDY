@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_TEXT_OF_PM_S_REMARKS_AT_T_2026091"
+id: "CA-PIB-CA_SCI_TEXT_OF_PM_S_REMARKS_AT_T_20260910"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

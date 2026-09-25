@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PSB_CONFLUENCE_2026_CONCL_2026081"
+id: "CA-PIB-CA_ECO_PSB_CONFLUENCE_2026_CONCL_20260818"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

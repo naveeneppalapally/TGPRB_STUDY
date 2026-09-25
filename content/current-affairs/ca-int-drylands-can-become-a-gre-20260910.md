@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_DRYLANDS_CAN_BECOME_A_GRE_2026091"
+id: "CA-PIB-CA_INT_DRYLANDS_CAN_BECOME_A_GRE_20260910"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_CONVERGENCE_FOR_RURAL_DEV_2026082"
+id: "CA-PIB-CA_SCH_CONVERGENCE_FOR_RURAL_DEV_20260827"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

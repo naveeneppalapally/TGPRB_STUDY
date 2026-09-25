@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_A_SMART_CANCER_DRUG_ACTIV_2026081"
+id: "CA-PIB-CA_SCI_A_SMART_CANCER_DRUG_ACTIV_20260819"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

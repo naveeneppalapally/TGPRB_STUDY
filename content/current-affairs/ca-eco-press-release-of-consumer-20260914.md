@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PRESS_RELEASE_OF_CONSUMER_2026091"
+id: "CA-PIB-CA_ECO_PRESS_RELEASE_OF_CONSUMER_20260914"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

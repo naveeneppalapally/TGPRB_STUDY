@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DARPG_ORGANISES_20TH_NATI_2026082"
+id: "CA-PIB-CA_SCH_DARPG_ORGANISES_20TH_NATI_20260821"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

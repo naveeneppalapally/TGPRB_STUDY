@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_COASTAL_CLEANUP_DRIVE_ORG_2026091"
+id: "CA-PIB-CA_ENV_COASTAL_CLEANUP_DRIVE_ORG_20260912"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

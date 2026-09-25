@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_RESOLVED_TO_ELEVATE_INDIA_2026092"
+id: "CA-PIB-CA_ECO_RESOLVED_TO_ELEVATE_INDIA_20260920"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_WHEN_SWACHHATA_BECAME_A_P_2026092"
+id: "CA-PIB-CA_SCH_WHEN_SWACHHATA_BECAME_A_P_20260920"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

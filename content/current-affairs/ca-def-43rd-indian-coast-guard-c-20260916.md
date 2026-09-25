@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_43RD_INDIAN_COAST_GUARD_C_2026091"
+id: "CA-PIB-CA_DEF_43RD_INDIAN_COAST_GUARD_C_20260916"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

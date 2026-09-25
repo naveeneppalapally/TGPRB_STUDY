@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_INDIA_ADMINISTERS_80_LAKH_2026091"
+id: "CA-PIB-CA_SCH_INDIA_ADMINISTERS_80_LAKH_20260911"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

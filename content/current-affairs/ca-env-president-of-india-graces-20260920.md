@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_PRESIDENT_OF_INDIA_GRACES_2026092"
+id: "CA-PIB-CA_ENV_PRESIDENT_OF_INDIA_GRACES_20260920"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

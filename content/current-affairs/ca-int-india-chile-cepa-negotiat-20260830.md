@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_CHILE_CEPA_NEGOTIAT_2026083"
+id: "CA-PIB-CA_INT_INDIA_CHILE_CEPA_NEGOTIAT_20260830"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_RAKSHA_MANTRI_TO_UNDERTAK_2026090"
+id: "CA-PIB-CA_INT_RAKSHA_MANTRI_TO_UNDERTAK_20260906"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

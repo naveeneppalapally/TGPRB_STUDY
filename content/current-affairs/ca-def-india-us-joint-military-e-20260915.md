@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INDIA_US_JOINT_MILITARY_E_2026091"
+id: "CA-PIB-CA_DEF_INDIA_US_JOINT_MILITARY_E_20260915"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

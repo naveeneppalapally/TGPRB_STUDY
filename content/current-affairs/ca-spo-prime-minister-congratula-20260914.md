@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SPO_PRIME_MINISTER_CONGRATULA_2026091"
+id: "CA-PIB-CA_SPO_PRIME_MINISTER_CONGRATULA_20260914"
 type: "current_affair"
 category: "sports"
 exam_section: "General Knowledge"

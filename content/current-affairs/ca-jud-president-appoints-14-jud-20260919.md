@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_JUD_PRESIDENT_APPOINTS_14_JUD_2026091"
+id: "CA-PIB-CA_JUD_PRESIDENT_APPOINTS_14_JUD_20260919"
 type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_APP_VICE_PRESIDENT_TO_VISIT_A_2026090"
+id: "CA-PIB-CA_APP_VICE_PRESIDENT_TO_VISIT_A_20260905"
 type: "current_affair"
 category: "appointments"
 exam_section: "Polity"

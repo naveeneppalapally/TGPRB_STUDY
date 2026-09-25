@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_KERALA_S_ECOSENSE_SCHOLAR_2026091"
+id: "CA-PIB-CA_SCH_KERALA_S_ECOSENSE_SCHOLAR_20260914"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

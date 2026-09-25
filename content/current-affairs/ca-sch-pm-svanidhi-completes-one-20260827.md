@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PM_SVANIDHI_COMPLETES_ONE_2026082"
+id: "CA-PIB-CA_SCH_PM_SVANIDHI_COMPLETES_ONE_20260827"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

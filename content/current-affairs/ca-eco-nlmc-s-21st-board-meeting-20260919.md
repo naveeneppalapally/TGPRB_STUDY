@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_NLMC_S_21ST_BOARD_MEETING_2026091"
+id: "CA-PIB-CA_ECO_NLMC_S_21ST_BOARD_MEETING_20260919"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

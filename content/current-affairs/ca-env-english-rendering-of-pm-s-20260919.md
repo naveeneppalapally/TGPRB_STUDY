@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_ENGLISH_RENDERING_OF_PM_S_2026091"
+id: "CA-PIB-CA_ENV_ENGLISH_RENDERING_OF_PM_S_20260919"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

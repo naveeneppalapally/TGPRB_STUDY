@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_DEFENCE_SECRETARY_CONCLUD_2026081"
+id: "CA-PIB-CA_DEF_DEFENCE_SECRETARY_CONCLUD_20260819"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

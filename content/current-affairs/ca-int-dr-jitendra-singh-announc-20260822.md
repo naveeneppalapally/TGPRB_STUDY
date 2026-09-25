@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_DR_JITENDRA_SINGH_ANNOUNC_2026082"
+id: "CA-PIB-CA_INT_DR_JITENDRA_SINGH_ANNOUNC_20260822"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

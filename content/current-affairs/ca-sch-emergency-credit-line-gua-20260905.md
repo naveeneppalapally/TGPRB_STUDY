@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_EMERGENCY_CREDIT_LINE_GUA_2026090"
+id: "CA-PIB-CA_SCH_EMERGENCY_CREDIT_LINE_GUA_20260905"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

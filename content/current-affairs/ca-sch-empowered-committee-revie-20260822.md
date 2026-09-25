@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_EMPOWERED_COMMITTEE_REVIE_2026082"
+id: "CA-PIB-CA_SCH_EMPOWERED_COMMITTEE_REVIE_20260822"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

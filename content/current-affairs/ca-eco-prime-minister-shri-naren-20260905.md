@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PRIME_MINISTER_SHRI_NAREN_2026090"
+id: "CA-PIB-CA_ECO_PRIME_MINISTER_SHRI_NAREN_20260905"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

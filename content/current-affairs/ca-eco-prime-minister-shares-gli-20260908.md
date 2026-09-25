@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_PRIME_MINISTER_SHARES_GLI_2026090"
+id: "CA-PIB-CA_ECO_PRIME_MINISTER_SHARES_GLI_20260908"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

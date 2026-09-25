@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SPO_89TH_FIT_INDIA_SUNDAYS_ON_2026090"
+id: "CA-PIB-CA_SPO_89TH_FIT_INDIA_SUNDAYS_ON_20260904"
 type: "current_affair"
 category: "sports"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_PM_TO_RELEASE_THE_AUTOBIO_2026081"
+id: "CA-PIB-CA_BOO_PM_TO_RELEASE_THE_AUTOBIO_20260811"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

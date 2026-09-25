@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_APEDA_FACILITATES_FLAG_OF_2026090"
+id: "CA-PIB-CA_ECO_APEDA_FACILITATES_FLAG_OF_20260903"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

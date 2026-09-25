@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_OFFICIAL_VISIT_OF_SHRI_HA_2026082"
+id: "CA-PIB-CA_INT_OFFICIAL_VISIT_OF_SHRI_HA_20260822"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

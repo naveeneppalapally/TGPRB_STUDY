@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_INCENTIVE_SCHEME_FOR_PROM_2026091"
+id: "CA-PIB-CA_SCH_INCENTIVE_SCHEME_FOR_PROM_20260913"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

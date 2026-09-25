@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_STAGE_SET_FOR_80TH_INDEPE_2026081"
+id: "CA-PIB-CA_DEF_STAGE_SET_FOR_80TH_INDEPE_20260813"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

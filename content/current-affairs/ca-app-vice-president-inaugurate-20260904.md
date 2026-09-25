@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_APP_VICE_PRESIDENT_INAUGURATE_2026090"
+id: "CA-PIB-CA_APP_VICE_PRESIDENT_INAUGURATE_20260904"
 type: "current_affair"
 category: "appointments"
 exam_section: "Polity"

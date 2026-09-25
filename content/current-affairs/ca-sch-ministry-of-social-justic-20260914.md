@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_MINISTRY_OF_SOCIAL_JUSTIC_2026091"
+id: "CA-PIB-CA_SCH_MINISTRY_OF_SOCIAL_JUSTIC_20260914"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

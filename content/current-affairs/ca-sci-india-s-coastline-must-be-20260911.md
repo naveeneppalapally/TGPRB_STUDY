@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_INDIA_S_COASTLINE_MUST_BE_2026091"
+id: "CA-PIB-CA_SCI_INDIA_S_COASTLINE_MUST_BE_20260911"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

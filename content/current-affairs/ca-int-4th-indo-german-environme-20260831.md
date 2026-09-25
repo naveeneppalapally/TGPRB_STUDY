@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_4TH_INDO_GERMAN_ENVIRONME_2026083"
+id: "CA-PIB-CA_INT_4TH_INDO_GERMAN_ENVIRONME_20260831"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_MINISTRY_OF_RURAL_DEVELOP_2026090"
+id: "CA-PIB-CA_SCH_MINISTRY_OF_RURAL_DEVELOP_20260907"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

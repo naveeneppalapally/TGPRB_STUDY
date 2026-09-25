@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_VICE_PRESIDENT_LAUNCHES_I_2026090"
+id: "CA-PIB-CA_SCI_VICE_PRESIDENT_LAUNCHES_I_20260905"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

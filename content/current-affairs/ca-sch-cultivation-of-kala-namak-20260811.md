@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_CULTIVATION_OF_KALA_NAMAK_2026081"
+id: "CA-PIB-CA_SCH_CULTIVATION_OF_KALA_NAMAK_20260811"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

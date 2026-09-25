@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_5TH_SWACHH_VAYU_SARVEKSHA_2026090"
+id: "CA-PIB-CA_ENV_5TH_SWACHH_VAYU_SARVEKSHA_20260907"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

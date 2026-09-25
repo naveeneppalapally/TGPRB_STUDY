@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_ENGLISH_RENDERING_OF_PM_S_2026083"
+id: "CA-PIB-CA_SCH_ENGLISH_RENDERING_OF_PM_S_20260830"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

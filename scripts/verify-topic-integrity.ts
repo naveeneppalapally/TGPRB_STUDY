@@ -78,6 +78,33 @@ if (!fs.existsSync(topicsMasterPath)) {
 
 // Read Current Affairs cards to index topic coverage
 const caFiles = globSync('content/current-affairs/*.md', { cwd: ROOT })
+
+// Current-affairs card ids must be unique. The PIB scraper once truncated the id
+// to 40 characters, and because the slug ends with the publication date that cut
+// removed the last date digit. Consecutive days then shared one id, which caused
+// duplicate Vue keys, duplicate DOM ids, and merged per-card user state.
+const caIdOwners = new Map<string, string[]>()
+for (const cf of caFiles) {
+  try {
+    const raw = fs.readFileSync(path.join(ROOT, cf), 'utf-8')
+    const idMatch = raw.match(/^id:\s*"?([^"\n]+)"?\s*$/m)
+    if (!idMatch) {
+      addDefect(cf, 'Current-affairs card is missing an id field.')
+      continue
+    }
+    const id = idMatch[1].trim()
+    if (!caIdOwners.has(id)) caIdOwners.set(id, [])
+    caIdOwners.get(id)!.push(cf)
+  } catch (e) {
+    addDefect(cf, `Could not read current-affairs card: ${(e as Error).message}`)
+  }
+}
+for (const [id, owners] of caIdOwners) {
+  if (owners.length > 1) {
+    addDefect(owners[1], `Duplicate current-affairs id "${id}" is also used by ${owners[0]}. Card ids must be unique.`)
+  }
+}
+
 const caTopicCounts = new Map<string, number>()
 for (const cf of caFiles) {
   try {

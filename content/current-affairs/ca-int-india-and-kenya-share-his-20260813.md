@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_AND_KENYA_SHARE_HIS_2026081"
+id: "CA-PIB-CA_INT_INDIA_AND_KENYA_SHARE_HIS_20260813"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

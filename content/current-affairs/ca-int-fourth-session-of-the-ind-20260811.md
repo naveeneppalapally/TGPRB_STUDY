@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_FOURTH_SESSION_OF_THE_IND_2026081"
+id: "CA-PIB-CA_INT_FOURTH_SESSION_OF_THE_IND_20260811"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

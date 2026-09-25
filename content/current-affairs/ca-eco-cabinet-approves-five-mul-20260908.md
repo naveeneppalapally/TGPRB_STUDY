@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_CABINET_APPROVES_FIVE_MUL_2026090"
+id: "CA-PIB-CA_ECO_CABINET_APPROVES_FIVE_MUL_20260908"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_DRYLAND_CONGRESS_2026_CON_2026091"
+id: "CA-PIB-CA_INT_DRYLAND_CONGRESS_2026_CON_20260913"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

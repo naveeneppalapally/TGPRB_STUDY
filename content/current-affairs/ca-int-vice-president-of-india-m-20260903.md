@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_VICE_PRESIDENT_OF_INDIA_M_2026090"
+id: "CA-PIB-CA_INT_VICE_PRESIDENT_OF_INDIA_M_20260903"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

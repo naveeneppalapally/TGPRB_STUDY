@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_COAL_INDIA_ADVANCES_TECHN_2026092"
+id: "CA-PIB-CA_SCI_COAL_INDIA_ADVANCES_TECHN_20260920"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"

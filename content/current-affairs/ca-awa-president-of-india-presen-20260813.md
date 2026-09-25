@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_PRESIDENT_OF_INDIA_PRESEN_2026081"
+id: "CA-PIB-CA_AWA_PRESIDENT_OF_INDIA_PRESEN_20260813"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

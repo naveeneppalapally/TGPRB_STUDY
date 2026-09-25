@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_JUD_CAT_JAMMU_BENCH_S_DISPOSA_2026092"
+id: "CA-PIB-CA_JUD_CAT_JAMMU_BENCH_S_DISPOSA_20260920"
 type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"

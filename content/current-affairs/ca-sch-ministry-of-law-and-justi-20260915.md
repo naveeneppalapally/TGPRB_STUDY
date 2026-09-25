@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_MINISTRY_OF_LAW_AND_JUSTI_2026091"
+id: "CA-PIB-CA_SCH_MINISTRY_OF_LAW_AND_JUSTI_20260915"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

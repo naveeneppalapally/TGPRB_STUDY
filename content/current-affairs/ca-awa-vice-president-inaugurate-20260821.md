@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_VICE_PRESIDENT_INAUGURATE_2026082"
+id: "CA-PIB-CA_AWA_VICE_PRESIDENT_INAUGURATE_20260821"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

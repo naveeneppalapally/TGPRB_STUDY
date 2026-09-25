@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_SHRAM_SHAKTI_IS_FUNDAMENT_2026091"
+id: "CA-PIB-CA_SCH_SHRAM_SHAKTI_IS_FUNDAMENT_20260911"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

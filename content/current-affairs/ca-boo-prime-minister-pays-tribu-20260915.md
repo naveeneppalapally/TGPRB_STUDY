@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_BOO_PRIME_MINISTER_PAYS_TRIBU_2026091"
+id: "CA-PIB-CA_BOO_PRIME_MINISTER_PAYS_TRIBU_20260915"
 type: "current_affair"
 category: "books"
 exam_section: "General Knowledge"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_GLOBAL_COMMUNITY_TO_CONVE_2026090"
+id: "CA-PIB-CA_INT_GLOBAL_COMMUNITY_TO_CONVE_20260908"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_7TH_INDIA_JAPAN_JOINT_WOR_2026090"
+id: "CA-PIB-CA_INT_7TH_INDIA_JAPAN_JOINT_WOR_20260908"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

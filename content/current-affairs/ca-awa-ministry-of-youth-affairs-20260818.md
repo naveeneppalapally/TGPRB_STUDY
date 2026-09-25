@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_AWA_MINISTRY_OF_YOUTH_AFFAIRS_2026081"
+id: "CA-PIB-CA_AWA_MINISTRY_OF_YOUTH_AFFAIRS_20260818"
 type: "current_affair"
 category: "awards"
 exam_section: "General Knowledge"

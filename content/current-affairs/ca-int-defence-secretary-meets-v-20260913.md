@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_DEFENCE_SECRETARY_MEETS_V_2026091"
+id: "CA-PIB-CA_INT_DEFENCE_SECRETARY_MEETS_V_20260913"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_COMMERCE_SECRETARY_SHRI_R_2026083"
+id: "CA-PIB-CA_INT_COMMERCE_SECRETARY_SHRI_R_20260831"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

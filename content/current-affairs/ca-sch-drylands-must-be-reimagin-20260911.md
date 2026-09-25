@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DRYLANDS_MUST_BE_REIMAGIN_2026091"
+id: "CA-PIB-CA_SCH_DRYLANDS_MUST_BE_REIMAGIN_20260911"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

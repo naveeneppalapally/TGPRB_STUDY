@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_TEXT_OF_PM_S_DEPARTURE_ST_2026082"
+id: "CA-PIB-CA_INT_TEXT_OF_PM_S_DEPARTURE_ST_20260829"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

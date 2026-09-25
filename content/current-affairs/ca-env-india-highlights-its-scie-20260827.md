@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ENV_INDIA_HIGHLIGHTS_ITS_SCIE_2026082"
+id: "CA-PIB-CA_ENV_INDIA_HIGHLIGHTS_ITS_SCIE_20260827"
 type: "current_affair"
 category: "environment"
 exam_section: "Geography"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCI_GOVERNMENT_RESTRICTS_MANU_2026082"
+id: "CA-PIB-CA_SCI_GOVERNMENT_RESTRICTS_MANU_20260822"
 type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
