@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_AS_A_FOLLOW_UP_TO_DEPARTM_2026092"
+id: "CA-PIB-CA_SCH_AS_A_FOLLOW_UP_TO_DEPARTM_20260921"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

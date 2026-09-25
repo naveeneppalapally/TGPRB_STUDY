@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_GOVERNMENT_CUTS_IMPORT_DU_2026092"
+id: "CA-PIB-CA_ECO_GOVERNMENT_CUTS_IMPORT_DU_20260924"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

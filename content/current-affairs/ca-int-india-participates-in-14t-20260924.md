@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_INDIA_PARTICIPATES_IN_14T_2026092"
+id: "CA-PIB-CA_INT_INDIA_PARTICIPATES_IN_14T_20260924"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

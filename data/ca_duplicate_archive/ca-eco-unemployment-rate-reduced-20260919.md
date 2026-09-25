@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_UNEMPLOYMENT_RATE_REDUCED_2026091"
+id: "CA-PIB-CA_ECO_UNEMPLOYMENT_RATE_REDUCED_20260919"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

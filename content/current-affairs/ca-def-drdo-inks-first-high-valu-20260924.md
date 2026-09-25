@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_DRDO_INKS_FIRST_HIGH_VALU_2026092"
+id: "CA-PIB-CA_DEF_DRDO_INKS_FIRST_HIGH_VALU_20260924"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

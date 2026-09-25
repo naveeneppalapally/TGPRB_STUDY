@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_70_000_RURAL_YOUTH_TO_BEG_2026092"
+id: "CA-PIB-CA_SCH_70_000_RURAL_YOUTH_TO_BEG_20260925"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PRESIDENT_OF_INDIA_LAUNCH_2026092"
+id: "CA-PIB-CA_SCH_PRESIDENT_OF_INDIA_LAUNCH_20260923"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

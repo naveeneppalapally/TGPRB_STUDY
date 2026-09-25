@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_ECO_KANDA_EXPRESS_CARRYING_ON_2026092"
+id: "CA-PIB-CA_ECO_KANDA_EXPRESS_CARRYING_ON_20260923"
 type: "current_affair"
 category: "economy"
 exam_section: "Economy"

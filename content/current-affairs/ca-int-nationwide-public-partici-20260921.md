@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_NATIONWIDE_PUBLIC_PARTICI_2026092"
+id: "CA-PIB-CA_INT_NATIONWIDE_PUBLIC_PARTICI_20260921"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

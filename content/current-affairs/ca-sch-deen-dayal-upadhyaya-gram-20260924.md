@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DEEN_DAYAL_UPADHYAYA_GRAM_2026092"
+id: "CA-PIB-CA_SCH_DEEN_DAYAL_UPADHYAYA_GRAM_20260924"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

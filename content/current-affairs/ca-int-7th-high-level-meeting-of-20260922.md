@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_7TH_HIGH_LEVEL_MEETING_OF_2026092"
+id: "CA-PIB-CA_INT_7TH_HIGH_LEVEL_MEETING_OF_20260922"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_NATIONAL_INSTITUTE_OF_SOW_2026092"
+id: "CA-PIB-CA_SCH_NATIONAL_INSTITUTE_OF_SOW_20260924"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

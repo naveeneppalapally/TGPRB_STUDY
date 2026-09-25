@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_INS_SUDARSHINI_ARRIVES_AT_2026092"
+id: "CA-PIB-CA_DEF_INS_SUDARSHINI_ARRIVES_AT_20260924"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

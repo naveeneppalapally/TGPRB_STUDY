@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_IAF_S_JOINT_AIR_DEFENCE_E_2026092"
+id: "CA-PIB-CA_DEF_IAF_S_JOINT_AIR_DEFENCE_E_20260922"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

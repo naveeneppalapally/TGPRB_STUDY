@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_FSSAI_PROPOSES_DRAFT_AMEN_2026092"
+id: "CA-PIB-CA_SCH_FSSAI_PROPOSES_DRAFT_AMEN_20260924"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

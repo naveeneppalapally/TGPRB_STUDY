@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_PRIME_MINISTER_HIGHLIGHTS_2026092"
+id: "CA-PIB-CA_SCH_PRIME_MINISTER_HIGHLIGHTS_20260923"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

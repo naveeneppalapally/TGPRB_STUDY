@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_11TH_AYURVEDA_DAY_CELEBRA_2026092"
+id: "CA-PIB-CA_SCH_11TH_AYURVEDA_DAY_CELEBRA_20260923"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

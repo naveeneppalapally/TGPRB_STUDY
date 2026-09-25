@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_NATIONAL_SECURITY_NOT_JUS_2026092"
+id: "CA-PIB-CA_DEF_NATIONAL_SECURITY_NOT_JUS_20260924"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"

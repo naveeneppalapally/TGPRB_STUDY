@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DEPARTMENT_OF_TELECOMMUNI_2026092"
+id: "CA-PIB-CA_SCH_DEPARTMENT_OF_TELECOMMUNI_20260922"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

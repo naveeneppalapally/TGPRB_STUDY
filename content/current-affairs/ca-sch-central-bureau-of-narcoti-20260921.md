@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_CENTRAL_BUREAU_OF_NARCOTI_2026092"
+id: "CA-PIB-CA_SCH_CENTRAL_BUREAU_OF_NARCOTI_20260921"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

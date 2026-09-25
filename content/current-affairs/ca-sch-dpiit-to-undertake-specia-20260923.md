@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_SCH_DPIIT_TO_UNDERTAKE_SPECIA_2026092"
+id: "CA-PIB-CA_SCH_DPIIT_TO_UNDERTAKE_SPECIA_20260923"
 type: "current_affair"
 category: "schemes"
 exam_section: "Polity"

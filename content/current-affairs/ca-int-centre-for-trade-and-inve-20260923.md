@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_CENTRE_FOR_TRADE_AND_INVE_2026092"
+id: "CA-PIB-CA_INT_CENTRE_FOR_TRADE_AND_INVE_20260923"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

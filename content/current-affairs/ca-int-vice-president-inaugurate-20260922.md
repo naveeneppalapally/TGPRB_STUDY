@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_INT_VICE_PRESIDENT_INAUGURATE_2026092"
+id: "CA-PIB-CA_INT_VICE_PRESIDENT_INAUGURATE_20260922"
 type: "current_affair"
 category: "international"
 exam_section: "Polity"

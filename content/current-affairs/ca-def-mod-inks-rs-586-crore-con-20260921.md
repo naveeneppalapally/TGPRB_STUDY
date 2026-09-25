@@ -1,5 +1,5 @@
 ---
-id: "CA-PIB-CA_DEF_MOD_INKS_RS_586_CRORE_CON_2026092"
+id: "CA-PIB-CA_DEF_MOD_INKS_RS_586_CRORE_CON_20260921"
 type: "current_affair"
 category: "defence"
 exam_section: "General Knowledge"
