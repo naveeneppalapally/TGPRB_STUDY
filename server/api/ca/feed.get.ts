@@ -1,5 +1,5 @@
 import { defineEventHandler, getQuery } from 'h3'
-import { queryCollection } from '#imports'
+import { CA_CARDS, entryDate, entryTime, istStartOfToday, windowCutoff } from '~/server/utils/ca-cards'
 
 /**
  * Full-featured current-affairs feed for /current-affairs.
@@ -26,46 +26,6 @@ import { queryCollection } from '#imports'
  * so a row reads 0 rather than disappearing.
  */
 
-function entryDate(e: any): string {
-  // event_date is the real date the news happened (what the card displays).
-  // Fall back to date / published_at only if event_date is missing.
-  return e?.meta?.event_date || e?.meta?.date || e?.meta?.published_at || ''
-}
-
-function entryTime(e: any): number {
-  const t = new Date(entryDate(e)).getTime()
-  return Number.isNaN(t) ? 0 : t
-}
-
-function istStartOfToday(now: Date): Date {
-  // "Today" = this calendar day in IST (UTC+5:30)
-  const istOffset = 5.5 * 60 * 60 * 1000
-  const istNow = new Date(now.getTime() + istOffset)
-  const startOfDayIST = new Date(Date.UTC(
-    istNow.getUTCFullYear(),
-    istNow.getUTCMonth(),
-    istNow.getUTCDate(),
-  ) - istOffset)
-  return startOfDayIST
-}
-
-function windowCutoff(window: string, now: Date): Date | null {
-  switch (window) {
-    case '1D':
-      return istStartOfToday(now)
-    case '7D':
-      return new Date(now.getTime() - 7 * 86400000)
-    case '1M':
-      return new Date(now.getTime() - 30 * 86400000)
-    case '6M':
-      return new Date(now.getTime() - 180 * 86400000)
-    case '1Y':
-      return new Date(now.getTime() - 365 * 86400000)
-    default:
-      return null // ALL or unrecognized
-  }
-}
-
 const DIFFICULTY_RANK: Record<string, number> = { O: 0, M: 1, F: 2 }
 
 /**
@@ -91,7 +51,7 @@ export default defineEventHandler(async (event) => {
   const page = Math.max(Math.floor(Number(query.page) || 1), 1)
   const limit = Math.min(Math.max(Math.floor(Number(query.limit) || 30), 1), 100)
 
-  const all = await queryCollection(event, 'current_affair').select('id', 'meta').all()
+  const all = CA_CARDS as any[]
 
   const now = new Date()
   const todayStart = istStartOfToday(now).getTime()

@@ -3,10 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npx tsx scripts/generate-ai-context.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
+    "prebuild": "npx tsx scripts/generate-ca-export.ts && npx tsx scripts/generate-ai-context.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
     "generate:ai-context": "npx tsx scripts/generate-ai-context.ts",
+    "generate:ca-export": "npx tsx scripts/generate-ca-export.ts",
     "build": "nuxt build",
-    "predev": "npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
+    "predev": "npx tsx scripts/generate-ca-export.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -40,8 +41,10 @@
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1106.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
+    "@types/js-yaml": "^4.0.9",
     "cloudinary": "^2.10.0",
     "glob": "^13.0.6",
+    "js-yaml": "^4.3.2",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0"
   },

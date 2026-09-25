@@ -1,13 +1,13 @@
 import { defineEventHandler } from 'h3'
-import { queryCollection } from '#imports'
+import { CA_CARDS } from '~/server/utils/ca-cards'
 
 /**
  * Dashboard current-affairs briefs.
  * Serves the homepage strip (TG focus first, then newest) plus counts,
  * so the client never loads the Nuxt Content query engine.
  */
-export default defineEventHandler(async (event) => {
-  const all = await queryCollection(event, 'current_affair').select('id', 'meta').all()
+export default defineEventHandler(() => {
+  const all = CA_CARDS
 
   const sorted = [...all].sort(
     (a: any, b: any) => new Date(b.meta?.date ?? 0).getTime() - new Date(a.meta?.date ?? 0).getTime(),

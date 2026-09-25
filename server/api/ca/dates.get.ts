@@ -1,5 +1,5 @@
 import { defineEventHandler } from 'h3'
-import { queryCollection } from '#imports'
+import { CA_CARDS, entryDate } from '~/server/utils/ca-cards'
 
 /**
  * Calendar of current-affairs coverage.
@@ -7,14 +7,10 @@ import { queryCollection } from '#imports'
  * with the total card count and TG-focus count per date, newest first.
  */
 
-function entryDate(e: any): string {
-  return e?.meta?.event_date || e?.meta?.date || e?.meta?.published_at || ''
-}
-
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/
 
-export default defineEventHandler(async (event) => {
-  const all = await queryCollection(event, 'current_affair').select('id', 'meta').all()
+export default defineEventHandler(() => {
+  const all = CA_CARDS
 
   const byDate = new Map<string, { date: string, count: number, tgCount: number }>()
 
