@@ -316,7 +316,11 @@ function saveFSRSState(cardId: string, card: StudyCard) {
   try {
     const key = getStorageFsrsKey()
     const existing = loadSavedFSRSStates()
+    // Spread the previous record first so display fields (front, back,
+    // exam_section, topic, subtopic) stored by CA MCQ cards survive.
+    const prev = existing[cardId] ?? {}
     existing[cardId] = {
+      ...prev,
       id: card.id,
       contentId: card.contentId,
       contentType: card.contentType,
@@ -375,6 +379,27 @@ function hydrateCards() {
     }
   })
 
+  // CA MCQ cards (created from wrong answers on the current-affairs page) live
+  // only in saved state - they are not part of the gate-backed raw card list.
+  // Hydrate them so they enter the due queue like any other card.
+  for (const [id, s] of Object.entries(saved)) {
+    if (!id.startsWith('ca-mcq-') || map[id]) continue
+    map[id] = {
+      id: s.id,
+      contentId: s.contentId,
+      contentType: s.contentType,
+      studyType: s.studyType,
+      unlocked: true,
+      verifiedPyqCount: s.verifiedPyqCount ?? 0,
+      targetRetention: s.targetRetention ?? 0.9,
+      fsrs: {
+        ...s.fsrs,
+        due: new Date(s.fsrs.due),
+        last_review: s.fsrs.last_review ? new Date(s.fsrs.last_review) : undefined,
+      },
+    }
+  }
+
   studyCardsMap.value = map
 
   // Build due queue
@@ -389,6 +414,21 @@ function hydrateCards() {
     queue = eligible.filter(c => {
       const sc = map[c.id]
       return sc && sc.fsrs.reps === 0
+    })
+  }
+
+  // Append due CA MCQ cards (created from wrong answers on the current-affairs
+  // page). They carry their own display fields in saved state.
+  for (const sc of dueStudyCards) {
+    if (!sc.id.startsWith('ca-mcq-')) continue
+    const s = saved[sc.id]
+    queue.push({
+      id: sc.id,
+      front: s?.front ?? '',
+      back: s?.back ?? '',
+      exam_section: s?.exam_section ?? 'Current Affairs',
+      topic: s?.topic ?? 'Current Affairs',
+      subtopic: s?.subtopic ?? '',
     })
   }
 
