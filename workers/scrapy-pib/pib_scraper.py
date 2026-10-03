@@ -1163,6 +1163,13 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
             title = release["title"]
             print(f"  -> {title[:65]}...")
 
+            # Historical cards predate the outcome ledger. Avoid spending AI
+            # quota on a source that is already delivered or archived.
+            if card_exists('', title, release['url']):
+                outcome(state, prid, 'duplicate')
+                stats['skipped'] += 1
+                continue
+
             article_text, ministry, real_date = fetch_pib_article_text(release["url"])
             time.sleep(DELAY_BETWEEN_REQUESTS)
 

@@ -86,6 +86,14 @@ class ContractTests(unittest.TestCase):
             state=load_state();outcome(state,123,'irrelevant');outcome(state,124,'retryable')
             state=load_state();self.assertTrue(terminal(state,123));self.assertFalse(terminal(state,124))
 
+    def test_existing_source_skips_ai_before_spending_quota(self):
+        release = {'title':'Existing release', 'url':'https://www.pib.gov.in/?PRID=123', 'date_iso':'2026-09-26'}
+        with tempfile.TemporaryDirectory() as directory, patch('scripts.pib_ca_pipeline.ingestion_state.STATE_PATH', Path(directory)/'state.json'), patch.object(daily, 'get_gemini_client'), patch.object(daily, 'get_pib_releases_for_date', return_value=[release]), patch.object(daily, 'card_exists', return_value=True), patch.object(daily, 'fetch_pib_article_text') as fetch, patch.object(daily, 'extract_exam_fact') as extract, patch.object(daily.time, 'sleep'):
+            stats = daily.scrape_date_range(date(2026,9,26), date(2026,9,26))
+            fetch.assert_not_called(); extract.assert_not_called()
+            self.assertEqual(stats['skipped'], 1)
+            self.assertTrue(terminal(load_state(), 123))
+
     def test_keyword_reconciliation_preserves_source_and_curated_tags(self):
         fields = {'headline': 'Different news', 'source_topic_ids': ['NOTE-GEO-DRAINAGE'], 'curated_topic_ids': ['NOTE-POL-HIST-ACTS'], 'keyword_topic_ids': ['NOTE-GEO-FORESTS'], 'related_topic_ids': ['NOTE-GEO-DRAINAGE', 'NOTE-GEO-FORESTS']}
         result, derived = resolve_tags(fields, [('NOTE-GEO-FORESTS', re.compile(r'forest'))], {}, {'NOTE-GEO-DRAINAGE', 'NOTE-GEO-FORESTS', 'NOTE-POL-HIST-ACTS'})
