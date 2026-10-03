@@ -30,8 +30,31 @@ class ContractTests(unittest.TestCase):
             client.assert_called_once_with(vertexai=True, project='test-project', location='global')
             Path(os.environ['GOOGLE_APPLICATION_CREDENTIALS']).unlink()
         workflow = Path('.github/workflows/pib-daily.yml').read_text()
-        self.assertIn('secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON', workflow)
+        self.assertNotIn('secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON', workflow)
+        self.assertNotIn('secrets.GOOGLE_CLOUD_PROJECT', workflow)
+        self.assertIn('secrets.GEMINI_API_KEY', workflow)
         self.assertNotIn('secrets.GCP_SA_KEY', workflow)
+
+    def test_daily_api_key_backend_and_backlog_start(self):
+        self.assertEqual(daily.escape_yaml('Source' + chr(0x2014) + 'fact'), 'Source-fact')
+        with patch.object(daily, '_gemini_client', None), patch.object(daily, 'GCP_PROJECT', ''), patch.object(daily, 'GCP_CREDS', ''), patch.object(daily, 'GEMINI_API_KEY', 'test-key'), patch('google.genai.Client') as client:
+            daily.get_gemini_client()
+            client.assert_called_once_with(vertexai=False, api_key='test-key')
+        workflow = yaml.safe_load(Path('.github/workflows/pib-daily.yml').read_text())
+        calculation = next(step['run'] for step in workflow['jobs']['pib-daily-scrape']['steps'] if step.get('name') == 'Calculate dates')
+        code = calculation.split("<<'PYTHON'\n", 1)[1].rsplit('PYTHON', 1)[0]
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); (root / 'data').mkdir()
+            (root / 'data/ca_ingestion_state.json').write_text('{"last_completed_date":null,"backfill_from_date":"2026-09-26"}')
+            output = root / 'output'
+            previous = Path.cwd()
+            try:
+                os.chdir(root)
+                with patch.dict(os.environ, {'INPUT_FROM':'', 'INPUT_TO':'2026-10-03', 'GITHUB_OUTPUT':str(output)}):
+                    exec(code, {})
+                self.assertIn('from_date=2026-09-26', output.read_text())
+            finally:
+                os.chdir(previous)
 
     def test_invalid_answers_never_repaired(self):
         for invalid in [-1,4,1.5,True,None]:

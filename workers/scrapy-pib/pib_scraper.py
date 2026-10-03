@@ -913,7 +913,7 @@ def extract_exam_fact(article_text: str, title: str, client,
 def escape_yaml(text: str) -> str:
     if not text:
         return ""
-    return text.replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").strip()
+    return text.replace(chr(0x2014), "-").replace("\\", "\\\\").replace('"', '\\"').replace("\n", " ").strip()
 
 
 def make_slug(category: str, title: str, date_str: str) -> str:

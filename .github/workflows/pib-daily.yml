@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       from_date:
-        description: 'Start date (YYYY-MM-DD). Leave blank for auto (last 3 days).'
+        description: 'Start date (YYYY-MM-DD). Leave blank to resume the saved backlog.'
         required: false
         default: ''
       to_date:
@@ -49,9 +49,10 @@ jobs:
           from pathlib import Path
           from datetime import date, timedelta
           state = Path('data/ca_ingestion_state.json')
-          cursor = json.loads(state.read_text()).get('last_completed_date') if state.exists() else None
+          ledger = json.loads(state.read_text()) if state.exists() else {}
+          cursor = ledger.get('last_completed_date')
           today = date.today()
-          start = date.fromisoformat(os.environ['INPUT_FROM']) if os.environ.get('INPUT_FROM') else (date.fromisoformat(cursor) - timedelta(days=2) if cursor else today - timedelta(days=3))
+          start = date.fromisoformat(os.environ['INPUT_FROM']) if os.environ.get('INPUT_FROM') else (date.fromisoformat(cursor) - timedelta(days=2) if cursor else date.fromisoformat(ledger['backfill_from_date']) if ledger.get('backfill_from_date') else today - timedelta(days=3))
           end = date.fromisoformat(os.environ['INPUT_TO']) if os.environ.get('INPUT_TO') else today
           if start > end: raise ValueError('Start must not follow end')
           with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
@@ -60,8 +61,7 @@ jobs:
 
       - name: Run PIB Daily Scraper
         env:
-          GOOGLE_CLOUD_PROJECT:               ${{ secrets.GOOGLE_CLOUD_PROJECT }}
-          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
+          # AI Studio Developer API; do not select the billing-blocked Vertex backend.
           GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED:                   "1"
         run: |
