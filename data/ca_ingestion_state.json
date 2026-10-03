@@ -1323,7 +1323,7 @@
       "status": "irrelevant"
     },
     "2317440": {
-      "at": "2026-10-03T05:04:01.716672+00:00",
+      "at": "2026-10-03T06:57:47.745624+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1338,9 +1338,9 @@
       "status": "written"
     },
     "2317462": {
-      "at": "2026-10-03T05:01:58.259710+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-03T06:56:40.960531+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317470": {
       "at": "2026-10-03T04:58:22.927840+00:00",
@@ -1363,27 +1363,27 @@
       "status": "written"
     },
     "2317507": {
-      "at": "2026-10-03T05:04:21.328671+00:00",
+      "at": "2026-10-03T06:58:07.646972+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317509": {
-      "at": "2026-10-03T05:03:32.284314+00:00",
+      "at": "2026-10-03T06:57:20.608655+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317514": {
-      "at": "2026-10-03T05:03:56.359440+00:00",
+      "at": "2026-10-03T06:57:43.338329+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317515": {
-      "at": "2026-10-03T05:03:45.847972+00:00",
+      "at": "2026-10-03T06:57:33.527426+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317528": {
-      "at": "2026-10-03T05:04:18.063871+00:00",
+      "at": "2026-10-03T06:58:04.863682+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1403,14 +1403,14 @@
       "status": "duplicate"
     },
     "2317553": {
-      "at": "2026-10-03T05:03:24.201769+00:00",
-      "detail": "All configured Gemini models are exhausted",
+      "at": "2026-10-03T06:57:15.627832+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
       "status": "retryable"
     },
     "2317554": {
-      "at": "2026-10-03T05:03:21.482467+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T06:57:12.615210+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317557": {
       "at": "2026-10-03T05:00:33.316377+00:00",
@@ -1453,12 +1453,12 @@
       "status": "irrelevant"
     },
     "2317606": {
-      "at": "2026-10-03T05:03:48.542760+00:00",
+      "at": "2026-10-03T06:57:35.972043+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317611": {
-      "at": "2026-10-03T05:04:06.693088+00:00",
+      "at": "2026-10-03T06:57:53.404516+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1483,9 +1483,9 @@
       "status": "irrelevant"
     },
     "2317639": {
-      "at": "2026-10-03T05:03:15.958231+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T06:57:04.837613+00:00",
+      "detail": "ca-eco-nhai-rolls-out-tamil-nadu-20261001-prid-2317639.md",
+      "status": "written"
     },
     "2317641": {
       "at": "2026-10-03T04:57:58.844756+00:00",
@@ -1493,7 +1493,7 @@
       "status": "irrelevant"
     },
     "2317642": {
-      "at": "2026-10-03T05:04:15.257026+00:00",
+      "at": "2026-10-03T06:58:02.009596+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1523,7 +1523,7 @@
       "status": "irrelevant"
     },
     "2317663": {
-      "at": "2026-10-03T05:03:53.445638+00:00",
+      "at": "2026-10-03T06:57:40.792830+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1568,9 +1568,9 @@
       "status": "irrelevant"
     },
     "2317700": {
-      "at": "2026-10-03T05:03:13.837557+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T06:56:59.540044+00:00",
+      "detail": "ca-sch-government-of-india-revis-20261001-prid-2317700.md",
+      "status": "written"
     },
     "2317714": {
       "at": "2026-10-03T04:58:56.151700+00:00",
@@ -1578,9 +1578,9 @@
       "status": "written"
     },
     "2317715": {
-      "at": "2026-10-03T05:03:11.319374+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T06:56:55.225406+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317718": {
       "at": "2026-10-03T04:59:28.268164+00:00",
@@ -1618,7 +1618,7 @@
       "status": "written"
     },
     "2317787": {
-      "at": "2026-10-03T05:03:43.154915+00:00",
+      "at": "2026-10-03T06:57:30.711933+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1633,7 +1633,7 @@
       "status": "written"
     },
     "2317812": {
-      "at": "2026-10-03T05:04:30.769096+00:00",
+      "at": "2026-10-03T06:58:14.838533+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1658,12 +1658,12 @@
       "status": "written"
     },
     "2317857": {
-      "at": "2026-10-03T05:04:32.934384+00:00",
+      "at": "2026-10-03T06:58:17.588469+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317859": {
-      "at": "2026-10-03T05:03:51.260896+00:00",
+      "at": "2026-10-03T06:57:38.576072+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1678,12 +1678,12 @@
       "status": "irrelevant"
     },
     "2317878": {
-      "at": "2026-10-03T05:04:09.229690+00:00",
+      "at": "2026-10-03T06:57:56.010562+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317882": {
-      "at": "2026-10-03T05:03:59.492397+00:00",
+      "at": "2026-10-03T06:57:45.526256+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1703,22 +1703,22 @@
       "status": "irrelevant"
     },
     "2317889": {
-      "at": "2026-10-03T05:03:40.248424+00:00",
+      "at": "2026-10-03T06:57:28.333061+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317890": {
-      "at": "2026-10-03T05:04:12.217638+00:00",
+      "at": "2026-10-03T06:57:59.261862+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317893": {
-      "at": "2026-10-03T05:04:27.158838+00:00",
+      "at": "2026-10-03T06:58:12.655053+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317895": {
-      "at": "2026-10-03T05:04:24.595213+00:00",
+      "at": "2026-10-03T06:58:10.210191+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1728,12 +1728,12 @@
       "status": "written"
     },
     "2317908": {
-      "at": "2026-10-03T05:03:18.199467+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T06:57:09.063713+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317909": {
-      "at": "2026-10-03T05:03:37.681670+00:00",
+      "at": "2026-10-03T06:57:25.899680+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
@@ -1743,9 +1743,9 @@
       "status": "written"
     },
     "2317917": {
-      "at": "2026-10-03T05:02:52.139531+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-03T06:56:44.790597+00:00",
+      "detail": "ca-sch-s-dhana-hrinkhla-first-20261001-prid-2317917.md",
+      "status": "written"
     },
     "2317919": {
       "at": "2026-10-03T05:01:17.082369+00:00",
@@ -1753,19 +1753,19 @@
       "status": "irrelevant"
     },
     "2317928": {
-      "at": "2026-10-03T05:03:34.422611+00:00",
+      "at": "2026-10-03T06:57:23.350454+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317932": {
-      "at": "2026-10-03T05:04:04.338634+00:00",
+      "at": "2026-10-03T06:57:50.477897+00:00",
       "detail": "All configured Gemini models are exhausted",
       "status": "retryable"
     },
     "2317937": {
-      "at": "2026-10-03T05:03:08.464908+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-03T06:56:50.690044+00:00",
+      "detail": "ca-sch-union-minister-of-petrole-20261001-prid-2317937.md",
+      "status": "written"
     },
     "2317940": {
       "at": "2026-10-03T05:03:04.627903+00:00",
@@ -1778,8 +1778,8 @@
       "status": "irrelevant"
     },
     "2317976": {
-      "at": "2026-10-03T05:03:28.252797+00:00",
-      "detail": "All configured Gemini models are exhausted",
+      "at": "2026-10-03T06:57:17.900201+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
       "status": "retryable"
     },
     "2317992": {
