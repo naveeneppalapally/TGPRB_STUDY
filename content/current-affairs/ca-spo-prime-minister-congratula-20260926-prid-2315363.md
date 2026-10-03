@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "Sports Results"
-related_topic_ids: []
+related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 source_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
