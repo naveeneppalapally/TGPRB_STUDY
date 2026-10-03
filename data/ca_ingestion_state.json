@@ -1,6 +1,6 @@
 {
   "backfill_from_date": "2026-09-26",
-  "last_completed_date": "2026-09-27",
+  "last_completed_date": "2026-09-29",
   "outcomes": {
     "2315209": {
       "at": "2026-10-03T04:16:21.639069+00:00",
@@ -313,14 +313,14 @@
       "status": "irrelevant"
     },
     "2315757": {
-      "at": "2026-10-03T04:23:16.562745+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:49.383398+00:00",
+      "detail": "ca-sch-s-dhana-shrinkhla-2026-a-20260928-prid-2315757.md",
+      "status": "written"
     },
     "2315840": {
-      "at": "2026-10-03T04:24:03.143517+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:30:00.830095+00:00",
+      "detail": "ca-sch-pradhan-mantri-anusuchit-20260928-prid-2315840.md",
+      "status": "written"
     },
     "2315847": {
       "at": "2026-10-03T04:22:33.090701+00:00",
@@ -333,14 +333,14 @@
       "status": "written"
     },
     "2315856": {
-      "at": "2026-10-03T04:21:32.408405+00:00",
-      "detail": "Article text unavailable",
-      "status": "retryable"
+      "at": "2026-10-03T04:27:56.758017+00:00",
+      "detail": "ca-def-indian-armed-forces-conti-20260928-prid-2315856.md",
+      "status": "written"
     },
     "2315890": {
-      "at": "2026-10-03T04:22:53.242601+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:11.259374+00:00",
+      "detail": "ca-sch-garc-advances-automotive-20260928-prid-2315890.md",
+      "status": "written"
     },
     "2315919": {
       "at": "2026-10-03T04:20:50.663124+00:00",
@@ -348,9 +348,9 @@
       "status": "irrelevant"
     },
     "2315941": {
-      "at": "2026-10-03T04:22:12.666649+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:02.529597+00:00",
+      "detail": "ca-env-union-environment-ministe-20260928-prid-2315941.md",
+      "status": "written"
     },
     "2315943": {
       "at": "2026-10-03T04:22:47.835600+00:00",
@@ -363,14 +363,14 @@
       "status": "irrelevant"
     },
     "2315957": {
-      "at": "2026-10-03T04:23:44.716476+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:35.663109+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2315966": {
-      "at": "2026-10-03T04:24:00.547216+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:55.958162+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2315968": {
       "at": "2026-10-03T04:20:29.571213+00:00",
@@ -378,19 +378,19 @@
       "status": "written"
     },
     "2315977": {
-      "at": "2026-10-03T04:23:51.220647+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:44.190487+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2315989": {
-      "at": "2026-10-03T04:23:58.065077+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:53.442658+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2315990": {
-      "at": "2026-10-03T04:23:39.686642+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:29.688432+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2315994": {
       "at": "2026-10-03T04:20:15.851712+00:00",
@@ -398,9 +398,9 @@
       "status": "written"
     },
     "2315998": {
-      "at": "2026-10-03T04:23:12.155656+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:40.937137+00:00",
+      "detail": "ca-sch-dr-mansukh-mandaviya-add-20260928-prid-2315998.md",
+      "status": "written"
     },
     "2316006": {
       "at": "2026-10-03T04:20:44.287108+00:00",
@@ -408,9 +408,9 @@
       "status": "irrelevant"
     },
     "2316029": {
-      "at": "2026-10-03T04:23:37.523461+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:25.145496+00:00",
+      "detail": "ca-sch-the-path-to-self-reliance-20260928-prid-2316029.md",
+      "status": "written"
     },
     "2316033": {
       "at": "2026-10-03T04:21:08.275166+00:00",
@@ -423,14 +423,14 @@
       "status": "irrelevant"
     },
     "2316037": {
-      "at": "2026-10-03T04:21:30.556840+00:00",
-      "detail": "Article text unavailable",
-      "status": "retryable"
+      "at": "2026-10-03T04:27:51.038014+00:00",
+      "detail": "ca-def-indian-coast-guard-respon-20260928-prid-2316037.md",
+      "status": "written"
     },
     "2316038": {
-      "at": "2026-10-03T04:23:02.890220+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:28.136287+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316042": {
       "at": "2026-10-03T04:22:04.543108+00:00",
@@ -438,9 +438,9 @@
       "status": "written"
     },
     "2316045": {
-      "at": "2026-10-03T04:21:28.995255+00:00",
-      "detail": "Article text unavailable",
-      "status": "retryable"
+      "at": "2026-10-03T04:27:45.509257+00:00",
+      "detail": "ca-def-indian-navy-to-host-secon-20260928-prid-2316045.md",
+      "status": "written"
     },
     "2316050": {
       "at": "2026-10-03T04:22:41.531909+00:00",
@@ -448,34 +448,34 @@
       "status": "irrelevant"
     },
     "2316055": {
-      "at": "2026-10-03T04:23:34.823423+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:21.715007+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316062": {
-      "at": "2026-10-03T04:23:29.430894+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:14.009684+00:00",
+      "detail": "ca-sch-fastag-annual-pass-reache-20260928-prid-2316062.md",
+      "status": "written"
     },
     "2316065": {
-      "at": "2026-10-03T04:23:26.169188+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:08.532795+00:00",
+      "detail": "ca-def-indian-railways-approves-20260928-prid-2316065.md",
+      "status": "written"
     },
     "2316066": {
-      "at": "2026-10-03T04:23:23.649966+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:03.322421+00:00",
+      "detail": "ca-eco-indian-railways-approves-20260928-prid-2316066.md",
+      "status": "written"
     },
     "2316070": {
-      "at": "2026-10-03T04:23:21.051404+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:59.418270+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316076": {
-      "at": "2026-10-03T04:23:14.222517+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:45.068433+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316081": {
       "at": "2026-10-03T04:20:37.749628+00:00",
@@ -498,14 +498,14 @@
       "status": "irrelevant"
     },
     "2316115": {
-      "at": "2026-10-03T04:23:48.136744+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:39.289673+00:00",
+      "detail": "ca-sch-ministry-of-steel-announc-20260928-prid-2316115.md",
+      "status": "written"
     },
     "2316118": {
-      "at": "2026-10-03T04:21:15.813035+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-03T04:27:40.204136+00:00",
+      "detail": "ca-int-second-india-fiji-bilater-20260928-prid-2316118.md",
+      "status": "written"
     },
     "2316126": {
       "at": "2026-10-03T04:20:57.012095+00:00",
@@ -518,14 +518,14 @@
       "status": "written"
     },
     "2316128": {
-      "at": "2026-10-03T04:23:05.507221+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:31.182160+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316139": {
-      "at": "2026-10-03T04:23:54.979841+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:48.725700+00:00",
+      "detail": "ca-sci-green-highways-20260928-prid-2316139.md",
+      "status": "written"
     },
     "2316140": {
       "at": "2026-10-03T04:20:47.425170+00:00",
@@ -533,24 +533,24 @@
       "status": "irrelevant"
     },
     "2316147": {
-      "at": "2026-10-03T04:23:08.806182+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:35.507919+00:00",
+      "detail": "ca-sch-district-awareness-progra-20260928-prid-2316147.md",
+      "status": "written"
     },
     "2316150": {
-      "at": "2026-10-03T04:22:50.884290+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:07.319565+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316153": {
-      "at": "2026-10-03T04:22:58.187792+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:19.602934+00:00",
+      "detail": "ca-def-union-home-minister-and-m-20260928-prid-2316153.md",
+      "status": "written"
     },
     "2316156": {
-      "at": "2026-10-03T04:23:32.205907+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:29:18.580947+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316167": {
       "at": "2026-10-03T04:19:48.966463+00:00",
@@ -568,14 +568,14 @@
       "status": "written"
     },
     "2316206": {
-      "at": "2026-10-03T04:23:18.917128+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:55.229119+00:00",
+      "detail": "ca-int-india-energy-week-2027-se-20260928-prid-2316206.md",
+      "status": "written"
     },
     "2316210": {
-      "at": "2026-10-03T04:23:00.567613+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:24.090828+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316216": {
       "at": "2026-10-03T04:21:53.804046+00:00",
@@ -583,9 +583,9 @@
       "status": "written"
     },
     "2316230": {
-      "at": "2026-10-03T04:22:55.805465+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-03T04:28:16.259031+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2316242": {
       "at": "2026-10-03T04:22:20.307474+00:00",
@@ -615,6 +615,691 @@
     "2316259": {
       "at": "2026-10-03T04:19:19.276517+00:00",
       "detail": "ca-spo-prime-minister-congratula-20260928-prid-2316259.md",
+      "status": "written"
+    },
+    "2316334": {
+      "at": "2026-10-03T04:30:51.341681+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316355": {
+      "at": "2026-10-03T04:31:58.111149+00:00",
+      "detail": "ca-env-union-environment-ministe-20260929-prid-2316355.md",
+      "status": "written"
+    },
+    "2316357": {
+      "at": "2026-10-03T04:34:08.633426+00:00",
+      "detail": "ca-sch-literacy-for-all-20260929-prid-2316357.md",
+      "status": "written"
+    },
+    "2316364": {
+      "at": "2026-10-03T04:33:50.025621+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316376": {
+      "at": "2026-10-03T04:33:39.158537+00:00",
+      "detail": "ca-awa-nift-students-make-a-mark-20260929-prid-2316376.md",
+      "status": "written"
+    },
+    "2316383": {
+      "at": "2026-10-03T04:32:05.439366+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316391": {
+      "at": "2026-10-03T04:33:12.005464+00:00",
+      "detail": "ca-sch-ministry-of-skill-develop-20260929-prid-2316391.md",
+      "status": "written"
+    },
+    "2316411": {
+      "at": "2026-10-03T04:33:53.946472+00:00",
+      "detail": "ca-sch-ministry-of-tribal-affair-20260929-prid-2316411.md",
+      "status": "written"
+    },
+    "2316423": {
+      "at": "2026-10-03T04:32:43.596072+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316429": {
+      "at": "2026-10-03T04:32:37.693193+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316456": {
+      "at": "2026-10-03T04:30:56.628899+00:00",
+      "detail": "ca-sch-shri-shivraj-singh-chouha-20260929-prid-2316456.md",
+      "status": "written"
+    },
+    "2316459": {
+      "at": "2026-10-03T04:32:25.092473+00:00",
+      "detail": "ca-sch-ddws-organises-eleventh-e-20260929-prid-2316459.md",
+      "status": "written"
+    },
+    "2316460": {
+      "at": "2026-10-03T04:31:15.020153+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316474": {
+      "at": "2026-10-03T04:31:12.146500+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316489": {
+      "at": "2026-10-03T04:33:28.570948+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316492": {
+      "at": "2026-10-03T04:31:33.249797+00:00",
+      "detail": "ca-def-india-stands-as-the-first-20260929-prid-2316492.md",
+      "status": "written"
+    },
+    "2316493": {
+      "at": "2026-10-03T04:32:40.640163+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316495": {
+      "at": "2026-10-03T04:32:13.489161+00:00",
+      "detail": "ca-sch-union-minister-shri-manoh-20260929-prid-2316495.md",
+      "status": "written"
+    },
+    "2316520": {
+      "at": "2026-10-03T04:33:25.023044+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316533": {
+      "at": "2026-10-03T04:33:21.796627+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316535": {
+      "at": "2026-10-03T04:31:06.769245+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316545": {
+      "at": "2026-10-03T04:32:56.760585+00:00",
+      "detail": "ca-sci-tdb-signs-agreement-with-20260929-prid-2316545.md",
+      "status": "written"
+    },
+    "2316548": {
+      "at": "2026-10-03T04:33:17.068734+00:00",
+      "detail": "ca-sch-safaimitra-suraksha-evam-20260929-prid-2316548.md",
+      "status": "written"
+    },
+    "2316556": {
+      "at": "2026-10-03T04:31:09.482353+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316561": {
+      "at": "2026-10-03T04:34:02.792161+00:00",
+      "detail": "ca-tel-when-swachhata-becomes-sh-20260929-prid-2316561.md",
+      "status": "written"
+    },
+    "2316563": {
+      "at": "2026-10-03T04:33:58.600735+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316569": {
+      "at": "2026-10-03T04:31:22.995533+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316596": {
+      "at": "2026-10-03T04:32:08.557806+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316597": {
+      "at": "2026-10-03T04:31:52.233361+00:00",
+      "detail": "ca-app-caqm-approves-revised-gra-20260929-prid-2316597.md",
+      "status": "written"
+    },
+    "2316602": {
+      "at": "2026-10-03T04:32:02.334553+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316607": {
+      "at": "2026-10-03T04:33:45.578886+00:00",
+      "detail": "ca-int-india-and-italy-agree-to-20260929-prid-2316607.md",
+      "status": "written"
+    },
+    "2316608": {
+      "at": "2026-10-03T04:33:34.772679+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316610": {
+      "at": "2026-10-03T04:33:31.528478+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316616": {
+      "at": "2026-10-03T04:30:46.627319+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260929-prid-2316616.md",
+      "status": "written"
+    },
+    "2316619": {
+      "at": "2026-10-03T04:30:43.184900+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316623": {
+      "at": "2026-10-03T04:30:39.681070+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316643": {
+      "at": "2026-10-03T04:30:35.180717+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260929-prid-2316643.md",
+      "status": "written"
+    },
+    "2316647": {
+      "at": "2026-10-03T04:33:07.693687+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316657": {
+      "at": "2026-10-03T04:31:37.655359+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316661": {
+      "at": "2026-10-03T04:31:01.989895+00:00",
+      "detail": "ca-int-civil-aviation-minister-r-20260929-prid-2316661.md",
+      "status": "written"
+    },
+    "2316681": {
+      "at": "2026-10-03T04:31:46.486599+00:00",
+      "detail": "ca-awa-union-environment-ministe-20260929-prid-2316681.md",
+      "status": "written"
+    },
+    "2316688": {
+      "at": "2026-10-03T04:32:19.086564+00:00",
+      "detail": "ca-eco-dr-l-murugan-highlights-20260929-prid-2316688.md",
+      "status": "written"
+    },
+    "2316698": {
+      "at": "2026-10-03T04:32:53.016857+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316701": {
+      "at": "2026-10-03T04:32:30.303105+00:00",
+      "detail": "ca-sch-district-capacity-buildin-20260929-prid-2316701.md",
+      "status": "written"
+    },
+    "2316706": {
+      "at": "2026-10-03T04:31:41.244935+00:00",
+      "detail": "ca-sch-uidai-unveils-five-new-in-20260929-prid-2316706.md",
+      "status": "written"
+    },
+    "2316707": {
+      "at": "2026-10-03T04:30:29.636815+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260929-prid-2316707.md",
+      "status": "written"
+    },
+    "2316732": {
+      "at": "2026-10-03T04:32:48.522354+00:00",
+      "detail": "ca-sch-nrida-and-iim-kolkata-sig-20260929-prid-2316732.md",
+      "status": "written"
+    },
+    "2316749": {
+      "at": "2026-10-03T04:31:27.226579+00:00",
+      "detail": "ca-def-india-and-republic-of-kor-20260929-prid-2316749.md",
+      "status": "written"
+    },
+    "2316750": {
+      "at": "2026-10-03T04:30:24.302312+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260929-prid-2316750.md",
+      "status": "written"
+    },
+    "2316753": {
+      "at": "2026-10-03T04:30:18.730221+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260929-prid-2316753.md",
+      "status": "written"
+    },
+    "2316754": {
+      "at": "2026-10-03T04:30:12.544658+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260929-prid-2316754.md",
+      "status": "written"
+    },
+    "2316755": {
+      "at": "2026-10-03T04:31:18.834344+00:00",
+      "detail": "ca-awa-union-minister-of-culture-20260929-prid-2316755.md",
+      "status": "written"
+    },
+    "2316763": {
+      "at": "2026-10-03T04:32:34.895816+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316792": {
+      "at": "2026-10-03T04:38:37.525171+00:00",
+      "detail": "ca-eco-new-corporate-average-fue-20260930-prid-2316792.md",
+      "status": "written"
+    },
+    "2316801": {
+      "at": "2026-10-03T04:35:04.539037+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316840": {
+      "at": "2026-10-03T04:39:44.947560+00:00",
+      "detail": "ca-app-union-public-service-comm-20260930-prid-2316840.md",
+      "status": "written"
+    },
+    "2316848": {
+      "at": "2026-10-03T04:35:59.146370+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316851": {
+      "at": "2026-10-03T04:38:33.580463+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316858": {
+      "at": "2026-10-03T04:36:38.468954+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2316863": {
+      "at": "2026-10-03T04:37:30.979345+00:00",
+      "detail": "ca-eco-india-s-indigenous-techno-20260930-prid-2316863.md",
+      "status": "written"
+    },
+    "2316864": {
+      "at": "2026-10-03T04:39:38.783507+00:00",
+      "detail": "ca-sch-beyond-wastewater-turnin-20260930-prid-2316864.md",
+      "status": "written"
+    },
+    "2316865": {
+      "at": "2026-10-03T04:36:02.006907+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316866": {
+      "at": "2026-10-03T04:35:01.150628+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316869": {
+      "at": "2026-10-03T04:35:26.438444+00:00",
+      "detail": "ca-eco-ayush-emerges-as-one-of-i-20260930-prid-2316869.md",
+      "status": "written"
+    },
+    "2316873": {
+      "at": "2026-10-03T04:36:32.790473+00:00",
+      "detail": "ca-def-defence-accounts-departme-20260930-prid-2316873.md",
+      "status": "written"
+    },
+    "2316883": {
+      "at": "2026-10-03T04:39:33.850593+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316890": {
+      "at": "2026-10-03T04:36:27.066508+00:00",
+      "detail": "ca-def-icg-interdicts-transnatio-20260930-prid-2316890.md",
+      "status": "written"
+    },
+    "2316904": {
+      "at": "2026-10-03T04:34:55.518274+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260930-prid-2316904.md",
+      "status": "written"
+    },
+    "2316906": {
+      "at": "2026-10-03T04:34:50.251552+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260930-prid-2316906.md",
+      "status": "written"
+    },
+    "2316911": {
+      "at": "2026-10-03T04:34:45.144352+00:00",
+      "detail": "ca-boo-pm-to-participate-in-cent-20260930-prid-2316911.md",
+      "status": "written"
+    },
+    "2316922": {
+      "at": "2026-10-03T04:35:48.466158+00:00",
+      "detail": "ca-int-india-mining-week-2026-br-20260930-prid-2316922.md",
+      "status": "written"
+    },
+    "2316926": {
+      "at": "2026-10-03T04:39:13.217755+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316935": {
+      "at": "2026-10-03T04:39:10.172332+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316939": {
+      "at": "2026-10-03T04:35:35.929889+00:00",
+      "detail": "ca-eco-shri-chouhan-approves-5-20260930-prid-2316939.md",
+      "status": "written"
+    },
+    "2316941": {
+      "at": "2026-10-03T04:35:19.923757+00:00",
+      "detail": "ca-eco-cabinet-approves-minimum-20260930-prid-2316941.md",
+      "status": "written"
+    },
+    "2316948": {
+      "at": "2026-10-03T04:35:08.132378+00:00",
+      "detail": "ca-sch-cabinet-approves-green-en-20260930-prid-2316948.md",
+      "status": "written"
+    },
+    "2316950": {
+      "at": "2026-10-03T04:38:15.806155+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2316953": {
+      "at": "2026-10-03T04:35:14.286078+00:00",
+      "detail": "ca-sch-cabinet-approves-one-netw-20260930-prid-2316953.md",
+      "status": "written"
+    },
+    "2316955": {
+      "at": "2026-10-03T04:37:43.113592+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2316956": {
+      "at": "2026-10-03T04:35:31.364437+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2316964": {
+      "at": "2026-10-03T04:37:21.470906+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316978": {
+      "at": "2026-10-03T04:39:07.479402+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2316981": {
+      "at": "2026-10-03T04:39:17.849953+00:00",
+      "detail": "ca-eco-release-of-the-annual-sur-20260930-prid-2316981.md",
+      "status": "written"
+    },
+    "2316983": {
+      "at": "2026-10-03T04:37:41.603756+00:00",
+      "detail": "ca-def-in-a-major-success-in-the-20260930-prid-2316983.md",
+      "status": "written"
+    },
+    "2316997": {
+      "at": "2026-10-03T04:37:36.012964+00:00",
+      "detail": "ca-def-indian-security-forces-ne-20260930-prid-2316997.md",
+      "status": "written"
+    },
+    "2317006": {
+      "at": "2026-10-03T04:33:02.950557+00:00",
+      "detail": "ca-sch-swachhata-hi-seva-17th-s-20260929-prid-2317006.md",
+      "status": "written"
+    },
+    "2317011": {
+      "at": "2026-10-03T04:36:49.878272+00:00",
+      "detail": "ca-sci-digital-india-bhashini-di-20260930-prid-2317011.md",
+      "status": "written"
+    },
+    "2317012": {
+      "at": "2026-10-03T04:35:43.488478+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317034": {
+      "at": "2026-10-03T04:37:17.244648+00:00",
+      "detail": "ca-eco-monthly-review-of-account-20260930-prid-2317034.md",
+      "status": "written"
+    },
+    "2317044": {
+      "at": "2026-10-03T04:38:21.470221+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317061": {
+      "at": "2026-10-03T04:38:42.311743+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317073": {
+      "at": "2026-10-03T04:34:38.911337+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260930-prid-2317073.md",
+      "status": "written"
+    },
+    "2317084": {
+      "at": "2026-10-03T04:36:45.780939+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317090": {
+      "at": "2026-10-03T04:35:54.931894+00:00",
+      "detail": "ca-int-commerce-and-industry-min-20260930-prid-2317090.md",
+      "status": "written"
+    },
+    "2317093": {
+      "at": "2026-10-03T04:37:11.767896+00:00",
+      "detail": "ca-env-caqm-reviews-preparedness-20260930-prid-2317093.md",
+      "status": "written"
+    },
+    "2317100": {
+      "at": "2026-10-03T04:39:25.236213+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317106": {
+      "at": "2026-10-03T04:38:57.268005+00:00",
+      "detail": "ca-sci-scientists-map-earliest-g-20260930-prid-2317106.md",
+      "status": "written"
+    },
+    "2317123": {
+      "at": "2026-10-03T04:38:53.432108+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317134": {
+      "at": "2026-10-03T04:36:21.591747+00:00",
+      "detail": "ca-def-raksha-rajya-mantri-sanja-20260930-prid-2317134.md",
+      "status": "written"
+    },
+    "2317142": {
+      "at": "2026-10-03T04:35:40.239206+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317151": {
+      "at": "2026-10-03T04:39:29.107482+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2317152": {
+      "at": "2026-10-03T04:38:18.393881+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317160": {
+      "at": "2026-10-03T04:36:04.819798+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317164": {
+      "at": "2026-10-03T04:40:06.026605+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317165": {
+      "at": "2026-10-03T04:40:02.798285+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317169": {
+      "at": "2026-10-03T04:39:55.363487+00:00",
+      "detail": "ca-eco-cci-approves-the-acquisit-20260930-prid-2317169.md",
+      "status": "written"
+    },
+    "2317170": {
+      "at": "2026-10-03T04:40:00.000575+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317191": {
+      "at": "2026-10-03T04:36:42.655856+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317206": {
+      "at": "2026-10-03T04:36:16.044235+00:00",
+      "detail": "ca-def-asean-india-maritime-exer-20260930-prid-2317206.md",
+      "status": "written"
+    },
+    "2317207": {
+      "at": "2026-10-03T04:38:05.982688+00:00",
+      "detail": "ca-eco-ministry-of-mines-to-laun-20260930-prid-2317207.md",
+      "status": "written"
+    },
+    "2317218": {
+      "at": "2026-10-03T04:34:23.913966+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317223": {
+      "at": "2026-10-03T04:38:15.788136+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317226": {
+      "at": "2026-10-03T04:38:13.123964+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317229": {
+      "at": "2026-10-03T04:40:16.941713+00:00",
+      "detail": "ca-sch-new-discovery-track-for-s-20260930-prid-2317229.md",
+      "status": "written"
+    },
+    "2317233": {
+      "at": "2026-10-03T04:37:51.935216+00:00",
+      "detail": "ca-int-india-showcases-justice-r-20260930-prid-2317233.md",
+      "status": "written"
+    },
+    "2317241": {
+      "at": "2026-10-03T04:38:49.326708+00:00",
+      "detail": "ca-sci-india-s-emerging-quantum-20260930-prid-2317241.md",
+      "status": "written"
+    },
+    "2317243": {
+      "at": "2026-10-03T04:38:45.098138+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317251": {
+      "at": "2026-10-03T04:38:01.557826+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317258": {
+      "at": "2026-10-03T04:37:48.369318+00:00",
+      "detail": "Article text unavailable",
+      "status": "retryable"
+    },
+    "2317260": {
+      "at": "2026-10-03T04:34:20.522736+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317266": {
+      "at": "2026-10-03T04:39:50.398127+00:00",
+      "detail": "ca-sci-scientific-steering-commi-20260930-prid-2317266.md",
+      "status": "written"
+    },
+    "2317267": {
+      "at": "2026-10-03T04:34:32.765578+00:00",
+      "detail": "ca-int-prime-minister-shri-naren-20260930-prid-2317267.md",
+      "status": "written"
+    },
+    "2317286": {
+      "at": "2026-10-03T04:37:06.123457+00:00",
+      "detail": "ca-sch-union-environment-ministe-20260930-prid-2317286.md",
+      "status": "written"
+    },
+    "2317296": {
+      "at": "2026-10-03T04:40:10.016009+00:00",
+      "detail": "ca-sch-1-600-crore-approved-for-20260930-prid-2317296.md",
+      "status": "written"
+    },
+    "2317301": {
+      "at": "2026-10-03T04:39:02.545848+00:00",
+      "detail": "ca-sch-social-justice-empowerm-20260930-prid-2317301.md",
+      "status": "written"
+    },
+    "2317305": {
+      "at": "2026-10-03T04:38:10.413630+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317308": {
+      "at": "2026-10-03T04:37:00.774721+00:00",
+      "detail": "ca-env-delhi-records-lowest-sept-20260930-prid-2317308.md",
+      "status": "written"
+    },
+    "2317318": {
+      "at": "2026-10-03T04:36:09.926240+00:00",
+      "detail": "ca-def-operation-drishti-armed-20260930-prid-2317318.md",
+      "status": "written"
+    },
+    "2317322": {
+      "at": "2026-10-03T04:37:45.753596+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317327": {
+      "at": "2026-10-03T04:38:30.758148+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317336": {
+      "at": "2026-10-03T04:38:25.749021+00:00",
+      "detail": "ca-app-upsc-centenary-celebratio-20260930-prid-2317336.md",
+      "status": "written"
+    },
+    "2317338": {
+      "at": "2026-10-03T04:39:22.495377+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317346": {
+      "at": "2026-10-03T04:37:25.537100+00:00",
+      "detail": "ca-int-union-minister-for-health-20260930-prid-2317346.md",
+      "status": "written"
+    },
+    "2317351": {
+      "at": "2026-10-03T04:36:55.434805+00:00",
+      "detail": "ca-env-nba-to-mark-23rd-foundati-20260930-prid-2317351.md",
+      "status": "written"
+    },
+    "2317352": {
+      "at": "2026-10-03T04:35:31.332282+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2317383": {
+      "at": "2026-10-03T04:37:57.330938+00:00",
+      "detail": "ca-eco-kvic-chairman-shri-manoj-20260930-prid-2317383.md",
+      "status": "written"
+    },
+    "2317393": {
+      "at": "2026-10-03T04:34:27.680231+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20260930-prid-2317393.md",
       "status": "written"
     },
     "2318022": {
