@@ -399,6 +399,7 @@ _MONTH_MAP = {
     "may": 5, "june": 6, "july": 7, "august": 8,
     "september": 9, "october": 10, "november": 11, "december": 12,
 }
+_MONTH_MAP.update({name[:3]: number for name, number in list(_MONTH_MAP.items())})
 
 def _extract_article_date(soup: BeautifulSoup) -> str | None:
     """
@@ -656,7 +657,7 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
         # Strategy 1: PIB PressReleasePage uses ContentPlaceHolder1_PNLrEL div
         pnl = soup.find(id="ContentPlaceHolder1_PNLrEL")
         if pnl:
-            paras = pnl.find_all("p")
+            paras = pnl.find_all(["p", "h3", "h4", "li"])
             text = "\n".join(p.get_text(strip=True) for p in paras if len(p.get_text(strip=True)) > 20)
             if text:
                 if len(text) > 12000:
@@ -675,7 +676,7 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
             return "", ministry, real_date
 
         # Extract paragraphs
-        paragraphs = content.find_all("p")
+        paragraphs = content.find_all(["p", "h3", "h4", "li"])
         text = "\n".join(p.get_text(strip=True) for p in paragraphs if len(p.get_text(strip=True)) > 20)
 
         if len(text) > 12000:

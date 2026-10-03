@@ -115,6 +115,15 @@ class ContractTests(unittest.TestCase):
             self.assertIn('test-model', daily._exhausted_models)
             sleep.assert_not_called()
 
+    def test_heading_body_and_abbreviated_publication_month(self):
+        html = '<div class="innner-page-main-about-us-content-right-part"><div class="MinistryNameSubhead">Ministry of Law and Justice</div><div>Posted On: 30 SEP 2026 7:13PM</div><h3>The Legislative Department organized a workshop on waste management.</h3><p><img src="example" /></p></div>'
+        response = Mock(text=html)
+        with patch.object(daily.requests, 'get', return_value=response):
+            text, ministry, published = daily.fetch_pib_article_text('https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=123')
+        self.assertIn('workshop on waste management', text)
+        self.assertEqual(published, '2026-09-30')
+        self.assertEqual(ministry, 'Ministry of Law and Justice')
+
     def test_keyword_reconciliation_preserves_source_and_curated_tags(self):
         fields = {'headline': 'Different news', 'source_topic_ids': ['NOTE-GEO-DRAINAGE'], 'curated_topic_ids': ['NOTE-POL-HIST-ACTS'], 'keyword_topic_ids': ['NOTE-GEO-FORESTS'], 'related_topic_ids': ['NOTE-GEO-DRAINAGE', 'NOTE-GEO-FORESTS']}
         result, derived = resolve_tags(fields, [('NOTE-GEO-FORESTS', re.compile(r'forest'))], {}, {'NOTE-GEO-DRAINAGE', 'NOTE-GEO-FORESTS', 'NOTE-POL-HIST-ACTS'})
