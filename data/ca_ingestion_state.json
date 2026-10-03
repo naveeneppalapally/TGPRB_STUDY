@@ -1,0 +1,355 @@
+{
+  "last_completed_date": null,
+  "outcomes": {
+    "2318022": {
+      "at": "2026-10-03T03:01:25.199178+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318023": {
+      "at": "2026-10-03T02:59:57.897611+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318024": {
+      "at": "2026-10-03T02:59:55.286121+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318025": {
+      "at": "2026-10-03T02:59:52.598358+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318026": {
+      "at": "2026-10-03T03:00:56.914066+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318027": {
+      "at": "2026-10-03T03:01:17.089351+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318047": {
+      "at": "2026-10-03T03:01:57.542832+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318052": {
+      "at": "2026-10-03T03:00:17.983032+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318053": {
+      "at": "2026-10-03T03:00:15.711454+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318067": {
+      "at": "2026-10-03T03:02:00.474113+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318072": {
+      "at": "2026-10-03T03:00:13.579821+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318074": {
+      "at": "2026-10-03T03:02:12.264677+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318075": {
+      "at": "2026-10-03T03:00:11.331248+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318081": {
+      "at": "2026-10-03T03:02:09.348987+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318085": {
+      "at": "2026-10-03T02:59:11.873583+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318095": {
+      "at": "2026-10-03T03:02:06.060788+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318096": {
+      "at": "2026-10-03T03:00:08.209129+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318110": {
+      "at": "2026-10-03T03:00:54.931549+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318112": {
+      "at": "2026-10-03T02:59:50.428975+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318113": {
+      "at": "2026-10-03T02:59:48.259050+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318114": {
+      "at": "2026-10-03T02:59:46.114273+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318115": {
+      "at": "2026-10-03T02:59:43.879992+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318117": {
+      "at": "2026-10-03T03:00:47.248265+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318140": {
+      "at": "2026-10-03T03:02:03.489856+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318151": {
+      "at": "2026-10-03T03:00:34.972882+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318171": {
+      "at": "2026-10-03T03:00:32.003769+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318176": {
+      "at": "2026-10-03T03:01:09.473977+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318179": {
+      "at": "2026-10-03T03:01:06.761230+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318181": {
+      "at": "2026-10-03T02:59:40.673877+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318182": {
+      "at": "2026-10-03T03:01:04.163776+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318206": {
+      "at": "2026-10-03T03:00:29.342475+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318213": {
+      "at": "2026-10-03T02:59:38.024012+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318215": {
+      "at": "2026-10-03T03:00:05.903949+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318220": {
+      "at": "2026-10-03T03:00:00.293911+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318223": {
+      "at": "2026-10-03T03:01:11.990457+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318239": {
+      "at": "2026-10-03T03:01:55.247917+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318243": {
+      "at": "2026-10-03T03:01:42.122667+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318247": {
+      "at": "2026-10-03T03:01:39.900644+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318261": {
+      "at": "2026-10-03T03:01:34.227711+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318262": {
+      "at": "2026-10-03T02:59:35.406820+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318265": {
+      "at": "2026-10-03T02:59:32.664816+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318267": {
+      "at": "2026-10-03T02:59:30.073652+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318269": {
+      "at": "2026-10-03T02:59:27.318186+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318272": {
+      "at": "2026-10-03T02:59:24.079097+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318273": {
+      "at": "2026-10-03T02:59:20.403257+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318296": {
+      "at": "2026-10-03T03:00:39.734859+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318300": {
+      "at": "2026-10-03T03:00:37.188428+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318302": {
+      "at": "2026-10-03T03:01:19.917787+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318321": {
+      "at": "2026-10-03T03:00:02.589198+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318340": {
+      "at": "2026-10-03T02:59:17.601771+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318348": {
+      "at": "2026-10-03T03:01:23.023814+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318353": {
+      "at": "2026-10-03T03:00:52.512004+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318358": {
+      "at": "2026-10-03T02:59:07.900186+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318364": {
+      "at": "2026-10-03T03:01:53.033781+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318366": {
+      "at": "2026-10-03T03:01:31.958085+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318369": {
+      "at": "2026-10-03T03:01:27.595484+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318371": {
+      "at": "2026-10-03T03:01:14.305546+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318389": {
+      "at": "2026-10-03T03:00:49.862759+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318413": {
+      "at": "2026-10-03T03:00:23.087091+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318419": {
+      "at": "2026-10-03T03:00:20.732729+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318441": {
+      "at": "2026-10-03T03:01:37.670375+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318451": {
+      "at": "2026-10-03T03:00:44.537568+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318459": {
+      "at": "2026-10-03T02:59:14.709897+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318473": {
+      "at": "2026-10-03T03:00:41.967432+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318483": {
+      "at": "2026-10-03T03:01:49.662286+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318497": {
+      "at": "2026-10-03T03:01:46.693679+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318498": {
+      "at": "2026-10-03T03:01:44.504494+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318501": {
+      "at": "2026-10-03T03:01:01.753731+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318504": {
+      "at": "2026-10-03T03:00:59.845677+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    },
+    "2318516": {
+      "at": "2026-10-03T03:00:26.342751+00:00",
+      "detail": "Gemini extraction failed after retries; source remains retryable",
+      "status": "retryable"
+    }
+  }
+}
