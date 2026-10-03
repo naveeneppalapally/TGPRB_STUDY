@@ -46,6 +46,7 @@
     "@cloudflare/workers-types": "5.20261002.1",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.20.5",
     "cloudinary": "^2.10.0",
     "glob": "^13.0.6",
     "js-yaml": "^4.3.2",
