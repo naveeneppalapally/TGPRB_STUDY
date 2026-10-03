@@ -41,6 +41,10 @@ class ContractTests(unittest.TestCase):
             daily.get_gemini_client()
             client.assert_called_once_with(vertexai=False, api_key='test-key')
         workflow = yaml.safe_load(Path('.github/workflows/pib-daily.yml').read_text())
+        steps = workflow['jobs']['pib-daily-scrape']['steps']
+        self.assertEqual(steps[0]['with']['ref'], 'main')
+        self.assertIn('timeout --signal=INT', next(step['run'] for step in steps if step.get('name') == 'Run PIB Daily Scraper'))
+        self.assertLess(next(i for i, step in enumerate(steps) if step.get('name') == 'Preserve ingestion recovery snapshot'), next(i for i, step in enumerate(steps) if step.get('name') == 'Persist cards, retags and retry ledger'))
         calculation = next(step['run'] for step in workflow['jobs']['pib-daily-scrape']['steps'] if step.get('name') == 'Calculate dates')
         code = calculation.split("<<'PYTHON'\n", 1)[1].rsplit('PYTHON', 1)[0]
         with tempfile.TemporaryDirectory() as directory:

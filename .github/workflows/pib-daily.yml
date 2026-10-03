@@ -29,6 +29,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Queued backfills must include the previous scraper's bot commit.
+          ref: main
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -65,12 +68,13 @@ jobs:
           GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED:                   "1"
         run: |
-          python3 workers/scrapy-pib/pib_scraper.py \
+          timeout --signal=INT --kill-after=30s 20m python3 workers/scrapy-pib/pib_scraper.py \
             --from "${{ steps.dates.outputs.from_date }}" \
             --to "${{ steps.dates.outputs.to_date }}" \
             --max-per-day 0
 
       - name: Sync Topic Mappings
+        if: always()
         run: |
           python3 scripts/pib_ca_pipeline/sync_ca_topics.py
 
@@ -78,6 +82,16 @@ jobs:
         id: validate
         if: always()
         run: python3 scripts/pib_ca_pipeline/verify_ca_cards.py
+
+      - name: Preserve ingestion recovery snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pib-ingestion-${{ github.run_id }}
+          retention-days: 7
+          path: |
+            content/current-affairs/
+            data/ca_ingestion_state.json
 
       - name: Persist cards, retags and retry ledger
         if: always()
