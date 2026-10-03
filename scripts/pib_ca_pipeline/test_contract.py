@@ -6,6 +6,7 @@ import re
 from pathlib import Path
 import yaml
 from unittest.mock import patch
+from unittest.mock import Mock
 from datetime import date, datetime, timedelta
 import csv
 import json
@@ -97,6 +98,22 @@ class ContractTests(unittest.TestCase):
             fetch.assert_not_called(); extract.assert_not_called()
             self.assertEqual(stats['skipped'], 1)
             self.assertTrue(terminal(load_state(), 123))
+
+    def test_minute_quota_is_retried_without_exhausting_free_tier(self):
+        client = Mock()
+        client.chats.create.return_value.send_message.side_effect = [RuntimeError("429 {'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'retryDelay': '1s'}"), Mock(text=json.dumps(VALID))]
+        with patch.object(daily, '_exhausted_models', set()), patch.object(daily, 'get_candidate_models', return_value=['test-model']), patch.object(daily.time, 'sleep') as sleep:
+            self.assertIsNotNone(daily.extract_exam_fact('Official source text', 'Title', client))
+            self.assertNotIn('test-model', daily._exhausted_models)
+            sleep.assert_called_once()
+
+    def test_daily_quota_exhausts_model_without_retry_sleep(self):
+        client = Mock()
+        client.chats.create.return_value.send_message.side_effect = RuntimeError("429 {'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier'}")
+        with patch.object(daily, '_exhausted_models', set()), patch.object(daily, 'get_candidate_models', return_value=['test-model']), patch.object(daily.time, 'sleep') as sleep:
+            with self.assertRaises(RuntimeError):daily.extract_exam_fact('Official source text', 'Title', client)
+            self.assertIn('test-model', daily._exhausted_models)
+            sleep.assert_not_called()
 
     def test_keyword_reconciliation_preserves_source_and_curated_tags(self):
         fields = {'headline': 'Different news', 'source_topic_ids': ['NOTE-GEO-DRAINAGE'], 'curated_topic_ids': ['NOTE-POL-HIST-ACTS'], 'keyword_topic_ids': ['NOTE-GEO-FORESTS'], 'related_topic_ids': ['NOTE-GEO-DRAINAGE', 'NOTE-GEO-FORESTS']}

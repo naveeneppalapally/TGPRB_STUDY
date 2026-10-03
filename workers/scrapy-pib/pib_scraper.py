@@ -888,7 +888,9 @@ def extract_exam_fact(article_text: str, title: str, client,
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
-                    if "Daily" in err_str or "limit: 20" in err_str or "PerModel-FreeTier" in err_str:
+                    quota_ids = re.findall(r"quotaId['\"]?\s*:\s*['\"]([^'\"]+)", err_str)
+                    print(f"    [AI] Quota identifiers: {', '.join(quota_ids) or 'not supplied'}")
+                    if re.search(r"PerDay|\bdaily\b|requests[_ ]per[_ ]day", err_str, re.IGNORECASE):
                         print(f"    [AI] Model {model_name} daily quota exhausted. Rotating candidate model...")
                         _exhausted_models.add(model_name)
                         break
