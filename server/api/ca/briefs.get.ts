@@ -18,16 +18,16 @@ export default defineEventHandler(() => {
   // "Today" in IST, matching the student-facing review-day convention.
   const todayIST = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date())
 
-  const slim = (e: any) => ({
+  const slim = (e: (typeof CA_CARDS)[number]) => ({
     id: e.id,
     meta: {
-      headline: e.meta?.headline,
-      exam_fact: e.meta?.exam_fact,
-      category: e.meta?.category,
-      date: e.meta?.date,
-      event_date: e.meta?.event_date,
-      source_url: e.meta?.source_url,
-      source_type: e.meta?.source_type,
+      headline: String(e.meta?.headline || ''),
+      exam_fact: String(e.meta?.exam_fact || ''),
+      category: String(e.meta?.category || ''),
+      date: String(e.meta?.date || ''),
+      event_date: String(e.meta?.event_date || ''),
+      source_url: String(e.meta?.source_url || ''),
+      source_type: String(e.meta?.source_type || ''),
       is_telangana_focus: e.meta?.is_telangana_focus === true,
     },
   })

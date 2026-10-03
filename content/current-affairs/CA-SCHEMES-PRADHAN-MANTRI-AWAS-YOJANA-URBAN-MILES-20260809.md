@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Economy"
 topic: "Pradhan Mantri Awas Yojana - Urban (PMAY-U) Milestones"
 related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

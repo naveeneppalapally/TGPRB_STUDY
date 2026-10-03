@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Republic Day Parade 2026 Theme and Chief Guests"
-related_topic_ids: ["NOTE-DEF-RDP2026", "NOTE-INT-EU"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

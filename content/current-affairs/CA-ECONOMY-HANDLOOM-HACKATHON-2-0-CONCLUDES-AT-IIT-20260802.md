@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Handloom Hackathon 2.0 and Centre of Excellence for Handloom Technology"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-ST-INNOVATION"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

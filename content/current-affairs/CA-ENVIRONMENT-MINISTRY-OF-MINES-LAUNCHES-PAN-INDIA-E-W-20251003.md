@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Science & Technology"
 topic: "Pan-India E-Waste Recycling Drive under Special Campaign 5.0"
 related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-FORESTS", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

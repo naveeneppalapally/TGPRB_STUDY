@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Digital Life Certificate Campaign 4.0 and Pensioner Welfare Initiatives 2025"
-related_topic_ids: ["NOTE-POL-GOVERNANCE", "NOTE-SCHEMES-DIGITAL"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

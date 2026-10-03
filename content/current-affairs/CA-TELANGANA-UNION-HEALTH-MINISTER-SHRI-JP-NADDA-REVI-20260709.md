@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "AIIMS Bibinagar Progress and PMSSY Overview"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCHEMES-HEALTH", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

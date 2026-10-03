@@ -251,7 +251,7 @@ const hydrated = ref(false)
 onMounted(() => { hydrated.value = true })
 
 // Normalise: support both the mcqs array and the legacy single mcq.
-const mcqs = computed<any[]>(() => {
+const mcqs = computed<{ question: string; options: string[]; answer: number; explanation: string }[]>(() => {
   const meta = props.item.meta ?? {}
   if (Array.isArray(meta.mcqs) && meta.mcqs.length > 0) return meta.mcqs
   if (meta.mcq && meta.mcq.question) return [meta.mcq]

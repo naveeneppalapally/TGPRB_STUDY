@@ -10,7 +10,7 @@
  *   - On markCaughtUp: write localStorage and queue an idempotent mutation
  *
  * This means:
- *   - You and your friend both see "caught up" after either of you marks it
+ *   - Each account sees its own caught-up state on every device
  *   - Works offline too - syncs next time online
  */
 
@@ -33,13 +33,13 @@ export function useTopicVisits() {
 
   function _lsGet(noteId: string): Date | null {
     if (!import.meta.client) return null
-    const stored = localStorage.getItem(`${STORAGE_PREFIX}${noteId}`)
+    const stored = localStorage.getItem(`${STORAGE_PREFIX}${user.value?.id || 'guest'}:${noteId}`)
     return stored ? new Date(stored) : null
   }
 
   function _lsSet(noteId: string, ts: Date): void {
     if (!import.meta.client) return
-    localStorage.setItem(`${STORAGE_PREFIX}${noteId}`, ts.toISOString())
+    localStorage.setItem(`${STORAGE_PREFIX}${user.value?.id || 'guest'}:${noteId}`, ts.toISOString())
   }
 
   // -------------------------------------------------------------------------
@@ -72,8 +72,10 @@ export function useTopicVisits() {
    * Returns null if this topic has never been marked caught up.
    */
   async function getLastVisit(noteId: string): Promise<Date | null> {
+    const owner = user.value?.id || 'guest'
     const local = _lsGet(noteId)
     const cloud = await _dbGet(noteId)
+    if ((user.value?.id || 'guest') !== owner) return null
 
     if (!local && !cloud) return null
     if (!local) return cloud

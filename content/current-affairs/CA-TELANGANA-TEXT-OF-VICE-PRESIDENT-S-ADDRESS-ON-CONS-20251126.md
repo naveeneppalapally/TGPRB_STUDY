@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Polity"
 topic: "Constitution Day and Democratic Heritage of India"
-related_topic_ids: ["NOTE-HIS-CHOLA", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

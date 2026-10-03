@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "IN-SPACe Student Satellites and Outreach Initiatives"
 related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

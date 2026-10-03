@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "NDRF Central Assistance to Telangana for 2024 Flood Relief"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-POL-DISASTER-MGMT", "NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-GEO-DAMS"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

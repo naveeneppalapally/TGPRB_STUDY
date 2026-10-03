@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "NIFTEM-K Convocation and Institutional Highlights"
-related_topic_ids: ["NOTE-GS-INSTITUTIONS", "NOTE-POL-JUDICIARY", "NOTE-SCI-FOODTECH"]
+related_topic_ids: ["NOTE-POL-JUDICIARY"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

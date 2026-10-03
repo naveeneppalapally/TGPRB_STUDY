@@ -2,10 +2,10 @@
 id: "CA-PIB-CA_DEF_2ND_INDIA_NEW_ZEALAND_DEF_20260825"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
-related_topic_ids:
-  - ""
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

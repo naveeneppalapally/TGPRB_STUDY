@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "12th BRICS Labour and Employment Ministers Meeting in Hyderabad"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-INT-BRICS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

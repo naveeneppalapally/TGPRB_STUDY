@@ -5,7 +5,7 @@
  * Anything component-shaped that Nuxt UI can express globally lives here;
  * raw design tokens (surfaces, hairlines, text) live in assets/css/main.css.
  */
-export default defineAppConfig({
+const config = {
   ui: {
     primary: 'saffron',
     gray: 'stone',
@@ -146,4 +146,7 @@ export default defineAppConfig({
       },
     },
   },
-})
+} as const
+
+const appConfig: typeof config = defineAppConfig(config)
+export default appConfig

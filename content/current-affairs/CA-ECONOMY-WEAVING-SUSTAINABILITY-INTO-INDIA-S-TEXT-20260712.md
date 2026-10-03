@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Textile Industry Sustainability and Circular Economy"
-related_topic_ids: ["NOTE-ECO-TEXTILES", "NOTE-ENV-CIRCULAR-ECONOMY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

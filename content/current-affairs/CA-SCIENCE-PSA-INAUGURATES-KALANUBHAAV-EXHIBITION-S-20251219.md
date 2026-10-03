@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Science and Technology Clusters Initiative"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-ST-CLUSTERS", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

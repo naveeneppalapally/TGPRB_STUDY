@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "39th Edition of AAHAR 2025 International Food Fair"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-BANKING", "NOTE-ECO-EXPORTS"]
+related_topic_ids: ["NOTE-ECO-BANKING"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -1,3 +1,4 @@
+import type { KVNamespace, ScheduledEvent, ExecutionContext } from '@cloudflare/workers-types'
 /**
  * TSLPRB Current Affairs Worker
  * ─────────────────────────────────────────────────────────────────────────────

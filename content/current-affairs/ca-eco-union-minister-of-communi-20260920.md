@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids: ["NOTE-ECO-GENERAL", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

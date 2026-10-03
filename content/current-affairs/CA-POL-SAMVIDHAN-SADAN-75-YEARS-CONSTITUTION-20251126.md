@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "75 Years of Constitution Adoption at Samvidhan Sadan"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

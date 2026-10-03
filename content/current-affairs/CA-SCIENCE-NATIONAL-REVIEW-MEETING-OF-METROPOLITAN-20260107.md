@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "General Studies"
 topic: "National Review Meeting of Metropolitan Surveillance Units"
-related_topic_ids: ["NOTE-SCI-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

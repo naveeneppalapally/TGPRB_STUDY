@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "National Cyber Forensic Laboratories and Digital Forensics"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-CYBER", "NOTE-TEL-INFRA"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

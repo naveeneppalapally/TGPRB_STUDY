@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Hyderabad Liberation Day"
-related_topic_ids: ["NOTE-POL-POLITY", "NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

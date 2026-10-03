@@ -2,10 +2,10 @@
 id: "CA-PIB-CA_AWA_PUBLICATIONS_DIVISION_WIN_20260825"
 type: "current_affair"
 category: "awards"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Awards and Honours"
-related_topic_ids:
-  - ""
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

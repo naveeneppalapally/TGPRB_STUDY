@@ -2,11 +2,10 @@
 id: "CA-GEO-INDIA-BHUTAN-TRANS-BORDER-RIVERS-20260807"
 type: "current_affair"
 category: "international"
-exam_section: "Indian & World Geography"
+exam_section: "Geography"
 topic: "Trans-border Rivers - India-Bhutan Cooperation"
-related_topic_ids:
-  - "NOTE-GEO-DRAINAGE"
-  - NOTE-GEO-FORESTS
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

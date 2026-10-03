@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Indo-German Defence Investor Summit in Munich"
-related_topic_ids: ["NOTE-DEF-AATMANIRBHAR", "NOTE-DEF-PARTNERSHIPS", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

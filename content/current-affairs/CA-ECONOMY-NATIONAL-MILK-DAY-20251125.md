@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "National Milk Day and India's Dairy Sector Development"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

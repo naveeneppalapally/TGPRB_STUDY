@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Agricultural Production Stats 2024-25"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-AGRI"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

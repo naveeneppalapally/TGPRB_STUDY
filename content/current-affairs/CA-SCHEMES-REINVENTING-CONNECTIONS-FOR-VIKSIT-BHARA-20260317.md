@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "India Post Time-Definite Express Services"
-related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

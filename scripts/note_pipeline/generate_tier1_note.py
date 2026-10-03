@@ -98,7 +98,7 @@ STRICT ARCHITECTURAL REQUIREMENTS:
    - Insert the visual component `{visual_component}` at the top of Section 01 if provided.
    - High-yield sections with callout boxes (emerald for facts, saffron for warnings, red for penalties), factual tables, memory mnemonics, and real PYQ anchors.
    - Gate Quiz component at the bottom: `<GateQuiz note-id="{note_id}" />`
-3. NO EM-DASHES (—). Use standard hyphens (-) or colons (:) only. The build will fail if em-dashes are present.
+3. NO EM-DASHES (-). Use standard hyphens (-) or colons (:) only. The build will fail if em-dashes are present.
 4. Content Quality: Focus strictly on exam-relevant facts tested in TGPRB papers (dates, leaders, acts, articles, numbers, locations, committees).
 
 Respond with the complete Vue file code only inside a ```vue ``` codeblock.
@@ -158,7 +158,7 @@ def generate_note_page(topic_id: str):
         code = text.strip()
 
     # Sanitize any accidental em-dashes
-    code = code.replace('—', '-')
+    code = code.replace('-', '-')
 
     # Target directory
     out_dir = os.path.join('pages/notes', cfg['subject_slug'])

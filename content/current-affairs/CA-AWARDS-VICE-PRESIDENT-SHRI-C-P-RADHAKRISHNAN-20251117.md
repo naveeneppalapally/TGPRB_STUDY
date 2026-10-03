@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "Telangana"
 topic: "Inaugural Ramoji Excellence Awards 2025"
-related_topic_ids: ["NOTE-GEN-AWARDS", "NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

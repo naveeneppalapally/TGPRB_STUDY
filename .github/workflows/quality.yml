@@ -1,0 +1,60 @@
+name: StudyOS quality gates
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: quality-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: npm ci
+      - run: pip install -r workers/scrapy-pib/requirements.txt
+      - run: npm test
+      - run: npm run test:ca
+      - run: npm run typecheck
+      - run: git diff --exit-code -- data/live_pyqs.json data/subject_stats.json data/topic_stats.json content/data/study/pyqs.json
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - name: Browser and runtime checks
+        run: |
+          node .output/server/index.mjs > /tmp/studyos-preview.log 2>&1 &
+          npm run test:browser
+      - name: Cloudflare build
+        run: CF_PAGES=1 npm run build
+      - name: Cloudflare runtime checks
+        run: |
+          npx wrangler pages dev dist --port 8788 --ip 127.0.0.1 > /tmp/studyos-edge.log 2>&1 &
+          TEST_BASE_URL=http://127.0.0.1:8788 npm run test:browser
+  database:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: fixture-only
+        ports: ['5432:5432']
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: psql -v ON_ERROR_STOP=1 -f tests/sql/sync.sql
+        env:
+          PGHOST: localhost
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGPASSWORD: fixture-only

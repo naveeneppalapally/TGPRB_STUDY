@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "150th Birth Anniversary Year of Sardar Vallabhbhai Patel"
-related_topic_ids: ["NOTE-HIS-MODERN", "NOTE-POL-INTEGRATION", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-HIS-MODERN", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-HIS-MODERN"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

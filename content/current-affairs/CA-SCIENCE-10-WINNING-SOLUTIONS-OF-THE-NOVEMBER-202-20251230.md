@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "D.E.S.I.G.N for BioE3 Challenge"
-related_topic_ids: ["NOTE-SCI-BIOTECH", "NOTE-SCI-INNOVATION", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

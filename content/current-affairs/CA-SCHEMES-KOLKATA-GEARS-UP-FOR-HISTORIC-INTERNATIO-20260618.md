@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "12th International Day of Yoga 2026"
-related_topic_ids: ["NOTE-GS-YOGA", "NOTE-TEL-PLACES", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

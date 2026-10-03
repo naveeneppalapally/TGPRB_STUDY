@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "General Studies"
 topic: "HLC Approves Disaster Mitigation Outlay"
 related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

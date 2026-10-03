@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "UIDAI Launches Aadhaar Mascot Udai"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-IT-EGOV"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Target Deadline for Naxal-Mukt Bharat"
-related_topic_ids: ["NOTE-DEF-INTERNAL-SECURITY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

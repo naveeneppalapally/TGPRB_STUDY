@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Legal Metrology Act 2009 and Jan Vishwas 2.0 Reforms"
-related_topic_ids: ["NOTE-ECO-REFORMS", "NOTE-POL-ACTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

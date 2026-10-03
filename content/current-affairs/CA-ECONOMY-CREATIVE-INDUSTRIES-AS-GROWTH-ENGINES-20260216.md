@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India's Creative Economy and AVGC-XR Sector"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-ECO-SERVICES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

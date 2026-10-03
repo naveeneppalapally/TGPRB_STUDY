@@ -4,7 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "India-Philippines Knowledge Exchange Mission on Skill Development"
-related_topic_ids: ["NOTE-INT-RELATIONS", "NOTE-ECON-SKILLS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "Constituent Assembly Calligraphy and Archival Heritage"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

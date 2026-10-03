@@ -1,3 +1,5 @@
+> Current implementation: delivery paths and PYQ selectors live in `data/topics_master.json`; explicit imports live in `server/utils/learning-content.ts` and `server/utils/study-chapters.ts`. Prebuild regenerates canonical bundles and subject statistics. APIs normalize aliases once. Direct mode is an intentional self-study option. The in-app AI assistant has been removed. Current Affairs YAML is validated by field types, not line count. See `docs/audit-remediation-2026-10-02.md` for migration and verification details.
+
 # Current Affairs Pipeline - TSLPRB StudyOS
 
 This document provides the complete, authoritative technical specification for the Current Affairs (CA) harvesting, scoring, extraction, topic mapping, and delivery pipeline in TSLPRB StudyOS.
@@ -8,7 +10,7 @@ This specification is the direct technical implementation companion to `AGENTS.m
 
 ## 1. End-to-End System Architecture
 
-The Current Affairs pipeline ingests raw official press releases from the Press Information Bureau (PIB), filters them using forensic exam relevance heuristics, extracts structured exam facts and MCQs via Gemini 3.6 Flash using a closed topic enum, normalizes metadata deterministically, and renders dynamic topic-tagged cards with new-since-last-visit awareness.
+Two ingestion paths share the same local content contract: the raw SQLite/scorer/extractor path below, and the scheduled direct scraper in `.github/workflows/pib-daily.yml`. Both use the closed NOTE-ID registry and reject invalid answer indices or more than two MCQs before writing a card. The configured Gemini model and the model that actually succeeded can differ in the direct scraper, which supports a fallback pool; new cards record `extraction_model`.
 
 ### 1.1 Architecture Flowchart
 
@@ -16,8 +18,8 @@ The Current Affairs pipeline ingests raw official press releases from the Press 
 +-------------------------------------------------------------------------+
 |                  PIB Raw Ingestion (workers/scrapy-pib)                  |
 |  - Crawls pib.gov.in with browser headers & canonical host redirect     |
-|  - Ingests 26,699+ press releases (Jan 2025 - Aug 2026)                 |
-|  - Stores in SQLite: workers/scrapy-pib/pib_master_2025_2026.db         |
+|  - Workflow plans monthly chunks covering a rolling 365-day window     |
+|  - Master location: PIB_DB_PATH, or the historical default below        |
 +-------------------------------------------------------------------------+
                                      |
                                      v
@@ -32,17 +34,17 @@ The Current Affairs pipeline ingests raw official press releases from the Press 
 +-------------------------------------------------------------------------+
 |        LLM Card Extraction (scripts/pib_ca_pipeline/extract_ca_cards.py)|
 |  - Filters score >= 2.0 OR is_telangana_focus                            |
-|  - Gemini 3.6 Flash structured JSON extraction via Vertex AI             |
+|  - Configured Gemini structured JSON extraction via Vertex AI           |
 |  - Enforces closed enum related_topic_ids from data/topics_master.json   |
 |  - Writes structured Markdown cards to: content/current-affairs/*.md    |
-|  - PRID resume support skips already-extracted articles                 |
+|  - PRID ledger distinguishes terminal outcomes from retryable failures  |
 +-------------------------------------------------------------------------+
                                      |
                                      v
 +-------------------------------------------------------------------------+
 |      Deterministic Retagging (scripts/pib_ca_pipeline/retag_telangana_focus.py)|
 |  - Pure regex re-derivation of is_telangana_focus from core facts       |
-|  - Normalizes flag to ~36% target ratio (prevents UI flag clutter)       |
+|  - Derives the flag from factual text, without a required target ratio  |
 +-------------------------------------------------------------------------+
                                      |
                                      v
@@ -74,7 +76,9 @@ The Current Affairs pipeline ingests raw official press releases from the Press 
 - **Timeout Tuning**: Connect timeout of 1.5s (drops invalid PRIDs fast) and read timeout of 4.0s (fetches full HTML).
 - **Concurrency**: Thread-safe `requests.Session` per thread with non-locking pace control.
 
-### 2.2 SQLite Schema (`workers/scrapy-pib/pib_master_2025_2026.db`)
+### 2.2 SQLite Schema (`PIB_DB_PATH`)
+
+The scorer and manual extractor default to `workers/scrapy-pib/pib_master_2025_2026.db`. This historical basename is a compatibility path, not a year filter. A downloaded master artifact can live anywhere when `PIB_DB_PATH` points to it. The raw workflow deduplicates by PRID in SQLite and exports its CSV from the same database. Malformed chunk schemas fail the merge.
 
 The master database stores every retrieved press release:
 
@@ -110,7 +114,7 @@ CREATE INDEX IF NOT EXISTS idx_articles_ministry ON articles(ministry);
 
 ## 3. Full YAML Frontmatter Schema (`content/current-affairs/*.md`)
 
-Every current affairs card generated by the pipeline is stored as an individual Markdown file with standard YAML frontmatter:
+Every current affairs card generated by the pipeline is stored as an individual Markdown file with standard YAML frontmatter. The following example illustrates fields only; verify numerical content against the linked official release before publishing exam material.
 
 ```yaml
 ---
@@ -120,32 +124,38 @@ category: "environment"
 exam_section: "Geography"
 topic: "Forests of India"
 related_topic_ids:
-  - "NOTE-GEO-ENVIRONMENT"
+  - "NOTE-GEO-FORESTS"
+source_topic_ids:
+  - "NOTE-GEO-FORESTS"
+keyword_topic_ids:
   - "NOTE-GEO-FORESTS"
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"
-headline: "India's forest cover increased by 1,445 sq km in 2023"
-exam_fact: "India's total forest cover stood at 7,15,343 sq km as per FSI 2023."
-summary: "Forest Survey of India 2023 report key finding..."
-event_date: "2026-01-15"
+headline: "Verified forest-cover finding from an official release"
+exam_fact: "Insert the verified figure and its report year here."
+summary: "Add contextual facts verified against the official release."
+event_date: "2026-08-09"
 published_at: "2026-08-09T07:30:00+05:30"
 date: "2026-08-09"
+retrieved_at: "2026-08-10T00:00:00+00:00"
+event_date_basis: "publication_proxy"
+extraction_model: "configured-model-used"
 source_name: "PIB"
 source_type: "official"
 ministry: "Ministry of Environment Forest and Climate Change"
 canonical_source_url: "https://pib.gov.in/PressReleasePage.aspx?PRID=2093213&reg=3&lang=1"
 source_url: "https://pib.gov.in/PressReleasePage.aspx?PRID=2093213&reg=3&lang=1"
-event_key: "FSI-FOREST-COVER-2023"
+event_key: "FOREST-COVER-SCHEMA-EXAMPLE"
 mcqs:
-  - question: "What was India's total forest cover according to FSI 2023?"
+  - question: "Which verified report figure is stated in the source?"
     options:
-      - "7,15,343 sq km"
-      - "6,98,150 sq km"
-      - "7,28,000 sq km"
-      - "7,10,000 sq km"
+      - "Verified figure"
+      - "Alternative figure 1"
+      - "Alternative figure 2"
+      - "Alternative figure 3"
     answer: 0
-    explanation: "FSI 2023 report placed total forest cover at 7,15,343 sq km."
+    explanation: "The linked official release states the selected figure and report year."
   - question: "Which body releases the India State of Forest Report?"
     options:
       - "Forest Survey of India"
@@ -161,19 +171,25 @@ mcqs:
 
 | Field | Type | Allowed Values / Constraints |
 |---|---|---|
-| `id` | string | Format: `CA-{CATEGORY}-{SLUG}-{YYYYMMDD}` |
+| `id` | string | Stable identity: new PIB cards include PRID; preserve existing IDs and review aliases when splitting legacy cards. |
 | `type` | string | Strictly `"current_affair"` |
-| `category` | string | One of 12 categories: `appointments`, `international`, `economy`, `awards`, `sports`, `telangana`, `schemes`, `defence`, `judiciary`, `science`, `books`, `environment` (defined in `composables/useCACategories.ts`) |
+| `category` | string | One of 12 categories in `data/ca_contract.json`; UI labels are separate display metadata. |
 | `exam_section` | string | One of: `Polity`, `Geography`, `Economy`, `General Studies`, `Science & Technology`, `History`, `Telangana` |
 | `topic` | string | Short human-readable topic name |
 | `related_topic_ids` | array | Array of canonical `NOTE-{SECTION}-{TOPIC}` strings from `data/topics_master.json` |
+| `source_topic_ids` | array | Closed canonical IDs supplied by extraction/category defaults. |
+| `curated_topic_ids` | optional array | Explicit human topic assignments, preserved by keyword reconciliation. |
+| `keyword_topic_ids` | array | Current deterministic keyword matches, recomputed by sync. |
 | `is_telangana_focus`| boolean | `true` only if Telangana / Hyderabad is central to the core exam fact |
 | `difficulty` | string | `"F"` (Famous/Easy), `"M"` (Medium), `"O"` (Obscure/Hard) |
 | `exam_depth` | string | `"constable"`, `"si"`, or `"both"` |
 | `headline` | string | 1-sentence factual headline without em-dashes |
 | `exam_fact` | string | Single pinpoint testable fact |
 | `summary` | string | 2-3 sentence contextual background |
-| `event_date` | string | ISO date `YYYY-MM-DD` of when event occurred |
+| `event_date` | string | ISO date; writers currently use the authoritative publication date as an explicitly labeled proxy. |
+| `event_date_basis` | string | New writers record `publication_proxy`; use `source_event` only for an independently verified event date. |
+| `retrieved_at` | string | Independent retrieval timestamp; never substitute it for source publication. |
+| `extraction_model` | string | Actual model used by extraction; legacy cards may have no recorded value. |
 | `published_at` | string | ISO timestamp with timezone `YYYY-MM-DDTHH:mm:ss+05:30` |
 | `date` | string | ISO date `YYYY-MM-DD` |
 | `source_name` | string | `"PIB"`, `"Telangana Official"`, `"Telangana Today"` |
@@ -224,13 +240,13 @@ To solve current affairs topic mapping permanently across all present and future
   pattern = re.compile(r'\b(?:' + '|'.join(re.escape(k) for k in kws) + r')\b')
   ```
   This eliminates substring false positives (e.g., matching "war" inside "software").
-- Updates `related_topic_ids` in place while preserving exact YAML formatting.
+- Recomputes `keyword_topic_ids` from headline, exam fact, summary and topic only, excluding metadata and MCQ distractors. Combines source, curated and current keyword assignments into `related_topic_ids` while normalizing aliases. Unknown IDs are removed, not perpetuated. Legacy related tags are retained as an unverified baseline unless they were already marked as derived.
 
 ### Pillar 4: Tier 2 Subject Digest Fallback (`CurrentAffairsStrip.vue`)
 - `CurrentAffairsStrip.vue` imports `data/topics_master.json` directly to resolve aliases.
 - If a topic has fewer than 3 directly tagged cards, it automatically activates the **Subject Digest Fallback**.
 - In fallback mode, it pulls recent high-yield current affairs from the broader subject section (e.g., `POLITY DIGEST`, `GEOGRAPHY DIGEST`, `TELANGANA DIGEST`).
-- Renders an informative subject digest chip in the strip header, guaranteeing no student ever sees an empty container.
+- Renders an informative subject digest chip in the strip header when fallback records exist. Availability still depends on source content; a fallback cannot manufacture coverage.
 
 ### Pillar 5: Gatekeeper Enforcement (`scripts/verify-topic-integrity.ts`)
 - Automated contract verification executed in `prebuild`, `predev`, and `npm test`.
@@ -246,9 +262,17 @@ To solve current affairs topic mapping permanently across all present and future
 | Command | Purpose |
 |---|---|
 | `python3 scripts/pib_ca_pipeline/pib_scorer.py` | Scores all raw PIB articles in SQLite database; produces `data/pib_scored_manifest.json`. |
-| `python3 scripts/pib_ca_pipeline/extract_ca_cards.py [N]` | Extracts up to `N` exam cards using Gemini 3.6 Flash from scored manifest; skips already processed PRIDs. |
-| `python3 scripts/pib_ca_pipeline/retag_telangana_focus.py` | Deterministically re-derives `is_telangana_focus` from headline, exam_fact, and topic fields. Target: ~36% flagged. |
+| `python3 scripts/pib_ca_pipeline/extract_ca_cards.py [N]` | Extracts up to `N` cards using `GEMINI_MODEL`; validates manifest freshness and skips terminal PRIDs, including archived cards. |
+| `python3 scripts/pib_ca_pipeline/retag_telangana_focus.py` | Deterministically re-derives `is_telangana_focus` from headline, exam_fact and topic fields. |
 | `npm run sync:ca-topics` | Synchronizes keywords and normalizes aliases across all Markdown cards. Run after editing `data/topics_master.json`. |
+| `python3 scripts/pib_ca_pipeline/verify_ca_cards.py` | Validates every active card's full frontmatter contract. |
+| `npm run test:ca` | Runs writer, validation, retry, provenance and rollover regression fixtures without network requests. |
+
+### 5.1.1 Recovery and Freshness
+
+`data/ca_ingestion_state.json` (or `PIB_STATE_PATH`) records PRID outcomes. Written, irrelevant and duplicate outcomes are terminal; source, model and validation failures remain retryable. The daily workflow persists this ledger and advances its completed-day cursor only after the whole day succeeds. Its overlap window catches late releases and it resumes after long outages. A failed archive request is not an empty successful day. Validated card changes can be committed by the workflow; failed validation prevents card publication while retaining retry state.
+
+The scorer uses `PIB_REFERENCE_DATE` rather than a preferred calendar year. The manual extractor checks the manifest's database size/mtime, reference date and content hash before use. Model availability and PIB WAF behavior still require live operational checks; fixture success cannot establish them.
 
 ### 5.2 Source Hierarchy & PYQ-Derived Rationale
 

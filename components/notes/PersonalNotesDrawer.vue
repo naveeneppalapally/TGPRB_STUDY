@@ -110,12 +110,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onScopeDispose } from 'vue'
 import type { SectionContext } from '@/types/annotations'
 import NoteCard from './NoteCard.vue'
 import ImprovementForm from './ImprovementForm.vue'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
-import { useOfflineSync } from '@/composables/useOfflineSync'
 
 const props = defineProps<{
   noteId?: string
@@ -127,9 +126,13 @@ const activeContext = ref<SectionContext | null>(null)
 const activeTab = ref<'note' | 'improvement'>('note')
 
 const user = useSupabaseUser()
-const { notes, createNote } = usePersonalNotes()
-const { isSyncing, pendingCount } = useOfflineSync()
+const { notes, createNote, offlineSync } = usePersonalNotes()
+const { isSyncing, pendingCount, lastError, quarantinedCount } = offlineSync
 const isOnline = ref(typeof navigator !== 'undefined' ? navigator.onLine : true)
+
+const updateOnline = () => { isOnline.value = navigator.onLine }
+onMounted(() => { window.addEventListener('online', updateOnline); window.addEventListener('offline', updateOnline) })
+onScopeDispose(() => { if (import.meta.client) { window.removeEventListener('online', updateOnline); window.removeEventListener('offline', updateOnline) } })
 
 const sectionNotes = computed(() => {
   if (!notes || !notes.value || !activeContext.value) return []
@@ -153,7 +156,9 @@ const isAdding = ref(false)
 const draftBody = ref('')
 const draftAnchor = ref('')
 
-const syncStatus = computed<'Saved locally' | 'Saving...' | 'Synced' | 'Offline (saved locally)' | 'Local on device'>(() => {
+const syncStatus = computed<'Saved locally' | 'Saving...' | 'Synced' | 'Offline (saved locally)' | 'Local on device' | 'Save failed' | 'Legacy changes on device'>(() => {
+  if (lastError.value) return 'Save failed'
+  if (quarantinedCount.value > 0) return 'Legacy changes on device'
   if (!user.value) return 'Local on device'
   if (!isOnline.value) return 'Offline (saved locally)'
   if (isSyncing.value || pendingCount.value > 0) return 'Saving...'
@@ -161,13 +166,13 @@ const syncStatus = computed<'Saved locally' | 'Saving...' | 'Synced' | 'Offline 
 })
 
 const syncStateClass = computed(() => {
-  if (!user.value) return 'bg-amber-500/10 text-amber-600 dark:text-amber-400'
+  if (!user.value || lastError.value || quarantinedCount.value > 0) return 'bg-amber-500/10 text-amber-600 dark:text-amber-400'
   if (syncStatus.value === 'Saving...') return 'bg-saffron-500/15 text-saffron-600 dark:text-saffron-400'
   return 'bg-jade-soft text-jade'
 })
 
 const syncStateIcon = computed(() => {
-  if (!user.value) return 'i-heroicons-device-phone-mobile'
+  if (!user.value || lastError.value || quarantinedCount.value > 0) return 'i-heroicons-device-phone-mobile'
   if (syncStatus.value === 'Saving...') return 'i-heroicons-arrow-path'
   return 'i-heroicons-cloud-arrow-up'
 })
@@ -231,4 +236,3 @@ function cancelAdding() {
   transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 </style>
-

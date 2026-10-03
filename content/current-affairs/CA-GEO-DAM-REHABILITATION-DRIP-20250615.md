@@ -1,13 +1,11 @@
 ---
 id: "CA-GEO-DAM-REHABILITATION-DRIP-20250615"
 type: "current_affair"
-category: "geography"
+category: "environment"
 exam_section: "Geography"
 topic: "Dam Safety and Rehabilitation in India"
-related_topic_ids:
-  - "NOTE-GEO-IRRIGATION"
-  - "NOTE-GEO-DAMS"
-  - "NOTE-GEO-DRAINAGE"
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

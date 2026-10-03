@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_AWA_PRESIDENT_OF_INDIA_PRESEN_20260813"
 type: "current_affair"
 category: "awards"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Awards and Honours"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

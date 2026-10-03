@@ -4,7 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "Science & Technology"
 topic: "India-Japan Economic Security and Semiconductor Collaboration"
-related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-INT-RELATIONS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

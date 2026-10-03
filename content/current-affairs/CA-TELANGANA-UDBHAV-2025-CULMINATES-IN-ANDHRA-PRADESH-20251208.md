@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "6th National EMRS Cultural Fest UDBHAV 2025"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-SCHEMES-TRIBAL"]
+related_topic_ids: ["NOTE-TEL-CULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

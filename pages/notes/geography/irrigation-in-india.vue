@@ -45,6 +45,7 @@
             </span>
           </div>
         </header>
+        <NoteStudySwitch slug="irrigation-in-india" />
 
         <!-- ══ Coverage strip - the 6 ways TGPRB tests this topic ══ -->
         <section class="mb-10">
@@ -798,6 +799,7 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
+                <p v-if="q.teaching_explanation" class="callout-body mt-2">Study commentary: {{ q.teaching_explanation }}</p>
               </div>
 
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="reveal(q)">
@@ -888,14 +890,6 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-GEO-IRRIGATION"
-                  :prompt="`Explain the reasoning for this TGPSC-style irrigation question and the exam trap: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
               </div>
 
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
@@ -949,7 +943,9 @@
             <UIcon name="i-heroicons-arrow-right" class="h-4 w-4 shrink-0 accent transition-transform group-hover:translate-x-1" />
           </NuxtLink>
         </nav>
-      </article>
+
+        <NoteStudySwitch slug="irrigation-in-india" />
+</article>
 
       <!-- ══ Sticky ToC ══════════════════════════════════════════════════ -->
       <TableOfContents
@@ -1010,6 +1006,7 @@
 </template>
 
 <script setup lang="ts">
+import { canonicalNotePyqs } from "~/utils/note-pyqs"
 import { computed, onMounted, onUnmounted, reactive, ref, watch, nextTick } from 'vue'
 import TableOfContents from '@/components/TableOfContents.vue'
 import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
@@ -1095,6 +1092,7 @@ MAJOR CANAL HEADWORKS & MULTIPURPOSE DAMS
 └── Nagarjuna Sagar (Krishna River)→ World's Largest Masonry Dam (Nalgonda/Palnadu)`
 
 interface Pyq {
+  teaching_explanation?: string
   uid: string
   exam: string
   year: string
@@ -1108,7 +1106,7 @@ interface Pyq {
   selected: number | null
 }
 
-const pyqList = reactive<Pyq[]>([
+const pyqList = reactive<Pyq[]>(canonicalNotePyqs([
   {
     uid: 'PYQ-1532',
     exam: 'SI',
@@ -1259,7 +1257,7 @@ const pyqList = reactive<Pyq[]>([
     revealed: false,
     selected: null
   }
-])
+]))
 
 /* ── Advanced Practice: TGPSC-style hardening drills ────────────────────── */
 interface AdvPractice {

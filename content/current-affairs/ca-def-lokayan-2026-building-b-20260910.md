@@ -2,10 +2,10 @@
 id: "CA-PIB-CA_DEF_LOKAYAN_2026_BUILDING_B_20260910"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
-related_topic_ids:
-  - "NOTE-POL-HIST-ACTS"
+related_topic_ids: ["NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

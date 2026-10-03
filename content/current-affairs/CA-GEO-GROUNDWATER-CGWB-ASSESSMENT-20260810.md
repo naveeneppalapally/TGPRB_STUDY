@@ -1,10 +1,11 @@
 ---
 id: "CA-GEO-GROUNDWATER-CGWB-ASSESSMENT-20260810"
 type: "current_affair"
-category: "geography"
-exam_section: "Indian & World Geography"
+category: "environment"
+exam_section: "Geography"
 topic: "Groundwater Resources in India"
 related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

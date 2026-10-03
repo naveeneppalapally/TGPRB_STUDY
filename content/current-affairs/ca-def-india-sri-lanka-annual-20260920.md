@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_DEF_INDIA_SRI_LANKA_ANNUAL_20260920"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
 related_topic_ids: ["NOTE-GEO-MOUNTAINS", "NOTE-SCI-SPACE"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

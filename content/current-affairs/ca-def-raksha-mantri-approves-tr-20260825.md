@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_APPROVES_TR_20260825"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
 related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

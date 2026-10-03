@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Census 2027 Houselisting Operations"
-related_topic_ids: ["NOTE-ECO-CENSUS", "NOTE-POL-ACTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

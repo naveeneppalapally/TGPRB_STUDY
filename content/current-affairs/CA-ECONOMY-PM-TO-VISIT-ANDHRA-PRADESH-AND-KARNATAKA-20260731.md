@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Bhogapuram International Airport Inauguration"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

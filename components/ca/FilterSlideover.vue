@@ -192,7 +192,7 @@ import { useCACategories } from '@/composables/useCACategories'
 interface Facets {
   categories: Record<string, number>
   sections: Record<string, number>
-  difficulties: { F: number, M: number, O: number }
+  difficulties: Record<string, number>
   depths: Record<string, number>
 }
 

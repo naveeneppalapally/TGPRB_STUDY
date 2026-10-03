@@ -1,41 +1,20 @@
-import fs from 'fs'
-import path from 'path'
+import { readFileSync } from 'node:fs'
 import { globSync } from 'glob'
 
-const EM_DASH = String.fromCharCode(8212)
-const files = globSync('**/*.{vue,md,ts,js,json,css}', {
-  ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'dist/**', 'scripts/ban-em-dash.ts', 'package-lock.json'],
+// Read-only gate. Never silently alter authored content during development/build.
+const banned = String.fromCodePoint(0x2014)
+const files = globSync('**/*.{vue,md,ts,js,mjs,cjs,json,css,py,sql,yml,yaml,sh,html,txt,toml}', {
+  dot: true,
+  ignore: ['node_modules/**', '**/node_modules/**', '.git/**', '.wrangler/**', '.agents/**', '.codex/**', '.nuxt/**', '.output/**', 'dist/**', '**/.venv/**', '**/__pycache__/**'],
 })
-
-let replacedCount = 0
-
+let failures = 0
 for (const file of files) {
-  const content = fs.readFileSync(file, 'utf8')
-  if (content.includes(EM_DASH)) {
-    // Replace all em-dashes with standard dash
-    const regex = new RegExp(EM_DASH, 'g')
-    const newContent = content.replace(regex, '-')
-    fs.writeFileSync(file, newContent, 'utf8')
-    console.log(`Replaced em-dash in: ${file}`)
-    replacedCount++
-  }
+  const lines = readFileSync(file, 'utf8').split('\n')
+  lines.forEach((line, index) => {
+    if (!line.includes(banned)) return
+    console.error(`${file}:${index + 1}: forbidden U+2014`)
+    failures++
+  })
 }
-
-if (replacedCount > 0) {
-  console.log(`BANNED EM-DASH: Found and replaced em-dashes in ${replacedCount} files.`)
-} else {
-  console.log('Em-dash check passed. No em-dashes found.')
-}
-
-// Enforce AGENTS.md constitution size limit (<= 16,000 bytes)
-const constitutionPath = fs.existsSync('AGENTS.md')
-  ? 'AGENTS.md'
-  : path.resolve(__dirname, '..', 'AGENTS.md')
-
-if (fs.existsSync(constitutionPath)) {
-  const constitutionSize = fs.statSync(constitutionPath).size
-  if (constitutionSize > 16000) {
-    console.error(`BANNED SIZE: AGENTS.md exceeds 16,000 bytes (${constitutionSize} bytes)!`)
-    process.exit(1)
-  }
-}
+if (failures) process.exit(1)
+console.log(`PASS: read-only U+2014 check (${files.length} text files, including Python, SQL and workflows).`)

@@ -2,9 +2,10 @@
 id: "CA-GEO-DIGITAL-WATER-RESOURCES-NMCG-20260730"
 type: "current_affair"
 category: "science"
-exam_section: "General Science & Technology"
+exam_section: "Science & Technology"
 topic: "Digital Technologies in Water Resources Management"
-related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-SCI-GENERAL"]
+related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

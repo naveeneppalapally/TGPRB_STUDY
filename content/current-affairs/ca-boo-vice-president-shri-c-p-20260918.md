@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_BOO_VICE_PRESIDENT_SHRI_C_P_20260918"
 type: "current_affair"
 category: "books"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Books and Literary Events"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

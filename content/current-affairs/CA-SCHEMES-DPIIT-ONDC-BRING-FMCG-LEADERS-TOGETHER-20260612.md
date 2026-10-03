@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "DigiDukaan Initiative by DPIIT and ONDC"
-related_topic_ids: ["NOTE-ECO-ONDC", "NOTE-TEL-ECONOMY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "MSE-CDP Projects in Telangana"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

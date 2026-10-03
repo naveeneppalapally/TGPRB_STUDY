@@ -1080,14 +1080,7 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} : {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-POL-MAKING-CONST"
-                  :prompt="`Explain the Constituent Assembly historical reasoning and potential exam traps for this PYQ: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
+                <p v-if="q.teaching_explanation" class="callout-body mt-2">Study commentary: {{ q.teaching_explanation }}</p>
               </div>
               <button
                 v-else
@@ -1197,14 +1190,6 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} : {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-POL-MAKING-CONST"
-                  :prompt="`Explain the reasoning for this TGPSC-style question and the exam trap: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
               </div>
               <button
                 v-else
@@ -1319,11 +1304,6 @@
     </div>
 
     <!-- Supplementary Drawers -->
-    <AiAssistantDrawer
-      note-id="NOTE-POL-MAKING-CONST"
-      note-title="Making of the Indian Constitution"
-      :quick-prompts="aiQuickPrompts"
-    />
     <PersonalNotesDrawer
       ref="notesDrawerRef"
       note-id="NOTE-POL-MAKING-CONST"
@@ -1378,6 +1358,7 @@
 </template>
 
 <script setup lang="ts">
+import { canonicalNotePyqs } from "~/utils/note-pyqs"
 import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
 import TableOfContents from '@/components/TableOfContents.vue'
 import CurrentAffairsStrip from '@/components/CurrentAffairsStrip.vue'
@@ -1385,10 +1366,7 @@ import GateQuiz from '@/components/GateQuiz.vue'
 import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
 import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
 import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
-import AiAssistantDrawer from '@/components/AiAssistantDrawer.vue'
-import AiAskButton from '@/components/AiAskButton.vue'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
-import { useAiPromptChips } from '@/composables/useAiPromptChips'
 import type { SectionContext } from '@/types/annotations'
 
 useHead({
@@ -1396,7 +1374,6 @@ useHead({
   meta: [{ name: 'description', content: 'Comprehensive TGPRB study note: Making of the Indian Constitution with Constituent Assembly milestones, Drafting Committee, and verified PYQs.' }],
 })
 
-const aiQuickPrompts = useAiPromptChips('NOTE-POL-MAKING-CONST')
 
 const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
 const { loadNotes } = usePersonalNotes()
@@ -1456,6 +1433,7 @@ onUnmounted(() => {
 })
 
 interface Pyq {
+  teaching_explanation?: string
   uid: string
   exam: string
   year: string
@@ -1469,7 +1447,7 @@ interface Pyq {
   selected: number | null
 }
 
-const pyqs: Pyq[] = reactive([
+const pyqs: Pyq[] = reactive(canonicalNotePyqs([
   {
     uid: 'PYQ-3037',
     exam: 'SI',
@@ -1484,7 +1462,7 @@ const pyqs: Pyq[] = reactive([
       'Government of India Act, 1919'
     ],
     correct: 2,
-    explanation: 'The Constituent Assembly of India was set up in November 1946 under the scheme formulated by the Cabinet Mission Plan of May 1946, comprising Lord Pethick-Lawrence, Sir Stafford Cripps, and A.V. Alexander.',
+    teaching_explanation: 'The Constituent Assembly of India was set up in November 1946 under the scheme formulated by the Cabinet Mission Plan of May 1946, comprising Lord Pethick-Lawrence, Sir Stafford Cripps, and A.V. Alexander.',
     revealed: false,
     selected: null
   },
@@ -1502,7 +1480,7 @@ const pyqs: Pyq[] = reactive([
       '22nd January, 1947'
     ],
     correct: 3,
-    explanation: "The historic 'Objectives Resolution' was moved by Pandit Jawaharlal Nehru on December 13, 1946, and was unanimously adopted (passed) by the Constituent Assembly on January 22, 1947. Its modified text became the Preamble.",
+    teaching_explanation: "The historic 'Objectives Resolution' was moved by Pandit Jawaharlal Nehru on December 13, 1946, and was unanimously adopted (passed) by the Constituent Assembly on January 22, 1947. Its modified text became the Preamble.",
     revealed: false,
     selected: null
   },
@@ -1520,7 +1498,7 @@ const pyqs: Pyq[] = reactive([
       '(4) a&b'
     ],
     correct: 0,
-    explanation: 'Statement (a) is correct because the Constituent Assembly was formulated under the Cabinet Mission Plan of 1946. Statement (d) is correct as the Indian Independence Bill was passed on July 15, 1947 by the British House of Commons (Royal Assent on July 18, 1947). Statement (b) is incorrect because the Preamble was amended in 1976 (42nd CAA).',
+    teaching_explanation: 'Statement (a) is correct because the Constituent Assembly was formulated under the Cabinet Mission Plan of 1946. Statement (d) is correct as the Indian Independence Bill was passed on July 15, 1947 by the British House of Commons (Royal Assent on July 18, 1947). Statement (b) is incorrect because the Preamble was amended in 1976 (42nd CAA).',
     revealed: false,
     selected: null
   },
@@ -1538,7 +1516,7 @@ const pyqs: Pyq[] = reactive([
       'Sir John Simon'
     ],
     correct: 2,
-    explanation: 'In June 1948, Dr. Rajendra Prasad, President of the Constituent Assembly, appointed the Linguistic Provinces Commission headed by Justice S.K. Dhar (former Judge of Allahabad High Court) to examine state reorganization on a linguistic basis.',
+    teaching_explanation: 'In June 1948, Dr. Rajendra Prasad, President of the Constituent Assembly, appointed the Linguistic Provinces Commission headed by Justice S.K. Dhar (former Judge of Allahabad High Court) to examine state reorganization on a linguistic basis.',
     revealed: false,
     selected: null
   },
@@ -1556,7 +1534,7 @@ const pyqs: Pyq[] = reactive([
       'P.N. Haksar'
     ],
     correct: 1,
-    explanation: 'The Linguistic Provinces Commission appointed in June 1948 was headed by Justice S.K. Dhar. Its report submitted in December 1948 recommended reorganization based on administrative convenience rather than linguistic considerations alone.',
+    teaching_explanation: 'The Linguistic Provinces Commission appointed in June 1948 was headed by Justice S.K. Dhar. Its report submitted in December 1948 recommended reorganization based on administrative convenience rather than linguistic considerations alone.',
     revealed: false,
     selected: null
   },
@@ -1574,7 +1552,7 @@ const pyqs: Pyq[] = reactive([
       'All the above'
     ],
     correct: 3,
-    explanation: "The Preamble to the Indian Constitution declares India to be a 'SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC'. Therefore, all three terms (Secular, Democratic, Republic) complete the constitutional phraseology.",
+    teaching_explanation: "The Preamble to the Indian Constitution declares India to be a 'SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC'. Therefore, all three terms (Secular, Democratic, Republic) complete the constitutional phraseology.",
     revealed: false,
     selected: null
   },
@@ -1592,7 +1570,7 @@ const pyqs: Pyq[] = reactive([
       '(A) is false and (R) is true'
     ],
     correct: 1,
-    explanation: 'A Republic signifies that the head of state (the President) is elected for a fixed term and not hereditary. Universal adult franchise establishes a representative democracy, but does not define a republic (e.g. the UK has universal adult franchise but is a constitutional monarchy).',
+    teaching_explanation: 'A Republic signifies that the head of state (the President) is elected for a fixed term and not hereditary. Universal adult franchise establishes a representative democracy, but does not define a republic (e.g. the UK has universal adult franchise but is a constitutional monarchy).',
     revealed: false,
     selected: null
   },
@@ -1610,11 +1588,11 @@ const pyqs: Pyq[] = reactive([
       '9'
     ],
     correct: 0,
-    explanation: 'When adopted on November 26, 1949, the Constitution originally contained 8 Schedules. Four additional schedules were added by subsequent constitutional amendments (9th by 1st CAA 1951, 10th by 52nd CAA 1985, 11th by 73rd CAA 1992, 12th by 74th CAA 1992), making 12 schedules currently.',
+    teaching_explanation: 'When adopted on November 26, 1949, the Constitution originally contained 8 Schedules. Four additional schedules were added by subsequent constitutional amendments (9th by 1st CAA 1951, 10th by 52nd CAA 1985, 11th by 73rd CAA 1992, 12th by 74th CAA 1992), making 12 schedules currently.',
     revealed: false,
     selected: null
   }
-])
+]))
 
 const activeExamFilter = ref('all')
 

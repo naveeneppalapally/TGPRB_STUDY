@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "UNESCO and IndiaAI Mission AI RAM Consultation"
-related_topic_ids: ["NOTE-GOV-INITIATIVES", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

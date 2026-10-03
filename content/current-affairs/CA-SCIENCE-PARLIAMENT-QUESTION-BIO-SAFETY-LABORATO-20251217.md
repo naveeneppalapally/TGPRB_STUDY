@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "Regulation of Genome Edited Plants in India"
 related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-FORESTS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

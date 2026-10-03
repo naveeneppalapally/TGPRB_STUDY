@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "38th National Under-11 Chess Championship"
-related_topic_ids: ["NOTE-SPO-CHESS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

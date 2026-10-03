@@ -1,12 +1,11 @@
 ---
 id: "CA-GEO-GANGA-NAMAMI-PROGRESS-20250801"
 type: "current_affair"
-category: "geography"
+category: "environment"
 exam_section: "Geography"
 topic: "Namami Gange Programme - Ganga River Rejuvenation"
-related_topic_ids:
-  - "NOTE-GEO-DAMS"
-  - "NOTE-GEO-DRAINAGE"
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

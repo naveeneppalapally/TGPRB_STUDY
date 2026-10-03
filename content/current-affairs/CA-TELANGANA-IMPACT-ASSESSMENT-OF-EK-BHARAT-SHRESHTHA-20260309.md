@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Seven Zonal Cultural Centres and EBSB Campaign"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-GS-CULTURE"]
+related_topic_ids: ["NOTE-TEL-CULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

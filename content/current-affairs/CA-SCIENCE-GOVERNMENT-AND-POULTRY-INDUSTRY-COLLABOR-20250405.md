@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Avian Influenza Outbreak and H9N2 Vaccine Development"
-related_topic_ids: ["NOTE-SCI-DISEASES", "NOTE-TEL-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

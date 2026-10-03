@@ -15,7 +15,7 @@ import type { SupabaseClient } from '@supabase/supabase-js'
  * service worker or cache application content.
  */
 
-export type OfflineMutationType = 'fsrs_review' | 'gate_passed' | 'topic_visit' | 'bookmark' | 'note_upsert' | 'improvement_create'
+export type OfflineMutationType = 'fsrs_review' | 'gate_passed' | 'topic_visit' | 'bookmark' | 'ca_attempt' | 'note_upsert' | 'improvement_create'
 export type FSRSRating = 1 | 2 | 3 | 4
 
 export interface SerializableFSRSCard {
@@ -35,6 +35,7 @@ export interface FSRSCardSeed {
   card_id: string
   initial_card: SerializableFSRSCard
   created_at: string
+  metadata?: Record<string, unknown>
 }
 
 export interface FSRSReviewPayload {
@@ -61,6 +62,12 @@ export interface TopicVisitPayload {
 export interface BookmarkPayload {
   content_id: string
   bookmarked: boolean
+  updated_at: string
+}
+
+export interface CAAttemptPayload {
+  content_id: string
+  attempts: { score: number; total: number; lastAt: string; perQuestion: ({ selected: number; correct: boolean; at: string } | null | undefined)[] }
   updated_at: string
 }
 
@@ -94,6 +101,8 @@ export interface ImprovementCreatePayload {
 
 export interface OfflineMutationBase<TType extends OfflineMutationType, TPayload> {
   id: string
+  /** Absent on legacy records: preserve them, never adopt them automatically. */
+  owner_id?: string
   type: TType
   payload: TPayload
   client_timestamp: string
@@ -106,6 +115,7 @@ export type FSRSReviewMutation = OfflineMutationBase<'fsrs_review', FSRSReviewPa
 export type GatePassedMutation = OfflineMutationBase<'gate_passed', GatePassedPayload>
 export type TopicVisitMutation = OfflineMutationBase<'topic_visit', TopicVisitPayload>
 export type BookmarkMutation = OfflineMutationBase<'bookmark', BookmarkPayload>
+export type CAAttemptMutation = OfflineMutationBase<'ca_attempt', CAAttemptPayload>
 export type NoteUpsertMutation = OfflineMutationBase<'note_upsert', NoteUpsertPayload>
 export type ImprovementCreateMutation = OfflineMutationBase<'improvement_create', ImprovementCreatePayload>
 
@@ -114,6 +124,7 @@ export type OfflineMutation =
   | GatePassedMutation
   | TopicVisitMutation
   | BookmarkMutation
+  | CAAttemptMutation
   | NoteUpsertMutation
   | ImprovementCreateMutation
 
@@ -122,6 +133,7 @@ type MutationPayloadByType = {
   gate_passed: GatePassedPayload
   topic_visit: TopicVisitPayload
   bookmark: BookmarkPayload
+  ca_attempt: CAAttemptPayload
   note_upsert: NoteUpsertPayload
   improvement_create: ImprovementCreatePayload
 }
@@ -179,6 +191,8 @@ export interface OfflineSyncOptions {
 
 export interface OfflineSyncEngine {
   pendingCount: Ref<number>
+  quarantinedCount: Ref<number>
+  pendingMutations(): Promise<OfflineMutation[]>
   isSyncing: Ref<boolean>
   lastError: Ref<Error | null>
   initialize(): Promise<void>
@@ -192,6 +206,7 @@ export interface OfflineSyncEngine {
   queueGatePassed(payload: GatePassedPayload): GatePassedMutation
   queueTopicVisit(payload: TopicVisitPayload): TopicVisitMutation
   queueBookmark(payload: BookmarkPayload): BookmarkMutation
+  queueCAAttempt(payload: CAAttemptPayload): CAAttemptMutation
   queueNoteUpsert(payload: NoteUpsertPayload): NoteUpsertMutation
   queueImprovementCreate(payload: ImprovementCreatePayload): ImprovementCreateMutation
   flush(): Promise<OfflineSyncResult>
@@ -257,6 +272,13 @@ function validatePayload(type: OfflineMutationType, payload: MutationPayloadByTy
     return
   }
 
+  if (type === 'ca_attempt') {
+    const attempt = payload as CAAttemptPayload
+    if (!attempt.content_id || !attempt.attempts || !Array.isArray(attempt.attempts.perQuestion)) throw new Error('ca_attempt requires content_id and attempts')
+    validDate(attempt.updated_at, 'updated_at')
+    return
+  }
+
   if (type === 'note_upsert') {
     const note = payload as NoteUpsertPayload
     if (!note.note?.id) throw new Error('note_upsert requires note.id')
@@ -294,7 +316,7 @@ function createEventId(): string {
 
 function sortMutations(mutations: OfflineMutation[]): OfflineMutation[] {
   return [...mutations].sort((left, right) => {
-    const byTime = left.client_timestamp.localeCompare(right.client_timestamp)
+    const byTime = Date.parse(left.client_timestamp) - Date.parse(right.client_timestamp)
     return byTime !== 0 ? byTime : left.id.localeCompare(right.id)
   })
 }
@@ -325,7 +347,7 @@ export class InMemoryMutationStore implements MutationStore {
     for (const id of ids) {
       const mutation = this.mutations.get(id)
       if (!mutation) continue
-      this.mutations.set(id, { ...mutation, synced: true, next_retry_at: null })
+      this.mutations.delete(id)
     }
   }
 
@@ -377,9 +399,7 @@ class LocalStorageMutationStore implements MutationStore {
 
   async markSynced(ids: string[]): Promise<void> {
     const wanted = new Set(ids)
-    this.write(this.read().map((mutation) => wanted.has(mutation.id)
-      ? { ...mutation, synced: true, next_retry_at: null }
-      : mutation))
+    this.write(this.read().filter(mutation => !wanted.has(mutation.id)))
   }
 
   async scheduleRetry(ids: string[], retryCount: number, nextRetryAt: Date): Promise<void> {
@@ -390,13 +410,13 @@ class LocalStorageMutationStore implements MutationStore {
   }
 }
 
-class IndexedDBMutationStore implements MutationStore {
+export class IndexedDBMutationStore implements MutationStore {
   private database: Promise<IDBDatabase> | null = null
 
   private open(): Promise<IDBDatabase> {
     if (this.database) return this.database
 
-    this.database = new Promise((resolve, reject) => {
+    this.database = new Promise<IDBDatabase>((resolve, reject) => {
       const request = indexedDB.open(DB_NAME, 1)
       request.onupgradeneeded = () => {
         const database = request.result
@@ -406,7 +426,7 @@ class IndexedDBMutationStore implements MutationStore {
       }
       request.onsuccess = () => resolve(request.result)
       request.onerror = () => reject(request.error ?? new Error('Unable to open IndexedDB'))
-    })
+    }).catch(error => { this.database = null; throw error })
 
     return this.database
   }
@@ -416,9 +436,10 @@ class IndexedDBMutationStore implements MutationStore {
     return new Promise<T>((resolve, reject) => {
       const transaction = database.transaction(STORE_NAME, mode)
       const request = action(transaction.objectStore(STORE_NAME))
-      request.onsuccess = () => resolve(request.result)
+      transaction.oncomplete = () => resolve(request.result)
       request.onerror = () => reject(request.error ?? new Error('IndexedDB request failed'))
       transaction.onerror = () => reject(transaction.error ?? new Error('IndexedDB transaction failed'))
+      transaction.onabort = () => reject(transaction.error ?? new Error('IndexedDB transaction aborted'))
     })
   }
 
@@ -443,11 +464,7 @@ class IndexedDBMutationStore implements MutationStore {
   }
 
   async markSynced(ids: string[]): Promise<void> {
-    const wanted = new Set(ids)
-    const mutations = await this.all()
-    await Promise.all(mutations
-      .filter((mutation) => wanted.has(mutation.id))
-      .map((mutation) => this.put({ ...mutation, synced: true, next_retry_at: null })))
+    await Promise.all(ids.map(id => this.request('readwrite', store => store.delete(id))))
   }
 
   async scheduleRetry(ids: string[], retryCount: number, nextRetryAt: Date): Promise<void> {
@@ -463,42 +480,34 @@ class IndexedDBMutationStore implements MutationStore {
   }
 }
 
-class FallbackMutationStore implements MutationStore {
-  private useFallback = false
-
+export class FallbackMutationStore implements MutationStore {
   constructor(
     private readonly primary: MutationStore,
     private readonly fallback: MutationStore,
   ) {}
 
-  private async run<T>(operation: (store: MutationStore) => Promise<T>): Promise<T> {
-    if (this.useFallback) return operation(this.fallback)
-    try {
-      return await operation(this.primary)
-    } catch {
-      this.useFallback = true
-      return operation(this.fallback)
-    }
-  }
-
   put(mutation: OfflineMutation): Promise<void> {
-    return this.run((store) => store.put(mutation))
+    return this.primary.put(mutation).catch(() => this.fallback.put(mutation))
   }
 
   listPending(limit: number, now: Date): Promise<OfflineMutation[]> {
-    return this.run((store) => store.listPending(limit, now))
+    return this.listAllPending().then((items) => items
+      .filter((item) => !item.next_retry_at || new Date(item.next_retry_at) <= now).slice(0, limit))
   }
 
   listAllPending(): Promise<OfflineMutation[]> {
-    return this.run((store) => store.listAllPending())
+    // If IndexedDB is temporarily inaccessible, stop replay instead of hiding
+    // its pending records. New writes remain durable in the fallback store.
+    return Promise.all([this.primary.listAllPending(), this.fallback.listAllPending()])
+      .then(([primary, fallback]) => sortMutations([...new Map([...primary, ...fallback].map((item) => [item.id, item])).values()]))
   }
 
   markSynced(ids: string[]): Promise<void> {
-    return this.run((store) => store.markSynced(ids))
+    return Promise.all([this.primary.markSynced(ids), this.fallback.markSynced(ids)]).then(() => {})
   }
 
   scheduleRetry(ids: string[], retryCount: number, nextRetryAt: Date): Promise<void> {
-    return this.run((store) => store.scheduleRetry(ids, retryCount, nextRetryAt))
+    return Promise.all([this.primary.scheduleRetry(ids, retryCount, nextRetryAt), this.fallback.scheduleRetry(ids, retryCount, nextRetryAt)]).then(() => {})
   }
 }
 
@@ -584,9 +593,9 @@ export function reconcileFSRSReviewLog(
   }
 
   const ordered = [...unique.values()].sort((left, right) => {
-    const byReviewTime = left.payload.review_time.localeCompare(right.payload.review_time)
+    const byReviewTime = Date.parse(left.payload.review_time) - Date.parse(right.payload.review_time)
     if (byReviewTime !== 0) return byReviewTime
-    const byClientTime = left.client_timestamp.localeCompare(right.client_timestamp)
+    const byClientTime = Date.parse(left.client_timestamp) - Date.parse(right.client_timestamp)
     return byClientTime !== 0 ? byClientTime : left.id.localeCompare(right.id)
   })
 
@@ -649,10 +658,11 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
   const random = options.random ?? Math.random
   const batchSize = Math.min(MAX_BATCH_SIZE, Math.max(1, options.batchSize ?? MAX_BATCH_SIZE))
   const pendingCount = ref(0)
+  const quarantinedCount = ref(0)
   const isSyncing = ref(false)
   const lastError = ref<Error | null>(null)
-  const pendingWrites = new Map<string, Promise<void>>()
-  let initialized = false
+  const pendingWrites = new Map<string, { owner: string; write: Promise<void> }>()
+  const failedWrites = new Map<string, OfflineMutation>()
   let activeFlush: Promise<OfflineSyncResult> | null = null
   let retryTimer: ReturnType<typeof setTimeout> | null = null
   let started = false
@@ -662,16 +672,17 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
   async function refreshPendingCount(): Promise<void> {
     const persisted = await store.listAllPending()
     const persistedIds = new Set(persisted.map((mutation) => mutation.id))
-    const notYetPersisted = [...pendingWrites.keys()]
-      .filter((id) => !persistedIds.has(id))
-      .length
-    pendingCount.value = persisted.length + notYetPersisted
+    const owner = options.getUserId() || 'guest'
+    const notYetPersisted = new Set([
+      ...[...pendingWrites].filter(([id, value]) => value.owner === owner && !persistedIds.has(id)).map(([id]) => id),
+      ...[...failedWrites.values()].filter(item => item.owner_id === owner && !persistedIds.has(item.id)).map(item => item.id),
+    ]).size
+    quarantinedCount.value = persisted.filter(item => !item.owner_id).length
+    pendingCount.value = persisted.filter((item) => item.owner_id === owner).length + notYetPersisted
   }
 
   async function initialize(): Promise<void> {
-    if (initialized) return
     await refreshPendingCount()
-    initialized = true
   }
 
   function persistWithoutBlocking(mutation: OfflineMutation): void {
@@ -679,12 +690,13 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
     // it in the caller's interaction path. This issues the durable local write
     // before queueFSRSReview/queueTopicVisit/etc. returns.
     const write = store.put(mutation)
-    pendingWrites.set(mutation.id, write)
+    pendingWrites.set(mutation.id, { owner: mutation.owner_id!, write })
     void write
       .catch((error: unknown) => {
+        failedWrites.set(mutation.id, mutation)
         lastError.value = error instanceof Error ? error : new Error(String(error))
       })
-      .finally(() => pendingWrites.delete(mutation.id))
+      .finally(() => { pendingWrites.delete(mutation.id); void refreshPendingCount().catch(() => {}) })
   }
 
   function enqueue<TType extends OfflineMutationType>(
@@ -694,6 +706,7 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
     validatePayload(type, payload)
     const mutation = {
       id: createEventId(),
+      owner_id: options.getUserId() || 'guest',
       type,
       payload,
       client_timestamp: now().toISOString(),
@@ -715,7 +728,8 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
 
   async function flushInternal(): Promise<OfflineSyncResult> {
     await initialize()
-    await Promise.all([...pendingWrites.values()])
+    await Promise.all([...pendingWrites.values()].map(value => value.write))
+    for (const [id, mutation] of failedWrites) { await store.put(mutation); failedWrites.delete(id) }
 
     const userId = options.getUserId()
     if (!userId) {
@@ -732,7 +746,11 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
 
     try {
       while (true) {
-        currentBatch = await store.listPending(batchSize, now())
+        if (options.getUserId() !== userId) break
+        currentBatch = (await store.listAllPending())
+          .filter((item) => item.owner_id === userId)
+          .filter((item) => !item.next_retry_at || new Date(item.next_retry_at) <= now())
+          .slice(0, batchSize)
         if (currentBatch.length === 0) break
 
         const response = await options.adapter.sync(userId, currentBatch)
@@ -782,11 +800,19 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
 
   function flush(): Promise<OfflineSyncResult> {
     if (!activeFlush) {
-      activeFlush = flushInternal().finally(() => {
+      const perform = async (): Promise<OfflineSyncResult> => await flushInternal()
+      const run = async (): Promise<OfflineSyncResult> => {
+        if (isBrowser() && navigator.locks) return await navigator.locks.request(`studyos:sync:${options.getUserId() || 'guest'}`, perform)
+        return await perform()
+      }
+      activeFlush = run().catch((error: unknown) => {
+        lastError.value = error instanceof Error ? error : new Error(String(error))
+        return { status: 'retry_scheduled' as const, syncedCount: 0, pendingCount: pendingCount.value, error: lastError.value }
+      }).finally(() => {
         activeFlush = null
       })
     }
-    return activeFlush
+    return activeFlush!
   }
 
   const onOnline = () => {
@@ -799,7 +825,7 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
     window.addEventListener('online', onOnline)
     void initialize().then(() => {
       if (isOnline()) void flush()
-    })
+    }).catch(error => { lastError.value = error instanceof Error ? error : new Error(String(error)) })
   }
 
   function stop(): void {
@@ -816,6 +842,8 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
 
   return {
     pendingCount,
+    quarantinedCount,
+    pendingMutations: async () => (await store.listAllPending()).filter(item => item.owner_id === (options.getUserId() || 'guest')),
     isSyncing,
     lastError,
     initialize,
@@ -826,6 +854,7 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
     queueGatePassed: (payload) => enqueue('gate_passed', payload),
     queueTopicVisit: (payload) => enqueue('topic_visit', payload),
     queueBookmark: (payload) => enqueue('bookmark', payload),
+    queueCAAttempt: (payload) => enqueue('ca_attempt', payload),
     queueNoteUpsert: (payload) => enqueue('note_upsert', payload),
     queueImprovementCreate: (payload) => enqueue('improvement_create', payload),
     flush,
@@ -833,20 +862,33 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
 }
 
 /** Vue lifecycle wrapper for the engine. */
+const sharedEngines = new WeakMap<OfflineSyncAdapter, OfflineSyncEngine>()
 export function useOfflineSync(options?: Partial<OfflineSyncOptions>): OfflineSyncEngine {
   if (!options || !options.getUserId || !options.adapter) {
     return {
       pendingCount: ref(0),
+      quarantinedCount: ref(0),
+      pendingMutations: async () => [],
       isSyncing: ref(false),
       lastError: ref(null),
       initialize: async () => {},
       start: () => {},
       stop: () => {},
-      enqueue: () => ({} as any),
+      enqueue: () => { throw new Error('Offline sync requires an authenticated adapter') },
+      queueFSRSReview: () => { throw new Error('Offline sync is not configured') },
+      queueGatePassed: () => { throw new Error('Offline sync is not configured') },
+      queueTopicVisit: () => { throw new Error('Offline sync is not configured') },
+      queueBookmark: () => { throw new Error('Offline sync is not configured') },
+      queueCAAttempt: () => { throw new Error('Offline sync is not configured') },
+      queueNoteUpsert: () => { throw new Error('Offline sync is not configured') },
+      queueImprovementCreate: () => { throw new Error('Offline sync is not configured') },
+      flush: async () => ({ status: 'unauthenticated', syncedCount: 0, pendingCount: 0 }),
     }
   }
+  if (isBrowser() && sharedEngines.has(options.adapter)) return sharedEngines.get(options.adapter)!
   const engine = createOfflineSyncEngine({ ...options as OfflineSyncOptions, autoStart: options.autoStart ?? true })
-  onScopeDispose(() => engine.stop())
+  if (isBrowser()) sharedEngines.set(options.adapter, engine)
+  else onScopeDispose(() => engine.stop())
   return engine
 }
 
@@ -999,24 +1041,34 @@ function collectImprovementMutations(mutations: OfflineMutation[]): Array<{
  * Every write is idempotent: append-only review events use INSERT ... DO
  * NOTHING through RPCs, while topic and bookmark mutations use merge RPCs.
  */
+const sharedAdapters = new WeakMap<SupabaseClient<any>, OfflineSyncAdapter>()
 export function createSupabaseOfflineSyncAdapter(supabase: SupabaseClient<any>): OfflineSyncAdapter {
-  return {
+  if (sharedAdapters.has(supabase)) return sharedAdapters.get(supabase)!
+  const adapter: OfflineSyncAdapter = {
     async sync(userId: string, mutations: OfflineMutation[]): Promise<{ syncedIds: string[] }> {
+      const { data: { session } } = await supabase.auth.getSession()
+      if (!session || session.user.id !== userId || mutations.some((item) => item.owner_id !== userId)) {
+        throw new Error('Mutation owner does not match the authenticated account')
+      }
+      // Pin the originating JWT on every request, even if auth changes mid-batch.
+      const rpc = (name: string, args: Record<string, unknown>) => supabase.rpc(name, args)
+        .setHeader('Authorization', `Bearer ${session.access_token}`)
       const reviews = mutations.filter(isFsrsReview)
       if (reviews.length > 0) {
         const seeds = new Map<string, FSRSCardSeed>()
         for (const review of reviews) seeds.set(review.payload.card_id, review.payload.card_seed)
 
-        const seedResult = await supabase.rpc('insert_user_review_card_seeds', {
+        const seedResult = await rpc('insert_user_review_card_seeds', {
           p_seeds: [...seeds.values()].map((seed) => ({
             card_id: seed.card_id,
             initial_card: seed.initial_card,
             created_at: seed.created_at,
+            metadata: seed.metadata ?? {},
           })),
         })
         assertSupabaseResult(seedResult)
 
-        const logResult = await supabase.rpc('insert_user_review_logs', {
+        const logResult = await rpc('insert_user_review_logs', {
           p_logs: reviews.map((event) => ({
             id: event.id,
             card_id: event.payload.card_id,
@@ -1032,29 +1084,37 @@ export function createSupabaseOfflineSyncAdapter(supabase: SupabaseClient<any>):
 
       const topicStates = mergeTopicMutations(mutations)
       if (topicStates.length > 0) {
-        const topicResult = await supabase.rpc('merge_user_topic_states', { p_states: topicStates })
+        const topicResult = await rpc('merge_user_topic_states', { p_states: topicStates })
         assertSupabaseResult(topicResult)
       }
 
       const bookmarks = mergeBookmarkMutations(mutations)
       if (bookmarks.length > 0) {
-        const bookmarkResult = await supabase.rpc('merge_user_bookmarks', { p_bookmarks: bookmarks })
+        const bookmarkResult = await rpc('merge_user_bookmarks', { p_bookmarks: bookmarks })
         assertSupabaseResult(bookmarkResult)
+      }
+
+      const caAttempts = mutations.filter((m): m is CAAttemptMutation => m.type === 'ca_attempt')
+      if (caAttempts.length) {
+        const result = await rpc('merge_user_ca_attempts', { p_attempts: caAttempts.map(m => ({ ...m.payload, event_id: m.id })) })
+        assertSupabaseResult(result)
       }
 
       const notes = mergeNoteMutations(mutations)
       if (notes.length > 0) {
-        const noteResult = await supabase.rpc('merge_user_notes', { p_notes: notes })
+        const noteResult = await rpc('merge_user_notes', { p_notes: notes })
         assertSupabaseResult(noteResult)
       }
 
       const improvements = collectImprovementMutations(mutations)
       if (improvements.length > 0) {
-        const improvementResult = await supabase.rpc('insert_content_improvement_items', { p_items: improvements })
+        const improvementResult = await rpc('insert_content_improvement_items', { p_items: improvements })
         assertSupabaseResult(improvementResult)
       }
 
       return { syncedIds: mutations.map((mutation) => mutation.id) }
     },
   }
+  sharedAdapters.set(supabase, adapter)
+  return adapter
 }

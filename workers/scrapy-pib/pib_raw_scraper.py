@@ -19,6 +19,7 @@ Usage:
 """
 from __future__ import annotations
 
+import os
 import argparse, csv, random, re, sqlite3, threading, time, unicodedata
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -41,7 +42,7 @@ PIB_BASE    = "https://www.pib.gov.in"
 ARTICLE_URL = f"{PIB_BASE}/PressReleasePage.aspx?PRID={{}}&reg=3&lang=1"
 PREFLIGHT_PRID = 2_093_213  # Known English PIB Delhi release: 15 Jan 2025.
 
-# Browser UA is required — PIB's WAF returns HTTP 403 on non-browser UAs.
+# Browser UA is required - PIB's WAF returns HTTP 403 on non-browser UAs.
 # Rotating UAs is intentionally avoided (one stable Chrome UA per run is enough).
 SCRAPER_UA = (
     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
@@ -56,7 +57,8 @@ SCRAPER_HEADERS = {
 }
 
 PRID_ANCHOR_START_DATE = date(2025, 1, 1);  PRID_ANCHOR_START = 2_090_000
-PRID_ANCHOR_END_DATE   = date(2026, 8, 9);  PRID_ANCHOR_END   = 2_296_000
+PRID_ANCHOR_END_DATE = date.fromisoformat(os.environ.get('PIB_PRID_ANCHOR_END_DATE', '2026-08-09'))
+PRID_ANCHOR_END = int(os.environ.get('PIB_PRID_ANCHOR_END', '2296000'))
 PRID_PADDING   = 10_000
 MAX_TEXT_CHARS = 12_000
 
@@ -149,7 +151,7 @@ def insert_article(con: sqlite3.Connection, rec: ArticleRecord) -> None:
     con.commit()
 
 # ---------------------------------------------------------------------------
-# Pacer — NO lock held during sleep (was the bug that froze all workers)
+# Pacer - NO lock held during sleep (was the bug that froze all workers)
 # ---------------------------------------------------------------------------
 class Pacer:
     def __init__(self, rps: float):
@@ -180,7 +182,7 @@ class Pacer:
 _thread_local = threading.local()
 
 def _session() -> requests.Session:
-    """One Session per worker thread — thread-safe, keeps TCP connections alive."""
+    """One Session per worker thread - thread-safe, keeps TCP connections alive."""
     if not hasattr(_thread_local, "session"):
         s = requests.Session()
         s.headers.update(SCRAPER_HEADERS)
@@ -188,7 +190,7 @@ def _session() -> requests.Session:
     return _thread_local.session
 
 # ---------------------------------------------------------------------------
-# Preflight — verify PIB is reachable before burning 20 min on coarse scan
+# Preflight - verify PIB is reachable before burning 20 min on coarse scan
 # ---------------------------------------------------------------------------
 def preflight() -> None:
     """Fetch a known PRID and assert it parses correctly.
@@ -213,22 +215,22 @@ def preflight() -> None:
     if resp.status_code == 403:
         # 403 = WAF blocking our UA or IP. Log clearly but let coarse scan proceed
         # so we can see if it's a transient block or total block.
-        print(f"[Preflight WARN] HTTP 403 — WAF may be blocking. "
+        print(f"[Preflight WARN] HTTP 403 - WAF may be blocking. "
               f"Headers sent: {SCRAPER_HEADERS['User-Agent']}", flush=True)
-        print(f"[Preflight WARN] Proceeding to coarse scan — "
+        print(f"[Preflight WARN] Proceeding to coarse scan - "
               f"if 0 clusters found, IP range is blocked.", flush=True)
         return
 
     if resp.status_code != 200:
         raise RuntimeError(
-            f"[Preflight FAIL] HTTP {resp.status_code} — "
+            f"[Preflight FAIL] HTTP {resp.status_code} - "
             f"Location: {resp.headers.get('Location', 'n/a')}"
         )
     soup = BeautifulSoup(resp.text, "lxml")
     pub_date = extract_date_only(soup)
     if pub_date is None:
         raise RuntimeError(
-            "[Preflight FAIL] Page parsed but no date found — HTML structure may have changed"
+            "[Preflight FAIL] Page parsed but no date found - HTML structure may have changed"
         )
     print(f"[Preflight OK] PRID {PREFLIGHT_PRID} → {pub_date} (HTTP 200)", flush=True)
 
@@ -245,16 +247,16 @@ def fetch_prid(prid: int, pacer: Pacer) -> FetchResult:
     try:
         resp = _session().get(
             url,
-            timeout=(3, 8),   # connect 3s, read 8s — PIB is a slow Indian govt server
+            timeout=(3, 8),   # connect 3s, read 8s - PIB is a slow Indian govt server
             allow_redirects=True,
         )
     except (requests.Timeout, requests.ConnectionError, OSError):
-        # Timeout on non-existent PRID is EXPECTED — not a rate-limit signal
+        # Timeout on non-existent PRID is EXPECTED - not a rate-limit signal
         return FetchResult(prid, url, None, "transient")
     except Exception:
         return FetchResult(prid, url, None, "transient")
 
-    if resp.status_code in (429, 503):
+    if resp.status_code in (403, 429, 503):
         retry_after = resp.headers.get("Retry-After", "")
         delay = float(retry_after) if retry_after.isdigit() else 60.0
         pacer.cooldown(delay + random.uniform(2, 8))
@@ -444,7 +446,7 @@ def scan_and_store(
         dense_high = estimate_prid(to_date) + 2000
         print("[!] No target-month clusters found in coarse scan. Using estimated PRID range fallback.", flush=True)
 
-    # ---- STEP 3: Dense scan — ONE contiguous PRID range ----
+    # ---- STEP 3: Dense scan - ONE contiguous PRID range ----
     todo = [p for p in range(dense_low, dense_high + 1) if probe_due(con, p)]
     skipped = (dense_high - dense_low + 1) - len(todo)
     stats["skipped"] = skipped
@@ -530,7 +532,7 @@ def main() -> None:
     parser.add_argument("--to",        dest="to_date",    default=datetime.now().strftime("%Y-%m-%d"),
                         help="End date to SAVE (YYYY-MM-DD)")
     parser.add_argument("--scan-from", dest="scan_from",  default=None,
-                        help="Earlier date for PRID scan anchor — set 1 month before --from")
+                        help="Earlier date for PRID scan anchor - set 1 month before --from")
     parser.add_argument("--workers",     type=int,   default=10)
     parser.add_argument("--rps",         type=float, default=15.0,
                         help="Max requests/sec per job (default 15; each job is a separate IP)")

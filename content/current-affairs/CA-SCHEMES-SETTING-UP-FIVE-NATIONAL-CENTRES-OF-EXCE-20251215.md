@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "National Centres of Excellence under PM-SETU Scheme"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCH-CENTRAL", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

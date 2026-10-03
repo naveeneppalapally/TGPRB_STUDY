@@ -4,13 +4,40 @@ on:
   workflow_dispatch:
     inputs:
       month:
-        description: "One chunk name (for example 2025-02), or all after a successful smoke test"
+        description: "YYYY-MM, or all for the rolling 365-day window"
         required: true
-        default: "2025-02"
+        default: "all"
         type: string
 
 jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      chunks: ${{ steps.matrix.outputs.chunks }}
+    steps:
+      - id: matrix
+        env:
+          REQUESTED_MONTH: ${{ inputs.month }}
+        run: |
+          python - <<'PYTHON'
+          import calendar, json, os
+          from datetime import date, timedelta
+          requested = os.environ['REQUESTED_MONTH']
+          today = date.today()
+          first = today - timedelta(days=365) if requested == 'all' else date.fromisoformat(requested + '-01')
+          last = today if requested == 'all' else first.replace(day=calendar.monthrange(first.year,first.month)[1])
+          chunks = []
+          current = first
+          while current <= last:
+              previous = (current - timedelta(days=1)).replace(day=1)
+              month_end = current.replace(day=calendar.monthrange(current.year,current.month)[1])
+              end = min(last, month_end)
+              chunks.append(dict(name=current.strftime('%Y-%m'), **{'from':current.isoformat(),'to':end.isoformat(),'scan_from':previous.isoformat()}))
+              current = month_end + timedelta(days=1)
+          with open(os.environ['GITHUB_OUTPUT'],'a') as output: output.write('chunks=' + json.dumps(chunks) + '\n')
+          PYTHON
   scrape-chunks:
+    needs: plan
     name: "${{ matrix.chunk.name }}"
     runs-on: ubuntu-latest
     timeout-minutes: 45
@@ -18,29 +45,7 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        chunk:
-          # --from/--to  = exact save window (1 full month)
-          # --scan-from  = 1 month earlier so PRID estimation always starts before month day 1
-          - { name: "2025-01", from: "2025-01-01", to: "2025-01-31", scan_from: "2024-12-01" }
-          - { name: "2025-02", from: "2025-02-01", to: "2025-02-28", scan_from: "2025-01-01" }
-          - { name: "2025-03", from: "2025-03-01", to: "2025-03-31", scan_from: "2025-02-01" }
-          - { name: "2025-04", from: "2025-04-01", to: "2025-04-30", scan_from: "2025-03-01" }
-          - { name: "2025-05", from: "2025-05-01", to: "2025-05-31", scan_from: "2025-04-01" }
-          - { name: "2025-06", from: "2025-06-01", to: "2025-06-30", scan_from: "2025-05-01" }
-          - { name: "2025-07", from: "2025-07-01", to: "2025-07-31", scan_from: "2025-06-01" }
-          - { name: "2025-08", from: "2025-08-01", to: "2025-08-31", scan_from: "2025-07-01" }
-          - { name: "2025-09", from: "2025-09-01", to: "2025-09-30", scan_from: "2025-08-01" }
-          - { name: "2025-10", from: "2025-10-01", to: "2025-10-31", scan_from: "2025-09-01" }
-          - { name: "2025-11", from: "2025-11-01", to: "2025-11-30", scan_from: "2025-10-01" }
-          - { name: "2025-12", from: "2025-12-01", to: "2025-12-31", scan_from: "2025-11-01" }
-          - { name: "2026-01", from: "2026-01-01", to: "2026-01-31", scan_from: "2025-12-01" }
-          - { name: "2026-02", from: "2026-02-01", to: "2026-02-28", scan_from: "2026-01-01" }
-          - { name: "2026-03", from: "2026-03-01", to: "2026-03-31", scan_from: "2026-02-01" }
-          - { name: "2026-04", from: "2026-04-01", to: "2026-04-30", scan_from: "2026-03-01" }
-          - { name: "2026-05", from: "2026-05-01", to: "2026-05-31", scan_from: "2026-04-01" }
-          - { name: "2026-06", from: "2026-06-01", to: "2026-06-30", scan_from: "2026-05-01" }
-          - { name: "2026-07", from: "2026-07-01", to: "2026-07-31", scan_from: "2026-06-01" }
-          - { name: "2026-08", from: "2026-08-01", to: "2026-08-10", scan_from: "2026-07-01" }
+        chunk: ${{ fromJSON(needs.plan.outputs.chunks) }}
 
     steps:
       - name: Checkout repository
@@ -52,10 +57,16 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4 lxml
+        run: pip install -r workers/scrapy-pib/requirements.txt
+
+      - uses: actions/cache/restore@v4
+        with:
+          path: workers/scrapy-pib/pib_raw.db
+          key: pib-raw-${{ matrix.chunk.name }}-${{ github.run_id }}
+          restore-keys: pib-raw-${{ matrix.chunk.name }}-
 
       - name: Run Raw Scraper for ${{ matrix.chunk.name }}
-        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
+        if: ${{ success() }}
         env:
           PYTHONUNBUFFERED: "1"
         run: |
@@ -66,18 +77,24 @@ jobs:
             --workers 20 \
             --rps 15.0
 
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: workers/scrapy-pib/pib_raw.db
+          key: pib-raw-${{ matrix.chunk.name }}-${{ github.run_id }}
+
       - name: Show results
-        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
+        if: ${{ success() }}
         run: python3 workers/scrapy-pib/pib_raw_scraper.py --stats
 
       - name: Export chunk to CSV
-        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
+        if: ${{ success() }}
         run: |
           python3 workers/scrapy-pib/pib_raw_scraper.py \
             --export "pib_raw_${{ matrix.chunk.name }}.csv"
 
       - name: Upload chunk CSV artifact
-        if: ${{ github.event.inputs.month == 'all' || github.event.inputs.month == matrix.chunk.name }}
+        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
           name: "pib-raw-${{ matrix.chunk.name }}"
@@ -85,7 +102,7 @@ jobs:
           retention-days: 7
 
   merge-all:
-    name: "Merge All 20 Months → Master Dataset"
+    name: "Merge rolling chunks into the master dataset"
     needs: scrape-chunks
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -116,7 +133,7 @@ jobs:
 
           con = sqlite3.connect(DB_OUT)
           con.execute("""
-            CREATE TABLE articles (
+            CREATE TABLE IF NOT EXISTS articles (
               prid INTEGER PRIMARY KEY,
               title TEXT, pub_date TEXT, ministry TEXT, office TEXT,
               full_text TEXT, url TEXT, word_count INTEGER, scraped_at TEXT
@@ -127,31 +144,29 @@ jobs:
           print(f"Found {len(csv_files)} CSV chunks to merge")
           total = 0
 
-          with open(CSV_OUT, "w", newline="", encoding="utf-8") as master:
-              writer = None
-              for fpath in csv_files:
-                  with open(fpath, "r", encoding="utf-8") as f:
-                      reader = csv.reader(f)
-                      header = next(reader, None)
-                      if not header: continue
-                      if writer is None:
-                          writer = csv.writer(master)
-                          writer.writerow(header)
-                      chunk_count = 0
-                      for row in reader:
-                          if not row or len(row) < 8: continue
-                          try:
-                              con.execute(
-                                "INSERT OR IGNORE INTO articles VALUES (?,?,?,?,?,?,?,?,?)",
-                                (int(row[0]), row[1], row[2], row[3], row[4],
-                                 row[5], row[6], int(row[7] or 0), row[8] if len(row)>8 else ""))
-                              writer.writerow(row)
-                              chunk_count += 1
-                              total += 1
-                          except Exception: pass
-                      print(f"  {os.path.basename(fpath)}: {chunk_count} articles")
-
+          columns = ["prid", "title", "pub_date", "ministry", "office", "full_text", "url", "word_count", "scraped_at"]
+          if not csv_files: raise RuntimeError("No PIB chunks were downloaded")
+          for fpath in csv_files:
+              with open(fpath, "r", encoding="utf-8") as source:
+                  reader = csv.reader(source)
+                  if next(reader, None) != columns: raise ValueError(f"Unexpected CSV schema: {fpath}")
+                  for line, row in enumerate(reader, 2):
+                      if len(row) != len(columns): raise ValueError(f"Malformed CSV row: {fpath}:{line}")
+                      values = (int(row[0]), *row[1:7], int(row[7]), row[8])
+                      con.execute("""
+                        INSERT INTO articles VALUES (?,?,?,?,?,?,?,?,?)
+                        ON CONFLICT(prid) DO UPDATE SET title=excluded.title, pub_date=excluded.pub_date,
+                          ministry=excluded.ministry, office=excluded.office, full_text=excluded.full_text,
+                          url=excluded.url, word_count=excluded.word_count, scraped_at=excluded.scraped_at
+                        WHERE excluded.scraped_at > articles.scraped_at
+                      """, values)
+                      total += 1
           con.commit()
+          with open(CSV_OUT, "w", newline="", encoding="utf-8") as master:
+              writer = csv.writer(master)
+              writer.writerow(columns)
+              writer.writerows(con.execute("SELECT * FROM articles ORDER BY prid"))
+          print(f"Merged {total:,} input rows; CSV is exported from the deduplicated SQLite master")
           db_mb  = os.path.getsize(DB_OUT)  / (1024*1024)
           csv_mb = os.path.getsize(CSV_OUT) / (1024*1024)
           print(f"\nDONE: {total:,} total articles")

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "WAVES Initiative and WaveX Startup Incubator"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-ECONOMY", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

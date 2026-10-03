@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "UMEED Portal for Waqf Property Digitization"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-WAQF", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

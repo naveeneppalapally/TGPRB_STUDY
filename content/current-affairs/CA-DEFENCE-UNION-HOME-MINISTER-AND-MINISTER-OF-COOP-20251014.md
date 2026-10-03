@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "41st NSG Foundation Day and New Hub in Ayodhya"
-related_topic_ids: ["NOTE-DEF-NSG", "NOTE-DEF-INTERNAL-SECURITY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

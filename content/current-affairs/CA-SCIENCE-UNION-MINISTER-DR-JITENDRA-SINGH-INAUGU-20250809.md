@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "India's First Animal Stem Cell Biobank"
-related_topic_ids: ["NOTE-SCI-BIOTECH", "NOTE-SCI-INNOVATION", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Panchayati Raj Initiatives and GP Weather Forecasting 2024"
 related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

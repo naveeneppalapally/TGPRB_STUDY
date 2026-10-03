@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Science & Technology"
 topic: "STPI Tech Growth and Software Exports"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

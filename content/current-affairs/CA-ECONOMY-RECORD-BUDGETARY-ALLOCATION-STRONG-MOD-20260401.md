@@ -5,6 +5,7 @@ category: "economy"
 exam_section: "Economy"
 topic: "Union Budget Allocation for Indian Railways and Amrit Bharat Station Scheme"
 related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "National SC-ST Hub Scheme Procurement Mandate"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-MSME"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

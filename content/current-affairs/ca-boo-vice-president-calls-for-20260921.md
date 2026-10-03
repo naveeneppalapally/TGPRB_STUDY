@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_BOO_VICE_PRESIDENT_CALLS_FOR_20260921"
 type: "current_affair"
 category: "books"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Books and Literary Events"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

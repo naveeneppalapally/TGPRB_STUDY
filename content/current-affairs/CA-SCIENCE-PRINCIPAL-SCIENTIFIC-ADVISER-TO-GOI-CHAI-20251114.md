@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "RuTAG 2.0 Review Meeting and New Centres at IIT Guwahati"
-related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-ST-INNOVATION", "NOTE-ST-RURALTECH"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Beti Bachao Beti Padhao and PMMVY Progress"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-GS-DEMOGRAPHICS", "NOTE-POL-JUDICIARY", "NOTE-POL-UNION-EXEC", "NOTE-SCHEMES-WOMEN"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

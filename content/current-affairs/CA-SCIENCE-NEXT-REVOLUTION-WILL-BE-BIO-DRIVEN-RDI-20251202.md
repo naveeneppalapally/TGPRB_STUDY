@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "Research Development and Innovation Fund for Deep-Tech"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "Human Rights Generations and Constitutional Provisions for Environment"
 related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-FORESTS", "NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-POL-RIGHTS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-POL-JUDICIARY", "NOTE-POL-RIGHTS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

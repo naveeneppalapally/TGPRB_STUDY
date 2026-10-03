@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Chandipura Virus Outbreak and Response"
-related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-SCI-BIOLOGY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

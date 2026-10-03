@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "5th Khelo India Winter Games 2025"
-related_topic_ids: ["NOTE-SPO-KHELOINDIA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

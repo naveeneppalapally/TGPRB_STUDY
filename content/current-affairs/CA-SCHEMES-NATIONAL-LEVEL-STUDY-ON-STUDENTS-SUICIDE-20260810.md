@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "MANODARPAN Initiative and Student Wellbeing Measures"
-related_topic_ids: ["NOTE-SCHEMES-EDUCATION", "NOTE-GS-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

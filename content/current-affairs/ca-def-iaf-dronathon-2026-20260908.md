@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_DEF_IAF_DRONATHON_2026_20260908"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
 related_topic_ids: ["NOTE-GEO-MOUNTAINS"]
+keyword_topic_ids: ["NOTE-GEO-MOUNTAINS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Google First AI Hub in Visakhapatnam"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Geography"
 topic: "Environment"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

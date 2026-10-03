@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "International Conference on Industrial Policy and Global Competitiveness"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

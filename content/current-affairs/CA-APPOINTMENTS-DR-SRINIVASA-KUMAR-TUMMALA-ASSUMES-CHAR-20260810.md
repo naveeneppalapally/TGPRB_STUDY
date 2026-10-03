@@ -4,7 +4,8 @@ type: "current_affair"
 category: "appointments"
 exam_section: "Science & Technology"
 topic: "Secretary of Ministry of Earth Sciences Appointment"
-related_topic_ids: ["NOTE-SCI-MOES", "NOTE-TEL-INCOIS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

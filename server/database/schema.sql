@@ -1,11 +1,11 @@
 -- =============================================================================
--- TSLPRB StudyOS — Supabase Database Schema
+-- TSLPRB StudyOS - Supabase Database Schema
 -- Run this in the Supabase SQL Editor to set up all tables.
--- Auth is handled by Supabase Auth (built-in) — we just reference auth.users.
+-- Auth is handled by Supabase Auth (built-in) - we just reference auth.users.
 -- =============================================================================
 
 -- ---------------------------------------------------------------------------
--- FSRS review cards — one per (user, content_item) pair
+-- FSRS review cards - one per (user, content_item) pair
 -- This is where spaced repetition state lives.
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS review_cards (
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS gate_results (
 );
 
 -- ---------------------------------------------------------------------------
--- Review log — every single review event, for analytics and history
+-- Review log - every single review event, for analytics and history
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS review_log (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
@@ -85,7 +85,7 @@ CREATE INDEX IF NOT EXISTS idx_review_log_user_time
   ON review_log(user_id, reviewed_at DESC);
 
 -- ---------------------------------------------------------------------------
--- Row Level Security — lock everything down to the owning user
+-- Row Level Security - lock everything down to the owning user
 -- ---------------------------------------------------------------------------
 
 ALTER TABLE review_cards ENABLE ROW LEVEL SECURITY;
@@ -127,7 +127,7 @@ CREATE TRIGGER trigger_review_cards_updated_at
   EXECUTE FUNCTION update_updated_at();
 
 -- ---------------------------------------------------------------------------
--- Topic visits — tracks when each user last marked a topic's CA as "caught up"
+-- Topic visits - tracks when each user last marked a topic's CA as "caught up"
 -- Used by useTopicVisits.ts for cross-device "new since last visit" sync.
 -- Layer 1: localStorage (instant, offline)
 -- Layer 2: This table (cloud backup, synced when logged in)

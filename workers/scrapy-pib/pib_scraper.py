@@ -33,10 +33,14 @@ Usage:
 import os
 import re
 import sys
+sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parents[2]))
+from scripts.pib_ca_pipeline.ingestion_state import load_state, save_state, terminal, outcome
+from scripts.pib_ca_pipeline.card_contract import validate_extraction, validate_card, canonical_tags
 import json
 import time
 import argparse
 import tempfile
+import yaml
 import requests
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -345,8 +349,8 @@ _gemini_client = None
 def get_gemini_client():
     """
     Returns a Gemini client. Tries:
-    1. GEMINI_API_KEY (local dev)
-    2. Vertex AI via GCP_CREDS JSON (GitHub Actions)
+    1. Vertex AI via GCP_CREDS JSON (GitHub Actions)
+    2. GEMINI_API_KEY (local dev)
     3. Vertex AI via ADC
     """
     global _gemini_client
@@ -356,19 +360,18 @@ def get_gemini_client():
     try:
         from google import genai
 
-        if GEMINI_API_KEY:
-            _gemini_client = genai.Client(api_key=GEMINI_API_KEY)
-            print("[AI] Gemini ready via API key")
-            return _gemini_client
-
         if GCP_CREDS and GCP_PROJECT:
             creds_data = json.loads(GCP_CREDS)
-            tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False)
-            json.dump(creds_data, tmp)
-            tmp.flush()
+            with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as tmp:
+                json.dump(creds_data, tmp)
             os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = tmp.name
             _gemini_client = genai.Client(vertexai=True, project=GCP_PROJECT, location="global")
             print("[AI] Vertex AI ready via service account JSON")
+            return _gemini_client
+
+        if GEMINI_API_KEY:
+            _gemini_client = genai.Client(vertexai=False, api_key=GEMINI_API_KEY)
+            print("[AI] Gemini ready via API key")
             return _gemini_client
 
         if GCP_PROJECT:
@@ -421,21 +424,6 @@ def _extract_article_date(soup: BeautifulSoup) -> str | None:
         except Exception:
             pass
 
-    # Pattern 2: Generic 'DD Month YYYY' in article body
-    m2 = re.search(
-        r'\b(\d{1,2})\s+(January|February|March|April|May|June|July|August'
-        r'|September|October|November|December)\s+(20\d\d)\b',
-        text, re.I
-    )
-    if m2:
-        try:
-            day = int(m2.group(1))
-            month = _MONTH_MAP.get(m2.group(2).lower())
-            year = int(m2.group(3))
-            if month:
-                return date(year, month, day).isoformat()
-        except Exception:
-            pass
 
     return None
 
@@ -564,8 +552,7 @@ def get_pib_releases_for_date(target_date: date, max_retries: int = 5) -> list[d
         print(f"  [PIB] {date_iso}: {len(releases)} releases (verified)")
         return releases
 
-    print(f"  [PIB] All {max_retries} attempts failed for {date_iso} - skipping")
-    return []
+    raise RuntimeError(f"PIB date verification failed after {max_retries} attempts: {date_iso}")
 
 
 def get_pib_releases_via_rss(target_date: date) -> list[dict]:
@@ -588,7 +575,7 @@ def get_pib_releases_via_rss(target_date: date) -> list[dict]:
         title = item.findtext("title", "").strip()
         link  = item.findtext("link", "").strip()
         raw_date = item.findtext("pubDate", "")
-        pub_date = date.today().isoformat()
+        pub_date = None
         for fmt in ["%a, %d %b %Y %H:%M:%S %z", "%a, %d %b %Y %H:%M:%S GMT"]:
             try:
                 pub_date = datetime.strptime(raw_date.strip(), fmt).strftime("%Y-%m-%d")
@@ -708,7 +695,7 @@ def fetch_pib_article_text(url: str) -> tuple[str, str, str | None]:
 EXTRACT_PROMPT = """You are an exam-card extractor for TGPRB (Telangana Police Recruitment Board) exams.
 
 You will receive the FULL TEXT of an official PIB (Press Information Bureau) press release.
-Your job is to extract up to 3 distinct, testable exam facts from this text.
+Your job is to extract 1-2 distinct, testable exam facts from this text.
 
 STRICT RULES:
 
@@ -737,12 +724,12 @@ STEP 2 - CHECK if this has a PYQ-proven testable fact. TGPRB exams test these ca
 
 If the release has NONE of the above clearly, return null.
 
-STEP 3 - EXTRACT up to 3 MCQs. Rules:
+STEP 3 - EXTRACT 1-2 MCQs. Rules:
 - Each MCQ must test a DIFFERENT, INDEPENDENT fact. Do not create two questions that test the same relationship.
   BAD pair: "Who received the Arjuna Award?" + "What award did Anitha Rao receive?" (same fact, inverted)
   GOOD pair: "Who received the Arjuna Award?" + "What was the budget allocated for the scheme?"
 - If the article has only one testable fact, return exactly 1 MCQ. Never pad with weak questions.
-- For award lists: extract the 2-3 most important/famous awardees, not all of them.
+- For award lists: extract the 1-2 most important/famous awardees, not all of them.
 - exam_fact per MCQ: One precise, cloze-ready sentence. Mirror TGPRB PYQ style:
     GOOD: "Tushar Mehta was appointed as Solicitor General of India on 30 June 2022."
     GOOD: "India's SSLV achieved its first successful launch in February 2023."
@@ -841,16 +828,13 @@ def resolve_available_model(client) -> str:
                 _exhausted_models.add(candidate)
             continue
 
-    fallback = "gemini-2.5-flash"
-    _active_model = fallback
-    print(f"[AI] Falling back to default: {_active_model}")
-    return _active_model
+    raise RuntimeError("No configured Gemini model passed the availability probe")
 
 
 def extract_exam_fact(article_text: str, title: str, client,
                       extra_topics_guidance: str = "    - Otherwise leave as empty array []") -> dict | None:
     """
-    Use Gemini to extract exam facts (up to 3 MCQs) from the real PIB article text.
+    Use Gemini to extract exam facts (1-2 MCQs) from the real PIB article text.
     Gemini reads actual text and extracts - never generates.
     extra_topics_guidance: auto-built from discover_note_registry() at startup.
     """
@@ -866,8 +850,7 @@ def extract_exam_fact(article_text: str, title: str, client,
 
     models_to_try = [m for m in get_candidate_models() if m not in _exhausted_models]
     if not models_to_try:
-        print("    [AI] All candidate models exhausted for today.")
-        return None
+        raise RuntimeError("All configured Gemini models are exhausted")
 
     for model_name in models_to_try:
         for attempt in range(2):
@@ -891,43 +874,17 @@ def extract_exam_fact(article_text: str, title: str, client,
                     legacy_mcq["exam_fact"] = ai.get("exam_fact", "")
                     ai["mcqs"] = [legacy_mcq]
 
-                # Validate mcqs array
-                mcqs = ai.get("mcqs")
-                if not mcqs or not isinstance(mcqs, list):
-                    return None
-
-                # Validate each MCQ in the array
-                valid_mcqs = []
-                for mcq in mcqs[:3]:  # cap at 3
-                    if not isinstance(mcq, dict):
-                        continue
-                    if not mcq.get("question") or len(mcq.get("options", [])) != 4:
-                        continue
-                    if not mcq.get("exam_fact"):
-                        continue
-                    # Ensure answer index is valid
-                    answer = mcq.get("answer", 0)
-                    if not isinstance(answer, int) or answer < 0 or answer > 3:
-                        mcq["answer"] = 0
-                    valid_mcqs.append(mcq)
-
-                if not valid_mcqs:
-                    return None
-
-                ai["mcqs"] = valid_mcqs
-                # Set top-level exam_fact from first MCQ for backward compat
-                ai["exam_fact"] = valid_mcqs[0].get("exam_fact", "")
-
-                # Validate category
-                if ai.get("category") not in VALID_CATEGORIES:
-                    ai["category"] = DEFAULT_CATEGORY
+                # Invalid model output must be retried, never repaired into an answer.
+                validate_extraction(ai)
+                ai['exam_fact'] = ai['mcqs'][0].get('exam_fact', ai.get('exam_fact', ''))
 
                 _active_model = model_name
+                ai['extraction_model'] = model_name
                 return ai
 
             except json.JSONDecodeError as e:
                 print(f"    [AI] JSON parse error with {model_name}: {e}")
-                return None
+                continue
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower():
@@ -947,7 +904,7 @@ def extract_exam_fact(article_text: str, title: str, client,
                         _exhausted_models.add(model_name)
                     break
 
-    return None
+    raise RuntimeError("Gemini extraction failed after retries; source remains retryable")
 
 
 # ---------------------------------------------------------------------------
@@ -982,7 +939,7 @@ def card_exists(event_key: str, title: str, source_url: str = "") -> bool:
     """
     norm = normalize_title(title)
     prid = re.search(r"PRID=(\d+)", source_url or "", re.IGNORECASE)
-    for path in CONTENT_DIR.glob("*.md"):
+    for path in list(CONTENT_DIR.glob("*.md")) + list((Path(__file__).resolve().parents[2] / "data/ca_duplicate_archive").glob("*.md")):
         try:
             text = path.read_text(encoding="utf-8")
         except Exception:
@@ -998,13 +955,14 @@ def card_exists(event_key: str, title: str, source_url: str = "") -> bool:
 
 
 def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
-    """Write a single exam card markdown file with up to 3 MCQs."""
+    """Write a single exam card markdown file with 1-2 MCQs."""
     title = release["title"].strip()
     if not title or len(title) < 10:
         return None
 
     category = ai.get("category", DEFAULT_CATEGORY)
-    note_ids = CATEGORY_NOTE_IDS.get(category, [])
+    validate_extraction(ai)
+    note_ids = list(CATEGORY_NOTE_IDS.get(category, []))
     event_key = ai.get("event_key", "")
 
     # Merge extra_topics from AI response into note_ids
@@ -1014,6 +972,8 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
             if t and t not in note_ids:
                 note_ids.append(t)
 
+    note_ids = canonical_tags(note_ids)
+
     # Deduplication by event_key
     if card_exists(event_key, title, release.get("url", "")):
         print(f"    [Skip] Duplicate card: {event_key or title}")
@@ -1022,7 +982,9 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     # Always use PIB publication date - never trust Gemini's extracted event_date
     # (Gemini often pulls a date mentioned inside the article body, not the pub date)
     date_str = release["date_iso"]
-    slug = make_slug(category, title, date_str)
+    prid = re.search(r"PRID=(\d+)", release.get("url", ""))
+    if not prid: raise ValueError("PIB source must have a PRID")
+    slug = make_slug(category, title, date_str) + "-prid-" + prid.group(1)
     out_path = CONTENT_DIR / f"{slug}.md"
 
     if out_path.exists():
@@ -1032,7 +994,7 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     # publication date, so a fixed-width cut collapses consecutive days onto the
     # same id (2026-09-08 and 2026-09-09 both became ..._2026090).
     item_id = f"CA-PIB-{slug.upper().replace('-', '_')}"
-    related = "\n".join(f'  - "{t}"' for t in note_ids) if note_ids else '  - ""'
+    related = "\n".join(f'  - "{t}"' for t in note_ids) if note_ids else ''
 
     is_tg = bool(ai.get("is_telangana_focus", False))
     difficulty  = ai.get("difficulty", "M")
@@ -1053,7 +1015,8 @@ def write_exam_card(release: dict, ai: dict, ministry: str) -> Path | None:
     mcqs_yaml = "\n".join(mcqs_yaml_parts)
 
     # Top-level exam_fact from first MCQ for backward compat
-    top_exam_fact = escape_yaml(mcqs[0].get("exam_fact", "")) if mcqs else ""
+    top_exam_fact = escape_yaml(ai.get("exam_fact") or mcqs[0].get("exam_fact", ""))
+    if not top_exam_fact: raise ValueError("A sourced exam fact is required")
 
     content = f"""---
 id: "{item_id}"
@@ -1061,8 +1024,8 @@ type: "current_affair"
 category: "{category}"
 exam_section: "{_category_to_section(category)}"
 topic: "{_category_to_topic(category)}"
-related_topic_ids:
-{related}
+related_topic_ids: {json.dumps(note_ids)}
+source_topic_ids: {json.dumps(note_ids)}
 is_telangana_focus: {"true" if is_tg else "false"}
 difficulty: "{difficulty}"
 exam_depth: "{exam_depth}"
@@ -1070,9 +1033,12 @@ headline: "{escape_yaml(title)}"
 exam_fact: "{top_exam_fact}"
 summary: "{escape_yaml(ai.get('summary', ''))}"
 event_date: "{date_str}"
-published_at: "{release['date_iso']}"
+published_at: "{release['date_iso']}T00:00:00+05:30"
+retrieved_at: "{datetime.now().astimezone().isoformat()}"
+event_date_basis: "publication_proxy"
 date: "{release['date_iso']}"
 source_name: "PIB"
+extraction_model: {json.dumps(ai.get("extraction_model", "unrecorded"))}
 source_type: "official"
 ministry: "{escape_yaml(ministry or '')}"
 canonical_source_url: "{release['url']}"
@@ -1082,6 +1048,7 @@ mcqs:
 {mcqs_yaml}
 ---
 """
+    validate_card(yaml.safe_load(content.split("---", 2)[1]))
     CONTENT_DIR.mkdir(parents=True, exist_ok=True)
     out_path.write_text(content, encoding="utf-8")
     return out_path
@@ -1092,16 +1059,16 @@ def _category_to_section(category: str) -> str:
         "appointments": "Polity",
         "international": "Polity",
         "economy": "Economy",
-        "awards": "General Knowledge",
-        "sports": "General Knowledge",
+        "awards": "General Studies",
+        "sports": "General Studies",
         "telangana": "Telangana",
         "schemes": "Polity",
-        "defence": "General Knowledge",
+        "defence": "General Studies",
         "science": "Science & Technology",
         "judiciary": "Polity",
         "environment": "Geography",
-        "books": "General Knowledge",
-    }.get(category, "General Knowledge")
+        "books": "General Studies",
+    }.get(category, "General Studies")
 
 
 def _category_to_topic(category: str) -> str:
@@ -1118,7 +1085,7 @@ def _category_to_topic(category: str) -> str:
         "judiciary": "Judiciary and Law",
         "environment": "Environment",
         "books": "Books and Literary Events",
-    }.get(category, "General Knowledge")
+    }.get(category, "General Studies")
 
 
 # ---------------------------------------------------------------------------
@@ -1151,7 +1118,7 @@ def infer_category_from_ministry(ministry: str) -> str:
 
 
 def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
-                      max_per_day: int = 30) -> dict:
+                      max_per_day: int = 0) -> dict:
     """
     Scrape PIB press releases for every date in [from_date, to_date].
 
@@ -1169,33 +1136,13 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
         print("[WARN] No Gemini client. Run with --dry-run or set GEMINI_API_KEY.")
 
     stats = {"days": 0, "releases_found": 0, "ai_extracted": 0, "saved": 0, "skipped": 0}
+    state = load_state()
     current = from_date
 
     while current <= to_date:
         print(f"\n[{current}] Fetching PIB releases...")
 
         releases = get_pib_releases_for_date(current)
-
-        # Fallback to RSS if archive POST returned 0 (e.g. holiday, today's page not yet updated)
-        if not releases:
-            print(f"  [PIB] Archive returned 0 for {current} - trying RSS fallback...")
-            rss_releases = get_pib_releases_via_rss(current)
-            if rss_releases:
-                print(f"  [PIB-RSS] Found {len(rss_releases)} releases via RSS for {current}")
-                releases = rss_releases
-            else:
-                # Last resort: if today/yesterday, try the day after (PIB sometimes posts
-                # next-day for holidays/Independence Day)
-                next_day = current + timedelta(days=1)
-                if next_day <= date.today():
-                    print(f"  [PIB] Trying adjacent date {next_day} (holiday shift)...")
-                    alt_releases = get_pib_releases_for_date(next_day)
-                    if alt_releases:
-                        # Re-tag them with the originally requested date
-                        for r in alt_releases:
-                            r["date_iso"] = current.isoformat()
-                        releases = alt_releases
-                        print(f"  [PIB] Found {len(releases)} releases on adjacent date - accepted")
 
         print(f"  Found {len(releases)} releases")
         stats["days"] += 1
@@ -1208,7 +1155,11 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
             continue
 
         saved_today = 0
-        for release in releases[:max_per_day]:
+        pending = [r for r in releases if not terminal(state, re.search(r'PRID=(\d+)', r['url']).group(1))]
+        deferred = max_per_day > 0 and len(pending) > max_per_day
+        day_errors = 0
+        for release in (pending[:max_per_day] if max_per_day > 0 else pending):
+            prid = re.search(r'PRID=(\d+)', release['url']).group(1)
             title = release["title"]
             print(f"  -> {title[:65]}...")
 
@@ -1217,26 +1168,28 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
 
             if not article_text:
                 print(f"     [Skip] No article text")
-                stats["skipped"] += 1
+                day_errors += 1
+                outcome(state, prid, 'retryable', 'Article text unavailable')
                 continue
 
-            # NOTE: Do NOT override date_iso with real_date here.
-            # _extract_article_date reads dates FROM the article HTML body, which
-            # often contains future event dates (e.g. "BRICS meeting on Aug 18").
-            # The PIB scrape date (release["date_iso"] = target_date) is always correct.
+            if real_date:
+                release['date_iso'] = real_date
 
             if not ministry and release.get("ministry"):
                 ministry = release["ministry"]
 
             category = infer_category_from_ministry(ministry)
 
-            if client:
-                ai = extract_exam_fact(article_text, title, client,
-                                       extra_topics_guidance=extra_topics_guidance)
-            else:
-                ai = None
+            try:
+                if not client: raise RuntimeError('Gemini client unavailable')
+                ai = extract_exam_fact(article_text, title, client, extra_topics_guidance=extra_topics_guidance)
+            except Exception as exc:
+                outcome(state, prid, 'retryable', str(exc))
+                day_errors += 1
+                continue
 
             if not ai:
+                outcome(state, prid, 'irrelevant')
                 print(f"     [Skip] No testable exam fact")
                 stats["skipped"] += 1
                 continue
@@ -1250,14 +1203,20 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
             if path:
                 print(f"     [SAVED] {path.name}")
                 print(f"             Fact: {ai['exam_fact'][:80]}")
+                outcome(state, prid, 'written', path.name)
                 stats["saved"] += 1
                 saved_today += 1
                 stats["ai_extracted"] += 1
             else:
+                outcome(state, prid, 'duplicate')
                 stats["skipped"] += 1
 
             time.sleep(DELAY_BETWEEN_REQUESTS)
 
+        if day_errors or deferred:
+            raise RuntimeError(f'{current}: {day_errors} retryable failures; capped/deferred={deferred}. Cursor not advanced.')
+        state['last_completed_date'] = current.isoformat()
+        save_state(state)
         print(f"  Day done: {saved_today} cards saved")
         current += timedelta(days=1)
         time.sleep(2)  # polite pause between days
@@ -1270,14 +1229,14 @@ def scrape_date_range(from_date: date, to_date: date, dry_run: bool = False,
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser(description="PIB Archive Scraper for TGPRB exam cards")
-    parser.add_argument("--from",  dest="from_date", default="2025-01-01",
-                        help="Start date YYYY-MM-DD (default: 2025-01-01)")
+    parser.add_argument("--from",  dest="from_date", default=(date.today() - timedelta(days=365)).isoformat(),
+                        help="Start date YYYY-MM-DD (default: rolling 365 days)")
     parser.add_argument("--to",    dest="to_date",   default=date.today().isoformat(),
                         help="End date YYYY-MM-DD (default: today)")
     parser.add_argument("--ministry", default="",
                         help="Filter by ministry name (optional)")
-    parser.add_argument("--max-per-day", type=int, default=30,
-                        help="Max releases to process per day (default: 30)")
+    parser.add_argument("--max-per-day", type=int, default=0,
+                        help="Maximum unprocessed releases per day, 0 means all (default: 0)")
     parser.add_argument("--dry-run", action="store_true",
                         help="List releases without fetching articles or calling AI")
     args = parser.parse_args()

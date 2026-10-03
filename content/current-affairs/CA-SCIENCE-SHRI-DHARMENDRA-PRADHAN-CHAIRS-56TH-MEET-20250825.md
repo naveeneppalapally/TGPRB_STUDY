@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "56th IIT Council Meeting"
-related_topic_ids: ["NOTE-EDU-INITIATIVES", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

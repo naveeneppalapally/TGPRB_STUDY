@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "2nd National Well-being Conclave"
-related_topic_ids: ["NOTE-EDU-INITIATIVES", "NOTE-GEN-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

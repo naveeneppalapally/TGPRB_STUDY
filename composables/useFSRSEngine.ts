@@ -5,6 +5,7 @@ import {
   Rating,
   type Card,
 } from 'ts-fsrs'
+import { TSLPRB_EXAM_RULES } from './useExamStrategy'
 
 /**
  * TSLPRB FSRS and negative-marking domain service.
@@ -21,10 +22,10 @@ export type FSRSGrade = Rating.Again | Rating.Hard | Rating.Good | Rating.Easy
 export type AttemptRecommendation = 'attempt' | 'skip'
 
 export const TSLPRB_MARKING = {
-  correct: 1,
-  wrong: 0.2,
-  optionCount: 4,
-  attemptThreshold: 1 / 6,
+  correct: TSLPRB_EXAM_RULES.correctMark,
+  wrong: TSLPRB_EXAM_RULES.wrongPenalty,
+  optionCount: TSLPRB_EXAM_RULES.optionCount,
+  attemptThreshold: TSLPRB_EXAM_RULES.breakEvenProbability,
 } as const
 
 /**
@@ -346,7 +347,7 @@ function isDue(card: StudyCard, now: Date): boolean {
 function isValid(card: StudyCard, now: Date, examDate?: Date): boolean {
   const validUntil = asDate(card.validUntil)
   if (validUntil && validUntil.getTime() < now.getTime()) return false
-  return card.studyType !== 'current_affair' || currentAffairRelevance(card.eventDate, examDate) > 0
+  return card.studyType !== 'current_affair' || currentAffairRelevance(card.eventDate, examDate || now) > 0
 }
 
 function priorityScore(card: StudyCard, now: Date, examDate?: Date): number {
@@ -354,7 +355,7 @@ function priorityScore(card: StudyCard, now: Date, examDate?: Date): number {
   const evidenceScore = Math.min(card.verifiedPyqCount, 10) * 100
   const realPyqBoost = card.contentType === 'pyq' ? 1_000 : 0
   const currentAffairsScore = card.studyType === 'current_affair'
-    ? currentAffairRelevance(card.eventDate, examDate) * 100
+    ? currentAffairRelevance(card.eventDate, examDate || now) * 100
     : 0
   return realPyqBoost + evidenceScore + currentAffairsScore + Math.min(overdueDays, 30)
 }

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "ILO World Social Protection Report 2024-26 and India's Coverage"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-INT-REPORTS"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

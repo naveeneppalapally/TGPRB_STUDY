@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Udyog Samagam 2025 and BRAP 2024"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-ECO-REFORMS", "NOTE-GEO-DRAINAGE", "NOTE-POL-JUDICIARY"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-JUDICIARY"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

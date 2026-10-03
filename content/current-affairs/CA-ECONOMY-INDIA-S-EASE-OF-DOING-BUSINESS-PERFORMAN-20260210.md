@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Ease of Doing Business and Jan Vishwas Act"
-related_topic_ids: ["NOTE-ECO-EODB", "NOTE-POL-HIST-ACTS", "NOTE-POL-LEGISLATION"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

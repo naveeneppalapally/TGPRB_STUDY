@@ -5,6 +5,7 @@ category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

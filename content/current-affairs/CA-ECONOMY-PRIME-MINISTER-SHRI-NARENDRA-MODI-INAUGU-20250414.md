@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Mission Manufacturing and Industrial Development Initiatives"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-GEO-DRAINAGE", "NOTE-HIS-PERSONALITIES", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-MAKING-CONST", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

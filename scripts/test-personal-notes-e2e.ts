@@ -716,7 +716,7 @@ async function runTestSuite() {
 
     openForSection(ctx)
     assert.equal(isOpen, true)
-    assert.equal(activeContext?.noteId, 'NOTE-GEO-MOUNTAINS')
+    assert.equal((activeContext as SectionContext | null)?.noteId, 'NOTE-GEO-MOUNTAINS')
     assert.equal(activeTab, 'note')
   })
 

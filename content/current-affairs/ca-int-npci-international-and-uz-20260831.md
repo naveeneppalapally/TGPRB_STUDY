@@ -5,6 +5,7 @@ category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
 related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: ["NOTE-ECO-BANKING"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

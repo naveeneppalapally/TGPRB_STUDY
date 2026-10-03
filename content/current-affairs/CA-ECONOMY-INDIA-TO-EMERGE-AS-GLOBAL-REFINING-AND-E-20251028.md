@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Refining Capacity and Biofuel Targets"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

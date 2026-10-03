@@ -79,7 +79,7 @@
           <!-- Dams -->
           <g v-for="d in dams" :key="d.id" :class="{ 'is-hidden': !layers.dams }">
             <path :d="damGlyph(d)" class="rm-dam" @click="pickId(d.on)" />
-            <text :x="d.x + (d.dx || 7)" :y="d.y + (d.dy || 4)" class="rm-dam-label">{{ d.label }}</text>
+            <text :x="d.x + 7" :y="d.y + 4" class="rm-dam-label">{{ d.label }}</text>
           </g>
 
           <!-- Waterfalls -->
@@ -141,7 +141,7 @@
           </div>
           <div v-else>
             <p class="eyebrow mb-2">Map recall · {{ quizIndex + 1 }}/{{ quizTotal }}</p>
-            <p class="rm-q">{{ quiz.prompt }}</p>
+            <p class="rm-q">{{ quiz.p }}</p>
             <p v-if="quizMsg" class="rm-msg" :class="quizMsgOk ? 'is-ok' : 'is-no'">{{ quizMsg }}</p>
             <p class="rm-qsub">Click the river on the map.<template v-if="quizMissed > 0"> Missed {{ quizMissed }} so far.</template></p>
           </div>
@@ -162,7 +162,7 @@ const layerOptions = [
   { key: 'tribs',   label: 'Tributaries' },
   { key: 'dams',    label: 'Dams & falls' },
   { key: 'hot',     label: 'Hotspots' },
-]
+] as const
 
 const hover = ref<any>(null)
 const selectedId = ref<string | null>(null)

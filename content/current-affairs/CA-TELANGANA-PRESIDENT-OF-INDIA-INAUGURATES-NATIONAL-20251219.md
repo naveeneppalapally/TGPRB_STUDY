@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "National Conference of Chairpersons of PSCs 2025"
-related_topic_ids: ["NOTE-TEL-POLITY", "NOTE-POL-COMMISSIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PMAY-Urban 2.0 CSMC Approvals"
-related_topic_ids: ["NOTE-ECO-HOUSING", "NOTE-ECO-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

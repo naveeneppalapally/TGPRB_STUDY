@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids: ["NOTE-ECO-GENERAL", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-TEL-GEOGRAPHY"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-TEL-GEOGRAPHY"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE"]
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

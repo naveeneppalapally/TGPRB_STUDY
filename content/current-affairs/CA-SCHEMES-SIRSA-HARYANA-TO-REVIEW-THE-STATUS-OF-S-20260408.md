@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PMMSY Saline Water Aquaculture Cluster in Sirsa"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-AGRI-FISHERIES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

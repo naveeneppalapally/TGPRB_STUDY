@@ -12,8 +12,9 @@
 -- ---------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS public.user_review_card_seeds (
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  card_id UUID NOT NULL,
+  card_id TEXT NOT NULL,
   initial_card JSONB NOT NULL,
+  metadata JSONB NOT NULL DEFAULT '{}'::jsonb,
   created_at TIMESTAMPTZ NOT NULL,
   PRIMARY KEY (user_id, card_id)
 );
@@ -25,7 +26,7 @@ CREATE TABLE IF NOT EXISTS public.user_review_card_seeds (
 CREATE TABLE IF NOT EXISTS public.user_review_logs (
   id UUID PRIMARY KEY,
   user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  card_id UUID NOT NULL,
+  card_id TEXT NOT NULL,
   rating SMALLINT NOT NULL CHECK (rating BETWEEN 1 AND 4),
   state SMALLINT NOT NULL CHECK (state BETWEEN 0 AND 3),
   elapsed_days INTEGER NOT NULL CHECK (elapsed_days >= 0),
@@ -218,12 +219,14 @@ BEGIN
     user_id,
     card_id,
     initial_card,
+    metadata,
     created_at
   )
-  SELECT auth.uid(), seed.card_id, seed.initial_card, seed.created_at
+  SELECT auth.uid(), seed.card_id, seed.initial_card, coalesce(seed.metadata, '{}'::jsonb), seed.created_at
   FROM jsonb_to_recordset(p_seeds) AS seed(
-    card_id UUID,
+    card_id TEXT,
     initial_card JSONB,
+    metadata JSONB,
     created_at TIMESTAMPTZ
   )
   WHERE seed.card_id IS NOT NULL
@@ -265,7 +268,7 @@ BEGIN
     log.client_created_at
   FROM jsonb_to_recordset(p_logs) AS log(
     id UUID,
-    card_id UUID,
+    card_id TEXT,
     rating SMALLINT,
     state SMALLINT,
     elapsed_days INTEGER,

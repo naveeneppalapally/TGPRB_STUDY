@@ -3,9 +3,9 @@
 # Enforce topic integrity and em-dash checks before committing.
 
 echo "pre-commit: checking banned em-dashes..."
-npx tsx scripts/ban-em-dash.ts || exit 1
+node --import tsx scripts/ban-em-dash.ts || exit 1
 
 echo "pre-commit: checking topic integrity..."
-npx tsx scripts/verify-topic-integrity.ts || exit 1
+node --import tsx scripts/verify-topic-integrity.ts || exit 1
 
 exit 0

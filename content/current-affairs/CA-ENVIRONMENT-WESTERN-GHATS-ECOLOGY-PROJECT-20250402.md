@@ -4,9 +4,8 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Mountains, Ranges & Passes of India"
-related_topic_ids:
-  - "NOTE-GEO-MOUNTAINS"
-  - NOTE-GEO-FORESTS
+related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-GEO-MOUNTAINS"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-GEO-MOUNTAINS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

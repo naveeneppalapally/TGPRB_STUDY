@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "TB Mukt Bharat Abhiyan Progress and Statistics"
-related_topic_ids: ["NOTE-SCH-HEALTH", "NOTE-GS-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

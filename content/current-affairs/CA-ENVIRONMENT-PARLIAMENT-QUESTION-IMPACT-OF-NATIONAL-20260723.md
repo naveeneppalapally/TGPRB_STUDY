@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Telangana"
 topic: "National Clean Air Programme (NCAP) Performance and PM2.5 Levels"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

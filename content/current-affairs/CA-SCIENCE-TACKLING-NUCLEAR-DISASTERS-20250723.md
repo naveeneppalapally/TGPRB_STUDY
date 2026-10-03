@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Nuclear and Radiological Disaster Management Framework"
-related_topic_ids: ["NOTE-DM-NPP", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

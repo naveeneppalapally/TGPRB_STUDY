@@ -72,6 +72,17 @@ def update_related_topic_ids_in_content(content: str, new_ids: list) -> str:
     
     return content
 
+def resolve_tags(fields, compiled_keywords, alias_to_canonical, known_ids):
+    normalize = lambda values: {alias_to_canonical.get(value, value) for value in values if alias_to_canonical.get(value, value) in known_ids}
+    # Preserve legacy assignments as an unreviewed source baseline. Never claim
+    # an old model/keyword tag was human-curated. New writers identify source tags.
+    source = normalize(fields.get('source_topic_ids', set(fields.get('related_topic_ids', [])) - set(fields.get('keyword_topic_ids', []))))
+    curated = normalize(fields.get('curated_topic_ids', []))
+    text = ' '.join(str(fields.get(key, '')) for key in ['headline', 'exam_fact', 'summary', 'topic']).lower()
+    derived = {canonical_id for canonical_id, pattern in compiled_keywords if pattern.search(text)}
+    return source | curated | derived, derived
+
+
 def run_sync():
     if not os.path.exists(TOPICS_MASTER_PATH):
         print(f"ERROR: topics_master.json not found at {TOPICS_MASTER_PATH}")
@@ -108,6 +119,7 @@ def run_sync():
     updated_files = 0
     normalized_alias_count = 0
     topic_card_counts = {t['id']: 0 for t in topics}
+    known_ids = set(topic_card_counts)
 
     for fname in files:
         fpath = os.path.join(CA_DIR, fname)
@@ -123,31 +135,28 @@ def run_sync():
             if ex_id in alias_to_canonical:
                 normalized_ids.add(alias_to_canonical[ex_id])
                 normalized_alias_count += 1
-            else:
+            elif ex_id in known_ids:
                 normalized_ids.add(ex_id)
 
-        current_ids = set(normalized_ids)
-
-        # 2. Keyword matching across entire card text
-        text_lower = original_content.lower()
-        for canonical_id, pattern in compiled_keywords:
-            if canonical_id in current_ids:
-                continue
-            if pattern.search(text_lower):
-                current_ids.add(canonical_id)
+        import yaml
+        fields = yaml.safe_load(original_content.split('---', 2)[1])
+        current_ids, keyword_ids = resolve_tags(fields, compiled_keywords, alias_to_canonical, known_ids)
 
         # Track statistics for canonical topics
         for canonical_id in topic_card_counts:
             if canonical_id in current_ids:
                 topic_card_counts[canonical_id] += 1
 
-        # Check if changed
-        if current_ids != existing_ids:
-            updated_content = update_related_topic_ids_in_content(original_content, list(current_ids))
-            if updated_content != original_content:
-                with open(fpath, 'w', encoding='utf-8') as f:
-                    f.write(updated_content)
-                updated_files += 1
+        updated_content = update_related_topic_ids_in_content(original_content, list(current_ids))
+        new_keywords = 'keyword_topic_ids: ' + json.dumps(sorted(keyword_ids))
+        if re.search(r'^keyword_topic_ids:.*$', updated_content, re.MULTILINE):
+            updated_content = re.sub(r'^keyword_topic_ids:.*$', new_keywords, updated_content, flags=re.MULTILINE)
+        else:
+            updated_content = re.sub(r'^(related_topic_ids:.*)$', r'\1\n' + new_keywords, updated_content, count=1, flags=re.MULTILINE)
+        if updated_content != original_content:
+            with open(fpath, 'w', encoding='utf-8') as f:
+                f.write(updated_content)
+            updated_files += 1
 
     t1 = time.time()
     print("\n" + "=" * 60)

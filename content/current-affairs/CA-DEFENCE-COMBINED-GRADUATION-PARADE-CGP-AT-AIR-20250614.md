@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Combined Graduation Parade at Air Force Academy Dundigal"
-related_topic_ids: ["NOTE-DEF-IAF", "NOTE-TEL-HYD", "NOTE-GEO-DAMS", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

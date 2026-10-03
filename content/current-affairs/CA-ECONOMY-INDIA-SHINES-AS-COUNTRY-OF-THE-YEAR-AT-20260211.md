@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India as Country of the Year at BIOFACH Germany 2026"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-INT-FAIRS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

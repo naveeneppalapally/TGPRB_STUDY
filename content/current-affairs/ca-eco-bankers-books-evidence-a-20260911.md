@@ -4,9 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids:
-  - "NOTE-ECO-GENERAL"
-  - "NOTE-POL-HIST-ACTS"
+related_topic_ids: ["NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
@@ -23,31 +22,28 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23091
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2309122&reg=3&lang=1"
 event_key: "BANKERS-BOOKS-EVIDENCE-ACT-2026"
 mcqs:
-  - exam_fact: "The Bankers’ Books Evidence Act, 2026 received the assent of the President on 13th August 2026."
-    question: "The Bankers’ Books Evidence Act, 2026 received the assent of the President on which date?"
-    options:
-      - "13th August 2026"
-      - "10th September 2026"
-      - "1st October 2026"
-      - "15th August 2026"
-    answer: 0
-    explanation: "The Bankers’ Books Evidence Act, 2026 received the assent of the President on 13th August 2026."
-  - exam_fact: "The Bankers’ Books Evidence Act, 2026 replaces the Bankers’ Books Evidence Act, 1891."
-    question: "The Bankers’ Books Evidence Act, 2026 replaces which of the following colonial-era acts?"
-    options:
-      - "Bankers’ Books Evidence Act, 1925"
-      - "Bankers’ Books Evidence Act, 1891"
-      - "Bankers’ Books Evidence Act, 1905"
-      - "Bankers’ Books Evidence Act, 1947"
-    answer: 1
-    explanation: "The Bankers’ Books Evidence Act, 2026 replaces the Bankers’ Books Evidence Act, 1891."
-  - exam_fact: "The notification dated 10th September 2026 appoints 1st October 2026 as the date on which the provisions of the Bankers’ Books Evidence Act, 2026 will come into force."
-    question: "From which date do the provisions of the Bankers’ Books Evidence Act, 2026 come into force?"
-    options:
-      - "13th August 2026"
-      - "10th September 2026"
-      - "1st October 2026"
-      - "1st January 2027"
-    answer: 2
-    explanation: "The notification dated 10th September 2026 appoints 1st October 2026 as the date on which the provisions of the Act will come into force."
+- exam_fact: The Bankers’ Books Evidence Act, 2026 received the assent of the President
+    on 13th August 2026.
+  question: The Bankers’ Books Evidence Act, 2026 received the assent of the President
+    on which date?
+  options:
+  - 13th August 2026
+  - 10th September 2026
+  - 1st October 2026
+  - 15th August 2026
+  answer: 0
+  explanation: The Bankers’ Books Evidence Act, 2026 received the assent of the President
+    on 13th August 2026.
+- exam_fact: The Bankers’ Books Evidence Act, 2026 replaces the Bankers’ Books Evidence
+    Act, 1891.
+  question: The Bankers’ Books Evidence Act, 2026 replaces which of the following
+    colonial-era acts?
+  options:
+  - Bankers’ Books Evidence Act, 1925
+  - Bankers’ Books Evidence Act, 1891
+  - Bankers’ Books Evidence Act, 1905
+  - Bankers’ Books Evidence Act, 1947
+  answer: 1
+  explanation: The Bankers’ Books Evidence Act, 2026 replaces the Bankers’ Books Evidence
+    Act, 1891.
 ---

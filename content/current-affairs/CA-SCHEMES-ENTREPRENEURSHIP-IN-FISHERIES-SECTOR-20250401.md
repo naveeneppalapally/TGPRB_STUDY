@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Fisheries Startup Grand Challenge 2.0"
-related_topic_ids: ["NOTE-SCH-PMMSY", "NOTE-TEL-ECONOMY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

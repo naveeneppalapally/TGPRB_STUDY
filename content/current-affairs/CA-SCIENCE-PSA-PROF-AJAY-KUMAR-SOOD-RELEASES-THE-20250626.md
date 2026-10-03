@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "S&T Clusters Annual Report 2024-2025"
 related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

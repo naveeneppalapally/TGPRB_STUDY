@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India Energy Security and Strait of Hormuz Disruption"
-related_topic_ids: ["NOTE-ECO-ENERGY", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

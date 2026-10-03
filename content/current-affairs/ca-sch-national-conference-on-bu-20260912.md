@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
@@ -21,31 +22,30 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23094
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2309467&reg=3&lang=1"
 event_key: "BOCW-CONF-MUMBAI-2026"
 mcqs:
-  - exam_fact: "The two-day National Conference on Building and Other Construction Workers (BOCW) was held in Mumbai on September 11–12, 2026, and was organised by the Ministry of Labour & Employment."
-    question: "The two-day National Conference on Building and Other Construction Workers (BOCW) held in September 2026 was organized in which city?"
-    options:
-      - "New Delhi"
-      - "Mumbai"
-      - "Bengaluru"
-      - "Hyderabad"
-    answer: 1
-    explanation: "The two-day National Conference on Building and Other Construction Workers (BOCW), organised by the Ministry of Labour & Employment, Government of India, in collaboration with Government of Maharashtra, concluded today in Mumbai."
-  - exam_fact: "Rajasthan shared its experience with Digital Labour Chowks during the National Conference on BOCW held in September 2026."
-    question: "During the National Conference on BOCW in September 2026, which state presented its experience with 'Digital Labour Chowks'?"
-    options:
-      - "Uttar Pradesh"
-      - "Bihar"
-      - "Rajasthan"
-      - "Assam"
-    answer: 2
-    explanation: "Uttar Pradesh presented its work on Skill Development of Building Workers, while Rajasthan shared its experience with Digital Labour Chowks."
-  - exam_fact: "Assam presented the Nirman Sakhi Portal during the National Conference on BOCW held in September 2026."
-    question: "Which state presented the 'Nirman Sakhi Portal' during the National Conference on BOCW in September 2026?"
-    options:
-      - "Assam"
-      - "Maharashtra"
-      - "Uttar Pradesh"
-      - "Rajasthan"
-    answer: 0
-    explanation: "Assam presented the Nirman Sakhi Portal during the second day session of the National Conference on BOCW."
+- exam_fact: The two-day National Conference on Building and Other Construction Workers
+    (BOCW) was held in Mumbai on September 11–12, 2026, and was organised by the Ministry
+    of Labour & Employment.
+  question: The two-day National Conference on Building and Other Construction Workers
+    (BOCW) held in September 2026 was organized in which city?
+  options:
+  - New Delhi
+  - Mumbai
+  - Bengaluru
+  - Hyderabad
+  answer: 1
+  explanation: The two-day National Conference on Building and Other Construction
+    Workers (BOCW), organised by the Ministry of Labour & Employment, Government of
+    India, in collaboration with Government of Maharashtra, concluded today in Mumbai.
+- exam_fact: Rajasthan shared its experience with Digital Labour Chowks during the
+    National Conference on BOCW held in September 2026.
+  question: During the National Conference on BOCW in September 2026, which state
+    presented its experience with 'Digital Labour Chowks'?
+  options:
+  - Uttar Pradesh
+  - Bihar
+  - Rajasthan
+  - Assam
+  answer: 2
+  explanation: Uttar Pradesh presented its work on Skill Development of Building Workers,
+    while Rajasthan shared its experience with Digital Labour Chowks.
 ---

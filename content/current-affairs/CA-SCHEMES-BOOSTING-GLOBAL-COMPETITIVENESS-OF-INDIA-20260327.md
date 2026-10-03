@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM MITRA Parks and Textile Sector Initiatives"
-related_topic_ids: ["NOTE-SCH-PMMITRA", "NOTE-TEL-ECONOMY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "10 Years of Startup India Initiative"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-STARTUPS", "NOTE-POL-JUDICIARY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

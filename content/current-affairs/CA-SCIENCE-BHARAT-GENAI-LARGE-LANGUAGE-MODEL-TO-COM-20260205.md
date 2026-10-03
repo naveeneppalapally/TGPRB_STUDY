@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "Bharat GenAI Sovereign Large Language Model"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

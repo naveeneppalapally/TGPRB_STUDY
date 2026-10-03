@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_BOO_PRIME_MINISTER_SHARES_GLI_20260812"
 type: "current_affair"
 category: "books"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Books and Literary Events"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

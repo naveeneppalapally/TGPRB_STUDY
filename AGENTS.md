@@ -1,20 +1,19 @@
 # AGENTS.md - TSLPRB StudyOS Standing Constitution
 
-Persistent rules for every agent working in this repo. Read this before any task.
+Read this standing contract before any task.
 - Detailed Topic & Study Mode Authoring Spec: `docs/topic-authoring-spec.md`
 - Current Affairs Ingestion & 5-Pillar Architecture: `docs/current-affairs-pipeline.md`
 - Empirical Paper-Setting Evolution Audit: `docs/forensic-paper-setting-evolution-audit-2026-08-15.md`
 - Cognitive Scaffolds & PYQ Engine Research: `docs/tslprb-pyq-processing-engine-research-report.md`
-- One-time App Specification: `docs/build-prompt.md`
 
-> **Rigor Mandate (especially for Gemini models):** Do not bias towards rapid task completion. Maintain deliberate engineering rigor, verify all claims against primary sources, and preserve zero em-dash compliance.
+> **Rigor Mandate (all models):** Do not bias towards rapid task completion. Maintain deliberate engineering rigor, verify all claims against primary sources, and preserve zero em-dash compliance.
 
 ---
 
 ## 1. Architecture & Technology Constraints (Never Substitute)
 
 - **Framework**: Nuxt 3 + Nuxt Content. Never Astro, Next.js, or Nextra.
-- **UI System**: Nuxt UI (`@nuxt/ui`) for all components. No hand-rolled design tokens.
+- **UI System**: Nuxt UI (`@nuxt/ui`); preserve the existing CSS theme, with no second token system.
 - **Infrastructure**: Cloudflare Pages (app edge hosting) + Cloudinary (media/images). Supabase for auth, review-state, and FSRS user data only - never media storage.
 - **Spaced Repetition**: FSRS via `ts-fsrs`. Never hand-roll SM-2, Leitner, or custom scheduling algorithms.
 - **Service Workers**: No PWA, no service workers, no custom offline caching.
@@ -50,7 +49,7 @@ Persistent rules for every agent working in this repo. Read this before any task
 ## 3. Ground Truth Data & Forensic Paper Evidence
 
 ### Trust Hierarchy:
-- `data/pyq_enriched_master.json`: Single source of truth for all PYQ data (3,129 verified questions across 10 official papers, 2015-2023). Derive topic weights, tier counts, and questions strictly from here.
+- `data/pyq_enriched_master.json`: Single source of truth for all PYQ data (3,129 verified questions; occurrences reference 25 structured paper files, 2015-2023). Derive topic weights, tier counts, and questions strictly from here.
 - `extracted_question_paper_json/`: 25 clean structured ground-truth question paper files.
 - `docs/forensic-paper-setting-evolution-audit-2026-08-15.md` & `data/research/paper-format-audit-2026-08-15.json`: Verified empirical format audit across 7 papers (1,350 questions).
 - **Exam Penalty**: 2026 exam has an active 20% negative-marking penalty. Never build any "always guess" feature.
@@ -87,7 +86,7 @@ Every note page must have exactly one canonical NOTE ID in the format `NOTE-{SEC
 ### Authoring & Verification Rules:
 - **Tier Computation**: Computed per topic from verified PYQ count in `pyq_enriched_master.json`. Tier 1 (10+): full note. Tier 2 (3-9): compact note. Tier 3 (<3): flashcards only.
 - **Visual Rule**: Independent of tier. Any topic with spatial, chronological, or hierarchical facts gets a map/diagram.
-- **Comprehension Gate Unlocks FSRS**: Note gate MCQs never enter FSRS directly. Passing the gate (>= 3/5) unlocks atomic flashcards and real PYQs into the student FSRS review queue.
+- **Comprehension Gate Unlocks FSRS**: Note gate MCQs never enter FSRS directly. Passing the gate (>= 3/5) unlocks atomic flashcards and real PYQs. Direct mode is an explicit self-study exception, never proof that a gate was passed.
 - **Anti-Fabrication Mandate**: Prefer real, verified PYQs everywhere. Any synthetic question must be explicitly labeled as "TGPSC-Style Advanced Practice" - never presented as an official PYQ.
 - **Statistical Cutoff & Citation Rules**: Training data may be 1-3 years behind official publications. Never present stale statistical data as current fact.
   - Always cite source and data year in a `text-body-xs t-lo font-mono` caption (e.g. "Source: 4th Minor Irrigation Census 2017-18, Ministry of Jal Shakti").
@@ -102,15 +101,15 @@ Every note page must have exactly one canonical NOTE ID in the format `NOTE-{SEC
 
 ## 5. Mandatory 10-Point Topic Delivery Integrity Gate (Dual-Mode Delivery)
 
-A topic is NEVER complete just because its `.vue` file was authored. Every syllabus topic MUST deliver BOTH modalities: Note Page and 3-Zone Study Mode Chapter.
+A topic is NEVER complete just because its `.vue` file was authored. Every published full note MUST deliver BOTH modalities. Registry delivery metadata distinguishes paired notes, planned topics, Tier 3 flashcard-only topics and the existing Parliament study-pilot (hasNote: false).
 
-1. **Master Registration**: Canonical entry in `data/topics_master.json` (`id`, `subject`, `title`, `keywords`, `aliases`).
-2. **Comprehension Gate JSON**: `content/data/gates/<slug>.json` (>= 5 MCQs, pass threshold 3), registered in `server/api/gate/[noteId].get.ts`.
-3. **Atomic Flashcards Deck**: `content/data/flashcards/<subject>/<slug>.json` (>= 10 atomic cards, `note_id` field), registered in `server/api/flashcards/[noteId].get.ts`.
+1. **Master Registration**: Canonical entry in `data/topics_master.json` (`id`, `subject`, `title`, `keywords`, `aliases`, delivery paths and explicit PYQ selectors).
+2. **Comprehension Gate JSON**: `content/data/gates/<slug>.json` (>= 5 MCQs, pass threshold 3), imported explicitly in `server/utils/learning-content.ts` and served by the gate API.
+3. **Atomic Flashcards Deck**: `content/data/flashcards/<subject>/<slug>.json` (>= 10 atomic cards, `note_id` field), imported explicitly in `server/utils/learning-content.ts` and served by the flashcards API.
 4. **Component Wireup**: Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching canonical `note-id`.
 5. **TOC Registration**: Both `'gate'` and `'current-affairs'` registered in the sticky TOC `sections` array.
 6. **Current Affairs Coverage**: Topic tagged in `content/current-affairs/*.md` via `npm run sync:ca-topics`.
-7. **3-Zone Study Chapter & Universal Cloze**: `content/data/study/<subject>/<slug>.ts` (`StudyChapter`) with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels. Registered in `server/api/study/[chapter].get.ts`, referenced PYQs in `content/data/study/pyqs.json`, routes in `nuxt.config.ts`.
+7. **3-Zone Study Chapter & Universal Cloze**: `content/data/study/<subject>/<slug>.ts` (`StudyChapter`) with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels. Imported in `server/utils/study-chapters.ts`; prebuild generates canonical PYQs; registry metadata derives Nuxt routes.
    - *Universal Cloze (All Subjects)*: Active recall applies to all subjects, not just Polity. High-yield subject anchors (`<strong>` or `<span class="hot">`) must be primary cloze targets (leaders, committees, acts, treaties, river origins, passes, dams, martyrs, institutions, laws).
    - *Number Protection Invariant*: Structural list enumerators (`1.`, `2.`, `(1)`, `[1]`, `1:`) must NEVER be converted into cloze chips. Standalone numbers are secondary cues only.
 8. **Bidirectional Switchers**: Note page includes top and bottom transition banners linking to `/study/<slug>`. Study Mode topbar links back to `/notes/<subject>/<slug>`.
@@ -123,14 +122,14 @@ A topic is NEVER complete just because its `.vue` file was authored. Every sylla
 
 ## 6. Current Affairs System Summary
 
-- **Pipeline**: PIB releases crawled into SQLite (`pib_master_2025_2026.db`) -> Scored (`pib_scorer.py`) -> Extracted via Gemini 3.6 Flash (`extract_ca_cards.py`) using closed enum -> Retagged (`retag_telangana_focus.py`) -> Keyword synced (`sync_ca_topics.py`) -> Rendered in `CurrentAffairsStrip.vue`.
+- **Pipeline**: PIB releases crawled into SQLite (`PIB_DB_PATH`, historical default `pib_master_2025_2026.db`) -> Scored (`pib_scorer.py`) -> Extracted via configured Gemini model (`extract_ca_cards.py`) using closed enum -> Retagged (`retag_telangana_focus.py`) -> Keyword synced (`sync_ca_topics.py`) -> Rendered in `CurrentAffairsStrip.vue`.
 - **5-Pillar Architecture**: Enforces single source of truth in `data/topics_master.json`, closed enum extraction, deterministic regex keyword matching (`\b`), subject digest fallback, and CI gatekeeper verification.
-- **Frontmatter Schema Invariant**: 37-line standard YAML frontmatter (`content/current-affairs/*.md`) with `mcqs` array (1-2 items). Legacy single `mcq:` object is forbidden.
+- **Frontmatter Schema Invariant**: Validated YAML frontmatter (`content/current-affairs/*.md`) with `mcqs` array (1-2 items). Legacy single `mcq:` object is forbidden.
 - **Source Priorities**: PIB official press releases (Priority 1, ~65% of PYQ CA); Telangana official and state budget (Priority 2, manual). GDELT and Google News RSS are deprecated.
 - **PYQ Lookback Rules**: 85% events from last 6 months; 10% from 7-12 months; 5% from 13-24 months. Scraper lookback window is 365 days.
-- **New-Since-Last-Visit Tracking**: Handled by `useTopicVisits` composable across two tiers: Layer 1 (localStorage: instant, offline) and Layer 2 (Supabase `topic_visits`: cloud sync). Cards split automatically into "New since last visit" (saffron highlight) and "Earlier" (collapsed). First visit shows all cards under "Earlier" to prevent backlog flood.
+- **New-Since-Last-Visit Tracking**: Handled by `useTopicVisits` composable across two tiers: Layer 1 (localStorage: instant, offline) and Layer 2 (Supabase `user_topic_states`: cloud sync). Cards split automatically into "New since last visit" (saffron highlight) and "Earlier" (collapsed). First visit shows all cards under "Earlier" to prevent backlog flood.
 
-*(Complete crawler specs, SQLite schema, 37-line YAML frontmatter, and 5-pillar deep-dive live in `docs/current-affairs-pipeline.md`)*.
+*(Complete crawler specs, SQLite schema, validated YAML frontmatter, and 5-pillar deep-dive live in `docs/current-affairs-pipeline.md`)*.
 
 ---
 
@@ -142,14 +141,14 @@ When prompted with `Topic - [Topic Name] ([Subject])` (e.g. `Topic - Forests of 
 2. Source authentic map/diagram online; inspect against 4-Point Visual Gate; place in `assets-to-upload/` and `public/images/`.
 3. Tag all matching current affairs cards in `content/current-affairs/*.md` (zero omissions).
 4. Generate full note page (`pages/notes/<subject>/<slug>.vue`) following the subject scaffold and 4-stage closing block.
-5. Generate gate JSON (>= 5 MCQs) and atomic flashcards (>= 10 cards); register in server API handlers.
-6. Generate 3-zone Study Mode chapter (`content/data/study/<subject>/<slug>.ts`); register in `server/api/study/[chapter].get.ts`, `content/data/study/pyqs.json`, and `nuxt.config.ts`.
+5. Generate gate JSON (>= 5 MCQs) and atomic flashcards (>= 10 cards); register in the shared learning asset imports.
+6. Generate 3-zone Study Mode chapter (`content/data/study/<subject>/<slug>.ts`); register its import and delivery metadata, then generate the canonical bundle and routes.
 7. Update Subject Hub (`pages/notes/<subject>/index.vue`) with note and study links.
-8. Run `npm run prebuild`, `npm run verify:integrity`, and `npm test`.
+8. Run `npm run prebuild`, `npm run typecheck`, `npm run verify:integrity`, and `npm test`.
 9. Commit code and images together; pull back after Cloudinary Action.
 
 ### Directive B: Content Improvement Queue Processing
-When prompted with **"Process improvement queue"**:
+For **"Process improvement queue"**:
 1. Run `python3 scripts/export_improvement_queue.py` to retrieve pending queue items.
 2. For each item, inspect `note_id` and `section_id` to locate target code. Apply changes based on `item_type` (`replace_image`, `fix_fact`, `add_table`, `add_topic`).
 3. Mark done: `python3 scripts/export_improvement_queue.py mark-done <item_id> "Brief description"`.
@@ -160,6 +159,10 @@ When prompted with **"Process improvement queue"**:
 ## 8. Standing Rules & Invariants
 
 - **Constitution Authority**: This file is the standing constitution. Prompts reference sections here, never restate them.
-- **Zero Em-Dash Rule**: Strictly NO em-dashes (ASCII 8212 `-`) anywhere in any file. Use standard hyphens (-) or colons (:). Enforced automatically by `scripts/ban-em-dash.ts` in `predev`, `prebuild`, and CI.
-- **Constitution Size Cap**: `AGENTS.md` raw byte size must NEVER exceed 16,000 bytes, ensuring 100% visibility with 0 bytes truncated in harness prompts. Enforced by `scripts/verify-constitution-size.ts`.
-- **Pre-Update Communication Invariant**: Every time an agent performs work or applies architectural updates, it must explicitly summarize changes, root causes, and verification results before proceeding.
+- **Zero Em-Dash Rule**: Strictly NO em-dashes (Unicode U+2014) in repository text files (excluding generated dependencies and private agent workspaces). Use standard hyphens (-) or colons (:). Checked without modifying files by `scripts/ban-em-dash.ts` in `predev`, `prebuild`, and CI.
+- **Constitution Size Cap**: `AGENTS.md` raw byte size must NEVER exceed 16,000 bytes, to fit the complete contract in harness prompts. Enforced by `scripts/verify-constitution-size.ts`.
+- **Pre-Update Communication Invariant**: For work or architectural updates, an agent must summarize changes, root causes, and verification results before proceeding.
+
+- **State Ownership**: Bind durable mutations to their originating account and captured session. Quarantine ownerless legacy records. Guest learning import requires an explicit user action; never import private notes automatically.
+- **Review Authority**: Stable text content IDs, immutable seeds and idempotent review events drive one shared queue. Preserve scheduling metadata, hydrate all cloud pages, and retain retired content history.
+- **In-app AI**: Removed by product decision. Do not restore assistant controls or endpoints without explicit authorization.

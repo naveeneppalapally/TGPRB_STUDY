@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "Digitization of Rare Ayurvedic Manuscripts by CCRAS"
 related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

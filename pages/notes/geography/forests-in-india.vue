@@ -45,6 +45,7 @@
             </span>
           </div>
         </header>
+        <NoteStudySwitch slug="forests-in-india" />
 
         <!-- ══ Coverage strip - the 6 ways TGPRB tests this topic ══ -->
         <section class="mb-10">
@@ -832,14 +833,6 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-GEO-FORESTS"
-                  :prompt="`Explain the reasoning for this TGPSC-style forest question and the exam trap: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
               </div>
 
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
@@ -885,7 +878,9 @@
             Next: Irrigation in India <UIcon name="i-heroicons-arrow-right" class="h-3.5 w-3.5" />
           </NuxtLink>
         </footer>
-      </article>
+
+        <NoteStudySwitch slug="forests-in-india" />
+</article>
 
       <!-- ══ Right TOC Sticky Sidebar ════════════════════════════════════ -->
       <TableOfContents

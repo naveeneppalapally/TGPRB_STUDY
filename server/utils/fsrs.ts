@@ -4,7 +4,7 @@
  * FSRS helper utilities: converts between Supabase DB rows and ts-fsrs objects.
  * ─────────────────────────────────────────────────────────────────────────────
  */
-import { createEmptyCard, fsrs, generatorParameters, Rating, type Card } from 'ts-fsrs'
+import { createEmptyCard, fsrs, generatorParameters, Rating, type Card, type Grade } from 'ts-fsrs'
 
 // Initialize FSRS scheduler with default parameters
 const params = generatorParameters()
@@ -43,7 +43,7 @@ export function dbRowToCard(row: DbCard): Card {
     reps:           row.reps,
     lapses:         row.lapses,
     state:          row.state as any,
-    last_review:    row.last_review ? new Date(row.last_review) : new Date(0),
+    last_review:    row.last_review ? new Date(row.last_review) : undefined,
   }
 }
 
@@ -58,19 +58,20 @@ export function cardToDbFields(card: Card) {
     lapses:         card.lapses,
     state:          card.state,
     due:            card.due.toISOString(),
-    last_review:    card.last_review.toISOString(),
+    last_review:    card.last_review?.toISOString() ?? null,
   }
 }
 
 /** Map API rating (1-4) to ts-fsrs Rating enum */
-export function toFsrsRating(rating: number): Rating {
-  const map: Record<number, Rating> = {
+export function toFsrsRating(rating: number): Grade {
+  const map: Record<number, Grade> = {
     1: Rating.Again,
     2: Rating.Hard,
     3: Rating.Good,
     4: Rating.Easy,
   }
-  return map[rating] ?? Rating.Good
+  if (!Number.isInteger(rating) || !map[rating]) throw new Error('Rating must be an integer from 1 to 4')
+  return map[rating]
 }
 
 /** Create a fresh card for a newly unlocked content item */

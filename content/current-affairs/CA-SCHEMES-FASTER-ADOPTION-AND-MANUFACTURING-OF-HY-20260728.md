@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM EDRIVE and Key EV Initiatives in India"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

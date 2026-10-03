@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "World Food India 2025 Investment Commitments"
-related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-FOODPROCESSING", "NOTE-ECO-INVESTMENT", "NOTE-POL-JUDICIARY"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-JUDICIARY"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

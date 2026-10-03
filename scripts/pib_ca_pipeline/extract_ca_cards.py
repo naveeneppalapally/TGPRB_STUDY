@@ -3,6 +3,9 @@ import sys
 import json
 import sqlite3
 import re
+import yaml
+import hashlib
+from pathlib import Path
 from datetime import datetime, UTC
 from typing import List, Optional, Literal
 from pydantic import BaseModel, Field
@@ -12,9 +15,11 @@ sys.path.insert(0, os.path.abspath('.'))
 
 from scripts.pyq_pipeline.run_pipeline import load_env, get_client
 from google.genai import types
+from scripts.pib_ca_pipeline.card_contract import CONTRACT, validate_extraction, validate_card, canonical_tags
+from scripts.pib_ca_pipeline.ingestion_state import load_state, terminal, outcome
 
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '../..'))
-DB_PATH = os.path.join(ROOT_DIR, 'workers/scrapy-pib/pib_master_2025_2026.db')
+DB_PATH = os.environ.get('PIB_DB_PATH', os.path.join(ROOT_DIR, 'workers/scrapy-pib/pib_master_2025_2026.db'))
 MANIFEST_PATH = os.path.join(ROOT_DIR, 'data/pib_scored_manifest.json')
 OUTPUT_DIR = os.path.join(ROOT_DIR, 'content/current-affairs')
 TOPICS_MASTER_PATH = os.path.join(ROOT_DIR, 'data/topics_master.json')
@@ -39,16 +44,16 @@ class MCQSchema(BaseModel):
 
 class CACardSchema(BaseModel):
     is_exam_relevant: bool = Field(description="True if article contains a specific testable fact for competitive exams, False if routine news")
-    category: str = Field(description="One of: appointments, international, economy, awards, sports, telangana, schemes, defence, judiciary, science, books, environment")
-    exam_section: str = Field(description="One of: Polity, Geography, Economy, General Studies, Science & Technology, Telangana")
+    category: Literal.__getitem__(tuple(CONTRACT['categories'])) = Field(description="One of: appointments, international, economy, awards, sports, telangana, schemes, defence, judiciary, science, books, environment")
+    exam_section: Literal.__getitem__(tuple(CONTRACT['sections'])) = Field(description="One of: Polity, Geography, Economy, General Studies, Science & Technology, Telangana")
     topic: str = Field(description="Short, specific topic title")
     related_topic_ids: List[ValidNoteId] = Field(default=[], description="Matching note IDs strictly from the closed list of valid study topics. Use [] if none match.")
     is_telangana_focus: bool = Field(description="True if article specifically mentions Telangana state, Hyderabad, or state initiatives")
-    difficulty: str = Field(description="F for Famous/Easy, M for Medium, O for Obscure/Hard")
+    difficulty: Literal['F', 'M', 'O'] = Field(description="F for Famous/Easy, M for Medium, O for Obscure/Hard")
     headline: str = Field(description="One-sentence clear summary headline")
     exam_fact: str = Field(description="The single most pinpoint, testable fact from the release")
     summary: str = Field(description="2-3 sentence background context for students")
-    mcqs: List[MCQSchema] = Field(description="1 to 2 exam-ready MCQs derived from the text", min_length=1)
+    mcqs: List[MCQSchema] = Field(description="1 to 2 exam-ready MCQs derived from the text", min_length=1, max_length=2)
 
 topics_list_str = "\n".join(f"- {t['id']}: {t['title']} ({t['subject']})" for t in TOPICS_MASTER)
 
@@ -89,10 +94,11 @@ def fetch_full_article(prid: int) -> Optional[dict]:
     return None
 
 def write_ca_markdown(card_data: dict, full_art: dict) -> str:
+    validate_extraction(card_data)
     cat_upper = card_data['category'].upper()
     slug_title = re.sub(r'[^a-zA-Z0-9]+', '-', full_art['title'][:40]).strip('-').upper()
     date_str = full_art['pub_date'].replace('-', '')
-    card_id = f"CA-{cat_upper}-{slug_title}-{date_str}"
+    card_id = f"CA-PIB-{full_art['prid']}"
     
     filename = f"{card_id}.md"
     filepath = os.path.join(OUTPUT_DIR, filename)
@@ -113,16 +119,21 @@ def write_ca_markdown(card_data: dict, full_art: dict) -> str:
         'exam_section': card_data['exam_section'],
         'topic': card_data['topic'],
         'related_topic_ids': sanitized_ids,
+        'source_topic_ids': sanitized_ids,
         'is_telangana_focus': card_data['is_telangana_focus'],
         'difficulty': card_data['difficulty'],
         'exam_depth': 'both',
-        'headline': card_data['headline'].replace('—', '-'),
-        'exam_fact': card_data['exam_fact'].replace('—', '-'),
-        'summary': card_data['summary'].replace('—', '-'),
+        'headline': card_data['headline'].replace('-', '-'),
+        'exam_fact': card_data['exam_fact'].replace('-', '-'),
+        'summary': card_data['summary'].replace('-', '-'),
         'event_date': full_art['pub_date'],
-        'published_at': f"{full_art['pub_date']}T07:30:00+05:30",
+        'published_at': f"{full_art['pub_date']}T00:00:00+05:30",
+        'published_at_precision': 'date',
+        'retrieved_at': datetime.now(UTC).isoformat(),
+        'event_date_basis': 'publication_proxy',
         'date': full_art['pub_date'],
         'source_name': 'PIB',
+        'extraction_model': card_data.get('extraction_model', 'unrecorded'),
         'source_type': 'official',
         'ministry': full_art['ministry'] or 'Government of India',
         'canonical_source_url': full_art['url'],
@@ -130,24 +141,11 @@ def write_ca_markdown(card_data: dict, full_art: dict) -> str:
         'mcqs': card_data['mcqs']
     }
 
-    # Format YAML
-    yaml_lines = ["---"]
-    for k, v in frontmatter.items():
-        if isinstance(v, (dict, list)):
-            yaml_lines.append(f"{k}: {json.dumps(v, ensure_ascii=False)}")
-        elif isinstance(v, bool):
-            yaml_lines.append(f"{k}: {'true' if v else 'false'}")
-        else:
-            # Escape quotes
-            val_str = str(v).replace('"', '\\"')
-            yaml_lines.append(f'{k}: "{val_str}"')
-    yaml_lines.append("---")
-    yaml_lines.append("")
-
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write("\n".join(yaml_lines))
-
+    validate_card(frontmatter)
+    text = yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False).replace(chr(8212), '-')
+    Path(filepath).write_text('---\n' + text + '---\n', encoding='utf-8')
     return filepath
+
 
 def get_processed_prids() -> set:
     """Resume support: scan existing cards for PRIDs already extracted, so a
@@ -157,11 +155,12 @@ def get_processed_prids() -> set:
     prid_re = re.compile(r'PRID=(\d+)')
     if not os.path.isdir(OUTPUT_DIR):
         return processed
-    for fname in os.listdir(OUTPUT_DIR):
+    for filepath in list(Path(OUTPUT_DIR).glob("*.md")) + list((Path(ROOT_DIR)/"data/ca_duplicate_archive").rglob("*.md")):
+        fname = filepath.name
         if not fname.endswith('.md'):
             continue
         try:
-            with open(os.path.join(OUTPUT_DIR, fname), encoding='utf-8') as f:
+            with open(filepath, encoding='utf-8') as f:
                 content = f.read()
             m = prid_re.search(content)
             if m:
@@ -175,12 +174,17 @@ def run_extraction_batch(max_cards: int = 50):
     client = get_client(env)
 
     if not os.path.exists(MANIFEST_PATH):
-        print("Manifest not found! Run pib_scorer.py first.")
-        return
+        raise RuntimeError("Manifest not found. Run pib_scorer.py first.")
 
     with open(MANIFEST_PATH) as f:
         manifest = json.load(f)
 
+    metadata_path = Path(MANIFEST_PATH).with_suffix('.meta.json')
+    metadata = json.loads(metadata_path.read_text()) if metadata_path.exists() else {}
+    stat = Path(DB_PATH).stat()
+    if metadata.get('db_size') != stat.st_size or metadata.get('db_mtime_ns') != stat.st_mtime_ns or metadata.get('manifest_sha256') != hashlib.sha256(Path(MANIFEST_PATH).read_bytes()).hexdigest():
+        raise RuntimeError('Scored manifest is stale or unverified. Run pib_scorer.py first.')
+    state = load_state()
     print(f"Loaded {len(manifest):,} scored articles from manifest.")
 
     # Filter candidates (Top scored, prioritizing Telangana focus and scores > 2.0)
@@ -189,9 +193,10 @@ def run_extraction_batch(max_cards: int = 50):
 
     already_processed = get_processed_prids()
     if already_processed:
-        candidates = [c for c in candidates if c['prid'] not in already_processed]
+        candidates = [c for c in candidates if c['prid'] not in already_processed and not terminal(state, c['prid'])]
         print(f"Skipping {len(already_processed):,} already-processed PRIDs. {len(candidates):,} remain.")
 
+    candidates = [c for c in candidates if not terminal(state, c['prid'])]
     written = 0
     skipped = 0
     errors = 0
@@ -200,6 +205,8 @@ def run_extraction_batch(max_cards: int = 50):
         prid = item['prid']
         full_art = fetch_full_article(prid)
         if not full_art:
+            outcome(state, prid, 'retryable', 'Missing source article')
+            errors += 1
             continue
 
         prompt = f"""
@@ -214,7 +221,7 @@ FULL ARTICLE TEXT:
 
         try:
             response = client.models.generate_content(
-                model='gemini-3.6-flash',
+                model=os.environ.get('GEMINI_MODEL', 'gemini-3.6-flash'),
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     system_instruction=EXTRACTION_SYSTEM_PROMPT,
@@ -224,19 +231,23 @@ FULL ARTICLE TEXT:
                 )
             )
 
-            card_data = json.loads(response.text)
+            card_data = CACardSchema.model_validate_json(response.text).model_dump()
 
             if not card_data.get('is_exam_relevant', False):
                 skipped += 1
+                outcome(state, prid, 'irrelevant')
                 continue
 
+            card_data['extraction_model'] = os.environ.get('GEMINI_MODEL', 'gemini-3.6-flash')
             filepath = write_ca_markdown(card_data, full_art)
+            outcome(state, prid, 'written', filepath)
             written += 1
             tg_flag = " [TG FOCUS]" if card_data['is_telangana_focus'] else ""
             print(f"  [{written:>2}/{max_cards}] Created: {os.path.basename(filepath)} ({card_data['category']}){tg_flag}")
 
         except Exception as e:
             errors += 1
+            outcome(state, prid, 'retryable', str(e))
             print(f"  [ERROR] PRID {prid}: {e}")
 
     print(f"\n============================================================")
@@ -245,6 +256,8 @@ FULL ARTICLE TEXT:
     print(f"  Cards Written : {written}")
     print(f"  Irrelevant    : {skipped}")
     print(f"  Errors        : {errors}")
+
+    if errors: raise RuntimeError(f'{errors} extraction failures remain retryable')
 
 if __name__ == '__main__':
     batch_num = int(sys.argv[1]) if len(sys.argv) > 1 else 30

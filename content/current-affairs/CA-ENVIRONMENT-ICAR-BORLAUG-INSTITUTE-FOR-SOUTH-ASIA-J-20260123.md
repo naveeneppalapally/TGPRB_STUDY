@@ -4,7 +4,8 @@ type: "current_affair"
 category: "environment"
 exam_section: "Science & Technology"
 topic: "ACASA-India Launch and NICRA Review"
-related_topic_ids: ["NOTE-AGRI-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

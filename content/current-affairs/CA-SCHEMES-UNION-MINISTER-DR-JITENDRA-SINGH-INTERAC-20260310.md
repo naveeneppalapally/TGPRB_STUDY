@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "35th Meeting of SCOVA"
-related_topic_ids: ["NOTE-POL-GOVERNANCE", "NOTE-SCH-PENSION"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

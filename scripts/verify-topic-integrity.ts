@@ -1,372 +1,154 @@
-/**
- * Topic Integrity & Contract Gatekeeper
- * 
- * Enforces strict consistency across all study topics in TSLPRB StudyOS:
- * 1. Every note page must have a valid GateQuiz with registered JSON and API endpoint.
- * 2. Every note page must have an atomic Flashcard deck with registered JSON and API endpoint.
- * 3. Every note page must have a matching CurrentAffairsStrip.
- * 4. All subject links in layouts/default.vue and pages/index.vue must route to Subject Hubs.
- * 
- * Run automatically in predev, prebuild, and CI.
- */
-
-import fs from 'node:fs'
-import path from 'node:path'
+import { readFileSync } from 'node:fs'
 import { globSync } from 'glob'
+import { parse } from '@vue/compiler-sfc'
+import { baseParse, parserOptions, NodeTypes, type ElementNode, type RootNode } from '@vue/compiler-dom'
+import ts from 'typescript'
+import yaml from 'js-yaml'
+import topics from '../data/topics_master.json'
+import master from '../data/pyq_enriched_master.json'
+import studyPyqs from '../content/data/study/pyqs.json'
+import livePyqs from '../data/live_pyqs.json'
+import { contentRoutes, noteRoute } from '../utils/topic-delivery'
+import { LEARNING_ASSETS, cardsFor, gateFor, canonicalNoteId, allReviewContent } from '../server/utils/learning-content'
+import { CHAPTERS } from '../server/utils/study-chapters'
+import { validateCACard } from '../utils/ca-contract'
 
-const ROOT = process.cwd()
-
-interface Defect {
-  file: string
-  issue: string
-}
-
-const defects: Defect[] = []
-
-function addDefect(file: string, issue: string) {
-  defects.push({ file, issue })
-}
-
-console.log('\n╔══════════════════════════════════════════════════════════════════╗')
-console.log('║       TSLPRB STUDYOS - TOPIC INTEGRITY & CONTRACT GATEKEEPER     ║')
-console.log('╚══════════════════════════════════════════════════════════════════╝\n')
-
-// 1. Gather all note pages
-const notePages = globSync('pages/notes/**/*.vue', {
-  cwd: ROOT,
-}).filter(p => !p.endsWith('index.vue') && !path.basename(p).startsWith('['))
-
-console.log(`Found ${notePages.length} active topic note pages to audit:`)
-notePages.forEach(p => console.log(`  - ${p}`))
-console.log('')
-
-// Read Topics Master registry
-const topicsMasterPath = path.join(ROOT, 'data/topics_master.json')
-interface MasterTopic {
-  id: string
-  subject: string
-  title: string
-  keywords: string[]
-  aliases: string[]
-}
-
-const masterTopicsMap = new Map<string, MasterTopic>()
-if (!fs.existsSync(topicsMasterPath)) {
-  addDefect('data/topics_master.json', 'Missing single source of truth registry: data/topics_master.json')
-} else {
-  try {
-    const rawTopics: MasterTopic[] = JSON.parse(fs.readFileSync(topicsMasterPath, 'utf-8'))
-    if (!Array.isArray(rawTopics) || rawTopics.length === 0) {
-      addDefect('data/topics_master.json', 'data/topics_master.json must be a non-empty array.')
-    } else {
-      for (const t of rawTopics) {
-        if (!t.id) addDefect('data/topics_master.json', 'Topic entry missing "id".')
-        if (!t.subject) addDefect('data/topics_master.json', `Topic "${t.id}" missing "subject".`)
-        if (!t.title) addDefect('data/topics_master.json', `Topic "${t.id}" missing "title".`)
-        if (!Array.isArray(t.keywords)) addDefect('data/topics_master.json', `Topic "${t.id}" missing "keywords".`)
-        if (!Array.isArray(t.aliases)) addDefect('data/topics_master.json', `Topic "${t.id}" missing "aliases".`)
-        masterTopicsMap.set(t.id, t)
-        for (const alias of (t.aliases || [])) {
-          masterTopicsMap.set(alias, t)
-        }
+export function vueEvidence(source: string) {
+  const { descriptor, errors } = parse(source)
+  if (errors.length || !descriptor.template || !descriptor.scriptSetup) throw new Error('Unable to parse Vue template and script setup')
+  const ast = baseParse(descriptor.template.content, parserOptions)
+  const elements: ElementNode[] = []
+  function visit(node: RootNode | ElementNode) {
+    for (const child of node.children) if (child.type === NodeTypes.ELEMENT) { elements.push(child); visit(child) }
+  }
+  visit(ast)
+  const script = ts.createSourceFile('topic.ts', descriptor.scriptSetup.content, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS)
+  const toc = new Set<string>()
+  function walk(node: ts.Node) {
+    if (ts.isVariableDeclaration(node) && node.name.getText(script) === 'sections' && node.initializer && ts.isArrayLiteralExpression(node.initializer)) {
+      for (const element of node.initializer.elements) if (ts.isObjectLiteralExpression(element)) for (const prop of element.properties) {
+        if (ts.isPropertyAssignment(prop) && prop.name.getText(script) === 'id' && ts.isStringLiteral(prop.initializer)) toc.add(prop.initializer.text)
       }
     }
-  } catch (e: any) {
-    addDefect('data/topics_master.json', `Corrupted topics_master.json syntax: ${e.message}`)
+    ts.forEachChild(node, walk)
   }
+  walk(script)
+  return { elements, toc, script }
 }
-
-// Read Current Affairs cards to index topic coverage
-const caFiles = globSync('content/current-affairs/*.md', { cwd: ROOT })
-
-// Current-affairs card ids must be unique. The PIB scraper once truncated the id
-// to 40 characters, and because the slug ends with the publication date that cut
-// removed the last date digit. Consecutive days then shared one id, which caused
-// duplicate Vue keys, duplicate DOM ids, and merged per-card user state.
-const caIdOwners = new Map<string, string[]>()
-for (const cf of caFiles) {
-  try {
-    const raw = fs.readFileSync(path.join(ROOT, cf), 'utf-8')
-    const idMatch = raw.match(/^id:\s*"?([^"\n]+)"?\s*$/m)
-    if (!idMatch) {
-      addDefect(cf, 'Current-affairs card is missing an id field.')
-      continue
-    }
-    const id = idMatch[1].trim()
-    if (!caIdOwners.has(id)) caIdOwners.set(id, [])
-    caIdOwners.get(id)!.push(cf)
-  } catch (e) {
-    addDefect(cf, `Could not read current-affairs card: ${(e as Error).message}`)
-  }
+function property(object: ts.ObjectLiteralExpression | undefined, key: string) {
+  return object?.properties.find((node): node is ts.PropertyAssignment =>
+    ts.isPropertyAssignment(node) && (ts.isIdentifier(node.name) || ts.isStringLiteral(node.name)) && node.name.text === key)?.initializer
 }
-for (const [id, owners] of caIdOwners) {
-  if (owners.length > 1) {
-    addDefect(owners[1], `Duplicate current-affairs id "${id}" is also used by ${owners[0]}. Card ids must be unique.`)
-  }
+function objectProperty(object: ts.ObjectLiteralExpression | undefined, key: string) {
+  const value = property(object, key)
+  return value && ts.isObjectLiteralExpression(value) ? value : undefined
 }
-
-const caTopicCounts = new Map<string, number>()
-for (const cf of caFiles) {
-  try {
-    const raw = fs.readFileSync(path.join(ROOT, cf), 'utf-8')
-    const jsonMatch = raw.match(/related_topic_ids:\s*(\[[^\]]*\])/)
-    if (jsonMatch) {
-      try {
-        const ids = JSON.parse(jsonMatch[1])
-        for (const id of ids) {
-          caTopicCounts.set(id, (caTopicCounts.get(id) || 0) + 1)
-        }
-      } catch {
-        const rawItems = jsonMatch[1].match(/["']([^"']+)["']/g) || []
-        for (const item of rawItems) {
-          const val = item.replace(/^["']|["']$/g, '')
-          caTopicCounts.set(val, (caTopicCounts.get(val) || 0) + 1)
-        }
-      }
-    } else {
-      const lines = raw.split('\n')
-      let inList = false
-      for (const line of lines) {
-        if (line.startsWith('related_topic_ids:')) {
-          inList = true
-          continue
-        }
-        if (inList) {
-          if (line.startsWith('  - ') || line.startsWith('    - ') || line.startsWith('- ')) {
-            const val = line.replace(/^\s*-\s*/, '').trim().replace(/^["']|["']$/g, '')
-            if (val) {
-              caTopicCounts.set(val, (caTopicCounts.get(val) || 0) + 1)
-            }
-          } else if (line.trim() === '' || line.startsWith('---') || /^[a-zA-Z0-9_]+:/.test(line)) {
-            break
-          }
-        }
-      }
-    }
-  } catch (e: any) {
-    addDefect(cf, `Corrupted Current Affairs card syntax: ${e.message}`)
-  }
+export function hasRouteBinding(source: string) {
+  const script = ts.createSourceFile('nuxt.config.ts', source, ts.ScriptTarget.Latest, true, ts.ScriptKind.TS)
+  const config = script.statements.find(ts.isExportAssignment)?.expression
+  const object = config && ts.isCallExpression(config) && config.arguments[0] && ts.isObjectLiteralExpression(config.arguments[0]) ? config.arguments[0] : undefined
+  const routes = property(objectProperty(objectProperty(object, 'nitro'), 'prerender'), 'routes')
+  return !!routes && ts.isCallExpression(routes) && ts.isIdentifier(routes.expression) && routes.expression.text === 'contentRoutes' &&
+    routes.arguments.length === 1 && ts.isIdentifier(routes.arguments[0]) && routes.arguments[0].text === 'topics'
 }
-
-// Read API registries
-const gateApiContent = fs.readFileSync(path.join(ROOT, 'server/api/gate/[noteId].get.ts'), 'utf-8')
-const fcApiContent = fs.readFileSync(path.join(ROOT, 'server/api/flashcards/[noteId].get.ts'), 'utf-8')
-
-// Read all Gate JSON files
-const gateFiles = globSync('content/data/gates/*.json', { cwd: ROOT })
-const gateMap = new Map<string, any>()
-for (const gf of gateFiles) {
-  try {
-    const raw = JSON.parse(fs.readFileSync(path.join(ROOT, gf), 'utf-8'))
-    if (raw.note_id) {
-      gateMap.set(raw.note_id, { file: gf, data: raw })
-    }
-  } catch (e: any) {
-    addDefect(gf, `Corrupted Gate JSON syntax: ${e.message}`)
+function hasCall(script: ts.SourceFile, name: string) {
+  let found = false
+  function visit(node: ts.Node) {
+    if (ts.isCallExpression(node) && ts.isIdentifier(node.expression) && node.expression.text === name) found = true
+    ts.forEachChild(node, visit)
   }
+  visit(script)
+  return found
 }
-
-// Read all Flashcard JSON files
-const fcFiles = globSync('content/data/flashcards/**/*.json', { cwd: ROOT })
-const fcMap = new Map<string, { file: string; cards: any[] }>()
-for (const ff of fcFiles) {
-  try {
-    const raw = JSON.parse(fs.readFileSync(path.join(ROOT, ff), 'utf-8'))
-    let cards: any[] = []
-    let noteId: string | null = null
-
-    if (Array.isArray(raw)) {
-      cards = raw
-      noteId = raw[0]?.source_note_id || raw[0]?.related_topic_ids?.[0]
-    } else if (raw && typeof raw === 'object') {
-      cards = Array.isArray(raw.cards) ? raw.cards : []
-      noteId = raw.note_id || raw.topic_id
-    }
-
-    if (noteId) {
-      fcMap.set(noteId, { file: ff, cards })
-    }
-    // Also check cards for explicit source_note_id
-    for (const c of cards) {
-      if (c.source_note_id && !fcMap.has(c.source_note_id)) {
-        fcMap.set(c.source_note_id, { file: ff, cards })
-      }
-    }
-  } catch (e: any) {
-    addDefect(ff, `Corrupted Flashcards JSON syntax: ${e.message}`)
-  }
+export function attribute(node: ElementNode, name: string): string | undefined {
+  const prop = node.props.find(p => p.type === NodeTypes.ATTRIBUTE && p.name === name)
+  return prop?.type === NodeTypes.ATTRIBUTE ? prop.value?.content : undefined
 }
-
-// 2. Audit each note page
-let verifiedCount = 0
-
-for (const notePage of notePages) {
-  const fullPath = path.join(ROOT, notePage)
-  const content = fs.readFileSync(fullPath, 'utf-8')
-
-  // Extract GateQuiz note-id
-  const gateMatch = content.match(/<GateQuiz\s+[^>]*note-id="([^"]+)"/)
-  if (!gateMatch) {
-    addDefect(notePage, 'Missing <GateQuiz note-id="..." /> component invocation.')
-    continue
+export function runIntegrity(readOverride?: (file: string) => string, chapters = CHAPTERS): string[] {
+  const defects: string[] = []
+  const check = (condition: unknown, message: string) => { if (!condition) defects.push(message) }
+  const read = readOverride || ((file: string) => readFileSync(file, 'utf8'))
+  const packageScripts = JSON.parse(read('package.json')).scripts
+  const constitution = read('AGENTS.md')
+  for (const match of constitution.matchAll(/`(docs\/[^`]+|scripts\/[^`]+|server\/[^`]+|data\/[^`]+|content\/[^`]+)`/g)) {
+    if (/[<*>]/.test(match[1])) continue
+    try { read(match[1]) } catch { defects.push(`Missing constitutional reference: ${match[1]}`) }
   }
-  const noteId = gateMatch[1]
-
-  // Validate format
-  if (!/^NOTE-[A-Z]+-[A-Z0-9-]+$/.test(noteId)) {
-    addDefect(notePage, `Malformed note-id "${noteId}". Must follow "NOTE-{SECTION}-{TOPIC}".`)
+  for (const match of constitution.matchAll(/npm run ([a-z:-]+)/g)) check(packageScripts[match[1]], `Missing constitutional command: ${match[1]}`)
+  const ids = new Set<string>(), aliases = new Set<string>()
+  for (const t of topics) {
+    check(!ids.has(t.id), `Duplicate NOTE ID: ${t.id}`); ids.add(t.id)
+    check(/^NOTE-[A-Z]+-[A-Z0-9-]+$/.test(t.id) && t.title && t.subject && Array.isArray(t.keywords) && Array.isArray(t.aliases), `Invalid topic: ${t.id}`)
+    for (const alias of t.aliases) { check(!aliases.has(alias), `Duplicate alias: ${alias}`); aliases.add(alias) }
   }
-
-  // Verify registration in data/topics_master.json
-  const masterEntry = masterTopicsMap.get(noteId)
-  if (!masterEntry) {
-    addDefect(notePage, `Note ID "${noteId}" is NOT registered in data/topics_master.json.`)
-  } else if (masterEntry.id !== noteId) {
-    addDefect(notePage, `Note ID "${noteId}" is a legacy alias for canonical ID "${masterEntry.id}". Note pages must use canonical topic IDs.`)
+  for (const alias of aliases) check(!ids.has(alias), `Alias collides with canonical ID: ${alias}`)
+  const canonical = new Map(master.map(q => [q.uid, q])), bundle = new Map(studyPyqs.map(q => [q.uid,q]))
+  for (const q of [...studyPyqs, ...livePyqs]) check(JSON.stringify(q) === JSON.stringify(canonical.get(q.uid)), `Study PYQ differs from master: ${q.uid}`)
+  const caCounts = new Map<string,number>(), caIds = new Set<string>()
+  for (const file of globSync('content/current-affairs/*.md')) {
+    try {
+      const card = yaml.load(read(file).split('---')[1]) as Record<string, any>
+      for (const error of validateCACard(card)) defects.push(`${file}: ${error}`)
+      check(!caIds.has(card.id), `Duplicate CA ID: ${card.id}`); caIds.add(card.id)
+      for (const id of card.related_topic_ids || []) caCounts.set(id, (caCounts.get(id) || 0)+1)
+    } catch (e) { defects.push(`${file}: ${String(e)}`) }
   }
-
-  // Verify Current Affairs coverage
-  const allowedIds = masterEntry ? [masterEntry.id, ...(masterEntry.aliases || [])] : [noteId]
-  let directCaCount = 0
-  for (const id of allowedIds) {
-    directCaCount += (caTopicCounts.get(id) || 0)
+  const seenNotes = new Set<string>()
+  for (const file of globSync('pages/notes/**/*.vue').filter(p => !p.endsWith('/index.vue') && !p.includes('['))) {
+    try {
+      const { elements, toc } = vueEvidence(read(file))
+      const gates = elements.filter(e => e.tag === 'GateQuiz'), strips = elements.filter(e => e.tag === 'CurrentAffairsStrip')
+      const id = gates[0] && attribute(gates[0], 'note-id'), topic = topics.find(t => t.id === id)
+      check(gates.length === 1 && id && canonicalNoteId(id) === id && topic, `${file}: exactly one canonical gate required`)
+      if (!topic || !id) continue
+      seenNotes.add(id)
+      check(file === `pages/notes/${topic.subjectSlug}/${topic.noteSlug}.vue`, `${id}: note path differs from registry`)
+      check(strips.length === 1 && attribute(strips[0], 'note-id') === id, `${id}: CA identity differs`)
+      check(toc.has('gate') && toc.has('current-affairs'), `${id}: actual TOC entries missing`)
+      check((caCounts.get(id) || 0)>0, `${id}: no canonical CA coverage`)
+      const gate = gateFor(id)
+      check(gate && gate.note_id === id && gate.pass_threshold === 3 && gate.questions.length >= 5, `${id}: incomplete gate schema/registration`)
+      for (const q of gate?.questions || []) check(q.id && q.question && q.explanation && q.options.length === 4 && Number.isInteger(q.correct_answer) && q.correct_answer>=0 && q.correct_answer<4, `${id}: invalid gate question ${q.id}`)
+      const rawGate = JSON.parse(read(topic.gateFile!))
+      const rawDeck = JSON.parse(read(topic.deckFile!))
+      check(JSON.stringify(rawGate) === JSON.stringify(LEARNING_ASSETS[id]?.gate), `${id}: gate import differs from declared file`)
+      check(rawDeck.note_id === id && JSON.stringify(rawDeck) === JSON.stringify(LEARNING_ASSETS[id]?.deck), `${id}: deck NOTE identity/import differs from declared file`)
+      const deck = cardsFor(id)
+      check(LEARNING_ASSETS[id] && deck.length >= 10 && new Set(deck.map(c=>c.id)).size===deck.length && deck.every(c=>c.id && c.front && c.back && c.source_note_id===id), `${id}: incomplete or unstable deck`)
+      check(topic.pyqUids?.every(uid=>canonical.has(uid)), `${id}: unresolved topic PYQs`)
+      const chapter = topic.studySlug ? chapters[topic.studySlug] : undefined
+      check(chapter?.noteId === id && chapter.hasNote === true && chapter.subjectSlug===topic.subjectSlug, `${id}: paired Study registration missing`)
+      const links = elements.filter(e => (e.tag === 'NoteStudySwitch' && attribute(e,'slug')===topic.studySlug) || (e.tag === 'NuxtLink' && attribute(e,'to')===`/study/${topic.studySlug}`))
+      check(links.length>=2 && links.some(e=>e.loc.start.offset<gates[0].loc.start.offset) && links.some(e=>e.loc.start.offset>(strips[0]?.loc.start.offset ?? Infinity)), `${id}: top/bottom Study transitions missing`)
+      const hub = vueEvidence(read(`pages/notes/${topic.subjectSlug}/index.vue`)).elements
+      check(hub.some(e=>(e.tag==='NuxtLink' && attribute(e,'to')===`/notes/${topic.subjectSlug}/${topic.noteSlug}`) || (e.tag==='SubjectTopicCards' && attribute(e,'subject')===topic.subjectSlug && attribute(e,'mode')==='note')), `${id}: hub Note card missing`)
+      check(hub.some(e=>(e.tag==='NuxtLink' && attribute(e,'to')===`/study/${topic.studySlug}`) || (e.tag==='SubjectTopicCards' && attribute(e,'subject')===topic.subjectSlug && attribute(e,'mode')!=='note')), `${id}: hub Study card missing`)
+    } catch (e) { defects.push(`${file}: ${String(e)}`) }
   }
-  if (directCaCount === 0) {
-    addDefect(notePage, `Note ID "${noteId}" has 0 tagged current affairs cards. Run "npm run sync:ca-topics" to tag cards.`)
-  }
-
-  // Check CurrentAffairsStrip
-  const caMatch = content.match(/<CurrentAffairsStrip\s+[^>]*note-id="([^"]+)"/)
-  if (!caMatch) {
-    addDefect(notePage, 'Missing <CurrentAffairsStrip note-id="..." /> component invocation.')
-  } else if (caMatch[1] !== noteId) {
-    addDefect(notePage, `CurrentAffairsStrip note-id "${caMatch[1]}" does not match GateQuiz note-id "${noteId}".`)
-  }
-
-  // Check TOC registration
-  if (!content.includes("'gate'") && !content.includes('"gate"')) {
-    addDefect(notePage, 'TOC sections array missing "gate" anchor registration.')
-  }
-  if (!content.includes("'current-affairs'") && !content.includes('"current-affairs"')) {
-    addDefect(notePage, 'TOC sections array missing "current-affairs" anchor registration.')
-  }
-
-  // Verify Gate JSON
-  const gateEntry = gateMap.get(noteId)
-  if (!gateEntry) {
-    addDefect(notePage, `Missing gate JSON in content/data/gates/ for note-id "${noteId}".`)
-  } else {
-    const qData = gateEntry.data
-    if (!Array.isArray(qData.questions) || qData.questions.length < 5) {
-      addDefect(gateEntry.file, `Gate quiz for "${noteId}" must contain at least 5 questions (found ${qData.questions?.length || 0}).`)
-    } else {
-      qData.questions.forEach((q: any, qi: number) => {
-        if (!q.id) addDefect(gateEntry.file, `Question #${qi + 1} missing "id".`)
-        if (!q.question) addDefect(gateEntry.file, `Question #${qi + 1} missing "question" text.`)
-        if (!Array.isArray(q.options) || q.options.length < 4) {
-          addDefect(gateEntry.file, `Question "${q.id || qi}" has fewer than 4 options.`)
-        }
-        if (typeof q.correct_answer !== 'number' || q.correct_answer < 0 || q.correct_answer >= (q.options?.length || 0)) {
-          addDefect(gateEntry.file, `Question "${q.id || qi}" has out-of-bounds correct_answer "${q.correct_answer}".`)
-        }
-        if (!q.explanation) addDefect(gateEntry.file, `Question "${q.id || qi}" missing "explanation".`)
-      })
+  for (const t of topics.filter(t=>t.noteSlug)) check(seenNotes.has(t.id), `${t.id}: registered note absent`)
+  for (const chapter of Object.values(chapters)) {
+    check(topics.find(t=>t.id===chapter.noteId)?.studySlug===chapter.slug, `${chapter.slug}: Study identity differs`)
+    check(chapter.sections.length>0 && new Set(chapter.sections.map(s=>s.id)).size===chapter.sections.length, `${chapter.slug}: invalid sections`)
+    for (const section of chapter.sections) {
+      check(section.estMinutes>=2 && section.estMinutes<=4 && section.blocks.length && section.pyqs.length && section.cards.length && section.traps.length, `${chapter.slug}/${section.id}: incomplete section`)
+      const lines = new Set(section.blocks.flatMap(b=>'lineId' in b ? [b.lineId] : b.type==='compare' ? b.rows.map(r=>r.lineId) : b.type==='timeline' ? b.events.map(e=>e.lineId) : []))
+      for (const ref of section.pyqs) check(topics.find(t=>t.id===chapter.noteId)?.pyqUids?.includes(ref.uid) && bundle.has(ref.uid) && ref.sourceLine && lines.has(ref.sourceLine), `${chapter.slug}/${section.id}: unresolved PYQ/sourceLine ${ref.uid}`)
     }
   }
-
-  // Verify Gate API Registration
-  if (!gateApiContent.includes(`"${noteId}"`) && !gateApiContent.includes(`'${noteId}'`) && !gateApiContent.includes(noteId)) {
-    // Check if imported object has note_id
-    const hasDynamic = gateApiContent.includes(`[(`) && gateApiContent.includes(`.note_id]:`)
-    if (!hasDynamic) {
-      addDefect('server/api/gate/[noteId].get.ts', `Note ID "${noteId}" is NOT registered in GATES map.`)
-    }
+  const all = allReviewContent()
+  check(new Set(all.map(c=>c.id)).size===all.length, 'Duplicate review IDs across catalog')
+  const routes = contentRoutes(topics)
+  for (const t of topics) {
+    if (t.noteSlug) check(routes.includes(noteRoute(t)!), `${t.id}: Note route absent`)
+    if (t.studySlug) check(routes.includes(`/study/${t.studySlug}`) && routes.includes(`/api/study/${t.studySlug}`), `${t.id}: Study route absent`)
   }
-
-  // Verify Flashcards JSON
-  const fcEntry = fcMap.get(noteId)
-  if (!fcEntry) {
-    addDefect(notePage, `Missing flashcards JSON in content/data/flashcards/ for note-id "${noteId}".`)
-  } else {
-    if (!Array.isArray(fcEntry.cards) || fcEntry.cards.length < 10) {
-      addDefect(fcEntry.file, `Flashcard deck for "${noteId}" must contain at least 10 cards (found ${fcEntry.cards?.length || 0}).`)
-    } else {
-      fcEntry.cards.forEach((c: any, ci: number) => {
-        if (!c.front) addDefect(fcEntry.file, `Flashcard #${ci + 1} missing "front" prompt.`)
-        if (!c.back && !c.key_fact) addDefect(fcEntry.file, `Flashcard #${ci + 1} missing "back" answer.`)
-      })
-    }
-  }
-
-  // Verify Flashcard API Registration
-  if (!fcApiContent.includes(`'${noteId}'`) && !fcApiContent.includes(`"${noteId}"`)) {
-    addDefect('server/api/flashcards/[noteId].get.ts', `Note ID "${noteId}" is NOT registered in DECKS or DECK_META maps.`)
-  }
-
-  verifiedCount++
+  check(hasRouteBinding(read('nuxt.config.ts')), 'Nuxt must consume verified content routes')
+  check(hasCall(vueEvidence(read('components/study/StudyTopbar.vue')).script, 'noteRoute'), 'Study topbar must use canonical Note route')
+  return defects
 }
-
-// 3. Verify Navigation Invariants
-console.log('Auditing Subject Banks navigation links in layouts/default.vue and pages/index.vue...')
-const layoutContent = fs.readFileSync(path.join(ROOT, 'layouts/default.vue'), 'utf-8')
-const indexContent = fs.readFileSync(path.join(ROOT, 'pages/index.vue'), 'utf-8')
-
-// Check default layout subjects array
-const subjectsBlockMatch = layoutContent.match(/const\s+subjects\s*=\s*\[([\s\S]*?)\]/)
-if (subjectsBlockMatch) {
-  const subjectsBlock = subjectsBlockMatch[1]
-  const subjectRoutes = Array.from(subjectsBlock.matchAll(/name:\s*"([^"]+)"(?:,\s*icon:\s*"[^"]+")?,\s*to:\s*"([^"]+)"/g))
-
-  for (const match of subjectRoutes) {
-    const [_, name, toRoute] = match
-    if (toRoute.startsWith('/notes/')) {
-      const parts = toRoute.split('/').filter(Boolean)
-      if (parts.length > 2) {
-        addDefect('layouts/default.vue', `Subject "${name}" routes directly to topic "${toRoute}" instead of Subject Hub "/${parts[0]}/${parts[1]}".`)
-      } else {
-        const hubPath = path.join(ROOT, 'pages', parts[0], parts[1], 'index.vue')
-        if (!fs.existsSync(hubPath)) {
-          addDefect('layouts/default.vue', `Subject Hub target does not exist: pages/${parts[0]}/${parts[1]}/index.vue`)
-        }
-      }
-    }
-  }
+if (process.argv[1]?.endsWith('verify-topic-integrity.ts')) {
+  const defects = runIntegrity()
+  if (defects.length) { for (const defect of defects) console.error(defect); process.exit(1) }
+  console.log('PASS: parsed Note components/TOCs, gate/deck schemas and executable registrations, CA schema/IDs/coverage, paired Study chapters, section PYQs/source lines, bidirectional links, hub cards and registry-derived route configuration.')
+  console.log('Separate verification is required for deployed SQL, browser layout, factual CA answers and production edge behavior.')
 }
-
-// Check index.vue openSubject navigation
-const openSubjectMatch = indexContent.match(/function\s+openSubject[\s\S]*?\{([\s\S]*?)\n\}/)
-if (openSubjectMatch) {
-  const openSubjectBody = openSubjectMatch[1]
-  const navMatches = Array.from(openSubjectBody.matchAll(/navigateTo\(['"]([^'"]+)['"]\)/g))
-  for (const m of navMatches) {
-    const toRoute = m[1]
-    if (toRoute.startsWith('/notes/')) {
-      const parts = toRoute.split('/').filter(Boolean)
-      if (parts.length > 2) {
-        addDefect('pages/index.vue', `openSubject() navigates directly to topic "${toRoute}" instead of Subject Hub "/${parts[0]}/${parts[1]}".`)
-      }
-    }
-  }
-}
-
-// 4. Report results
-if (defects.length > 0) {
-  console.error('\n❌ TOPIC INTEGRITY AUDIT FAILED WITH DEFECTS:\n')
-  defects.forEach((d, i) => {
-    console.error(`  ${i + 1}. [${d.file}]`)
-    console.error(`     └─ ${d.issue}\n`)
-  })
-  console.error('All defects must be resolved before proceeding with build or deployment.\n')
-  process.exit(1)
-}
-
-console.log(`✔ ALL ${verifiedCount} ACTIVE TOPIC NOTE PAGES FULLY VERIFIED.`)
-console.log('✔ Master Topics registry verified (data/topics_master.json).')
-console.log('✔ Current Affairs coverage verified for all active topic pages.')
-console.log('✔ Comprehension Gate JSONs present and valid (>= 5 questions with options and explanations).')
-console.log('✔ Nitro /api/gate/[noteId] API endpoints registered.')
-console.log('✔ Atomic Flashcard decks present and valid (>= 10 cards with front/back).')
-console.log('✔ Nitro /api/flashcards/[noteId] API endpoints registered.')
-console.log('✔ Subject Banks navigation verified to target Subject Hubs without bypass.')
-console.log('✔ Status: 100% PASS\n')
-process.exit(0)

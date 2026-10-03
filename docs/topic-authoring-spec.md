@@ -1,3 +1,5 @@
+> Current implementation: delivery paths and PYQ selectors live in `data/topics_master.json`; explicit imports live in `server/utils/learning-content.ts` and `server/utils/study-chapters.ts`. Prebuild regenerates canonical bundles and subject statistics. APIs normalize aliases once. Direct mode is an intentional self-study option. The in-app AI assistant has been removed. Current Affairs YAML is validated by field types, not line count. See `docs/audit-remediation-2026-10-02.md` for migration and verification details.
+
 # Topic Authoring Specification - TSLPRB StudyOS
 
 This document provides the complete, authoritative technical specification for authoring study topics in TSLPRB StudyOS. Every topic must satisfy the Dual-Mode Delivery standard: delivering both a full Note Page (`pages/notes/<subject>/<slug>.vue`) and an interactive 3-Zone Study Mode Chapter (`content/data/study/<subject>/<slug>.ts`).
@@ -21,6 +23,7 @@ All four sections must be registered in the Table of Contents (TOC) `sections` a
 
 ```ts
 import { ref, reactive, computed } from 'vue'
+import { canonicalNotePyqs } from '~/utils/note-pyqs'
 
 // 1. TOC Registration Invariant
 const sections = [
@@ -46,7 +49,9 @@ interface Pyq {
   selected: number | null
 }
 
-const pyqs: Pyq[] = reactive([
+// Canonical question, options, answer and explanation are resolved by UID.
+// Distinct authored commentary is preserved as teaching_explanation.
+const pyqs: Pyq[] = reactive(canonicalNotePyqs([
   {
     uid: 'PYQ-0766',
     exam: 'SI',
@@ -61,11 +66,11 @@ const pyqs: Pyq[] = reactive([
       'Pandit Jawaharlal Nehru'
     ],
     correct: 2,
-    explanation: 'Dr. Sachchidananda Sinha was elected temporary Chairman on December 9, 1946 following French convention.',
+    teaching_explanation: 'Add independently verified teaching context here, separately from the canonical explanation.',
     revealed: false,
     selected: null
   }
-])
+]))
 
 const activeExamFilter = ref<'all' | 'Constable' | 'SI'>('all')
 const examFilters = [
@@ -242,14 +247,6 @@ function advOptionClass(q: AdvPractice, optIndex: number) {
           Correct Answer: Option {{ 'ABCD'[q.correct] }} : {{ q.options[q.correct] }}
         </p>
         <p class="callout-body">{{ q.explanation }}</p>
-        <AiAskButton
-          class="mt-3"
-          note-id="NOTE-POL-MAKING-CONST"
-          :prompt="`Explain the historical reasoning and potential exam traps for this PYQ: ${q.question}`"
-          :source-question-id="q.uid"
-          :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-          label="Explain with AI"
-        />
       </div>
       <button
         v-else
@@ -359,14 +356,6 @@ function advOptionClass(q: AdvPractice, optIndex: number) {
           Correct Answer: Option {{ 'ABCD'[q.correct] }} : {{ q.options[q.correct] }}
         </p>
         <p class="callout-body">{{ q.explanation }}</p>
-        <AiAskButton
-          class="mt-3"
-          note-id="NOTE-POL-MAKING-CONST"
-          :prompt="`Explain the reasoning for this TGPSC-style question and the exam trap: ${q.question}`"
-          :source-question-id="q.uid"
-          :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-          label="Explain with AI"
-        />
       </div>
       <button
         v-else
@@ -606,11 +595,11 @@ export interface SectionProgress {
 ### 2.2 Cloudflare Pages Edge Runtime Resolution
 
 1. Chapters reference PYQs only by `uid` and optional `sourceLine`.
-2. `server/api/study/[chapter].get.ts` resolves these references at runtime against `data/pyq_enriched_master.json`.
+2. `server/api/study/[chapter].get.ts` resolves these references against the prebuild bundle derived from `data/pyq_enriched_master.json`.
 3. To support Cloudflare Pages edge runtime where local filesystem access is not available:
-   - All referenced PYQs must be appended to `content/data/study/pyqs.json`.
-   - The chapter must be registered in the `CHAPTERS` map in `server/api/study/[chapter].get.ts`.
-   - Both `/study/<slug>` and `/api/study/<slug>` must be added to `nitro.prerender.routes` in `nuxt.config.ts`.
+   - All referenced PYQs are generated into `content/data/study/pyqs.json` by `npm run prebuild`; never edit the generated bundle.
+   - The chapter must be registered in the `CHAPTERS` map in `server/utils/study-chapters.ts`.
+   - Delivery paths in `data/topics_master.json` derive both routes through `utils/topic-delivery.ts`; `nuxt.config.ts` consumes those routes.
 
 ### 2.3 Universal Cloze Active Recall Architecture Across All Subject Types
 
@@ -635,7 +624,7 @@ Cloze active recall is universal across ALL subjects, not just Polity. Primary r
 
 ### 3.1 Comprehension Gate (`content/data/gates/<slug>.json`)
 
-Gates protect the FSRS queue. Students must pass with at least 3/5 (60%) to unlock the topic's atomic flashcards and real PYQs.
+In Gate mode, students pass the canonical quiz with at least 3 correct answers to unlock the topic's atomic flashcards and real PYQs. Direct mode is the explicit self-study exception and does not record a gate pass. Authenticated gate submission supplies answers; the server resolves the gate, threshold and deck membership.
 
 ```json
 {
@@ -736,43 +725,40 @@ Generate using the AI authoring script or create manually:
 ```bash
 python3 scripts/note_pipeline/generate_gates_and_cards.py NOTE-GEO-FORESTS forests-of-india geography "Forests of India"
 ```
-Register gate in `server/api/gate/[noteId].get.ts`:
+Register both explicit asset imports in `server/utils/learning-content.ts`:
 ```ts
-import forestsOfIndia from '~/content/data/gates/forests-of-india.json'
-// In GATES map:
-[(forestsOfIndia as { note_id: string }).note_id]: forestsOfIndia,
-```
-Register flashcards in `server/api/flashcards/[noteId].get.ts`:
-```ts
+import forestsGate from '~/content/data/gates/forests-of-india.json'
 import forestsDeck from '~/content/data/flashcards/geography/forests-in-india.json'
-// In DECKS map:
-['NOTE-GEO-FORESTS']: forestsDeck,
+// In LEARNING_ASSETS:
+'NOTE-GEO-FORESTS': { gate: forestsGate, deck: forestsDeck },
 ```
+The topic registry must declare `gateFile` and `deckFile` with these exact paths. APIs share this asset registry and the alias resolver.
 
 ### Step 4: Author Note Page
 Create `pages/notes/<subject>/<slug>.vue` structured according to the Subject-Specific Cognitive Scaffold and ending with the Mandatory 4-Stage Closing Block.
 
 ### Step 5: Author 3-Zone Study Mode Chapter
 Create `content/data/study/<subject>/<slug>.ts` implementing `StudyChapter`.
-Register chapter in `server/api/study/[chapter].get.ts`:
+Register the explicit chapter import in `server/utils/study-chapters.ts`:
 ```ts
 import forestsStudy from '~/content/data/study/geography/forests-in-india'
 // In CHAPTERS map:
 [forestsStudy.slug]: forestsStudy,
 ```
-Append any referenced PYQs into `content/data/study/pyqs.json`.
-Add pre-render routes in `nuxt.config.ts`:
+Add `delivery: "paired"`, `subjectSlug`, `noteSlug`, `studySlug`, `gateFile`, `deckFile` and explicit canonical `pyqUids` to `data/topics_master.json`. `pyqUids` is the delivered question selection, which can differ from the full canonical topic count. Run `npm run prebuild` to regenerate the Study bundle, live note PYQs and statistics. Do not edit generated bundles directly.
+Registry delivery metadata derives these pre-render routes:
 ```ts
 '/study/forests-in-india',
 '/api/study/forests-in-india',
 ```
 
 ### Step 6: Update Subject Hub
-Add Note card and Study Mode card to `pages/notes/<subject>/index.vue`.
+Existing hubs derive both cards from registry metadata using `SubjectTopicCards`, with `mode="note"` for notes and the default Study mode for Study cards. A new subject hub must include both components. Existing hubs require no per-topic card edits.
 
 ### Step 7: Enforce Integrity & Test
 ```bash
 npm run prebuild
+npm run typecheck
 npm run verify:integrity
 npm test
 ```

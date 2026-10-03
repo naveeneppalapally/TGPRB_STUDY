@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_AWA_VICE_PRESIDENT_INAUGURATE_20260821"
 type: "current_affair"
 category: "awards"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Awards and Honours"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "Subhash Chandra Bose Aapda Prabandhan Puraskar 2025"
-related_topic_ids: ["NOTE-AWARDS-NATIONAL", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

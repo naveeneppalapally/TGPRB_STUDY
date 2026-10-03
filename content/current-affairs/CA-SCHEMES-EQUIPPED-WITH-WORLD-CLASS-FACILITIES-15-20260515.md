@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Amrit Bharat Station Scheme Infrastructure Upgrade"
-related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-GOVT-SCHEMES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

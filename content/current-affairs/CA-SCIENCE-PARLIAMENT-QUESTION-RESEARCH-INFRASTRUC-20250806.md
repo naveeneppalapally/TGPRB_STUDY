@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "DST Research Infrastructure Schemes and ANRF PAIR Project in Telangana"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-ST-SCHEMES", "NOTE-TEL-EDU"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -2,9 +2,12 @@ import sqlite3
 import re
 import os
 import json
+import hashlib
+from pathlib import Path
 from datetime import datetime
 
-DB_PATH = 'workers/scrapy-pib/pib_master_2025_2026.db'
+DB_PATH = os.environ.get('PIB_DB_PATH', 'workers/scrapy-pib/pib_master_2025_2026.db')
+REFERENCE_DATE = datetime.fromisoformat(os.environ.get('PIB_REFERENCE_DATE', datetime.now().date().isoformat()))
 
 # ---------------------------------------------------------------------------
 # HARD REJECT PATTERNS (Title-level deterministic filtering)
@@ -148,9 +151,10 @@ def score_article(article: tuple) -> dict:
     recency_multiplier = 1.0
     try:
         dt = datetime.strptime(pub_date, '%Y-%m-%d')
-        if dt.year == 2026:
+        age_days = (REFERENCE_DATE - dt).days
+        if 0 <= age_days <= 180:
             recency_multiplier = 1.2
-        elif dt.year == 2025 and dt.month >= 7:
+        elif 0 <= age_days <= 365:
             recency_multiplier = 1.0
         else:
             recency_multiplier = 0.8
@@ -192,10 +196,10 @@ def run_scoring_audit():
     scored.sort(key=lambda x: x['score'], reverse=True)
 
     print(f"============================================================")
-    print(f"  PIB ML SCORING ENGINE AUDIT (Total: {total:,} Articles)")
+    print(f"  PIB HEURISTIC SCORING ENGINE AUDIT (Total: {total:,} Articles)")
     print(f"============================================================")
-    print(f"  Hard Rejected / Low Signal : {rejected_cnt:,} ({rejected_cnt/total*100:.1f}%)")
-    print(f"  High-Yield Candidates      : {len(scored):,} ({len(scored)/total*100:.1f}%)")
+    print(f"  Hard Rejected / Low Signal : {rejected_cnt:,} ({rejected_cnt/max(total,1)*100:.1f}%)")
+    print(f"  High-Yield Candidates      : {len(scored):,} ({len(scored)/max(total,1)*100:.1f}%)")
     
     tg_candidates = [s for s in scored if s['is_telangana_focus']]
     print(f"  Telangana State Focus      : {len(tg_candidates):,} articles")
@@ -209,6 +213,9 @@ def run_scoring_audit():
     with open('data/pib_scored_manifest.json', 'w') as f:
         json.dump(scored, f, indent=2)
 
+    manifest = Path('data/pib_scored_manifest.json')
+    stat = Path(DB_PATH).stat()
+    manifest.with_suffix('.meta.json').write_text(json.dumps({'db_size': stat.st_size, 'db_mtime_ns': stat.st_mtime_ns, 'reference_date': REFERENCE_DATE.date().isoformat(), 'manifest_sha256': hashlib.sha256(manifest.read_bytes()).hexdigest(), 'rows': total}, indent=2) + '\n')
     print(f"\nSaved scored manifest with {len(scored):,} items to data/pib_scored_manifest.json")
 
 if __name__ == '__main__':

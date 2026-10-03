@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Telangana"
 topic: "e-Jagriti Portal and Consumer Case Disposal Rates"
 related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

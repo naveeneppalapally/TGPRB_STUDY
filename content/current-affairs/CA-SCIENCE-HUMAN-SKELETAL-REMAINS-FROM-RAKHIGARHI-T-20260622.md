@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "General Studies"
 topic: "Rakhigarhi Skeletal Remains Scientific Study"
-related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-HIS-INDUS", "NOTE-SCI-GENETICS"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

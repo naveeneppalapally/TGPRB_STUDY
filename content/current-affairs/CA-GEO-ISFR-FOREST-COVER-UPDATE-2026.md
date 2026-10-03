@@ -5,6 +5,7 @@ category: environment
 exam_section: Geography
 topic: Forests of India
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS"]
 is_telangana_focus: false
 difficulty: M
 exam_depth: both

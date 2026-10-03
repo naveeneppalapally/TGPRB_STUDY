@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Tourism Infrastructure Sanctions and e-Visa Expansion"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-SCH-PRASHAD"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

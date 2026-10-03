@@ -45,7 +45,7 @@ export interface FSRSData {
  * We track provenance so we can do a pre-release license sweep.
  */
 export interface MediaAsset {
-  /** R2 URL: r2://bucket/path/to/image.png */
+  /** Cloudinary URL or local /images authoring preview path */
   asset_url: string
 
   /** Where we got it from */
@@ -63,7 +63,7 @@ export interface MediaAsset {
 // =============================================================================
 
 /** Raw parsed question from the OCR files */
-export interface ParsedPYQ {
+export interface ParsedPYQ extends ContentItem {
   /** Source file this was extracted from */
   source_file: string
 

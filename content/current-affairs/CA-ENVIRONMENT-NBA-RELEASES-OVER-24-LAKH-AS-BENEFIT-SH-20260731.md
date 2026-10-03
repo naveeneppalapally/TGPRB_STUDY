@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Telangana"
 topic: "NBA Access and Benefit Sharing Disbursal"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

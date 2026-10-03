@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "40th Edition of AAHAR 2026 and PMFME Scheme"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-GITAGS"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

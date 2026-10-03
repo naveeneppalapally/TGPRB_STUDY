@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "PESA Mahotsav and PESA Act Provisions"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-PANCHAYAT", "NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-MAKING-CONST", "NOTE-POL-PANCHAYAT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

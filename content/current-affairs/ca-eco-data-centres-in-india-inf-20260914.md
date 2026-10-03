@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-GENERAL", "NOTE-GEO-FORESTS"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
@@ -21,31 +22,27 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23099
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2309950&reg=3&lang=1"
 event_key: "DATA-CENTRE-CAPACITY-2026"
 mcqs:
-  - exam_fact: "Installed data-centre power capacity in India stood at around 375 MW in 2020 and increased to 1.57 GW as of August 2026."
-    question: "As of August 2026, what was India's installed data-centre power capacity?"
-    options:
-      - "1.57 GW"
-      - "750 MW"
-      - "8 GW"
-      - "375 MW"
-    answer: 0
-    explanation: "Installed data-centre power capacity stood at around 375 MW in 2020 and has increased to 1.57 GW as of August 2026."
-  - exam_fact: "In the Union Budget 2022–23, data centres were included in the Harmonized List of Infrastructure."
-    question: "In which Union Budget were data centres included in the Harmonized List of Infrastructure?"
-    options:
-      - "Union Budget 2024–25"
-      - "Union Budget 2021–22"
-      - "Union Budget 2022–23"
-      - "Union Budget 2026–27"
-    answer: 2
-    explanation: "In the Union Budget 2022–23, data centres were included in the Harmonized List of Infrastructure."
-  - exam_fact: "The National Informatics Centre (NIC) has established state-of-the-art National Data Centres at NIC Headquarters in Delhi, Pune, Hyderabad and Bhubaneswar, alongside 37 smaller Data Centres at various State Capitals."
-    question: "Besides Delhi, Pune, and Bhubaneswar, which other city houses one of the primary National Data Centres established by the NIC?"
-    options:
-      - "Bengaluru"
-      - "Chennai"
-      - "Hyderabad"
-      - "Mumbai"
-    answer: 2
-    explanation: "The National Informatics Centre (NIC) has established state-of-the-art National Data Centres at NIC Headquarters in Delhi, Pune, Hyderabad and Bhubaneswar."
+- exam_fact: Installed data-centre power capacity in India stood at around 375 MW
+    in 2020 and increased to 1.57 GW as of August 2026.
+  question: As of August 2026, what was India's installed data-centre power capacity?
+  options:
+  - 1.57 GW
+  - 750 MW
+  - 8 GW
+  - 375 MW
+  answer: 0
+  explanation: Installed data-centre power capacity stood at around 375 MW in 2020
+    and has increased to 1.57 GW as of August 2026.
+- exam_fact: In the Union Budget 2022–23, data centres were included in the Harmonized
+    List of Infrastructure.
+  question: In which Union Budget were data centres included in the Harmonized List
+    of Infrastructure?
+  options:
+  - Union Budget 2024–25
+  - Union Budget 2021–22
+  - Union Budget 2022–23
+  - Union Budget 2026–27
+  answer: 2
+  explanation: In the Union Budget 2022–23, data centres were included in the Harmonized
+    List of Infrastructure.
 ---

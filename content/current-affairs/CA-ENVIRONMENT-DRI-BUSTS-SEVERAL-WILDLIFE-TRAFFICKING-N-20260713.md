@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "General Studies"
 topic: "DRI Pan-India Wildlife Trafficking Crackdown and Wildlife Protection Act 1972"
 related_topic_ids: ["NOTE-GEO-FORESTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

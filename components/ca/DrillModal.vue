@@ -139,7 +139,7 @@ const answered = ref<number | null>(null)
 const answeredCount = ref(0)
 
 const current = computed(() => props.questions[index.value] ?? null)
-const currentMcq = computed(() => {
+const currentMcq = computed<{ question: string; options: string[]; answer: number; explanation: string }>(() => {
   const c = current.value
   if (!c) return { question: '', options: [], answer: -1, explanation: '' }
   return c.item.meta?.mcqs?.[c.mcqIndex] ?? { question: '', options: [], answer: -1, explanation: '' }

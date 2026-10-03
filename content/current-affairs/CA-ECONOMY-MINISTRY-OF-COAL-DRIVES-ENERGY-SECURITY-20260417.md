@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "15th Round of Commercial Coal Mine Auctions"
-related_topic_ids: ["NOTE-ECO-MINING", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-MOUNTAINS", "NOTE-TEL-GEOG", "NOTE-TEL-GEOGRAPHY"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-MOUNTAINS", "NOTE-TEL-GEOGRAPHY"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-MOUNTAINS", "NOTE-TEL-GEOGRAPHY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

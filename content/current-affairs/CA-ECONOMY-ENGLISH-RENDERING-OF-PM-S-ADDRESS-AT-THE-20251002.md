@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "General Studies"
 topic: "RSS Centenary Commemorative Coin and Stamp"
-related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GS-NATIONAL", "NOTE-HIS-MODERN", "NOTE-POL-HISTORY", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-HIS-MODERN", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

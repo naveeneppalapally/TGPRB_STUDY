@@ -1,11 +1,11 @@
 ---
 id: "CA-GEO-RIVER-TOURISM-IWAI-WATERWAYS-20260807"
 type: "current_affair"
-category: "geography"
-exam_section: "Indian & World Geography"
+category: "environment"
+exam_section: "Geography"
 topic: "National Waterways and River-based Tourism"
-related_topic_ids:
-  - "NOTE-GEO-DRAINAGE"
+related_topic_ids: ["NOTE-GEO-DRAINAGE"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

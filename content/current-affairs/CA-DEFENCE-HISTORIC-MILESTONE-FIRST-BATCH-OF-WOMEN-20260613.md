@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Commissioning of First Batch of Women NDA Cadets"
-related_topic_ids: ["NOTE-DEF-ARMEDFORCES", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

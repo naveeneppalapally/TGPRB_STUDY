@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Economy"
 topic: "DAY-NRLM MoUs and LokOS Platform"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

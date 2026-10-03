@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Adi Karmayogi Abhiyan and National Conclave 2025"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-GOVERNANCE", "NOTE-POL-PANCHAYAT", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-PANCHAYAT", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Museum Grant Scheme Guidelines and Components"
-related_topic_ids: ["NOTE-SCH-CULTURE", "NOTE-GS-MUSEUM"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

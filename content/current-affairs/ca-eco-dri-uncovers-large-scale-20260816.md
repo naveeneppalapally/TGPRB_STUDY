@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-GENERAL"]
+related_topic_ids: ["NOTE-ECO-BUDGET"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

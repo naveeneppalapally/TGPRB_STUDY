@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Science and Space"
-related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-SCI-GENERAL"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

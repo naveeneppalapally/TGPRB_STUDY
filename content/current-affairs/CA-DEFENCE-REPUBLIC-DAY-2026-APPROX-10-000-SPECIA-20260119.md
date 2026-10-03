@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "77th Republic Day Parade Special Guests"
-related_topic_ids: ["NOTE-DEF-EVENTS", "NOTE-POL-CONST", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

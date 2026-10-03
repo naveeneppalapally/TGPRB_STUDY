@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_SPO_65TH_SUBROTO_CUP_INTERNAT_20260819"
 type: "current_affair"
 category: "sports"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Sports Results"
 related_topic_ids: ["NOTE-POL-MAKING-CONST"]
+keyword_topic_ids: ["NOTE-POL-MAKING-CONST"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

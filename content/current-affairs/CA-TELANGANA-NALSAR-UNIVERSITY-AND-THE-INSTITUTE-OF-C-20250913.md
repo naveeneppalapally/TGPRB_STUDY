@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Corp-Con 2025 National Conference"
-related_topic_ids: ["NOTE-ECO-CORPORATE", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

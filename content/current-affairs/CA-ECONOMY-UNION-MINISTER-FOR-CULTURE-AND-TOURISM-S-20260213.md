@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "60 Years of ITDC and 70 Years of The Ashok Hotel"
-related_topic_ids: ["NOTE-ECO-INFRA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

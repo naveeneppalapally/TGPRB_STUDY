@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "India's First International Ophthalmology Research Conference"
-related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-DEF-EVENTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

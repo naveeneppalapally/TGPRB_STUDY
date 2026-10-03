@@ -3,30 +3,34 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "prebuild": "npx tsx scripts/generate-ca-export.ts && npx tsx scripts/generate-ai-context.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
-    "generate:ai-context": "npx tsx scripts/generate-ai-context.ts",
-    "generate:ca-export": "npx tsx scripts/generate-ca-export.ts",
+    "prebuild": "node --import tsx scripts/generate-learning-data.ts && node --import tsx scripts/generate-ca-export.ts && node --import tsx scripts/ban-em-dash.ts && node --import tsx scripts/verify-constitution-size.ts && node --import tsx scripts/verify-topic-integrity.ts",
+    "generate:ca-export": "node --import tsx scripts/generate-ca-export.ts",
     "build": "nuxt build",
-    "predev": "npx tsx scripts/generate-ca-export.ts && npx tsx scripts/ban-em-dash.ts && npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts",
+    "predev": "node --import tsx scripts/generate-learning-data.ts && node --import tsx scripts/generate-ca-export.ts && node --import tsx scripts/ban-em-dash.ts && node --import tsx scripts/verify-constitution-size.ts && node --import tsx scripts/verify-topic-integrity.ts",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare && (git config core.hooksPath .githooks || true)",
-    "ingest": "npx tsx scripts/ingest.ts",
-    "tier": "npx tsx scripts/tier.ts",
-    "verify": "npx tsx scripts/verify-topics.ts",
-    "verify:constitution": "npx tsx scripts/verify-constitution-size.ts",
-    "verify:integrity": "npx tsx scripts/verify-topic-integrity.ts",
+    "ingest": "node --import tsx scripts/ingest.ts",
+    "tier": "node --import tsx scripts/tier.ts",
+    "verify": "node --import tsx scripts/verify-topics.ts",
+    "verify:constitution": "node --import tsx scripts/verify-constitution-size.ts",
+    "verify:integrity": "node --import tsx scripts/verify-topic-integrity.ts",
     "sync:ca-topics": "python3 scripts/pib_ca_pipeline/sync_ca_topics.py",
     "backfill:ca-ids": "python3 scripts/pib_ca_pipeline/backfill_ca_ids.py",
     "dedup:ca": "python3 scripts/pib_ca_pipeline/archive_duplicate_ca_cards.py",
-    "test:exam-strategy": "npx tsx scripts/test-exam-strategy.ts",
-    "test:offline-sync": "npx tsx scripts/test-offline-sync.ts",
-    "test:personal-notes": "npx tsx scripts/test-personal-notes-e2e.ts",
-    "test": "npx tsx scripts/verify-constitution-size.ts && npx tsx scripts/verify-topic-integrity.ts && npx tsx scripts/test-personal-notes-e2e.ts && npx tsx scripts/test-offline-sync.ts && npx tsx scripts/test-exam-strategy.ts"
+    "test:exam-strategy": "node --import tsx scripts/test-exam-strategy.ts",
+    "test:offline-sync": "node --import tsx scripts/test-offline-sync.ts",
+    "test:personal-notes": "node --import tsx scripts/test-personal-notes-e2e.ts",
+    "test": "node --import tsx scripts/verify-constitution-size.ts && node --import tsx scripts/verify-topic-integrity.ts && node --import tsx scripts/test-personal-notes-e2e.ts && node --import tsx scripts/test-offline-sync.ts && node --import tsx scripts/test-exam-strategy.ts && npm run test:audit",
+    "generate:learning-data": "node --import tsx scripts/generate-learning-data.ts",
+    "typecheck": "nuxt typecheck",
+    "test:audit": "node --import tsx scripts/test-audit-regressions.ts",
+    "test:ca": "python3 -m unittest scripts.pib_ca_pipeline.test_contract",
+    "test:browser": "node scripts/test-browser.mjs",
+    "pretest": "npm run prebuild"
   },
   "dependencies": {
-    "@google/genai": "^2.17.0",
     "@nuxt/content": "^3.0.0",
     "@nuxt/ui": "^2.22.3",
     "@nuxtjs/supabase": "^1.4.0",
@@ -35,21 +39,28 @@
     "gsap": "^3.12.0",
     "nuxt": "^3.16.0",
     "ts-fsrs": "^4.0.0",
-    "vue": "latest",
-    "vue-router": "latest"
+    "vue": "3.5.41",
+    "vue-router": "4.6.4"
   },
   "devDependencies": {
-    "@aws-sdk/client-s3": "^3.1106.0",
+    "@cloudflare/workers-types": "5.20261002.1",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@types/js-yaml": "^4.0.9",
     "cloudinary": "^2.10.0",
     "glob": "^13.0.6",
     "js-yaml": "^4.3.2",
+    "playwright": "1.63.0",
     "tsx": "^4.19.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "vue-tsc": "3.3.12",
+    "wrangler": "4.147.0"
   },
   "allowScripts": {
     "esbuild@0.28.1": true,
-    "better-sqlite3@12.11.1": true
+    "better-sqlite3@12.11.1": true,
+    "workerd@1.20261001.1": true
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Capital Goods Sector & National Capital Goods Policy"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-ECO-BUDGET"]
+related_topic_ids: ["NOTE-ECO-BUDGET"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

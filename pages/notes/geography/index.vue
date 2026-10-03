@@ -15,113 +15,14 @@
             Geography
           </h1>
           <p class="mt-1.5 text-[13px] t-lo">
-            38 verified PYQs across Constable and SI papers, 2015–2023.
+            {{ subjectSummary.pyqCount }} verified PYQs across Constable and SI papers, 2015–2023.
           </p>
         </div>
         <span class="chip chip-saffron chip-mono">Tier 1 subject</span>
       </div>
     </header>
 
-    <!-- ── Live topics ────────────────────────────────────────────────── -->
-    <section class="mb-8">
-      <p class="eyebrow mb-3">Live notes</p>
-      <div class="panel divide-y divide-[var(--line)]">
-        <NuxtLink
-          to="/notes/geography/drainage-system-of-india"
-          class="panel-hover group flex items-center gap-4 px-5 py-4"
-        >
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-            <UIcon name="i-heroicons-map" class="h-4 w-4 accent" />
-          </span>
-          <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Drainage System of India</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Rivers, tributaries, dams, doabs, waterfalls</p>
-          </div>
-          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">28 PYQs</span>
-          <UIcon
-            name="i-heroicons-arrow-right"
-            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-          />
-        </NuxtLink>
-
-        <NuxtLink
-          to="/notes/geography/irrigation-in-india"
-          class="panel-hover group flex items-center gap-4 px-5 py-4"
-        >
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-            <UIcon name="i-heroicons-sparkles" class="h-4 w-4 accent" />
-          </span>
-          <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Irrigation in India &amp; Telangana</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Wells, canals, tanks, KLIP, SRSP, Indira Gandhi canal, PMKSY</p>
-          </div>
-          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">29 PYQs</span>
-          <UIcon
-            name="i-heroicons-arrow-right"
-            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-          />
-        </NuxtLink>
-
-        <NuxtLink
-          to="/notes/geography/mountains-in-india"
-          class="panel-hover group flex items-center gap-4 px-5 py-4"
-        >
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-            <UIcon name="i-heroicons-globe-alt" class="h-4 w-4 accent" />
-          </span>
-          <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Mountains, Ranges &amp; Passes of India</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Himalayan ranges (KLZPS), Purvanchal, Ghats, Aravallis, Vindhyas, Passes &amp; Peaks</p>
-          </div>
-          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">34 PYQs</span>
-          <UIcon
-            name="i-heroicons-arrow-right"
-            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-          />
-        </NuxtLink>
-
-        <NuxtLink
-          to="/notes/geography/dams-in-india"
-          class="panel-hover group flex items-center gap-4 px-5 py-4"
-        >
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-            <UIcon name="i-heroicons-building-library" class="h-4 w-4 accent" />
-          </span>
-          <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Dams &amp; Multipurpose Projects of India</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Tehri, Bhakra Nangal, Hirakud, Sardar Sarovar, Nagarjuna Sagar, Idukki, DVC &amp; Polavaram</p>
-          </div>
-          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">22 PYQs</span>
-          <UIcon
-            name="i-heroicons-arrow-right"
-            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-          />
-        </NuxtLink>
-
-        <NuxtLink
-          to="/notes/geography/forests-in-india"
-          class="panel-hover group flex items-center gap-4 px-5 py-4"
-        >
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-            <UIcon name="i-heroicons-shield-check" class="h-4 w-4 accent" />
-          </span>
-          <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Forests, Natural Vegetation &amp; Protected Areas</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Champion-Seth types, ISFR rankings, Biosphere Reserves, National Parks, Kawal &amp; Amrabad</p>
-          </div>
-          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">38 PYQs</span>
-          <UIcon
-            name="i-heroicons-arrow-right"
-            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-          />
-        </NuxtLink>
-      </div>
-    </section>
+    <SubjectTopicCards subject="geography" mode="note" />
 
     <!-- ── Queued topics ──────────────────────────────────────────────── -->
     <section>
@@ -132,30 +33,31 @@
       <div class="panel divide-y divide-[var(--line)]">
         <div
           v-for="t in pending"
-          :key="t.name"
+          :key="t.id"
           class="flex items-center gap-4 px-5 py-3.5 opacity-70"
         >
           <UIcon name="i-heroicons-queue-list" class="h-4 w-4 shrink-0 t-lo" />
           <p class="flex-1 text-[13px] font-medium t-mid">{{ t.name }}</p>
-          <span class="chip chip-mono">{{ t.tier }}</span>
-          <span class="num font-mono text-[11px] t-lo">{{ t.pyqs }} PYQs</span>
+          <span class="chip chip-mono">T{{ t.tier }}</span>
+          <span class="num font-mono text-[11px] t-lo">{{ t.count }} PYQs</span>
         </div>
       </div>
       <p class="mt-3 text-[11.5px] t-lo">
-        Topics unlock as their PYQs are verified against the source papers.
+        Verified question groups awaiting authored notes. Counts come from the canonical dataset.
       </p>
     </section>
-  </div>
+
+    <SubjectTopicCards subject="geography" />
+</div>
 </template>
 
 <script setup lang="ts">
+import subjectStats from '~/data/subject_stats.json'
+import topicStats from '~/data/topic_stats.json'
+import topics from '~/data/topics_master.json'
 useHead({ title: 'Geography - BeatBook' })
 
-const pending = [
-  { name: 'Telangana Geography',        tier: 'T2', pyqs: '4' },
-  { name: 'Physical Features of India', tier: 'T2', pyqs: '4' },
-  { name: 'Climate of India',           tier: 'T2', pyqs: '3' },
-  { name: 'Indian Ports and Transport', tier: 'T2', pyqs: '3' },
-  { name: 'Soils of India',             tier: 'T3', pyqs: '2' },
-]
+const subjectSummary = subjectStats.find(row => row.slug === 'geography')!
+const deliveredIds = new Set(topicStats.delivered.filter(row => topics.some(topic => topic.id === row.id && topic.subjectSlug === 'geography')).flatMap(row => row.canonicalTopicIds))
+const pending = topicStats.canonical.filter(row => row.subjectId === 'GEO' && !deliveredIds.has(row.id)).sort((a, b) => b.count - a.count)
 </script>

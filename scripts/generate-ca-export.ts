@@ -21,6 +21,7 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { resolve, join } from 'node:path'
 import yaml from 'js-yaml'
+import { validateCACard } from '../utils/ca-contract'
 
 const ROOT = process.cwd()
 const CONTENT_DIR = resolve(ROOT, 'content/current-affairs')
@@ -62,22 +63,21 @@ function main(): void {
       skipped.push({ file, reason: 'frontmatter missing or not valid YAML' })
       continue
     }
-    const id = String(fm.id ?? file.replace(/\.md$/, ''))
+    const errors = validateCACard(fm)
+    if (errors.length) { skipped.push({ file, reason: errors.join(', ') }); continue }
+    const id = String(fm.id)
     cards.push({ id, meta: fm })
   }
 
+  if (skipped.length) throw new Error(skipped.map(s => `${s.file}: ${s.reason}`).join('\n'))
+  if (new Set(cards.map(c => c.id)).size !== cards.length) throw new Error('Duplicate CA IDs')
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true })
   const json = JSON.stringify(cards)
   writeFileSync(OUT_FILE, json, 'utf-8')
 
   const sizeMb = (json.length / 1024 / 1024).toFixed(2)
   console.log(`[ca-export] ${cards.length} cards -> content/data/ca/cards.json (${sizeMb} MB)`)
-  if (skipped.length > 0) {
-    // Loud but non-fatal: a single malformed card must never stop the site from
-    // deploying, but it must be visible in the build log.
-    console.warn(`[ca-export] WARNING: ${skipped.length} card(s) excluded from the feed:`)
-    for (const s of skipped) console.warn(`[ca-export]   - ${s.file}: ${s.reason}`)
-  }
+
 }
 
 main()

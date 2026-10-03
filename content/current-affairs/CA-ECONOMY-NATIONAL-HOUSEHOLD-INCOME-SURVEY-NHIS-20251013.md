@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "National Household Income Survey 2026"
-related_topic_ids: ["NOTE-ECO-SURVEY", "NOTE-ECO-NATIONAL-INCOME"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

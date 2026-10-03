@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "CSIR-CRRI Platinum Jubilee and Road Technologies"
 related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

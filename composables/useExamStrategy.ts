@@ -11,6 +11,7 @@ export type MockAnswerStatus = 'correct' | 'incorrect' | 'skipped'
 export type RiskProfile = 'overconfident' | 'risk_averse' | 'balanced' | 'insufficient_data'
 
 export const TSLPRB_EXAM_RULES = {
+  examYear: 2026,
   correctMark: 1,
   wrongPenalty: 0.2,
   optionCount: 4,

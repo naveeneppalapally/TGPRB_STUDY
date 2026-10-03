@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "Rs 500 Crore Corpus for Deep-Tech Under TDF Scheme"
-related_topic_ids: ["NOTE-DEF-SCHEMES", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

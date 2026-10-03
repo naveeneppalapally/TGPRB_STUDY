@@ -773,6 +773,7 @@
                   {{ q.selected === q.correct ? '✔ Correct' : '✖ Incorrect (Correct answer: ' + String.fromCharCode(65 + q.correct) + ')' }}
                 </p>
                 <p class="t-mid leading-relaxed">{{ q.explanation }}</p>
+                <p v-if="q.teaching_explanation" class="callout-body mt-2">Study commentary: {{ q.teaching_explanation }}</p>
               </div>
               <div v-else class="flex justify-end">
                 <button class="text-[11px] text-amber-600 dark:text-amber-400 font-medium hover:underline" @click="reveal(q)">
@@ -916,6 +917,7 @@
 </template>
 
 <script setup lang="ts">
+import { canonicalNotePyqs } from "~/utils/note-pyqs"
 import { computed, onMounted, onUnmounted, reactive, ref } from 'vue'
 import TableOfContents from '@/components/TableOfContents.vue'
 import CurrentAffairsStrip from '@/components/CurrentAffairsStrip.vue'
@@ -924,7 +926,6 @@ import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
 import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
 import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
-import { useAiPromptChips } from '@/composables/useAiPromptChips'
 import type { SectionContext } from '@/types/annotations'
 
 useHead({
@@ -937,7 +938,6 @@ useHead({
   ],
 })
 
-const aiQuickPrompts = useAiPromptChips('NOTE-POL-HIST-ACTS')
 
 const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
 const { loadNotes } = usePersonalNotes()
@@ -979,7 +979,7 @@ function handleScroll() {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
-  loadNotes('NOTE-POL-HIST-ACTS')
+  loadNotes()
 })
 
 onUnmounted(() => {
@@ -987,6 +987,7 @@ onUnmounted(() => {
 })
 
 interface Pyq {
+  teaching_explanation?: string
   uid: string
   exam: string
   year: string
@@ -1000,7 +1001,7 @@ interface Pyq {
   selected: number | null
 }
 
-const pyqs: Pyq[] = reactive([
+const pyqs: Pyq[] = reactive(canonicalNotePyqs([
   {
     uid: 'PYQ-3073',
     exam: 'SI',
@@ -1015,7 +1016,7 @@ const pyqs: Pyq[] = reactive([
       'Act of Good Government'
     ],
     correct: 0,
-    explanation: 'The Indian Councils Act 1909 is popularly named after Lord Morley (Secretary of State for India in London) and Lord Minto (Viceroy of India). It introduced separate electorates for Muslims.',
+    teaching_explanation: 'The Indian Councils Act 1909 is popularly named after Lord Morley (Secretary of State for India in London) and Lord Minto (Viceroy of India). It introduced separate electorates for Muslims.',
     revealed: false,
     selected: null
   },
@@ -1033,7 +1034,7 @@ const pyqs: Pyq[] = reactive([
       'It introduced Dyarchy in the Provinces.'
     ],
     correct: 0,
-    explanation: 'The GoI Act 1919 introduced Dyarchy in the provinces, a bicameral legislature at the Centre, and enlarged the provincial legislative councils. Universal franchise was NOT introduced; voting rights remained strictly limited by property, tax, and educational qualifications.',
+    teaching_explanation: 'The GoI Act 1919 introduced Dyarchy in the provinces, a bicameral legislature at the Centre, and enlarged the provincial legislative councils. Universal franchise was NOT introduced; voting rights remained strictly limited by property, tax, and educational qualifications.',
     revealed: false,
     selected: null
   },
@@ -1051,7 +1052,7 @@ const pyqs: Pyq[] = reactive([
       'ii & iv'
     ],
     correct: 0,
-    explanation: 'During the enactment of the Indian Councils Act of 1909, Lord Morley was the Secretary of State for India based in London, while Lord Minto was the Viceroy and Governor-General stationed in India.',
+    teaching_explanation: 'During the enactment of the Indian Councils Act of 1909, Lord Morley was the Secretary of State for India based in London, while Lord Minto was the Viceroy and Governor-General stationed in India.',
     revealed: false,
     selected: null
   },
@@ -1069,7 +1070,7 @@ const pyqs: Pyq[] = reactive([
       'Police'
     ],
     correct: 2,
-    explanation: 'Under provincial Dyarchy (GoI Act 1919), Local Self-Government was classified as a Transferred subject administered by ministers responsible to the Legislative Council. Land Revenue, Police, and Administration of Justice were Reserved subjects held by the Governor and his Executive Council.',
+    teaching_explanation: 'Under provincial Dyarchy (GoI Act 1919), Local Self-Government was classified as a Transferred subject administered by ministers responsible to the Legislative Council. Land Revenue, Police, and Administration of Justice were Reserved subjects held by the Governor and his Executive Council.',
     revealed: false,
     selected: null
   },
@@ -1087,7 +1088,7 @@ const pyqs: Pyq[] = reactive([
       'iii & iv'
     ],
     correct: 1,
-    explanation: 'Statement iv is false because the Indian Councils Act 1892 increased (not decreased) the functions of legislative councils by allowing members to discuss the budget and address questions to the executive. GoI Act 1919 extended separate electorates to Sikhs, and GoI Act 1935 extended communal representation to Indian Christians, Anglo-Indians, and Europeans.',
+    teaching_explanation: 'Statement iv is false because the Indian Councils Act 1892 increased (not decreased) the functions of legislative councils by allowing members to discuss the budget and address questions to the executive. GoI Act 1919 extended separate electorates to Sikhs, and GoI Act 1935 extended communal representation to Indian Christians, Anglo-Indians, and Europeans.',
     revealed: false,
     selected: null
   },
@@ -1105,7 +1106,7 @@ const pyqs: Pyq[] = reactive([
       'a & b'
     ],
     correct: 0,
-    explanation: 'Statement a is correct as Cabinet Mission Plan 1946 formulated the Assembly scheme. Statement d is correct as the Indian Independence Act was approved by the House of Commons on July 15, 1947 (received Royal Assent July 18, 1947). Statement b is false because the Preamble was amended in 1976 (42nd Amendment).',
+    teaching_explanation: 'Statement a is correct as Cabinet Mission Plan 1946 formulated the Assembly scheme. Statement d is correct as the Indian Independence Act was approved by the House of Commons on July 15, 1947 (received Royal Assent July 18, 1947). Statement b is false because the Preamble was amended in 1976 (42nd Amendment).',
     revealed: false,
     selected: null
   },
@@ -1123,7 +1124,7 @@ const pyqs: Pyq[] = reactive([
       'The entry of muslims into Indian Army banned temporarily.'
     ],
     correct: 3,
-    explanation: 'Following 1857, the British did not ban Muslims from the army. Instead, recruitment shifted toward martial races (Sikhs, Gurkhas, Pathans). Control transferred from EIC to the Crown via GoI Act 1858, and Indian Councils Act 1861 was enacted to associate Indians with governance.',
+    teaching_explanation: 'Following 1857, the British did not ban Muslims from the army. Instead, recruitment shifted toward martial races (Sikhs, Gurkhas, Pathans). Control transferred from EIC to the Crown via GoI Act 1858, and Indian Councils Act 1861 was enacted to associate Indians with governance.',
     revealed: false,
     selected: null
   },
@@ -1141,7 +1142,7 @@ const pyqs: Pyq[] = reactive([
       'Lord Harding II'
     ],
     correct: 0,
-    explanation: 'Lord Mountbatten served as the last British Viceroy of India from March 1947 to August 1947, executing partition under the Indian Independence Act 1947 and serving as first Governor-General of the Dominion of India until June 1948.',
+    teaching_explanation: 'Lord Mountbatten served as the last British Viceroy of India from March 1947 to August 1947, executing partition under the Indian Independence Act 1947 and serving as first Governor-General of the Dominion of India until June 1948.',
     revealed: false,
     selected: null
   },
@@ -1159,7 +1160,7 @@ const pyqs: Pyq[] = reactive([
       'Lord Dalhousie'
     ],
     correct: 1,
-    explanation: 'Lord Cornwallis is known as the Father of Civil Services in India. He organized and reformed the administration, separating commercial and judicial/revenue roles into the Covenanted Civil Service.',
+    teaching_explanation: 'Lord Cornwallis is known as the Father of Civil Services in India. He organized and reformed the administration, separating commercial and judicial/revenue roles into the Covenanted Civil Service.',
     revealed: false,
     selected: null
   },
@@ -1177,7 +1178,7 @@ const pyqs: Pyq[] = reactive([
       'In 1864 Hunter Committee was appointed to review the growth of Higher Education in India.'
     ],
     correct: 3,
-    explanation: 'The Hunter Education Commission was appointed in 1882 (not 1864) by Lord Ripon. The Charter Act 1813 explicitly allocated Rs 1,00,000 for promoting education and literature in India.',
+    teaching_explanation: 'The Hunter Education Commission was appointed in 1882 (not 1864) by Lord Ripon. The Charter Act 1813 explicitly allocated Rs 1,00,000 for promoting education and literature in India.',
     revealed: false,
     selected: null
   },
@@ -1195,7 +1196,7 @@ const pyqs: Pyq[] = reactive([
       '1929 and Dutch Government'
     ],
     correct: 1,
-    explanation: 'The Simon Commission (Indian Statutory Commission) was appointed in November 1927 by the British Government under Prime Minister Stanley Baldwin to examine the working of the Government of India Act 1919.',
+    teaching_explanation: 'The Simon Commission (Indian Statutory Commission) was appointed in November 1927 by the British Government under Prime Minister Stanley Baldwin to examine the working of the Government of India Act 1919.',
     revealed: false,
     selected: null
   },
@@ -1213,11 +1214,11 @@ const pyqs: Pyq[] = reactive([
       'G.S. Kaparde'
     ],
     correct: 1,
-    explanation: 'In protest against the passage of the repressive Rowlatt Act of 1919 in the Imperial Legislative Council, prominent non-official members resigned, including B.D. Sukul, Mohammad Ali Jinnah, and Madan Mohan Malaviya.',
+    teaching_explanation: 'In protest against the passage of the repressive Rowlatt Act of 1919 in the Imperial Legislative Council, prominent non-official members resigned, including B.D. Sukul, Mohammad Ali Jinnah, and Madan Mohan Malaviya.',
     revealed: false,
     selected: null
   }
-])
+]))
 
 const activeExamFilter = ref('all')
 

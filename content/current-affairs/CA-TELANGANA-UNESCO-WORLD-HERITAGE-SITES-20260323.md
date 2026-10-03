@@ -5,6 +5,7 @@ category: "telangana"
 exam_section: "Telangana"
 topic: "UNESCO World Heritage Sites in India"
 related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-TEL-CULTURE"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

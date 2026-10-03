@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_AWA_VICE_PRESIDENT_SHRI_C_P_20260906"
 type: "current_affair"
 category: "awards"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Awards and Honours"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

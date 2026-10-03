@@ -4,7 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "Economy"
 topic: "India-Iceland Bilateral Cooperation in Fisheries"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-DAMS", "NOTE-INT-BILATERAL"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-DAMS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

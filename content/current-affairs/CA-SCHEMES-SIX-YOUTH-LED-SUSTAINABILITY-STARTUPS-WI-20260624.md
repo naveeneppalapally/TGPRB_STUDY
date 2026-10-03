@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Telangana"
 topic: "8th Youth Co:Lab National Innovation Challenge 2026"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-TEL-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

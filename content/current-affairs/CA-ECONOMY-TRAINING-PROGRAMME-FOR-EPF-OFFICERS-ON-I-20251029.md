@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "PDUNASS EPFO Training on Investment and Risk Management"
-related_topic_ids: ["NOTE-ECO-EPFO", "NOTE-GOV-INSTITUTIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

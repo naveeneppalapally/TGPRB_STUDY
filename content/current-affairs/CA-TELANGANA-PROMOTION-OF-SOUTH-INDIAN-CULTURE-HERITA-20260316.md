@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "General Studies"
 topic: "South Zone Cultural Centre and Promotion of South Indian Arts"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-GS-ART"]
+related_topic_ids: ["NOTE-TEL-CULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

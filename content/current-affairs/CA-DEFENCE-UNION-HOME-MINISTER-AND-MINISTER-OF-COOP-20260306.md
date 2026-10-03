@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "57th Raising Day of CISF"
-related_topic_ids: ["NOTE-DEF-CAPF", "NOTE-POL-INTERNALSECURITY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

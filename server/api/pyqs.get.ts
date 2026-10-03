@@ -1,6 +1,5 @@
 import { defineEventHandler, getQuery } from 'h3'
-import fs from 'fs'
-import path from 'path'
+import master from '../../data/pyq_enriched_master.json'
 
 interface MasterPyq {
   uid: string
@@ -22,17 +21,8 @@ interface MasterPyq {
   options: string[]
 }
 
-let cachedPyqs: MasterPyq[] | null = null
-
 function loadMasterPyqs(): MasterPyq[] {
-  if (cachedPyqs) return cachedPyqs
-  const filePath = path.resolve(process.cwd(), 'data/pyq_enriched_master.json')
-  if (fs.existsSync(filePath)) {
-    const raw = fs.readFileSync(filePath, 'utf-8')
-    cachedPyqs = JSON.parse(raw)
-    return cachedPyqs!
-  }
-  return []
+  return master as MasterPyq[]
 }
 
 export default defineEventHandler((event) => {

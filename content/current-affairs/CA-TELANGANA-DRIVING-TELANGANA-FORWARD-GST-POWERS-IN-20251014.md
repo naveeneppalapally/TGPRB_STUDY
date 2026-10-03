@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "GST Impact on Telangana's Pharma and Food Processing Sectors"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-TAXATION", "NOTE-TEL-CULTURE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

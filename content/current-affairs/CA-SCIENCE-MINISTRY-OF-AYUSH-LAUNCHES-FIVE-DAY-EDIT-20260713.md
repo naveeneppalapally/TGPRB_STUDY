@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "WHO-ICHI Framework Workshop for Ayush Systems"
-related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

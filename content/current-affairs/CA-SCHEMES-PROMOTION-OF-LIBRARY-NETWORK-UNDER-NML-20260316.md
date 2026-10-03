@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "National Mission on Libraries (NML)"
-related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC", "NOTE-SCHEMES-CULTURE"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-HIST-ACTS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

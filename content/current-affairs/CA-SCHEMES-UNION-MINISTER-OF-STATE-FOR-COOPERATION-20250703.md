@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Bharat Organics Mela 2025"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-BANKING", "NOTE-ECO-COOP", "NOTE-GEO-AGRICULTURE"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-GEO-AGRICULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

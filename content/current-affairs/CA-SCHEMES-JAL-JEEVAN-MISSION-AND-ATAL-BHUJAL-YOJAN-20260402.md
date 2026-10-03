@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Jal Jeevan Mission and Atal Bhujal Yojana Progress"
-related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-SCHEMES", "NOTE-GEO-IRRIGATION", "NOTE-POL-JUDICIARY", "NOTE-SCHEMES-WATER", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-SCHEMES", "NOTE-GEO-IRRIGATION", "NOTE-POL-JUDICIARY", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

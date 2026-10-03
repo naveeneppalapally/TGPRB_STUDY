@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Skyroot Aerospace Vikram-1 Carbon Launch Vehicle"
-related_topic_ids: ["NOTE-SCI-SPACE", "NOTE-TEL-INDUSTRY"]
+related_topic_ids: ["NOTE-SCI-SPACE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

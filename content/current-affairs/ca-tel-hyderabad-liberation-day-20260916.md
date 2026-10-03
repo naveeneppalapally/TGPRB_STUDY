@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Telangana State"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-GENERAL", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

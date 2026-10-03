@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "PC&PNDT Act Implementation and SRS Sex Ratio at Birth 2021-23"
-related_topic_ids: ["NOTE-POL-ACTS", "NOTE-SOC-ISSUES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

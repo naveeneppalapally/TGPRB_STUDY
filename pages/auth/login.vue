@@ -46,10 +46,7 @@
         <div class="space-y-1.5 flex-1">
           <p class="font-medium">{{ errorMsg }}</p>
           <div v-if="isNetworkError" class="rounded-md bg-red-100/60 dark:bg-red-900/30 p-2 text-[11px] text-red-700 dark:text-red-300">
-            <p class="font-semibold mb-1">How to restore connection:</p>
-            <p>1. Open your <a href="https://supabase.com/dashboard/project/fqasvhrzzheziuirnwtc" target="_blank" rel="noopener" class="underline font-bold text-red-800 dark:text-red-200">Supabase Project Dashboard</a></p>
-            <p>2. Click <b>"Restore project"</b> to unpause the database</p>
-            <p>3. Wait ~1 minute for DNS activation and retry</p>
+            <p>Sign-in is temporarily unavailable. Please retry later. Your locally saved progress remains on this device.</p>
           </div>
         </div>
       </div>
@@ -62,7 +59,7 @@
       <!-- METHOD 1: MAGIC LINK / OTP -->
       <div v-if="method === 'magic_link'">
         <!-- Step 1: Request OTP -->
-        <form v-if="!otpSent" @submit.prevent="handleSendOtp" class="space-y-4">
+        <form method="post" v-if="!otpSent" @submit.prevent="handleSendOtp" class="space-y-4">
           <div>
             <label class="block text-xs font-semibold t-hi mb-1.5">Email address</label>
             <input
@@ -87,7 +84,7 @@
         </form>
 
         <!-- Step 2: Verify OTP code -->
-        <form v-else @submit.prevent="handleVerifyOtp" class="space-y-4">
+        <form method="post" v-else @submit.prevent="handleVerifyOtp" class="space-y-4">
           <div>
             <label class="block text-xs font-semibold t-hi mb-1.5">Enter 6-digit code or check email link</label>
             <input
@@ -134,7 +131,7 @@
 
       <!-- METHOD 2: PASSWORD (LOGIN OR SIGNUP) -->
       <div v-else>
-        <form @submit.prevent="handlePasswordAuth" class="space-y-4">
+        <form method="post" @submit.prevent="handlePasswordAuth" class="space-y-4">
           <div v-if="authMode === 'signup'">
             <label class="block text-xs font-semibold t-hi mb-1.5">Your Name</label>
             <input

@@ -1,13 +1,11 @@
 ---
 id: "CA-GEO-RIVERS-INTERLINKING-STATUS-20260810"
 type: "current_affair"
-category: "geography"
-exam_section: "Indian & World Geography"
+category: "environment"
+exam_section: "Geography"
 topic: "Interlinking of Rivers - National Perspective Plan"
-related_topic_ids:
-  - "NOTE-GEO-IRRIGATION"
-  - "NOTE-GEO-DAMS"
-  - "NOTE-GEO-DRAINAGE"
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

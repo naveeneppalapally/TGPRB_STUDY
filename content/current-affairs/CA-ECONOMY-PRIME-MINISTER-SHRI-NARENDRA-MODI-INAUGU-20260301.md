@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Infrastructure Projects in Madurai and Proposed Bullet Train Corridors"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-INFRA", "NOTE-POL-UNION-EXEC", "NOTE-TEL-INFRA"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

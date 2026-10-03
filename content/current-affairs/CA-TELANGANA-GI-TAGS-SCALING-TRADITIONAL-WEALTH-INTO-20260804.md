@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Geographical Indication Tags and Pochampalli Ikat"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-ECO-INTELLECTUAL-PROPERTY"]
+related_topic_ids: ["NOTE-TEL-CULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

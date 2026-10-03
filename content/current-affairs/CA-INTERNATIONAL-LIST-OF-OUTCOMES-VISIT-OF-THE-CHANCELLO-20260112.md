@@ -4,7 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "India-Germany Bilateral Agreements 2026"
-related_topic_ids: ["NOTE-INT-BILATERAL", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

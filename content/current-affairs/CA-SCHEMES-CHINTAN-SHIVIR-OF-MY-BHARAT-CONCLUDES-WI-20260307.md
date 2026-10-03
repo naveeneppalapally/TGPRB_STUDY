@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "MY Bharat-NSS Chintan Shivir 2026"
-related_topic_ids: ["NOTE-SCH-YOUTH", "NOTE-GS-EVENTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

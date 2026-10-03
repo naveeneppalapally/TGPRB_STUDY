@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Ayush Visa and Medical Value Travel Initiatives"
-related_topic_ids: ["NOTE-SCHEMES-HEALTH", "NOTE-GS-AYUSH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

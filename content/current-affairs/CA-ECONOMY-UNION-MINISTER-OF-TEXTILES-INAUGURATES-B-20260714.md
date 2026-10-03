@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Bharat Tex 2026 Inauguration"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-TEL-ECONOMY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

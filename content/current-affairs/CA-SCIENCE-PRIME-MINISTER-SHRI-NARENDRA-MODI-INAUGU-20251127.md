@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "Skyroot Infinity Campus Hyderabad"
 related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

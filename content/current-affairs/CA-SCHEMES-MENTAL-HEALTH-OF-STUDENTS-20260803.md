@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "MANODARPAN Initiative for Mental Health"
-related_topic_ids: ["NOTE-SCH-MANODARPAN", "NOTE-EDU-NEP2020"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

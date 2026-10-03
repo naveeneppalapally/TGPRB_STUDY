@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "XV Finance Commission Grants to Telangana Rural Local Bodies"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-POL-PANCHAYAT", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

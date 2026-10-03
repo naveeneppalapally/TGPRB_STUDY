@@ -48,7 +48,7 @@ The gate tests whether a student understood the note page before unlocking atomi
 
 Rules:
 - Questions must test high-yield exam facts (dates, committee names, acts, leaders, locations).
-- NO EM-DASHES (—). Use hyphens (-) or colons (:).
+- NO EM-DASHES (-). Use hyphens (-) or colons (:).
 - correct_answer index (0-3) must be the exact correct option.
 """
 

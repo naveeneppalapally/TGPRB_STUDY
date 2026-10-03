@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_BOO_RSS_S_CENTURY_OF_SERVICE_20260915"
 type: "current_affair"
 category: "books"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Books and Literary Events"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

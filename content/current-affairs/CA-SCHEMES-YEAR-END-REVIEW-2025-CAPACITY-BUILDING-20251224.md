@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "Mission Karmayogi and Capacity Building Commission Initiatives"
-related_topic_ids: ["NOTE-POL-GOVERNANCE", "NOTE-POL-COMMISSIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "UPSC Real-Time Face Authentication System"
-related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-POL-UPSC", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

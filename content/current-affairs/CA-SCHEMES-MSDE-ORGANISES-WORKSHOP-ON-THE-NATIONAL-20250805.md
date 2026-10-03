@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Economy"
 topic: "National Scheme for ITI Upgradation"
 related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

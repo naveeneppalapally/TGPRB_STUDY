@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Economy"
 topic: "CRCS-Sahara Refund Portal and Disbursement Mechanism"
 related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-JUDICIARY"]
+keyword_topic_ids: ["NOTE-ECO-BANKING", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

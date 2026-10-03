@@ -4,8 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids:
-  - "NOTE-ECO-GENERAL"
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
@@ -22,31 +22,29 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23031
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2303172&reg=3&lang=1"
 event_key: "RRB-FINANCIAL-PERFORMANCE-2026"
 mcqs:
-  - exam_fact: "The net profit of Regional Rural Banks increased to an all-time high of ₹10,176 crore in FY 2025-26."
-    question: "What was the net profit recorded by Regional Rural Banks (RRBs) in the Financial Year 2025-26?"
-    options:
-      - "₹6,820 crore"
-      - "₹10,176 crore"
-      - "₹13.5 lakh crore"
-      - "₹7,540 crore"
-    answer: 1
-    explanation: "The net profit of RRBs increased to an all-time high of ₹10,176 crore in FY 2025-26, compared to a consolidated net profit of ₹6,820 crore in FY 2024-25."
-  - exam_fact: "The total business of all 28 Regional Rural Banks crossed ₹13.5 lakh crore in the Financial Year 2025-26."
-    question: "The total business of all 28 Regional Rural Banks crossed what amount in the Financial Year 2025-26?"
-    options:
-      - "₹13.5 lakh crore"
-      - "₹10.17 lakh crore"
-      - "₹8.5 lakh crore"
-      - "₹15.2 lakh crore"
-    answer: 0
-    explanation: "The total business of all 28 RRBs has crossed ₹13.5 lakh crore, surpassing the business level of a few individual Public Sector Banks (PSBs) in the Financial Year 2025-26."
-  - exam_fact: "Both Gross Non-Performing Assets (GNPA) and Net Non-Performing Assets of RRBs reached all-time lows of 5.3% and 2.1% respectively in FY 2025-26."
-    question: "What was the Gross Non-Performing Assets (GNPA) percentage of Regional Rural Banks in FY 2025-26?"
-    options:
-      - "2.1%"
-      - "7.5%"
-      - "5.3%"
-      - "10.2%"
-    answer: 2
-    explanation: "Both Gross Non-Performing Assets (GNPA) and Net Non-Performing Assets have reached all-time lows of 5.3% and 2.1%, respectively."
+- exam_fact: The net profit of Regional Rural Banks increased to an all-time high
+    of ₹10,176 crore in FY 2025-26.
+  question: What was the net profit recorded by Regional Rural Banks (RRBs) in the
+    Financial Year 2025-26?
+  options:
+  - ₹6,820 crore
+  - ₹10,176 crore
+  - ₹13.5 lakh crore
+  - ₹7,540 crore
+  answer: 1
+  explanation: The net profit of RRBs increased to an all-time high of ₹10,176 crore
+    in FY 2025-26, compared to a consolidated net profit of ₹6,820 crore in FY 2024-25.
+- exam_fact: The total business of all 28 Regional Rural Banks crossed ₹13.5 lakh
+    crore in the Financial Year 2025-26.
+  question: The total business of all 28 Regional Rural Banks crossed what amount
+    in the Financial Year 2025-26?
+  options:
+  - ₹13.5 lakh crore
+  - ₹10.17 lakh crore
+  - ₹8.5 lakh crore
+  - ₹15.2 lakh crore
+  answer: 0
+  explanation: The total business of all 28 RRBs has crossed ₹13.5 lakh crore, surpassing
+    the business level of a few individual Public Sector Banks (PSBs) in the Financial
+    Year 2025-26.
 ---

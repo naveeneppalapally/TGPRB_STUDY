@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_AWA_PRIME_MINISTER_CONGRATULA_20260916"
 type: "current_affair"
 category: "awards"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Awards and Honours"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

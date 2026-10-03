@@ -5,6 +5,7 @@ category: "telangana"
 exam_section: "Telangana"
 topic: "Dam Safety Inspection 2025 and Medigadda Barrage"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

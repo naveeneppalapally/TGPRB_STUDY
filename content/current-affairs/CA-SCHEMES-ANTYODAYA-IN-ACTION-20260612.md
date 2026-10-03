@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "PM JANMAN Scheme for PVTG Communities"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-WELFARE", "NOTE-SCH-PVTG"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

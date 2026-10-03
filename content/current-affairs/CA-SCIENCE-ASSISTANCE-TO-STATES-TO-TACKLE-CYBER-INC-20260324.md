@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "CERT-In Cyber Security Initiatives and Cyber Bharat Setu"
-related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-SCI-CYBER", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "telangana"
 exam_section: "Telangana"
 topic: "National Young Chef Competition South Zone Round"
 related_topic_ids: ["NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Museum Grant Scheme and Central Museums"
-related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-GS-ART-CULTURE"]
+related_topic_ids: ["NOTE-TEL-CULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "International Yoga Day 2025 Highlights and Telangana Divyang Yoga Camp"
-related_topic_ids: ["NOTE-GS-MISC", "NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

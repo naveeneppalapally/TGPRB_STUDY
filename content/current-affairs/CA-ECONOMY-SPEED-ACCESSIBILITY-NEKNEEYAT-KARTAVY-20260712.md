@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "General Studies"
 topic: "CPWD 172nd Annual Day"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-GS-BOOKS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

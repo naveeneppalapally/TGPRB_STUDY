@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "32nd Foundation Day of National Human Rights Commission"
 related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-POL-RIGHTS", "NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

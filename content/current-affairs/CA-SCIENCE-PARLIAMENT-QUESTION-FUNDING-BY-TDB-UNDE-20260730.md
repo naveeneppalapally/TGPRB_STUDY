@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Technology Development Board RDI Scheme"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,7 @@ import { createSupabaseOfflineSyncAdapter, useOfflineSync } from '@/composables/
 import type { ContentImprovementItem, ImprovementItemType, SectionContext } from '@/types/annotations'
 
 export function useImprovementQueue() {
-  const supabase = useSupabaseClient()
+  const supabase = useSupabaseClient<any>()
   const user = useSupabaseUser()
   const offlineSync = useOfflineSync({
     getUserId: () => user.value?.id,
@@ -26,9 +26,9 @@ export function useImprovementQueue() {
     }
   }
 
-  function _lsSet(data: ContentImprovementItem[]): void {
+  function _lsSet(data: ContentImprovementItem[], key = lsKey.value): void {
     if (!import.meta.client) return
-    localStorage.setItem(lsKey.value, JSON.stringify(data))
+    localStorage.setItem(key, JSON.stringify(data))
   }
 
   function submitImprovement(
@@ -75,10 +75,10 @@ export function useImprovementQueue() {
     isLoading.value = true
     
     // 1. Read from localStorage for immediate UI
+    const owner = user.value?.id || 'guest'
+    const capturedKey = lsKey.value
     const local = _lsGet()
-    if (local.length > 0) {
-      submissions.value = local
-    }
+    submissions.value = local
     
     // 2. Hydrate from cloud if logged in
     if (user.value) {
@@ -88,6 +88,7 @@ export function useImprovementQueue() {
           .select('*')
           .eq('user_id', user.value.id)
           
+        if ((user.value?.id || 'guest') !== owner) return
         if (!error && cloudSubmissions) {
           // Merge local and cloud. Since this is an append-only creation queue,
           // we can union by ID. The cloud version takes precedence because it
@@ -103,7 +104,7 @@ export function useImprovementQueue() {
           }
           
           submissions.value = Array.from(merged.values())
-          _lsSet(submissions.value)
+          _lsSet(submissions.value, capturedKey)
         }
       } catch (e) {
         console.error('Failed to load improvements from cloud', e)

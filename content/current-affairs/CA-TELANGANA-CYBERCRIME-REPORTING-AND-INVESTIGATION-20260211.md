@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "National Cyber Forensic Laboratory Evidentiary at CFSL Hyderabad"
-related_topic_ids: ["NOTE-TEL-POLICE", "NOTE-POL-SCHEMES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

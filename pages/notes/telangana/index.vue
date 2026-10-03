@@ -15,37 +15,14 @@
             Telangana History, Movement &amp; Culture
           </h1>
           <p class="mt-1.5 text-[13px] t-lo">
-            367 verified PYQs across Constable and SI papers, 2015-2023.
+            {{ subjectSummary.pyqCount }} verified PYQs across Constable and SI papers, 2015-2023.
           </p>
         </div>
         <span class="chip chip-saffron chip-mono">Tier 1 subject</span>
       </div>
     </header>
 
-    <!-- ── Live topics ────────────────────────────────────────────────── -->
-    <section class="mb-8">
-      <p class="eyebrow mb-3">Live notes</p>
-      <div class="panel divide-y divide-[var(--line)]">
-        <NuxtLink
-          to="/notes/telangana/telangana-statehood-movement"
-          class="panel-hover group flex items-center gap-4 px-5 py-4"
-        >
-          <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-accent-soft">
-            <UIcon name="i-heroicons-flag" class="h-4 w-4 accent" />
-          </span>
-          <div class="min-w-0 flex-1">
-            <p class="text-[14px] font-semibold t-hi">Telangana Statehood Movement &amp; Chronology</p>
-            <p class="mt-0.5 text-[11.5px] t-lo">Gentlemen's Agreement, 1969 Agitation, Six Point Formula, Committees (Girglani, Sri Krishna) &amp; AP Reorganisation Act 2014</p>
-          </div>
-          <span class="chip chip-saffron chip-mono hidden sm:inline-flex">T1</span>
-          <span class="num font-mono text-[11px] t-lo">26 PYQs</span>
-          <UIcon
-            name="i-heroicons-arrow-right"
-            class="h-4 w-4 shrink-0 t-lo transition-transform duration-150 group-hover:translate-x-1 group-hover:accent"
-          />
-        </NuxtLink>
-      </div>
-    </section>
+    <SubjectTopicCards subject="telangana" mode="note" />
 
     <!-- ── Queued topics ──────────────────────────────────────────────── -->
     <section>
@@ -56,29 +33,31 @@
       <div class="panel divide-y divide-[var(--line)]">
         <div
           v-for="t in pending"
-          :key="t.name"
+          :key="t.id"
           class="flex items-center gap-4 px-5 py-3.5 opacity-70"
         >
           <UIcon name="i-heroicons-queue-list" class="h-4 w-4 shrink-0 t-lo" />
           <p class="flex-1 text-[13px] font-medium t-mid">{{ t.name }}</p>
-          <span class="chip chip-mono">{{ t.tier }}</span>
-          <span class="num font-mono text-[11px] t-lo">{{ t.pyqs }} PYQs</span>
+          <span class="chip chip-mono">T{{ t.tier }}</span>
+          <span class="num font-mono text-[11px] t-lo">{{ t.count }} PYQs</span>
         </div>
       </div>
       <p class="mt-3 text-[11.5px] t-lo">
-        Topics unlock as their PYQs are verified against the source papers.
+        Verified question groups awaiting authored notes. Counts come from the canonical dataset.
       </p>
     </section>
-  </div>
+
+    <SubjectTopicCards subject="telangana" />
+</div>
 </template>
 
 <script setup lang="ts">
+import subjectStats from '~/data/subject_stats.json'
+import topicStats from '~/data/topic_stats.json'
+import topics from '~/data/topics_master.json'
 useHead({ title: 'Telangana - BeatBook' })
 
-const pending = [
-  { name: 'Telangana History & Dynasties (Satavahanas, Kakatiyas, Qutb Shahis, Asaf Jahis)', tier: 'T1', pyqs: '150' },
-  { name: 'Telangana Armed Struggle & Hyderabad State Integration (1946-1951)', tier: 'T1', pyqs: '143' },
-  { name: 'Telangana Geography, Economy & Welfare Schemes (Rythu Bandhu, Dalit Bandhu, Kaleshwaram)', tier: 'T1', pyqs: '40' },
-  { name: 'Telangana Festivals, Art & Culture (Bathukamma, Bonalu, Medaram Jatara)', tier: 'T2', pyqs: '8' },
-]
+const subjectSummary = subjectStats.find(row => row.slug === 'telangana')!
+const deliveredIds = new Set(topicStats.delivered.filter(row => topics.some(topic => topic.id === row.id && topic.subjectSlug === 'telangana')).flatMap(row => row.canonicalTopicIds))
+const pending = topicStats.canonical.filter(row => row.subjectId === 'TEL' && !deliveredIds.has(row.id)).sort((a, b) => b.count - a.count)
 </script>

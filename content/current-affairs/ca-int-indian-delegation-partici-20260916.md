@@ -5,6 +5,7 @@ category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
 related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS", "NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

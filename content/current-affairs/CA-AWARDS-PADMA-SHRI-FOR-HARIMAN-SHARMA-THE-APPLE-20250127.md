@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "Science & Technology"
 topic: "Padma Shri Award for HRMN-99 Apple Variety Innovation"
-related_topic_ids: ["NOTE-SCI-AGRI", "NOTE-AWD-PADMA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

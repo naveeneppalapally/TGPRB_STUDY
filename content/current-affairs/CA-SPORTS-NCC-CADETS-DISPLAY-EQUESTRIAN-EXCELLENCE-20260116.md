@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "Telangana"
 topic: "NCC RDC 2026 Equestrian Awards"
-related_topic_ids: ["NOTE-TEL-SPORTS", "NOTE-DEF-NCC"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
 related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

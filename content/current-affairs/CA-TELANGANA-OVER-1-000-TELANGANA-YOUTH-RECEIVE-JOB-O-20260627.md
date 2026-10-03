@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Kaushal Mahotsav Warangal 2026"
-related_topic_ids: ["NOTE-ECON-SKILL", "NOTE-TEL-CULTURE", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-TEL-CULTURE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

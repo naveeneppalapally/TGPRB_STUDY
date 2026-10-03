@@ -1,12 +1,11 @@
-import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs'
-import { resolve } from 'node:path'
+import topics from './data/topics_master.json'
+import { contentRoutes } from './utils/topic-delivery'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 // CF_PAGES=1 is auto-injected by Cloudflare's build environment.
 // Local dev keeps node-server; production builds use cloudflare-pages.
 const isCFBuild = !!process.env.CF_PAGES
-let cachedManifest: unknown = null
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -83,6 +82,9 @@ export default defineNuxtConfig({
   nitro: {
     // Switch preset based on build environment
     preset: isCFBuild ? 'cloudflare-pages' : 'node-server',
+    // The prerenderer uses a Node preset. Bind its public directory to this
+    // build too, so an earlier Node build cannot shadow the Cloudflare HTML.
+    output: { publicDir: isCFBuild ? 'dist' : '.output/public' },
 
     // cloudflare-pages preset needs nodejs_compat flag set in wrangler.toml.
     // Here we make sure iconify JSON is inlined regardless of preset.
@@ -93,27 +95,7 @@ export default defineNuxtConfig({
     // Pre-render active notes and subject hubs statically.
     // Explicit routes array avoids slow recursive crawling and V8 heap limits.
     prerender: {
-      routes: [
-        '/',
-        '/notes/polity',
-        '/notes/polity/historical-background-1773-1947',
-        '/notes/polity/making-of-the-constitution',
-        '/notes/geography',
-        '/notes/geography/drainage-system-of-india',
-        '/notes/geography/dams-in-india',
-        '/notes/geography/mountains-in-india',
-        '/notes/geography/forests-in-india',
-        '/notes/geography/irrigation-in-india',
-        '/notes/telangana',
-        '/notes/telangana/telangana-statehood-movement',
-        '/pyq-archive',
-        '/study/parliament',
-        '/api/study/parliament',
-        '/study/historical-background-1773-1947',
-        '/api/study/historical-background-1773-1947',
-        '/study/making-of-the-constitution',
-        '/api/study/making-of-the-constitution',
-      ],
+      routes: contentRoutes(topics),
       crawlLinks: false,
     },
   },
@@ -154,8 +136,6 @@ export default defineNuxtConfig({
     public: {
       supabaseUrl: process.env.SUPABASE_URL || '',
       supabaseAnonKey: process.env.SUPABASE_ANON_KEY || '',
-      // R2 public base URL - used by useMedia() composable to resolve r2:// paths
-      r2PublicUrl: process.env.R2_PUBLIC_URL || '',
     },
   },
 
@@ -189,67 +169,11 @@ export default defineNuxtConfig({
       include: ['ts-fsrs'],
     },
     build: {
-      manifest: 'manifest.json',
       rollupOptions: {
         output: {
-          manualChunks: {
-            supabase: ['@supabase/supabase-js'],
-          },
+          manualChunks: (id) => id.includes('/@supabase/') ? 'supabase' : undefined,
         },
       },
-    },
-  },
-
-  hooks: {
-    'build:manifest': (manifest) => {
-      cachedManifest = manifest
-      try {
-        const clientDist = resolve('.nuxt/dist/client')
-        if (!existsSync(clientDist)) {
-          mkdirSync(clientDist, { recursive: true })
-        }
-        writeFileSync(resolve(clientDist, 'manifest.json'), JSON.stringify(manifest, null, 2), 'utf-8')
-      } catch {
-        // Safe fallback if client directory not yet available
-      }
-    },
-    'vite:compiled': () => {
-      try {
-        const clientDist = resolve('.nuxt/dist/client')
-        const manifestPath = resolve(clientDist, 'manifest.json')
-        const dotViteManifest = resolve(clientDist, '.vite/manifest.json')
-        if (!existsSync(clientDist)) {
-          mkdirSync(clientDist, { recursive: true })
-        }
-        if (!existsSync(manifestPath)) {
-          if (existsSync(dotViteManifest)) {
-            copyFileSync(dotViteManifest, manifestPath)
-          } else if (cachedManifest) {
-            writeFileSync(manifestPath, JSON.stringify(cachedManifest, null, 2), 'utf-8')
-          }
-        }
-      } catch {
-        // Safe fallback
-      }
-    },
-    'nitro:build:before': () => {
-      try {
-        const clientDist = resolve('.nuxt/dist/client')
-        const manifestPath = resolve(clientDist, 'manifest.json')
-        const dotViteManifest = resolve(clientDist, '.vite/manifest.json')
-        if (!existsSync(clientDist)) {
-          mkdirSync(clientDist, { recursive: true })
-        }
-        if (!existsSync(manifestPath)) {
-          if (existsSync(dotViteManifest)) {
-            copyFileSync(dotViteManifest, manifestPath)
-          } else if (cachedManifest) {
-            writeFileSync(manifestPath, JSON.stringify(cachedManifest, null, 2), 'utf-8')
-          }
-        }
-      } catch {
-        // Safe fallback
-      }
     },
   },
 

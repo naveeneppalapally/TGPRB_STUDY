@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "Telangana"
 topic: "Chintan Shivir on Olympics 2028 and 2036 Bid"
-related_topic_ids: ["NOTE-SPO-OLYMPICS", "NOTE-TEL-EVENTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

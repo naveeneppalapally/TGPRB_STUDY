@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "Raksha Mantri Padak 2025 Awardees"
-related_topic_ids: ["NOTE-DEF-NCC", "NOTE-AWD-DEFENCE"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

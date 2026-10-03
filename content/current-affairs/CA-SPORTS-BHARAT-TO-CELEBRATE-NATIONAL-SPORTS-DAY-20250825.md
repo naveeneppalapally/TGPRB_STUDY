@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "National Sports Day 2025 Theme and Significance"
-related_topic_ids: ["NOTE-SPO-EVENTS", "NOTE-SPO-AWARDS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

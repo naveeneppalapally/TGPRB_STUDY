@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Dharti Aaba Janjatiya Gram Utkarsh Abhiyan"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-WELFARE"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

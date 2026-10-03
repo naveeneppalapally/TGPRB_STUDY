@@ -5,6 +5,7 @@ category: "appointments"
 exam_section: "Polity"
 topic: "Appointments and Office-Holders"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

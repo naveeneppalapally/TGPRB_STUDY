@@ -4,8 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "Geography"
 topic: "Mountains, Ranges & Passes of India"
-related_topic_ids:
-  - "NOTE-GEO-MOUNTAINS"
+related_topic_ids: ["NOTE-GEO-MOUNTAINS"]
+keyword_topic_ids: ["NOTE-GEO-MOUNTAINS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

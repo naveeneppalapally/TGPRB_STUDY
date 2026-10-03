@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "ICAR and Dr. Reddy's Foundation MoU on Agricultural Skills"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

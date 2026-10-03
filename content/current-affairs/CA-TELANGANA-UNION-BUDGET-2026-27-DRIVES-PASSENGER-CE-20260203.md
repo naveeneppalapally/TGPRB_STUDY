@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "High-Speed Rail Network and Railway Allocations in Union Budget 2026-27"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-ECO-INFRA", "NOTE-TEL-INFRA"]
+related_topic_ids: ["NOTE-ECO-BUDGET"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

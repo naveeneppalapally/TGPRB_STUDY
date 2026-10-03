@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Economy"
 topic: "Pharmaceutical and Medical Devices Promotion and Development Scheme"
 related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -7,7 +7,7 @@
       <div class="flex flex-wrap items-start justify-between gap-3">
         <div>
           <p class="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">
-            20% negative marking
+            {{ TSLPRB_EXAM_RULES.wrongPenalty / TSLPRB_EXAM_RULES.correctMark * 100 }}% negative marking
           </p>
           <h2 class="mt-1 text-lg font-semibold tracking-tight text-white">
             {{ title }}
@@ -16,7 +16,7 @@
             Use mock evidence to separate calculated expected value from confidence under time pressure.
           </p>
         </div>
-        <UBadge color="primary" variant="soft" size="sm" label="+1 / -0.20 / skip 0" />
+        <UBadge color="primary" variant="soft" size="sm" :label="`+${TSLPRB_EXAM_RULES.correctMark} / -${TSLPRB_EXAM_RULES.wrongPenalty.toFixed(2)} / skip 0`" />
       </div>
     </template>
 
@@ -60,14 +60,14 @@
               id="strategy-confidence"
               v-model="subjectiveConfidence"
               class="mt-4"
-              color="saffron"
+              color="primary"
               :min="0"
               :max="1"
               :step="0.01"
             />
             <div class="mt-3 flex items-center justify-between gap-3">
               <span class="text-[11px] text-[var(--ink-card-muted)]">Use declared confidence for this scenario</span>
-              <UToggle v-model="useDeclaredConfidence" color="saffron" size="sm" />
+              <UToggle v-model="useDeclaredConfidence" color="primary" size="sm" />
             </div>
           </div>
 
@@ -214,6 +214,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import {
+  TSLPRB_EXAM_RULES,
   calculateAttemptEV,
   simulateMockScore,
   type EliminationCount,

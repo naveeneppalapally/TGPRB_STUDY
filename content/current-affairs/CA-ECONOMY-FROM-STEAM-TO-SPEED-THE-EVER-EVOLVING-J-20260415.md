@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "General Studies"
 topic: "History and Technical Specifications of Indian Railways"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-HIS-MODERN"]
+related_topic_ids: ["NOTE-HIS-MODERN"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

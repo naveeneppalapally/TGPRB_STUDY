@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "ISRO Space Applications Centre Overview and Key Projects"
 related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

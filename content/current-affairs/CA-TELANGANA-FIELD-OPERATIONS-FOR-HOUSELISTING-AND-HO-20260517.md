@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "General Studies"
 topic: "Census 2027 Houselisting and Housing Census Operations"
-related_topic_ids: ["NOTE-POL-CENSUS", "NOTE-TEL-DEMOGRAPHICS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

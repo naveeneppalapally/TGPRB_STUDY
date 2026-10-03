@@ -5,6 +5,7 @@ category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

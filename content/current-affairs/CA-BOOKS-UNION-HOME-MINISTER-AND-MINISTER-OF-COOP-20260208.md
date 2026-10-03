@@ -4,7 +4,8 @@ type: "current_affair"
 category: "books"
 exam_section: "General Studies"
 topic: "Book Release: Chhattisgarh @ 25: Shifting the Lens"
-related_topic_ids: ["NOTE-POL-STATES", "NOTE-TEL-POLITY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

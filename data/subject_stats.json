@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ARI",
+    "name": "Arithmetic",
+    "slug": "arithmetic",
+    "icon": "i-heroicons-calculator",
+    "pyqCount": 676,
+    "noteCount": 0,
+    "weight": "21.6%"
+  },
+  {
+    "id": "REA",
+    "name": "Reasoning",
+    "slug": "reasoning",
+    "icon": "i-heroicons-puzzle-piece",
+    "pyqCount": 585,
+    "noteCount": 0,
+    "weight": "18.7%"
+  },
+  {
+    "id": "TEL",
+    "name": "Telangana State",
+    "slug": "telangana",
+    "icon": "i-heroicons-map-pin",
+    "pyqCount": 367,
+    "noteCount": 1,
+    "weight": "11.7%",
+    "to": "/notes/telangana"
+  },
+  {
+    "id": "HIS",
+    "name": "History of India",
+    "slug": "history",
+    "icon": "i-heroicons-clock",
+    "pyqCount": 329,
+    "noteCount": 0,
+    "weight": "10.5%"
+  },
+  {
+    "id": "GEO",
+    "name": "Geography",
+    "slug": "geography",
+    "icon": "i-heroicons-map",
+    "pyqCount": 326,
+    "noteCount": 5,
+    "weight": "10.4%",
+    "to": "/notes/geography"
+  },
+  {
+    "id": "SCI",
+    "name": "General Science",
+    "slug": "science",
+    "icon": "i-heroicons-beaker",
+    "pyqCount": 306,
+    "noteCount": 0,
+    "weight": "9.8%"
+  },
+  {
+    "id": "POL",
+    "name": "Indian Polity",
+    "slug": "polity",
+    "icon": "i-heroicons-building-library",
+    "pyqCount": 203,
+    "noteCount": 2,
+    "weight": "6.5%",
+    "to": "/notes/polity"
+  },
+  {
+    "id": "ECO",
+    "name": "Indian Economy",
+    "slug": "economy",
+    "icon": "i-heroicons-banknotes",
+    "pyqCount": 184,
+    "noteCount": 0,
+    "weight": "5.9%"
+  },
+  {
+    "id": "ENG",
+    "name": "General English",
+    "slug": "english",
+    "icon": "i-heroicons-language",
+    "pyqCount": 153,
+    "noteCount": 0,
+    "weight": "4.9%"
+  }
+]

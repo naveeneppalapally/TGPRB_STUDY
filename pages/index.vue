@@ -83,22 +83,22 @@
         <UIcon name="i-heroicons-minus-small" class="h-4 w-4" />
       </span>
       <p class="text-[13px] leading-relaxed t-mid">
-        <span class="font-semibold t-hi">Wrong answers cost 0.20 marks</span> in the TGPRB exam.
+        <span class="font-semibold t-hi">Wrong answers cost {{ TSLPRB_EXAM_RULES.wrongPenalty.toFixed(2) }} marks</span> in the TGPRB exam.
         Review before you guess: a card you can recall with confidence is worth attempting, a card you are unsure of is not.
       </p>
     </aside>
 
     <!-- ── Two-column: high-probability topics + current affairs ────────── -->
     <div class="grid gap-10 xl:grid-cols-[1.25fr_1fr]">
-      <!-- 2026 high-probability topics -->
+      <!-- Live topics by verified PYQ coverage -->
       <section aria-labelledby="hp-title">
         <div class="mb-3 flex items-baseline justify-between gap-3">
-          <h2 id="hp-title" class="text-[16px] font-semibold tracking-tight t-hi">2026 high-probability topics</h2>
-          <span class="eyebrow hidden sm:block">Ranked by PYQ recurrence</span>
+          <h2 id="hp-title" class="text-[16px] font-semibold tracking-tight t-hi">Live topics by verified PYQ coverage</h2>
+          <span class="eyebrow hidden sm:block">Linked canonical questions</span>
         </div>
 
         <ol class="panel divide-y divide-[var(--line)] overflow-hidden">
-          <li v-for="topic in predictedHighYieldTopics" :key="topic.rank">
+          <li v-for="topic in liveTopicCoverage" :key="topic.rank">
             <component
               :is="topic.isLive ? NuxtLink : 'button'"
               :to="topic.isLive ? topic.href : undefined"
@@ -118,7 +118,7 @@
                 <p class="mt-1 text-[12.5px] leading-relaxed t-lo">{{ topic.likelyFormat }}</p>
               </div>
               <div class="shrink-0 text-right">
-                <p class="num text-[13px] font-semibold t-hi">{{ topic.projectedMarks }}</p>
+                <p class="num text-[13px] font-semibold t-hi">{{ topic.coverageLabel }}</p>
                 <p class="num mt-0.5 font-mono text-[10.5px] t-lo">{{ topic.pyqs }} PYQs</p>
               </div>
               <UIcon
@@ -239,6 +239,9 @@
 </template>
 
 <script setup lang="ts">
+import subjectStats from '~/data/subject_stats.json'
+import { TSLPRB_EXAM_RULES } from '~/composables/useExamStrategy'
+import topics from '~/data/topics_master.json'
 import { NuxtLink } from '#components'
 useHead({
   title: 'Dashboard - BeatBook',
@@ -249,30 +252,11 @@ const toast = useToast()
 const user = useSupabaseUser()
 
 /* ── FSRS state read from local storage (works logged in or offline) ────── */
-const dueCount = ref<number | null>(null)
-const unlockedCount = ref(0)
-const reviewedTotal = ref<number | null>(null)
+const reviewState = useReviewState()
+const dueCount = reviewState.dueCount
+const unlockedCount = computed(() => reviewState.cards.value.length)
+const reviewedTotal = reviewState.reviewedTotal
 const retention = ref<string | null>(null)
-
-function readFsrsStats() {
-  if (!import.meta.client) return
-  const uid = user.value?.id || 'guest'
-  try {
-    let raw = localStorage.getItem(`studyos:fsrs:card-states:${uid}`)
-    if (!raw && !user.value) raw = localStorage.getItem('studyos:fsrs:card-states')
-    if (!raw) { dueCount.value = 0; unlockedCount.value = 0; reviewedTotal.value = 0; return }
-    const states = Object.values(JSON.parse(raw)) as any[]
-    const now = Date.now()
-    unlockedCount.value = states.length
-    dueCount.value = states.filter(s => s?.fsrs?.due && new Date(s.fsrs.due).getTime() <= now).length
-    reviewedTotal.value = states.reduce((sum, s) => sum + (Number(s?.fsrs?.reps) || 0), 0)
-  } catch {
-    dueCount.value = 0
-  }
-}
-
-onMounted(readFsrsStats)
-watch(user, readFsrsStats)
 
 /* ── Current affairs (TG focus first, then newest, served by Nitro) ──────── */
 const { data: caBriefs } = await useFetch('/api/ca/briefs', { key: 'dashboard-ca' })
@@ -298,17 +282,7 @@ const greeting = computed(() => {
 })
 
 /* ── Subjects: ranked strictly by verified PYQ count (3,129 total) ──────── */
-const subjects = [
-  { name: 'Arithmetic',       slug: 'arithmetic', pyqCount: 676, weight: '21.6%', noteCount: 0 },
-  { name: 'Reasoning',        slug: 'reasoning',  pyqCount: 585, weight: '18.7%', noteCount: 0 },
-  { name: 'Telangana State',  slug: 'telangana',  pyqCount: 367, weight: '11.7%', noteCount: 1 },
-  { name: 'History of India', slug: 'history',    pyqCount: 329, weight: '10.5%', noteCount: 0 },
-  { name: 'Geography',        slug: 'geography',  pyqCount: 326, weight: '10.4%', noteCount: 5 },
-  { name: 'General Science',  slug: 'science',    pyqCount: 306, weight: '9.8%',  noteCount: 0 },
-  { name: 'Indian Polity',    slug: 'polity',     pyqCount: 203, weight: '6.5%',  noteCount: 2 },
-  { name: 'Indian Economy',   slug: 'economy',    pyqCount: 184, weight: '5.9%',  noteCount: 0 },
-  { name: 'General English',  slug: 'english',    pyqCount: 153, weight: '4.9%',  noteCount: 0 },
-]
+const subjects = subjectStats
 
 const maxPYQ = Math.max(...subjects.map(s => s.pyqCount))
 const totalPYQs = subjects.reduce((sum, s) => sum + s.pyqCount, 0)
@@ -317,12 +291,8 @@ const subjectsLive = computed(() => subjects.filter(s => s.noteCount > 0).length
 const rankedSubjects = computed(() => [...subjects].sort((a, b) => b.pyqCount - a.pyqCount))
 
 function openSubject(s: { slug: string; name: string; noteCount: number }) {
-  if (s.slug === 'geography') {
-    navigateTo('/notes/geography')
-  } else if (s.slug === 'telangana') {
-    navigateTo('/notes/telangana')
-  } else if (s.slug === 'polity') {
-    navigateTo('/notes/polity')
+  if (s.noteCount > 0) {
+    navigateTo(`/notes/${s.slug}`)
   } else {
     toast.add({
       title: `${s.name} notes are in preparation`,
@@ -356,57 +326,12 @@ const stats = computed(() => [
   },
 ])
 
-/* ── 2026 high-probability topics ───────────────────────────────────────── */
-const predictedHighYieldTopics = [
-  {
-    rank: 1,
-    title: 'Drainage System of India',
-    subject: 'Geography',
-    pyqs: 28,
-    projectedMarks: '4-6 marks',
-    likelyFormat: 'River and tributary matching, estuary vs delta traps',
-    href: '/notes/geography/drainage-system-of-india',
-    isLive: true,
-  },
-  {
-    rank: 2,
-    title: 'Telangana Statehood Movement',
-    subject: 'Telangana',
-    pyqs: 26,
-    projectedMarks: '5-8 marks',
-    likelyFormat: 'Timeline sequencing 1969 to 2014, committee matching',
-    href: '/notes/telangana/telangana-statehood-movement',
-    isLive: true,
-  },
-  {
-    rank: 3,
-    title: 'Historical Background: Company and Crown Rule (1773-1947)',
-    subject: 'Polity',
-    pyqs: 12,
-    projectedMarks: '2-3 marks',
-    likelyFormat: 'Chronology of British Acts, matching provisions to years',
-    href: '/notes/polity/historical-background-1773-1947',
-    isLive: true,
-  },
-  {
-    rank: 4,
-    title: 'Indian National Movement and 1857 Revolt',
-    subject: 'History',
-    pyqs: 22,
-    projectedMarks: '4-6 marks',
-    likelyFormat: 'Causal chains, leader and organisation pairing',
-    isLive: false,
-  },
-  {
-    rank: 5,
-    title: 'Ratio, Proportion and Arithmetic Word Problems',
-    subject: 'Arithmetic',
-    pyqs: 35,
-    projectedMarks: '8-10 marks',
-    likelyFormat: 'Speed-accuracy calculation, multi-step word problems',
-    isLive: false,
-  },
-]
+/* ── Live topics by verified PYQ coverage ───────────────────────────────────────── */
+const liveTopicCoverage = topics.filter(topic => topic.noteSlug).map(topic => ({
+  title: topic.title, subject: topic.subject, pyqs: topic.pyqUids?.length || 0,
+  href: `/notes/${topic.subjectSlug}/${topic.noteSlug}`, isLive: true,
+  likelyFormat: 'Linked official PYQs and recall practice', coverageLabel: 'Verified coverage',
+})).sort((a,b) => b.pyqs - a.pyqs).slice(0,5).map((topic,index) => ({ ...topic, rank: index + 1 }))
 
 function onQueuedTopic(topic: { title: string }) {
   toast.add({
@@ -418,10 +343,11 @@ function onQueuedTopic(topic: { title: string }) {
   })
 }
 
+const suggestedNote = topics.find(topic => topic.id === 'NOTE-GEO-DRAINAGE')!
 const continueNote = {
-  title: 'Drainage System of India',
-  meta: 'Geography, 28 verified PYQs, about 16 minutes',
-  href: '/notes/geography/drainage-system-of-india',
+  title: suggestedNote.title,
+  meta: `${suggestedNote.subject}, ${suggestedNote.pyqUids?.length || 0} linked verified PYQs`,
+  href: `/notes/${suggestedNote.subjectSlug}/${suggestedNote.noteSlug}`,
 }
 
 /* Press R anywhere outside an input to jump to the review queue */

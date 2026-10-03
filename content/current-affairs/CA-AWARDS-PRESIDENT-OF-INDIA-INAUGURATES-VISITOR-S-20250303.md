@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "8th Visitor's Awards and Visitor's Conference 2024-25"
-related_topic_ids: ["NOTE-POL-PRESIDENT", "NOTE-EDU-AWARDS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

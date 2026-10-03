@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "PM SVANidhi Scheme Milestones and Impact"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-INCLUSION", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

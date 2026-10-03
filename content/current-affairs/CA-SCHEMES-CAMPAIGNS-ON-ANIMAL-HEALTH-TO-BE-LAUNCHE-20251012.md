@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "NPDD Dairy Projects and PM-DDKY Initiatives"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC", "NOTE-SCHEMES-AGRI", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

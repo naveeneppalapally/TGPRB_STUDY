@@ -157,6 +157,7 @@
 </template>
 
 <script setup lang="ts">
+import topics from '~/data/topics_master.json'
 import { ref, computed, onMounted } from 'vue'
 import NoteCard from '@/components/notes/NoteCard.vue'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
@@ -184,59 +185,10 @@ onMounted(() => {
   loadNotes()
 })
 
-// NOTE-ID to metadata mapping for all 7 active topics
-const noteMetadata: Record<string, { title: string, section: string, route: string }> = {
-  'NOTE-GEO-DRAINAGE': {
-    title: 'Drainage System of India',
-    section: 'Geography',
-    route: '/notes/geography/drainage-system-of-india',
-  },
-  'NOTE-GEO-IRRIGATION': {
-    title: 'Irrigation in India & Telangana',
-    section: 'Geography',
-    route: '/notes/geography/irrigation-in-india',
-  },
-  'NOTE-GEO-MOUNTAINS': {
-    title: 'Mountains, Ranges & Passes of India',
-    section: 'Geography',
-    route: '/notes/geography/mountains-in-india',
-  },
-  'NOTE-GEO-DAMS': {
-    title: 'Dams, Reservoirs & Multipurpose Projects of India',
-    section: 'Geography',
-    route: '/notes/geography/dams-in-india',
-  },
-  'NOTE-GEO-FORESTS': {
-    title: 'Forests, Natural Vegetation & Protected Areas of India',
-    section: 'Geography',
-    route: '/notes/geography/forests-in-india',
-  },
-  'NOTE-POL-HIST-ACTS': {
-    title: 'Historical Background: Company Rule & Crown Rule (1773-1947)',
-    section: 'Polity',
-    route: '/notes/polity/historical-background-1773-1947',
-  },
-  'NOTE-POL-CONST-FRAME': {
-    title: 'Historical Background: Company Rule & Crown Rule (1773-1947)',
-    section: 'Polity',
-    route: '/notes/polity/historical-background-1773-1947',
-  },
-  'NOTE-POL-MAKING-CONST': {
-    title: 'Making of the Indian Constitution',
-    section: 'Polity',
-    route: '/notes/polity/making-of-the-constitution',
-  },
-  'NOTE-POL-UNION-EXEC': {
-    title: 'Union Executive & Parliament',
-    section: 'Polity',
-    route: '/notes/polity',
-  },
-  'NOTE-TEL-MOVEMENT': {
-    title: 'Telangana Armed Struggle & Statehood Movement',
-    section: 'Telangana',
-    route: '/notes/telangana/telangana-statehood-movement',
-  },
-}
+const noteMetadata = Object.fromEntries(topics.flatMap(topic => {
+  const metadata = { title: topic.title, section: topic.subject, route: topic.noteSlug ? `/notes/${topic.subjectSlug}/${topic.noteSlug}` : topic.studySlug ? `/study/${topic.studySlug}` : '/my-notes' }
+  return [topic.id, ...topic.aliases].map(id => [id, metadata])
+}))
 
 interface NoteGroup {
   noteId: string

@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-HIST-ACTS", "NOTE-POL-PANCHAYAT", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "PHDCCI National Young Chef Competition 2025-26"
-related_topic_ids: ["NOTE-GS-AWARDS", "NOTE-GS-CULTURE"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

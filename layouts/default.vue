@@ -281,12 +281,14 @@
 </template>
 
 <script setup lang="ts">
+import subjectStats from '~/data/subject_stats.json'
 import SidebarToggleIcon from '@/components/icons/SidebarToggleIcon.vue'
 import BeatBookIcon from '@/components/icons/BeatBookIcon.vue'
 const mobileOpen = ref(false)
 const sidebarOpen = ref(true)
 const paletteOpen = ref(false)
-const dueCount = ref(0)
+const reviewState = useReviewState()
+const dueCount = reviewState.dueCount
 const colorMode = typeof useColorMode === 'function' ? useColorMode() : { value: 'dark', preference: 'system' }
 const toast = useToast()
 const route = useRoute()
@@ -297,7 +299,6 @@ const { user, isLoggedIn, userEmail, displayName, signOut } = useAuth()
 onMounted(() => {
   const saved = localStorage.getItem('studyos:sidebar-open')
   if (saved !== null) sidebarOpen.value = saved === 'true'
-  updateDueCount()
 })
 
 function toggleSidebar() {
@@ -307,27 +308,9 @@ function toggleSidebar() {
 
 watch(() => route.fullPath, () => {
   mobileOpen.value = false
-  updateDueCount()
 })
-watch(user, updateDueCount)
 
 /* ── Due count from local FSRS state ───────────────────────────────────── */
-function updateDueCount() {
-  if (!import.meta.client) return
-  const uid = user.value?.id || 'guest'
-  try {
-    let raw = localStorage.getItem(`studyos:fsrs:card-states:${uid}`)
-    if (!raw && !user.value) raw = localStorage.getItem('studyos:fsrs:card-states')
-    if (raw) {
-      const states = JSON.parse(raw)
-      const now = Date.now()
-      dueCount.value = Object.values(states).filter((s: any) => s?.fsrs?.due && new Date(s.fsrs.due).getTime() <= now).length
-      return
-    }
-  } catch {}
-  dueCount.value = 0
-}
-
 /* ── Theme ─────────────────────────────────────────────────────────────── */
 function toggleTheme() {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
@@ -351,17 +334,7 @@ const tabLinks = [
 ]
 
 /* Ranked strictly by verified PYQ share (data/pyq_enriched_master.json). */
-const subjects = [
-  { name: "Arithmetic",                   weight: "21.6%" },
-  { name: "Reasoning",                    weight: "18.7%" },
-  { name: "Telangana History & Movement", icon: "i-heroicons-map-pin",          to: "/notes/telangana", weight: "11.7%" },
-  { name: "Indian History",               weight: "10.5%" },
-  { name: "Geography",                    icon: "i-heroicons-map",              to: "/notes/geography", weight: "10.4%" },
-  { name: "General Science",              weight: "9.8%" },
-  { name: "Indian Polity",                icon: "i-heroicons-building-library", to: "/notes/polity",    weight: "6.5%" },
-  { name: "Indian Economy",               weight: "5.9%" },
-  { name: "English",                      weight: "4.9%" },
-]
+const subjects = subjectStats
 
 function isActive(to: string, exact?: boolean) {
   return exact ? route.path === to : route.path === to || route.path.startsWith(to + '/')

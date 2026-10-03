@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "PM MITRA Textile Park in Warangal"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "appointments"
 exam_section: "Polity"
 topic: "Appointments and Office-Holders"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-POL-HIST-ACTS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

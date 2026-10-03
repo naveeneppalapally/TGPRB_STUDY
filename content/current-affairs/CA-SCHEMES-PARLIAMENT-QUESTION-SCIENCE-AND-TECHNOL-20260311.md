@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Science & Technology"
 topic: "Science and Technology for Women Scheme"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCHEMES-WOMEN", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

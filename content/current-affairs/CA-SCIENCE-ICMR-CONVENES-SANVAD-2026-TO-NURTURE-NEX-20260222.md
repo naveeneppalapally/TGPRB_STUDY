@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "ICMR SANVAD 2026 Initiative"
-related_topic_ids: ["NOTE-SCI-HEALTH", "NOTE-TEL-INSTITUTES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

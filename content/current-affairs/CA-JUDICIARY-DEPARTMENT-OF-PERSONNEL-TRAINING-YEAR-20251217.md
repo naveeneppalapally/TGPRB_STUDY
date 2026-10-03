@@ -4,7 +4,8 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "Central Administrative Tribunal Modernization 2025"
-related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-POL-TRIBUNALS"]
+related_topic_ids: ["NOTE-POL-JUDICIARY"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "National Quantum Mission Outlay and Implementation"
 related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

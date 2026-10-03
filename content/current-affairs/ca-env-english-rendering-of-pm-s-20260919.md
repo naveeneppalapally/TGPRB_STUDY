@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Geography"
 topic: "Environment"
 related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"
@@ -21,31 +22,28 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23123
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2312342&reg=3&lang=1"
 event_key: "INDIA-SOLAR-CAPACITY-2024"
 mcqs:
-  - exam_fact: "India's solar energy capacity increased from about 2 gigawatts 12 years ago to crossing 160 gigawatts."
-    question: "What was India's solar energy capacity approximately 12 years ago, which has now crossed 160 gigawatts?"
-    options:
-      - "10 gigawatts"
-      - "5 gigawatts"
-      - "2 gigawatts"
-      - "20 gigawatts"
-    answer: 2
-    explanation: "Twelve years ago, India’s solar energy capacity was about 2 gigawatts, and today it has crossed 160 gigawatts."
-  - exam_fact: "Thanks to India’s efforts, the year 2023 was celebrated as the International Year of Millets."
-    question: "Which year was celebrated as the International Year of Millets due to India's efforts?"
-    options:
-      - "2021"
-      - "2023"
-      - "2022"
-      - "2024"
-    answer: 1
-    explanation: "Thanks to India’s efforts, 2023 was celebrated as the International Year of Millets."
-  - exam_fact: "Under the PM Surya Ghar Free Electricity Scheme, more than 5 million homes have already installed rooftop solar panels."
-    question: "How many homes have installed rooftop solar panels under the PM Surya Ghar Free Electricity Scheme as per official figures?"
-    options:
-      - "More than 1 million"
-      - "More than 10 million"
-      - "More than 5 million"
-      - "More than 2 million"
-    answer: 2
-    explanation: "Under the PM Surya Ghar Free Electricity Scheme, more than 5 million homes have already installed rooftop solar panels."
+- exam_fact: India's solar energy capacity increased from about 2 gigawatts 12 years
+    ago to crossing 160 gigawatts.
+  question: What was India's solar energy capacity approximately 12 years ago, which
+    has now crossed 160 gigawatts?
+  options:
+  - 10 gigawatts
+  - 5 gigawatts
+  - 2 gigawatts
+  - 20 gigawatts
+  answer: 2
+  explanation: Twelve years ago, India’s solar energy capacity was about 2 gigawatts,
+    and today it has crossed 160 gigawatts.
+- exam_fact: Thanks to India’s efforts, the year 2023 was celebrated as the International
+    Year of Millets.
+  question: Which year was celebrated as the International Year of Millets due to
+    India's efforts?
+  options:
+  - '2021'
+  - '2023'
+  - '2022'
+  - '2024'
+  answer: 1
+  explanation: Thanks to India’s efforts, 2023 was celebrated as the International
+    Year of Millets.
 ---

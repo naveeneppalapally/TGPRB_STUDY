@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "Polity"
 topic: "IIPA Annual Awards 2025 and Executive Council Meet"
-related_topic_ids: ["NOTE-POL-GOVERNANCE", "NOTE-POL-INSTITUTIONS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Biopharma Growth Phase Park (B-Hub) at Genome Valley"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-BIOTECH", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -15,6 +15,13 @@ on:
         required: false
         default: ''
 
+permissions:
+  contents: write
+
+concurrency:
+  group: pib-daily
+  cancel-in-progress: false
+
 jobs:
   pib-daily-scrape:
     runs-on: ubuntu-latest
@@ -29,54 +36,60 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip setuptools wheel
-          python -m pip install --retries 5 --timeout 30 requests beautifulsoup4 google-genai || \
-          python -m pip install --index-url https://pypi.org/simple/ requests beautifulsoup4 google-genai
+        run: python -m pip install -r workers/scrapy-pib/requirements.txt
 
       - name: Calculate dates
         id: dates
+        env:
+          INPUT_FROM: ${{ inputs.from_date }}
+          INPUT_TO: ${{ inputs.to_date }}
         run: |
-          if [ -n "${{ inputs.from_date }}" ]; then
-            FROM="${{ inputs.from_date }}"
-            TO="${{ inputs.to_date || inputs.from_date }}"
-          else
-            # Look back 3 days to automatically backfill any missed runs, weekend lag, or transient errors
-            FROM=$(date -d "3 days ago" +%Y-%m-%d)
-            TO=$(date +%Y-%m-%d)
-          fi
-          echo "from_date=$FROM" >> $GITHUB_OUTPUT
-          echo "to_date=$TO" >> $GITHUB_OUTPUT
-          echo "Scraping PIB for: $FROM to $TO"
+          python - <<'PYTHON'
+          import json, os
+          from pathlib import Path
+          from datetime import date, timedelta
+          state = Path('data/ca_ingestion_state.json')
+          cursor = json.loads(state.read_text()).get('last_completed_date') if state.exists() else None
+          today = date.today()
+          start = date.fromisoformat(os.environ['INPUT_FROM']) if os.environ.get('INPUT_FROM') else (date.fromisoformat(cursor) - timedelta(days=2) if cursor else today - timedelta(days=3))
+          end = date.fromisoformat(os.environ['INPUT_TO']) if os.environ.get('INPUT_TO') else today
+          if start > end: raise ValueError('Start must not follow end')
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f'from_date={start}\nto_date={end}\n')
+          PYTHON
 
       - name: Run PIB Daily Scraper
         env:
           GOOGLE_CLOUD_PROJECT:               ${{ secrets.GOOGLE_CLOUD_PROJECT }}
-          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GCP_SA_KEY }}
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS_JSON }}
           GEMINI_API_KEY:                     ${{ secrets.GEMINI_API_KEY }}
           PYTHONUNBUFFERED:                   "1"
         run: |
           python3 workers/scrapy-pib/pib_scraper.py \
             --from "${{ steps.dates.outputs.from_date }}" \
             --to "${{ steps.dates.outputs.to_date }}" \
-            --max-per-day 30
+            --max-per-day 0
 
       - name: Sync Topic Mappings
         run: |
           python3 scripts/pib_ca_pipeline/sync_ca_topics.py
 
-      - name: Count new files
-        id: count
-        run: |
-          count=$(git status --short content/current-affairs/ | grep "^?" | wc -l)
-          echo "new_files=$count" >> $GITHUB_OUTPUT
+      - name: Validate every generated card
+        id: validate
+        if: always()
+        run: python3 scripts/pib_ca_pipeline/verify_ca_cards.py
 
-      - name: Commit and push new exam cards
-        if: steps.count.outputs.new_files != '0'
+      - name: Persist cards, retags and retry ledger
+        if: always()
+        env:
+          CARDS_VALID: ${{ steps.validate.outcome }}
         run: |
-          git config user.name  "PIB Daily Bot"
+          git config user.name "PIB Daily Bot"
           git config user.email "actions@github.com"
-          git add content/current-affairs/
-          git commit -m "add: daily PIB current affairs updates (${{ steps.count.outputs.new_files }} cards)"
-          git pull --rebase origin main
-          git push
+          if [ "$CARDS_VALID" = "success" ]; then git add content/current-affairs/; fi
+          if [ -f data/ca_ingestion_state.json ]; then git add data/ca_ingestion_state.json; fi
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: persist PIB cards and ingestion outcomes"
+            git pull --rebase origin main
+            git push
+          fi

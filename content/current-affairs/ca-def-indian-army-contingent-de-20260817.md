@@ -2,10 +2,10 @@
 id: "CA-PIB-CA_DEF_INDIAN_ARMY_CONTINGENT_DE_20260817"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
-related_topic_ids:
-  - ""
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"
@@ -22,31 +22,28 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23002
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2300293&reg=3&lang=1"
 event_key: "EXERCISE-MAITREE-XV-2026"
 mcqs:
-  - exam_fact: "Exercise MAITREE is a bilateral joint military exercise conducted between the armies of India and Thailand."
-    question: "Exercise 'MAITREE' is a joint military exercise conducted between India and which of the following countries?"
-    options:
-      - "Vietnam"
-      - "Indonesia"
-      - "Thailand"
-      - "Malaysia"
-    answer: 2
-    explanation: "Exercise MAITREE is a joint military exercise conducted between the Indian Army and the Royal Thai Army."
-  - exam_fact: "The 15th edition of Exercise MAITREE is being conducted at Vibhavadi Rangsit Camp, Surat Thani, Thailand in August 2026."
-    question: "Where is the 15th edition of the India-Thailand joint military exercise MAITREE-XV being conducted?"
-    options:
-      - "Surat Thani, Thailand"
-      - "Umroi, Meghalaya"
-      - "Phuket, Thailand"
-      - "Belgaum, Karnataka"
-    answer: 0
-    explanation: "The 15th edition of Exercise MAITREE is scheduled to be conducted at Vibhavadi Rangsit Camp, Surat Thani, Thailand."
-  - exam_fact: "The Indian Army contingent in the 15th edition of Exercise MAITREE is represented primarily by troops from 9 Gorkha Rifles."
-    question: "Which regiment primarily represents the Indian Army contingent in Exercise MAITREE-XV?"
-    options:
-      - "Dogra Regiment"
-      - "Rajputana Rifles"
-      - "Sikh Light Infantry"
-      - "9 Gorkha Rifles"
-    answer: 3
-    explanation: "The Indian Army contingent is represented primarily by troops from 9 Gorkha Rifles."
+- exam_fact: Exercise MAITREE is a bilateral joint military exercise conducted between
+    the armies of India and Thailand.
+  question: Exercise 'MAITREE' is a joint military exercise conducted between India
+    and which of the following countries?
+  options:
+  - Vietnam
+  - Indonesia
+  - Thailand
+  - Malaysia
+  answer: 2
+  explanation: Exercise MAITREE is a joint military exercise conducted between the
+    Indian Army and the Royal Thai Army.
+- exam_fact: The 15th edition of Exercise MAITREE is being conducted at Vibhavadi
+    Rangsit Camp, Surat Thani, Thailand in August 2026.
+  question: Where is the 15th edition of the India-Thailand joint military exercise
+    MAITREE-XV being conducted?
+  options:
+  - Surat Thani, Thailand
+  - Umroi, Meghalaya
+  - Phuket, Thailand
+  - Belgaum, Karnataka
+  answer: 0
+  explanation: The 15th edition of Exercise MAITREE is scheduled to be conducted at
+    Vibhavadi Rangsit Camp, Surat Thani, Thailand.
 ---

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "18th Urban Mobility India Conference 2025"
-related_topic_ids: ["NOTE-ECO-INFRASTRUCTURE", "NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

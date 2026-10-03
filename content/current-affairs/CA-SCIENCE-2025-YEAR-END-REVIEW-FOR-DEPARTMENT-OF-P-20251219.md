@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "DIGIPIN Geo-coded Addressing System"
 related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

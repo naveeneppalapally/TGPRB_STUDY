@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "National Service Scheme (NSS) Awards 2022-23"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GS-AWARDS", "NOTE-HIS-MODERN", "NOTE-SCHEMES-YOUTH"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-HIS-MODERN"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-HIS-MODERN"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

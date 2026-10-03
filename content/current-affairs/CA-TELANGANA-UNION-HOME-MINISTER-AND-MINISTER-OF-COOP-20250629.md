@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "National Turmeric Board Headquarters Inauguration in Nizamabad"
-related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-TEL-AGRICULTURE", "NOTE-TEL-GEOGRAPHY"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-TEL-GEOGRAPHY"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

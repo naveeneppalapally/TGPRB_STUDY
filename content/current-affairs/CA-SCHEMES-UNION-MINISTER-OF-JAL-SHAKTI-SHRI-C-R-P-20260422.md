@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "6th Sujal Gram Samvad under Jal Jeevan Mission"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ENV-WATER", "NOTE-GEO-IRRIGATION"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

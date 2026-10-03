@@ -4,7 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "12th BRICS Labour and Employment Ministers Meeting"
-related_topic_ids: ["NOTE-INT-BRICS", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

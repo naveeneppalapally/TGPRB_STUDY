@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Geography"
 topic: "Dam Safety and Dam Rehabilitation and Improvement Project (DRIP)"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE"]
+keyword_topic_ids: ["NOTE-GEO-DAMS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

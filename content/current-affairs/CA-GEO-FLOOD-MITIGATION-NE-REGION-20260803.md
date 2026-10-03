@@ -1,10 +1,11 @@
 ---
 id: "CA-GEO-FLOOD-MITIGATION-NE-REGION-20260803"
 type: "current_affair"
-category: "geography"
-exam_section: "Indian & World Geography"
+category: "environment"
+exam_section: "Geography"
 topic: "Flood Management in India - Northeast Rivers"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

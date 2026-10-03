@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "APEDA International Conclave at Tawang"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-GI-TAGS"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

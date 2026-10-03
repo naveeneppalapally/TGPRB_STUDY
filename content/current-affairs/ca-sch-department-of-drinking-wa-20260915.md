@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-CLIMATE"]
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

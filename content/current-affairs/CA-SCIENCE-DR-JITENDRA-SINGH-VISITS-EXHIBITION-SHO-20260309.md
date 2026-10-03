@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "India's Nuclear Power Programme and Strategic Minerals"
-related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-NUCLEAR", "NOTE-SCI-SPACE"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

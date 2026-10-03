@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "India's First Tropical RAS Rainbow Trout Farm"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-SCI-AGRI"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

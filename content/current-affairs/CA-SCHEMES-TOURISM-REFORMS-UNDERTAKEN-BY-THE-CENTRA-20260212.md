@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "General Studies"
 topic: "Ministry of Tourism Initiatives for Tourist Safety"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

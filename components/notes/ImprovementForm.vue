@@ -1,4 +1,14 @@
 <script setup lang="ts">
+function hidePreview(event: Event) {
+  if (event.target instanceof HTMLImageElement) event.target.style.display = 'none'
+}
+function resizeInput(event: Event) {
+  const target = event.target
+  if (!(target instanceof HTMLTextAreaElement)) return
+  target.style.height = 'auto'
+  target.style.height = `${target.scrollHeight}px`
+}
+
 import { ref, computed } from 'vue'
 import type { SectionContext } from '@/types/annotations'
 import { useImprovementQueue } from '@/composables/useImprovementQueue'
@@ -92,7 +102,7 @@ async function onSubmit() {
       <UInput v-model="referenceUrl" placeholder="Paste link to image, article, etc." />
       
       <div v-if="isImagePreview && referenceUrl" class="mt-3 border b-line rounded-lg overflow-hidden bg-black/5 dark:bg-white/5 h-32 flex items-center justify-center p-2">
-        <img :src="referenceUrl" alt="Preview" class="max-h-full max-w-full object-contain rounded" @error="$event.target.style.display='none'" />
+        <img :src="referenceUrl" alt="Preview" class="max-h-full max-w-full object-contain rounded" @error="hidePreview" />
       </div>
     </div>
     

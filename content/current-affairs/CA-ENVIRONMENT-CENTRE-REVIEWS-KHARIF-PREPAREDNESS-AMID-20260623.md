@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Geography"
 topic: "Kharif Drought Preparedness and DACPs"
 related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-CLIMATE", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

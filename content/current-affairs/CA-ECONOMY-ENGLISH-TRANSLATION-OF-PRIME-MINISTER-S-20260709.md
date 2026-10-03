@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India-Australia Economic Roadmap and Energy Targets"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-POL-UNION-EXEC", "NOTE-SCI-ENERGY", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

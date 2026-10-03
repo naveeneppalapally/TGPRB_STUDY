@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Strengthening of Pharmaceuticals Industry (SPI) Scheme"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-INDUSTRY", "NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

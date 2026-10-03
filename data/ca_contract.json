@@ -1,0 +1,7 @@
+{
+  "categories": ["appointments", "international", "economy", "awards", "sports", "telangana", "schemes", "defence", "judiciary", "science", "books", "environment"],
+  "sections": ["Polity", "Geography", "Economy", "General Studies", "Science & Technology", "History", "Telangana"],
+  "difficulties": ["F", "M", "O"],
+  "depths": ["constable", "si", "both"],
+  "maxMcqs": 2
+}

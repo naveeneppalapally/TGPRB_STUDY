@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Skill Development Centre at AURIC"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-ECO-SKILL"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

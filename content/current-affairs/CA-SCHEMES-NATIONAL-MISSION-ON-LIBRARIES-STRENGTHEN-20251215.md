@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "General Studies"
 topic: "National Mission on Libraries and RRRLF"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-UNION-EXEC", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

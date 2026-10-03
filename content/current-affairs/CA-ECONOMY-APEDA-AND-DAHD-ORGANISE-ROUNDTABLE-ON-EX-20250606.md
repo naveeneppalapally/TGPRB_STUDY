@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Livestock Exports and FMD Free Zones in India"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-TEL-ECONOMY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "India's First Swastik-Shaped Lotus Garden"
 related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Depot Darpan Portal and Digital PDS Initiatives"
-related_topic_ids: ["NOTE-ECO-PDS", "NOTE-ECO-SCHEMES", "NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-DAMS"]
+keyword_topic_ids: ["NOTE-GEO-DAMS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

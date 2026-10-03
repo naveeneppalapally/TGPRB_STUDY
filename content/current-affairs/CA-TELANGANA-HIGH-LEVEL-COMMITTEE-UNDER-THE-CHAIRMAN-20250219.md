@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "NDRF Additional Central Assistance 2024-25"
-related_topic_ids: ["NOTE-TEL-ECONOMY", "NOTE-DISASTER-MANAGEMENT"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

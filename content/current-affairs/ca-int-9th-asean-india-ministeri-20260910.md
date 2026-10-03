@@ -5,6 +5,7 @@ category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
 related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-FORESTS", "NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Challenge Based Destination Development (CBDD) Scheme"
-related_topic_ids: ["NOTE-SCH-TOURISM", "NOTE-TEL-TOURISM", "NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-GEO-DAMS"]
+keyword_topic_ids: ["NOTE-GEO-DAMS"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

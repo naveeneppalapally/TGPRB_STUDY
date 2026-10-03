@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Anti-Naxal Operation at Karreguttalu Hill"
-related_topic_ids: ["NOTE-DEF-SECURITY", "NOTE-TEL-BORDER"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

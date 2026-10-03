@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "Science & Technology"
 topic: "First Private LCA Tejas Mk1A Centre Fuselage Handover"
-related_topic_ids: ["NOTE-DEF-TEJAS", "NOTE-TEL-INDUSTRY"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

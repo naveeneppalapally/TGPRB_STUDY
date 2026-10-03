@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "40th Edition of AAHAR 2026 and APEDA Initiatives"
-related_topic_ids: ["NOTE-ECO-TRADE", "NOTE-ECO-AGRI"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

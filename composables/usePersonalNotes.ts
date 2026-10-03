@@ -1,12 +1,13 @@
 import { computed, watch, type Ref } from 'vue'
 import { useSupabaseClient, useSupabaseUser, useState } from '#imports'
 import { createSupabaseOfflineSyncAdapter, useOfflineSync } from '@/composables/useOfflineSync'
+import { readAllRows } from '../utils/supabase-pages'
 import type { PersonalNote, SectionContext } from '@/types/annotations'
 
 const STORAGE_KEY_PREFIX = 'tgprb:personal-notes:'
 
 export function usePersonalNotes() {
-  const supabase = useSupabaseClient()
+  const supabase = useSupabaseClient<any>()
   const user = useSupabaseUser()
   const offlineSync = useOfflineSync({
     getUserId: () => user.value?.id,
@@ -18,6 +19,7 @@ export function usePersonalNotes() {
   const isLoading = useState<boolean>('tgprb:personal-notes-loading', () => false)
   const isLoaded = useState<boolean>('tgprb:personal-notes-loaded', () => false)
   const activeUserId = useState<string | null>('tgprb:personal-notes-active-user', () => null)
+  const loadGeneration = useState<number>('tgprb:personal-notes-generation', () => 0)
 
   const currentUserId = computed(() => user.value?.id || 'guest')
   const lsKey = computed(() => `${STORAGE_KEY_PREFIX}${currentUserId.value}`)
@@ -200,10 +202,13 @@ export function usePersonalNotes() {
     if (!import.meta.client) return
 
     const userKey = currentUserId.value
+    const storageKey = lsKey.value
+    const requestUser = user.value?.id
     if (isLoaded.value && activeUserId.value === userKey && !forceReload && notes.value.length > 0) {
       return
     }
 
+    const generation = ++loadGeneration.value
     isLoading.value = true
 
     // 1. Read from localStorage for immediate UI
@@ -212,17 +217,35 @@ export function usePersonalNotes() {
     activeUserId.value = userKey
     isLoaded.value = true
 
+    // Recover acknowledged-to-device writes even if the localStorage snapshot failed.
+    try {
+      const pending = await offlineSync.pendingMutations()
+      if (generation !== loadGeneration.value || currentUserId.value !== userKey) return
+      const recovered = new Map(notes.value.map(note => [note.id, note]))
+      for (const item of pending) if (item.type === 'note_upsert') {
+        const payload = item.payload
+        const note: PersonalNote = { ...payload.note, client_updated_at: payload.updated_at, last_event_id: item.id, created_at: recovered.get(payload.note.id)?.created_at || item.client_timestamp }
+        const existing = recovered.get(note.id)
+        recovered.set(note.id, existing ? resolveConflict(existing, note) : note)
+      }
+      notes.value = [...recovered.values()]
+      _lsSet(notes.value, storageKey)
+    } catch (error) { offlineSync.lastError.value = error instanceof Error ? error : new Error(String(error)) }
+    if (generation !== loadGeneration.value || currentUserId.value !== userKey) return
+
     // 2. Hydrate from cloud if logged in
     if (user.value) {
       try {
-        const { data: cloudNotes, error } = await supabase
+        const { data: cloudNotes, error } = await readAllRows<any>((from, to) => supabase
           .from('user_personal_notes')
           .select('*')
-          .eq('user_id', user.value.id)
+          .eq('user_id', requestUser!)
+          .order('id').range(from, to))
 
+        if (generation !== loadGeneration.value || currentUserId.value !== userKey) return
         if (!error && cloudNotes) {
           const cloudMap = new Map<string, any>(cloudNotes.map((n: any) => [n.id, n]))
-          const localMap = new Map<string, PersonalNote>(local.map(n => [n.id, n]))
+          const localMap = new Map<string, PersonalNote>(notes.value.map(n => [n.id, n]))
           const merged = new Map<string, PersonalNote>()
 
           for (const [id, lNote] of localMap) {
@@ -240,14 +263,14 @@ export function usePersonalNotes() {
           }
 
           notes.value = Array.from(merged.values())
-          _lsSet(notes.value)
+          _lsSet(notes.value, storageKey)
         }
       } catch (e) {
         console.error('[usePersonalNotes] Failed to hydrate notes from cloud:', e)
       }
     }
 
-    isLoading.value = false
+    if (generation === loadGeneration.value && currentUserId.value === userKey) isLoading.value = false
   }
 
   // Watch for auth user change to re-hydrate state cleanly
@@ -263,6 +286,7 @@ export function usePersonalNotes() {
   }
 
   return {
+    offlineSync,
     notes,
     isLoading,
     isLoaded,

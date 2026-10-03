@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Economy"
 topic: "Rashtriya Gramin Vikas Sammelan 2026 and SARAS Shakti"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-CULTURE", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

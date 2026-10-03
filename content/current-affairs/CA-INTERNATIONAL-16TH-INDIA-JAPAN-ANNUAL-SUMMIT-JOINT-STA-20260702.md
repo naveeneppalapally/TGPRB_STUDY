@@ -4,7 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "General Studies"
 topic: "16th India-Japan Annual Summit"
-related_topic_ids: ["NOTE-INT-SUMMITS", "NOTE-POL-UNION-EXEC", "NOTE-SCI-SPACE"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

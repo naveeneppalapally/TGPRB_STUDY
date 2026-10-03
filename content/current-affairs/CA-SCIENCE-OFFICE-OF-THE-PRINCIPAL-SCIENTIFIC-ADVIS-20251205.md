@@ -5,6 +5,7 @@ category: "science"
 exam_section: "Science & Technology"
 topic: "1st International S&T Clusters Conference 2025"
 related_topic_ids: ["NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

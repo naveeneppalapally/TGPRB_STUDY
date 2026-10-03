@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "NH-63 and NH-563 Highway Widening in Telangana"
-related_topic_ids: ["NOTE-TEL-INFRA", "NOTE-GEO-ROADS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

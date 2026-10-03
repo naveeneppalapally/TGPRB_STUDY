@@ -1,10 +1,11 @@
 ---
 id: "CA-GEO-INTERLINKING-RIVERS-KEN-BETWA-20250601"
 type: "current_affair"
-category: "geography"
+category: "environment"
 exam_section: "Geography"
 topic: "Interlinking of Rivers - Ken-Betwa Project"
 related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

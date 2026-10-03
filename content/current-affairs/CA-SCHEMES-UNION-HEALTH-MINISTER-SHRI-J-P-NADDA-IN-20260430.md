@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "10th National Summit on Innovation and Inclusivity in Healthcare"
-related_topic_ids: ["NOTE-HEALTH-SCHEMES", "NOTE-GOVT-INITIATIVES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

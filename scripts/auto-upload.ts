@@ -12,6 +12,7 @@
  */
 
 import fs from 'fs'
+import { rewriteLocalMediaRefs } from '../utils/media-references'
 import path from 'path'
 import os from 'os'
 import { execSync } from 'child_process'
@@ -98,15 +99,8 @@ function rewriteRefs(localPath: string, cloudinaryUrl: string) {
   const basename = path.basename(localPath)
   const basenameNoExt = path.basename(localPath, path.extname(localPath))
 
-  // Match any path ending in this filename (with any extension)
-  const pattern = new RegExp(
-    `(["'/])((?:(?:public)?[/\\\\])?(?:images|assets-to-upload)[/\\\\][^"'\\s]*)?` +
-    `${basenameNoExt}\\.[a-z]+`,
-    'g'
-  )
-
   const sourceFiles = globSync('**/*.{vue,ts,js,md}', {
-    ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'scripts/**'],
+    ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'scripts/**', 'dist/**', '.git/**'],
   })
 
   let totalReplaced = 0
@@ -114,10 +108,8 @@ function rewriteRefs(localPath: string, cloudinaryUrl: string) {
     const content = fs.readFileSync(file, 'utf8')
     if (!content.includes(basenameNoExt)) continue
 
-    const updated = content.replace(pattern, (_match, quote) => {
-      totalReplaced++
-      return `${quote}${cloudinaryUrl}`
-    })
+    const updated = rewriteLocalMediaRefs(content, localPath, cloudinaryUrl)
+    if (updated !== content) totalReplaced++
 
     if (updated !== content) {
       fs.writeFileSync(file, updated, 'utf8')
@@ -210,6 +202,7 @@ async function main() {
       console.log(`  Done.\n`)
     }
     catch (err: any) {
+      process.exitCode = 1
       console.error(`  FAILED to upload ${imgPath}:`, err.message)
       if (isTemp && fs.existsSync(uploadFile)) fs.unlinkSync(uploadFile)
       // Don't exit - try to process remaining images

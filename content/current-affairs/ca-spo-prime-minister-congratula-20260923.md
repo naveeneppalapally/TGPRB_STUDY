@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_SPO_PRIME_MINISTER_CONGRATULA_20260923"
 type: "current_affair"
 category: "sports"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Sports Results"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

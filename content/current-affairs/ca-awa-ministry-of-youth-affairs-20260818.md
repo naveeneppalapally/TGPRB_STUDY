@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_AWA_MINISTRY_OF_YOUTH_AFFAIRS_20260818"
 type: "current_affair"
 category: "awards"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Awards and Honours"
 related_topic_ids: ["NOTE-POL-JUDICIARY"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

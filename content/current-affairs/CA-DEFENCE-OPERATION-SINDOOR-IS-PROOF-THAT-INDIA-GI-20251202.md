@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "Operation Sindoor and India's Defence Production Targets"
-related_topic_ids: ["NOTE-DEF-OPERATIONS", "NOTE-ECO-EXPORTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

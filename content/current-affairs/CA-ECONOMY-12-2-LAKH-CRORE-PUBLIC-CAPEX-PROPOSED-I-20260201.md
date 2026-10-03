@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Union Budget 2026-27 Public Capex and Infrastructure Initiatives"
-related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-TEL-INFRA"]
+related_topic_ids: ["NOTE-ECO-BUDGET"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

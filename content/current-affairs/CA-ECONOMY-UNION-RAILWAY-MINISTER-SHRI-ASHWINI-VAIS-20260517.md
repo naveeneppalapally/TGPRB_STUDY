@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Bengaluru-Hyderabad Bullet Train Corridor Approval"
-related_topic_ids: ["NOTE-INFRA-RAILWAYS", "NOTE-TEL-INFRA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -2,9 +2,10 @@
 id: "CA-PIB-CA_DEF_VIMARSH_DRDO_INDUSTRY_S_20260915"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
 related_topic_ids: ["NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Chintan Shivir on Medicinal Plants"
-related_topic_ids: ["NOTE-SCI-AYUSH", "NOTE-ENV-PLANTS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

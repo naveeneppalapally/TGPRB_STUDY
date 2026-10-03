@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "e-Courts Mission Mode Project"
 related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

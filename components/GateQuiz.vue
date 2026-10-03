@@ -247,12 +247,12 @@
       <!-- Flashcard Deck (ZLS Fractional Row Expansion Wrapper) -->
       <div
         class="grid transition-[grid-template-rows,opacity] duration-220 ease-[cubic-bezier(0.16,1,0.3,1)]"
-        :class="isUnlocked && assistantNoteId ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
+        :class="isUnlocked && noteIdentity ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0 pointer-events-none'"
       >
         <div class="min-h-0 overflow-hidden">
           <FlashcardDeck
-            v-if="isUnlocked && assistantNoteId"
-            :note-id="assistantNoteId"
+            v-if="isUnlocked && noteIdentity"
+            :note-id="noteIdentity"
             :unlock-mode="mode"
           />
         </div>
@@ -288,6 +288,7 @@ const emit = defineEmits<{
   completed: [result: { score: number; total: number; passed: boolean }]
 }>()
 
+const reviewState = useReviewState()
 const { mode, hasPassedQuizLocally, checkCloudGatePassed, markGatePassed } = useFlashcardUnlock()
 
 const fetchedQuiz = ref<GateQuizData | null>(null)
@@ -295,7 +296,7 @@ const showOptionalQuiz = ref(false)
 const previouslyPassed = ref(false)
 const retrying = ref(false)
 
-const assistantNoteId = computed(() => props.noteId ?? quiz.value?.note_id ?? '')
+const noteIdentity = computed(() => props.noteId ?? quiz.value?.note_id ?? '')
 
 onMounted(async () => {
   if (props.noteId && !props.quiz) {
@@ -306,16 +307,14 @@ onMounted(async () => {
     }
   }
 
-  if (assistantNoteId.value) {
-    previouslyPassed.value = await checkCloudGatePassed(assistantNoteId.value)
+  if (noteIdentity.value) {
+    const run = ++gateCheck
+    const result = await checkCloudGatePassed(noteIdentity.value)
+    if (run === gateCheck) previouslyPassed.value = result
   }
 })
 
-watch(() => assistantNoteId.value, async (newId) => {
-  if (newId) {
-    previouslyPassed.value = await checkCloudGatePassed(newId)
-  }
-})
+
 
 const quiz = computed<GateQuizData | undefined>(() => props.quiz ?? fetchedQuiz.value ?? undefined)
 
@@ -328,10 +327,27 @@ const submitted = ref(false)
 const score = ref(0)
 const passed = ref(false)
 
+const gateUser = useSupabaseUser()
+let gateCheck = 0
+watch([noteIdentity, () => gateUser.value?.id], async ([id]) => {
+  const run = ++gateCheck
+  previouslyPassed.value = false
+  passed.value = false
+  submitted.value = false
+  score.value = 0
+  currentQ.value = 0
+  retrying.value = false
+  for (const key of Object.keys(answers)) delete answers[Number(key)]
+  if (id) {
+    const result = await checkCloudGatePassed(id)
+    if (gateCheck === run) previouslyPassed.value = result
+  }
+}, { flush: 'sync' })
+
 const isUnlocked = computed(() => {
   if (mode.value === 'direct') return true
   if (passed.value) return true
-  if (previouslyPassed.value) return true
+  if (previouslyPassed.value || hasPassedQuizLocally(noteIdentity.value)) return true
   return false
 })
 
@@ -368,29 +384,20 @@ async function submitGate() {
   passed.value = didPass
   submitted.value = true
 
-  if (didPass && assistantNoteId.value) {
-    markGatePassed(assistantNoteId.value)
+  if (didPass && noteIdentity.value) {
+    markGatePassed(noteIdentity.value)
+    reviewState.sync.queueGatePassed({ topic_id: noteIdentity.value, passed: true })
     previouslyPassed.value = true
+    window.dispatchEvent(new Event('studyos:learning-changed'))
   }
 
   // Record submission in Supabase for authenticated user
   try {
-    let flashcardIds: string[] = []
-    try {
-      const fcData = await $fetch<{ cards: Array<{ id: string }> }>(`/api/flashcards/${assistantNoteId.value}`)
-      if (fcData?.cards) {
-        flashcardIds = fcData.cards.map(c => c.id)
-      }
-    } catch {}
-
     await $fetch('/api/gate/submit', {
       method: 'POST',
       body: {
-        note_id: assistantNoteId.value,
-        score: correct,
-        total: quiz.value.questions.length,
-        pass_threshold: quiz.value.pass_threshold,
-        flashcard_ids: flashcardIds,
+        note_id: noteIdentity.value,
+        answers: quiz.value.questions.map((_, index) => answers[index]),
       },
     })
   } catch {

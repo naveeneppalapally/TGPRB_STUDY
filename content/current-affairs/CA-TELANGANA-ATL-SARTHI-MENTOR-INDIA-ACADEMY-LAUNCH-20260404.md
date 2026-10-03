@@ -5,6 +5,7 @@ category: "telangana"
 exam_section: "Telangana"
 topic: "ATL Sarthi and Mentor India Academy Launch in Telangana"
 related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

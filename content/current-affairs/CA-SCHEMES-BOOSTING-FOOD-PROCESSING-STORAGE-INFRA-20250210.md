@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Pradhan Mantri Kisan SAMPADA Yojana and Cold Storage Infrastructure"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-IRRIGATION", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-IRRIGATION"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-GEO-IRRIGATION"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

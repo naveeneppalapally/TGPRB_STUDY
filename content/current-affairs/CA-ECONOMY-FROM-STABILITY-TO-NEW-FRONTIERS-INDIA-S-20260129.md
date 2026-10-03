@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Economic Survey 2025-26: Services Sector Growth"
-related_topic_ids: ["NOTE-ECO-SERVICES", "NOTE-ECO-TRADE"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

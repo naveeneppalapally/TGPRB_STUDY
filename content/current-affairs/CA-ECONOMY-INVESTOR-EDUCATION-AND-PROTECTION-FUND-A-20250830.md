@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "IEPFA Niveshak Shivir in Hyderabad"
-related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-ECO-MARKETS", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-BANKING"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

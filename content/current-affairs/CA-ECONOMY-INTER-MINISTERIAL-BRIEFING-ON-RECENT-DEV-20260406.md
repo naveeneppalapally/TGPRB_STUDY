@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Essential Food Commodities Price Monitoring and Food Security"
-related_topic_ids: ["NOTE-ECO-AGRICULTURE", "NOTE-ECO-BANKING", "NOTE-ECO-INFLATION", "NOTE-GEO-AGRICULTURE"]
+related_topic_ids: ["NOTE-ECO-BANKING", "NOTE-GEO-AGRICULTURE"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

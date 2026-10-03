@@ -45,6 +45,7 @@
             </span>
           </div>
         </header>
+        <NoteStudySwitch slug="telangana-statehood-movement" />
 
         <!-- ══ Coverage strip · the 6 ways TGPRB tests this topic ══ -->
         <section class="mb-10">
@@ -574,14 +575,7 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} · {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-TEL-MOVEMENT"
-                  :prompt="`Explain the historical significance and exam traps for this Telangana movement PYQ: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
+                <p v-if="q.teaching_explanation" class="callout-body mt-2">Study commentary: {{ q.teaching_explanation }}</p>
               </div>
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="reveal(q)">
                 <span>Reveal answer &amp; explanation</span>
@@ -661,14 +655,6 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} · {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-TEL-MOVEMENT"
-                  :prompt="`Explain the historical context for this TGPSC-style Telangana question and the exam trap: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
               </div>
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
                 <span>Reveal answer &amp; explanation</span>
@@ -721,7 +707,9 @@
             <UIcon name="i-heroicons-arrow-right" class="h-4 w-4 shrink-0 accent transition-transform group-hover:translate-x-1" />
           </NuxtLink>
         </nav>
-      </article>
+
+        <NoteStudySwitch slug="telangana-statehood-movement" />
+</article>
 
       <!-- ══ Sticky ToC ══════════════════════════════════════════════════ -->
       <TableOfContents
@@ -730,12 +718,6 @@
         weight-text="5-8 questions per paper, highest weight in Telangana section."
       />
     </div>
-
-    <AiAssistantDrawer
-      note-id="NOTE-TEL-MOVEMENT"
-      note-title="Telangana Armed Struggle &amp; Statehood Movement"
-      :quick-prompts="aiQuickPrompts"
-    />
     <PersonalNotesDrawer
       ref="notesDrawerRef"
       note-id="NOTE-TEL-MOVEMENT"
@@ -788,6 +770,7 @@
 </template>
 
 <script setup lang="ts">
+import { canonicalNotePyqs } from "~/utils/note-pyqs"
 import { computed, onMounted, onUnmounted, reactive, ref, watch, nextTick } from 'vue'
 import TableOfContents from '@/components/TableOfContents.vue'
 import CurrentAffairsStrip from '@/components/CurrentAffairsStrip.vue'
@@ -798,7 +781,6 @@ import PersonalNotesDrawer from '@/components/notes/PersonalNotesDrawer.vue'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
 import type { SectionContext } from '@/types/annotations'
 
-const aiQuickPrompts = useAiPromptChips('NOTE-TEL-MOVEMENT')
 
 const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
 const { loadNotes } = usePersonalNotes()
@@ -857,6 +839,7 @@ onUnmounted(() => {
 })
 
 interface Pyq {
+  teaching_explanation?: string
   uid: string
   exam: string
   year: string
@@ -870,7 +853,7 @@ interface Pyq {
   selected: number | null
 }
 
-const pyqs: Pyq[] = reactive([
+const pyqs: Pyq[] = reactive(canonicalNotePyqs([
   {
     "uid": "PYQ-3129",
     "exam": "SI",
@@ -1627,7 +1610,7 @@ const pyqs: Pyq[] = reactive([
     "revealed": false,
     "selected": null
   }
-])
+]))
 
 const activeExamFilter = ref('all')
 

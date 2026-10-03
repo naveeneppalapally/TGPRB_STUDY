@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "18th National Seminar on National Sample Surveys"
-related_topic_ids: ["NOTE-ECO-NSO", "NOTE-ECO-STATISTICS"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

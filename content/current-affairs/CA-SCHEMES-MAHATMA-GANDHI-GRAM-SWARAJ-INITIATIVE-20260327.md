@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "Mahatma Gandhi Gram Swaraj Initiative and Handloom Development in Telangana"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-HIS-MODERN", "NOTE-SCHEMES-TEXTILES", "NOTE-TEL-ECONOMY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-HIS-MODERN"]
+keyword_topic_ids: ["NOTE-HIS-MODERN"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

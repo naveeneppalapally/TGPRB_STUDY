@@ -16,6 +16,11 @@
   >
     <!-- Handle / peek bar -->
     <div
+      :role="trayHeight === 'peek' ? 'button' : undefined"
+      :tabindex="trayHeight === 'peek' ? 0 : undefined"
+      :aria-label="trayHeight === 'peek' ? 'Open work tray' : undefined"
+      @keydown.enter.self.prevent="onPeekTap"
+      @keydown.space.self.prevent="onPeekTap"
       class="tray-handle relative flex shrink-0 select-none flex-col items-center touch-none"
       @touchstart.passive="onStart"
       @touchmove.prevent="onMove"
@@ -87,7 +92,7 @@ const { chapter, section, activeIndex, trayHeight, setTray, sectionCounts } = us
 const { getCountForSection } = usePersonalNotes()
 
 const counts = computed(() => sectionCounts(section.value))
-const noteCount = computed(() => getCountForSection(chapter.value.noteId, section.value.id))
+const noteCount = computed(() => chapter.value && section.value ? getCountForSection(chapter.value.noteId, section.value.id) : 0)
 
 const PEEK = 56
 const vh = ref(800)

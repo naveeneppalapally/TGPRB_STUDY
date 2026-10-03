@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "Judiciary and Law"
 related_topic_ids: ["NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Telangana"
 topic: "Panchayat Advancement Index Baseline Report FY 2022-23"
-related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-PANCHAYATI", "NOTE-TEL-SCHEMES"]
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

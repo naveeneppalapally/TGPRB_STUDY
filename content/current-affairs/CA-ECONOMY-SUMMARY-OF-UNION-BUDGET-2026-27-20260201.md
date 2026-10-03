@@ -5,6 +5,7 @@ category: "economy"
 exam_section: "Economy"
 topic: "Union Budget 2026-27 Key Highlights and Allocations"
 related_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-ECO-BUDGET", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

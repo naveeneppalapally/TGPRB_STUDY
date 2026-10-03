@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "IIAC Colloquium on Dispute Resolution and Article 136"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

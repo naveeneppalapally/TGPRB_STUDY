@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "International Mobility for Skilled Workers and SIICs"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECO-SKILLING", "NOTE-POL-JUDICIARY"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-POL-JUDICIARY"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

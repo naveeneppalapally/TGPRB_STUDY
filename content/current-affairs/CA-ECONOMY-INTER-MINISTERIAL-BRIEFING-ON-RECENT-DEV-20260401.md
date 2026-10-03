@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Kharif 2026 Seed and Fertilizer Preparedness"
-related_topic_ids: ["NOTE-ECO-AGRI", "NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-POL-PANCHAYAT", "NOTE-TEL-AGRI"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-AGRICULTURE", "NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

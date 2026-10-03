@@ -18,6 +18,9 @@
       </div>
     </header>
 
+    <UAlert v-if="reviewState.error.value" class="mb-4" color="amber" :description="reviewState.error.value" />
+    <UAlert v-if="reviewState.hasGuestProgress.value" class="mb-4" title="Guest progress on this device" description="Import your guest learning history into this account." :actions="[{ label: 'Import progress', click: reviewState.importGuestProgress }]" />
+    <p v-if="reviewState.sync.pendingCount.value" class="mb-4 text-body-xs t-mid">{{ reviewState.sync.pendingCount.value }} changes waiting to sync</p>
     <!-- ── Stats strip ────────────────────────────────────────────────── -->
     <section class="panel mb-8 grid grid-cols-1 divide-y divide-[var(--line)] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
       <div class="px-6 py-4">
@@ -178,10 +181,10 @@
     <div class="callout callout-red mx-auto mt-10 max-w-xl">
       <p class="callout-title">
         <UIcon name="i-heroicons-exclamation-triangle" class="h-4 w-4" />
-        2026 exam: 20% negative marking penalty
+        {{ TSLPRB_EXAM_RULES.examYear }} exam: {{ TSLPRB_EXAM_RULES.wrongPenalty / TSLPRB_EXAM_RULES.correctMark * 100 }}% negative marking penalty
       </p>
       <p class="callout-body">
-        If you find yourself hesitating, rate honestly as "Again" or "Hard". FSRS calibrates intervals to guarantee 90%+ retention, ensuring you never make unsure guesses in the real exam.
+        If you find yourself hesitating, rate honestly as "Again" or "Hard". FSRS targets 90% retention; actual recall depends on your learning and honest ratings.
       </p>
     </div>
   </div>
@@ -189,9 +192,10 @@
 
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted, watch } from 'vue'
-import { Rating, type Card as FSRSCard } from 'ts-fsrs'
+import { Rating } from 'ts-fsrs'
 import { useFSRSEngine, type StudyCard, type FSRSGrade } from '@/composables/useFSRSEngine'
 import { useFlashcardUnlock } from '@/composables/useFlashcardUnlock'
+import { TSLPRB_EXAM_RULES } from '@/composables/useExamStrategy'
 
 useHead({ title: 'Review Queue - BeatBook' })
 
@@ -205,12 +209,12 @@ interface RawCard {
   source_note_id?: string
 }
 
-const STORAGE_FSRS_KEY = 'studyos:fsrs:card-states'
 
 const engine = useFSRSEngine({ targets: { static: 0.9 } })
 const { mode, isGatePassed } = useFlashcardUnlock()
 
-const allRawCards = ref<RawCard[]>([])
+const reviewState = useReviewState()
+const allRawCards = computed(() => reviewState.catalog.value)
 const studyCardsMap = ref<Record<string, StudyCard>>({})
 const dueCards = ref<RawCard[]>([])
 const currentIndex = ref(0)
@@ -296,154 +300,19 @@ function getTodayKey(): string {
   return `studyos:fsrs:reviewed-today:${uid}:${getLocalDateKey()}`
 }
 
-function loadSavedFSRSStates(): Record<string, any> {
-  if (!import.meta.client) return {}
-  try {
-    const key = getStorageFsrsKey()
-    let raw = localStorage.getItem(key)
-    // Fallback to legacy key for guest/migration
-    if (!raw && !user.value) {
-      raw = localStorage.getItem('studyos:fsrs:card-states')
-    }
-    return raw ? JSON.parse(raw) : {}
-  } catch {
-    return {}
-  }
-}
-
-function saveFSRSState(cardId: string, card: StudyCard) {
-  if (!import.meta.client) return
-  try {
-    const key = getStorageFsrsKey()
-    const existing = loadSavedFSRSStates()
-    // Spread the previous record first so display fields (front, back,
-    // exam_section, topic, subtopic) stored by CA MCQ cards survive.
-    const prev = existing[cardId] ?? {}
-    existing[cardId] = {
-      ...prev,
-      id: card.id,
-      contentId: card.contentId,
-      contentType: card.contentType,
-      studyType: card.studyType,
-      targetRetention: card.targetRetention,
-      verifiedPyqCount: card.verifiedPyqCount,
-      fsrs: {
-        ...card.fsrs,
-        due: card.fsrs.due.toISOString(),
-        last_review: card.fsrs.last_review ? card.fsrs.last_review.toISOString() : undefined,
-      },
-    }
-    localStorage.setItem(key, JSON.stringify(existing))
-  } catch (e) {
-    console.error('Failed to save FSRS state:', e)
-  }
-}
-
 function hydrateCards() {
-  const saved = loadSavedFSRSStates()
-  const map: Record<string, StudyCard> = {}
-  const now = new Date()
-
-  const eligible = allRawCards.value.filter(c => {
-    if (mode.value === 'direct') return true
-    return c.source_note_id ? isGatePassed(c.source_note_id) : false
-  })
-
-  eligible.forEach(c => {
-    if (saved[c.id]) {
-      const s = saved[c.id]
-      map[c.id] = {
-        id: s.id,
-        contentId: s.contentId,
-        contentType: s.contentType,
-        studyType: s.studyType,
-        unlocked: true,
-        verifiedPyqCount: s.verifiedPyqCount ?? 10,
-        targetRetention: s.targetRetention ?? 0.9,
-        fsrs: {
-          ...s.fsrs,
-          due: new Date(s.fsrs.due),
-          last_review: s.fsrs.last_review ? new Date(s.fsrs.last_review) : undefined,
-        },
-      }
-    } else {
-      map[c.id] = engine.createNewCard('static', {
-        id: c.id,
-        contentId: c.id,
-        contentType: 'atomic_flashcard',
-        unlocked: true,
-        verifiedPyqCount: 10,
-        targetRetention: 0.9,
-        now,
-      })
-    }
-  })
-
-  // CA MCQ cards (created from wrong answers on the current-affairs page) live
-  // only in saved state - they are not part of the gate-backed raw card list.
-  // Hydrate them so they enter the due queue like any other card.
-  for (const [id, s] of Object.entries(saved)) {
-    if (!id.startsWith('ca-mcq-') || map[id]) continue
-    map[id] = {
-      id: s.id,
-      contentId: s.contentId,
-      contentType: s.contentType,
-      studyType: s.studyType,
-      unlocked: true,
-      verifiedPyqCount: s.verifiedPyqCount ?? 0,
-      targetRetention: s.targetRetention ?? 0.9,
-      fsrs: {
-        ...s.fsrs,
-        due: new Date(s.fsrs.due),
-        last_review: s.fsrs.last_review ? new Date(s.fsrs.last_review) : undefined,
-      },
-    }
-  }
-
+  const map = Object.fromEntries(reviewState.cards.value.map(card => [card.id, card]))
   studyCardsMap.value = map
-
-  // Build due queue
-  const dueStudyCards = engine.buildDueQueue(Object.values(map), now)
-  const dueCardIds = new Set(dueStudyCards.map(sc => sc.id))
-
-  // Map back to RawCard objects
-  let queue = eligible.filter(c => dueCardIds.has(c.id))
-
-  // If no cards are overdue, show unreviewed / new cards first
-  if (queue.length === 0) {
-    queue = eligible.filter(c => {
-      const sc = map[c.id]
-      return sc && sc.fsrs.reps === 0
-    })
-  }
-
-  // Append due CA MCQ cards (created from wrong answers on the current-affairs
-  // page). They carry their own display fields in saved state.
-  for (const sc of dueStudyCards) {
-    if (!sc.id.startsWith('ca-mcq-')) continue
-    const s = saved[sc.id]
-    queue.push({
-      id: sc.id,
-      front: s?.front ?? '',
-      back: s?.back ?? '',
-      exam_section: s?.exam_section ?? 'Current Affairs',
-      topic: s?.topic ?? 'Current Affairs',
-      subtopic: s?.subtopic ?? '',
-    })
-  }
-
-  dueCards.value = queue
+  const rawMap = new Map(allRawCards.value.map(card => [card.id, card]))
+  dueCards.value = reviewState.due.value.map(card => rawMap.get(card.id) || {
+    id: card.id, front: reviewState.saved.value[card.id]?.front || '', back: reviewState.saved.value[card.id]?.back || '',
+    exam_section: reviewState.saved.value[card.id]?.exam_section || 'Current Affairs',
+    topic: reviewState.saved.value[card.id]?.topic || 'Current Affairs', subtopic: reviewState.saved.value[card.id]?.subtopic || '',
+  })
   currentIndex.value = 0
   flipped.value = false
-
-  // Compute average estimated retention across learned cards
-  const learned = Object.values(map).filter(sc => sc.fsrs.reps > 0)
-  if (learned.length > 0) {
-    const totalR = learned.reduce((acc, sc) => acc + engine.retrievability(sc, now), 0)
-    avgRetention.value = Math.round((totalR / learned.length) * 100)
-  } else {
-    avgRetention.value = 90
-  }
+  const learned = reviewState.cards.value.filter(card => card.fsrs.reps > 0)
+  avgRetention.value = learned.length ? Math.round(learned.reduce((n,c) => n + engine.retrievability(c),0) / learned.length * 100) : 90
 }
 
 function toggleFlip() {
@@ -470,29 +339,14 @@ async function rate(ratingNumber: number) {
   const now = new Date()
 
   // 1. Schedule next review via FSRS
-  const result = engine.scheduleReview(currentFSRSCard.value, grade, now)
+  const result = reviewState.record(currentFSRSCard.value, grade, now)
+  if (!result) return
   studyCardsMap.value[currentCard.value.id] = result.card
-  saveFSRSState(currentCard.value.id, result.card)
 
   // 2. Increment stats
   reviewedToday.value++
   if (import.meta.client) {
     localStorage.setItem(getTodayKey(), String(reviewedToday.value))
-  }
-
-  // 3. Sync rating with cloud if authenticated
-  if (user.value) {
-    try {
-      await $fetch('/api/review/grade', {
-        method: 'POST',
-        body: {
-          card_id: currentCard.value.id,
-          rating: ratingNumber,
-        },
-      })
-    } catch {
-      // Offline/local fallback
-    }
   }
 
   // 4. Update retention metric
@@ -502,66 +356,24 @@ async function rate(ratingNumber: number) {
     avgRetention.value = Math.round((totalR / learned.length) * 100)
   }
 
-  // 5. Handle 'Again' re-insertion or queue progression
-  const finishedCard = currentCard.value
+  // Every rating leaves this session queue. FSRS alone determines its next due time.
+  isTransitioning.value = dueCards.value.length > 1
+  dueCards.value.splice(currentIndex.value, 1)
+  if (currentIndex.value >= dueCards.value.length) currentIndex.value = 0
+  if (!dueCards.value.length) { flipped.value = false; isTransitioning.value = false }
 
-  if (grade === Rating.Again) {
-    if (dueCards.value.length > 1) {
-      isTransitioning.value = true
-      dueCards.value.splice(currentIndex.value, 1)
-      dueCards.value.push(finishedCard)
-    } else {
-      // Single card remaining: keep in place and flip back to front for immediate re-test
-      flipped.value = false
-      return
-    }
-  } else {
-    if (dueCards.value.length > 1) {
-      isTransitioning.value = true
-      dueCards.value.splice(currentIndex.value, 1)
-    } else {
-      // Final card completed: empty queue
-      dueCards.value.splice(currentIndex.value, 1)
-      flipped.value = false
-      isTransitioning.value = false
-    }
-  }
-
-  if (currentIndex.value >= dueCards.value.length) {
-    currentIndex.value = 0
-  }
 }
 
 onMounted(async () => {
-  if (import.meta.client) {
-    const savedCount = localStorage.getItem(getTodayKey())
-    if (savedCount) reviewedToday.value = parseInt(savedCount, 10) || 0
-  }
-
-  try {
-    const data = await $fetch<{ cards: RawCard[] }>('/api/flashcards')
-    if (Array.isArray(data.cards)) {
-      allRawCards.value = data.cards
-      hydrateCards()
-    }
-  } catch {
-    allRawCards.value = []
-  }
-})
-
-watch(user, () => {
-  // Re-hydrate on user login/logout/switch
-  if (import.meta.client) {
-    const savedCount = localStorage.getItem(getTodayKey())
-    reviewedToday.value = savedCount ? (parseInt(savedCount, 10) || 0) : 0
-  }
+  const savedCount = localStorage.getItem(getTodayKey())
+  reviewedToday.value = savedCount ? Number(savedCount) || 0 : 0
+  await reviewState.hydrate()
   hydrateCards()
 })
-
-watch(() => mode.value, () => {
-  hydrateCards()
-})
-
+watch(user, () => { reviewedToday.value = Number(localStorage.getItem(getTodayKey())) || 0; hydrateCards() })
+watch(() => reviewState.loading.value, loading => { if (!loading) hydrateCards() })
+watch(() => mode.value, hydrateCards)
+watch(() => reviewState.due.value.map(card => card.id).join(','), () => { if (!isTransitioning.value) hydrateCards() })
 watch(() => currentCard.value?.id, () => {
   if (!isTransitioning.value) {
     flipped.value = false

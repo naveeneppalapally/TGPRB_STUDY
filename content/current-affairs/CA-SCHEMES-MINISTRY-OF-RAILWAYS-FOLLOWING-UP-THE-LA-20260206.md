@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Angamali-Sabarimala Railway Project and Amrit Bharat Station Scheme"
-related_topic_ids: ["NOTE-ECO-INFRA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

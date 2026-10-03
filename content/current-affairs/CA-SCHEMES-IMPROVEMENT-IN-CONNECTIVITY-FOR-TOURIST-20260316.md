@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "RCS-UDAN Tourism Routes and Viability Gap Funding"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-SCHEMES-UDAN"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

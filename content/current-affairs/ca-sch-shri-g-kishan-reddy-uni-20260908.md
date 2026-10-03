@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Government Schemes"
 related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"
@@ -21,31 +22,31 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23079
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2307993&reg=3&lang=1"
 event_key: "CIL-TBSY-CSR-2024"
 mcqs:
-  - exam_fact: "Under the Thalassemia Bal Sewa Yojana (TBSY) implemented by Coal India Limited, up to Rs. 10 lakh per patient is extended directly to empanelled hospitals for Bone Marrow Transplant."
-    question: "What is the maximum financial assistance provided per patient under Coal India Limited's Thalassemia Bal Sewa Yojana (TBSY) for Bone Marrow Transplant?"
-    options:
-      - "Rs. 5 lakh"
-      - "Rs. 10 lakh"
-      - "Rs. 15 lakh"
-      - "Rs. 20 lakh"
-    answer: 1
-    explanation: "Under the scheme, up to Rs. 10 lakh per patient is extended directly to empanelled hospitals for Bone Marrow Transplant (BMT), against a total outlay of Rs. 130 crore across four phases."
-  - exam_fact: "The comprehensive CSR framework for the Indian coal sector was prepared by the Indian Institute of Corporate Affairs (IICA)."
-    question: "Which institution prepared the comprehensive CSR framework for Indian coal companies launched by the Ministry of Coal?"
-    options:
-      - "Indian Institute of Technology, Delhi"
-      - "Administrative Staff College of India"
-      - "Indian Institute of Corporate Affairs (IICA)"
-      - "Tata Institute of Social Sciences"
-    answer: 2
-    explanation: "The framework has been prepared by the Indian Institute of Corporate Affairs (IICA) and serves as a guiding framework for an impactful and outcome oriented CSR for benefit of people residing in the coal mining areas."
-  - exam_fact: "Nanha Sa Dil initiative was launched by CIL in partnership with the Sri Sathya Sai Health and Education Trust to address Congenital Heart Defects."
-    question: "The 'Nanha Sa Dil' initiative, launched to address Congenital Heart Defects in newborns, is implemented by Coal India Limited in partnership with which organization?"
-    options:
-      - "Sri Sathya Sai Health and Education Trust"
-      - "Tata Trusts"
-      - "Aga Khan Development Network"
-      - "Azim Premji Foundation"
-    answer: 0
-    explanation: "Nanha Sa Dil was launched by CIL in partnership with the Sri Sathya Sai Health and Education Trust."
+- exam_fact: Under the Thalassemia Bal Sewa Yojana (TBSY) implemented by Coal India
+    Limited, up to Rs. 10 lakh per patient is extended directly to empanelled hospitals
+    for Bone Marrow Transplant.
+  question: What is the maximum financial assistance provided per patient under Coal
+    India Limited's Thalassemia Bal Sewa Yojana (TBSY) for Bone Marrow Transplant?
+  options:
+  - Rs. 5 lakh
+  - Rs. 10 lakh
+  - Rs. 15 lakh
+  - Rs. 20 lakh
+  answer: 1
+  explanation: Under the scheme, up to Rs. 10 lakh per patient is extended directly
+    to empanelled hospitals for Bone Marrow Transplant (BMT), against a total outlay
+    of Rs. 130 crore across four phases.
+- exam_fact: The comprehensive CSR framework for the Indian coal sector was prepared
+    by the Indian Institute of Corporate Affairs (IICA).
+  question: Which institution prepared the comprehensive CSR framework for Indian
+    coal companies launched by the Ministry of Coal?
+  options:
+  - Indian Institute of Technology, Delhi
+  - Administrative Staff College of India
+  - Indian Institute of Corporate Affairs (IICA)
+  - Tata Institute of Social Sciences
+  answer: 2
+  explanation: The framework has been prepared by the Indian Institute of Corporate
+    Affairs (IICA) and serves as a guiding framework for an impactful and outcome
+    oriented CSR for benefit of people residing in the coal mining areas.
 ---

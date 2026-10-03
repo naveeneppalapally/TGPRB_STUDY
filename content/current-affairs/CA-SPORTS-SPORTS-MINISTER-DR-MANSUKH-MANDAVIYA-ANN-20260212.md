@@ -4,7 +4,8 @@ type: "current_affair"
 category: "sports"
 exam_section: "General Studies"
 topic: "6th Khelo India Winter Games 2026"
-related_topic_ids: ["NOTE-SPO-KHELOINDIA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

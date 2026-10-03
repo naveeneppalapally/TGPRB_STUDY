@@ -74,11 +74,12 @@ def same_release_different_headline(groups: dict[str, list[dict]]) -> list[str]:
 
 
 def mcq_count(text: str) -> int:
-    """Count top-level mcq entries under the mcqs array."""
-    tail = text.split("\nmcqs:", 1)
-    if len(tail) < 2:
+    import yaml
+    try:
+        data = yaml.safe_load(text.split('---',2)[1])
+        return len(data.get('mcqs', []))
+    except (ValueError, IndexError, yaml.YAMLError):
         return 0
-    return len(re.findall(r"^\s*-\s+exam_fact:", tail[1], re.MULTILINE))
 
 
 def main() -> int:

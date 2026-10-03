@@ -2,10 +2,10 @@
 id: "CA-PIB-CA_DEF_RAKSHA_MANTRI_CONDUCTS_AN_20260901"
 type: "current_affair"
 category: "defence"
-exam_section: "General Knowledge"
+exam_section: "General Studies"
 topic: "Defence and Security"
-related_topic_ids:
-  - ""
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

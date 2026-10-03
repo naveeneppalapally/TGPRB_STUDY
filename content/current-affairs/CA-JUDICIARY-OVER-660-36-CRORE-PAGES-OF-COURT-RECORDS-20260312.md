@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "e-Courts Mission Mode Project Phase III and Digital Judiciary Initiatives"
 related_topic_ids: ["NOTE-POL-JUDICIARY", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

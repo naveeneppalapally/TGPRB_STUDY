@@ -1,0 +1,282 @@
+{
+  "canonical": [
+    {
+      "id": "ENG-VOCAB-COMP",
+      "name": "Vocabulary & Reading Comprehension",
+      "subjectId": "ENG",
+      "count": 90,
+      "tier": 1
+    },
+    {
+      "id": "ENG-GRAMMAR",
+      "name": "English Grammar & Usage",
+      "subjectId": "ENG",
+      "count": 63,
+      "tier": 1
+    },
+    {
+      "id": "SCI-PHY",
+      "name": "Physics",
+      "subjectId": "SCI",
+      "count": 61,
+      "tier": 1
+    },
+    {
+      "id": "REA-VERBAL",
+      "name": "Verbal Reasoning & Logical Deductions",
+      "subjectId": "REA",
+      "count": 531,
+      "tier": 1
+    },
+    {
+      "id": "POL-FR-DPSP",
+      "name": "Fundamental Rights, DPSP & Duties",
+      "subjectId": "POL",
+      "count": 35,
+      "tier": 1
+    },
+    {
+      "id": "ARI-NUMBER-MATH",
+      "name": "Number System & Basic Math",
+      "subjectId": "ARI",
+      "count": 117,
+      "tier": 1
+    },
+    {
+      "id": "ARI-COMMERCIAL-MATH",
+      "name": "Commercial Arithmetic",
+      "subjectId": "ARI",
+      "count": 295,
+      "tier": 1
+    },
+    {
+      "id": "ARI-SPEED-WORK-MENS",
+      "name": "Speed, Work & Mensuration",
+      "subjectId": "ARI",
+      "count": 264,
+      "tier": 1
+    },
+    {
+      "id": "SCI-CHEM",
+      "name": "Chemistry",
+      "subjectId": "SCI",
+      "count": 63,
+      "tier": 1
+    },
+    {
+      "id": "GEO-PHY",
+      "name": "Physical Geography & Geomorphology",
+      "subjectId": "GEO",
+      "count": 76,
+      "tier": 1
+    },
+    {
+      "id": "SCI-TECH-SPACE",
+      "name": "Science, Technology, Space & Defence",
+      "subjectId": "SCI",
+      "count": 73,
+      "tier": 1
+    },
+    {
+      "id": "GEO-ENV",
+      "name": "Forests, Wildlife & Environment",
+      "subjectId": "GEO",
+      "count": 82,
+      "tier": 1
+    },
+    {
+      "id": "SCI-BIO",
+      "name": "Biology & Life Sciences",
+      "subjectId": "SCI",
+      "count": 109,
+      "tier": 1
+    },
+    {
+      "id": "REA-NONVERBAL",
+      "name": "Non-Verbal & Spatial Reasoning",
+      "subjectId": "REA",
+      "count": 54,
+      "tier": 1
+    },
+    {
+      "id": "HIS-ANCIENT",
+      "name": "Ancient India & Culture",
+      "subjectId": "HIS",
+      "count": 130,
+      "tier": 1
+    },
+    {
+      "id": "TEL-HIS-CULTURE",
+      "name": "Telangana History & Culture",
+      "subjectId": "TEL",
+      "count": 158,
+      "tier": 1
+    },
+    {
+      "id": "HIS-MEDIEVAL",
+      "name": "Medieval India",
+      "subjectId": "HIS",
+      "count": 79,
+      "tier": 1
+    },
+    {
+      "id": "HIS-MODERN-MOV",
+      "name": "Modern India & National Movement",
+      "subjectId": "HIS",
+      "count": 120,
+      "tier": 1
+    },
+    {
+      "id": "GEO-AGRI-MINERAL",
+      "name": "Agriculture, Minerals & Transport",
+      "subjectId": "GEO",
+      "count": 112,
+      "tier": 1
+    },
+    {
+      "id": "TEL-GEO-ECO-SCHEMES",
+      "name": "Telangana Geography, Economy & Welfare Schemes",
+      "subjectId": "TEL",
+      "count": 40,
+      "tier": 1
+    },
+    {
+      "id": "TEL-MOVEMENT",
+      "name": "Telangana Armed Struggle & Statehood Movement",
+      "subjectId": "TEL",
+      "count": 169,
+      "tier": 1
+    },
+    {
+      "id": "GEO-CLIMATE",
+      "name": "Climate, Monsoons & Soil",
+      "subjectId": "GEO",
+      "count": 25,
+      "tier": 1
+    },
+    {
+      "id": "POL-JUDICIARY-BODIES",
+      "name": "Judiciary & Constitutional/Statutory Bodies",
+      "subjectId": "POL",
+      "count": 59,
+      "tier": 1
+    },
+    {
+      "id": "POL-UNION-EXEC-LEG",
+      "name": "Union Executive & Legislature",
+      "subjectId": "POL",
+      "count": 57,
+      "tier": 1
+    },
+    {
+      "id": "POL-CONST-FRAME",
+      "name": "Constitutional Framework & Preamble",
+      "subjectId": "POL",
+      "count": 31,
+      "tier": 1
+    },
+    {
+      "id": "POL-STATE-LOCAL",
+      "name": "State Government & Local Governance",
+      "subjectId": "POL",
+      "count": 21,
+      "tier": 1
+    },
+    {
+      "id": "ECO-FISCAL-SCHEMES",
+      "name": "Public Finance, Budget & Central Schemes",
+      "subjectId": "ECO",
+      "count": 114,
+      "tier": 1
+    },
+    {
+      "id": "ECO-BASIC-BANKING",
+      "name": "National Income, Banking & Monetary Policy",
+      "subjectId": "ECO",
+      "count": 70,
+      "tier": 1
+    },
+    {
+      "id": "GEO-DRAINAGE",
+      "name": "Drainage Systems of India: Himalayan Rivers (Indus, Ganga, Brahmaputra); Peninsular Rivers (Godavari, Krishna, Cauvery, Mahanadi); West Flowing Rivers (Narmada, Tapi); River Projects, Dams & Multipurpose Schemes; Lakes, Waterfalls & Coastal Features",
+      "subjectId": "GEO",
+      "count": 31,
+      "tier": 1
+    }
+  ],
+  "delivered": [
+    {
+      "id": "NOTE-POL-HIST-ACTS",
+      "pyqCount": 12,
+      "canonicalTopicIds": [
+        "HIS-MODERN-MOV",
+        "POL-CONST-FRAME"
+      ]
+    },
+    {
+      "id": "NOTE-POL-MAKING-CONST",
+      "pyqCount": 9,
+      "canonicalTopicIds": [
+        "POL-CONST-FRAME"
+      ]
+    },
+    {
+      "id": "NOTE-GEO-DRAINAGE",
+      "pyqCount": 31,
+      "canonicalTopicIds": [
+        "GEO-DRAINAGE"
+      ]
+    },
+    {
+      "id": "NOTE-GEO-DAMS",
+      "pyqCount": 10,
+      "canonicalTopicIds": [
+        "TEL-HIS-CULTURE",
+        "TEL-GEO-ECO-SCHEMES",
+        "GEO-DRAINAGE",
+        "GEO-ENV"
+      ]
+    },
+    {
+      "id": "NOTE-GEO-MOUNTAINS",
+      "pyqCount": 10,
+      "canonicalTopicIds": [
+        "GEO-PHY",
+        "GEO-DRAINAGE",
+        "GEO-CLIMATE"
+      ]
+    },
+    {
+      "id": "NOTE-GEO-FORESTS",
+      "pyqCount": 10,
+      "canonicalTopicIds": [
+        "TEL-GEO-ECO-SCHEMES",
+        "GEO-ENV"
+      ]
+    },
+    {
+      "id": "NOTE-GEO-IRRIGATION",
+      "pyqCount": 10,
+      "canonicalTopicIds": [
+        "TEL-GEO-ECO-SCHEMES",
+        "GEO-DRAINAGE",
+        "ECO-FISCAL-SCHEMES",
+        "GEO-AGRI-MINERAL"
+      ]
+    },
+    {
+      "id": "NOTE-TEL-MOVEMENT",
+      "pyqCount": 42,
+      "canonicalTopicIds": [
+        "TEL-MOVEMENT"
+      ]
+    },
+    {
+      "id": "NOTE-POL-UNION-EXEC",
+      "pyqCount": 18,
+      "canonicalTopicIds": [
+        "POL-UNION-EXEC-LEG"
+      ]
+    }
+  ]
+}

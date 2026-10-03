@@ -5,6 +5,7 @@ category: "appointments"
 exam_section: "Polity"
 topic: "C.P. Radhakrishnan Presides as Rajya Sabha Chairman"
 related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

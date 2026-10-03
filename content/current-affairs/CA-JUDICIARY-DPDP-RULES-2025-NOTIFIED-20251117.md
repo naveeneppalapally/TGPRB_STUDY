@@ -4,7 +4,8 @@ type: "current_affair"
 category: "judiciary"
 exam_section: "Polity"
 topic: "Digital Personal Data Protection (DPDP) Rules 2025"
-related_topic_ids: ["NOTE-POL-LEGISLATION", "NOTE-ST-CYBER"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "appointments"
 exam_section: "Polity"
 topic: "Appointments and Office-Holders"
 related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "O"
 exam_depth: "si"

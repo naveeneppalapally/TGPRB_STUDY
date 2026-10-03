@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "South Central Railway Rail Parcel App & JPP-RCS Initiative"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-TEL-INFRA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

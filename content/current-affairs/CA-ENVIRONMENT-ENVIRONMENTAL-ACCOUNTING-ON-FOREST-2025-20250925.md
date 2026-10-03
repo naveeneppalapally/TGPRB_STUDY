@@ -4,7 +4,8 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Environmental Accounting on Forest 2025 Report"
-related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-TEL-FORESTS"]
+related_topic_ids: ["NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

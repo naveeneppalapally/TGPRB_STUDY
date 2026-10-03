@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Polity"
 topic: "Unveiling of C. Rajagopalachari Bust at Rashtrapati Bhavan"
-related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-POL-MODERN-HISTORY", "NOTE-TEL-CULTURE"]
+related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-MAKING-CONST", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-POL-HIST-ACTS"]
 is_telangana_focus: true
 difficulty: "F"
 exam_depth: "both"

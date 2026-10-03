@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "SAMARTH Centres under Capital Goods Sector Scheme"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INDUSTRY40"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

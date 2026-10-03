@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "General Studies"
 topic: "CPCB Report on Polluted River Stretches 2025"
 related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

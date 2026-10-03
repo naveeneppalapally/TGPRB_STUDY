@@ -4,7 +4,8 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Vision for Sujalam Bharat Workshop and Water Management Initiatives"
-related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-POL-PANCHAYAT", "NOTE-TEL-WATER"]
+related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-IRRIGATION", "NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

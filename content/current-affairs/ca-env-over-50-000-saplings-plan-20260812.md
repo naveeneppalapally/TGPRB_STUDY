@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Geography"
 topic: "Environment"
 related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "constable"

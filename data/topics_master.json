@@ -32,7 +32,27 @@
       "NOTE-POL-CONSTITUTION-FRAME",
       "NOTE-POL-PREAMBLE",
       "NOTE-POL-CONSTITUTION"
-    ]
+    ],
+    "noteSlug": "historical-background-1773-1947",
+    "subjectSlug": "polity",
+    "studySlug": "historical-background-1773-1947",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-3073",
+      "PYQ-0690",
+      "PYQ-0758",
+      "PYQ-0759",
+      "PYQ-0520",
+      "PYQ-1560",
+      "PYQ-3003",
+      "PYQ-3126",
+      "PYQ-0495",
+      "PYQ-0925",
+      "PYQ-1086",
+      "PYQ-1813"
+    ],
+    "gateFile": "content/data/gates/historical-background-1773-1947.json",
+    "deckFile": "content/data/flashcards/polity/historical-background-1773-1947.json"
   },
   {
     "id": "NOTE-POL-MAKING-CONST",
@@ -57,7 +77,24 @@
     ],
     "aliases": [
       "NOTE-POL-CONSTITUENT-ASSEMBLY"
-    ]
+    ],
+    "noteSlug": "making-of-the-constitution",
+    "subjectSlug": "polity",
+    "studySlug": "making-of-the-constitution",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-3037",
+      "PYQ-0766",
+      "PYQ-1560",
+      "PYQ-1168",
+      "PYQ-2537",
+      "PYQ-0972",
+      "PYQ-1240",
+      "PYQ-0943",
+      "PYQ-0592"
+    ],
+    "gateFile": "content/data/gates/making-of-the-constitution.json",
+    "deckFile": "content/data/flashcards/polity/making-of-the-constitution.json"
   },
   {
     "id": "NOTE-GEO-DRAINAGE",
@@ -105,7 +142,46 @@
     "aliases": [
       "NOTE-GEO-RIVERS",
       "NOTE-GEO-WATER-RESOURCES"
-    ]
+    ],
+    "noteSlug": "drainage-system-of-india",
+    "subjectSlug": "geography",
+    "studySlug": "drainage-system-of-india",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-0510",
+      "PYQ-0533",
+      "PYQ-0712",
+      "PYQ-0715",
+      "PYQ-0719",
+      "PYQ-0722",
+      "PYQ-0735",
+      "PYQ-0991",
+      "PYQ-1010",
+      "PYQ-1236",
+      "PYQ-1506",
+      "PYQ-1507",
+      "PYQ-1511",
+      "PYQ-1512",
+      "PYQ-1513",
+      "PYQ-1518",
+      "PYQ-1524",
+      "PYQ-1532",
+      "PYQ-1672",
+      "PYQ-1820",
+      "PYQ-1890",
+      "PYQ-2238",
+      "PYQ-2336",
+      "PYQ-2499",
+      "PYQ-2500",
+      "PYQ-2502",
+      "PYQ-2508",
+      "PYQ-2934",
+      "PYQ-2944",
+      "PYQ-3043",
+      "PYQ-3118"
+    ],
+    "gateFile": "content/data/gates/drainage-system.json",
+    "deckFile": "content/data/flashcards/geography/drainage-system.json"
   },
   {
     "id": "NOTE-GEO-DAMS",
@@ -141,7 +217,25 @@
     "aliases": [
       "NOTE-GEO-RESERVOIRS",
       "NOTE-GEO-HYDRO"
-    ]
+    ],
+    "noteSlug": "dams-in-india",
+    "subjectSlug": "geography",
+    "studySlug": "dams-in-india",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-0510",
+      "PYQ-1010",
+      "PYQ-1513",
+      "PYQ-0378",
+      "PYQ-0386",
+      "PYQ-0715",
+      "PYQ-1204",
+      "PYQ-1506",
+      "PYQ-2512",
+      "PYQ-1532"
+    ],
+    "gateFile": "content/data/gates/dams-in-india.json",
+    "deckFile": "content/data/flashcards/geography/dams-in-india.json"
   },
   {
     "id": "NOTE-GEO-MOUNTAINS",
@@ -188,7 +282,25 @@
     "aliases": [
       "NOTE-GEO-PASSES",
       "NOTE-GEO-RANGES"
-    ]
+    ],
+    "noteSlug": "mountains-in-india",
+    "subjectSlug": "geography",
+    "studySlug": "mountains-in-india",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-0535",
+      "PYQ-0292",
+      "PYQ-0294",
+      "PYQ-3071",
+      "PYQ-2991",
+      "PYQ-1236",
+      "PYQ-3031",
+      "PYQ-0295",
+      "PYQ-1506",
+      "PYQ-1821"
+    ],
+    "gateFile": "content/data/gates/mountains-in-india.json",
+    "deckFile": "content/data/flashcards/geography/mountains-in-india.json"
   },
   {
     "id": "NOTE-GEO-FORESTS",
@@ -224,7 +336,25 @@
       "NOTE-GEO-ENVIRONMENT",
       "NOTE-ENV-CONSERVATION",
       "NOTE-ENV-BIODIVERSITY"
-    ]
+    ],
+    "noteSlug": "forests-in-india",
+    "subjectSlug": "geography",
+    "studySlug": "forests-in-india",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-1815",
+      "PYQ-1533",
+      "PYQ-1212",
+      "PYQ-0143",
+      "PYQ-1509",
+      "PYQ-0733",
+      "PYQ-1149",
+      "PYQ-1008",
+      "PYQ-2512",
+      "PYQ-1483"
+    ],
+    "gateFile": "content/data/gates/forests-of-india.json",
+    "deckFile": "content/data/flashcards/geography/forests-in-india.json"
   },
   {
     "id": "NOTE-GEO-IRRIGATION",
@@ -256,7 +386,25 @@
     "aliases": [
       "NOTE-GEO-IRRIG",
       "NOTE-TEL-IRRIGATION"
-    ]
+    ],
+    "noteSlug": "irrigation-in-india",
+    "subjectSlug": "geography",
+    "studySlug": "irrigation-in-india",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-1532",
+      "PYQ-0386",
+      "PYQ-1513",
+      "PYQ-2526",
+      "PYQ-2518",
+      "PYQ-2977",
+      "PYQ-1790",
+      "PYQ-0510",
+      "PYQ-1506",
+      "PYQ-1010"
+    ],
+    "gateFile": "content/data/gates/irrigation-in-india.json",
+    "deckFile": "content/data/flashcards/geography/irrigation-in-india.json"
   },
   {
     "id": "NOTE-TEL-MOVEMENT",
@@ -291,7 +439,57 @@
       "NOTE-TEL-STATEHOOD",
       "NOTE-TEL-AGITATION",
       "NOTE-TEL-HISTORY"
-    ]
+    ],
+    "noteSlug": "telangana-statehood-movement",
+    "subjectSlug": "telangana",
+    "studySlug": "telangana-statehood-movement",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-3129",
+      "PYQ-2719",
+      "PYQ-0144",
+      "PYQ-0589",
+      "PYQ-0604",
+      "PYQ-0145",
+      "PYQ-0793",
+      "PYQ-2716",
+      "PYQ-0147",
+      "PYQ-2712",
+      "PYQ-2717",
+      "PYQ-2721",
+      "PYQ-2722",
+      "PYQ-2540",
+      "PYQ-0384",
+      "PYQ-0148",
+      "PYQ-2530",
+      "PYQ-3091",
+      "PYQ-2718",
+      "PYQ-3113",
+      "PYQ-3114",
+      "PYQ-3083",
+      "PYQ-0149",
+      "PYQ-3121",
+      "PYQ-2714",
+      "PYQ-2534",
+      "PYQ-3124",
+      "PYQ-3084",
+      "PYQ-2713",
+      "PYQ-3100",
+      "PYQ-0150",
+      "PYQ-2715",
+      "PYQ-0606",
+      "PYQ-3089",
+      "PYQ-2723",
+      "PYQ-2725",
+      "PYQ-0151",
+      "PYQ-0152",
+      "PYQ-0154",
+      "PYQ-3101",
+      "PYQ-0611",
+      "PYQ-0155"
+    ],
+    "gateFile": "content/data/gates/telangana-statehood-movement.json",
+    "deckFile": "content/data/flashcards/telangana/telangana-statehood-movement.json"
   },
   {
     "id": "NOTE-POL-UNION-EXEC",
@@ -316,6 +514,31 @@
     "aliases": [
       "NOTE-POL-PARLIAMENT",
       "NOTE-POL-LEGISLATURE"
+    ],
+    "gateFile": "content/data/gates/union-executive-and-legislature.json",
+    "deckFile": "content/data/flashcards/polity/union-executive-and-legislature.json",
+    "subjectSlug": "polity",
+    "studySlug": "parliament",
+    "delivery": "study-pilot",
+    "pyqUids": [
+      "PYQ-2699",
+      "PYQ-0998",
+      "PYQ-1182",
+      "PYQ-0313",
+      "PYQ-0309",
+      "PYQ-0164",
+      "PYQ-1077",
+      "PYQ-0326",
+      "PYQ-0191",
+      "PYQ-0519",
+      "PYQ-2203",
+      "PYQ-0754",
+      "PYQ-0314",
+      "PYQ-1107",
+      "PYQ-0301",
+      "PYQ-2517",
+      "PYQ-1834",
+      "PYQ-0768"
     ]
   },
   {

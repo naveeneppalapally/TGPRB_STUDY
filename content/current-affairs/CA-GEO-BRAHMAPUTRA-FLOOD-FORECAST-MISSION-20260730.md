@@ -1,10 +1,11 @@
 ---
 id: "CA-GEO-BRAHMAPUTRA-FLOOD-FORECAST-MISSION-20260730"
 type: "current_affair"
-category: "geography"
-exam_section: "Indian & World Geography"
+category: "environment"
+exam_section: "Geography"
 topic: "Brahmaputra River - Floods and Disaster Management"
 related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-CLIMATE", "NOTE-GEO-DRAINAGE"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-CLIMATE", "NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

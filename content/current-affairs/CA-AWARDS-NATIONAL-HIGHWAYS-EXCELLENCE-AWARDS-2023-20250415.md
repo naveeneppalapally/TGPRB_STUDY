@@ -4,7 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "Telangana"
 topic: "National Highways Excellence Awards 2023"
-related_topic_ids: ["NOTE-TEL-INFRA", "NOTE-GEO-INFRA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "National Centre of Excellence for Aeronautics under PM-SETU Scheme"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-ECON-SKILLING", "NOTE-SCHEMES-SKILL"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

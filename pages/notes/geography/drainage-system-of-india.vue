@@ -46,6 +46,7 @@
             </span>
           </div>
         </header>
+        <NoteStudySwitch slug="drainage-system-of-india" />
 
 
         <!-- ══ Coverage strip - the 6 ways TGPRB tests this topic ══ -->
@@ -840,14 +841,7 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-GEO-DRAINAGE"
-                  :prompt="`Explain the reasoning for this PYQ and the likely exam trap: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid ?? ''], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
+                <p v-if="q.teaching_explanation" class="callout-body mt-2">Study commentary: {{ q.teaching_explanation }}</p>
               </div>
 
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="reveal(q)">
@@ -939,14 +933,6 @@
                   Correct Answer: Option {{ 'ABCD'[q.correct] }} - {{ q.options[q.correct] }}
                 </p>
                 <p class="callout-body">{{ q.explanation }}</p>
-                <AiAskButton
-                  class="mt-3"
-                  note-id="NOTE-GEO-DRAINAGE"
-                  :prompt="`Explain the reasoning for this TGPSC-style question and the exam trap: ${q.question}`"
-                  :source-question-id="q.uid"
-                  :quiz-state="{ incorrect_question_ids: q.selected === q.correct ? [] : [q.uid], gate_score: 0, gate_total: 0 }"
-                  label="Explain with AI"
-                />
               </div>
 
               <button v-else type="button" class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1" @click="advReveal(q)">
@@ -1000,7 +986,9 @@
             <UIcon name="i-heroicons-arrow-right" class="h-4 w-4 shrink-0 accent transition-transform group-hover:translate-x-1" />
           </NuxtLink>
         </nav>
-      </article>
+
+        <NoteStudySwitch slug="drainage-system-of-india" />
+</article>
 
       <!-- ══ Sticky ToC ══════════════════════════════════════════════════ -->
       <TableOfContents
@@ -1009,11 +997,6 @@
         weight-text="2-3 questions per paper, every year since 2015."
       />
     </div>
-    <AiAssistantDrawer
-      note-id="NOTE-GEO-DRAINAGE"
-      note-title="Drainage System of India"
-      :quick-prompts="aiQuickPrompts"
-    />
     <PersonalNotesDrawer
       ref="notesDrawerRef"
       note-id="NOTE-GEO-DRAINAGE"
@@ -1066,6 +1049,7 @@
 </template>
 
 <script setup lang="ts">
+import { canonicalNotePyqs } from "~/utils/note-pyqs"
 import TableOfContents from '@/components/TableOfContents.vue'
 import SectionNotesButton from '@/components/notes/SectionNotesButton.vue'
 import InlineNoteStrip from '@/components/notes/InlineNoteStrip.vue'
@@ -1078,7 +1062,6 @@ useHead({
   meta: [{ name: 'description', content: 'Complete TGPRB study note: Drainage System of India with an interactive physical river map, 28 PYQs, and 10 practice questions.' }],
 })
 
-const aiQuickPrompts = useAiPromptChips('NOTE-GEO-DRAINAGE')
 
 /* ── Personal notes ──────────────────────────────────────────────────────── */
 const notesDrawerRef = ref<InstanceType<typeof PersonalNotesDrawer> | null>(null)
@@ -1277,7 +1260,9 @@ const textHierarchy = `Indian Drainage System
 
 /* ── PYQs - real TGPRB questions, tagged to the 6 coverage patterns ─────── */
 interface Pyq {
-  uid?: string
+  teaching_explanation?: string
+  uid: string
+  question: string
   exam: string
   year: string
   river: string
@@ -1291,7 +1276,7 @@ interface Pyq {
   selected: number | null
 }
 
-const pyqs = reactive<Pyq[]>([
+const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
   {
     "uid": "PYQ-0510",
     "exam": "Constable",
@@ -1994,7 +1979,7 @@ const pyqs = reactive<Pyq[]>([
       "godavari"
     ]
   }
-])
+]))
 
 const activeExamFilter = ref<'all' | 'Constable' | 'SI'>('all')
 const activeYearFilter = ref<string>('all')

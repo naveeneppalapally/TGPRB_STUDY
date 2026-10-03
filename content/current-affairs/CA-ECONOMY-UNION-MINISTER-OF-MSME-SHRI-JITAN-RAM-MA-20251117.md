@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "44th India International Trade Fair MSME Pavilions"
-related_topic_ids: ["NOTE-ECO-MSME", "NOTE-ECO-TRADE"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

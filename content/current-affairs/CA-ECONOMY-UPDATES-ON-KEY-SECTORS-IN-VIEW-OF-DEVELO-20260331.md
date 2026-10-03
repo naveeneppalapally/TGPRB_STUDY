@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "West Asia Crisis Energy Mitigation Measures"
-related_topic_ids: ["NOTE-ECO-ENERGY", "NOTE-ECO-TAXATION"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

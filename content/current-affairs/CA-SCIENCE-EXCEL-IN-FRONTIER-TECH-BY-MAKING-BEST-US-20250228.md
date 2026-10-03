@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Vigyan Vaibhav 2025 and National Science Day"
-related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE", "NOTE-TEL-EVENTS"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

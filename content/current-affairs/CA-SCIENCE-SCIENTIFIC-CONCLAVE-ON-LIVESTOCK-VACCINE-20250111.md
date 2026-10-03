@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Conclave on Pandemic Preparedness and Vaccine Innovation 2025"
-related_topic_ids: ["NOTE-SCI-VACCINES", "NOTE-TEL-HYDERABAD"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

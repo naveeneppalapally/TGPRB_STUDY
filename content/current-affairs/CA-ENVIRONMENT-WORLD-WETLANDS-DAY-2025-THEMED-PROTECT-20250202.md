@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Geography"
 topic: "World Wetlands Day 2025"
 related_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-CLIMATE", "NOTE-GEO-FORESTS"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

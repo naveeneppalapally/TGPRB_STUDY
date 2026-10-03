@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Invest India Investment Performance FY 2025-26"
-related_topic_ids: ["NOTE-ECO-FDI", "NOTE-ECO-INVESTMENT", "NOTE-GEO-AGRICULTURE", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

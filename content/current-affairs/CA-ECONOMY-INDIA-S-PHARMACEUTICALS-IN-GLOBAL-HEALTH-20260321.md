@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "India's Pharmaceutical Sector Global Ranking and Exports"
-related_topic_ids: ["NOTE-ECO-INDUSTRY", "NOTE-ST-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

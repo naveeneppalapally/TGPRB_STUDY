@@ -1,4 +1,5 @@
 import { computed, inject, onBeforeUnmount, onMounted, provide, ref, watch, type ComputedRef, type InjectionKey, type Ref } from 'vue'
+import { useSupabaseUser } from '#imports'
 import type {
   DockTab,
   SectionProgress,
@@ -87,7 +88,8 @@ interface PersistedState {
 }
 
 export function createStudySession(chapter: Ref<StudyChapterResolved | null>): StudySession {
-  const storageKey = computed(() => `studyos:study:${chapter.value?.slug || 'unknown'}`)
+  const user = useSupabaseUser()
+  const storageKey = computed(() => `studyos:study:${user.value?.id || 'guest'}:${chapter.value?.slug || 'unknown'}`)
 
   const sections = computed(() => chapter.value?.sections || [])
   const activeSectionId = ref(sections.value[0]?.id ?? '')
@@ -228,9 +230,21 @@ export function createStudySession(chapter: Ref<StudyChapterResolved | null>): S
 
   // ── Persistence ───────────────────────────────────────────────────────
   let timer: ReturnType<typeof setInterval> | null = null
+  let restoredKey = ''
 
   function restoreState() {
-    if (!import.meta.client || storageKey.value === 'studyos:study:unknown') return
+    if (!import.meta.client || !chapter.value) return
+    restoredKey = storageKey.value
+    progress.value = {}
+    pendingAnchor.value = null
+    flashLineId.value = null
+    pyqIndex.value = 0
+    cardIndex.value = 0
+    trapIndex.value = 0
+    elapsedSeconds.value = 0
+    activeSectionId.value = sections.value[0]?.id || ''
+    railPinned.value = false
+    clozeOn.value = false
     try {
       const raw = localStorage.getItem(storageKey.value)
       if (raw) {
@@ -251,8 +265,8 @@ export function createStudySession(chapter: Ref<StudyChapterResolved | null>): S
   })
 
   watch(storageKey, (key) => {
-    if (key !== 'studyos:study:unknown') restoreState()
-  })
+    restoreState()
+  }, { flush: 'sync' })
 
   onBeforeUnmount(() => {
     if (timer) clearInterval(timer)
@@ -260,7 +274,7 @@ export function createStudySession(chapter: Ref<StudyChapterResolved | null>): S
   })
 
   watch([activeSectionId, progress, railPinned, clozeOn], () => {
-    if (!import.meta.client || storageKey.value === 'studyos:study:unknown') return
+    if (!import.meta.client || !chapter.value || restoredKey !== storageKey.value) return
     const state: PersistedState = {
       activeSectionId: activeSectionId.value,
       progress: progress.value,

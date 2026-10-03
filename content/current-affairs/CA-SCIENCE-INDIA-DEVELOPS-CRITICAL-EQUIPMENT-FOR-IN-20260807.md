@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "Facility for Antiproton and Ion Research (FAIR) Project"
-related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE", "NOTE-TEL-PSU"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

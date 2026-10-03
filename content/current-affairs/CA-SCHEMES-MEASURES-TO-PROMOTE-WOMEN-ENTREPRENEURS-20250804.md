@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Economy"
 topic: "Swavalambini Programme for Women Entrepreneurs"
-related_topic_ids: ["NOTE-ECO-DEVELOPMENT", "NOTE-POL-JUDICIARY", "NOTE-SCH-WOMEN"]
+related_topic_ids: ["NOTE-POL-JUDICIARY"]
+keyword_topic_ids: ["NOTE-POL-JUDICIARY"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

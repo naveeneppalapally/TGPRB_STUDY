@@ -4,7 +4,8 @@ type: "current_affair"
 category: "science"
 exam_section: "Science & Technology"
 topic: "DIGIPIN Geo-Coded Digital Addressing Portal"
-related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE", "NOTE-TEL-INSTITUTIONS"]
+related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-SCI-SPACE"]
+keyword_topic_ids: ["NOTE-SCI-SPACE"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

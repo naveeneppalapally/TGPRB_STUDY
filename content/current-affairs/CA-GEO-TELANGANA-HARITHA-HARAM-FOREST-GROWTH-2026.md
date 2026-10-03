@@ -1,10 +1,11 @@
 ---
 id: CA-GEO-TELANGANA-HARITHA-HARAM-FOREST-GROWTH-2026
 type: current_affair
-category: state_telangana
+category: "telangana"
 exam_section: Geography
 topic: Forests of India
 related_topic_ids: ["NOTE-GEO-FORESTS"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS"]
 is_telangana_focus: true
 difficulty: F
 exam_depth: both

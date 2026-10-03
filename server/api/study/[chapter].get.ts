@@ -1,24 +1,7 @@
 import { createError, defineEventHandler, getRouterParam } from 'h3'
-import fs from 'node:fs'
-import path from 'node:path'
-import type { StudyChapter, StudyChapterResolved, StudyPyq, StudyPyqRef } from '~/types/study'
-import parliament from '~/content/data/study/polity/parliament'
-import historicalBackground from '~/content/data/study/polity/historical-background-1773-1947'
-import makingOfTheConstitution from '~/content/data/study/polity/making-of-the-constitution'
+import type { StudyChapterResolved, StudyPyq, StudyPyqRef } from '~/types/study'
+import { CHAPTERS } from '../../utils/study-chapters'
 import staticPyqs from '~/content/data/study/pyqs.json'
-
-/**
- * Study chapter registry.
- * Chapter files live in content/data/study/<subject>/<slug>.ts. They reference
- * PYQs by uid only; this endpoint resolves them against
- * data/pyq_enriched_master.json (single source of truth, never duplicated)
- * and staticPyqs for edge runtimes (Cloudflare Pages).
- */
-const CHAPTERS: Record<string, StudyChapter> = {
-  [parliament.slug]: parliament,
-  [historicalBackground.slug]: historicalBackground,
-  [makingOfTheConstitution.slug]: makingOfTheConstitution,
-}
 
 interface MasterPyq {
   uid: string
@@ -56,20 +39,7 @@ function paperLabel(sourceFile: string): string {
 
 function resolvePyq(ref: StudyPyqRef, index: Map<string, MasterPyq>): StudyPyq | null {
   let q = index.get(ref.uid)
-  // On-demand development fallback: only read master file if UID is not in staticPyqs cache
-  if (!q && process.env.NODE_ENV !== 'production') {
-    try {
-      const filePath = path.resolve(process.cwd(), 'data/pyq_enriched_master.json')
-      if (fs.existsSync(filePath)) {
-        const all: MasterPyq[] = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
-        for (const item of all) index.set(item.uid, item)
-        q = index.get(ref.uid)
-      }
-    } catch {
-      // Edge runtime fallback
-    }
-  }
-  if (!q) return null
+  if (!q) throw createError({ statusCode: 500, statusMessage: `Unresolved verified Study PYQ: ${ref.uid}` })
   const papers = Array.from(new Set((q.occurrences || []).map(o => paperLabel(o.source_file))))
   return {
     uid: q.uid,

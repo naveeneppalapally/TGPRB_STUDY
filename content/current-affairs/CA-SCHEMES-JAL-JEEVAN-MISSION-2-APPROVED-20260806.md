@@ -2,9 +2,10 @@
 id: "CA-SCHEMES-JAL-JEEVAN-MISSION-2-APPROVED-20260806"
 type: "current_affair"
 category: "schemes"
-exam_section: "Indian & World Geography"
+exam_section: "Geography"
 topic: "Jal Jeevan Mission 2.0 - Drinking Water to Rural Households"
-related_topic_ids: ["NOTE-ECO-GENERAL", "NOTE-ECO-SCHEMES", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-UNION-EXEC", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-UNION-EXEC", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

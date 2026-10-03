@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "West Asia Energy Crisis Preparedness and LPG Regulations"
-related_topic_ids: ["NOTE-ECO-INFRA", "NOTE-GEO-AGRICULTURE", "NOTE-TEL-ECONOMY", "NOTE-TEL-GEOGRAPHY"]
+related_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-TEL-GEOGRAPHY"]
+keyword_topic_ids: ["NOTE-GEO-AGRICULTURE", "NOTE-TEL-GEOGRAPHY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

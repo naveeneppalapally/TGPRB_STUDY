@@ -5,6 +5,7 @@ category: "telangana"
 exam_section: "Telangana"
 topic: "STATATHON Hackathon by MoSPI"
 related_topic_ids: ["NOTE-SCI-INNOVATION", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -5,6 +5,7 @@ category: "international"
 exam_section: "Polity"
 topic: "International Affairs"
 related_topic_ids: ["NOTE-POL-HIST-ACTS"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"
@@ -21,31 +22,29 @@ canonical_source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=23090
 source_url: "https://www.pib.gov.in/PressReleaseDetail.aspx?PRID=2309079&reg=3&lang=1"
 event_key: "BHARAT-INNOVATES-BRICS-2026"
 mcqs:
-  - exam_fact: "The 'Bharat Innovates Exposition' was held on 11-12 September 2026 at Bharat Mandapam, New Delhi, alongside the 18th BRICS Summit."
-    question: "Where was the BRICS Bharat Innovates (BBI) Exposition held in September 2026?"
-    options:
-      - "Vigyan Bhawan, New Delhi"
-      - "Bharat Mandapam, New Delhi"
-      - "Bhubaneswar, Odisha"
-      - "Nice, France"
-    answer: 1
-    explanation: "The Union Ministry of Education organized the ‘Bharat Innovates Exposition’ on 11-12 September 2026 at Bharat Mandapam, New Delhi to showcase India's Deep-Tech innovations alongside the 18th BRICS Summit."
-  - exam_fact: "The theme of India’s BRICS Chairship in 2026 is Building for Resilience, Innovation, Cooperation and Sustainability."
-    question: "What is the theme of India’s BRICS Chairship for 2026?"
-    options:
-      - "Partnership for New Industrial Revolution"
-      - "Building for Resilience, Innovation, Cooperation and Sustainability"
-      - "Inclusive Growth and Shared Prosperity"
-      - "Economic Growth through Digital Transformation"
-    answer: 1
-    explanation: "The BBI showcased India's Deep-Tech startups, aligning with the theme of India’s BRICS Chairship, 'Building for Resilience, Innovation, Cooperation and Sustainability'."
-  - exam_fact: "The maiden edition of Bharat Innovates 2026 was held in Nice, France from 14-16 June 2026."
-    question: "In which city was the maiden edition of Bharat Innovates 2026 held prior to the New Delhi exposition?"
-    options:
-      - "Paris, France"
-      - "London, United Kingdom"
-      - "Nice, France"
-      - "Berlin, Germany"
-    answer: 2
-    explanation: "The BRICS Bharat Innovates Exposition marked the second major exposition after the maiden edition of Bharat Innovates held in Nice, France from 14-16 June 2026."
+- exam_fact: The 'Bharat Innovates Exposition' was held on 11-12 September 2026 at
+    Bharat Mandapam, New Delhi, alongside the 18th BRICS Summit.
+  question: Where was the BRICS Bharat Innovates (BBI) Exposition held in September
+    2026?
+  options:
+  - Vigyan Bhawan, New Delhi
+  - Bharat Mandapam, New Delhi
+  - Bhubaneswar, Odisha
+  - Nice, France
+  answer: 1
+  explanation: The Union Ministry of Education organized the ‘Bharat Innovates Exposition’
+    on 11-12 September 2026 at Bharat Mandapam, New Delhi to showcase India's Deep-Tech
+    innovations alongside the 18th BRICS Summit.
+- exam_fact: The theme of India’s BRICS Chairship in 2026 is Building for Resilience,
+    Innovation, Cooperation and Sustainability.
+  question: What is the theme of India’s BRICS Chairship for 2026?
+  options:
+  - Partnership for New Industrial Revolution
+  - Building for Resilience, Innovation, Cooperation and Sustainability
+  - Inclusive Growth and Shared Prosperity
+  - Economic Growth through Digital Transformation
+  answer: 1
+  explanation: The BBI showcased India's Deep-Tech startups, aligning with the theme
+    of India’s BRICS Chairship, 'Building for Resilience, Innovation, Cooperation
+    and Sustainability'.
 ---

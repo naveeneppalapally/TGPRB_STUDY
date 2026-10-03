@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "National Capacity Building Programme for Tribal Healers"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-TEL-TRIBS"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

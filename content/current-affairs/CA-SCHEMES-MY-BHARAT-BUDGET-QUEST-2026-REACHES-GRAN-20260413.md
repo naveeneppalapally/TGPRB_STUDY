@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "Polity"
 topic: "MY Bharat Nari Shakti Youth Parliament 2026"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCHEMES-YOUTH"]
+related_topic_ids: ["NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "2nd Regional Meeting of Urban Development Ministers"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCHEMES-AMRUT", "NOTE-TEL-URBAN"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: ["NOTE-ECO-SCHEMES"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

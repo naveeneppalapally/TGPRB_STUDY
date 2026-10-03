@@ -5,6 +5,7 @@ category: "judiciary"
 exam_section: "Polity"
 topic: "Supreme Court on Preamble and Basic Structure Doctrine"
 related_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY", "NOTE-POL-MAKING-CONST"]
+keyword_topic_ids: ["NOTE-POL-HIST-ACTS", "NOTE-POL-JUDICIARY"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

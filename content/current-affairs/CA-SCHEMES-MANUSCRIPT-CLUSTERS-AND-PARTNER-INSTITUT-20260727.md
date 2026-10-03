@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "Gyan Bharatam Mission and National Manuscript Survey"
-related_topic_ids: ["NOTE-CUL-HERITAGE", "NOTE-TEL-ARCHIVES", "NOTE-TEL-CULTURE", "NOTE-TEL-MOVEMENT"]
+related_topic_ids: ["NOTE-TEL-CULTURE", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

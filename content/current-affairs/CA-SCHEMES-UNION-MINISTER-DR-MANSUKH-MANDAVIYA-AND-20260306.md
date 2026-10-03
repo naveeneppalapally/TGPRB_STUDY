@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "MY Bharat-NSS Chintan Shivir"
-related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-YOUTH-DEV"]
+related_topic_ids: ["NOTE-ECO-SCHEMES"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

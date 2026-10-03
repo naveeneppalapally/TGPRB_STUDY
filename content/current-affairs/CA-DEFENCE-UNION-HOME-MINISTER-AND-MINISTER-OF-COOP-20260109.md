@@ -4,7 +4,8 @@ type: "current_affair"
 category: "defence"
 exam_section: "General Studies"
 topic: "National IED Data Management System (NIDMS)"
-related_topic_ids: ["NOTE-DEF-SECURITY-AGENCIES"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

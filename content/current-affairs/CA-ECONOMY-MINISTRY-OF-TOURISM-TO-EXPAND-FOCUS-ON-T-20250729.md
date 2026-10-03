@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "MICE Tourism Sector Expansion in India"
-related_topic_ids: ["NOTE-ECO-TOURISM", "NOTE-ECO-INFRA"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

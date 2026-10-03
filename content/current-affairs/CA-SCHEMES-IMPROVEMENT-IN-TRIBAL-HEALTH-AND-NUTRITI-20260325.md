@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "DA-JGUA and National Mission to Eliminate Sickle Cell Anemia"
-related_topic_ids: ["NOTE-SCH-CENTRAL", "NOTE-TEL-HEALTH"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

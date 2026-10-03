@@ -4,7 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Jan Vishwas Bill 2025 and FDI Growth"
-related_topic_ids: ["NOTE-ECO-EODB", "NOTE-POL-LEGISLATION"]
+related_topic_ids: []
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

@@ -1,5 +1,5 @@
 <template>
-  <header class="study-topbar flex h-12 shrink-0 items-center gap-3 border-b b-line bg-elev px-3 sm:px-4">
+  <header v-if="chapter" class="study-topbar flex h-12 shrink-0 items-center gap-3 border-b b-line bg-elev px-3 sm:px-4">
     <!-- Left: back + breadcrumb -->
     <div class="flex min-w-0 items-center gap-2">
       <NuxtLink
@@ -82,21 +82,18 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import topics from '~/data/topics_master.json'
+import { noteRoute } from '~/utils/topic-delivery'
 import { useStudySession } from '~/composables/useStudySession'
 
 const { chapter, sections, activeIndex, chapterPercent, clozeOn, elapsedSeconds } = useStudySession()
 const colorMode = typeof useColorMode === 'function' ? useColorMode() : { value: 'dark', preference: 'system' }
 
-const fullNoteSlugs = new Set([
-  'historical-background-1773-1947',
-  'making-of-the-constitution',
-])
 const noteUrl = computed(() => {
-  if (!chapter.value?.slug) return null
-  return (chapter.value.hasNote || fullNoteSlugs.has(chapter.value.slug))
-    ? `/notes/${chapter.value.subjectSlug}/${chapter.value.slug}`
-    : null
+  const topic = topics.find(topic => topic.id === chapter.value?.noteId)
+  return chapter.value?.hasNote && topic ? noteRoute(topic) : null
 })
+
 
 const clock = computed(() => {
   const s = elapsedSeconds.value

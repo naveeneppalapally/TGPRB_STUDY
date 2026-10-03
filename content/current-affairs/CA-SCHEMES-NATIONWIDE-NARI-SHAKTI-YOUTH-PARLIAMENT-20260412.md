@@ -5,6 +5,7 @@ category: "schemes"
 exam_section: "Polity"
 topic: "Nari Shakti Youth Parliament 2026"
 related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

@@ -4,7 +4,8 @@ type: "current_affair"
 category: "schemes"
 exam_section: "General Studies"
 topic: "World Audio Visual and Entertainment Summit (WAVES) 2025"
-related_topic_ids: ["NOTE-ECO-MEDIA", "NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-ECO-SCHEMES", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: []
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

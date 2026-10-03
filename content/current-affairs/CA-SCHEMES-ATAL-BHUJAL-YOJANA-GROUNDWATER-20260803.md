@@ -2,9 +2,10 @@
 id: "CA-SCHEMES-ATAL-BHUJAL-YOJANA-GROUNDWATER-20260803"
 type: "current_affair"
 category: "schemes"
-exam_section: "Indian & World Geography"
+exam_section: "Geography"
 topic: "Atal Bhujal Yojana - Groundwater Management"
-related_topic_ids: ["NOTE-ECO-GENERAL", "NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-PANCHAYAT"]
+related_topic_ids: ["NOTE-GEO-DRAINAGE", "NOTE-GEO-IRRIGATION", "NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-GEO-IRRIGATION", "NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

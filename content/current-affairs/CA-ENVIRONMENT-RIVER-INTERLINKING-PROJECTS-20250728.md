@@ -5,6 +5,7 @@ category: "environment"
 exam_section: "Geography"
 topic: "National Perspective Plan for River Interlinking"
 related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-MOUNTAINS", "NOTE-TEL-GEOGRAPHY"]
+keyword_topic_ids: ["NOTE-GEO-DRAINAGE"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"
