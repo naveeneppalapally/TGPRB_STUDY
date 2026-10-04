@@ -1,6 +1,6 @@
 {
   "backfill_from_date": "2026-09-26",
-  "last_completed_date": "2026-09-30",
+  "last_completed_date": "2026-10-04",
   "outcomes": {
     "2315209": {
       "at": "2026-10-03T04:16:21.639069+00:00",
@@ -1323,9 +1323,9 @@
       "status": "irrelevant"
     },
     "2317440": {
-      "at": "2026-10-03T06:57:47.745624+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:54.300236+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317443": {
       "at": "2026-10-03T05:00:00.210519+00:00",
@@ -1363,29 +1363,29 @@
       "status": "written"
     },
     "2317507": {
-      "at": "2026-10-03T06:58:07.646972+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:25.499113+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317509": {
-      "at": "2026-10-03T06:57:20.608655+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:17:57.029541+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317514": {
-      "at": "2026-10-03T06:57:43.338329+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:40.890797+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317515": {
-      "at": "2026-10-03T06:57:33.527426+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:15.062529+00:00",
+      "detail": "ca-sch-government-strengthens-im-20261001-prid-2317515.md",
+      "status": "written"
     },
     "2317528": {
-      "at": "2026-10-03T06:58:04.863682+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:14.776895+00:00",
+      "detail": "ca-tel-finding-new-purpose-in-wh-20261001-prid-2317528.md",
+      "status": "written"
     },
     "2317531": {
       "at": "2026-10-03T04:58:05.147083+00:00",
@@ -1403,9 +1403,9 @@
       "status": "duplicate"
     },
     "2317553": {
-      "at": "2026-10-03T06:57:15.627832+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:17:45.722053+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317554": {
       "at": "2026-10-03T06:57:12.615210+00:00",
@@ -1453,14 +1453,14 @@
       "status": "irrelevant"
     },
     "2317606": {
-      "at": "2026-10-03T06:57:35.972043+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:24.307545+00:00",
+      "detail": "ca-eco-forward-looking-survey-on-20261001-prid-2317606.md",
+      "status": "written"
     },
     "2317611": {
-      "at": "2026-10-03T06:57:53.404516+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:20:06.428435+00:00",
+      "detail": "ca-spo-dr-mansukh-mandaviya-lau-20261001-prid-2317611.md",
+      "status": "written"
     },
     "2317612": {
       "at": "2026-10-03T05:02:39.043403+00:00",
@@ -1493,9 +1493,9 @@
       "status": "irrelevant"
     },
     "2317642": {
-      "at": "2026-10-03T06:58:02.009596+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:05.182061+00:00",
+      "detail": "ca-sch-from-first-drop-to-clean-20261001-prid-2317642.md",
+      "status": "written"
     },
     "2317644": {
       "at": "2026-10-03T04:57:56.524770+00:00",
@@ -1523,9 +1523,9 @@
       "status": "irrelevant"
     },
     "2317663": {
-      "at": "2026-10-03T06:57:40.792830+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:36.108119+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317668": {
       "at": "2026-10-03T04:57:49.535949+00:00",
@@ -1618,9 +1618,9 @@
       "status": "written"
     },
     "2317787": {
-      "at": "2026-10-03T06:57:30.711933+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:05.919319+00:00",
+      "detail": "ca-sch-social-justice-ministry-s-20261001-prid-2317787.md",
+      "status": "written"
     },
     "2317803": {
       "at": "2026-10-03T04:59:02.962367+00:00",
@@ -1633,9 +1633,9 @@
       "status": "written"
     },
     "2317812": {
-      "at": "2026-10-03T06:58:14.838533+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:38.254699+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317827": {
       "at": "2026-10-03T05:00:22.204379+00:00",
@@ -1658,14 +1658,14 @@
       "status": "written"
     },
     "2317857": {
-      "at": "2026-10-03T06:58:17.588469+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:42.305944+00:00",
+      "detail": "ca-eco-dr-abhilaksh-likhi-unio-20261001-prid-2317857.md",
+      "status": "written"
     },
     "2317859": {
-      "at": "2026-10-03T06:57:38.576072+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:30.716140+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317861": {
       "at": "2026-10-03T04:58:26.953092+00:00",
@@ -1678,14 +1678,14 @@
       "status": "irrelevant"
     },
     "2317878": {
-      "at": "2026-10-03T06:57:56.010562+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:20:13.412779+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317882": {
-      "at": "2026-10-03T06:57:45.526256+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:48.189790+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317884": {
       "at": "2026-10-03T05:01:05.871757+00:00",
@@ -1703,24 +1703,24 @@
       "status": "irrelevant"
     },
     "2317889": {
-      "at": "2026-10-03T06:57:28.333061+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:18:15.910195+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317890": {
-      "at": "2026-10-03T06:57:59.261862+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:20:20.901824+00:00",
+      "detail": "ca-sch-pm-e-drive-scheme-20261001-prid-2317890.md",
+      "status": "written"
     },
     "2317893": {
-      "at": "2026-10-03T06:58:12.655053+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:35.126517+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317895": {
-      "at": "2026-10-03T06:58:10.210191+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:30.053856+00:00",
+      "detail": "ca-tel-nhrc-india-takes-suomotu-20261001-prid-2317895.md",
+      "status": "written"
     },
     "2317906": {
       "at": "2026-10-03T04:58:48.431607+00:00",
@@ -1733,9 +1733,9 @@
       "status": "irrelevant"
     },
     "2317909": {
-      "at": "2026-10-03T06:57:25.899680+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:18:11.336532+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317915": {
       "at": "2026-10-03T04:58:43.096380+00:00",
@@ -1753,14 +1753,14 @@
       "status": "irrelevant"
     },
     "2317928": {
-      "at": "2026-10-03T06:57:23.350454+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:18:03.747974+00:00",
+      "detail": "ca-sch-dr-virendra-kumar-shri-20261001-prid-2317928.md",
+      "status": "written"
     },
     "2317932": {
-      "at": "2026-10-03T06:57:50.477897+00:00",
-      "detail": "All configured Gemini models are exhausted",
-      "status": "retryable"
+      "at": "2026-10-04T07:19:59.266097+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2317937": {
       "at": "2026-10-03T06:56:50.690044+00:00",
@@ -1778,9 +1778,9 @@
       "status": "irrelevant"
     },
     "2317976": {
-      "at": "2026-10-03T06:57:17.900201+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:17:51.431845+00:00",
+      "detail": "ca-sci-cooperation-between-the-n-20261001-prid-2317976.md",
+      "status": "written"
     },
     "2317992": {
       "at": "2026-10-03T05:00:11.993530+00:00",
@@ -1808,354 +1808,494 @@
       "status": "irrelevant"
     },
     "2318022": {
-      "at": "2026-10-03T03:01:25.199178+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:28.552564+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318023": {
-      "at": "2026-10-03T02:59:57.897611+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:05.870525+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318024": {
-      "at": "2026-10-03T02:59:55.286121+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:03.518634+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318025": {
-      "at": "2026-10-03T02:59:52.598358+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:01.270007+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318026": {
-      "at": "2026-10-03T03:00:56.914066+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:34.373066+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318027": {
-      "at": "2026-10-03T03:01:17.089351+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:16.872165+00:00",
+      "detail": "ca-int-government-of-india-in-c-20261002-prid-2318027.md",
+      "status": "written"
     },
     "2318047": {
-      "at": "2026-10-03T03:01:57.542832+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:21.814247+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318052": {
-      "at": "2026-10-03T03:00:17.983032+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:39.538624+00:00",
+      "detail": "ca-eco-government-extends-remiss-20261002-prid-2318052.md",
+      "status": "written"
     },
     "2318053": {
-      "at": "2026-10-03T03:00:15.711454+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:34.484884+00:00",
+      "detail": "ca-sch-government-extends-operat-20261002-prid-2318053.md",
+      "status": "written"
     },
     "2318067": {
-      "at": "2026-10-03T03:02:00.474113+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:24.892468+00:00",
+      "detail": "ca-eco-niti-aayog-organises-nati-20261002-prid-2318067.md",
+      "status": "written"
     },
     "2318072": {
-      "at": "2026-10-03T03:00:13.579821+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:29.470335+00:00",
+      "detail": "ca-eco-apeda-facilitates-fpo-led-20261002-prid-2318072.md",
+      "status": "written"
     },
     "2318074": {
-      "at": "2026-10-03T03:02:12.264677+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:41.627416+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318075": {
-      "at": "2026-10-03T03:00:11.331248+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:23.848307+00:00",
+      "detail": "ca-eco-apeda-facilitates-export-20261002-prid-2318075.md",
+      "status": "written"
     },
     "2318081": {
-      "at": "2026-10-03T03:02:09.348987+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:37.759469+00:00",
+      "detail": "ca-env-urban-transformation-bui-20261002-prid-2318081.md",
+      "status": "written"
     },
     "2318085": {
-      "at": "2026-10-03T02:59:11.873583+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:55.250937+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318095": {
-      "at": "2026-10-03T03:02:06.060788+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:33.539192+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318096": {
-      "at": "2026-10-03T03:00:08.209129+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:19.247547+00:00",
+      "detail": "ca-int-commerce-and-industry-min-20261002-prid-2318096.md",
+      "status": "written"
     },
     "2318110": {
-      "at": "2026-10-03T03:00:54.931549+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:30.525423+00:00",
+      "detail": "ca-env-union-environment-ministe-20261002-prid-2318110.md",
+      "status": "written"
     },
     "2318112": {
-      "at": "2026-10-03T02:59:50.428975+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:57.453795+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318112.md",
+      "status": "written"
     },
     "2318113": {
-      "at": "2026-10-03T02:59:48.259050+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:52.744444+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318113.md",
+      "status": "written"
     },
     "2318114": {
-      "at": "2026-10-03T02:59:46.114273+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:47.881701+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318114.md",
+      "status": "written"
     },
     "2318115": {
-      "at": "2026-10-03T02:59:43.879992+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:44.119660+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318117": {
-      "at": "2026-10-03T03:00:47.248265+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:22.578194+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318140": {
-      "at": "2026-10-03T03:02:03.489856+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:29.618456+00:00",
+      "detail": "ca-sch-communicating-swachhata-20261002-prid-2318140.md",
+      "status": "written"
     },
     "2318151": {
-      "at": "2026-10-03T03:00:34.972882+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:59.426131+00:00",
+      "detail": "ca-sch-pm-mementos-e-auction-o-20261002-prid-2318151.md",
+      "status": "written"
     },
     "2318171": {
-      "at": "2026-10-03T03:00:32.003769+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:55.929251+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318176": {
-      "at": "2026-10-03T03:01:09.473977+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:06.359791+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318179": {
-      "at": "2026-10-03T03:01:06.761230+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:03.853238+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318181": {
-      "at": "2026-10-03T02:59:40.673877+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:41.273984+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318182": {
-      "at": "2026-10-03T03:01:04.163776+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:01.471049+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318206": {
-      "at": "2026-10-03T03:00:29.342475+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:53.541704+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318213": {
-      "at": "2026-10-03T02:59:38.024012+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:37.729046+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318215": {
-      "at": "2026-10-03T03:00:05.903949+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:15.674419+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318220": {
-      "at": "2026-10-03T03:00:00.293911+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:08.273115+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318223": {
-      "at": "2026-10-03T03:01:11.990457+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:09.926375+00:00",
+      "detail": "ca-sch-department-of-health-and-20261002-prid-2318223.md",
+      "status": "written"
     },
     "2318239": {
-      "at": "2026-10-03T03:01:55.247917+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:19.536164+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318243": {
-      "at": "2026-10-03T03:01:42.122667+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:56.541961+00:00",
+      "detail": "ca-sci-robotics-to-become-an-acc-20261002-prid-2318243.md",
+      "status": "written"
     },
     "2318247": {
-      "at": "2026-10-03T03:01:39.900644+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:51.992610+00:00",
+      "detail": "",
+      "status": "duplicate"
     },
     "2318261": {
-      "at": "2026-10-03T03:01:34.227711+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:42.078369+00:00",
+      "detail": "ca-eco-historic-first-for-jammu-20261002-prid-2318261.md",
+      "status": "written"
     },
     "2318262": {
-      "at": "2026-10-03T02:59:35.406820+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:32.987067+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318262.md",
+      "status": "written"
     },
     "2318265": {
-      "at": "2026-10-03T02:59:32.664816+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:27.793811+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318265.md",
+      "status": "written"
     },
     "2318267": {
-      "at": "2026-10-03T02:59:30.073652+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:22.583576+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318267.md",
+      "status": "written"
     },
     "2318269": {
-      "at": "2026-10-03T02:59:27.318186+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:16.880732+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318269.md",
+      "status": "written"
     },
     "2318272": {
-      "at": "2026-10-03T02:59:24.079097+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:11.731801+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318272.md",
+      "status": "written"
     },
     "2318273": {
-      "at": "2026-10-03T02:59:20.403257+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:06.549223+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318273.md",
+      "status": "written"
     },
     "2318296": {
-      "at": "2026-10-03T03:00:39.734859+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:08.763981+00:00",
+      "detail": "ca-def-culmination-of-second-edi-20261002-prid-2318296.md",
+      "status": "written"
     },
     "2318300": {
-      "at": "2026-10-03T03:00:37.188428+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:04.240176+00:00",
+      "detail": "ca-def-indian-naval-ship-trishul-20261002-prid-2318300.md",
+      "status": "written"
     },
     "2318302": {
-      "at": "2026-10-03T03:01:19.917787+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:20.709440+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318321": {
-      "at": "2026-10-03T03:00:02.589198+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:11.812573+00:00",
+      "detail": "ca-int-india-and-netherlands-dis-20261002-prid-2318321.md",
+      "status": "written"
     },
     "2318340": {
-      "at": "2026-10-03T02:59:17.601771+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:22:01.571164+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261002-prid-2318340.md",
+      "status": "written"
     },
     "2318348": {
-      "at": "2026-10-03T03:01:23.023814+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:24.295515+00:00",
+      "detail": "",
+      "status": "duplicate"
     },
     "2318353": {
-      "at": "2026-10-03T03:00:52.512004+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:27.325369+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318358": {
-      "at": "2026-10-03T02:59:07.900186+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:52.276157+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318364": {
-      "at": "2026-10-03T03:01:53.033781+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:15.648437+00:00",
+      "detail": "ca-sch-union-minister-dr-virend-20261002-prid-2318364.md",
+      "status": "written"
     },
     "2318366": {
-      "at": "2026-10-03T03:01:31.958085+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:37.521181+00:00",
+      "detail": "ca-eco-on-the-occasion-of-mahatm-20261002-prid-2318366.md",
+      "status": "written"
     },
     "2318369": {
-      "at": "2026-10-03T03:01:27.595484+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:31.763611+00:00",
+      "detail": "ca-sch-prime-minister-s-employme-20261002-prid-2318369.md",
+      "status": "written"
     },
     "2318371": {
-      "at": "2026-10-03T03:01:14.305546+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:13.790769+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318389": {
-      "at": "2026-10-03T03:00:49.862759+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:24.925950+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318413": {
-      "at": "2026-10-03T03:00:23.087091+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:45.868579+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318419": {
-      "at": "2026-10-03T03:00:20.732729+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:43.506647+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318441": {
-      "at": "2026-10-03T03:01:37.670375+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:25:46.956492+00:00",
+      "detail": "ca-sch-2-42-lakh-special-gram-sa-20261002-prid-2318441.md",
+      "status": "written"
     },
     "2318451": {
-      "at": "2026-10-03T03:00:44.537568+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:18.539086+00:00",
+      "detail": "",
+      "status": "duplicate"
     },
     "2318459": {
-      "at": "2026-10-03T02:59:14.709897+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:21:58.301785+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318473": {
-      "at": "2026-10-03T03:00:41.967432+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:13.448397+00:00",
+      "detail": "ca-sch-sikkim-delegation-explore-20261002-prid-2318473.md",
+      "status": "written"
     },
     "2318483": {
-      "at": "2026-10-03T03:01:49.662286+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:10.459376+00:00",
+      "detail": "ca-sch-shri-sudhansh-pant-secre-20261002-prid-2318483.md",
+      "status": "written"
     },
     "2318497": {
-      "at": "2026-10-03T03:01:46.693679+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:05.844051+00:00",
+      "detail": "ca-eco-sarbananda-sonowal-hails-20261002-prid-2318497.md",
+      "status": "written"
     },
     "2318498": {
-      "at": "2026-10-03T03:01:44.504494+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:26:01.131320+00:00",
+      "detail": "ca-env-mumbai-s-jawahar-dweep-be-20261002-prid-2318498.md",
+      "status": "written"
     },
     "2318501": {
-      "at": "2026-10-03T03:01:01.753731+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:41.748034+00:00",
+      "detail": "",
+      "status": "irrelevant"
     },
     "2318504": {
-      "at": "2026-10-03T03:00:59.845677+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:24:37.895033+00:00",
+      "detail": "ca-env-dri-cracks-down-on-illega-20261002-prid-2318504.md",
+      "status": "written"
     },
     "2318516": {
-      "at": "2026-10-03T03:00:26.342751+00:00",
-      "detail": "Gemini extraction failed after retries; source remains retryable",
-      "status": "retryable"
+      "at": "2026-10-04T07:23:49.580526+00:00",
+      "detail": "ca-sch-union-home-minister-and-m-20261002-prid-2318516.md",
+      "status": "written"
+    },
+    "2318564": {
+      "at": "2026-10-04T07:26:50.919172+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2318568": {
+      "at": "2026-10-04T07:28:07.875538+00:00",
+      "detail": "ca-eco-nabkisan-lists-india-s-fi-20261003-prid-2318568.md",
+      "status": "written"
+    },
+    "2318575": {
+      "at": "2026-10-04T07:28:13.028241+00:00",
+      "detail": "ca-int-union-home-minister-shri-20261003-prid-2318575.md",
+      "status": "written"
+    },
+    "2318590": {
+      "at": "2026-10-04T07:27:29.118550+00:00",
+      "detail": "ca-int-shri-harivansh-leads-indi-20261003-prid-2318590.md",
+      "status": "written"
+    },
+    "2318610": {
+      "at": "2026-10-04T07:28:22.791114+00:00",
+      "detail": "ca-sch-union-minister-of-jal-sha-20261003-prid-2318610.md",
+      "status": "written"
+    },
+    "2318616": {
+      "at": "2026-10-04T07:27:32.946493+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318629": {
+      "at": "2026-10-04T07:28:00.026056+00:00",
+      "detail": "ca-env-in-culmination-of-10-year-20261003-prid-2318629.md",
+      "status": "written"
+    },
+    "2318631": {
+      "at": "2026-10-04T07:28:30.967456+00:00",
+      "detail": "ca-sch-pm-setu-one-year-of-tran-20261003-prid-2318631.md",
+      "status": "written"
+    },
+    "2318656": {
+      "at": "2026-10-04T07:27:55.225629+00:00",
+      "detail": "ca-sci-india-s-first-5-56-km-fre-20261003-prid-2318656.md",
+      "status": "written"
+    },
+    "2318669": {
+      "at": "2026-10-04T07:28:17.981823+00:00",
+      "detail": "ca-sch-as-part-of-special-gram-s-20261003-prid-2318669.md",
+      "status": "written"
+    },
+    "2318672": {
+      "at": "2026-10-04T07:27:40.959228+00:00",
+      "detail": "ca-spo-haryana-s-sporting-achiev-20261003-prid-2318672.md",
+      "status": "written"
+    },
+    "2318673": {
+      "at": "2026-10-04T07:27:45.819997+00:00",
+      "detail": "ca-def-indian-naval-ships-sahyad-20261003-prid-2318673.md",
+      "status": "written"
+    },
+    "2318676": {
+      "at": "2026-10-04T07:27:24.085197+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261003-prid-2318676.md",
+      "status": "written"
+    },
+    "2318677": {
+      "at": "2026-10-04T07:27:18.345535+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261003-prid-2318677.md",
+      "status": "written"
+    },
+    "2318678": {
+      "at": "2026-10-04T07:27:13.639528+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261003-prid-2318678.md",
+      "status": "written"
+    },
+    "2318679": {
+      "at": "2026-10-04T07:27:50.395916+00:00",
+      "detail": "ca-sch-ministry-of-education-app-20261003-prid-2318679.md",
+      "status": "written"
+    },
+    "2318698": {
+      "at": "2026-10-04T07:27:36.463863+00:00",
+      "detail": "ca-eco-union-home-minister-and-m-20261003-prid-2318698.md",
+      "status": "written"
+    },
+    "2318741": {
+      "at": "2026-10-04T07:27:07.791126+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261003-prid-2318741.md",
+      "status": "written"
+    },
+    "2318742": {
+      "at": "2026-10-04T07:27:02.312136+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261003-prid-2318742.md",
+      "status": "written"
+    },
+    "2318743": {
+      "at": "2026-10-04T07:26:56.426378+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261003-prid-2318743.md",
+      "status": "written"
+    },
+    "2318770": {
+      "at": "2026-10-04T07:28:27.049913+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318810": {
+      "at": "2026-10-04T07:28:03.833506+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318811": {
+      "at": "2026-10-04T07:28:51.893423+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318817": {
+      "at": "2026-10-04T07:28:47.444601+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261004-prid-2318817.md",
+      "status": "written"
+    },
+    "2318818": {
+      "at": "2026-10-04T07:28:42.007374+00:00",
+      "detail": "ca-spo-prime-minister-congratula-20261004-prid-2318818.md",
+      "status": "written"
+    },
+    "2318820": {
+      "at": "2026-10-04T07:28:54.855671+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318842": {
+      "at": "2026-10-04T07:28:58.846762+00:00",
+      "detail": "ca-env-union-environment-ministe-20261004-prid-2318842.md",
+      "status": "written"
+    },
+    "2318843": {
+      "at": "2026-10-04T07:29:02.629694+00:00",
+      "detail": "",
+      "status": "irrelevant"
     }
   }
 }
