@@ -1,6 +1,6 @@
 {
   "backfill_from_date": "2026-09-26",
-  "last_completed_date": "2026-10-04",
+  "last_completed_date": "2026-10-05",
   "outcomes": {
     "2315209": {
       "at": "2026-10-03T04:16:21.639069+00:00",
@@ -2294,6 +2294,91 @@
     },
     "2318843": {
       "at": "2026-10-04T07:29:02.629694+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318868": {
+      "at": "2026-10-05T07:32:41.195631+00:00",
+      "detail": "ca-sch-dr-jitendra-singh-to-cha-20261004-prid-2318868.md",
+      "status": "written"
+    },
+    "2318881": {
+      "at": "2026-10-05T07:32:14.683429+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318882": {
+      "at": "2026-10-05T07:32:25.419076+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318888": {
+      "at": "2026-10-05T07:32:08.480908+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318893": {
+      "at": "2026-10-05T07:33:17.582204+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318899": {
+      "at": "2026-10-05T07:33:10.567181+00:00",
+      "detail": "ca-sch-shivraj-singh-chouhan-han-20261004-prid-2318899.md",
+      "status": "written"
+    },
+    "2318908": {
+      "at": "2026-10-05T07:34:17.203854+00:00",
+      "detail": "ca-sci-india-s-rising-supercompu-20261004-prid-2318908.md",
+      "status": "written"
+    },
+    "2318911": {
+      "at": "2026-10-05T07:33:04.300992+00:00",
+      "detail": "ca-sch-modi-government-s-histori-20261004-prid-2318911.md",
+      "status": "written"
+    },
+    "2318919": {
+      "at": "2026-10-05T07:33:58.471310+00:00",
+      "detail": "ca-sch-reforms-aimed-at-empoweri-20261004-prid-2318919.md",
+      "status": "written"
+    },
+    "2318942": {
+      "at": "2026-10-05T07:32:28.900918+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318945": {
+      "at": "2026-10-05T07:33:22.163803+00:00",
+      "detail": "ca-int-union-minister-sarbananda-20261004-prid-2318945.md",
+      "status": "written"
+    },
+    "2318948": {
+      "at": "2026-10-05T07:32:21.068971+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318959": {
+      "at": "2026-10-05T07:34:07.490440+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2318970": {
+      "at": "2026-10-05T07:34:49.318163+00:00",
+      "detail": "ca-sci-ucil-celebrates-diamond-j-20261005-prid-2318970.md",
+      "status": "written"
+    },
+    "2318982": {
+      "at": "2026-10-05T07:34:40.925804+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2319038": {
+      "at": "2026-10-05T07:35:00.580714+00:00",
+      "detail": "ca-sci-tdb-dst-signs-agreement-w-20261005-prid-2319038.md",
+      "status": "written"
+    },
+    "2319049": {
+      "at": "2026-10-05T07:35:27.753702+00:00",
       "detail": "",
       "status": "irrelevant"
     }
