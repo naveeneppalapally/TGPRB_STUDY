@@ -1,6 +1,6 @@
 {
   "backfill_from_date": "2026-09-26",
-  "last_completed_date": "2026-10-10",
+  "last_completed_date": "2026-10-11",
   "outcomes": {
     "2315209": {
       "at": "2026-10-03T04:16:21.639069+00:00",
@@ -3901,6 +3901,156 @@
       "at": "2026-10-10T07:49:52.796356+00:00",
       "detail": "",
       "status": "duplicate"
+    },
+    "2321693": {
+      "at": "2026-10-11T07:42:30.865275+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321694": {
+      "at": "2026-10-11T07:46:36.281454+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2321704": {
+      "at": "2026-10-11T07:50:54.470778+00:00",
+      "detail": "ca-sch-from-beacons-to-landmarks-20261010-prid-2321704.md",
+      "status": "written"
+    },
+    "2321723": {
+      "at": "2026-10-11T07:48:56.819961+00:00",
+      "detail": "ca-sci-dr-jitendra-singh-urges-20261010-prid-2321723.md",
+      "status": "written"
+    },
+    "2321726": {
+      "at": "2026-10-11T07:45:37.786783+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321728": {
+      "at": "2026-10-11T07:44:11.130811+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321729": {
+      "at": "2026-10-11T07:44:03.474618+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321731": {
+      "at": "2026-10-11T07:50:18.326097+00:00",
+      "detail": "ca-sch-prime-minister-dhan-dhaan-20261010-prid-2321731.md",
+      "status": "written"
+    },
+    "2321739": {
+      "at": "2026-10-11T07:49:42.291571+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321754": {
+      "at": "2026-10-11T07:42:19.137995+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321758": {
+      "at": "2026-10-11T07:42:36.734238+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321780": {
+      "at": "2026-10-11T07:48:08.031697+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321784": {
+      "at": "2026-10-11T07:43:23.398100+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321791": {
+      "at": "2026-10-11T07:48:03.268142+00:00",
+      "detail": "ca-env-nba-disburses-rs-2-02-cro-20261010-prid-2321791.md",
+      "status": "written"
+    },
+    "2321793": {
+      "at": "2026-10-11T07:47:15.160625+00:00",
+      "detail": "ca-tel-telangana-delegation-expl-20261010-prid-2321793.md",
+      "status": "written"
+    },
+    "2321795": {
+      "at": "2026-10-11T07:45:23.078584+00:00",
+      "detail": "ca-def-launch-of-next-generation-20261010-prid-2321795.md",
+      "status": "written"
+    },
+    "2321807": {
+      "at": "2026-10-11T07:44:44.457678+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321808": {
+      "at": "2026-10-11T07:49:05.538266+00:00",
+      "detail": "ca-spo-youth-must-become-ambassa-20261010-prid-2321808.md",
+      "status": "written"
+    },
+    "2321818": {
+      "at": "2026-10-11T07:50:59.805239+00:00",
+      "detail": "ca-sci-psa-prof-sood-chairs-fou-20261010-prid-2321818.md",
+      "status": "written"
+    },
+    "2321828": {
+      "at": "2026-10-11T07:48:11.984915+00:00",
+      "detail": "",
+      "status": "duplicate"
+    },
+    "2321853": {
+      "at": "2026-10-11T07:42:43.364485+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321854": {
+      "at": "2026-10-11T07:47:09.612515+00:00",
+      "detail": "ca-sch-odisha-delegation-meets-t-20261010-prid-2321854.md",
+      "status": "written"
+    },
+    "2321855": {
+      "at": "2026-10-11T07:51:16.412249+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321856": {
+      "at": "2026-10-11T07:51:11.771904+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321857": {
+      "at": "2026-10-11T07:51:14.110274+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321859": {
+      "at": "2026-10-11T07:51:09.437249+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321861": {
+      "at": "2026-10-11T07:51:24.381576+00:00",
+      "detail": "",
+      "status": "irrelevant"
+    },
+    "2321864": {
+      "at": "2026-10-11T07:51:20.050939+00:00",
+      "detail": "ca-eco-dri-cracks-down-on-gold-s-20261011-prid-2321864.md",
+      "status": "written"
+    },
+    "2321873": {
+      "at": "2026-10-11T07:51:29.026117+00:00",
+      "detail": "ca-sch-indian-railways-announces-20261011-prid-2321873.md",
+      "status": "written"
+    },
+    "2321892": {
+      "at": "2026-10-11T07:51:34.517739+00:00",
+      "detail": "ca-sch-india-s-mission-for-aatma-20261011-prid-2321892.md",
+      "status": "written"
     }
   }
 }
