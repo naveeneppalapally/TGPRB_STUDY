@@ -4123,12 +4123,12 @@
       "status": "retryable"
     },
     "2322178": {
-      "at": "2026-10-13T08:13:40.017087+00:00",
+      "at": "2026-10-14T06:34:09.943430+00:00",
       "detail": "Gemini extraction failed after retries; source remains retryable",
       "status": "retryable"
     },
     "2322197": {
-      "at": "2026-10-13T08:13:37.181374+00:00",
+      "at": "2026-10-14T06:34:07.546333+00:00",
       "detail": "Gemini extraction failed after retries; source remains retryable",
       "status": "retryable"
     }
