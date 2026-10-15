@@ -6,7 +6,8 @@ Read this standing contract before any task.
 - Empirical Paper-Setting Evolution Audit: `docs/forensic-paper-setting-evolution-audit-2026-08-15.md`
 - Cognitive Scaffolds & PYQ Engine Research: `docs/tslprb-pyq-processing-engine-research-report.md`
 
-> **Rigor Mandate (all models):** Do not bias towards rapid task completion. Maintain deliberate engineering rigor, verify all claims against primary sources, and preserve zero em-dash compliance.
+> **Rigor Mandate:** Prioritize rigor over speed; verify claims against primary sources; preserve zero em-dash compliance.
+> **Topic research workflow:** For every topic creation or revision, read and follow `docs/topic-source-review-workflow.md`. Work one topic at a time unless explicitly requested otherwise.
 
 ---
 
@@ -101,7 +102,7 @@ Every note page must have exactly one canonical NOTE ID in the format `NOTE-{SEC
 
 ## 5. Mandatory 10-Point Topic Delivery Integrity Gate (Dual-Mode Delivery)
 
-A topic is NEVER complete just because its `.vue` file was authored. Every published full note MUST deliver BOTH modalities. Registry delivery metadata distinguishes paired notes, planned topics, Tier 3 flashcard-only topics and the existing Parliament study-pilot (hasNote: false).
+Every full note MUST deliver Note and Study modes; a `.vue` file alone is incomplete. Registry delivery metadata distinguishes paired notes, planned topics, Tier 3 flashcard-only topics and the existing Parliament study-pilot (hasNote: false).
 
 1. **Master Registration**: Canonical entry in `data/topics_master.json` (`id`, `subject`, `title`, `keywords`, `aliases`, delivery paths and explicit PYQ selectors).
 2. **Comprehension Gate JSON**: `content/data/gates/<slug>.json` (>= 5 MCQs, pass threshold 3), imported explicitly in `server/utils/learning-content.ts` and served by the gate API.
