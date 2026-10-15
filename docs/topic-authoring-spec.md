@@ -790,3 +790,54 @@ Every topic's pedagogical sections must follow the subject scaffold defined in `
 6. **Telangana GK (2-Axis Framework)**:
    - Spatial: District -> Landmark -> Infrastructure.
    - Thematic: History -> Movement -> Culture -> Governance -> Schemes.
+
+
+## 6. Topic delivery policy
+
+Read for topic creation, registration or structural changes. For a factual correction, inspect only affected surfaces and use `docs/topic-source-review-workflow.md`. For images, use `docs/image-pipeline.md`.
+
+- **Tier Computation**: Computed per topic from canonical linked PYQ count in `pyq_enriched_master.json`. Tier 1 (10+): full note. Tier 2 (3-9): compact note. Tier 3 (<3): flashcards only.
+- **Visual Rule**: Independent of tier. Any topic with spatial, chronological, or hierarchical facts gets a map/diagram.
+- **Comprehension Gate Unlocks FSRS**: Note gate MCQs never enter FSRS directly. Passing the gate (>= 3/5) unlocks atomic flashcards and real PYQs. Direct mode is an explicit self-study exception, never proof that a gate was passed.
+- **Anti-Fabrication Mandate**: Prefer real, verified PYQs everywhere. Any synthetic question must be explicitly labeled as "TGPSC-Style Advanced Practice" - never presented as an official PYQ.
+- **Statistical Cutoff & Citation Rules**: Training data may be 1-3 years behind official publications. Never present stale statistical data as current fact.
+  - Always cite source and data year in a `text-body-xs t-lo font-mono` caption (e.g. "Source: 4th Minor Irrigation Census 2017-18, Ministry of Jal Shakti").
+  - If data is older than 2023, add: "Verify against latest official publication before exam."
+  - For government schemes, always cite Budget year or scheme launch year.
+  - Engineering constants (dam heights, river lengths, canal distances) are stable; no year flag needed.
+  - Population, census, and agricultural percentages change with each cycle; flag these.
+  - Preferred sources: Ministry of Jal Shakti, PIB press releases, Union Budget documents, NABARD reports, NCIWRD.
+- **Subject Scaffolds**: Structure pedagogical sections according to the cognitive scaffolds in `docs/tslprb-pyq-processing-engine-research-report.md` (Geography 6-point, History 5-step causal chain, Polity 4-tier architecture, Arithmetic 7-step drill).
+
+### Delivery checklist
+
+Every full note MUST deliver Note and Study modes; a `.vue` file alone is incomplete. Registry delivery metadata distinguishes paired notes, planned topics, Tier 3 flashcard-only topics and the existing Parliament study-pilot (hasNote: false).
+
+1. **Master Registration**: Canonical entry in `data/topics_master.json` (`id`, `subject`, `title`, `keywords`, `aliases`, delivery paths and explicit PYQ selectors).
+2. **Comprehension Gate JSON**: `content/data/gates/<slug>.json` (>= 5 MCQs, pass threshold 3), imported explicitly in `server/utils/learning-content.ts` and served by the gate API.
+3. **Atomic Flashcards Deck**: `content/data/flashcards/<subject>/<slug>.json` (>= 10 atomic cards, `note_id` field), imported explicitly in `server/utils/learning-content.ts` and served by the flashcards API.
+4. **Component Wireup**: Both `<GateQuiz note-id="..." />` and `<CurrentAffairsStrip note-id="..." />` matching canonical `note-id`.
+5. **TOC Registration**: Both `'gate'` and `'current-affairs'` registered in the sticky TOC `sections` array.
+6. **Current Affairs Coverage**: Topic tagged in `content/current-affairs/*.md` via `npm run sync:ca-topics`.
+7. **3-Zone Study Chapter & Universal Cloze**: `content/data/study/<subject>/<slug>.ts` (`StudyChapter`) with `hasNote: true`, estMinutes (2-4m), screen-sized sections, section-bound PYQs with `sourceLine`, flashcards, and trap duels. Imported in `server/utils/study-chapters.ts`; prebuild generates canonical PYQs; registry metadata derives Nuxt routes.
+   - *Universal Cloze (All Subjects)*: Active recall applies to all subjects, not just Polity. High-yield subject anchors (`<strong>` or `<span class="hot">`) must be primary cloze targets (leaders, committees, acts, treaties, river origins, passes, dams, martyrs, institutions, laws).
+   - *Number Protection Invariant*: Structural list enumerators (`1.`, `2.`, `(1)`, `[1]`, `1:`) must NEVER be converted into cloze chips. Standalone numbers are secondary cues only.
+8. **Bidirectional Switchers**: Note page includes top and bottom transition banners linking to `/study/<slug>`. Study Mode topbar links back to `/notes/<subject>/<slug>`.
+9. **Subject Hub**: Both Note card and Study Mode card listed in `pages/notes/<subject>/index.vue`.
+10. **Gatekeeper Verification**: `npm run verify:integrity` and `npm test` MUST pass with exit code 0.
+
+*(Complete Vue templates, TypeScript interfaces, and JSON schemas live in `docs/topic-authoring-spec.md`)*.
+
+### Topic generation shorthand
+
+One-Line Topic Generation Directive (Dual-Mode Delivery)
+When prompted with `Topic - [Topic Name] ([Subject])` (e.g. `Topic - Forests of India (Geography)`), execute the end-to-end dual-mode pipeline immediately without clarifying questions:
+1. Extract PYQs and determine tier from `data/pyq_enriched_master.json`.
+2. Source authentic map/diagram online; inspect against 4-Point Visual Gate; place in `assets-to-upload/` and `public/images/`.
+3. Tag all matching current affairs cards in `content/current-affairs/*.md` (zero omissions).
+4. Generate full note page (`pages/notes/<subject>/<slug>.vue`) following the subject scaffold and 4-stage closing block.
+5. Generate gate JSON (>= 5 MCQs) and atomic flashcards (>= 10 cards); register in the shared learning asset imports.
+6. Generate 3-zone Study Mode chapter (`content/data/study/<subject>/<slug>.ts`); register its import and delivery metadata, then generate the canonical bundle and routes.
+7. Update Subject Hub (`pages/notes/<subject>/index.vue`) with note and study links.
+8. Run `npm run prebuild`, `npm run typecheck`, `npm run verify:integrity`, and `npm test`.
+9. Commit code and images together; pull back after Cloudinary Action.
