@@ -18205,7 +18205,7 @@
     "difficulty": "F",
     "correct_option_index": 2,
     "confidence": 1.0,
-    "explanation": "The Matatilla Dam project was constructed in 1958 across the Betwa River in Lalitpur district, Uttar Pradesh. It provides water for irrigation and power generation in Uttar Pradesh and Madhya Pradesh.",
+    "explanation": "Matatilla is a multipurpose project on the Betwa River. The river-project association is the fact tested here.",
     "recommended_memory_technique": "keyword_method",
     "occurrences": [
       {
@@ -18222,7 +18222,11 @@
       "Betwa",
       "Damodar"
     ],
-    "enriched_at": "2026-08-11T13:25:27.513614Z"
+    "enriched_at": "2026-08-11T13:25:27.513614Z",
+    "explanation_sources": [
+      "https://www.cwc.gov.in/sites/default/files/sedimentation-assessment-matatila-reservoir-through-srsmay19.pdf"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-0511",
@@ -25420,7 +25424,7 @@
     "difficulty": "M",
     "correct_option_index": 1,
     "confidence": 1.0,
-    "explanation": "The Godavari river basin extends across 7 states in India: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Odisha, and Karnataka (along with the Union Territory of Puducherry - Yanam).",
+    "explanation": "The catchment includes parts of seven states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka and Odisha. Count the drainage basin, including tributary catchments, rather than only states crossed by the main river. Source: CWC, Monitoring (South), Basin Details (Godavari row).",
     "recommended_memory_technique": "blank_map_retrieval",
     "occurrences": [
       {
@@ -25442,7 +25446,11 @@
       "4",
       "5"
     ],
-    "enriched_at": "2026-08-11T13:55:33.435767Z"
+    "enriched_at": "2026-08-11T13:55:33.435767Z",
+    "explanation_sources": [
+      "https://www.cwc.gov.in/en/mso/about-basins"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-0736",
@@ -51190,7 +51198,7 @@
     "difficulty": "F",
     "correct_option_index": 1,
     "confidence": 1.0,
-    "explanation": "The mainland coastline of India covers a distance of approximately 6,100 km. Including the island groups of Lakshadweep and Andaman & Nicobar, the total length of India's coastline extends to 7,516.6 km.",
+    "explanation": "Historical 2016 question: the expected option is approximately 6,100 km for the mainland coastline. The older total of 7,516.6 km included islands. A PIB release dated 7 August 2025 reports a revised TOTAL coastline of 11,098 km; that is not a replacement answer for this old mainland-only question. Verify against latest official publication before exam.",
     "recommended_memory_technique": "blank_map_retrieval",
     "occurrences": [
       {
@@ -51217,7 +51225,11 @@
       "7100 kms",
       "8100 kms"
     ],
-    "enriched_at": "2026-08-11T16:26:26.457575Z"
+    "enriched_at": "2026-08-11T16:26:26.457575Z",
+    "explanation_sources": [
+      "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2153799"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-1525",
@@ -62349,7 +62361,7 @@
     "difficulty": "M",
     "correct_option_index": 2,
     "confidence": 1.0,
-    "explanation": "West-flowing peninsular rivers like Narmada and Tapi form estuaries rather than deltas because they flow through hard-rock rift valleys with steep gradients. While they do carry some sediments, the strong sea currents and high flow velocity prevent delta formation, making Assertion (A) true and Reason (R) false.",
+    "explanation": "In the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms.",
     "recommended_memory_technique": "contrast_pairs",
     "occurrences": [
       {
@@ -62366,7 +62378,12 @@
       "(A) is true, but (R) is false",
       "(A) is false, but (R) is true"
     ],
-    "enriched_at": "2026-08-11T17:05:53.683864Z"
+    "enriched_at": "2026-08-11T17:05:53.683864Z",
+    "explanation_sources": [
+      "https://ncert.nic.in/textbook/pdf/kegy103.pdf",
+      "https://ncert.nic.in/textbook/pdf/kegy102.pdf"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-1821",
@@ -65009,7 +65026,7 @@
     "difficulty": "M",
     "correct_option_index": 2,
     "confidence": 1.0,
-    "explanation": "West-flowing peninsular rivers like Narmada and Tapi form estuaries instead of deltas because they flow through steep rift valleys of hard rock at high speeds. Saying they carry no sediments at all is false; they do transport sediments, but the high gradient and marine action prevent delta formation.",
+    "explanation": "In the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms.",
     "recommended_memory_technique": "contrast_pairs",
     "occurrences": [
       {
@@ -65031,7 +65048,12 @@
       "(A) is true, but (R) is false",
       "(A) is false, but (R) is true"
     ],
-    "enriched_at": "2026-08-11T17:16:45.144909Z"
+    "enriched_at": "2026-08-11T17:16:45.144909Z",
+    "explanation_sources": [
+      "https://ncert.nic.in/textbook/pdf/kegy103.pdf",
+      "https://ncert.nic.in/textbook/pdf/kegy102.pdf"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-1891",
@@ -76364,7 +76386,7 @@
     "difficulty": "O",
     "correct_option_index": 3,
     "confidence": 0.9,
-    "explanation": "The Kerala State Literacy Mission Authority (KSLMA) launched the 'Water Literacy' campaign in June 2018. Over 70,000 instructors and equivalency students were mobilized to educate 15 families each, reaching around 10 lakh households about water conservation and pollution. The initiative was a voluntary educational drive, not mandatory by law.",
+    "explanation": "Historical June 2018 campaign question. The stored answer selects A, B and C and excludes D (mandatory participation). The original final key and campaign statistics still need primary-source verification; do not treat this explanation as a current statistic or independently verified key.",
     "recommended_memory_technique": "keyword_method",
     "occurrences": [
       {
@@ -76381,7 +76403,10 @@
       "(3) (A), (B), (C), (D)",
       "(4) (A), (B), (C) only"
     ],
-    "enriched_at": "2026-08-11T18:28:15.959479Z"
+    "enriched_at": "2026-08-11T18:28:15.959479Z",
+    "explanation_sources": [],
+    "explanation_reviewed_at": "2026-10-15",
+    "answer_key_review_status": "pending_primary_source"
   },
   {
     "uid": "PYQ-2239",
@@ -84194,7 +84219,7 @@
     "difficulty": "F",
     "correct_option_index": 0,
     "confidence": 1.0,
-    "explanation": "Vembanad Lake is the longest lake in India and the largest lake in Kerala, located along the southwestern Malabar Coast. It is famous for hosting the Nehru Trophy Boat Race and forms a crucial part of Kerala's backwater network.",
+    "explanation": "Vembanad is in Kerala. The Nehru Trophy Boat Race takes place on Punnamada Lake, part of the Vembanad backwater system.",
     "recommended_memory_technique": "blank_map_retrieval",
     "occurrences": [
       {
@@ -84211,7 +84236,11 @@
       "Konkan coast",
       "Utkal coast"
     ],
-    "enriched_at": "2026-08-11T19:03:49.429130Z"
+    "enriched_at": "2026-08-11T19:03:49.429130Z",
+    "explanation_sources": [
+      "https://www.keralatourism.org/champions-boat-league/venues/punnamada"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-2500",
@@ -84224,7 +84253,7 @@
     "difficulty": "F",
     "correct_option_index": 2,
     "confidence": 1.0,
-    "explanation": "Assertion (A) is true because west-flowing rivers like Narmada and Tapi flow through narrow fault valleys with high gradient, forming estuaries instead of deltas. Reason (R) is false because the Western Coastal Plains are narrow strips (approx. 50–80 km wide), whereas the Eastern Coastal Plains are much broader (100–130 km wide) due to extensive deltaic depositions.",
+    "explanation": "In the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The western coastal plain is narrower, not broader, than the eastern coastal plain. Assertion A is true and Reason R is false.",
     "recommended_memory_technique": "contrast_pairs",
     "occurrences": [
       {
@@ -84241,7 +84270,12 @@
       "(A) is true and (R) is false.",
       "(A) is false but (R) is true."
     ],
-    "enriched_at": "2026-08-11T19:03:57.107826Z"
+    "enriched_at": "2026-08-11T19:03:57.107826Z",
+    "explanation_sources": [
+      "https://ncert.nic.in/textbook/pdf/kegy103.pdf",
+      "https://ncert.nic.in/textbook/pdf/kegy102.pdf"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-2501",
@@ -97189,7 +97223,7 @@
     "difficulty": "M",
     "correct_option_index": 1,
     "confidence": 1.0,
-    "explanation": "The Mabja Zangbo river originates in Tibet and flows into Nepal to form the Ghaghara (Karnali) river before entering India. China's dam on this river is located near the tri-junction of China, Nepal, and the Indian state of Uttarakhand (near Pithoragarh district).",
+    "explanation": "Historical report-based question: the stored answer is Uttarakhand. The original report and official final key still need verification. This item is not confirmation of the present construction status of the reported Mabja Zangbo dam.",
     "recommended_memory_technique": "blank_map_retrieval",
     "occurrences": [
       {
@@ -97206,7 +97240,10 @@
       "Sikkim",
       "Arunachal Pradesh"
     ],
-    "enriched_at": "2026-08-12T09:31:51.462511Z"
+    "enriched_at": "2026-08-12T09:31:51.462511Z",
+    "explanation_sources": [],
+    "explanation_reviewed_at": "2026-10-15",
+    "answer_key_review_status": "pending_primary_source"
   },
   {
     "uid": "PYQ-2935",
@@ -102709,7 +102746,7 @@
     "difficulty": "M",
     "correct_option_index": 0,
     "confidence": 0.98,
-    "explanation": "The Godavari Water Disputes Tribunal (GWDT) was constituted by the Central Government on April 10, 1969, under the chairmanship of Justice R.S. Bachawat to resolve inter-state water sharing disputes regarding the Godavari river basin.",
+    "explanation": "The Godavari Water Disputes Tribunal was constituted in April 1969 under Justice R. S. Bachawat. Source: Ministry of Jal Shakti, Act and Policies, Godavari Water Disputes Tribunal (April, 1969).",
     "recommended_memory_technique": "timeline_chunking",
     "occurrences": [
       {
@@ -102726,7 +102763,11 @@
       "June, 1969",
       "December, 1969"
     ],
-    "enriched_at": "2026-08-12T10:05:13.708205Z"
+    "enriched_at": "2026-08-12T10:05:13.708205Z",
+    "explanation_sources": [
+      "https://www.jalshakti-dowr.gov.in/documents/act-and-policies?persona=Media"
+    ],
+    "explanation_reviewed_at": "2026-10-15"
   },
   {
     "uid": "PYQ-3119",

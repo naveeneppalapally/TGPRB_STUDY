@@ -23,23 +23,23 @@
         <header class="mb-8 border-b b-line pb-7">
           <div class="mb-4 flex flex-wrap items-center gap-2">
             <span class="chip chip-saffron"><span class="dot" />T1 - High priority</span>
-            <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">🎯 Projected 2026: 3–5 Questions (4–6 Marks)</span>
-            <span class="chip">31 verified PYQs</span>
+            <span class="chip font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 border-emerald-500/30">Source review: 15 Oct 2026</span>
+            <span class="chip">{{ pyqs.length }} linked PYQs</span>
             <span class="chip">Geography</span>
           </div>
           <h1 class="font-display text-[30px] font-bold leading-[1.1] tracking-tight t-hi sm:text-[40px]">
             Drainage System of India
           </h1>
           <p class="mt-3 max-w-xl text-body leading-relaxed t-mid">
-            TGPRB Constable / SI · 2–3 direct questions per paper. Learn the rivers on the map,
-            then attach the facts - that is exactly how the exam asks them.
+            TGPRB Constable / SI · Learn river locations, tributaries and project associations.
+            Past questions guide practice; they do not guarantee future question counts.
           </p>
           <div class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
-              <UIcon name="i-heroicons-queue-list" class="h-3.5 w-3.5" />6 sections
+              <UIcon name="i-heroicons-queue-list" class="h-3.5 w-3.5" />{{ sections.length }} sections
             </span>
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
-              <UIcon name="i-heroicons-clipboard-document-list" class="h-3.5 w-3.5" />31 practice PYQs
+              <UIcon name="i-heroicons-clipboard-document-list" class="h-3.5 w-3.5" />{{ pyqs.length }} practice PYQs
             </span>
             <span class="flex items-center gap-1.5 text-body-xs t-lo">
               <UIcon name="i-heroicons-clock" class="h-3.5 w-3.5" />~16 min read
@@ -64,17 +64,17 @@
             </span>
           </div>
           <p class="mt-2.5 text-body-xs t-lo">
-            Cover all six and you have everything TGPRB has ever asked about drainage here.
-            Anything outside these six is context, not exam material.
+            These six patterns organise the questions linked to this topic.
+            They are a revision checklist, not a claim of complete syllabus or future-paper coverage.
           </p>
 
           <!-- 2026 Predicted Question Format Callout -->
           <div class="mt-4 rounded-xl border border-saffron-500/30 bg-saffron-500/5 p-4 flex items-start gap-3">
             <UIcon name="i-heroicons-sparkles" class="h-5 w-5 accent shrink-0 mt-0.5" />
             <div>
-              <p class="text-[12px] font-semibold uppercase tracking-wider accent">Predicted 2026 Question Patterns</p>
+              <p class="text-[12px] font-semibold uppercase tracking-wider accent">Practice priorities</p>
               <p class="mt-1 text-[13px] leading-relaxed t-mid">
-                <strong class="t-hi">Primary Format:</strong> Match the Following (River ↔ Tributary / Dam), followed by <strong class="t-hi">4-Statement True/False Verifications</strong> on East vs West flowing rivers. Trap alert: TGPRB frequently pairs Krishna tributaries with Godavari to induce negative marking.
+                Start with <strong class="t-hi">direct factual recall</strong>: river origins, tributaries, dams and flow direction. Use matching and multi-statement drills as supplementary advanced practice, not a prediction of the 2026 format.
               </p>
             </div>
           </div>
@@ -94,7 +94,7 @@
           <p class="mb-4 max-w-2xl text-body leading-[1.8] t-mid">
             This is your anchor. Rivers are spatial - that is how the exam tests them
             (tributary order, dam placement, which river ends where). Learn the shape first,
-            then click a river to attach its <span class="t-hi">PYQ-marked facts</span>.
+            then use the river filters to practise its <span class="t-hi">linked questions</span>.
           </p>
 
           <!-- High-Quality Labeled Physical River Map of India -->
@@ -159,10 +159,27 @@
               Why this topic matters for TGPRB
             </p>
             <p class="callout-body">
-              31 verified PYQs across Constable + SI papers (2015–2023). Expect 2–3 per paper.
+              {{ pyqs.length }} linked question records across Constable + SI papers (2015–2023). Historical records are not a forecast.
               Top question types follow the coverage strip above: tributaries, dam–river–state,
               waterfalls, doabs and drainage termination.
             </p>
+          </div>
+
+          <div class="panel panel-pad mb-6">
+            <h3 class="text-h3 font-semibold t-hi mb-3">Basin, course and drainage pattern</h3>
+            <p class="text-body-sm t-mid mb-3">A basin includes the land drained by a river and its tributaries. The main river course is the channel itself. Keep these separate when answering state-count questions.</p>
+            <div class="overflow-x-auto">
+              <table class="table-note">
+                <thead><tr><th>Pattern</th><th>Recall cue</th></tr></thead>
+                <tbody>
+                  <tr><td>Dendritic</td><td>Branches like a tree.</td></tr>
+                  <tr><td>Radial</td><td>Flows outward from a central high area.</td></tr>
+                  <tr><td>Trellis</td><td>Parallel main tributaries with smaller streams joining at right angles.</td></tr>
+                  <tr><td>Centripetal</td><td>Flows inward towards a depression.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="mt-3 text-body-xs t-lo font-mono">Source: NCERT, India: Physical Environment, 2026-27, Ch. 3, pp. 17-19. <a class="accent underline" href="https://ncert.nic.in/textbook/pdf/kegy103.pdf#page=1" target="_blank" rel="noopener noreferrer">Read the chapter</a>.</p>
           </div>
 
           <div class="grid grid-cols-3 gap-3">
@@ -193,8 +210,8 @@
           </header>
           <InlineNoteStrip note-id="NOTE-GEO-DRAINAGE" section-id="deep-dive" section-label="Deep Dive" note-title="Drainage System of India" @open="openNotesDrawer" />
           <p class="mb-6 max-w-2xl text-body-sm leading-relaxed t-lo">
-            Read each system, then hit <span class="locate-inline">map</span> to jump to it on the
-            physical map - see the fact where it happens.
+            Read each system, then use <span class="locate-inline">map</span> to return to the
+            overview map and locate the river yourself.
           </p>
 
           <!-- A. Himalayan Rivers -->
@@ -219,11 +236,11 @@
                 </div>
                 <div class="flex gap-3">
                   <dt class="w-16 shrink-0 font-mono text-[10px] uppercase leading-5 tracking-[0.12em] t-lo">Length</dt>
-                  <dd class="t-mid"><span class="cell-num">2,880 km</span> total · <span class="cell-num">709 km</span> in India</dd>
+                  <dd class="t-mid"><span class="cell-num">2,880 km</span> total · <span class="cell-num">1,114 km</span> in India (NCERT, Ch. 3, p. 20)</dd>
                 </div>
               </dl>
               <p class="mb-2 text-[11px] t-lo">
-                5 tributaries, east → west - mnemonic <span class="hot font-mono">S R B C J</span> (see them on the map)
+                5 tributaries, east → west - mnemonic <span class="hot font-mono">S B R C J</span> (see them on the map)
               </p>
               <div class="overflow-x-auto">
                 <table class="table-note">
@@ -248,7 +265,7 @@
                   PYQ alert
                 </p>
                 <p class="callout-body">
-                  "Which river is known as Iravati?" → <strong class="t-hi">Ravi</strong> [Constable 2015]
+                  "Which river is known as Iravati?" → <strong class="t-hi">Ravi</strong> [see linked PYQ source below]
                 </p>
               </div>
             </div>
@@ -294,7 +311,7 @@
                 </div>
                 <div class="rounded-lg bg-sub p-3.5">
                   <p class="eyebrow mb-1.5">Right bank</p>
-                  <p class="text-body-sm leading-relaxed t-mid">Yamuna · Son · Damodar</p>
+                  <p class="text-body-sm leading-relaxed t-mid">Yamuna · Son. Damodar belongs to the Ganga system through the Hugli distributary.</p>
                 </div>
               </div>
             </div>
@@ -320,7 +337,7 @@
               <dl class="mb-4 grid gap-2 text-body-sm">
                 <div class="flex gap-3">
                   <dt class="w-16 shrink-0 font-mono text-[10px] uppercase leading-5 tracking-[0.12em] t-lo">Origin</dt>
-                  <dd class="t-mid">Near Lake Mansarovar, Tibet</dd>
+                  <dd class="t-mid">Chemayungdung glacier near Lake Mansarovar, Tibet (NCERT, Ch. 3, p. 22)</dd>
                 </div>
                 <div class="flex gap-3">
                   <dt class="w-16 shrink-0 font-mono text-[10px] uppercase leading-5 tracking-[0.12em] t-lo">Names</dt>
@@ -374,7 +391,7 @@
               </p>
               <p class="callout-body">
                 <span class="font-mono font-semibold">God KriMa Cau</span> -
-                Godavari (1,465) → Krishna (1,400) → Mahanadi (858) → Cauvery (800)
+                Godavari (1,465) → Krishna (1,400) → Mahanadi (851) → Cauvery (800)
               </p>
             </div>
 
@@ -382,7 +399,7 @@
               <div class="overflow-x-auto">
                 <table class="table-note">
                   <thead>
-                    <tr><th>River</th><th>Origin</th><th>Length</th><th>Key tributaries</th><th>States</th></tr>
+                    <tr><th>River</th><th>Origin</th><th>Length</th><th>Key tributaries</th><th>Main river course</th></tr>
                   </thead>
                   <tbody>
                     <tr v-for="r in eastRivers" :key="r.name">
@@ -410,7 +427,7 @@
                 <p class="callout-body">
                   Easternmost tributary → <strong class="t-hi">Sabari</strong> (NOT Indravati) -
                   spot it on the map. States in catchment → <strong class="t-hi">7</strong>
-                  (MH, TS, AP, CG, MP, KA, OR).
+                  (MH, TS, AP, CG, MP, KA, OR). This includes tributary catchments; it is not the main river course.
                 </p>
               </div>
             </div>
@@ -475,7 +492,7 @@
               </p>
               <p class="callout-body">
                 Narmada &amp; Tapi flow through rift valleys - no deltas, they form estuaries instead.
-                The map shows them squeezed between the Vindhya (N) and Satpura (S) ranges.
+                Narmada lies between the Vindhya (N) and Satpura (S) ranges. Tapi lies south of the Satpuras.
               </p>
             </div>
 
@@ -642,7 +659,7 @@
               </tbody>
             </table>
             <p class="mt-3 text-body-xs t-lo">
-              Mnemonic <span class="hot font-mono">BiBarReChaJ</span> → Bist, Bari, Rechna, Chaj, Jech - east to west
+              Mnemonic <span class="hot font-mono">BiBarReChaSi</span> → Bist, Bari, Rechna, Chaj, Sindh Sagar - east to west. Jech is another name for Chaj.
             </p>
           </div>
         </section>
@@ -693,6 +710,18 @@
               </p>
             </div>
           </div>
+        </section>
+
+        <section id="sources" class="mb-10 scroll-mt-20 panel panel-pad">
+          <h2 class="sec-title mb-3">Sources &amp; reading checks</h2>
+          <p class="text-body-sm t-mid mb-3">Reviewed 15 October 2026. Source checking covers the corrections below; it does not certify every historical answer key or map label.</p>
+          <ul class="space-y-3 text-body-sm t-mid">
+            <li><a class="accent underline" href="https://ncert.nic.in/textbook/pdf/kegy103.pdf" target="_blank" rel="noopener noreferrer">NCERT, India: Physical Environment, Ch. 3 (2026-27), pp. 17-25</a>: drainage patterns, origins and flow. Lengths are source-dependent: this note uses NCERT's 851 km for Mahanadi; rounded figures elsewhere should be read with their source.</li>
+            <li><a class="accent underline" href="https://www.cwc.gov.in/en/mso/about-basins" target="_blank" rel="noopener noreferrer">CWC, Basin Details, Godavari row</a>: seven basin states. <a class="accent underline" href="https://indiawris.gov.in/downloads/Godavari%20Basin.pdf" target="_blank" rel="noopener noreferrer">CWC/ISRO Godavari Basin Report</a>: Pranahita is the largest tributary. Basin membership differs from the main river's route.</li>
+            <li><a class="accent underline" href="https://karnatakatourism.org/en/attractions/jog-falls" target="_blank" rel="noopener noreferrer">Karnataka Tourism, Jog Falls</a>: Sharavathi, about 253 m. <a class="accent underline" href="https://nirmal.telangana.gov.in/tourist-place/kadam-dam/" target="_blank" rel="noopener noreferrer">Nirmal District, Kadam Project</a>: current district location.</li>
+            <li><a class="accent underline" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2153799" target="_blank" rel="noopener noreferrer">PIB, 7 August 2025</a>: revised total coastline, 11,098 km including islands. The 2016 mainland-only PYQ retains its historical 6,100 km option. These figures measure different things.</li>
+          </ul>
+          <p class="mt-4 text-body-xs t-lo font-mono">Review limits: original final keys and source reports remain to be checked for the 2018 Kerala water-literacy item and the Mabja Zangbo report. Advanced questions attributed to TGPSC 2024 also need paper/key provenance checks. Existing illustration provenance and labels are not newly certified here.</p>
         </section>
 
         <!-- ── 06 · PYQs ────────────────────────────────────────────────── -->
@@ -1059,7 +1088,7 @@ import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
 useHead({
   title: 'Drainage System of India - BeatBook',
-  meta: [{ name: 'description', content: 'Complete TGPRB study note: Drainage System of India with an interactive physical river map, 28 PYQs, and 10 practice questions.' }],
+  meta: [{ name: 'description', content: 'Drainage System of India: source-linked notes, river maps, historical PYQs and comprehension practice.' }],
 })
 
 
@@ -1093,6 +1122,7 @@ const sections = [
   { id: 'deep-dive',        label: 'Deep Dive' },
   { id: 'data',             label: 'Data & Comparisons' },
   { id: 'memory-hacks',     label: 'Memory Hacks' },
+  { id: 'sources',          label: 'Sources & checks' },
   { id: 'pyqs',             label: 'PYQs' },
   { id: 'advanced-practice', label: 'Advanced Practice' },
   { id: 'gate',             label: 'Comprehension Gate' },
@@ -1128,11 +1158,10 @@ onUnmounted(() => {
 })
 
 /* ── Stats ───────────────────────────────────────────────────────────────── */
-const topStats = [
-  { count: '8+', label: 'Godavari PYQs', riverKey: 'godavari' },
-  { count: '5+', label: 'Narmada PYQs', riverKey: 'narmada' },
-  { count: '4+', label: 'Krishna PYQs', riverKey: 'krishna' },
-]
+const topStats = computed(() => ['godavari', 'narmada', 'krishna'].map(riverKey => ({
+  count: pyqs.filter(q => q.rivers.includes(riverKey)).length,
+  label: `${riverKey[0].toUpperCase() + riverKey.slice(1)} linked PYQs`, riverKey,
+})))
 
 /* ── Indus tributaries (hot = asked in a PYQ) ────────────────────────────── */
 const indusTributaries = [
@@ -1148,7 +1177,7 @@ const eastRivers = [
   {
     name: 'Godavari', origin: 'Nasik, MH', length: '1,465 km',
     tribs: [{ n: 'Pranahita' }, { n: 'Indravati' }, { n: 'Sabari', hot: true }, { n: 'Manjira' }],
-    states: '7', statesHot: true,
+    states: 'MH, TS, AP', statesHot: false,
   },
   {
     name: 'Krishna', origin: 'Mahabaleshwar, WG', length: '1,400 km',
@@ -1156,14 +1185,14 @@ const eastRivers = [
     states: 'MH, KA, TS, AP', statesHot: false,
   },
   {
-    name: 'Mahanadi', origin: 'Sihawa, CG', length: '858 km',
+    name: 'Mahanadi', origin: 'Sihawa, CG', length: '851 km',
     tribs: [{ n: 'Seonath' }, { n: 'Hasdeo' }],
     states: 'CG, OR', statesHot: false,
   },
   {
     name: 'Cauvery', origin: 'Brahmagiri Hills, Coorg', length: '800 km',
     tribs: [{ n: 'Hemavati' }, { n: 'Kabini' }],
-    states: 'KA, TN, KL', statesHot: false,
+    states: 'KA, TN', statesHot: false,
   },
 ]
 
@@ -1187,13 +1216,13 @@ const dams = [
   { name: 'Sriram Sagar',   river: 'Godavari',   state: 'Telangana (Nizamabad)',  ts: true,  hot: false },
   { name: 'Kaleshwaram',    river: 'Godavari',   state: 'Telangana',              ts: true,  hot: false },
   { name: 'Lower Manair',   river: 'Manair',     state: 'Telangana (Karimnagar)', ts: true,  hot: false },
-  { name: 'Kadam',          river: 'Kadam',      state: 'Telangana (Adilabad)',   ts: true,  hot: false },
+  { name: 'Kadam',          river: 'Kadam',      state: 'Telangana (Nirmal)',   ts: true,  hot: false },
   { name: 'Jayakwadi',      river: 'Godavari',   state: 'Maharashtra',            ts: false, hot: false },
 ]
 
 /* ── Waterfalls ──────────────────────────────────────────────────────────── */
 const falls = [
-  { name: 'Jog (Gersoppa)', river: 'Sharavathi', note: 'Highest in India',       hot: false },
+  { name: 'Jog (Gersoppa)', river: 'Sharavathi', note: 'Karnataka; about 253 m',       hot: false },
   { name: 'Dhuandhar',      river: 'Narmada',    note: 'Also: Marble Falls',     hot: true  },
   { name: 'Kapildhara',     river: 'Narmada',    note: 'Near Amarkantak origin', hot: false },
   { name: 'Dudhsagar',      river: 'Mandovi',    note: 'Goa',                    hot: false },
@@ -1209,7 +1238,7 @@ const masterTable = [
   { river: 'Narmada',     origin: 'Amarkantak',         length: '1,312 km', drains: 'Arabian Sea',   fact: 'Rift valley · no delta' },
   { river: 'Tapi',        origin: 'Multai, Betul',      length: '724 km',   drains: 'Arabian Sea',   fact: 'Parallel to Narmada' },
   { river: 'Cauvery',     origin: 'Brahmagiri Hills',   length: '800 km',   drains: 'Bay of Bengal', fact: 'Sacred river of South' },
-  { river: 'Mahanadi',    origin: 'Sihawa, CG',         length: '858 km',   drains: 'Bay of Bengal', fact: 'Hirakud Dam' },
+  { river: 'Mahanadi',    origin: 'Sihawa, CG',         length: '851 km',   drains: 'Bay of Bengal', fact: 'Hirakud Dam' },
   { river: 'Luni',        origin: 'Pushkar Valley, RJ', length: '495 km',   drains: 'Rann of Kutch', fact: 'Inland drainage only' },
 ]
 
@@ -1227,7 +1256,7 @@ const memoryHacks = [
   {
     title: 'Peninsular east-flowing rivers - by length',
     mnemonic: 'God KriMa Cau',
-    expansion: 'Godavari (1,465 km) → Krishna (1,400 km) → Mahanadi (858 km) → Cauvery (800 km)',
+    expansion: 'Godavari (1,465 km) → Krishna (1,400 km) → Mahanadi (851 km) → Cauvery (800 km)',
   },
   {
     title: 'Indus tributaries - west to east',
@@ -1236,8 +1265,8 @@ const memoryHacks = [
   },
   {
     title: 'Doabs - east to west',
-    mnemonic: 'BiBarReChaJ',
-    expansion: 'Bist · Bari · Rechna · Chaj · Jech (Sindh Sagar)',
+    mnemonic: 'BiBarReChaSi',
+    expansion: 'Bist · Bari · Rechna · Chaj (Jech) · Sindh Sagar',
   },
   {
     title: 'Brahmaputra names across regions',
@@ -1292,7 +1321,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "Damodar"
     ],
     "correct": 2,
-    "explanation": "The Matatilla Dam project was constructed in 1958 across the Betwa River in Lalitpur district, Uttar Pradesh. It provides water for irrigation and power generation in Uttar Pradesh and Madhya Pradesh.",
+    "explanation": "Matatilla is a multipurpose project on the Betwa River. The river-project association is the fact tested here.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1429,7 +1458,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "5"
     ],
     "correct": 1,
-    "explanation": "The Godavari river basin extends across 7 states in India: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Odisha, and Karnataka (along with the Union Territory of Puducherry - Yanam).",
+    "explanation": "The catchment includes parts of seven states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka and Odisha. Count the drainage basin, including tributary catchments, rather than only states crossed by the main river. Source: CWC, Monitoring (South), Basin Details (Godavari row).",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1659,7 +1688,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "8100 kms"
     ],
     "correct": 1,
-    "explanation": "The mainland coastline of India covers a distance of approximately 6,100 km. Including the island groups of Lakshadweep and Andaman & Nicobar, the total length of India's coastline extends to 7,516.6 km.",
+    "explanation": "Historical 2016 question: the expected option is approximately 6,100 km for the mainland coastline. The older total of 7,516.6 km included islands. A PIB release dated 7 August 2025 reports a revised TOTAL coastline of 11,098 km; that is not a replacement answer for this old mainland-only question. Verify against latest official publication before exam.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1726,7 +1755,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "(A) is false, but (R) is true"
     ],
     "correct": 2,
-    "explanation": "West-flowing peninsular rivers like Narmada and Tapi form estuaries rather than deltas because they flow through hard-rock rift valleys with steep gradients. While they do carry some sediments, the strong sea currents and high flow velocity prevent delta formation, making Assertion (A) true and Reason (R) false.",
+    "explanation": "In the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1749,7 +1778,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "(A) is false, but (R) is true"
     ],
     "correct": 2,
-    "explanation": "West-flowing peninsular rivers like Narmada and Tapi form estuaries instead of deltas because they flow through steep rift valleys of hard rock at high speeds. Saying they carry no sediments at all is false; they do transport sediments, but the high gradient and marine action prevent delta formation.",
+    "explanation": "In the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1772,7 +1801,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "(4) (A), (B), (C) only"
     ],
     "correct": 3,
-    "explanation": "The Kerala State Literacy Mission Authority (KSLMA) launched the 'Water Literacy' campaign in June 2018. Over 70,000 instructors and equivalency students were mobilized to educate 15 families each, reaching around 10 lakh households about water conservation and pollution. The initiative was a voluntary educational drive, not mandatory by law.",
+    "explanation": "Historical June 2018 campaign question. The stored answer selects A, B and C and excludes D (mandatory participation). The original final key and campaign statistics still need primary-source verification; do not treat this explanation as a current statistic or independently verified key.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1817,7 +1846,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "Utkal coast"
     ],
     "correct": 0,
-    "explanation": "Vembanad Lake is the longest lake in India and the largest lake in Kerala, located along the southwestern Malabar Coast. It is famous for hosting the Nehru Trophy Boat Race and forms a crucial part of Kerala's backwater network.",
+    "explanation": "Vembanad is in Kerala. The Nehru Trophy Boat Race takes place on Punnamada Lake, part of the Vembanad backwater system.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1839,7 +1868,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "(A) is false but (R) is true."
     ],
     "correct": 2,
-    "explanation": "Assertion (A) is true because west-flowing rivers like Narmada and Tapi flow through narrow fault valleys with high gradient, forming estuaries instead of deltas. Reason (R) is false because the Western Coastal Plains are narrow strips (approx. 50\u201380 km wide), whereas the Eastern Coastal Plains are much broader (100\u2013130 km wide) due to extensive deltaic depositions.",
+    "explanation": "In the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The western coastal plain is narrower, not broader, than the eastern coastal plain. Assertion A is true and Reason R is false.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1906,7 +1935,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "Arunachal Pradesh"
     ],
     "correct": 1,
-    "explanation": "The Mabja Zangbo river originates in Tibet and flows into Nepal to form the Ghaghara (Karnali) river before entering India. China's dam on this river is located near the tri-junction of China, Nepal, and the Indian state of Uttarakhand (near Pithoragarh district).",
+    "explanation": "Historical report-based question: the stored answer is Uttarakhand. The original report and official final key still need verification. This item is not confirmation of the present construction status of the reported Mabja Zangbo dam.",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -1972,7 +2001,7 @@ const pyqs = reactive<Pyq[]>(canonicalNotePyqs([
       "December, 1969"
     ],
     "correct": 0,
-    "explanation": "The Godavari Water Disputes Tribunal (GWDT) was constituted by the Central Government on April 10, 1969, under the chairmanship of Justice R.S. Bachawat to resolve inter-state water sharing disputes regarding the Godavari river basin.",
+    "explanation": "The Godavari Water Disputes Tribunal was constituted in April 1969 under Justice R. S. Bachawat. Source: Ministry of Jal Shakti, Act and Policies, Godavari Water Disputes Tribunal (April, 1969).",
     "revealed": false,
     "selected": null,
     "rivers": [
@@ -2020,7 +2049,7 @@ function focusRiverPYQ(riverKey: string) {
   }
 }
 
-const attemptedCount = computed(() => pyqs.filter(q => q.revealed).length)
+const attemptedCount = computed(() => pyqs.filter(q => q.selected !== null).length)
 const correctCount = computed(() => pyqs.filter(q => q.revealed && q.selected === q.correct).length)
 
 /* -- Advanced Practice: TGPSC-style hardening drills ---------------------- */
@@ -2049,7 +2078,7 @@ const advancedPractice = reactive<AdvPractice[]>([
     ],
     correct: 2,
     explanation: 'Kalwakurthy LIS draws from Krishna (Srisailam foreshore). Nizam Sagar is on Manjeera River (Kamareddy). Devadula LIS lifts from Godavari at Gangaram. Chanaka-Korata Barrage is on Penganga River (Adilabad).',
-    source: 'TGPSC Group-I 2024, Q101',
+    source: 'Attributed to TGPSC Group-I 2024, Q101; paper/key check pending',
     format: 'Matching',
     isSynthetic: false,
     revealed: false,
@@ -2065,8 +2094,8 @@ const advancedPractice = reactive<AdvPractice[]>([
       'Neither A nor B',
     ],
     correct: 2,
-    explanation: 'Koulasnala (Jukkal, Kamareddy - Manjeera/Godavari) and Boggulavagu (Mancherial - Godavari basin) are Godavari projects. Kotepally Vagu (Vikarabad - Kagna/Bhima sub-basin) and Asif Nahar fall in the Krishna basin. Both statements are correct.',
-    source: 'TGPSC Group-I 2024, Q71',
+    explanation: 'Koulasnala (Jukkal, Kamareddy - Manjeera/Godavari) and Boggulavagu (Godavari basin) are Godavari projects. Kotepally Vagu (Vikarabad - Kagna/Bhima sub-basin) and Asif Nahar fall in the Krishna basin. Both statements are correct.',
+    source: 'Attributed to TGPSC Group-I 2024, Q71; paper/key check pending',
     format: 'Multi-statement',
     isSynthetic: false,
     revealed: false,
@@ -2083,7 +2112,7 @@ const advancedPractice = reactive<AdvPractice[]>([
     ],
     correct: 3,
     explanation: 'Rejuvenation occurs when base level falls or land is uplifted, renewing downcutting. Incised meanders, entrenched meanders, and knickpoints are characteristic features. Natural levees are depositional features of mature/old river stages, not indicators of rejuvenation.',
-    source: 'TGPSC Group-I 2024, Q62',
+    source: 'Attributed to TGPSC Group-I 2024, Q62; paper/key check pending',
     format: 'Multi-statement',
     isSynthetic: false,
     revealed: false,
@@ -2125,7 +2154,7 @@ const advancedPractice = reactive<AdvPractice[]>([
   },
 ])
 
-const advAttemptedCount = computed(() => advancedPractice.filter(q => q.revealed).length)
+const advAttemptedCount = computed(() => advancedPractice.filter(q => q.selected !== null).length)
 const advCorrectCount = computed(() => advancedPractice.filter(q => q.revealed && q.selected === q.correct).length)
 
 function advAttempt(q: AdvPractice, optIdx: number) {

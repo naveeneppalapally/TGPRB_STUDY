@@ -6,7 +6,7 @@ const chapter: StudyChapter = {
   "subject": "Geography",
   "subjectSlug": "geography",
   "title": "Drainage System of India",
-  "summary": "Recall and contrast drills from verified TGPRB PYQs (2015-2023). Historical exam statistics require checking against the latest official publication.",
+  "summary": "Drainage recall with source-linked corrections. Historical questions retain their original context; unresolved source checks are marked explicitly.",
   "hasNote": true,
   "sections": [
     {
@@ -16,14 +16,24 @@ const chapter: StudyChapter = {
       "estMinutes": 3,
       "blocks": [
         {
+          "type": "callout",
+          "tone": "neutral",
+          "title": "Orient yourself before memorising",
+          "html": "A <strong>drainage basin</strong> includes a river and its tributary catchments. The main channel may cross fewer states than the whole basin. For each river, locate its source, direction, course, tributaries, projects and mouth. Use the linked Note map before drilling."
+        },
+        {
           "type": "p",
           "lineId": "pyq-0510",
-          "html": "The Matatilla Dam project was constructed in 1958 across the <strong>Betwa</strong> River in Lalitpur district, Uttar Pradesh. It provides water for irrigation and power generation in Uttar Pradesh and Madhya Pradesh."
+          "html": "Matatilla is a multipurpose project on the <strong>Betwa</strong> River. The river-project association is the fact tested here."
         },
         {
           "type": "p",
           "lineId": "pyq-0533",
           "html": "<strong>Panchganga</strong> and Malaprabha are major tributaries of the river Krishna. On the other hand, Purna and Pravara are tributaries of the river Godavari, making (c) and (d) the correct set of rivers that are not tributaries of Krishna."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -40,7 +50,7 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-0510-recall",
           "front": "Matatilla Project was built on which of the following rivers?",
-          "back": "Betwa\n\nThe Matatilla Dam project was constructed in 1958 across the Betwa River in Lalitpur district, Uttar Pradesh. It provides water for irrigation and power generation in Uttar Pradesh and Madhya Pradesh."
+          "back": "Betwa\n\nMatatilla is a multipurpose project on the Betwa River. The river-project association is the fact tested here."
         },
         {
           "id": "PYQ-0533-recall",
@@ -51,16 +61,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-1-contrast",
-          "left": "Betwa",
-          "right": "Panchganga",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Krishna system",
+          "right": "Godavari system",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Matatilla Project was built on which of the following rivers?",
+              "text": "Panchganga and Malaprabha belong here.",
               "side": "left"
             },
             {
-              "text": "Which of the following river/s is/are not a tributary of the river Krishna? (a) Panchganga (b) Malaprabha (c) Purna (d) Pravara",
+              "text": "Purna and Pravara belong here.",
               "side": "right"
             }
           ]
@@ -82,6 +92,10 @@ const chapter: StudyChapter = {
           "type": "p",
           "lineId": "pyq-0715",
           "html": "The <strong>Salal Hydroelectric Power Station</strong> is built on the Chenab River in Jammu and Kashmir, not the Tapi River. Tehri Dam is located on the Bhagirathi River, Dul-Hasti on the Chenab River, and Jayakwadi Dam on the Godavari River."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -109,16 +123,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-2-contrast",
-          "left": "Sabari",
-          "right": "Salal Hydroelectric Power Station",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Godavari",
+          "right": "Chenab",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Which of the following is the easternmost tributary of the Godavari river system?",
+              "text": "Sabari is a tributary of this river.",
               "side": "left"
             },
             {
-              "text": "Which one of the following pairs related to hydro-electricity projects and rivers is not correct?",
+              "text": "Salal hydropower station is on this river.",
               "side": "right"
             }
           ]
@@ -134,12 +148,16 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-0719",
-          "html": "<strong>From North</strong> to South, the correct geographical order of these rivers is Luni (d) in Rajasthan, Sabarmati (b) in Rajasthan/Gujarat, Mahi (a) crossing the Tropic of Cancer twice, and Tapi (c) flowing south of Narmada. Thus, the sequence is d, b, a, c."
+          "html": "From north to South, the correct geographical order of these rivers is <strong>Luni</strong> (d) in Rajasthan, Sabarmati (b) in Rajasthan/Gujarat, Mahi (a) crossing the Tropic of Cancer twice, and Tapi (c) flowing south of Narmada. Thus, the sequence is d, b, a, c."
         },
         {
           "type": "p",
           "lineId": "pyq-0722",
           "html": "The Dhuandhar Falls, also known as the Marble Water Falls, is located on the <strong>Narmada</strong> River at Bhedaghat in Jabalpur district, Madhya Pradesh. It gets its name because the plunge of water creates a mist so fine that it looks like smoke (Dhuan)."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -167,16 +185,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-3-contrast",
-          "left": "From North",
+          "left": "Luni",
           "right": "Narmada",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Consider the following rivers in India from North to South and identify the correct sequence:\na. Mahi, b. Sabarmati, c. Tapi, d. Luni",
+              "text": "Terminates towards the Rann of Kutch.",
               "side": "left"
             },
             {
-              "text": "'Marble Water Falls' (Dhuandhar Falls) is connected with which river ?",
+              "text": "Forms Dhuandhar Falls at Bhedaghat.",
               "side": "right"
             }
           ]
@@ -192,12 +210,16 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-0735",
-          "html": "The <strong>Godavari</strong> river basin extends across 7 states in India: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Odisha, and Karnataka (along with the Union Territory of Puducherry - Yanam)."
+          "html": "The catchment includes parts of seven states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka and Odisha. Count the drainage basin, including tributary catchments, rather than only states crossed by the main river. Source: CWC, Monitoring (South), Basin Details (<strong>Godavari</strong> row)."
         },
         {
           "type": "p",
           "lineId": "pyq-0991",
           "html": "The Luni River originates in the Pushkar Valley of the Aravalli Range near Ajmer. It is an inland drainage system that flows southwest through the Thar Desert and dissipates into the marshy lands of the <strong>Rann of Kutch</strong> in Gujarat without reaching the sea."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -214,7 +236,7 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-0735-recall",
           "front": "The number of states at present which fall in the catchment area of Godavari river",
-          "back": "7\n\nThe Godavari river basin extends across 7 states in India: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Odisha, and Karnataka (along with the Union Territory of Puducherry - Yanam)."
+          "back": "7\n\nThe catchment includes parts of seven states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka and Odisha. Count the drainage basin, including tributary catchments, rather than only states crossed by the main river. Source: CWC, Monitoring (South), Basin Details (Godavari row)."
         },
         {
           "id": "PYQ-0991-recall",
@@ -225,16 +247,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-4-contrast",
-          "left": "Godavari",
-          "right": "Rann of Kutch",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Drainage basin",
+          "right": "Main river course",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "The number of states at present which fall in the catchment area of Godavari river",
+              "text": "Includes land drained by tributaries.",
               "side": "left"
             },
             {
-              "text": "The Luni river, which originates in the pushkar valley of the Aravalli range, ends in which among the following?",
+              "text": "The channel followed by the named main river.",
               "side": "right"
             }
           ]
@@ -256,6 +278,10 @@ const chapter: StudyChapter = {
           "type": "p",
           "lineId": "pyq-1236",
           "html": "<strong>Guru Shikhar</strong> is the highest peak of the Aravalli Range (1,722 m). The Dhuandhar Falls are located on the Narmada River in Jabalpur, Madhya Pradesh. Thalghat is an important mountain pass located in the Western Ghats connecting Mumbai and Nashik, and the Lakshadweep Archipelago consists of coral reef islands."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -284,15 +310,15 @@ const chapter: StudyChapter = {
         {
           "id": "facts-5-contrast",
           "left": "Tapi",
-          "right": "Guru Shikhar",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "right": "Narmada",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Ukai dam is situated across which of the following rivers?",
+              "text": "Ukai Dam is on this river.",
               "side": "left"
             },
             {
-              "text": "Match the following:\nList - I\n(a) Guru Shikhar Peak\n(b) Dhuadhar waterfall\n(c) Thalghat gap\n(d) Coral reefs\nList - II\n(i) Lakshadweep islands\n(ii) Western ghats\n(iii) Narmada river\n(iv) Aravallis",
+              "text": "Dhuandhar Falls is on this river.",
               "side": "right"
             }
           ]
@@ -314,6 +340,10 @@ const chapter: StudyChapter = {
           "type": "p",
           "lineId": "pyq-1507",
           "html": "<strong>Kosi</strong> is a major left-bank tributary of the Ganga; Teesta flows into the Brahmaputra; Wainganga is a prominent tributary of the Godavari river system; and Bhima is a major left-bank tributary of the Krishna river."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -341,16 +371,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-6-contrast",
-          "left": "Sardar Sarovar Dam",
-          "right": "Kosi",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Ganga system",
+          "right": "Krishna system",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Match the following\nList - I\na) Sardar Sarovar dam\nb) Highest mountain peak in South India\nc) Todas\nd) Copper\nList - II\ni) Anaimudi\nii) Agnigundala\niii) Narmada\niv) Nilgiri",
+              "text": "Kosi belongs to this river system.",
               "side": "left"
             },
             {
-              "text": "Match the following\nList - I\nRiver\na) Ganga\nb) Brahmaputra\nc) Godavari\nd) Krishna\nList - II\nTributary\ni) Bhima\nii) Wainganga\niii) Teesta\niv) Kosi",
+              "text": "Bhima belongs to this river system.",
               "side": "right"
             }
           ]
@@ -372,6 +402,10 @@ const chapter: StudyChapter = {
           "type": "p",
           "lineId": "pyq-1512",
           "html": "The <strong>Cauvery</strong> river originates in the Brahmagiri Hills of Karnataka, the Narmada river rises from the Amarkantak Plateau in Madhya Pradesh, the Sabarmati river originates in the Aravalli Range in Rajasthan, and the Krishna river originates near Mahabaleshwar in the Western Ghats of Maharashtra."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -399,16 +433,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-7-contrast",
-          "left": "Dudhsagar Falls",
+          "left": "Sharavathi",
           "right": "Cauvery",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Match the following List - I Waterfall a) Dudhsagar b) Kapildhara c) Hogenakal d) Jog List - II River i) Mandovi ii) Narmada iii) Cauvery iv) Sharavaty",
+              "text": "Jog Falls is on this river.",
               "side": "left"
             },
             {
-              "text": "Match the following List - I River a) Cauvery b) Narmada c) Sabarmati d) Krishna List - II Source/origin i) Brahmagiri Hills ii) Amarkantak Plateau iii) Aravalli Hills iv) Western ghats",
+              "text": "Hogenakkal Falls is on this river.",
               "side": "right"
             }
           ]
@@ -430,6 +464,10 @@ const chapter: StudyChapter = {
           "type": "p",
           "lineId": "pyq-1518",
           "html": "The <strong>Brahmaputra</strong> is an antecedent river that originates in Tibet, where it is known as the Yarlung Tsangpo. Shyok and Shigar are major right-bank tributaries of the Indus River system, not the Brahmaputra."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -457,16 +495,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-8-contrast",
-          "left": "Rihand Project",
-          "right": "Brahmaputra",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Brahmaputra system",
+          "right": "Indus system",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Match the following\nList - I\nProject\na) Rihind\nb) Sileru\nc) Mettur\nd) Almatti\nList - II\nState\ni) Karnataka\nii) Tamilnadu\niii) Andhra Pradesh\niv) Uttar Pradesh",
+              "text": "Called Tsangpo in Tibet.",
               "side": "left"
             },
             {
-              "text": "Read the following statements\na) River Brahmaputra is an antecedent river.\nb) In Tibet, it is called as Tsangpo.\nc) The important tributaries are Shyok, Shigar.\nWhich of the above statements is/are correct",
+              "text": "Shyok and Shigar belong to this system.",
               "side": "right"
             }
           ]
@@ -475,19 +513,23 @@ const chapter: StudyChapter = {
     },
     {
       "id": "facts-9",
-      "title": "Lakes, Waterfalls & Coastal Features",
+      "title": "Historical Coastline Question & Bhakra-Nangal",
       "short": "Fact set 9",
       "estMinutes": 3,
       "blocks": [
         {
           "type": "p",
           "lineId": "pyq-1524",
-          "html": "The mainland coastline of India covers a distance of approximately 6,100 km. <strong>Including</strong> the island groups of Lakshadweep and Andaman &amp; Nicobar, the total length of India&#x27;s coastline extends to 7,516.6 km."
+          "html": "Historical 2016 question: the expected option is approximately 6,100 km for the mainland coastline. The older total of 7,516.6 km included islands. A PIB release dated 7 August 2025 reports a revised TOTAL coastline of 11,098 km; that is not a replacement answer for this old mainland-only question. Verify against latest official publication before exam."
         },
         {
           "type": "p",
           "lineId": "pyq-1532",
           "html": "The Bhakra-Nangal Dam is one of India&#x27;s earliest and largest multipurpose river valley projects, constructed on the <strong>Sutlej</strong> River near Bilaspur in Himachal Pradesh. The reservoir created by the dam is known as the Gobind Sagar lake."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -504,7 +546,7 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-1524-recall",
           "front": "The Coast Line of India excluding Islands is approximately:",
-          "back": "6100 kms\n\nThe mainland coastline of India covers a distance of approximately 6,100 km. Including the island groups of Lakshadweep and Andaman & Nicobar, the total length of India's coastline extends to 7,516.6 km."
+          "back": "6100 kms\n\nHistorical 2016 question: the expected option is approximately 6,100 km for the mainland coastline. The older total of 7,516.6 km included islands. A PIB release dated 7 August 2025 reports a revised TOTAL coastline of 11,098 km; that is not a replacement answer for this old mainland-only question. Verify against latest official publication before exam."
         },
         {
           "id": "PYQ-1532-recall",
@@ -515,16 +557,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-9-contrast",
-          "left": "Including",
-          "right": "Sutlej",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Historical mainland figure",
+          "right": "Revised total coastline",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "The Coast Line of India excluding Islands is approximately:",
+              "text": "Approximately 6,100 km: the stored 2016 mainland-only question.",
               "side": "left"
             },
             {
-              "text": "Bhakra-Nangal project is constructed on the river",
+              "text": "11,098 km: PIB, 7 August 2025, including islands.",
               "side": "right"
             }
           ]
@@ -545,7 +587,11 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-1820",
-          "html": "<strong>West</strong>-flowing peninsular rivers like Narmada and Tapi form estuaries rather than deltas because they flow through hard-rock rift valleys with steep gradients. While they do carry some sediments, the strong sea currents and high flow velocity prevent delta formation, making Assertion (A) true and Reason (R) false."
+          "html": "In the textbook comparison, <strong>Narmada</strong> and <strong>Tapi</strong> form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -567,22 +613,22 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-1820-recall",
           "front": "Assertion (A): West flowing rivers of peninsular India have no deltas.\nReason (R) : These rivers do not carry any alluvial sediments.\nCorrect answer is :",
-          "back": "(A) is true, but (R) is false\n\nWest-flowing peninsular rivers like Narmada and Tapi form estuaries rather than deltas because they flow through hard-rock rift valleys with steep gradients. While they do carry some sediments, the strong sea currents and high flow velocity prevent delta formation, making Assertion (A) true and Reason (R) false."
+          "back": "(A) is true, but (R) is false\n\nIn the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms."
         }
       ],
       "traps": [
         {
           "id": "facts-10-contrast",
-          "left": "Rihand Dam",
-          "right": "West",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Krishna",
+          "right": "Cauvery",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Match the following\nList - I\nProject\na) Rihind\nb) Sileru\nc) Mettur\nd) Almatti\nList - II\nState\ni) Karnataka\nii) Tamilnadu\niii) Andhra Pradesh\niv) Uttar Pradesh\nThe correct answer is",
+              "text": "Almatti Dam is on this river.",
               "side": "left"
             },
             {
-              "text": "Assertion (A): West flowing rivers of peninsular India have no deltas.\nReason (R) : These rivers do not carry any alluvial sediments.\nCorrect answer is :",
+              "text": "Mettur Dam is on this river.",
               "side": "right"
             }
           ]
@@ -596,14 +642,24 @@ const chapter: StudyChapter = {
       "estMinutes": 3,
       "blocks": [
         {
+          "type": "callout",
+          "tone": "saffron",
+          "title": "Historical campaign: verification pending",
+          "html": "The 2018 Kerala campaign item is retained for paper context. Its official final key and numerical claims have not been independently verified in this audit."
+        },
+        {
           "type": "p",
           "lineId": "pyq-1890",
-          "html": "<strong>West</strong>-flowing peninsular rivers like Narmada and Tapi form estuaries instead of deltas because they flow through steep rift valleys of hard rock at high speeds. Saying they carry no sediments at all is false; they do transport sediments, but the high gradient and marine action prevent delta formation."
+          "html": "In the textbook comparison, <strong>Narmada</strong> and <strong>Tapi</strong> form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms."
         },
         {
           "type": "p",
           "lineId": "pyq-2238",
-          "html": "The <strong>Kerala State Literacy Mission Authority</strong> (KSLMA) launched the &#x27;Water Literacy&#x27; campaign in June 2018. Over 70,000 instructors and equivalency students were mobilized to educate 15 families each, reaching around 10 lakh households about water conservation and pollution. The initiative was a voluntary educational drive, not mandatory by law."
+          "html": "Historical June 2018 campaign question. The stored answer selects A, B and C and excludes D (mandatory participation). The original final key and campaign statistics still need primary-source verification; do not treat this explanation as a current statistic or independently verified key."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -620,27 +676,27 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-1890-recall",
           "front": "Assertion (A): West flowing rivers of peninsular India have no deltas.\nReason (R) : These rivers do not carry any alluvial sediments.",
-          "back": "(A) is true, but (R) is false\n\nWest-flowing peninsular rivers like Narmada and Tapi form estuaries instead of deltas because they flow through steep rift valleys of hard rock at high speeds. Saying they carry no sediments at all is false; they do transport sediments, but the high gradient and marine action prevent delta formation."
+          "back": "(A) is true, but (R) is false\n\nIn the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The claim that these rivers carry no alluvial sediment is false. Assertion A is true and Reason R is false. Do not use flow speed alone as a complete explanation of river-mouth landforms."
         },
         {
           "id": "PYQ-2238-recall",
           "front": "In June 2018 Kerala initiated 'Water Literacy' campaign to create awareness about the importance of water conservation in the state. What are the correct statements from the following?\n(A) 70,000 students are involved.\n(B) Every student will campaign for 15 families.\n(C) Approximately 10 lakh people will be benefited knowing the importance of water, prevention of water pollution.\n(D) It is mandatory in Kerala.\nChoose the correct answer:",
-          "back": "(4) (A), (B), (C) only\n\nThe Kerala State Literacy Mission Authority (KSLMA) launched the 'Water Literacy' campaign in June 2018. Over 70,000 instructors and equivalency students were mobilized to educate 15 families each, reaching around 10 lakh households about water conservation and pollution. The initiative was a voluntary educational drive, not mandatory by law."
+          "back": "(4) (A), (B), (C) only\n\nHistorical June 2018 campaign question. The stored answer selects A, B and C and excludes D (mandatory participation). The original final key and campaign statistics still need primary-source verification; do not treat this explanation as a current statistic or independently verified key."
         }
       ],
       "traps": [
         {
           "id": "facts-11-contrast",
-          "left": "West",
-          "right": "Kerala State Literacy Mission Authority",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Narmada",
+          "right": "Tapi",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Assertion (A): West flowing rivers of peninsular India have no deltas.\nReason (R) : These rivers do not carry any alluvial sediments.",
+              "text": "Originates at Amarkantak.",
               "side": "left"
             },
             {
-              "text": "In June 2018 Kerala initiated 'Water Literacy' campaign to create awareness about the importance of water conservation in the state. What are the correct statements from the following?\n(A) 70,000 students are involved.\n(B) Every student will campaign for 15 families.\n(C) Approximately 10 lakh people will be benefited knowing the importance of water, prevention of water pollution.\n(D) It is mandatory in Kerala.\nChoose the correct answer:",
+              "text": "Originates at Multai in Betul.",
               "side": "right"
             }
           ]
@@ -656,12 +712,16 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-2336",
-          "html": "<strong>Arranged</strong> from North to South, the West-flowing rivers of India are: Luni (originates in Aravallis, Rajasthan), Sabarmati (originates in Udaipur, Rajasthan), Mahi (originates in Vindhyas, MP), and Tapi (originates in Satpura range, MP). Thus, the correct sequence is Luni, Sabarmati, Mahi, Tapi (d, b, a, c)."
+          "html": "Arranged from North to South, the West-flowing rivers of India are: <strong>Luni</strong> (originates in Aravallis, Rajasthan), Sabarmati (originates in Udaipur, Rajasthan), Mahi (originates in Vindhyas, MP), and Tapi (originates in Satpura range, MP). Thus, the correct sequence is Luni, Sabarmati, Mahi, Tapi (d, b, a, c)."
         },
         {
           "type": "p",
           "lineId": "pyq-2499",
-          "html": "<strong>Vembanad Lake</strong> is the longest lake in India and the largest lake in Kerala, located along the southwestern Malabar Coast. It is famous for hosting the Nehru Trophy Boat Race and forms a crucial part of Kerala&#x27;s backwater network."
+          "html": "Vembanad is in <strong>Kerala</strong>. The Nehru Trophy Boat Race takes place on Punnamada Lake, part of the Vembanad backwater system."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -683,22 +743,22 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-2499-recall",
           "front": "The lake Vembanad is located in:",
-          "back": "Malabar coast\n\nVembanad Lake is the longest lake in India and the largest lake in Kerala, located along the southwestern Malabar Coast. It is famous for hosting the Nehru Trophy Boat Race and forms a crucial part of Kerala's backwater network."
+          "back": "Malabar coast\n\nVembanad is in Kerala. The Nehru Trophy Boat Race takes place on Punnamada Lake, part of the Vembanad backwater system."
         }
       ],
       "traps": [
         {
           "id": "facts-12-contrast",
-          "left": "Arranged",
-          "right": "Vembanad Lake",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Rann of Kutch",
+          "right": "Vembanad",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Consider the following rivers in India from North to South and identify the correct sequence :\na. Mahi\nb. Sabarmati\nc. Tapi\nd. Luni",
+              "text": "Luni drains towards this region.",
               "side": "left"
             },
             {
-              "text": "The lake Vembanad is located in:",
+              "text": "A lake/backwater system in Kerala.",
               "side": "right"
             }
           ]
@@ -714,12 +774,16 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-2500",
-          "html": "<strong>Assertion</strong> (A) is true because west-flowing rivers like Narmada and Tapi flow through narrow fault valleys with high gradient, forming estuaries instead of deltas. Reason (R) is false because the Western Coastal Plains are narrow strips (approx. 50–80 km wide), whereas the Eastern Coastal Plains are much broader (100–130 km wide) due to extensive deltaic depositions."
+          "html": "In the textbook comparison, <strong>Narmada</strong> and <strong>Tapi</strong> form estuaries rather than the large deltas typical of the eastern coastal plains. The western coastal plain is narrower, not broader, than the eastern coastal plain. Assertion A is true and Reason R is false."
         },
         {
           "type": "p",
           "lineId": "pyq-2502",
           "html": "The names of the <strong>Punjab Doabs</strong> are formed using the names of the bordering rivers: Bist (Beas + Sutlej), Bari (Beas + Ravi), Chuj/Jech (Chenab + Jhelum), and Rechana (Ravi + Chenab). Therefore, the correct matching is (a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -736,7 +800,7 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-2500-recall",
           "front": "Assertion (A): Delta formation is not seen along the western coastal plains of India.\nReason (R): Indian western coastal plains are more broader than the eastern coastal plains.\nChoose the correct answer:",
-          "back": "(A) is true and (R) is false.\n\nAssertion (A) is true because west-flowing rivers like Narmada and Tapi flow through narrow fault valleys with high gradient, forming estuaries instead of deltas. Reason (R) is false because the Western Coastal Plains are narrow strips (approx. 50–80 km wide), whereas the Eastern Coastal Plains are much broader (100–130 km wide) due to extensive deltaic depositions."
+          "back": "(A) is true and (R) is false.\n\nIn the textbook comparison, Narmada and Tapi form estuaries rather than the large deltas typical of the eastern coastal plains. The western coastal plain is narrower, not broader, than the eastern coastal plain. Assertion A is true and Reason R is false."
         },
         {
           "id": "PYQ-2502-recall",
@@ -747,16 +811,16 @@ const chapter: StudyChapter = {
       "traps": [
         {
           "id": "facts-13-contrast",
-          "left": "Assertion",
-          "right": "Punjab Doabs",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "Bist",
+          "right": "Chaj / Jech",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Assertion (A): Delta formation is not seen along the western coastal plains of India.\nReason (R): Indian western coastal plains are more broader than the eastern coastal plains.\nChoose the correct answer:",
+              "text": "Between Beas and Sutlej.",
               "side": "left"
             },
             {
-              "text": "Match the following:\nList - I (Doab)\n(a) Bist\n(b) Bari\n(c) Chuj\n(d) Rechana\nList - II (Rivers)\n(i) Ravi and Chenab\n(ii) Chenab and Jhelum\n(iii) Beas and Ravi\n(iv) Beas and Sutlej\nChoose the correct answer/pairs:",
+              "text": "Between Chenab and Jhelum.",
               "side": "right"
             }
           ]
@@ -770,6 +834,12 @@ const chapter: StudyChapter = {
       "estMinutes": 3,
       "blocks": [
         {
+          "type": "callout",
+          "tone": "saffron",
+          "title": "Historical report: verification pending",
+          "html": "The Mabja Zangbo question reflects a past report. Its final key and underlying report require verification; it is not a current project-status update."
+        },
+        {
           "type": "p",
           "lineId": "pyq-2508",
           "html": "<strong>River Narmada</strong> flows westwards through a rift valley formed due to faulting. The Vindhya range lies to the north of the Narmada river, while the Satpura range lies to its south."
@@ -777,7 +847,11 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-2934",
-          "html": "The Mabja Zangbo river originates in Tibet and flows into Nepal to form the Ghaghara (Karnali) river before entering India. China&#x27;s dam on this river is located near the tri-junction of China, Nepal, and the Indian state of <strong>Uttarakhand</strong> (near Pithoragarh district)."
+          "html": "Historical report-based question: the stored answer is <strong>Uttarakhand</strong>. The original report and official final key still need verification. This item is not confirmation of the present construction status of the reported Mabja Zangbo dam."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -799,22 +873,22 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-2934-recall",
           "front": "China is reportedly building a new dam on Mabja Zangbo river in Tibet at the trijunction with India and Nepal, the other side of the state _____ ",
-          "back": "Uttarakhand\n\nThe Mabja Zangbo river originates in Tibet and flows into Nepal to form the Ghaghara (Karnali) river before entering India. China's dam on this river is located near the tri-junction of China, Nepal, and the Indian state of Uttarakhand (near Pithoragarh district)."
+          "back": "Uttarakhand\n\nHistorical report-based question: the stored answer is Uttarakhand. The original report and official final key still need verification. This item is not confirmation of the present construction status of the reported Mabja Zangbo dam."
         }
       ],
       "traps": [
         {
           "id": "facts-14-contrast",
-          "left": "River Narmada",
-          "right": "Uttarakhand",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "left": "North of Narmada",
+          "right": "South of Narmada",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Read the following statements:\n(a) River Narmada flows in a rift valley.\n(b) Vindhya mountains are located to the south of river Narmada.\n(c) River Narmada is a west flowing river.\nWhich of the statements are correct?",
+              "text": "Vindhya range.",
               "side": "left"
             },
             {
-              "text": "China is reportedly building a new dam on Mabja Zangbo river in Tibet at the trijunction with India and Nepal, the other side of the state _____ ",
+              "text": "Satpura range.",
               "side": "right"
             }
           ]
@@ -836,6 +910,10 @@ const chapter: StudyChapter = {
           "type": "p",
           "lineId": "pyq-3043",
           "html": "Srinagar, the summer capital of Jammu and Kashmir, is situated on the banks of the <strong>Jhelum</strong> River, which is a major tributary of the Indus River. The river passes through Srinagar and flows into Wular Lake in the Kashmir Valley."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -865,14 +943,14 @@ const chapter: StudyChapter = {
           "id": "facts-15-contrast",
           "left": "Ravi",
           "right": "Jhelum",
-          "why": "TGPSC-Style Advanced Practice: connect each verified question with its fact anchor.",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "Which of the following River is also known as 'Iravati'?",
+              "text": "Also known as Iravati.",
               "side": "left"
             },
             {
-              "text": "Srinagar is situated on the bank of which river?",
+              "text": "Flows through Srinagar.",
               "side": "right"
             }
           ]
@@ -888,7 +966,11 @@ const chapter: StudyChapter = {
         {
           "type": "p",
           "lineId": "pyq-3118",
-          "html": "The <strong>Godavari Water Disputes Tribunal</strong> (GWDT) was constituted by the Central Government on April 10, 1969, under the chairmanship of Justice R.S. Bachawat to resolve inter-state water sharing disputes regarding the Godavari river basin."
+          "html": "The Godavari Water Disputes Tribunal was constituted in <strong>April 1969</strong> under Justice R. S. Bachawat. Source: Ministry of Jal Shakti, Act and Policies, Godavari Water Disputes Tribunal (April, 1969)."
+        },
+        {
+          "type": "p",
+          "html": "<small>Source check: <a href=\"https://ncert.nic.in/textbook/pdf/kegy103.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">NCERT, Drainage System (2026-27), pp. 17-25</a>. Project-specific and historical items need their own sources; this chapter reference does not certify every PYQ key. <a href=\"/notes/geography/drainage-system-of-india#sources\">Topic sources and review limits</a>.</small>"
         }
       ],
       "pyqs": [
@@ -901,22 +983,22 @@ const chapter: StudyChapter = {
         {
           "id": "PYQ-3118-recall",
           "front": "When was the Godavari Water Disputes Tribunal headed by Justice Bachawat constituted by the central Government of India?",
-          "back": "April, 1969\n\nThe Godavari Water Disputes Tribunal (GWDT) was constituted by the Central Government on April 10, 1969, under the chairmanship of Justice R.S. Bachawat to resolve inter-state water sharing disputes regarding the Godavari river basin."
+          "back": "April, 1969\n\nThe Godavari Water Disputes Tribunal was constituted in April 1969 under Justice R. S. Bachawat. Source: Ministry of Jal Shakti, Act and Policies, Godavari Water Disputes Tribunal (April, 1969)."
         }
       ],
       "traps": [
         {
           "id": "facts-16-contrast",
-          "left": "April, 1969",
-          "right": "Betwa",
-          "why": "TGPSC-Style Advanced Practice: distinguish two verified fact anchors.",
+          "left": "Constitution of tribunal",
+          "right": "Current project status",
+          "why": "TGPSC-Style Advanced Practice: distinguish the two concepts using the statements below.",
           "statements": [
             {
-              "text": "When was the Godavari Water Disputes Tribunal headed by Justice Bachawat constituted by the central Government of India?",
+              "text": "April 1969 is a historical institutional date.",
               "side": "left"
             },
             {
-              "text": "Matatilla Project was built on which of the following rivers?",
+              "text": "Requires a dated recent source, not an old exam answer.",
               "side": "right"
             }
           ]
