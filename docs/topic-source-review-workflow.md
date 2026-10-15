@@ -1,14 +1,23 @@
 # Topic source review workflow
 
-Mandatory for topic creation and revision under AGENTS.md. Apply the drainage audit method to the requested topic, without rebuilding unrelated topics.
+Mandatory when creating topics or changing factual claims, explanations, answers or learning prompts. Work on the requested topic without rebuilding unrelated topics.
 
-1. **Inspect before editing.** Read the topic registry, Note, Study chapter, gate, flashcards, canonical PYQs and relevant shared code. Identify contradictions, missing concepts, poor recall prompts and confusing flows. Preserve the existing architecture and theme.
+## Scope the work
+
+- New topics and substantive factual audits: use the full workflow below.
+- A single factual correction: verify that claim and propagate it to affected surfaces; do not re-audit unrelated facts.
+- Layout or interaction changes: inspect affected components and verify relevant phone/desktop behavior; research is needed only if factual content changes.
+- Typo, formatting or documentation-only edits with no change of meaning: use focused diff, link and formatting checks. No full topic research report or app test suite is required solely for such edits. Preserve CI gates.
+
+## Workflow
+
+1. **Inspect before editing.** Inspect the relevant topic registry entries, content surfaces and shared code. For a full audit, cover Note, Study chapter, gate, flashcards and canonical PYQs. Identify contradictions, missing concepts, poor recall prompts and confusing flows. Preserve the existing architecture and theme.
 2. **Research before asserting.** Build a small evidence pack from NCERT, official syllabus/papers/final keys, government publications and relevant primary research. Model memory and another model's agreement are not verification. Record source URL, title, edition/date and page/table/section for each substantive correction. Distinguish full-source inspection from indexed snippets or inaccessible sources.
 3. **Separate kinds of evidence.** The canonical question dataset is the implementation authority, not independent proof of an official key. Verify historical answers against the original paper and final key. Keep historical wording/options intact; explain later changes separately. Correct a key only with documented evidence and preserve its identity/history. Distinguish basin from course, mainland from total, historical from current, and source-dependent measurements.
 4. **Expose uncertainty.** Do not invent facts, citations, forecast marks or guarantee coverage. Show a concise warning near unresolved material and record the missing evidence in an audit checklist. A source link does not certify unrelated claims, every answer key or map label. Synthetic questions retain the required TGPSC-Style Advanced Practice label.
 5. **Improve learning deliberately.** Add missing foundational concepts where needed. Build atomic recall and meaningful contrast drills around plausible confusions, not arbitrary prose fragments. Keep direct factual practice primary. Count an attempt only when an answer is selected, not merely revealed. Derive displayed counts from actual records.
 6. **Propagate consistently.** Apply each correction to Note, Study blocks, recall cards, traps, gate and deck wherever it appears. Edit canonical explanations in the master and regenerate bundles. Preserve stable content IDs, immutable seeds, review events and scheduling metadata. Do not reset progress to refresh wording. Check map labels and attribution independently of surrounding prose.
 7. **Verify and report.** Run prebuild, typecheck, integrity and tests required by AGENTS.md; compare affected IDs and historical question fields against the base. For changed study interactions/layouts, check phone and desktop, answer reveal versus selection, and saved-progress retention when relevant. Report browser/environment blockers honestly; do not describe static checks as visual or factual verification.
-8. **Deliver reviewable evidence.** Add a scoped report under `docs/research/` with corrections, source locators, unresolved items and actual test results. Use a review branch/PR and supply the available rendered preview link. Merge or deploy when authorized; report actual deployment status separately from merge status. Never silently skip failed required gates.
+8. **Deliver reviewable evidence.** For new topics and substantive audits, add a scoped report under `docs/research/` with corrections, source locators, unresolved items and actual test results. For a small correction, record this evidence in the PR and affected source metadata. Use a review branch/PR and supply the available rendered preview link. Merge or deploy when authorized; report actual deployment status separately from merge status. Never silently skip failed required gates.
 
 Example: `docs/research/drainage-source-audit-2026-10-15.md`. Its unresolved items are limitations to resolve, not a standard for claiming full verification.

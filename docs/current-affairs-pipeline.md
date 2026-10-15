@@ -293,3 +293,8 @@ The scorer uses `PIB_REFERENCE_DATE` rather than a preferred calendar year. The 
 - **10%** of CA questions: Events from **7 to 12 months** prior.
 - **5%** of CA questions: High-profile events from **13 to 24 months** prior.
 - Scraper lookback window (`MAX_AGE_DAYS`) is maintained at 365 days (1 year) and never reduced below 180 days.
+
+
+## 6. Visit tracking
+
+`useTopicVisits` uses localStorage for immediate state and Supabase `user_topic_states` for cloud sync. Highlight cards new since the last visit and collapse earlier cards. On the first visit, show all cards under Earlier to avoid backlog flood. Preserve account ownership when changing this behavior.
