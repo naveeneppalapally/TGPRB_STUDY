@@ -9,11 +9,13 @@ related_topic_ids:
   - "NOTE-GEO-CLIMATE"
   - "NOTE-GEO-SOILS"
 tier: 1
-verified_pyq_count: 28
+verified_pyq_count: 31
 gate_quiz: "/data/gates/drainage-system.json"
 ---
 
 # Drainage System of India
+
+> Legacy companion summary. The live Note and Study routes are the maintained learning surfaces. Corrections and remaining verification limits are recorded in `docs/research/drainage-source-audit-2026-10-15.md`.
 
 ## Part 1: Introduction
 
@@ -21,10 +23,10 @@ gate_quiz: "/data/gates/drainage-system.json"
 A **drainage system** (or river system) is the pattern formed by streams, rivers, and lakes in a particular drainage basin. India's drainage system is shaped by its geological history, nature of rocks, slope of land, and climatic conditions.
 
 ### Significance for TSLPRB
-- **28 verified PYQs** across Constable + SI papers (2015–2023) - one of the highest-frequency Geography subtopics
+- **31 linked PYQ records** across Constable + SI papers (2015–2023) - one of the highest-frequency Geography subtopics
 - Questions cover: river tributaries, dam/project matching, river origins, doab identification, waterfall-river matching, Godavari basin, and peninsular drainage patterns
-- Most-tested rivers: **Godavari** (8+ Qs), **Narmada** (5+ Qs), **Krishna** (4+ Qs)
-- Expect 2–3 direct drainage questions per paper
+- Use the live note filters for counts of linked questions by river.
+- Historical coverage does not establish a future question count.
 
 ---
 
@@ -41,7 +43,7 @@ Indian rivers are classified into two major groups based on their origin:
 
 ##### 1. The Indus System
 - **Origin:** Near Lake Mansarovar, Tibet (flows through Ladakh → Pakistan)
-- **Total length:** 2,880 km (709 km in India)
+- **Total length:** 2,880 km (1,114 km in India, using NCERT Ch. 3, p. 20)
 - **Key tributaries:** Jhelum, Chenab, Ravi, Beas, Sutlej (Panjnad system)
 - **Doabs (inter-river plains):**
   - **Bist Doab** - between Beas and Sutlej
@@ -56,7 +58,7 @@ Indian rivers are classified into two major groups based on their origin:
 - **Total length:** 2,525 km
 - **Key tributaries:**
   - Left bank: Ramganga, Gomti, Ghaghara, Gandak, **Kosi**, Mahananda
-  - Right bank: Yamuna, Son, Damodar
+  - Right bank: Yamuna, Son. Damodar belongs to the Ganga system through the Hugli distributary.
 - **Delta:** Sundarban Delta - largest river delta in the world
 - ⚡ **PYQ Alert:** "Bhakra-Nangal project is on which river?" → Sutlej (technically Indus system, tested in drainage context)
 
@@ -75,12 +77,12 @@ Indian rivers are classified into two major groups based on their origin:
 
 ##### East-Flowing Rivers (into Bay of Bengal)
 
-| River | Origin | Length (km) | Key Tributaries | States | Delta? |
+| River | Origin | Length (km) | Key Tributaries | Basin coverage (not main river route) | Delta? |
 |-------|--------|-------------|----------------|--------|--------|
-| **Godavari** | Nasik, Maharashtra | 1,465 | Pranahita, Indravati, Sabari, Manjira, **Wainganga**, Penganga, Kinnerasani | 7 states (MH, TS, AP, CG, MP, KA, OR) | Yes - 2nd largest in India |
+| **Godavari** | Nasik, Maharashtra | 1,465 | Pranahita, Indravati, Sabari, Manjira, **Wainganga**, Penganga, Kinnerasani | 7 states (MH, TS, AP, CG, MP, KA, OR) | Yes |
 | **Krishna** | Mahabaleshwar, WG | 1,400 | Bhima, Tungabhadra, **Malaprabha**, Ghataprabha, Musi, Panchganga | MH, KA, TS, AP | Yes |
-| **Cauvery** | Brahmagiri Hills, Coorg | 800 | Hemavati, Shimsha, Arkavati, Kabini | KA, TN, KL | Yes (Srirangapatna delta) |
-| **Mahanadi** | Sihawa, Chhattisgarh | 858 | Seonath, Hasdeo, Mand, Ib, Jonk | CG, OR, JH | Yes |
+| **Cauvery** | Brahmagiri Hills, Coorg | 800 | Hemavati, Shimsha, Arkavati, Kabini | KA, TN, KL | Yes (lower course in Tamil Nadu; Srirangapatna is a river island) |
+| **Mahanadi** | Sihawa, Chhattisgarh | 851 | Seonath, Hasdeo, Mand, Ib, Jonk | CG, OR, JH | Yes |
 
 - ⚡ **PYQ Alert:** "Easternmost tributary of Godavari?" → **Sabari** (not Indravati - common trap)
 - ⚡ **PYQ Alert:** "Number of states in Godavari catchment area?" → **7**
@@ -90,13 +92,13 @@ Indian rivers are classified into two major groups based on their origin:
 
 | River | Origin | Length (km) | Key Feature |
 |-------|--------|-------------|-------------|
-| **Narmada** | Amarkantak Plateau, MP | 1,312 | Flows through a **rift valley** between Vindhyas (south) and Satpuras (north) |
+| **Narmada** | Amarkantak Plateau, MP | 1,312 | Flows through a **rift valley** between Vindhyas (north) and Satpuras (south) |
 | **Tapi (Tapti)** | Multai, Betul, MP | 724 | Also flows through a rift valley; parallel to Narmada |
 | **Sabarmati** | Aravalli Hills, Rajasthan | 371 | Flows through Gujarat to Gulf of Khambhat |
 | **Luni** | Pushkar Valley, Aravallis | 495 | Ends in the **Rann of Kutch** (inland drainage - doesn't reach sea) |
 | **Mahi** | Vindhya Range, MP | 583 | Flows into Gulf of Khambhat |
 
-- ⚡ **Key fact:** West-flowing peninsular rivers (Narmada, Tapi) have **no deltas** - they form estuaries because rift valley rivers flow faster
+- ⚡ **Key fact:** West-flowing peninsular rivers (Narmada, Tapi) have **no deltas** - they form estuaries; do not infer that they transport no sediment
 - ⚡ **PYQ Alert:** "Luni river ends in...?" → Rann of Kutch
 - ⚡ **PYQ Alert:** "Narmada flows in a rift valley / is west-flowing" - direct assertion-reason PYQ
 - ⚡ **PYQ Alert:** "Marble Water Falls (Dhuandhar Falls) - which river?" → Narmada
@@ -111,8 +113,8 @@ Indian rivers are classified into two major groups based on their origin:
 | **Matatilla** | Betwa | UP |
 | **Sriram Sagar** | Godavari | Telangana (Nizamabad) |
 | **Lower Manair** | Manair (Godavari tributary) | Telangana (Karimnagar) |
-| **Kadam** | Kadam (Godavari tributary) | Telangana (Adilabad) |
-| **Rajoli Banda** | Tungabhadra | Telangana (Mahabubnagar) |
+| **Kadam** | Kadam (Godavari tributary) | Telangana (Nirmal) |
+| **Rajoli Banda** | Tungabhadra | Interstate scheme serving Karnataka and Telangana |
 | **Kaleshwaram** | Godavari | Telangana |
 | **Jayakwadi** | Godavari | Maharashtra |
 | **Hirakud** | Mahanadi | Odisha |
@@ -134,8 +136,8 @@ Indian rivers are classified into two major groups based on their origin:
 
 ### River Interlinking
 - India's National River Linking Project (NRLP) aims to connect surplus basins with deficit basins
-- **Ken-Betwa Link** - first project, Phase 1 began 2023
-- Connects peninsular and Himalayan river systems
+- **Ken-Betwa Link** - foundation stone laid on 25 December 2024 (PIB). Distinguish this dated event from current construction status.
+- The national programme has Himalayan and Peninsular components; Ken-Betwa links two tributaries of the Yamuna system.
 - ⚡ Tested in 2018 Mains: "Integration of rivers"
 
 ### Godavari Water Disputes Tribunal
@@ -163,7 +165,7 @@ Indian Drainage System
 │   └── Brahmaputra → antecedent, Tsangpo
 ├── Peninsular Rivers (seasonal, rain-fed)
 │   ├── East-flowing (deltas): Godavari > Krishna > Mahanadi > Cauvery
-│   └── West-flowing (estuaries): Narmada, Tapi, Sabarmati, Luni
+│   └── West-flowing: Narmada, Tapi, Sabarmati; inland drainage: Luni
 ├── Dams/Projects → match river + state
 └── Disputes → Godavari Tribunal (Bachawat)
 ```
@@ -174,17 +176,17 @@ Indian Drainage System
 
 ### Major Rivers - Quick Reference Table
 
-| River | Origin | Length | Drains Into | States | Key Fact |
+| River | Origin | Length | Drains Into | Main river course | Key Fact |
 |-------|--------|--------|-------------|--------|----------|
 | Ganga | Gangotri Glacier | 2,525 km | Bay of Bengal | UK, UP, BR, WB, JH | Largest basin in India |
-| Brahmaputra | Tibet (Mansarovar) | 2,900 km | Bay of Bengal | AR, AS, WB | Antecedent river |
-| Godavari | Nasik, MH | 1,465 km | Bay of Bengal | 7 states | "Dakshin Ganga" |
+| Brahmaputra | Tibet (Mansarovar) | 2,900 km | Bay of Bengal | AR, AS | Antecedent river |
+| Godavari | Nasik, MH | 1,465 km | Bay of Bengal | MH, TS, AP | "Dakshin Ganga"; seven basin states |
 | Krishna | Mahabaleshwar | 1,400 km | Bay of Bengal | MH, KA, TS, AP | 2nd largest peninsular |
 | Narmada | Amarkantak | 1,312 km | Arabian Sea | MP, MH, GJ | Rift valley, no delta |
 | Tapi | Multai, Betul | 724 km | Arabian Sea | MP, MH, GJ | Parallel to Narmada |
-| Cauvery | Brahmagiri Hills | 800 km | Bay of Bengal | KA, TN, KL | Sacred river of South |
-| Mahanadi | Sihawa, CG | 858 km | Bay of Bengal | CG, OR | Hirakud Dam |
-| Luni | Pushkar Valley | 495 km | Rann of Kutch | RJ, GJ | Only inland drainage |
+| Cauvery | Brahmagiri Hills | 800 km | Bay of Bengal | KA, TN | Sacred river of South |
+| Mahanadi | Sihawa, CG | 851 km | Bay of Bengal | CG, OR | Hirakud Dam |
+| Luni | Pushkar Valley | 495 km | Rann of Kutch | RJ, GJ | Example of inland drainage |
 
 ### Doab Reference (SI Prelims Favorite)
 
@@ -202,7 +204,7 @@ Indian Drainage System
 
 ### Mnemonic for Peninsular East-Flowing Rivers (longest to shortest)
 
-**"God KriMa Cau"** - Godavari (1,465) → Krishna (1,400) → Mahanadi (858) → Cauvery (800)
+**"God KriMa Cau"** - Godavari (1,465) → Krishna (1,400) → Mahanadi (851) → Cauvery (800)
 
 ### Mnemonic for Indus Tributaries
 
@@ -214,7 +216,7 @@ Indian Drainage System
 
 ### ELI5 Analogy
 
-> Think of India's drainage like a **tilted table**: the Western Ghats form the high edge on the west side. Pour water on the table - most of it runs east toward the Bay of Bengal (that's why most peninsular rivers flow east). Only two rivers - Narmada and Tapi - found **cracks in the table** (rift valleys) that let them escape westward to the Arabian Sea. And one rebel river, Luni, just gives up halfway and evaporates into the Rann of Kutch - it never reaches any sea at all.
+> Think of India's drainage like a **tilted table**: the Western Ghats form the high edge on the west side. Pour water on the table - most of it runs east toward the Bay of Bengal (that's why most peninsular rivers flow east). Two major rivers - Narmada and Tapi - follow **cracks in the table** (rift valleys) westward to the Arabian Sea. Other west-flowing rivers also exist. And one rebel river, Luni, just gives up halfway and evaporates into the Rann of Kutch - it never reaches any sea at all.
 
 ---
 
@@ -259,8 +261,12 @@ Which of the above statement/s is/are correct?
 ### Answers
 | Q | Answer | Explanation |
 |---|--------|-------------|
-| 1 | **(2) Sabari** | Sabari is the easternmost tributary; Indravati is further west despite being the largest |
+| 1 | **(2) Sabari** | Sabari is the easternmost tributary; Indravati is further west; Pranahita is the largest tributary |
 | 2 | **(2) 7** | MH, TS, AP, CG, MP, KA, OR |
 | 3 | **(3) Betwa** | Matatilla multipurpose project is on the Betwa river in UP |
 | 4 | **(1) Tapi** | Ukai Dam is on the Tapi river in Gujarat |
 | 5 | **(1) (a) and (c) only** | Vindhyas are to the NORTH of Narmada, not south - (b) is wrong |
+
+## Source review
+
+See [the drainage audit](../../../docs/research/drainage-source-audit-2026-10-15.md) for evidence, source-dependent measurements, coverage and unresolved checks. Existing PYQ wording and keys are historical records, not newly certified official keys.

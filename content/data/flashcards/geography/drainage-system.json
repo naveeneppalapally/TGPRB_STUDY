@@ -25,7 +25,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "How many states does the Godavari basin cover?",
-      "back": "7 states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka, Odisha."
+      "back": "The catchment includes parts of seven states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka and Odisha. Count the drainage basin, including tributary catchments, rather than only states crossed by the main river. Source: CWC, Monitoring (South), Basin Details (Godavari row).",
+      "source_urls": [
+        "https://www.cwc.gov.in/en/mso/about-basins"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-003",
@@ -38,7 +41,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Which is the easternmost tributary of the Godavari?",
-      "back": "Sabari. Common trap: Indravati is the LARGEST tributary, but Sabari is the EASTERNMOST."
+      "back": "Sabari. Do not confuse an easternmost tributary with the largest tributary: the CWC/ISRO Godavari Basin Report identifies Pranahita as the largest.",
+      "source_urls": [
+        "https://indiawris.gov.in/downloads/Godavari%20Basin.pdf"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-004",
@@ -51,7 +57,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Narmada river flows into which sea? Does it form a delta or estuary?",
-      "back": "Arabian Sea. It forms an ESTUARY (not a delta) because it flows through a rift valley with higher velocity."
+      "back": "Arabian Sea, through the Gulf of Khambhat. Narmada forms an estuary. A rift-valley course alone is not a complete explanation of conditions at a river mouth.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-005",
@@ -64,7 +73,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Where does the Luni river end?",
-      "back": "Rann of Kutch - it's India's only major river with inland drainage (doesn't reach any sea)."
+      "back": "Rann of Kutch. Luni is an example of inland drainage; it is not India's only inland-drainage river.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-006",
@@ -116,7 +128,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Bhakra-Nangal Dam is on which river?",
-      "back": "Sutlej river (Indus system). Located at HP/Punjab border."
+      "back": "Sutlej. Bhakra Dam is in Himachal Pradesh; Nangal Dam is downstream in Punjab. They are separate works in the Bhakra-Nangal project.",
+      "source_urls": [
+        "https://bbmb.gov.in/bhakra-project.htm"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-010",
@@ -142,7 +157,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Rajoli Banda Diversion Scheme is on which river?",
-      "back": "Tungabhadra river, Mahabubnagar (Telangana). Most-repeated TSLPRB question (3 papers)."
+      "back": "Tungabhadra. Rajolibanda is an interstate diversion scheme serving Karnataka and Telangana; do not confuse its command area with the headworks location.",
+      "source_urls": [
+        "https://gadwal.telangana.gov.in/tourist-place/rajoli-dam/"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-012",
@@ -168,7 +186,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Name the 4 doabs of the Punjab region and the rivers between them.",
-      "back": "Bist (Beas-Sutlej) · Bari (Beas-Ravi) · Rechna (Ravi-Chenab) · Chaj (Chenab-Jhelum). Mnemonic: BCR CC."
+      "back": "Bist: Beas-Sutlej; Bari: Beas-Ravi; Rechna: Ravi-Chenab; Chaj (also called Jech): Chenab-Jhelum. Sindh Sagar is a separate doab between Jhelum and Indus.",
+      "source_urls": [
+        "https://zenodo.org/records/2429379/files/article.pdf"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-014",
@@ -181,7 +202,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Jog Falls (Gersoppa) is on which river?",
-      "back": "Sharavathy river, Karnataka. Highest plunge waterfall in India (253m)."
+      "back": "Sharavathi River, Karnataka. Jog Falls is about 253 m high; do not memorise the unsupported claim that it is India's highest waterfall.",
+      "source_urls": [
+        "https://karnatakatourism.org/en/attractions/jog-falls"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-015",
@@ -194,7 +218,10 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Dhuandhar (Marble) Falls is on which river?",
-      "back": "Narmada river at Bhedaghat, Jabalpur (MP). Marble rocks on both sides create the 'smoke' effect."
+      "back": "Narmada River at Bhedaghat near Jabalpur, Madhya Pradesh. Spray from the falling water gives the smoke-like appearance.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     },
     {
       "id": "FC-GEO-DRAIN-016",
@@ -233,7 +260,15 @@
       ],
       "source_note_id": "NOTE-GEO-DRAINAGE",
       "front": "Why do most peninsular rivers flow west to east?",
-      "back": "The Western Ghats act as the main water divide. The plateau slopes eastward, so rivers flow toward the Bay of Bengal. Only Narmada and Tapi flow west through rift valleys."
+      "back": "The general eastward slope of the plateau and the Western Ghats water divide direct many major rivers towards the Bay of Bengal. Narmada and Tapi are major west-flowing rift-valley rivers; other west-flowing rivers also exist.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     }
-  ]
+  ],
+  "source_review": {
+    "date": "2026-10-15",
+    "report": "docs/research/drainage-source-audit-2026-10-15.md",
+    "scope": "Corrected cards carry source_urls; remaining cards are not newly certified by this audit."
+  }
 }

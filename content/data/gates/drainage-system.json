@@ -5,37 +5,82 @@
     {
       "id": "GATE-DRAIN-01",
       "question": "Which of the following is a west-flowing peninsular river that forms an estuary instead of a delta?",
-      "options": ["Godavari", "Narmada", "Krishna", "Cauvery"],
+      "options": [
+        "Godavari",
+        "Narmada",
+        "Krishna",
+        "Cauvery"
+      ],
       "correct_answer": 1,
-      "explanation": "Narmada flows through a rift valley westward into the Arabian Sea and forms an estuary, not a delta. All east-flowing rivers (Godavari, Krishna, Cauvery) form deltas."
+      "explanation": "Narmada flows west through a rift valley and forms an estuary. The other three rivers listed here, Godavari, Krishna and Cauvery, form deltas on the east coast. This is a comparison of these options, not a rule for every east-flowing river. Source: NCERT, India: Physical Environment, Chapter 3, pp. 23-24.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     },
     {
       "id": "GATE-DRAIN-02",
       "question": "The Brahmaputra river is known by which name in Tibet?",
-      "options": ["Dihang", "Tsangpo", "Meghna", "Padma"],
+      "options": [
+        "Dihang",
+        "Tsangpo",
+        "Meghna",
+        "Padma"
+      ],
       "correct_answer": 1,
-      "explanation": "Brahmaputra is called Tsangpo in Tibet, Dihang in Arunachal Pradesh, and Brahmaputra in Assam."
+      "explanation": "Brahmaputra is called Tsangpo in Tibet, Dihang in Arunachal Pradesh, and Brahmaputra in Assam.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     },
     {
       "id": "GATE-DRAIN-03",
       "question": "Which doab lies between the Beas and Sutlej rivers?",
-      "options": ["Bari Doab", "Bist Doab", "Rechna Doab", "Chaj Doab"],
+      "options": [
+        "Bari Doab",
+        "Bist Doab",
+        "Rechna Doab",
+        "Chaj Doab"
+      ],
       "correct_answer": 1,
-      "explanation": "Bist Doab lies between Beas and Sutlej. Bari = Beas-Ravi. Rechna = Ravi-Chenab. Chaj = Chenab-Jhelum."
+      "explanation": "Bist Doab lies between Beas and Sutlej. Bari = Beas-Ravi. Rechna = Ravi-Chenab. Chaj = Chenab-Jhelum.",
+      "source_urls": [
+        "https://link.springer.com/article/10.1007/BF03003666"
+      ]
     },
     {
       "id": "GATE-DRAIN-04",
       "question": "How many states fall in the catchment area of the Godavari river?",
-      "options": ["5", "6", "7", "8"],
+      "options": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
       "correct_answer": 2,
-      "explanation": "Godavari basin covers 7 states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka, and Odisha."
+      "explanation": "The catchment includes parts of seven states: Maharashtra, Telangana, Andhra Pradesh, Chhattisgarh, Madhya Pradesh, Karnataka and Odisha. Count the drainage basin, including tributary catchments, rather than only states crossed by the main river. Source: CWC, Monitoring (South), Basin Details (Godavari row).",
+      "source_urls": [
+        "https://www.cwc.gov.in/en/mso/about-basins"
+      ]
     },
     {
       "id": "GATE-DRAIN-05",
       "question": "The Luni river, originating from the Pushkar Valley, ends in which of the following?",
-      "options": ["Arabian Sea", "Rann of Kutch", "Gulf of Khambhat", "Bay of Bengal"],
+      "options": [
+        "Arabian Sea",
+        "Rann of Kutch",
+        "Gulf of Khambhat",
+        "Bay of Bengal"
+      ],
       "correct_answer": 1,
-      "explanation": "Luni is India's only major river with inland drainage - it ends in the Rann of Kutch without reaching any sea."
+      "explanation": "Luni drains towards the Rann of Kutch. It is an example of inland drainage, not the only inland-drainage river in India. Source: NCERT, India: Physical Environment, Chapter 3, p. 24.",
+      "source_urls": [
+        "https://ncert.nic.in/textbook/pdf/kegy103.pdf"
+      ]
     }
-  ]
+  ],
+  "source_review": {
+    "date": "2026-10-15",
+    "report": "docs/research/drainage-source-audit-2026-10-15.md",
+    "practice_label": "TGPSC-Style Advanced Practice: authored comprehension questions, not official PYQs"
+  }
 }
