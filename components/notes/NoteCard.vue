@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, onScopeDispose } from 'vue'
+import { characterCount, NOTE_BODY_LIMIT } from '@/utils/annotation-validation'
 import type { PersonalNote } from '@/types/annotations'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
 
@@ -8,10 +9,12 @@ const props = defineProps<{
   showSectionLabel?: boolean
 }>()
 
-const { updateNote, deleteNote } = usePersonalNotes()
+const { notes, updateNote, deleteNote } = usePersonalNotes()
+const user = useSupabaseUser()
 
 const isEditing = ref(false)
 const editBody = ref(props.note.body)
+const editError = ref('')
 
 const formattedTime = computed(() => {
   const d = new Date(props.note.client_updated_at || props.note.created_at)
@@ -59,16 +62,49 @@ function parseMarkdownLite(text: string) {
 }
 
 let autoSaveTimeout: ReturnType<typeof setTimeout> | null = null
+let dirty = false
+let editOwner = user.value?.id || 'guest'
+
+function startEditing() {
+  if (isEditing.value) return
+  if (autoSaveTimeout) clearTimeout(autoSaveTimeout)
+  autoSaveTimeout = null
+  dirty = false
+  editBody.value = props.note.body
+  editError.value = ''
+  editOwner = user.value?.id || 'guest'
+  isEditing.value = true
+}
+
 function onInput() {
+  dirty = true
   if (autoSaveTimeout) clearTimeout(autoSaveTimeout)
   autoSaveTimeout = setTimeout(() => {
     saveEdit()
   }, 800)
 }
 
-async function saveEdit() {
-  if (!editBody.value.trim()) return
-  await updateNote(props.note.id, { body: editBody.value })
+function saveEdit(): boolean {
+  if (autoSaveTimeout) clearTimeout(autoSaveTimeout)
+  autoSaveTimeout = null
+  editError.value = ''
+  if (!dirty) return true
+  // Disposing a card can also mean account change or deletion. Never replay
+  // its draft into a different account or revive a note the user deleted.
+  if ((user.value?.id || 'guest') !== editOwner || !notes.value.some(note => note.id === props.note.id && !note.deleted)) return false
+  try {
+    updateNote(props.note.id, { body: editBody.value })
+    dirty = false
+    return true
+  } catch (error) {
+    editError.value = error instanceof Error ? error.message : 'Note could not be saved.'
+    return false
+  }
+}
+onScopeDispose(() => { saveEdit() })
+
+function finishEditing() {
+  if (saveEdit()) isEditing.value = false
 }
 
 async function toggleImportant() {
@@ -98,12 +134,13 @@ async function remove() {
 
     <div v-if="isEditing">
       <UTextarea v-model="editBody" @input="onInput" :rows="3" autofocus class="w-full mb-2" />
+      <p v-if="editError || characterCount(editBody) > NOTE_BODY_LIMIT" role="alert" class="mb-2 text-xs text-red-500">{{ editError || 'Notes can contain up to 10,000 characters.' }}</p>
       <div class="flex items-center justify-between">
         <span class="text-[10px] t-lo">Auto-saving locally...</span>
-        <UButton label="Done" size="xs" color="gray" variant="soft" @click="isEditing = false; saveEdit()" />
+        <UButton label="Done" :disabled="characterCount(editBody) > NOTE_BODY_LIMIT" size="xs" color="gray" variant="soft" @click="finishEditing" />
       </div>
     </div>
-    <div v-else class="text-[13px] t-hi leading-[1.6]" v-html="parseMarkdownLite(note.body)"></div>
+    <div v-else class="[overflow-wrap:anywhere] text-[13px] t-hi leading-[1.6]" v-html="parseMarkdownLite(note.body)"></div>
 
     <div class="mt-1 flex items-center justify-between text-[11px] t-lo border-t b-line pt-2">
       <div class="flex items-center gap-2">
@@ -128,7 +165,7 @@ async function remove() {
           variant="ghost"
           class="min-h-[40px] min-w-[40px] sm:min-h-[36px] sm:min-w-[36px] p-2 flex items-center justify-center"
           aria-label="Edit note"
-          @click="isEditing = true"
+          @click="startEditing"
         />
         <UButton
           icon="i-heroicons-trash"

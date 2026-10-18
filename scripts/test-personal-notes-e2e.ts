@@ -1,7 +1,10 @@
 /**
- * TSLPRB StudyOS - Personal Notes & Content Improvement Queue E2E Test Suite
- * 
- * 4-Tier Opaque-Box Automated Test Suite:
+ * TSLPRB StudyOS - personal-note and feedback domain fixtures.
+ * The historical filename is retained for npm/CI compatibility. This simulator
+ * complements the actual UI/composable tests in test-browser.mjs and
+ * test-reliability-browser.mjs and the real RPC tests in tests/sql/sync.sql.
+ *
+ * Fixture coverage:
  * - Tier 1: Feature Coverage (>=5 tests per feature across R1-R4)
  * - Tier 2: Boundary & Corner Cases (limits, debouncing, unicode, XSS, network)
  * - Tier 3: Cross-Feature Combinations (End-to-End user lifecycles)

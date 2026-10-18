@@ -13,6 +13,9 @@ INSERT INTO user_review_card_seeds VALUES ('00000000-0000-0000-0000-000000000001
 \ir ../../server/database/review_identity_migration.sql
 \ir ../../server/database/offline_sync_schema.sql
 \ir ../../server/database/ca_attempts_schema.sql
+\ir ../../server/database/personal_notes_schema.sql
+-- Reapplying this schema must preserve existing definitions and policies.
+\ir ../../server/database/personal_notes_schema.sql
 GRANT SELECT, INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO authenticated;
 SET ROLE authenticated;
 SELECT set_config('test.user_id','00000000-0000-0000-0000-000000000001',false);
@@ -27,9 +30,38 @@ DO $$ BEGIN
  IF (SELECT metadata->>'eventDate' FROM user_review_card_seeds WHERE card_id='ca-mcq-CA-PIB-123-q0') <> '2026-09-01' THEN RAISE EXCEPTION 'Metadata missing'; END IF;
  IF (SELECT attempts->>'score' FROM user_ca_attempts WHERE content_id='CA-PIB-123') <> '1' THEN RAISE EXCEPTION 'Per-question reconciliation lost concurrent answer'; END IF;
 END $$;
+-- Exercise the real personal-note and feedback RPCs, not a JavaScript replica.
+SELECT merge_user_notes('[{"id":"30000000-0000-0000-0000-000000000001","note_id":"NOTE-GEO-DAMS","section_id":"facts-1","section_label":"Facts","body":"Latest private note","client_updated_at":"2026-10-18T10:00:00Z","event_id":"40000000-0000-0000-0000-000000000002"}]');
+SELECT merge_user_notes('[{"id":"30000000-0000-0000-0000-000000000001","note_id":"NOTE-GEO-DAMS","section_id":"facts-1","section_label":"Facts","body":"Stale private note","client_updated_at":"2026-10-17T10:00:00Z","event_id":"40000000-0000-0000-0000-000000000001"}]');
+DO $$ DECLARE note jsonb; BEGIN
+ IF (SELECT body FROM user_personal_notes WHERE id='30000000-0000-0000-0000-000000000001') <> 'Latest private note' THEN RAISE EXCEPTION 'Stale note replaced latest body'; END IF;
+ note := jsonb_build_object('id','30000000-0000-0000-0000-000000000002','note_id','NOTE-GEO-DAMS','section_id','facts-1','section_label','Facts','body',repeat('😀',10000),'client_updated_at','2026-10-18T10:00:00Z','event_id','40000000-0000-0000-0000-000000000003');
+ PERFORM merge_user_notes(jsonb_build_array(note));
+ BEGIN
+  PERFORM merge_user_notes(jsonb_build_array(note || jsonb_build_object('body',repeat('x',10001),'client_updated_at','2026-10-19T10:00:00Z')));
+  RAISE EXCEPTION 'Oversized note accepted';
+ EXCEPTION WHEN check_violation THEN NULL;
+ END;
+ IF (SELECT length(body) FROM user_personal_notes WHERE id='30000000-0000-0000-0000-000000000002') <> 10000 THEN RAISE EXCEPTION 'Failed write damaged existing note'; END IF;
+ -- A valid write still works after a rejected write.
+ PERFORM merge_user_notes(jsonb_build_array(note || jsonb_build_object('body','','deleted',true,'client_updated_at','2026-10-20T10:00:00Z')));
+ IF NOT (SELECT deleted FROM user_personal_notes WHERE id='30000000-0000-0000-0000-000000000002') THEN RAISE EXCEPTION 'Tombstone missing'; END IF;
+END $$;
+SELECT insert_content_improvement_items('[{"id":"50000000-0000-0000-0000-000000000001","note_id":"NOTE-GEO-DAMS","item_type":"fix_fact","description":"Review this source","client_created_at":"2026-10-18T10:00:00Z"}]');
+SELECT insert_content_improvement_items('[{"id":"50000000-0000-0000-0000-000000000001","note_id":"NOTE-GEO-DAMS","item_type":"fix_fact","description":"Review this source","client_created_at":"2026-10-18T10:00:00Z"}]');
+DO $$ BEGIN
+ IF (SELECT count(*) FROM content_improvement_items) <> 1 THEN RAISE EXCEPTION 'Feedback replay duplicated submission'; END IF;
+ IF (SELECT status FROM content_improvement_items LIMIT 1) <> 'pending' THEN RAISE EXCEPTION 'Feedback status is not pending'; END IF;
+ BEGIN
+  PERFORM insert_content_improvement_items(jsonb_build_array(jsonb_build_object('id','50000000-0000-0000-0000-000000000002','note_id','NOTE-GEO-DAMS','item_type','fix_fact','description',repeat('x',4001),'client_created_at','2026-10-18T10:00:00Z')));
+  RAISE EXCEPTION 'Oversized feedback accepted';
+ EXCEPTION WHEN check_violation THEN NULL;
+ END;
+END $$;
 SELECT set_config('test.user_id','00000000-0000-0000-0000-000000000002',false);
 DO $$ BEGIN
  IF (SELECT count(*) FROM user_review_logs) <> 0 OR (SELECT count(*) FROM user_ca_attempts) <> 0 THEN RAISE EXCEPTION 'Cross-account RLS read'; END IF;
+ IF (SELECT count(*) FROM user_personal_notes) <> 0 OR (SELECT count(*) FROM content_improvement_items) <> 0 THEN RAISE EXCEPTION 'Cross-account private-note/feedback read'; END IF;
  BEGIN
   INSERT INTO user_review_card_seeds(user_id,card_id,initial_card,created_at) VALUES ('00000000-0000-0000-0000-000000000001','foreign','{}',now());
   RAISE EXCEPTION 'Cross-account insert succeeded';
@@ -38,6 +70,16 @@ DO $$ BEGIN
 END $$;
 SELECT set_config('test.user_id','',false);
 DO $$ BEGIN
+ BEGIN
+  PERFORM merge_user_notes('[]');
+  RAISE EXCEPTION 'Unauthenticated note RPC succeeded';
+ EXCEPTION WHEN raise_exception THEN IF SQLERRM <> 'Authentication required' THEN RAISE; END IF;
+ END;
+ BEGIN
+  PERFORM insert_content_improvement_items('[]');
+  RAISE EXCEPTION 'Unauthenticated feedback RPC succeeded';
+ EXCEPTION WHEN raise_exception THEN IF SQLERRM <> 'Authentication required' THEN RAISE; END IF;
+ END;
  BEGIN
   PERFORM insert_user_review_card_seeds('[]');
   RAISE EXCEPTION 'Unauthenticated RPC succeeded';

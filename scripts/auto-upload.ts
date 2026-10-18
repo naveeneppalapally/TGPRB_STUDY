@@ -99,9 +99,9 @@ function rewriteRefs(localPath: string, cloudinaryUrl: string) {
   const basename = path.basename(localPath)
   const basenameNoExt = path.basename(localPath, path.extname(localPath))
 
-  const sourceFiles = globSync('**/*.{vue,ts,js,md}', {
+  const sourceFiles = [...globSync('**/*.{vue,ts,js,md}', {
     ignore: ['node_modules/**', '.nuxt/**', '.output/**', 'scripts/**', 'dist/**', '.git/**'],
-  })
+  }), 'data/pyq_media.json']
 
   let totalReplaced = 0
   for (const file of sourceFiles) {

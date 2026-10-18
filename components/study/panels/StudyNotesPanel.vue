@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-full flex-col">
     <!-- Composer -->
-    <div class="border-b b-line p-3.5">
+    <div class="shrink-0 border-b b-line p-3.5">
       <div v-if="pendingAnchor" class="mb-2 flex items-start gap-2 rounded-lg border border-saffron-500/30 bg-accent-soft px-3 py-2 text-[12.5px] leading-snug t-mid">
         <UIcon name="i-heroicons-chat-bubble-bottom-center-text" class="mt-0.5 h-3.5 w-3.5 shrink-0 accent" />
         <span class="line-clamp-3 flex-1 italic">{{ pendingAnchor }}</span>
@@ -29,11 +29,13 @@
         v-model="draft"
         :rows="2"
         autoresize
+        :maxrows="5"
         :placeholder="pendingAnchor ? 'Why is this confusing?' : `Margin note on: ${section.short}`"
         size="sm"
         @keydown.meta.enter.prevent="save"
         @keydown.ctrl.enter.prevent="save"
       />
+      <p v-if="draftLength > NOTE_BODY_LIMIT" role="alert" class="mt-1 text-xs text-red-500">Notes can contain up to 10,000 characters. Shorten this note before saving.</p>
       <div class="mt-2 flex items-center justify-between">
         <span class="font-mono text-[10px] t-lo">⌘/Ctrl + Enter</span>
         <UButton size="xs" color="primary" :disabled="!canSave" @click="save">Save note</UButton>
@@ -47,7 +49,7 @@
       <ul v-else class="space-y-2">
         <li v-for="n in list" :key="n.id" class="panel px-3 py-2.5">
           <p v-if="n.anchor_text" class="mb-1 line-clamp-2 border-l-2 border-saffron-500/60 pl-2 text-[12px] italic t-lo">{{ n.anchor_text }}</p>
-          <p class="whitespace-pre-line text-[13px] leading-snug t-hi">{{ n.body }}</p>
+          <p class="whitespace-pre-line [overflow-wrap:anywhere] text-[13px] leading-snug t-hi">{{ n.body }}</p>
           <div class="mt-1.5 flex items-center gap-2">
             <button
               type="button"
@@ -73,6 +75,7 @@
 import { computed, onMounted, ref, watch, nextTick } from 'vue'
 import { useStudySession } from '~/composables/useStudySession'
 import { usePersonalNotes } from '~/composables/usePersonalNotes'
+import { characterCount, NOTE_BODY_LIMIT } from '~/utils/annotation-validation'
 
 const { chapter, section, pendingAnchor } = useStudySession()
 const { getNotesForSection, createNote, updateNote, deleteNote, loadNotes } = usePersonalNotes()
@@ -80,7 +83,8 @@ const route = useRoute()
 
 const draft = ref('')
 const ta = ref<any>(null)
-const canSave = computed(() => draft.value.trim().length > 0 || !!pendingAnchor.value)
+const draftLength = computed(() => characterCount(draft.value))
+const canSave = computed(() => (draft.value.trim().length > 0 || !!pendingAnchor.value) && draftLength.value <= NOTE_BODY_LIMIT)
 
 /** Bound to the active section: changing section changes the list. */
 const list = computed(() => getNotesForSection(chapter.value?.noteId || '', section.value?.id || ''))

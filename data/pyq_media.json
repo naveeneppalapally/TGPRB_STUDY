@@ -1,0 +1,397 @@
+{
+  "PYQ-0079": {
+    "source_image": "extracted_question_paper_json/images/Constable_2015_Mains/q_79_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0079.webp",
+    "alt_text": "Original diagram for PYQ-0079, Constable 2015 Mains, question 79"
+  },
+  "PYQ-0080": {
+    "source_image": "extracted_question_paper_json/images/Constable_2015_Mains/q_80_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0080.webp",
+    "alt_text": "Original diagram for PYQ-0080, Constable 2015 Mains, question 80"
+  },
+  "PYQ-0160": {
+    "source_image": "extracted_question_paper_json/images/Constable_2015_Mains/q_160_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0160.webp",
+    "alt_text": "Original diagram for PYQ-0160, Constable 2015 Mains, question 160"
+  },
+  "PYQ-0211": {
+    "source_image": "extracted_question_paper_json/images/Constable_2015_Prelims/q_11_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0211.webp",
+    "alt_text": "Original diagram for PYQ-0211, Constable 2015 Prelims, question 11"
+  },
+  "PYQ-0227": {
+    "source_image": "extracted_question_paper_json/images/Constable_2016_Prelims/q_27_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0227.webp",
+    "alt_text": "Original diagram for PYQ-0227, Constable 2016 Prelims, question 27"
+  },
+  "PYQ-0347": {
+    "source_image": "extracted_question_paper_json/images/Constable_2015_Prelims/q_150_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0347.webp",
+    "alt_text": "Original diagram for PYQ-0347, Constable 2015 Prelims, question 150"
+  },
+  "PYQ-0418": {
+    "source_image": "extracted_question_paper_json/images/Constable_2016_Prelims/q_141_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0418.webp",
+    "alt_text": "Original diagram for PYQ-0418, Constable 2016 Prelims, question 141"
+  },
+  "PYQ-0454": {
+    "source_image": "extracted_question_paper_json/images/Constable_2018_Mains/q_33_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0454.webp",
+    "alt_text": "Original diagram for PYQ-0454, Constable 2018 Mains, question 33"
+  },
+  "PYQ-0557": {
+    "source_image": "extracted_question_paper_json/images/Constable_2018_Mains/q_136_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0557.webp",
+    "alt_text": "Original diagram for PYQ-0557, Constable 2018 Mains, question 136"
+  },
+  "PYQ-0560": {
+    "source_image": "extracted_question_paper_json/images/Constable_2018_Mains/q_139_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0560.webp",
+    "alt_text": "Original diagram for PYQ-0560, Constable 2018 Mains, question 139"
+  },
+  "PYQ-0898": {
+    "source_image": "extracted_question_paper_json/images/Constable_2022_Prelims/q_79_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0898.webp",
+    "alt_text": "Original diagram for PYQ-0898, Constable 2022 Prelims, question 79"
+  },
+  "PYQ-0914": {
+    "source_image": "extracted_question_paper_json/images/Constable_2022_Prelims/q_95_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0914.webp",
+    "alt_text": "Original diagram for PYQ-0914, Constable 2022 Prelims, question 95"
+  },
+  "PYQ-0984": {
+    "source_image": "extracted_question_paper_json/images/Constable_2022_Prelims/q_166_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-0984.webp",
+    "alt_text": "Original diagram for PYQ-0984, Constable 2022 Prelims, question 166"
+  },
+  "PYQ-1162": {
+    "source_image": "extracted_question_paper_json/images/Constable_2023_Mains_Official/q_147_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1162.webp",
+    "alt_text": "Original diagram for PYQ-1162, Constable 2023 Mains Official, question 147"
+  },
+  "PYQ-1201": {
+    "source_image": "extracted_question_paper_json/images/Constable_2023_Mains_Official/q_187_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1201.webp",
+    "alt_text": "Original diagram for PYQ-1201, Constable 2023 Mains Official, question 187"
+  },
+  "PYQ-1211": {
+    "source_image": "extracted_question_paper_json/images/Constable_2023_Mains_Official/q_198_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1211.webp",
+    "alt_text": "Original diagram for PYQ-1211, Constable 2023 Mains Official, question 198"
+  },
+  "PYQ-1225": {
+    "source_image": "extracted_question_paper_json/images/Constable_2023_Set_A/q_79_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1225.webp",
+    "alt_text": "Original diagram for PYQ-1225, Constable 2023 Set A, question 79"
+  },
+  "PYQ-1378": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_132_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1378.webp",
+    "alt_text": "Original diagram for PYQ-1378, SI 2016 Final Arithmetic Paper, question 132"
+  },
+  "PYQ-1379": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_133_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1379.webp",
+    "alt_text": "Original diagram for PYQ-1379, SI 2016 Final Arithmetic Paper, question 133"
+  },
+  "PYQ-1392": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_146_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1392.webp",
+    "alt_text": "Original diagram for PYQ-1392, SI 2016 Final Arithmetic Paper, question 146"
+  },
+  "PYQ-1427": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_181_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1427.webp",
+    "alt_text": "Original diagram for PYQ-1427, SI 2016 Final Arithmetic Paper, question 181"
+  },
+  "PYQ-1430": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_184_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1430.webp",
+    "alt_text": "Original diagram for PYQ-1430, SI 2016 Final Arithmetic Paper, question 184"
+  },
+  "PYQ-1431": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_185_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1431.webp",
+    "alt_text": "Original diagram for PYQ-1431, SI 2016 Final Arithmetic Paper, question 185"
+  },
+  "PYQ-1435": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_189_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1435.webp",
+    "alt_text": "Original diagram for PYQ-1435, SI 2016 Final Arithmetic Paper, question 189"
+  },
+  "PYQ-1436": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_190_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1436.webp",
+    "alt_text": "Original diagram for PYQ-1436, SI 2016 Final Arithmetic Paper, question 190"
+  },
+  "PYQ-1437": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_191_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1437.webp",
+    "alt_text": "Original diagram for PYQ-1437, SI 2016 Final Arithmetic Paper, question 191"
+  },
+  "PYQ-1438": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_192_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1438.webp",
+    "alt_text": "Original diagram for PYQ-1438, SI 2016 Final Arithmetic Paper, question 192"
+  },
+  "PYQ-1439": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_193_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1439.webp",
+    "alt_text": "Original diagram for PYQ-1439, SI 2016 Final Arithmetic Paper, question 193"
+  },
+  "PYQ-1440": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_195_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1440.webp",
+    "alt_text": "Original diagram for PYQ-1440, SI 2016 Final Arithmetic Paper, question 195"
+  },
+  "PYQ-1441": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Final_Arithmetic_Paper/q_196_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1441.webp",
+    "alt_text": "Original diagram for PYQ-1441, SI 2016 Final Arithmetic Paper, question 196"
+  },
+  "PYQ-1650": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Mains_Paper1/q_189_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1650.webp",
+    "alt_text": "Original diagram for PYQ-1650, SI 2016 Mains Paper1, question 189"
+  },
+  "PYQ-1729": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Prelims_Paper/q_48_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1729.webp",
+    "alt_text": "Original diagram for PYQ-1729, SI 2016 Prelims Paper, question 48"
+  },
+  "PYQ-1766": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Prelims_Paper/q_94_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1766.webp",
+    "alt_text": "Original diagram for PYQ-1766, SI 2016 Prelims Paper, question 94"
+  },
+  "PYQ-1769": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Prelims_Paper/q_98_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1769.webp",
+    "alt_text": "Original diagram for PYQ-1769, SI 2016 Prelims Paper, question 98"
+  },
+  "PYQ-1770": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Prelims_Paper/q_99_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1770.webp",
+    "alt_text": "Original diagram for PYQ-1770, SI 2016 Prelims Paper, question 99"
+  },
+  "PYQ-1903": {
+    "source_image": "extracted_question_paper_json/images/SI_2016_Prelims_Paper2/q_99_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-1903.webp",
+    "alt_text": "Original diagram for PYQ-1903, SI 2016 Prelims Paper2, question 99"
+  },
+  "PYQ-2022": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_117_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2022.webp",
+    "alt_text": "Original diagram for PYQ-2022, SI 2018 Mains Paper1, question 117"
+  },
+  "PYQ-2023": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_118_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2023.webp",
+    "alt_text": "Original diagram for PYQ-2023, SI 2018 Mains Paper1, question 118"
+  },
+  "PYQ-2034": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_130_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2034.webp",
+    "alt_text": "Original diagram for PYQ-2034, SI 2018 Mains Paper1, question 130"
+  },
+  "PYQ-2035": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_131_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2035.webp",
+    "alt_text": "Original diagram for PYQ-2035, SI 2018 Mains Paper1, question 131"
+  },
+  "PYQ-2054": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_150_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2054.webp",
+    "alt_text": "Original diagram for PYQ-2054, SI 2018 Mains Paper1, question 150"
+  },
+  "PYQ-2056": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_152_page_35.png",
+    "asset_url": "/images/pyqs/PYQ-2056.webp",
+    "alt_text": "Original diagram for PYQ-2056, SI 2018 Mains Paper1, question 152"
+  },
+  "PYQ-2057": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper1/q_153_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2057.webp",
+    "alt_text": "Original diagram for PYQ-2057, SI 2018 Mains Paper1, question 153"
+  },
+  "PYQ-2107": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper2/q_4_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2107.webp",
+    "alt_text": "Original diagram for PYQ-2107, SI 2018 Mains Paper2, question 4"
+  },
+  "PYQ-2252": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Mains_Paper2/q_150_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2252.webp",
+    "alt_text": "Original diagram for PYQ-2252, SI 2018 Mains Paper2, question 150"
+  },
+  "PYQ-2375": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_25_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2375.webp",
+    "alt_text": "Original diagram for PYQ-2375, SI 2018 Prelims Paper1, question 25"
+  },
+  "PYQ-2417": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_67_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2417.webp",
+    "alt_text": "Original diagram for PYQ-2417, SI 2018 Prelims Paper1, question 67"
+  },
+  "PYQ-2420": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_70_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2420.webp",
+    "alt_text": "Original diagram for PYQ-2420, SI 2018 Prelims Paper1, question 70"
+  },
+  "PYQ-2428": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_78_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2428.webp",
+    "alt_text": "Original diagram for PYQ-2428, SI 2018 Prelims Paper1, question 78"
+  },
+  "PYQ-2440": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_90_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2440.webp",
+    "alt_text": "Original diagram for PYQ-2440, SI 2018 Prelims Paper1, question 90"
+  },
+  "PYQ-2442": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_92_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2442.webp",
+    "alt_text": "Original diagram for PYQ-2442, SI 2018 Prelims Paper1, question 92"
+  },
+  "PYQ-2443": {
+    "source_image": "extracted_question_paper_json/images/SI_2018_Prelims_Paper1/q_93_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2443.webp",
+    "alt_text": "Original diagram for PYQ-2443, SI 2018 Prelims Paper1, question 93"
+  },
+  "PYQ-2548": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_1_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2548.webp",
+    "alt_text": "Original diagram for PYQ-2548, SI 2022 Prelims, question 1"
+  },
+  "PYQ-2599": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_53_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2599.webp",
+    "alt_text": "Original diagram for PYQ-2599, SI 2022 Prelims, question 53"
+  },
+  "PYQ-2639": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_94_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2639.webp",
+    "alt_text": "Original diagram for PYQ-2639, SI 2022 Prelims, question 94"
+  },
+  "PYQ-2640": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_95_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2640.webp",
+    "alt_text": "Original diagram for PYQ-2640, SI 2022 Prelims, question 95"
+  },
+  "PYQ-2641": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_96_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2641.webp",
+    "alt_text": "Original diagram for PYQ-2641, SI 2022 Prelims, question 96"
+  },
+  "PYQ-2642": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_97_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2642.webp",
+    "alt_text": "Original diagram for PYQ-2642, SI 2022 Prelims, question 97"
+  },
+  "PYQ-2643": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_98_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2643.webp",
+    "alt_text": "Original diagram for PYQ-2643, SI 2022 Prelims, question 98"
+  },
+  "PYQ-2644": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_99_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2644.webp",
+    "alt_text": "Original diagram for PYQ-2644, SI 2022 Prelims, question 99"
+  },
+  "PYQ-2645": {
+    "source_image": "extracted_question_paper_json/images/SI_2022_Prelims/q_100_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2645.webp",
+    "alt_text": "Original diagram for PYQ-2645, SI 2022 Prelims, question 100"
+  },
+  "PYQ-2847": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_106_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2847.webp",
+    "alt_text": "Original diagram for PYQ-2847, SI 2023 Mains Arithmetic Reasoning, question 106"
+  },
+  "PYQ-2849": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_109_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2849.webp",
+    "alt_text": "Original diagram for PYQ-2849, SI 2023 Mains Arithmetic Reasoning, question 109"
+  },
+  "PYQ-2850": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_110_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2850.webp",
+    "alt_text": "Original diagram for PYQ-2850, SI 2023 Mains Arithmetic Reasoning, question 110"
+  },
+  "PYQ-2851": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_111_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2851.webp",
+    "alt_text": "Original diagram for PYQ-2851, SI 2023 Mains Arithmetic Reasoning, question 111"
+  },
+  "PYQ-2853": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_113_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2853.webp",
+    "alt_text": "Original diagram for PYQ-2853, SI 2023 Mains Arithmetic Reasoning, question 113"
+  },
+  "PYQ-2854": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_114_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2854.webp",
+    "alt_text": "Original diagram for PYQ-2854, SI 2023 Mains Arithmetic Reasoning, question 114"
+  },
+  "PYQ-2856": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_116_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2856.webp",
+    "alt_text": "Original diagram for PYQ-2856, SI 2023 Mains Arithmetic Reasoning, question 116"
+  },
+  "PYQ-2857": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_117_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2857.webp",
+    "alt_text": "Original diagram for PYQ-2857, SI 2023 Mains Arithmetic Reasoning, question 117"
+  },
+  "PYQ-2861": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_121_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2861.webp",
+    "alt_text": "Original diagram for PYQ-2861, SI 2023 Mains Arithmetic Reasoning, question 121"
+  },
+  "PYQ-2863": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_124_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2863.webp",
+    "alt_text": "Original diagram for PYQ-2863, SI 2023 Mains Arithmetic Reasoning, question 124"
+  },
+  "PYQ-2868": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_130_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2868.webp",
+    "alt_text": "Original diagram for PYQ-2868, SI 2023 Mains Arithmetic Reasoning, question 130"
+  },
+  "PYQ-2869": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_131_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2869.webp",
+    "alt_text": "Original diagram for PYQ-2869, SI 2023 Mains Arithmetic Reasoning, question 131"
+  },
+  "PYQ-2870": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_132_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2870.webp",
+    "alt_text": "Original diagram for PYQ-2870, SI 2023 Mains Arithmetic Reasoning, question 132"
+  },
+  "PYQ-2872": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_135_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2872.webp",
+    "alt_text": "Original diagram for PYQ-2872, SI 2023 Mains Arithmetic Reasoning, question 135"
+  },
+  "PYQ-2873": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_136_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2873.webp",
+    "alt_text": "Original diagram for PYQ-2873, SI 2023 Mains Arithmetic Reasoning, question 136"
+  },
+  "PYQ-2874": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_137_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2874.webp",
+    "alt_text": "Original diagram for PYQ-2874, SI 2023 Mains Arithmetic Reasoning, question 137"
+  },
+  "PYQ-2877": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_141_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2877.webp",
+    "alt_text": "Original diagram for PYQ-2877, SI 2023 Mains Arithmetic Reasoning, question 141"
+  },
+  "PYQ-2909": {
+    "source_image": "extracted_question_paper_json/images/SI_2023_Mains_Arithmetic_Reasoning/q_178_cropped.png",
+    "asset_url": "/images/pyqs/PYQ-2909.webp",
+    "alt_text": "Original diagram for PYQ-2909, SI 2023 Mains Arithmetic Reasoning, question 178"
+  }
+}

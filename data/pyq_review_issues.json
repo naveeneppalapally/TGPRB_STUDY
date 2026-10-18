@@ -1,0 +1,124 @@
+{
+  "PYQ-0518": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "defedb6da361e17d4f2d397dfe09f3a99eff9aee014bca3e0cb7ab9f8f3b581c",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-0993": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "f6f1acb077dd5d43b95671c44771c3bd0a44bd9b18a18fc550158e23798854be",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-1209": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "5fbc48a57f682abe159f612a843c44753aacd71c94426d5e0b8ca87056729183",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-1551": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "ec0e207b492dfebb71cb6131f7a58d87ef7da7b0c087835a4bdd06acb63d045e",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2087": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "94a86334ad1e44ea597dc438f2afa7dccdd0f6bdaa73d8bbdac203da2d20a874",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2088": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "51efdf8bb1711bc92cd2ec8f822ee2d6571a3eb9d2d442af8c1c82cfe5f609f2",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2089": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "0431b9203a8487ac4b668e04a7cf87853be03dd7399769f3f55ec9c65f57a7c2",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2090": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "6af706329d94a5679a88644044b7000ec51102dd1ec694a622d65448742ccce6",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2091": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "5160f5a692241b0fac478fae2df5740d95b52b6c282f71b9a84624cd9a593dca",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2092": {
+    "issues": [
+      "incomplete_options",
+      "invalid_answer_index"
+    ],
+    "historical_sha256": "b0ef841dc467a135fc3efda481d37a1089c45e725264d2c978d9f83ca5ec33bc",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2093": {
+    "issues": [
+      "incomplete_options",
+      "invalid_answer_index"
+    ],
+    "historical_sha256": "218eece85b9df981bbe255a9d583e26c32bc1385ddee4c791095e140219392bb",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2094": {
+    "issues": [
+      "incomplete_options",
+      "invalid_answer_index"
+    ],
+    "historical_sha256": "3b63a29f941b30cc7a394401ae451a6924e206bc0b47205a193e2420ef3e16b4",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2298": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "8c42e810ae4193e82b45c17d5404ef91d9ee0420237676f9b2c1727969fbfb93",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2856": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "8c715cbb3ec52e0272bd5ad1eac4bbefcf0450924295bdc64ae50748f6f92166",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2857": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "0cac6145456c716ebdbf292f1c8476529f281fcd33c1ae9372cf09847918dfb5",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2868": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "2d9ae90432d15fc70e70da513c67610d64450b3ba06e2d454e2ced9f0f5b1e2f",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  },
+  "PYQ-2869": {
+    "issues": [
+      "incomplete_options"
+    ],
+    "historical_sha256": "005bbdd22b5cb2d611e084cebed169abfda0cc6212197d531cbe09204493e53d",
+    "reason": "Extracted historical options are incomplete or include statement text. Restore from the original paper and key before enabling practice."
+  }
+}

@@ -12,6 +12,7 @@ import { contentRoutes, noteRoute } from '../utils/topic-delivery'
 import { LEARNING_ASSETS, cardsFor, gateFor, canonicalNoteId, allReviewContent } from '../server/utils/learning-content'
 import { CHAPTERS } from '../server/utils/study-chapters'
 import { validateCACard } from '../utils/ca-contract'
+import { verifyPyqArchive, archiveReadiness } from './verify-pyq-archive'
 
 export function vueEvidence(source: string) {
   const { descriptor, errors } = parse(source)
@@ -66,6 +67,7 @@ export function attribute(node: ElementNode, name: string): string | undefined {
 }
 export function runIntegrity(readOverride?: (file: string) => string, chapters = CHAPTERS): string[] {
   const defects: string[] = []
+  defects.push(...verifyPyqArchive())
   const check = (condition: unknown, message: string) => { if (!condition) defects.push(message) }
   const read = readOverride || ((file: string) => readFileSync(file, 'utf8'))
   const packageScripts = JSON.parse(read('package.json')).scripts
@@ -151,4 +153,5 @@ if (process.argv[1]?.endsWith('verify-topic-integrity.ts')) {
   if (defects.length) { for (const defect of defects) console.error(defect); process.exit(1) }
   console.log('PASS: parsed Note components/TOCs, gate/deck schemas and executable registrations, CA schema/IDs/coverage, paired Study chapters, section PYQs/source lines, bidirectional links, hub cards and registry-derived route configuration.')
   console.log('Separate verification is required for deployed SQL, browser layout, factual CA answers and production edge behavior.')
+  console.log(`Archive inventory: ${archiveReadiness.records} records; ${archiveReadiness.recordsAwaitingReview} await choice review; ${archiveReadiness.diagramsAwaitingPublication} diagrams await publication. Affected questions cannot be graded.`)
 }

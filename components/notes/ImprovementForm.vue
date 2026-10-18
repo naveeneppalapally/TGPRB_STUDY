@@ -13,6 +13,7 @@ import { ref, computed } from 'vue'
 import type { SectionContext } from '@/types/annotations'
 import { useImprovementQueue } from '@/composables/useImprovementQueue'
 import { useToast } from '#imports'
+import { characterCount, FEEDBACK_DESCRIPTION_LIMIT } from '@/utils/annotation-validation'
 
 const props = defineProps<{
   context: SectionContext
@@ -20,6 +21,7 @@ const props = defineProps<{
 
 const { submitImprovement } = useImprovementQueue()
 const toast = useToast()
+const user = useSupabaseUser()
 
 const itemType = ref('fix_fact')
 const description = ref('')
@@ -42,7 +44,7 @@ const isImagePreview = computed(() => {
 const submitting = ref(false)
 
 async function onSubmit() {
-  if (!description.value.trim()) return
+  if (!user.value || !description.value.trim() || characterCount(description.value) > FEEDBACK_DESCRIPTION_LIMIT) return
   
   submitting.value = true
   try {
@@ -54,8 +56,8 @@ async function onSubmit() {
     )
     
     toast.add({
-      title: 'Feedback Submitted',
-      description: 'Thanks! Our team will review this shortly.',
+      title: 'Feedback queued',
+      description: 'Saved on this device. It will be sent when your account is connected.',
       color: 'green'
     })
     
@@ -77,6 +79,11 @@ async function onSubmit() {
 
 <template>
   <div class="space-y-5">
+    <div v-if="!user" class="rounded-lg border b-line bg-sub p-4 space-y-3">
+      <p class="text-sm t-mid">Sign in to send feedback to the review queue. Guest feedback is not sent.</p>
+      <UButton to="/auth/login" label="Sign in to send feedback" />
+    </div>
+    <template v-else>
     <div class="bg-sub border b-line p-3 rounded-xl flex items-start gap-3">
       <UIcon name="i-heroicons-light-bulb" class="h-5 w-5 text-saffron-500 mt-0.5" />
       <div>
@@ -95,6 +102,7 @@ async function onSubmit() {
     <div>
       <label class="block mb-1.5 text-[12px] font-semibold t-hi uppercase tracking-wider">Description <span class="text-red-500">*</span></label>
       <UTextarea v-model="description" placeholder="Describe what should change and where..." :rows="4" />
+      <p v-if="characterCount(description) > FEEDBACK_DESCRIPTION_LIMIT" role="alert" class="mt-1 text-xs text-red-500">Feedback can contain up to 4,000 characters.</p>
     </div>
     
     <div>
@@ -112,9 +120,10 @@ async function onSubmit() {
         block
         class="bg-saffron-500 hover:bg-saffron-600 text-white font-semibold"
         :loading="submitting"
-        :disabled="!description.trim() || submitting"
+        :disabled="!description.trim() || characterCount(description) > FEEDBACK_DESCRIPTION_LIMIT || submitting"
         @click="onSubmit"
       />
     </div>
+    </template>
   </div>
 </template>

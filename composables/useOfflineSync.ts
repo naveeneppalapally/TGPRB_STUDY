@@ -8,6 +8,7 @@ import {
   type Grade,
 } from 'ts-fsrs'
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { validateFeedback, validateNoteBody } from '../utils/annotation-validation'
 
 /**
  * Browser-only local-first mutation transport. It uses IndexedDB when
@@ -109,6 +110,8 @@ export interface OfflineMutationBase<TType extends OfflineMutationType, TPayload
   synced: boolean
   retry_count: number
   next_retry_at: string | null
+  /** Rejected events stay on device for recovery, outside the retry queue. */
+  rejected_reason?: string
 }
 
 export type FSRSReviewMutation = OfflineMutationBase<'fsrs_review', FSRSReviewPayload>
@@ -285,6 +288,7 @@ function validatePayload(type: OfflineMutationType, payload: MutationPayloadByTy
     if (!note.note.note_id) throw new Error('note_upsert requires note.note_id')
     if (!note.note.section_id) throw new Error('note_upsert requires note.section_id')
     if (typeof note.note.body !== 'string') throw new Error('note_upsert requires note.body')
+    validateNoteBody(note.note.body, note.note.deleted)
     validDate(note.updated_at, 'updated_at')
     return
   }
@@ -295,6 +299,7 @@ function validatePayload(type: OfflineMutationType, payload: MutationPayloadByTy
     if (!improvement.item.note_id) throw new Error('improvement_create requires item.note_id')
     if (!improvement.item.item_type) throw new Error('improvement_create requires item.item_type')
     if (!improvement.item.description) throw new Error('improvement_create requires item.description')
+    validateFeedback(improvement.item.item_type, improvement.item.description)
     validDate(improvement.created_at, 'created_at')
     return
   }
@@ -486,8 +491,19 @@ export class FallbackMutationStore implements MutationStore {
     private readonly fallback: MutationStore,
   ) {}
 
-  put(mutation: OfflineMutation): Promise<void> {
-    return this.primary.put(mutation).catch(() => this.fallback.put(mutation))
+  async put(mutation: OfflineMutation): Promise<void> {
+    try {
+      await this.primary.put(mutation)
+    } catch {
+      await this.fallback.put(mutation)
+      return
+    }
+    // After recovery the fallback may still contain an older copy of this
+    // event. Retire it only after the primary write has durably committed,
+    // otherwise it would override updated rejection/retry metadata on reads.
+    if ((await this.fallback.listAllPending()).some(item => item.id === mutation.id)) {
+      await this.fallback.markSynced([mutation.id])
+    }
   }
 
   listPending(limit: number, now: Date): Promise<OfflineMutation[]> {
@@ -677,8 +693,8 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
       ...[...pendingWrites].filter(([id, value]) => value.owner === owner && !persistedIds.has(id)).map(([id]) => id),
       ...[...failedWrites.values()].filter(item => item.owner_id === owner && !persistedIds.has(item.id)).map(item => item.id),
     ]).size
-    quarantinedCount.value = persisted.filter(item => !item.owner_id).length
-    pendingCount.value = persisted.filter((item) => item.owner_id === owner).length + notYetPersisted
+    quarantinedCount.value = persisted.filter(item => !item.owner_id || (item.owner_id === owner && item.rejected_reason)).length
+    pendingCount.value = persisted.filter((item) => item.owner_id === owner && !item.rejected_reason).length + notYetPersisted
   }
 
   async function initialize(): Promise<void> {
@@ -744,24 +760,53 @@ export function createOfflineSyncEngine(options: OfflineSyncOptions): OfflineSyn
     let syncedCount = 0
     let currentBatch: OfflineMutation[] = []
 
+    // A deterministic row error must not hold unrelated events in its batch.
+    // Split only permanent data errors; network/auth failures still back off.
+    const permanent = (error: unknown) => ['23514', '23502', '22P02', '22001'].includes((error as { code?: string })?.code || '')
+    const reject = async (item: OfflineMutation, error: unknown) => {
+      await store.put({ ...item, rejected_reason: error instanceof Error ? error.message : String(error), next_retry_at: null })
+    }
+    const upload = async (batch: OfflineMutation[]): Promise<void> => {
+      if (!batch.length || options.getUserId() !== userId) return
+      let response: { syncedIds: string[] }
+      try {
+        response = await options.adapter.sync(userId, batch)
+      } catch (error) {
+        if (!permanent(error)) throw error
+        if (batch.length === 1) { await reject(batch[0], error); return }
+        const middle = Math.ceil(batch.length / 2)
+        await upload(batch.slice(0, middle))
+        await upload(batch.slice(middle))
+        return
+      }
+      const currentIds = new Set(batch.map(item => item.id))
+      const syncedIds = [...new Set(response.syncedIds.filter(id => currentIds.has(id)))]
+      if (syncedIds.length !== batch.length) throw new Error('Sync adapter did not acknowledge every event in the batch')
+      // An explicit edit/delete that was accepted by the server supersedes a
+      // rejected older version of the same note. Other accounts stay intact.
+      const corrected = batch.filter((item): item is NoteUpsertMutation => item.type === 'note_upsert')
+      const obsolete = (await store.listAllPending()).filter(item => item.owner_id === userId && item.rejected_reason && item.type === 'note_upsert' &&
+        corrected.some(next => next.payload.note.id === item.payload.note.id && Date.parse(next.payload.updated_at) >= Date.parse(item.payload.updated_at)))
+      await store.markSynced([...syncedIds, ...obsolete.map(item => item.id)])
+      syncedCount += syncedIds.length
+    }
+
     try {
       while (true) {
         if (options.getUserId() !== userId) break
         currentBatch = (await store.listAllPending())
           .filter((item) => item.owner_id === userId)
+          .filter((item) => !item.rejected_reason)
           .filter((item) => !item.next_retry_at || new Date(item.next_retry_at) <= now())
           .slice(0, batchSize)
         if (currentBatch.length === 0) break
 
-        const response = await options.adapter.sync(userId, currentBatch)
-        const currentIds = new Set(currentBatch.map((mutation) => mutation.id))
-        const syncedIds = response.syncedIds.filter((id) => currentIds.has(id))
-        if (syncedIds.length !== currentBatch.length) {
-          throw new Error('Sync adapter did not acknowledge every event in the batch')
+        const valid: OfflineMutation[] = []
+        for (const item of currentBatch) {
+          try { validatePayload(item.type, item.payload); valid.push(item) }
+          catch (error) { await reject(item, error) }
         }
-
-        await store.markSynced(syncedIds)
-        syncedCount += syncedIds.length
+        await upload(valid)
       }
 
       await refreshPendingCount()
@@ -894,7 +939,8 @@ export function useOfflineSync(options?: Partial<OfflineSyncOptions>): OfflineSy
 
 function assertSupabaseResult(result: { error: unknown }): void {
   if (result.error) {
-    throw result.error instanceof Error ? result.error : new Error(String(result.error))
+    const error = result.error as { message?: string; code?: string }
+    throw Object.assign(new Error(error.message || String(result.error)), { code: error.code })
   }
 }
 

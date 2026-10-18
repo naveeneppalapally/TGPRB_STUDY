@@ -1,7 +1,9 @@
-import { ref, type Ref, computed } from 'vue'
+import { ref, type Ref, computed, watch } from 'vue'
 import { useSupabaseClient, useSupabaseUser } from '#imports'
 import { createSupabaseOfflineSyncAdapter, useOfflineSync } from '@/composables/useOfflineSync'
 import type { ContentImprovementItem, ImprovementItemType, SectionContext } from '@/types/annotations'
+import { validateFeedback } from '../utils/annotation-validation'
+import { readAllRows } from '../utils/supabase-pages'
 
 export function useImprovementQueue() {
   const supabase = useSupabaseClient<any>()
@@ -37,6 +39,8 @@ export function useImprovementQueue() {
     description: string,
     reference_url?: string
   ): ContentImprovementItem {
+    if (!user.value?.id) throw new Error('Sign in to send feedback to the review queue.')
+    validateFeedback(item_type, description)
     const id = crypto.randomUUID()
     const now = new Date().toISOString()
     
@@ -52,9 +56,6 @@ export function useImprovementQueue() {
       client_created_at: now
     }
     
-    submissions.value.push(item)
-    _lsSet(submissions.value)
-    
     offlineSync.queueImprovementCreate({
       item: {
         id: item.id,
@@ -67,6 +68,8 @@ export function useImprovementQueue() {
       },
       created_at: now
     })
+    submissions.value.push(item)
+    try { _lsSet(submissions.value) } catch { /* The durable sync queue retains the submission. */ }
     
     return item
   }
@@ -83,10 +86,11 @@ export function useImprovementQueue() {
     // 2. Hydrate from cloud if logged in
     if (user.value) {
       try {
-        const { data: cloudSubmissions, error } = await supabase
+        const { data: cloudSubmissions, error } = await readAllRows<any>((from, to) => supabase
           .from('content_improvement_items')
           .select('*')
-          .eq('user_id', user.value.id)
+          .eq('user_id', owner)
+          .order('id').range(from, to))
           
         if ((user.value?.id || 'guest') !== owner) return
         if (!error && cloudSubmissions) {
@@ -117,6 +121,7 @@ export function useImprovementQueue() {
   function getSubmissionsForTopic(noteId: string): ContentImprovementItem[] {
     return submissions.value.filter(s => s.note_id === noteId)
   }
+  if (import.meta.client) watch(() => user.value?.id, () => { submissions.value = []; isLoading.value = false }, { flush: 'sync' })
 
   return {
     submissions,

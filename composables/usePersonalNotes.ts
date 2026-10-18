@@ -2,6 +2,7 @@ import { computed, watch, type Ref } from 'vue'
 import { useSupabaseClient, useSupabaseUser, useState } from '#imports'
 import { createSupabaseOfflineSyncAdapter, useOfflineSync } from '@/composables/useOfflineSync'
 import { readAllRows } from '../utils/supabase-pages'
+import { validateNoteBody } from '../utils/annotation-validation'
 import type { PersonalNote, SectionContext } from '@/types/annotations'
 
 const STORAGE_KEY_PREFIX = 'tgprb:personal-notes:'
@@ -72,6 +73,7 @@ export function usePersonalNotes() {
   }
 
   function createNote(context: SectionContext, body: string, anchorText?: string): PersonalNote {
+    validateNoteBody(body)
     const id = typeof crypto !== 'undefined' && crypto.randomUUID
       ? crypto.randomUUID()
       : `note-${Date.now()}-${Math.random().toString(36).slice(2, 9)}`
@@ -117,6 +119,7 @@ export function usePersonalNotes() {
   function updateNote(noteId: string, updates: { body?: string, is_important?: boolean, is_doubt?: boolean }): void {
     const idx = notes.value.findIndex(n => n.id === noteId)
     if (idx === -1) return
+    validateNoteBody(updates.body ?? notes.value[idx].body)
 
     const now = new Date().toISOString()
     const eventId = typeof crypto !== 'undefined' && crypto.randomUUID
@@ -181,7 +184,9 @@ export function usePersonalNotes() {
         section_id: updatedNote.section_id,
         section_label: updatedNote.section_label,
         anchor_text: updatedNote.anchor_text,
-        body: updatedNote.body,
+        // A tombstone need not resend an oversized legacy body. Keep the full
+        // local snapshot until the user chooses to delete it.
+        body: '',
         is_important: updatedNote.is_important,
         is_doubt: updatedNote.is_doubt,
         deleted: updatedNote.deleted,

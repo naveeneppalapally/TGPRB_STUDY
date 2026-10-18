@@ -6,13 +6,13 @@
         <div>
           <div class="flex items-center gap-2 mb-1.5">
             <span class="chip chip-saffron chip-mono">Master Database</span>
-            <span class="font-mono text-body-xs t-lo">3,129 Verified Questions · 2015–2023</span>
+            <span class="font-mono text-body-xs t-lo">{{ data?.archiveTotal.toLocaleString() }} archived questions · 2015–2023</span>
           </div>
           <h1 class="font-display text-[28px] sm:text-[36px] font-bold tracking-tight t-hi">
             TGPRB PYQ Archive
           </h1>
           <p class="mt-1 text-body-sm t-lo max-w-2xl">
-            Browse, search, and practice official Constable &amp; SI exam questions across 10 official papers.
+            Browse and practice Constable &amp; SI questions. Incomplete records remain visible with a review notice.
           </p>
         </div>
       </div>
@@ -160,6 +160,18 @@
           {{ q.question_text }}
         </p>
 
+        <figure v-if="q.image_url && !q.imageFailed" class="mb-4">
+          <img :src="q.image_url" :alt="q.image_alt" class="max-h-[32rem] max-w-full rounded-lg border b-line bg-white object-contain" loading="lazy" @load="q.imageLoaded = true" @error="q.imageFailed = true" />
+        </figure>
+        <div v-if="!q.practice_available || q.imageFailed" role="status" class="mb-4 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-body-xs t-mid">
+          <p class="font-semibold">Question awaiting review</p>
+          <p v-if="q.practice_issues.some(issue => issue !== 'missing_diagram')">The archived answer choices need review. Practice and answer reveal are unavailable.</p>
+          <p v-if="q.practice_issues.includes('missing_diagram')">The original diagram is not available yet. Practice will return when it is restored.</p>
+          <p v-if="q.imageFailed">The diagram could not load. Check your connection and try again.</p>
+          <button v-if="q.imageFailed" type="button" class="mt-2 underline" @click="q.imageFailed = false">Retry diagram</button>
+          <p class="mt-1 font-mono">{{ q.uid }} · {{ q.paper_label }}<span v-if="q.occurrence?.source_page"> · source page {{ q.occurrence.source_page }}</span></p>
+        </div>
+
         <!-- Options Grid -->
         <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <button
@@ -168,10 +180,10 @@
             type="button"
             class="opt"
             :class="getOptionClass(q, oi)"
-            :disabled="q.userRevealed"
+            :disabled="q.userRevealed || !canPractice(q)"
             @click="attemptQuestion(q, oi)"
           >
-            <span class="opt-letter">{{ 'ABCD'[oi] }}</span>
+            <span class="opt-letter">{{ 'ABCD'[oi] || oi + 1 }}</span>
             <span class="flex-1 text-left">{{ opt }}</span>
             <UIcon
               v-if="q.userRevealed && oi === q.correct_option_index"
@@ -187,7 +199,7 @@
         </div>
 
         <!-- Explanation -->
-        <div v-if="q.userRevealed" class="callout callout-jade mt-4 animate-fade-in">
+        <div v-if="q.userRevealed && canPractice(q)" class="callout callout-jade mt-4 animate-fade-in">
           <p class="callout-title">
             <UIcon name="i-heroicons-light-bulb" class="h-3.5 w-3.5" />
             Correct Answer: Option {{ 'ABCD'[q.correct_option_index] }} - {{ q.options[q.correct_option_index] }}
@@ -196,7 +208,7 @@
         </div>
 
         <button
-          v-else
+          v-else-if="canPractice(q)"
           type="button"
           class="mt-3 font-mono text-[10.5px] uppercase tracking-[0.12em] t-lo transition-colors hover:accent flex items-center gap-1"
           @click="q.userRevealed = true"
@@ -238,9 +250,9 @@
 
 <script setup lang="ts">
 useHead({
-  title: 'TGPRB PYQ Archive · 3,129 Verified Questions | BeatBook',
+  title: 'TGPRB PYQ Archive | BeatBook',
   meta: [
-    { name: 'description', content: 'Browse and practice 3,129 verified official TGPRB Constable and SI previous year questions (2015-2023).' }
+    { name: 'description', content: 'Browse TGPRB Constable and SI previous year questions. Incomplete historical records are marked for review.' }
   ]
 })
 
@@ -258,6 +270,13 @@ interface PyqCard {
   paper_label: string
   exam: string
   year: string
+  occurrence?: { source_file: string; source_page?: number }
+  practice_available: boolean
+  practice_issues: string[]
+  image_url: string | null
+  image_alt: string
+  imageLoaded?: boolean
+  imageFailed?: boolean
   userSelected?: number | null
   userRevealed?: boolean
 }
@@ -286,18 +305,10 @@ function clearSearch() {
   currentPage.value = 1
 }
 
-const subjectsList = [
-  { id: 'all', label: 'All Subjects', count: 3129 },
-  { id: 'arithmetic', label: 'Arithmetic', count: 676 },
-  { id: 'reasoning', label: 'Reasoning', count: 585 },
-  { id: 'telangana', label: 'Telangana State', count: 367 },
-  { id: 'history', label: 'History of India', count: 329 },
-  { id: 'geography', label: 'Geography', count: 326 },
-  { id: 'science', label: 'General Science', count: 306 },
-  { id: 'polity', label: 'Indian Polity', count: 203 },
-  { id: 'economy', label: 'Indian Economy', count: 184 },
-  { id: 'english', label: 'General English', count: 153 },
-]
+const subjectsList = computed(() => [
+  { id: 'all', label: 'All Subjects', count: data.value?.archiveTotal || 0 },
+  ...(data.value?.subjects || []),
+])
 
 const isFiltered = computed(() => {
   return searchQuery.value !== '' || selectedSubject.value !== 'all' || selectedExam.value !== 'all' || selectedYear.value !== 'all'
@@ -347,9 +358,13 @@ function changePage(newPage: number) {
 }
 
 function attemptQuestion(q: PyqCard, optionIdx: number) {
-  if (q.userRevealed) return
+  if (q.userRevealed || !canPractice(q)) return
   q.userSelected = optionIdx
   q.userRevealed = true
+}
+
+function canPractice(q: PyqCard) {
+  return q.practice_available && !q.imageFailed && (!q.image_url || q.imageLoaded)
 }
 
 function getOptionClass(q: PyqCard, oi: number) {

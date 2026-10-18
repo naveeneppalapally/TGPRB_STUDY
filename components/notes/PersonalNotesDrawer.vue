@@ -82,9 +82,10 @@
                 @keydown.ctrl.enter="saveNewNote"
                 @keydown.meta.enter="saveNewNote"
               />
+              <p v-if="draftLength > NOTE_BODY_LIMIT" role="alert" class="mt-1 text-xs text-red-500">Notes can contain up to 10,000 characters. Shorten this note before saving.</p>
               <div class="mt-2 flex justify-end items-center gap-2">
                 <UButton label="Cancel" color="gray" variant="ghost" size="xs" class="min-h-[36px] px-3" @click="cancelAdding" />
-                <UButton label="Save Note" color="gray" variant="soft" size="xs" class="bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-500/20 font-semibold min-h-[36px] px-3" @click="saveNewNote" />
+                <UButton label="Save Note" :disabled="draftLength > NOTE_BODY_LIMIT || !draftBody.trim()" color="gray" variant="soft" size="xs" class="bg-saffron-500/10 text-saffron-600 dark:text-saffron-400 hover:bg-saffron-500/20 font-semibold min-h-[36px] px-3" @click="saveNewNote" />
               </div>
             </div>
 
@@ -115,6 +116,7 @@ import type { SectionContext } from '@/types/annotations'
 import NoteCard from './NoteCard.vue'
 import ImprovementForm from './ImprovementForm.vue'
 import { usePersonalNotes } from '@/composables/usePersonalNotes'
+import { characterCount, NOTE_BODY_LIMIT } from '@/utils/annotation-validation'
 
 const props = defineProps<{
   noteId?: string
@@ -154,11 +156,12 @@ const selectedTabIndex = computed({
 
 const isAdding = ref(false)
 const draftBody = ref('')
+const draftLength = computed(() => characterCount(draftBody.value))
 const draftAnchor = ref('')
 
-const syncStatus = computed<'Saved locally' | 'Saving...' | 'Synced' | 'Offline (saved locally)' | 'Local on device' | 'Save failed' | 'Legacy changes on device'>(() => {
+const syncStatus = computed<'Saved locally' | 'Saving...' | 'Synced' | 'Offline (saved locally)' | 'Local on device' | 'Save failed' | 'Changes need review'>(() => {
   if (lastError.value) return 'Save failed'
-  if (quarantinedCount.value > 0) return 'Legacy changes on device'
+  if (quarantinedCount.value > 0) return 'Changes need review'
   if (!user.value) return 'Local on device'
   if (!isOnline.value) return 'Offline (saved locally)'
   if (isSyncing.value || pendingCount.value > 0) return 'Saving...'
@@ -195,7 +198,7 @@ function openForSection(context: SectionContext, tab: 'note' | 'improvement' = '
 defineExpose({ openForSection })
 
 async function saveNewNote() {
-  if (!draftBody.value.trim() || !activeContext.value) return
+  if (!draftBody.value.trim() || draftLength.value > NOTE_BODY_LIMIT || !activeContext.value) return
   
   try {
     await createNote(activeContext.value, draftBody.value, draftAnchor.value || undefined)
