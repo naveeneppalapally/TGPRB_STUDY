@@ -25,7 +25,7 @@
     "test": "node --import tsx scripts/verify-constitution-size.ts && node --import tsx scripts/verify-topic-integrity.ts && node --import tsx scripts/test-personal-notes-e2e.ts && node --import tsx scripts/test-offline-sync.ts && node --import tsx scripts/test-exam-strategy.ts && npm run test:audit",
     "generate:learning-data": "node --import tsx scripts/generate-learning-data.ts",
     "typecheck": "nuxt typecheck",
-    "test:audit": "node --import tsx scripts/test-audit-regressions.ts && node --import tsx scripts/test-reliability.ts",
+    "test:audit": "node --import tsx scripts/test-audit-regressions.ts && node --import tsx scripts/test-reliability.ts && node scripts/test-pre-push.mjs",
     "test:ca": "python3 -m unittest scripts.pib_ca_pipeline.test_contract",
     "test:browser": "node scripts/test-browser.mjs && node scripts/test-reliability-browser.mjs",
     "pretest": "npm run prebuild"

@@ -14,16 +14,25 @@
 # every push, so your local repo is always in sync.
 # ─────────────────────────────────────────────────────────────────────────────
 
-echo "pre-push: pulling latest remote changes first..."
-
+REMOTE="${1:-origin}"
 BRANCH=$(git branch --show-current)
-if [ -n "$BRANCH" ]; then
-  git pull --rebase origin "$BRANCH"
-else
-  git pull --rebase origin main
-fi
+BRANCH="${BRANCH:-main}"
 
-EXIT_CODE=$?
+# A new branch has nothing to pull yet. Distinguish that case (exit 2)
+# from authentication/network failures, which must still block the push.
+git ls-remote --exit-code --heads "$REMOTE" "refs/heads/$BRANCH" >/dev/null
+REMOTE_STATUS=$?
+if [ "$REMOTE_STATUS" -eq 0 ]; then
+  echo "pre-push: pulling latest remote changes first..."
+  git pull --rebase "$REMOTE" "$BRANCH"
+  EXIT_CODE=$?
+elif [ "$REMOTE_STATUS" -eq 2 ]; then
+  echo "pre-push: remote branch does not exist yet; preparing its first push."
+  EXIT_CODE=0
+else
+  echo "pre-push: could not check the remote branch (exit $REMOTE_STATUS)."
+  exit "$REMOTE_STATUS"
+fi
 
 if [ $EXIT_CODE -ne 0 ]; then
   echo ""

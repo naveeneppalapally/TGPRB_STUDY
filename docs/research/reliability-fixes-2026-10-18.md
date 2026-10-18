@@ -19,6 +19,13 @@ options, answer keys, stable IDs or saved review schedules were changed.
 - Feedback requires sign-in and reports that it is queued, without claiming
   that a local write reached the review team. Existing guest events remain local.
 
+## Git delivery
+
+The pre-push hook distinguishes a new remote branch from an unavailable remote.
+First pushes still run integrity verification; existing branches still pull the
+latest remote commits. Remote failures continue to block pushing. Regression
+checks use isolated local Git repositories, without external writes.
+
 ## Archive integrity and provenance
 
 The full 3,129-record master is inspected during prebuild. Seventeen extracted
