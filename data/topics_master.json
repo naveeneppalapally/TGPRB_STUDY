@@ -517,9 +517,10 @@
     ],
     "gateFile": "content/data/gates/union-executive-and-legislature.json",
     "deckFile": "content/data/flashcards/polity/union-executive-and-legislature.json",
+    "noteSlug": "parliament",
     "subjectSlug": "polity",
     "studySlug": "parliament",
-    "delivery": "study-pilot",
+    "delivery": "paired",
     "pyqUids": [
       "PYQ-2699",
       "PYQ-0998",
