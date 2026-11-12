@@ -43,10 +43,28 @@
       <!-- Alerts -->
       <div v-if="errorMsg" class="mb-5 rounded-lg border border-red-500/30 bg-red-50 dark:bg-red-950/30 p-3.5 text-xs text-red-600 dark:text-red-400 flex items-start gap-2.5">
         <UIcon name="i-heroicons-exclamation-circle" class="h-4 w-4 shrink-0 mt-0.5" />
-        <div class="space-y-1.5 flex-1">
+        <div class="space-y-2 flex-1">
           <p class="font-medium">{{ errorMsg }}</p>
-          <div v-if="isNetworkError" class="rounded-md bg-red-100/60 dark:bg-red-900/30 p-2 text-[11px] text-red-700 dark:text-red-300">
-            <p>Sign-in is temporarily unavailable. Please retry later. Your locally saved progress remains on this device.</p>
+          <div v-if="isNetworkError" class="rounded-md bg-red-100/60 dark:bg-red-900/30 p-2.5 text-[11px] text-red-700 dark:text-red-300 space-y-2">
+            <p>Supabase free-tier project is paused due to inactivity. Once restored in the Supabase Dashboard, sign-in will work immediately.</p>
+            <div class="flex flex-wrap items-center gap-2 pt-1">
+              <a
+                href="https://supabase.com/dashboard/project/fqasvhrzzheziuirnwtc"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 rounded bg-red-600 px-2.5 py-1 text-[11px] font-semibold text-white hover:bg-red-700 transition-colors"
+              >
+                Restore in Supabase
+                <UIcon name="i-heroicons-arrow-top-right-on-square" class="h-3 w-3" />
+              </a>
+              <button
+                type="button"
+                class="inline-flex items-center gap-1 rounded border border-red-300 dark:border-red-700 bg-white dark:bg-zinc-900 px-2.5 py-1 text-[11px] font-semibold text-red-700 dark:text-red-200 hover:bg-red-50 dark:hover:bg-zinc-800 transition-colors"
+                @click="handleGuestContinue"
+              >
+                Continue in Guest Mode
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -194,6 +212,19 @@
           </div>
         </form>
       </div>
+
+      <!-- Continue as Guest Option -->
+      <div class="mt-6 border-t b-line pt-4 text-center">
+        <p class="text-xs t-lo mb-2">Want to study without signing in?</p>
+        <button
+          type="button"
+          class="inline-flex items-center gap-1.5 text-xs font-semibold accent hover:underline"
+          @click="handleGuestContinue"
+        >
+          <UIcon name="i-heroicons-user" class="h-3.5 w-3.5" />
+          Continue as Guest (Offline Mode)
+        </button>
+      </div>
     </div>
 
     <!-- Security & Privacy note -->
@@ -204,7 +235,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useAuth } from '@/composables/useAuth'
 import BeatBookIcon from '@/components/icons/BeatBookIcon.vue'
 
@@ -216,10 +247,16 @@ const route = useRoute()
 const router = useRouter()
 const { signInWithPassword, signUpWithPassword, sendOtp, verifyOtp, loading, isLoggedIn } = useAuth()
 
-// If already logged in, redirect
-if (isLoggedIn.value) {
+watch(isLoggedIn, (logged) => {
+  if (logged) {
+    const next = (route.query.redirect as string) || '/'
+    router.replace(next)
+  }
+}, { immediate: true })
+
+function handleGuestContinue() {
   const next = (route.query.redirect as string) || '/'
-  router.replace(next)
+  router.push(next)
 }
 
 const method = ref<'magic_link' | 'password'>('magic_link')

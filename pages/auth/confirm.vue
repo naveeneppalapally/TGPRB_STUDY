@@ -11,14 +11,25 @@
         <UIcon name="i-heroicons-exclamation-circle" class="h-8 w-8 mx-auto text-red-500" />
         <h2 class="text-base font-semibold t-hi">Sign in failed</h2>
         <p class="text-xs text-red-500">{{ error }}</p>
-        <UButton
-          to="/auth/login"
-          color="primary"
-          block
-          size="sm"
-        >
-          Return to Sign In
-        </UButton>
+        <div class="pt-2 space-y-2">
+          <UButton
+            to="/auth/login"
+            color="primary"
+            block
+            size="sm"
+          >
+            Return to Sign In
+          </UButton>
+          <UButton
+            to="/"
+            variant="ghost"
+            color="gray"
+            block
+            size="sm"
+          >
+            Continue as Guest
+          </UButton>
+        </div>
       </div>
 
       <div v-else class="space-y-4">
@@ -31,11 +42,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
+import type { EmailOtpType } from '@supabase/supabase-js'
 
 useHead({ title: 'Confirming sign in - BeatBook' })
 
 const user = useSupabaseUser()
+const supabase = useSupabaseClient()
+const route = useRoute()
 const router = useRouter()
 const verifying = ref(true)
 const error = ref<string | null>(null)
@@ -43,14 +57,42 @@ const error = ref<string | null>(null)
 watch(user, () => {
   if (user.value) {
     verifying.value = false
-    setTimeout(() => router.replace('/'), 500)
+    const next = (route.query.redirect as string) || '/'
+    setTimeout(() => router.replace(next), 500)
   }
 }, { immediate: true })
 
-onMounted(() => {
-  // Give Supabase client 3 seconds to process URL hash/token
+onMounted(async () => {
+  const code = route.query.code as string | undefined
+  const tokenHash = route.query.token_hash as string | undefined
+  const otpType = (route.query.type as EmailOtpType) || 'email'
+
+  if (code) {
+    try {
+      const { error: exchangeErr } = await supabase.auth.exchangeCodeForSession(code)
+      if (exchangeErr) throw exchangeErr
+    } catch (err: any) {
+      verifying.value = false
+      error.value = err?.message || 'Failed to exchange authentication code'
+      return
+    }
+  } else if (tokenHash) {
+    try {
+      const { error: verifyErr } = await supabase.auth.verifyOtp({
+        token_hash: tokenHash,
+        type: otpType,
+      })
+      if (verifyErr) throw verifyErr
+    } catch (err: any) {
+      verifying.value = false
+      error.value = err?.message || 'Failed to verify authentication token'
+      return
+    }
+  }
+
+  // Fallback timeout in case auth state change takes too long
   setTimeout(() => {
-    if (!user.value) {
+    if (!user.value && verifying.value) {
       verifying.value = false
       error.value = 'The link may have expired or is already used. Please request a new one.'
     }
