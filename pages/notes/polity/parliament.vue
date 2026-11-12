@@ -138,111 +138,178 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            Part V of the Constitution of India ("The Union", Articles 52 to 151) establishes the structural backbone of Indian parliamentary democracy. It divides national governance into five sequential chapters, establishing parliamentary supremacy with constitutional judicial oversight.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-amber-500/25 bg-amber-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-amber-500" />
+              The Big Picture: How India's Central Government is Built
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              Think of Part V of the Constitution (Articles 52 to 151) as the <strong class="t-hi">Master Blueprint of India's Central Government</strong>. Just like a large organization needs managers to run day-to-day operations, a governing board to debate rules and pass budgets, emergency authority when the board is away, a chief legal judge, and an independent financial auditor, Part V divides the Union into five clear chapters:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs">
+              <div class="p-2.5 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">1. Executive (Arts. 52-78):</span>
+                <p class="t-lo mt-0.5">The management team. President, Vice-President, PM, Council of Ministers, and the Attorney General.</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400">2. Parliament (Arts. 79-122):</span>
+                <p class="t-lo mt-0.5">The law-making assembly. Lok Sabha (people's voice), Rajya Sabha (states' voice), and President.</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-sky-600 dark:text-sky-400">3. Ordinances (Art. 123):</span>
+                <p class="t-lo mt-0.5">Emergency laws. When Parliament is in recess, the President can issue temporary laws lasting up to 6 months + 6 weeks.</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-purple-600 dark:text-purple-400">4. Supreme Court (Arts. 124-147):</span>
+                <p class="t-lo mt-0.5">The constitutional referee. Settles disputes, protects Fundamental Rights, and reviews laws.</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-rose-600 dark:text-rose-400">5. The CAG (Arts. 148-151):</span>
+                <p class="t-lo mt-0.5">The public auditor. Inspects every government rupee to prevent waste and fraud.</p>
+              </div>
+              <div class="p-2.5 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-saffron-600 dark:text-saffron-400">Privileges (Arts. 105 &amp; 122):</span>
+                <p class="t-lo mt-0.5">Lawmakers can debate fearlessly without police lawsuits; courts cannot interfere in daily House debates.</p>
+              </div>
+            </div>
+          </div>
 
-          <!-- Part V Chapters Grid -->
+          <!-- Part V Chapters Grid with Teacher Explanations -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
             <div class="panel p-4 bg-elev border b-line">
               <span class="chip chip-mono text-[10px] text-amber-600 dark:text-amber-400">Chapter I · Articles 52-78</span>
               <p class="text-sm font-bold t-hi mt-1.5">The Union Executive</p>
-              <p class="text-xs t-lo mt-1">President (52-62), Vice-President (63-71), Council of Ministers &amp; Prime Minister (74-75), Attorney General for India (76), Conduct of Government Business (77-78).</p>
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mt-0.5">Who makes executive decisions and signs official orders?</p>
+              <p class="text-xs t-lo mt-1 leading-relaxed">
+                Covers the President (Arts. 52-62), Vice-President (Arts. 63-71), Prime Minister and Council of Ministers (Arts. 74-75), the Attorney General as the Union's top lawyer (Art. 76), and how central government business is officially conducted (Arts. 77-78).
+              </p>
             </div>
 
             <div class="panel p-4 bg-elev border b-line">
               <span class="chip chip-mono text-[10px] text-emerald-600 dark:text-emerald-400">Chapter II · Articles 79-122</span>
               <p class="text-sm font-bold t-hi mt-1.5">The Parliament</p>
-              <p class="text-xs t-lo mt-1">Composition (79-82), Duration &amp; Officers (83-98), Conduct of Business &amp; Disqualifications (99-106), Legislative &amp; Financial Procedure (107-117), Rules of Procedure (118-122).</p>
+              <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">Where are national laws debated, voted, and passed?</p>
+              <p class="text-xs t-lo mt-1 leading-relaxed">
+                Covers the 3 components of Parliament under Art. 79 (President + Rajya Sabha + Lok Sabha), qualifications/disqualifications of MPs (Arts. 84, 102), presiding officers (Arts. 89-98), and step-by-step voting on bills and the annual budget (Arts. 107-117).
+              </p>
             </div>
 
             <div class="panel p-4 bg-elev border b-line">
               <span class="chip chip-mono text-[10px] text-sky-600 dark:text-sky-400">Chapter III · Article 123</span>
               <p class="text-sm font-bold t-hi mt-1.5">Legislative Powers of President</p>
-              <p class="text-xs t-lo mt-1">Promulgation of Ordinances during recess of Parliament. Co-extensive with parliamentary law-making, temporary life of 6 months + 6 weeks.</p>
+              <p class="text-xs font-semibold text-sky-600 dark:text-sky-400 mt-0.5">What if Parliament is on break and a crisis hits?</p>
+              <p class="text-xs t-lo mt-1 leading-relaxed">
+                Allows the President to issue an <strong class="t-hi">Ordinance</strong> when either House is not in session. It holds the exact same legal power as an Act of Parliament, but expires within 6 weeks of Parliament reassembling (maximum life: 6 months + 6 weeks).
+              </p>
             </div>
 
             <div class="panel p-4 bg-elev border b-line">
               <span class="chip chip-mono text-[10px] text-purple-600 dark:text-purple-400">Chapter IV · Articles 124-147</span>
-              <p class="text-sm font-bold t-hi mt-1.5">The Union Judiciary</p>
-              <p class="text-xs t-lo mt-1">Establishment and constitution of the Supreme Court, jurisdiction (Original 131, Appellate 132-136, Advisory 143), Court of Record (129), and Law declared binding (141).</p>
+              <p class="text-sm font-bold t-hi mt-1.5">The Union Judiciary (Supreme Court)</p>
+              <p class="text-xs font-semibold text-purple-600 dark:text-purple-400 mt-0.5">Who protects the Constitution and settles legal disputes?</p>
+              <p class="text-xs t-lo mt-1 leading-relaxed">
+                Sets up the Supreme Court of India, original jurisdiction over Centre-State conflicts (Art. 131), appellate powers (Arts. 132-136), advisory opinions requested by President (Art. 143), and the rule that SC rulings are binding on all courts across India (Art. 141).
+              </p>
             </div>
 
             <div class="panel p-4 bg-elev border b-line">
               <span class="chip chip-mono text-[10px] text-rose-600 dark:text-rose-400">Chapter V · Articles 148-151</span>
-              <p class="text-sm font-bold t-hi mt-1.5">Comptroller &amp; Auditor General</p>
-              <p class="text-xs t-lo mt-1">Guardian of the public purse, duties and powers (149), forms of accounts (150), audit reports submitted to President for parliamentary scrutiny by PAC (151).</p>
+              <p class="text-sm font-bold t-hi mt-1.5">Comptroller &amp; Auditor General (CAG)</p>
+              <p class="text-xs font-semibold text-rose-600 dark:text-rose-400 mt-0.5">Who keeps the government honest with taxpayer money?</p>
+              <p class="text-xs t-lo mt-1 leading-relaxed">
+                Appointed as the independent "Guardian of the Public Purse" (Art. 148). The CAG audits all spending from the Consolidated Fund and submits reports to the President, who lays them before Parliament for scrutiny by the Public Accounts Committee (Art. 151).
+              </p>
             </div>
 
             <div class="panel p-4 bg-elev border b-line">
-              <span class="chip chip-mono text-[10px] text-saffron-600 dark:text-saffron-400">Key Constitutional Shield</span>
+              <span class="chip chip-mono text-[10px] text-saffron-600 dark:text-saffron-400">Constitutional Shield</span>
               <p class="text-sm font-bold t-hi mt-1.5">Articles 105 &amp; 122</p>
-              <p class="text-xs t-lo mt-1">Parliamentary privileges, freedom of speech in Parliament, immunity from court inquiry into internal proceedings on ground of alleged irregularity of procedure.</p>
+              <p class="text-xs font-semibold text-saffron-600 dark:text-saffron-400 mt-0.5">Why can't police arrest MPs for parliamentary speeches?</p>
+              <p class="text-xs t-lo mt-1 leading-relaxed">
+                Protects parliamentary freedom of speech. Lawmakers cannot be taken to court for anything said or voted inside the House (Art. 105). Also, courts cannot question internal proceedings due to minor procedural errors (Art. 122).
+              </p>
             </div>
           </div>
 
           <!-- 4-Tier Legal Architecture Hierarchy Panel -->
           <div class="panel p-5 bg-elev border b-line mb-8">
-            <h3 class="text-sm font-bold t-hi mb-4 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-scale" class="h-4 w-4 text-saffron-500" />
-              The 4-Tier Legal Architecture of Union Governance
+              The 4-Tier Legal Architecture: How Union Rules Actually Work
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-4">
+              A major reason beginners get confused in Polity is mixing up <strong class="t-hi">what is written in the Constitution</strong> versus <strong class="t-hi">what is written in a normal law or tradition</strong>. Here is how authority flows from top to bottom:
+            </p>
             <div class="space-y-3.5 text-xs">
               <!-- Tier 1 -->
               <div class="p-3.5 rounded-lg bg-sub border b-line">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider text-[11px]">Tier 1 : Constitutional Articles &amp; Core Doctrine</span>
+                  <span class="font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider text-[11px]">Tier 1 : The Constitution (Supreme Law - Cannot be Overridden)</span>
                   <span class="chip chip-mono text-[10px]">Supreme Law</span>
                 </div>
                 <p class="t-mid leading-relaxed">
-                  Articles 52-78 (Executive), 79-122 (Parliament), 123 (Ordinance), and 143 (Advisory Jurisdiction). Fixes the foundational doctrines: parliamentary executive, collective responsibility to Lok Sabha (Art. 75(3)), aid and advice binding on President (Art. 74(1)), bicameralism (Art. 79), and Money Bill supremacy (Art. 109-110).
+                  Articles 52 to 151. This is the supreme rulebook created by the Constituent Assembly. Any ordinary law, government order, or police action that contradicts Tier 1 is instantly struck down as unconstitutional. Examples: The Prime Minister must be collectively responsible to Lok Sabha (Art. 75(3)); the President must act on Cabinet advice (Art. 74(1)); a Money Bill can only start in Lok Sabha (Arts. 109-110).
                 </p>
               </div>
 
               <!-- Tier 2 -->
               <div class="p-3.5 rounded-lg bg-sub border b-line">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider text-[11px]">Tier 2 : Statutory Acts &amp; Electoral Frameworks</span>
+                  <span class="font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider text-[11px]">Tier 2 : Statutory Acts (Laws Passed by Parliament to Handle Details)</span>
                   <span class="chip chip-mono text-[10px]">Parliamentary Statutes</span>
                 </div>
                 <p class="t-mid leading-relaxed">
-                  <strong class="t-hi">Representation of the People Act 1950</strong> (allocation of seats, delimitation), <strong class="t-hi">Representation of the People Act 1951</strong> (conduct of elections, qualification/disqualification of MPs), <strong class="t-hi">Delimitation Act 2002</strong>, <strong class="t-hi">Parliamentary Proceedings (Protection of Publication) Act 1977</strong> (statutory immunity under Art. 361A), and <strong class="t-hi">Salary and Allowances of Leaders of Opposition in Parliament Act 1977</strong> (10% seat quota threshold).
+                  The Constitution gives the big principles, but does not specify every operational detail (like how to print ballot papers or draw district lines). So Parliament passes regular laws (statutes):
                 </p>
+                <ul class="list-disc pl-4 mt-1.5 space-y-1 t-lo">
+                  <li><strong class="t-hi">Representation of the People Act, 1950 &amp; 1951:</strong> Sets voting qualifications, physical conduct of elections, corrupt election practices, and grounds to disqualify corrupt MPs.</li>
+                  <li><strong class="t-hi">Delimitation Act, 2002:</strong> Establishes independent commissions to draw boundary lines of Lok Sabha constituencies based on census data.</li>
+                  <li><strong class="t-hi">Salary of Leaders of Opposition Act, 1977:</strong> Officially recognizes the Leader of Opposition (LoP) as a statutory post with cabinet minister rank (requiring at least 10% seats of the House).</li>
+                </ul>
               </div>
 
               <!-- Tier 3 -->
               <div class="p-3.5 rounded-lg bg-sub border b-line">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider text-[11px]">Tier 3 : Rules of Procedure &amp; Conventions</span>
-                  <span class="chip chip-mono text-[10px]">House Rules &amp; Precedents</span>
+                  <span class="font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wider text-[11px]">Tier 3 : House Rules &amp; Healthy Traditions (Conventions)</span>
+                  <span class="chip chip-mono text-[10px]">House Rules &amp; Traditions</span>
                 </div>
                 <p class="t-mid leading-relaxed">
-                  Rules of Procedure and Conduct of Business in Lok Sabha and Rajya Sabha framed under Article 118. Key unwritten conventions with binding constitutional weight: Speaker impartiality and casting vote only on tie (Art. 100(1)); Public Accounts Committee (PAC) chairmanship to the Opposition since 1967; Deputy Speaker post to the Opposition since 11th Lok Sabha (1996); Zero Hour emergence in 1962 as an informal device without rulebook mention.
+                  Internal rulebooks framed by each House under Article 118, plus unwritten "gentlemen's agreements" (called conventions) that have been followed for decades:
                 </p>
+                <ul class="list-disc pl-4 mt-1.5 space-y-1 t-lo">
+                  <li><strong class="t-hi">Speaker's Neutrality:</strong> The Speaker never votes during the normal round; only casts a tie-breaker vote (Casting Vote, Art. 100(1)).</li>
+                  <li><strong class="t-hi">PAC Chair to Opposition:</strong> Since 1967, by unwritten convention, the Public Accounts Committee chairman is always an Opposition MP so the government cannot hide financial fraud.</li>
+                  <li><strong class="t-hi">Zero Hour (1962):</strong> An informal Indian parliamentary innovation where MPs raise urgent public scandals at 12 noon without giving 10 days advance notice. It is <strong class="t-hi">NOT mentioned in the official rulebook</strong>!</li>
+                </ul>
               </div>
 
               <!-- Tier 4 -->
               <div class="p-3.5 rounded-lg bg-sub border b-line">
                 <div class="flex items-center justify-between mb-1">
-                  <span class="font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider text-[11px]">Tier 4 : Landmark Judicial Precedents &amp; Rulings</span>
+                  <span class="font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider text-[11px]">Tier 4 : Landmark Supreme Court Rulings (The Referee's Whistle)</span>
                   <span class="chip chip-mono text-[10px]">Supreme Court Rulings</span>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                <p class="t-mid leading-relaxed mb-2">
+                  When political parties or leaders fight over the meaning of a constitutional article, the Supreme Court provides the final, binding legal interpretation:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
                   <div class="p-2.5 rounded bg-base border b-line">
                     <p class="font-semibold text-amber-600 dark:text-amber-400">Shamsher Singh v. State of Punjab (1974)</p>
-                    <p class="text-xs t-lo mt-0.5">7-judge bench held President and Governor are constitutional heads bound by aid and advice; personal satisfaction is not required except in rare exceptional contingencies.</p>
+                    <p class="text-xs t-lo mt-0.5">A 7-judge bench ruled that the President is not an independent ruler. The President is a constitutional figurehead legally bound to follow the advice of the Prime Minister and Cabinet.</p>
                   </div>
                   <div class="p-2.5 rounded bg-base border b-line">
                     <p class="font-semibold text-emerald-600 dark:text-emerald-400">S.R. Bommai v. Union of India (1994)</p>
-                    <p class="text-xs t-lo mt-0.5">9-judge bench ruled floor of the House is the only constitutional forum to test executive majority; presidential proclamation under Article 356 is subject to judicial review.</p>
+                    <p class="text-xs t-lo mt-0.5">A 9-judge bench stopped the central government from arbitrarily toppling state governments under Article 356 (President's Rule). Ruled that a Chief Minister's majority can only be tested on the floor of the Legislative Assembly.</p>
                   </div>
                   <div class="p-2.5 rounded bg-base border b-line">
                     <p class="font-semibold text-sky-600 dark:text-sky-400">Kihoto Hollohan v. Zachillhu (1992)</p>
-                    <p class="text-xs t-lo mt-0.5">Upheld 10th Schedule (Anti-Defection Law) but ruled Speaker/Chairman acts as a tribunal when deciding disqualifications, making decisions subject to judicial review.</p>
+                    <p class="text-xs t-lo mt-0.5">Upheld the 10th Schedule (Anti-Defection Law), but ruled that when a Speaker decides to disqualify an MP/MLA, the Speaker is acting like a courtroom judge, so courts can review the decision for unfairness.</p>
                   </div>
                   <div class="p-2.5 rounded bg-base border b-line">
                     <p class="font-semibold text-rose-600 dark:text-rose-400">Raja Ram Pal v. Hon'ble Speaker (2007)</p>
-                    <p class="text-xs t-lo mt-0.5">Upheld Parliament's power to expel corrupt members (cash-for-query) under Article 105 privileges, while affirming judicial review over gross constitutional violations.</p>
+                    <p class="text-xs t-lo mt-0.5">Upheld Parliament's constitutional power to expel corrupt lawmakers (like MPs caught taking cash to ask questions in Parliament) to protect the dignity of the institution.</p>
                   </div>
                 </div>
               </div>
@@ -273,9 +340,30 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            The Union Executive consists of the President, Vice-President, Prime Minister, Council of Ministers, and the Attorney General for India. India follows the Westminster model where the President is the de jure titular head, while the Prime Minister heading the Council of Ministers exercises de facto executive authority.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-amber-500/25 bg-amber-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-amber-500" />
+              The Big Picture: Who Really Runs India?
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              India has a parliamentary system of government. Think of national leadership like a large organisation with two distinct roles:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">1. The President (Head of the State):</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  The official, ceremonial head. Every central government order, treaty, and law is signed in the President's name. But in practice, the President does not make daily decisions; the President is legally bound to act on the advice of the Prime Minister and Cabinet.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-sky-600 dark:text-sky-400">2. The Prime Minister (Head of the Government):</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  The real executive decision-maker. The Prime Minister leads the Council of Ministers, sets government policy, introduces bills, directs ministries, and commands the political majority in the Lok Sabha.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <!-- Executive Offices Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -283,67 +371,182 @@
             <div class="panel p-5 bg-elev border b-line">
               <div class="flex items-center justify-between mb-2">
                 <span class="chip chip-mono text-[10px] text-amber-600 dark:text-amber-400">Head of State · Articles 52-62, 72</span>
-                <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">De Jure Head</span>
+                <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">First Citizen</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">The President of India</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Electoral College (Art. 54):</strong> Elected members of Lok Sabha, elected members of Rajya Sabha, elected MLAs of all States, and elected MLAs of Delhi &amp; Puducherry (70th CAA 1992). Nominated members and MLCs NEVER vote.</li>
-                <li><strong class="t-hi">Election Method (Art. 55):</strong> Proportional representation by single transferable vote (PR-STV) using secret ballot. Uniformity in scale of representation across States.</li>
-                <li><strong class="t-hi">Oath (Art. 60):</strong> Administered by the Chief Justice of India (or senior-most Supreme Court Judge).</li>
-                <li><strong class="t-hi">Impeachment (Art. 61):</strong> Sole ground is "Violation of the Constitution". Quasi-judicial process initiated in either House with 14 days notice signed by at least 1/4th members; passed by a majority of not less than <strong class="t-hi">two-thirds of the TOTAL membership</strong> of each House. Nominated MPs PARTICIPATE, while State MLAs DO NOT participate.</li>
-                <li><strong class="t-hi">Pardoning Power (Art. 72):</strong> Five powers: Pardon (complete forgiveness), Commutation (lighter form of punishment), Remission (reducing period without changing character), Respite (lesser penalty on special grounds like pregnancy), Reprieve (temporary stay). Extends to Court Martial sentences, death sentences, and Union offenses.</li>
-                <li><strong class="t-hi">Ordinance Power (Art. 123):</strong> Promulgated only during recess of Parliament; co-extensive with legislative power; maximum life of 6 months + 6 weeks.</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Who Elects the President? (Electoral College - Art. 54):</p>
+                  <p class="mt-0.5">Common citizens do not vote directly. Only our <strong class="t-hi">elected lawmakers</strong> cast ballots:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-0.5">
+                    <li>Elected MPs of Lok Sabha and Rajya Sabha</li>
+                    <li>Elected MLAs of all State Legislative Assemblies</li>
+                    <li>Elected MLAs of Delhi and Puducherry (added by 70th Amendment, 1992)</li>
+                  </ul>
+                  <div class="mt-1.5 p-2 rounded bg-rose-500/10 border border-rose-500/25 text-[11px] text-rose-700 dark:text-rose-300">
+                    <strong>Who CANNOT vote (Classic Exam Traps):</strong>
+                    <ul class="list-disc pl-3.5 mt-0.5">
+                      <li>Nominated MPs (e.g. the 12 nominated by the President to Rajya Sabha) cannot vote.</li>
+                      <li>Members of State Legislative Councils (MLCs) cannot vote, because only 6 states have Councils.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Election Method (Art. 55):</p>
+                  <p class="mt-0.5">Proportional representation by single transferable vote (STV) using secret ballot. Instead of voting for just one candidate, lawmakers rank candidates by preference (1st choice, 2nd choice). Each MLA's vote value is calculated based on their state's population.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Oath &amp; Term (Arts. 56, 60):</p>
+                  <p class="mt-0.5">Oath is administered by the <strong class="t-hi">Chief Justice of India</strong> (or the senior-most Supreme Court judge). Term is 5 years; eligible for re-election any number of times.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Pardoning Power (Article 72):</p>
+                  <p class="mt-0.5">The President can show mercy to convicted persons under Union law. Learn the 5 exact terms:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li><strong class="t-hi">Pardon:</strong> Complete eraser. Completely wipes away both the conviction and sentence as if the crime never happened.</li>
+                    <li><strong class="t-hi">Commutation (Swap):</strong> Changing a severe punishment to a lighter category (e.g. death sentence changed to life imprisonment).</li>
+                    <li><strong class="t-hi">Remission (Reduce time):</strong> Shortening the jail sentence without changing the nature of punishment (e.g. 10 years rigorous imprisonment reduced to 5 years).</li>
+                    <li><strong class="t-hi">Respite (Special condition):</strong> Awarding a lesser punishment due to a special circumstance (such as pregnancy of a female prisoner or mental/physical disability).</li>
+                    <li><strong class="t-hi">Reprieve (Temporary delay):</strong> Putting an execution on hold temporarily to give time to file a mercy petition or appeal.</li>
+                  </ul>
+                  <p class="mt-1.5 text-[11px] text-amber-600 dark:text-amber-400">
+                    <strong>President vs Governor Trap:</strong> The President can pardon <strong>Death Sentences</strong> and <strong>Military Court-Martial</strong> sentences. A Governor (Art. 161) cannot pardon death sentences and has zero authority over military courts.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-rose-600 dark:text-rose-400">How to Remove a President (Impeachment - Art. 61):</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li><strong>Only Reason:</strong> "Violation of the Constitution" (the Constitution does not define what this means).</li>
+                    <li><strong>Notice:</strong> Either Lok Sabha or Rajya Sabha can start it. At least <strong>1/4th (25%)</strong> of House members must sign a notice giving <strong>14 days advance warning</strong>.</li>
+                    <li><strong>Vote Threshold:</strong> Must be passed by a majority of not less than <strong class="t-hi">two-thirds of the TOTAL membership</strong> in both Houses.</li>
+                    <li><strong>The Reversal Trap:</strong> In the election, nominated MPs cannot vote, but state MLAs vote. In impeachment, it reverses: <strong class="t-hi">Nominated MPs can vote</strong>, while <strong class="t-hi">State MLAs cannot vote</strong>!</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Vice-President of India -->
             <div class="panel p-5 bg-elev border b-line">
               <div class="flex items-center justify-between mb-2">
-                <span class="chip chip-mono text-[10px] text-emerald-600 dark:text-emerald-400">Ex-Officio Chairman · Articles 63-71</span>
-                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Second Citizen</span>
+                <span class="chip chip-mono text-[10px] text-emerald-600 dark:text-emerald-400">Second Citizen · Articles 63-71</span>
+                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Ex-Officio Chairman</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">The Vice-President of India</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Ex-officio Role (Art. 64):</strong> Ex-officio Chairman of the Council of States (Rajya Sabha). Does not draw salary as Vice-President, but draws salary as Chairman of Rajya Sabha (2nd Schedule).</li>
-                <li><strong class="t-hi">Electoral College (Art. 66):</strong> Consists of ALL members of both Houses of Parliament (both elected AND nominated). State MLAs have NO role in Vice-Presidential elections.</li>
-                <li><strong class="t-hi">Qualifications:</strong> Citizen of India, at least 35 years of age, qualified for election as a member of the Rajya Sabha.</li>
-                <li><strong class="t-hi">Removal (Art. 67(b)):</strong> Resolution can be initiated ONLY in the Rajya Sabha. Requires 14 days advance notice. Must be passed by an <strong class="t-hi">effective majority</strong> (majority of all the then members) of Rajya Sabha and agreed to by Lok Sabha by a <strong class="t-hi">simple majority</strong>.</li>
-                <li><strong class="t-hi">Acting President (Art. 65):</strong> Acts as President during casual vacancies for a maximum of 6 months, during which he does not perform duties of Chairman of Rajya Sabha.</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-emerald-600 dark:text-emerald-400">The Two Jobs of the Vice-President:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li>
+                      <strong class="t-hi">Everyday Job (Article 64):</strong> Ex-officio Chairman of the Rajya Sabha. ("Ex-officio" means: by the simple fact of being Vice-President, you automatically become Chairman).
+                      <br><span class="text-[11px] t-lo">Important exam fact: The Vice-President does not receive a salary as Vice-President; he receives the salary of the Chairman of the Rajya Sabha!</span>
+                    </li>
+                    <li>
+                      <strong class="t-hi">Backup Job (Article 65):</strong> Acting President during vacancies (death, resignation, or removal) for a maximum of <strong class="t-hi">6 months</strong>. During this time, he does not perform duties of Chairman of Rajya Sabha.
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Who Elects the Vice-President? (Art. 66):</p>
+                  <p class="mt-0.5">Only members of Parliament vote (Lok Sabha + Rajya Sabha):</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-0.5">
+                    <li>Includes <strong class="t-hi">both elected AND nominated MPs</strong>.</li>
+                    <li>State MLAs have <strong class="t-hi">zero role</strong> in electing the Vice-President!</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Qualifications (Art. 66(3)):</p>
+                  <p class="mt-0.5">Citizen of India, at least 35 years of age, and qualified for election as a member of the Rajya Sabha (must not hold an office of profit).</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-emerald-600 dark:text-emerald-400">Removal Procedure (Article 67(b)):</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li>The removal resolution can originate <strong class="t-hi">ONLY in the Rajya Sabha</strong> with 14 days advance notice.</li>
+                    <li>Must be passed by an <strong class="t-hi">effective majority</strong> (majority of all the current sitting members) of the Rajya Sabha.</li>
+                    <li>Agreed to by the Lok Sabha by a <strong class="t-hi">simple majority</strong> (majority of members present and voting).</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Prime Minister & Council of Ministers -->
             <div class="panel p-5 bg-elev border b-line">
               <div class="flex items-center justify-between mb-2">
                 <span class="chip chip-mono text-[10px] text-sky-600 dark:text-sky-400">Real Executive · Articles 74, 75, 78</span>
-                <span class="text-xs font-mono font-bold text-sky-600 dark:text-sky-400">De Facto Head</span>
+                <span class="text-xs font-mono font-bold text-sky-600 dark:text-sky-400">The Real Leader</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Prime Minister &amp; Council of Ministers</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Aid and Advice (Art. 74(1)):</strong> Council of Ministers with Prime Minister at head to aid and advise the President, who shall act in accordance with such advice. The 42nd CAA (1976) made advice binding; 44th CAA (1978) gave President power to return advice once for reconsideration, but post-reconsideration advice is strictly binding.</li>
-                <li><strong class="t-hi">Judicial Immunity (Art. 74(2)):</strong> Nature of advice tendered by Ministers to the President cannot be inquired into by any court.</li>
-                <li><strong class="t-hi">Appointment (Art. 75(1)):</strong> PM appointed by President; other Ministers appointed by President on advice of PM.</li>
-                <li><strong class="t-hi">Collective Responsibility (Art. 75(3)):</strong> The Council of Ministers is collectively responsible to the <strong class="t-hi">Lok Sabha (House of the People)</strong>, not to Parliament as a whole.</li>
-                <li><strong class="t-hi">Individual Responsibility (Art. 75(2)):</strong> Ministers hold office during the pleasure of the President.</li>
-                <li><strong class="t-hi">Size Ceiling (91st CAA 2003):</strong> Total Ministers including PM shall not exceed <strong class="t-hi">15%</strong> of total Lok Sabha strength.</li>
-                <li><strong class="t-hi">Non-Member Minister (Art. 75(5)):</strong> A Minister who is not a member of either House for 6 consecutive months ceases to be a Minister.</li>
-                <li><strong class="t-hi">Duties of PM (Art. 78):</strong> Constitutional obligation to communicate all Cabinet decisions, legislative proposals, and administrative information to the President.</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-sky-600 dark:text-sky-400">Aid and Advice (Article 74):</p>
+                  <p class="mt-0.5">The President must have a Council of Ministers with the Prime Minister at the head to aid and advise him. The President <strong class="t-hi">must act on this advice</strong>. Under the 44th Amendment (1978), the President may return advice once for reconsideration, but if the Cabinet sends it back, the President is obligated to sign it.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-rose-600 dark:text-rose-400">Collective Responsibility (Art. 75(3) - Top Exam PYQ):</p>
+                  <p class="mt-0.5">The Council of Ministers is collectively responsible to the <strong class="t-hi">Lok Sabha alone</strong> (not to the Rajya Sabha, and not to Parliament as a whole).</p>
+                  <p class="mt-1 text-[11px] t-lo">
+                    <strong>What this means in plain words:</strong> "Ministers swim together or sink together." If the Lok Sabha passes a No-Confidence Motion, the entire ministry (including ministers who sit in the Rajya Sabha) must immediately resign.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Individual Responsibility (Art. 75(2)):</p>
+                  <p class="mt-0.5">Ministers hold office during the <strong class="t-hi">pleasure of the President</strong>. In practice, this means the Prime Minister can ask any minister to resign or advise the President to dismiss them at any time.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Size Ceiling on Ministry (91st Amendment, 2003):</p>
+                  <p class="mt-0.5">To prevent oversized cabinets used for political bargaining, the total number of ministers (including the Prime Minister) cannot exceed <strong class="t-hi">15% of the total strength of the Lok Sabha</strong> (roughly 81 to 82 ministers max).</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">The 6-Month Rule (Article 75(5)):</p>
+                  <p class="mt-0.5">A person who is not an MP can be appointed as a Minister or even Prime Minister. However, they must get elected to either the Lok Sabha or the Rajya Sabha within <strong class="t-hi">6 consecutive months</strong>, otherwise they immediately cease to be a Minister.</p>
+                </div>
+              </div>
             </div>
 
             <!-- Attorney General for India -->
             <div class="panel p-5 bg-elev border b-line">
               <div class="flex items-center justify-between mb-2">
-                <span class="chip chip-mono text-[10px] text-purple-600 dark:text-purple-400">Chief Legal Advisor · Articles 76, 88</span>
-                <span class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400">Highest Law Officer</span>
+                <span class="chip chip-mono text-[10px] text-purple-600 dark:text-purple-400">Top Legal Officer · Articles 76, 88</span>
+                <span class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400">Government's Lawyer</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Attorney General for India</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Appointment &amp; Tenure (Art. 76):</strong> Appointed by President; must be qualified to be appointed a Judge of the Supreme Court. Holds office during the <strong class="t-hi">pleasure of the President</strong> with no fixed constitutional tenure or remuneration.</li>
-                <li><strong class="t-hi">Audience Rights (Art. 76(3)):</strong> Right of audience in all courts in the territory of India.</li>
-                <li><strong class="t-hi">Parliamentary Privileges (Art. 88):</strong> Has the right to speak in and participate in proceedings of either House, joint sittings, and any parliamentary committee whereof he is named a member, but <strong class="t-hi">WITHOUT THE RIGHT TO VOTE</strong>.</li>
-                <li><strong class="t-hi">Limitations:</strong> Does not hold a full-time government post; not debarred from private legal practice, but cannot advise or hold brief against the Government of India or defend accused persons in criminal prosecutions without permission.</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-purple-600 dark:text-purple-400">Who is the Attorney General?</p>
+                  <p class="mt-0.5">The Attorney General is the <strong class="t-hi">Chief Legal Advisor (Top Lawyer)</strong> of the Government of India. Whenever the central government is sued or needs representation in the Supreme Court or High Courts, the Attorney General appears on its behalf.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Qualifications &amp; Tenure (Article 76):</p>
+                  <ul class="list-disc pl-4 mt-0.5 space-y-0.5">
+                    <li>Must be qualified to be appointed a Judge of the Supreme Court (Indian citizen + 5 years High Court judge OR 10 years High Court advocate).</li>
+                    <li>Has <strong class="t-hi">no fixed constitutional tenure</strong>. Serves during the <strong class="t-hi">pleasure of the President</strong> (meaning the government can replace him at will; conventionally resigns when the government changes).</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Special Parliamentary Right (Article 88 - Most Asked Fact):</p>
+                  <p class="mt-0.5">The Attorney General has the constitutional right to speak in, take part in debates of either House of Parliament, attend joint sittings, and sit on any parliamentary committee he is named to.</p>
+                  <p class="mt-1 p-2 rounded bg-amber-500/10 border border-amber-500/25 text-[11px] font-semibold text-amber-700 dark:text-amber-300">
+                    CRITICAL RULE: The Attorney General DOES NOT have the right to vote! Because he is not an elected representative of the people, he cannot cast a ballot on any bill.
+                  </p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Private Practice Permitted:</p>
+                  <p class="mt-0.5">The Attorney General is not a full-time government servant and is not debarred from private legal practice. However, he cannot advise or take a case against the Government of India, and cannot defend an accused person in a criminal case without government permission.</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -422,9 +625,33 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            Under Article 79, the Parliament of India consists of three constituent elements: the <strong class="t-hi">President</strong>, the <strong class="t-hi">Council of States (Rajya Sabha)</strong>, and the <strong class="t-hi">House of the People (Lok Sabha)</strong>. Though the President is an integral component of Parliament without whose assent no bill can become law, the President is not a member of either House.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-emerald-500/25 bg-emerald-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-emerald-500" />
+              The Big Picture: What is Parliament &amp; Why Do We Have Two Houses?
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              Most beginners think Parliament means just "the building where MPs meet". In constitutional law, Parliament is defined by Article 79 as a trinity:
+            </p>
+            <div class="p-3 rounded-lg bg-elev border b-line text-xs font-semibold text-center mb-3 text-emerald-600 dark:text-emerald-400">
+              Parliament of India = The President + Rajya Sabha (Council of States) + Lok Sabha (House of the People)
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">Why is the President part of Parliament?</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Even though the President never sits or debates in either House, a bill passed by both Houses cannot become a law without the President's signature (assent).
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-sky-600 dark:text-sky-400">Why do we have Two Houses (Bicameralism)?</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  <strong class="t-hi">Lok Sabha</strong> represents the citizens directly. <strong class="t-hi">Rajya Sabha</strong> represents the States, ensuring that the Central Government does not rush through laws that damage state rights or regional interests.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <!-- Houses Side-by-Side Architectural Panels -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -435,20 +662,43 @@
                 <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">Max 250 Members</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Rajya Sabha (Council of States)</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Constitutional Maximum:</strong> 250 members: up to 238 representing States and Union Territories, plus <strong class="t-hi">12 nominated by the President</strong>.</li>
-                <li><strong class="t-hi">Nomination Criteria (Art. 80(3)):</strong> Special knowledge or practical experience in <strong class="t-hi">Literature, Science, Art, and Social Service</strong> (tested in PYQ-0998, PYQ-1182, PYQ-0313).</li>
-                <li><strong class="t-hi">Mode of Election:</strong> Indirect election by elected members of State Legislative Assemblies (MLAs) using proportional representation with the single transferable vote (STV).</li>
-                <li><strong class="t-hi">Tenure &amp; Dissolution (Art. 83(1)):</strong> Permanent body; NEVER subject to dissolution. Members serve 6-year terms; <strong class="t-hi">one-third retire every second year</strong>.</li>
-                <li><strong class="t-hi">Minimum Age (Art. 84):</strong> 30 years.</li>
-                <li><strong class="t-hi">Special Federal Powers:</strong>
-                  <ul class="list-circle pl-4 mt-1 space-y-1">
-                    <li><strong class="t-hi">Article 249:</strong> Resolution passed by 2/3rd present and voting empowers Parliament to legislate on State List matters in national interest for 1 year (PYQ-0164).</li>
-                    <li><strong class="t-hi">Article 312:</strong> Resolution passed by 2/3rd present and voting authorizes creation of new All-India Services.</li>
-                    <li><strong class="t-hi">Article 67(b):</strong> Vice-President removal resolution can originate ONLY in Rajya Sabha.</li>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Who Sits Here? (Article 80):</p>
+                  <p class="mt-0.5">Maximum ceiling is <strong class="t-hi">250 members</strong>:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-0.5">
+                    <li><strong class="t-hi">238 representatives</strong> elected from States and Union Territories.</li>
+                    <li><strong class="t-hi">12 nominated members</strong> chosen directly by the President.</li>
                   </ul>
-                </li>
-              </ul>
+                  <div class="mt-1.5 p-2 rounded bg-amber-500/10 border border-amber-500/25 text-[11px] text-amber-700 dark:text-amber-300">
+                    <strong>The 4 Nomination Fields (Art. 80(3)):</strong> Literature, Science, Art, and Social Service (Memory trick: <strong>LSAS</strong>). Note: "Sports" is not in the text; athletes like Sachin Tendulkar were nominated under the broad umbrella of Art/contribution.
+                  </div>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">How are they elected?</p>
+                  <p class="mt-0.5">Indirect election. Ordinary citizens do not vote for Rajya Sabha MPs. Instead, our elected State MLAs vote using proportional representation with the single transferable vote (STV).</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Why is it called a "Permanent House"? (Art. 83(1)):</p>
+                  <p class="mt-0.5">Rajya Sabha is <strong class="t-hi">NEVER dissolved</strong>. While a Lok Sabha dissolves every 5 years, Rajya Sabha continues forever. Members serve a 6-year term, and <strong class="t-hi">one-third (1/3rd) of the members retire every 2 years</strong>.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Minimum Age (Art. 84):</p>
+                  <p class="mt-0.5">Must be at least <strong class="t-hi">30 years old</strong> (5 years older than the Lok Sabha requirement of 25).</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-emerald-600 dark:text-emerald-400">3 Exclusive Federal Powers of Rajya Sabha:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li><strong class="t-hi">Article 249:</strong> If Rajya Sabha passes a resolution by 2/3rd majority, Parliament gains the power to make laws on a State List subject for 1 year in the national interest.</li>
+                    <li><strong class="t-hi">Article 312:</strong> Rajya Sabha can pass a resolution to create brand new All-India Services (common to Centre and States, like IAS or IPS).</li>
+                    <li><strong class="t-hi">Article 67(b):</strong> The proposal to remove the Vice-President of India can originate <strong class="t-hi">ONLY in the Rajya Sabha</strong>.</li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
             <!-- Lok Sabha -->
@@ -458,23 +708,53 @@
                 <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Ceiling 550 / Actual 543</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Lok Sabha (House of the People)</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Constitutional Maximum:</strong> 552 as originally enacted (530 States + 20 UTs + 2 Anglo-Indian nominees under Art. 331; tested in PYQ-1077).</li>
-                <li><strong class="t-hi">104th CAA (2019) Impact:</strong> Discontinued Anglo-Indian presidential nomination from Jan 2020. Constitutional ceiling is now <strong class="t-hi">550</strong>. Actual sitting strength is <strong class="t-hi">543</strong> (524 States + 19 UTs).</li>
-                <li><strong class="t-hi">Mode of Election:</strong> Direct election by adult suffrage (18+ years per 61st CAA 1988) from territorial constituencies.</li>
-                <li><strong class="t-hi">Tenure &amp; Dissolution (Art. 83(2)):</strong> 5 years from date of first sitting unless dissolved earlier by the President. During a National Emergency, term can be extended by Parliament by law for <strong class="t-hi">one year at a time</strong>.</li>
-                <li><strong class="t-hi">Minimum Age (Art. 84):</strong> 25 years.</li>
-                <li><strong class="t-hi">Exclusive Powers:</strong> Money Bills originate ONLY here (Art. 109); Council of Ministers is collectively responsible ONLY to Lok Sabha (Art. 75(3)); Demands for Grants are voted ONLY by Lok Sabha (Art. 113).</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-emerald-600 dark:text-emerald-400">Constitutional Strength &amp; 104th Amendment Change:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li><strong class="t-hi">Original Maximum:</strong> 552 members (530 States + 20 UTs + 2 Anglo-Indians nominated by President under Art. 331).</li>
+                    <li><strong class="t-hi">The 104th Amendment (2019):</strong> Discontinued the 2 nominated Anglo-Indian seats starting January 2020.</li>
+                    <li><strong class="t-hi">New Maximum Ceiling:</strong> <strong class="t-hi">550 members</strong> (530 States + 20 UTs).</li>
+                    <li><strong class="t-hi">Actual Current Strength:</strong> <strong class="t-hi">543 elected MPs</strong> (524 from States + 19 from Union Territories).</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">How are they elected?</p>
+                  <p class="mt-0.5">Direct election by the people. Every Indian citizen aged 18 or above gets one vote (Universal Adult Suffrage). The voting age was reduced from 21 to 18 by the <strong class="t-hi">61st Constitutional Amendment Act, 1988</strong>.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Tenure &amp; Dissolution (Art. 83(2)):</p>
+                  <p class="mt-0.5">Normal term is <strong class="t-hi">5 years</strong> from the date of its first meeting. It can be dissolved earlier by the President on the advice of the Prime Minister. During a National Emergency, its life can be extended by law for <strong class="t-hi">1 year at a time</strong>.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Minimum Age (Art. 84):</p>
+                  <p class="mt-0.5">Must be at least <strong class="t-hi">25 years old</strong>.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-rose-600 dark:text-rose-400">Exclusive Financial &amp; Executive Powers:</p>
+                  <ul class="list-disc pl-4 mt-1 space-y-1">
+                    <li><strong class="t-hi">Money Bills (Art. 109):</strong> Can be introduced ONLY in Lok Sabha. Rajya Sabha cannot reject or amend them.</li>
+                    <li><strong class="t-hi">Government Survival (Art. 75(3)):</strong> The Council of Ministers is responsible ONLY to the Lok Sabha. Rajya Sabha cannot pass a No-Confidence Motion.</li>
+                    <li><strong class="t-hi">Budget Demands (Art. 113):</strong> Only Lok Sabha votes on the Demands for Grants (approving government ministry expenditure).</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- State Representation Quotas & Constituency Extremes Panel -->
           <div class="panel p-5 bg-elev border b-line mb-6">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-map-pin" class="h-4 w-4 text-saffron-500" />
               State Seat Allocations &amp; Constituency Extremes (TGPRB Tested Facts)
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              Seats are allotted to states roughly in proportion to their population. To prevent fast-growing states from unfairly gaining more power, seat counts have been frozen based on the 1971 Census until after 2026 (via the 84th CAA 2001). Memorize these exam pairs:
+            </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs mb-4">
               <div class="p-3 rounded bg-sub border b-line">
                 <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">Telangana</span>
@@ -494,7 +774,7 @@
               <div class="p-3 rounded bg-sub border b-line">
                 <span class="text-xs font-mono font-bold text-purple-600 dark:text-purple-400">Top State Allocations</span>
                 <p class="text-sm font-bold t-hi mt-1">UP: 80 LS · 31 RS</p>
-                <p class="t-lo mt-0.5">Highest representation in both Houses based on population.</p>
+                <p class="t-lo mt-0.5">Highest representation in both Houses based on its large population.</p>
               </div>
             </div>
 
@@ -503,14 +783,14 @@
               <div class="p-3 rounded bg-amber-500/10 border border-amber-500/30 flex items-start gap-2.5">
                 <UIcon name="i-heroicons-user-group" class="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
                 <div>
-                  <p class="font-bold text-amber-600 dark:text-amber-400">Largest Constituency by Electors (PYQ-0326)</p>
+                  <p class="font-bold text-amber-600 dark:text-amber-400">Largest Constituency by Voters (PYQ-0326)</p>
                   <p class="t-mid mt-0.5"><strong class="t-hi">Malkajgiri (Telangana)</strong> is the largest Lok Sabha constituency in India by number of voters (~31.5+ lakh electors).</p>
                 </div>
               </div>
               <div class="p-3 rounded bg-emerald-500/10 border border-emerald-500/30 flex items-start gap-2.5">
                 <UIcon name="i-heroicons-user-minus" class="h-4 w-4 text-emerald-500 shrink-0 mt-0.5" />
                 <div>
-                  <p class="font-bold text-emerald-600 dark:text-emerald-400">Smallest Constituency by Electors (PYQ-0191)</p>
+                  <p class="font-bold text-emerald-600 dark:text-emerald-400">Smallest Constituency by Voters (PYQ-0191)</p>
                   <p class="t-mid mt-0.5"><strong class="t-hi">Lakshadweep</strong> is the smallest Lok Sabha constituency by electors (~57,000 electors).</p>
                 </div>
               </div>
@@ -541,9 +821,30 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            The Presiding Officers maintain order, conduct legislative proceedings, regulate debate, and protect parliamentary privileges. Each House has its own designated presiding officers with specific constitutional roles and voting powers.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-sky-500/25 bg-sky-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-sky-500" />
+              The Big Picture: The Referees of Parliament
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              Imagine an intense, noisy match between two rival teams. Without an impartial referee with a whistle, the game would descend into chaos. In Parliament, the <strong class="t-hi">Speaker</strong> (in Lok Sabha) and the <strong class="t-hi">Chairman</strong> (in Rajya Sabha) act as neutral umpires: they decide who gets to speak, interpret house rules, discipline disruptive members, and protect parliamentary democracy.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">Speaker of Lok Sabha:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  An elected MP chosen by the House. Commands immense power over money bills, joint sittings, and member disqualifications.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400">Chairman of Rajya Sabha:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  The Vice-President of India serving ex-officio. Crucial exam distinction: The Chairman is <strong class="t-hi">not an elected member of the House</strong>!
+                </p>
+              </div>
+            </div>
+          </div>
 
           <!-- Presiding Officers Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -554,15 +855,37 @@
                 <span class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400">Elected Member</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Speaker of the Lok Sabha</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Election &amp; Tenure:</strong> Elected by Lok Sabha members from among themselves by simple majority. Date of election fixed by the President. Holds office until immediately before the first meeting of the new Lok Sabha after dissolution.</li>
-                <li><strong class="t-hi">Resignation (Art. 94(b)):</strong> The Speaker submits resignation to the <strong class="t-hi">Deputy Speaker</strong>. The Deputy Speaker submits resignation to the <strong class="t-hi">Speaker</strong>. (NEVER to the President!).</li>
-                <li><strong class="t-hi">Casting Vote (Art. 100(1)):</strong> Does not vote in the first instance; votes <strong class="t-hi">ONLY in the case of an equality of votes (tie)</strong> (tested in PYQ-0519).</li>
-                <li><strong class="t-hi">Money Bill Decider (Art. 110(3)):</strong> The decision of the Speaker on whether a bill is a Money Bill or not is <strong class="t-hi">FINAL</strong> and cannot be questioned in court.</li>
-                <li><strong class="t-hi">Joint Sitting Precedence (Art. 118(4)):</strong> Presides over joint sittings of both Houses.</li>
-                <li><strong class="t-hi">Removal Consideration (Art. 96):</strong> When a resolution for removal is under consideration, Speaker cannot preside, but has the right to speak, take part, and <strong class="t-hi">vote in the first instance</strong>, but NOT a casting vote.</li>
-                <li><strong class="t-hi">Disqualification Arbiter (10th Schedule):</strong> Decides questions of disqualification of MPs on grounds of defection (subject to judicial review per Kihoto Hollohan 1992).</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">How is the Speaker Chosen &amp; Tenure?</p>
+                  <p class="mt-0.5">Elected by Lok Sabha MPs from amongst themselves by a simple majority. The election date is set by the President. When the Lok Sabha is dissolved, the Speaker does not immediately vacate office; holds office until right before the first meeting of the newly elected Lok Sabha.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-rose-600 dark:text-rose-400">Resignation Letters (The Mutual Swap Trap - Art. 94(b)):</p>
+                  <p class="mt-0.5">The Speaker submits resignation to the <strong class="t-hi">Deputy Speaker</strong>. The Deputy Speaker submits resignation to the <strong class="t-hi">Speaker</strong>. (They NEVER submit resignation to the President!).</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Casting Vote Only on a Tie (Art. 100(1) - PYQ-0519):</p>
+                  <p class="mt-0.5">To preserve strict referee neutrality, the Speaker <strong class="t-hi">never votes during the normal first round</strong>. The Speaker votes ONLY when there is an equal 50-50 tie between votes. This tie-breaker is called the <strong class="t-hi">Casting Vote</strong>.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Absolute Authority over Money Bills (Art. 110(3)):</p>
+                  <p class="mt-0.5">If any dispute arises about whether a bill is a Money Bill or not, the Speaker's decision is <strong class="t-hi">FINAL</strong>. The signed certificate of the Speaker cannot be challenged in any court or by the Rajya Sabha.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-sky-600 dark:text-sky-400">What Happens during Speaker's Removal Debate? (Art. 96):</p>
+                  <p class="mt-0.5">When a resolution to remove the Speaker is being debated, the Speaker cannot sit in the presiding chair. However, the Speaker can sit on the benches, speak, and <strong class="t-hi">vote in the first round</strong> (like an ordinary MP), but loses the right to cast a tie-breaking casting vote.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Anti-Defection Judge (10th Schedule):</p>
+                  <p class="mt-0.5">The Speaker decides whether an MP should be disqualified for defecting from their political party. Under the Supreme Court's <em class="t-hi">Kihoto Hollohan (1992)</em> ruling, this decision acts like a tribunal and is subject to court review.</p>
+                </div>
+              </div>
             </div>
 
             <!-- Deputy Speaker & Chairman -->
@@ -572,14 +895,37 @@
                 <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Chairs &amp; Conventions</span>
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Deputy Speaker &amp; Rajya Sabha Chairman</h3>
-              <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Deputy Speaker Election:</strong> Elected by the Lok Sabha from among its members (date fixed by Speaker; PYQ-0309). Not subordinate to Speaker; holds an independent constitutional office.</li>
-                <li><strong class="t-hi">11th Lok Sabha Convention (1996):</strong> Since the 11th Lok Sabha, consensus convention dictates that the Speaker comes from the ruling party and the <strong class="t-hi">Deputy Speaker comes from the main Opposition party</strong> (PYQ-0754).</li>
-                <li><strong class="t-hi">Rajya Sabha Chairman (Art. 89):</strong> Vice-President is ex-officio Chairman. Not an elected member of the House. Can vote only in case of a tie. When removal resolution is under consideration (Art. 92), cannot preside and cannot even vote in the first instance.</li>
-                <li><strong class="t-hi">Rajya Sabha Deputy Chairman:</strong> Elected by Rajya Sabha members from among themselves. Presides in Chairman's absence. Submits resignation to the Chairman.</li>
-                <li><strong class="t-hi">Pro-tem Speaker (Art. 95(1)):</strong> Appointed by President (senior-most member by convention) to administer oath to new MPs under Article 99 until regular Speaker is elected.</li>
-                <li><strong class="t-hi">Leader of Opposition (LoP):</strong> Statutory post under 1977 Act (requires 10% seats). <strong class="t-hi">NOT appointed by Speaker</strong> (tested in PYQ-0314).</li>
-              </ul>
+              <div class="space-y-3 text-xs t-mid leading-relaxed">
+                <div>
+                  <p class="font-bold t-hi text-emerald-600 dark:text-emerald-400">Deputy Speaker of Lok Sabha (Art. 93):</p>
+                  <p class="mt-0.5">Elected by Lok Sabha MPs from amongst themselves (election date is fixed by the Speaker; PYQ-0309). The Deputy Speaker is <strong class="t-hi">not subordinate to the Speaker</strong>; holds an independent constitutional office and presides when the Speaker is absent.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">The Opposition Convention (11th Lok Sabha, 1996 - PYQ-0754):</p>
+                  <p class="mt-0.5">By healthy democratic tradition since 1996, the Speaker belongs to the ruling party/coalition, and the <strong class="t-hi">Deputy Speaker post is offered to the main Opposition party</strong>.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-sky-600 dark:text-sky-400">Chairman of Rajya Sabha (Art. 89):</p>
+                  <p class="mt-0.5">The Vice-President is ex-officio Chairman. Because he is NOT an elected MP, when a resolution for his removal is under consideration (Art. 92), he cannot preside and <strong class="t-hi">cannot even vote in the first round</strong> (unlike the Speaker of LS who can vote in the first round!).</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Deputy Chairman of Rajya Sabha:</p>
+                  <p class="mt-0.5">Elected by Rajya Sabha members from among themselves. Presides when the Chairman is absent or acting as President. Submits resignation directly to the Chairman.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi text-amber-600 dark:text-amber-400">Pro-tem Speaker (Art. 95(1)):</p>
+                  <p class="mt-0.5">Appointed by the President (by convention, the senior-most elected MP) to administer the oath of office to all newly elected MPs until the House elects its permanent Speaker.</p>
+                </div>
+
+                <div>
+                  <p class="font-bold t-hi">Leader of Opposition (LoP - PYQ-0314):</p>
+                  <p class="mt-0.5">A statutory post created under the 1977 Act. Given to the leader of the largest opposition party having at least <strong class="t-hi">10% of total seats (55 seats in Lok Sabha)</strong>. Has the rank of a Cabinet Minister. The LoP is NOT appointed by the Speaker!</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -590,7 +936,7 @@
               Joint Sitting Presiding Hierarchy (Article 118(4) &amp; High-Frequency Trap)
             </h3>
             <p class="text-xs t-mid leading-relaxed mb-4">
-              A joint sitting under Article 108 is summoned by the President to resolve legislative deadlock between Houses. The order of presiding is strictly laid down in the Rules of Procedure:
+              When Lok Sabha and Rajya Sabha disagree on an Ordinary Bill and reach a complete deadlock, the President can summon a <strong class="t-hi">Joint Sitting</strong> under Article 108. The four-step chain of who presides is fixed by constitutional rules:
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-center text-xs">
               <div class="p-3 rounded bg-sub border b-line">
@@ -601,7 +947,7 @@
               <div class="p-3 rounded bg-sub border b-line">
                 <span class="font-mono text-emerald-500 font-bold">2nd in Order</span>
                 <p class="font-bold t-hi mt-1">Deputy Speaker of Lok Sabha</p>
-                <p class="t-lo text-[11px] mt-0.5">Presides in absence of Speaker.</p>
+                <p class="t-lo text-[11px] mt-0.5">Presides if Speaker is absent.</p>
               </div>
               <div class="p-3 rounded bg-sub border b-line">
                 <span class="font-mono text-sky-500 font-bold">3rd in Order</span>
@@ -611,14 +957,16 @@
               <div class="p-3 rounded bg-sub border b-line">
                 <span class="font-mono text-purple-500 font-bold">4th in Order</span>
                 <p class="font-bold t-hi mt-1">Member Chosen by Sitting</p>
-                <p class="t-lo text-[11px] mt-0.5">Agreed upon by the joint house.</p>
+                <p class="t-lo text-[11px] mt-0.5">Chosen by majority of joint members.</p>
               </div>
             </div>
             <div class="mt-4 p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 flex items-start gap-2.5">
               <UIcon name="i-heroicons-x-circle" class="h-5 w-5 text-rose-500 shrink-0 mt-0.5" />
               <div class="text-xs">
-                <p class="font-bold text-rose-600 dark:text-rose-400">CRITICAL EXAM TRAP (Tested in PYQ-2203):</p>
-                <p class="t-mid mt-0.5">The <strong class="t-hi">Chairman of the Rajya Sabha (Vice-President of India) NEVER presides</strong> over a joint sitting because the Vice-President is not a member of either House of Parliament!</p>
+                <p class="font-bold text-rose-600 dark:text-rose-400">THE #1 EXAM TRAP (Tested in PYQ-2203):</p>
+                <p class="t-mid mt-0.5">
+                  The <strong class="t-hi">Chairman of the Rajya Sabha (Vice-President of India) NEVER presides</strong> over a joint sitting! Why? Because the Vice-President is not an elected member of either House of Parliament. Notice in the chain above that step 3 goes directly to the <strong class="t-hi">Deputy Chairman</strong> of the Rajya Sabha, completely skipping the Chairman!
+                </p>
               </div>
             </div>
           </div>
@@ -647,16 +995,40 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            Parliamentary enactment differentiates sharply between Ordinary Bills, Money Bills, Financial Bills (Types I &amp; II), and Constitutional Amendment Bills. Financial primacy rests firmly with the directly elected Lok Sabha.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-amber-500/25 bg-amber-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-amber-500" />
+              The Big Picture: How Laws are Born &amp; Who Holds the Public Purse?
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              A <strong class="t-hi">Bill</strong> is simply a proposed draft of a law. Once it is approved by both Houses of Parliament and signed by the President, it becomes an <strong class="t-hi">Act</strong> (enforceable law). But when it comes to money and taxes, India follows a foundational democratic principle: <em class="t-hi">No taxation without representation</em>.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">Why does Lok Sabha control the wallet?</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Lok Sabha MPs are directly elected by the taxpayers of India. Therefore, the Constitution gives the Lok Sabha virtually 100% control over taxes and government expenditure. The Rajya Sabha cannot block or delay money for more than 14 days.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400">The Term "Budget" is NOT in the Constitution:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Article 112 never uses the word "Budget". It calls it the <strong class="t-hi">Annual Financial Statement</strong>, which is the estimated receipt and expenditure of the Government of India for that financial year.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <!-- Types of Bills Comparison Table -->
           <div class="panel p-5 bg-elev border b-line mb-6">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-document-text" class="h-4 w-4 text-emerald-500" />
-              Comprehensive Legislative Typology (Ordinary vs Money vs Financial Bills)
+              Comprehensive Legislative Typology: Ordinary vs Money vs Financial Bills
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-4">
+              Polity exams frequently test the exact procedural differences between bills. Pay special attention to the row on <strong class="t-hi">President's Return Power</strong> and <strong class="t-hi">Joint Sittings</strong>:
+            </p>
             <div class="overflow-x-auto">
               <table class="table-note">
                 <thead>
@@ -693,14 +1065,14 @@
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Rajya Sabha Power</td>
                     <td class="py-2.5 px-3 t-mid">Equal power to amend or reject</td>
-                    <td class="py-2.5 px-3 font-semibold text-rose-600 dark:text-rose-400">14 days only; recommendations only</td>
+                    <td class="py-2.5 px-3 font-semibold text-rose-600 dark:text-rose-400">14 days only; recommendations only (cannot reject/amend)</td>
                     <td class="py-2.5 px-3 t-mid">Can amend or reject</td>
                     <td class="py-2.5 pl-3 t-mid">Can amend or reject</td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Joint Sitting (Art. 108)</td>
                     <td class="py-2.5 px-3 text-emerald-600 dark:text-emerald-400 font-semibold">Yes (On deadlock)</td>
-                    <td class="py-2.5 px-3 text-rose-600 dark:text-rose-400 font-bold">NO (Never applicable)</td>
+                    <td class="py-2.5 px-3 text-rose-600 dark:text-rose-400 font-bold">NO (Never applicable for Money Bills)</td>
                     <td class="py-2.5 px-3 text-emerald-600 dark:text-emerald-400 font-semibold">Yes (On deadlock)</td>
                     <td class="py-2.5 pl-3 text-emerald-600 dark:text-emerald-400 font-semibold">Yes (On deadlock)</td>
                   </tr>
@@ -714,32 +1086,44 @@
                 </tbody>
               </table>
             </div>
+            <div class="mt-3 p-2.5 rounded bg-amber-500/10 border border-amber-500/25 text-xs text-amber-700 dark:text-amber-300">
+              <strong>Why can't the President return a Money Bill? (Exam Logic):</strong> A Money Bill is introduced in the Lok Sabha only AFTER obtaining the President's prior permission. Since the President already approved its introduction, the President cannot turn around and return it!
+            </div>
           </div>
 
           <!-- Budget & Constitutional Funds -->
           <div class="panel p-5 bg-elev border b-line mb-6">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-banknotes" class="h-4 w-4 text-amber-500" />
-              Annual Financial Statement (Budget) &amp; The Three Constitutional Funds
+              The Three Constitutional Accounts (Where India's Money Lives)
             </h3>
             <p class="text-xs t-mid leading-relaxed mb-4">
-              The term "Budget" does not appear anywhere in the Constitution; Article 112 refers to it as the <strong class="t-hi">Annual Financial Statement</strong>. All central revenues and expenditures flow through three designated constitutional funds:
+              All government revenues, loans, and emergency expenditures flow through three distinct constitutional bank accounts:
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4">
               <div class="p-3.5 rounded bg-sub border b-line">
                 <span class="chip chip-mono text-[10px] text-amber-600 dark:text-amber-400">Article 266(1)</span>
                 <p class="text-sm font-bold t-hi mt-1">Consolidated Fund of India</p>
-                <p class="t-lo mt-1 leading-relaxed">All revenues received by GoI, loans raised, and repayments. <strong class="t-hi">No money can be withdrawn without parliamentary Appropriation Act</strong> (Art. 114).</p>
+                <p class="text-xs font-semibold text-amber-600 dark:text-amber-400 mt-0.5">The Government's Main Current Account</p>
+                <p class="t-lo mt-1 leading-relaxed">
+                  All tax revenues, loans raised, and loan repayments flow in here. <strong class="t-hi">Iron Rule:</strong> Not a single rupee can be withdrawn without Parliament passing an <strong class="t-hi">Appropriation Act</strong> (Art. 114).
+                </p>
               </div>
               <div class="p-3.5 rounded bg-sub border b-line">
                 <span class="chip chip-mono text-[10px] text-emerald-600 dark:text-emerald-400">Article 267(1)</span>
                 <p class="text-sm font-bold t-hi mt-1">Contingency Fund of India</p>
-                <p class="t-lo mt-1 leading-relaxed">Imprest fund placed at the disposal of the <strong class="t-hi">President of India</strong> (administered by Finance Secretary) to meet unforeseen urgent expenses pending ex-post parliamentary sanction.</p>
+                <p class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5">The Emergency Disaster Wallet</p>
+                <p class="t-lo mt-1 leading-relaxed">
+                  An imprest (advance cash) fund placed at the disposal of the <strong class="t-hi">President of India</strong> (administered by the Finance Secretary) to pay for urgent, unexpected disasters pending later approval by Parliament.
+                </p>
               </div>
               <div class="p-3.5 rounded bg-sub border b-line">
                 <span class="chip chip-mono text-[10px] text-sky-600 dark:text-sky-400">Article 266(2)</span>
                 <p class="text-sm font-bold t-hi mt-1">Public Account of India</p>
-                <p class="t-lo mt-1 leading-relaxed">Moneys received other than consolidated revenues: provident funds, small savings, judicial deposits. Operates as executive banking accounts; no parliamentary vote required.</p>
+                <p class="text-xs font-semibold text-sky-600 dark:text-sky-400 mt-0.5">The Government's Custodial Locker</p>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Holds moneys that do not belong to the government, but are kept in its trust: provident funds (PF), postal savings, and court deposits. Because this is the citizens' own money, withdrawals do not require a parliamentary vote.
+                </p>
               </div>
             </div>
 
@@ -748,11 +1132,15 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <span class="font-bold text-amber-600 dark:text-amber-400">Expenditure Charged on CFI (Non-Votable):</span>
-                  <p class="t-mid mt-1">Emoluments of President, Presiding Officers of LS and RS, Supreme Court Judges, CAG, debt servicing charges. <strong class="t-hi">Can be discussed in Parliament, but NEVER voted upon.</strong></p>
+                  <p class="t-mid mt-1 leading-relaxed">
+                    Salaries of the President, Speaker, Deputy Speaker, Chairman, SC Judges, and CAG. Parliament <strong class="t-hi">can discuss them, but CANNOT vote or reduce them</strong>. Why? To keep these constitutional protectors independent and immune from political arm-twisting!
+                  </p>
                 </div>
                 <div>
                   <span class="font-bold text-emerald-600 dark:text-emerald-400">Expenditure Made from CFI (Votable):</span>
-                  <p class="t-mid mt-1">Presented in the form of Demands for Grants to the <strong class="t-hi">Lok Sabha exclusively</strong> (Rajya Sabha has no voting power on Demands for Grants under Art. 113).</p>
+                  <p class="t-mid mt-1 leading-relaxed">
+                    General government spending (highways, defense equipment, welfare schemes). Presented as <strong class="t-hi">Demands for Grants</strong> to the <strong class="t-hi">Lok Sabha exclusively</strong> (Rajya Sabha has zero voting power on Demands for Grants under Art. 113).
+                  </p>
                 </div>
               </div>
             </div>
@@ -782,9 +1170,30 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            Parliament exercises day-to-day scrutiny over the executive through specific procedural devices and institutional financial committees that audit government spending and administrative policy.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-emerald-500/25 bg-emerald-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-emerald-500" />
+              The Big Picture: How Lawmakers Grill Ministers &amp; Audit Spending
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              If Ministers were left alone without supervision, they could misuse power and waste public money. In our parliamentary democracy, MPs keep ministers in check using <strong class="t-hi">two daily questioning hours</strong>, <strong class="t-hi">censure motions</strong>, and <strong class="t-hi">three financial watchdog committees</strong>:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">Daily Floor Scrutiny:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Every sitting day begins with <strong class="t-hi">Question Hour (11 AM)</strong> where MPs question ministers on their performance, followed by <strong class="t-hi">Zero Hour (12 Noon)</strong> to raise breaking public issues.
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400">Financial Committees (The Auditing Squads):</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Since 543 MPs cannot inspect thousands of detailed account books on the floor, small bipartisan committees (like PAC and Estimates) inspect receipts and audit reports behind closed doors.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <!-- Devices Grid -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -796,13 +1205,23 @@
               </div>
               <h3 class="text-base font-bold t-hi mb-2">Question Hour vs Zero Hour (PYQ-1834)</h3>
               <div class="space-y-3 text-xs">
-                <div class="p-2.5 rounded bg-sub border b-line">
-                  <p class="font-bold text-amber-600 dark:text-amber-400">Question Hour (First Hour of Sitting):</p>
-                  <p class="t-mid mt-0.5">Formal device listed in the Rules of Procedure. Three question types: <strong class="t-hi">Starred (*)</strong> (oral answer, supplementary questions permitted); <strong class="t-hi">Unstarred</strong> (written answer, no supplementary questions); <strong class="t-hi">Short Notice</strong> (urgent public importance, notice less than 10 days, answered orally).</p>
+                <div class="p-3 rounded-lg bg-sub border b-line">
+                  <p class="font-bold text-amber-600 dark:text-amber-400">Question Hour (11:00 AM - First Hour):</p>
+                  <p class="t-mid mt-0.5 leading-relaxed">Officially mentioned in the Rules of Procedure. Three question types:</p>
+                  <ul class="list-disc pl-4 mt-1.5 space-y-1 t-lo">
+                    <li><strong class="t-hi">Starred (*) Question:</strong> Marked with an asterisk. Minister must answer orally on the spot. Follow-up ("supplementary") questions are allowed.</li>
+                    <li><strong class="t-hi">Unstarred Question:</strong> Answered in writing; placed on the table of the House. No oral follow-up questions permitted.</li>
+                    <li><strong class="t-hi">Short Notice Question:</strong> Urgent public matter; given with notice shorter than 10 days; answered orally.</li>
+                  </ul>
                 </div>
-                <div class="p-2.5 rounded bg-sub border b-line">
-                  <p class="font-bold text-emerald-600 dark:text-emerald-400">Zero Hour (Starts at 12 Noon):</p>
-                  <p class="t-mid mt-0.5">Informal device; <strong class="t-hi">NOT mentioned in the Rules of Procedure</strong>. An <strong class="t-hi">Indian parliamentary innovation dating back to 1962</strong>. MPs can raise matters of urgent public importance without prior 10 days notice.</p>
+                <div class="p-3 rounded-lg bg-sub border b-line">
+                  <p class="font-bold text-emerald-600 dark:text-emerald-400">Zero Hour (Starts Exactly at 12:00 Noon):</p>
+                  <p class="t-mid mt-0.5 leading-relaxed">Starts right when Question Hour ends at 12 noon:</p>
+                  <ul class="list-disc pl-4 mt-1.5 space-y-1 t-lo">
+                    <li><strong class="t-hi">The #1 Fact:</strong> An <strong class="t-hi">Indian parliamentary innovation dating back to 1962</strong>.</li>
+                    <li><strong class="t-hi">The Rulebook Trap:</strong> It is <strong class="t-hi">NOT mentioned in the Rules of Procedure</strong>! It is an informal convention.</li>
+                    <li>MPs can raise urgent public issues without waiting for the normal 10-day advance notice.</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -810,51 +1229,70 @@
             <!-- Key Parliamentary Motions -->
             <div class="panel p-5 bg-elev border b-line">
               <div class="flex items-center justify-between mb-2">
-                <span class="chip chip-mono text-[10px] text-emerald-600 dark:text-emerald-400">Legislative Censure &amp; Control</span>
-                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Lok Sabha Exclusive</span>
+                <span class="chip chip-mono text-[10px] text-emerald-600 dark:text-emerald-400">Legislative Control</span>
+                <span class="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">Accountability Tools</span>
               </div>
-              <h3 class="text-base font-bold t-hi mb-2">Key Parliamentary Motions</h3>
+              <h3 class="text-base font-bold t-hi mb-2">Key Parliamentary Motions in Plain Words</h3>
               <ul class="space-y-2 text-xs t-mid leading-relaxed list-disc pl-4">
-                <li><strong class="t-hi">Adjournment Motion:</strong> Extraordinary motion setting aside normal business to debate a definite urgent public matter. Requires support of <strong class="t-hi">50 members</strong> to admit. Lok Sabha only; involves censure of government.</li>
-                <li><strong class="t-hi">No-Confidence Motion:</strong> Governed by Rule 198 of Lok Sabha Rules (rooted in Art. 75(3)). Supported by <strong class="t-hi">50 members</strong>. No specific reasons required. If passed, the entire Council of Ministers MUST resign.</li>
-                <li><strong class="t-hi">Censure Motion:</strong> Moved against a specific Minister or Council for specific policies. If passed, government does not have to resign, but must demonstrate majority on the floor.</li>
-                <li><strong class="t-hi">Calling Attention Motion:</strong> Indian innovation from 1954; listed in Rules; calls Minister's attention to an urgent matter for official statement.</li>
-                <li><strong class="t-hi">Guillotine:</strong> Parliamentary guillotine puts all outstanding Demands for Grants to vote together without further debate on the final allotted day.</li>
+                <li>
+                  <strong class="t-hi">No-Confidence Motion (Rule 198):</strong> Moved <strong class="t-hi">ONLY in the Lok Sabha</strong>. Needs at least <strong class="t-hi">50 MPs</strong> to support introduction. No specific reasons needed. If passed, the entire government (PM and all ministers) must immediately resign!
+                </li>
+                <li>
+                  <strong class="t-hi">Adjournment Motion:</strong> Halts all normal scheduled business of the day to urgently debate a sudden national crisis (e.g. major disaster). Lok Sabha only; requires support of <strong class="t-hi">50 MPs</strong>; acts as a censure (criticism) of the government.
+                </li>
+                <li>
+                  <strong class="t-hi">Censure Motion:</strong> Moved against a specific Minister or policy to condemn their action. If passed, the government does not have to resign, but must prove its majority.
+                </li>
+                <li>
+                  <strong class="t-hi">Calling Attention Motion:</strong> Indian innovation from 1954; listed in the rulebook; asks a Minister for an authoritative official statement on an urgent matter.
+                </li>
+                <li>
+                  <strong class="t-hi">The Guillotine:</strong> When debate time expires on the final allotted day of the budget session, the Speaker drops the "guillotine", putting all remaining budget demands to vote together without further debate.
+                </li>
               </ul>
             </div>
           </div>
 
           <!-- Cut Motions Panel -->
           <div class="panel p-5 bg-elev border b-line mb-6">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-scissors" class="h-4 w-4 text-amber-500" />
               The Three Budget Cut Motions (Lok Sabha Only)
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              When the government presents its Demands for Grants, the Opposition uses "Cut Motions" as scissors to reduce the amount requested. Learn the exact exam formulas:
+            </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
               <div class="p-3.5 rounded bg-sub border b-line">
                 <span class="chip chip-mono text-[10px] text-rose-600 dark:text-rose-400">Policy Disapproval</span>
                 <p class="text-sm font-bold t-hi mt-1">Policy Cut Motion</p>
-                <p class="t-lo mt-1 leading-relaxed">Form: <strong class="t-hi">"That the amount of the demand be reduced to Re 1."</strong> Represents complete disapproval of the underlying policy. If passed, amounts to a vote of no confidence.</p>
+                <p class="text-xs font-mono font-bold text-rose-600 dark:text-rose-400 mt-1">"Reduce demand to Re 1"</p>
+                <p class="t-lo mt-1 leading-relaxed">Represents total rejection and disapproval of the underlying policy. If passed, it is equal to a vote of no confidence!</p>
               </div>
               <div class="p-3.5 rounded bg-sub border b-line">
                 <span class="chip chip-mono text-[10px] text-amber-600 dark:text-amber-400">Financial Economy</span>
                 <p class="text-sm font-bold t-hi mt-1">Economy Cut Motion</p>
-                <p class="t-lo mt-1 leading-relaxed">Form: <strong class="t-hi">"That the amount of the demand be reduced by a specified amount"</strong> (e.g., reduced by Rs 1 crore). Indicates that economy can be effected without impairing policy efficiency.</p>
+                <p class="text-xs font-mono font-bold text-amber-600 dark:text-amber-400 mt-1">"Reduce demand by a specified amount"</p>
+                <p class="t-lo mt-1 leading-relaxed">E.g., "reduce by Rs 100 crore". Means the policy is acceptable, but the expenditure is bloated and can be executed cheaper.</p>
               </div>
               <div class="p-3.5 rounded bg-sub border b-line">
                 <span class="chip chip-mono text-[10px] text-sky-600 dark:text-sky-400">Specific Grievance</span>
                 <p class="text-sm font-bold t-hi mt-1">Token Cut Motion</p>
-                <p class="t-lo mt-1 leading-relaxed">Form: <strong class="t-hi">"That the amount of the demand be reduced by Rs 100."</strong> Ventilates a specific grievance that lies within the sphere of responsibility of GoI.</p>
+                <p class="text-xs font-mono font-bold text-sky-600 dark:text-sky-400 mt-1">"Reduce demand by Rs 100"</p>
+                <p class="t-lo mt-1 leading-relaxed">A symbolic cut to ventilate a specific public complaint or grievance against the ministry's performance.</p>
               </div>
             </div>
           </div>
 
           <!-- The Three Standing Financial Committees Comparison -->
           <div class="panel p-5 bg-elev border b-line mb-6">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-chart-pie" class="h-4 w-4 text-emerald-500" />
               The Three Standing Financial Committees (High-Yield Contrast Table)
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              Committees are elected every year using proportional representation (Single Transferable Vote). Pay close attention to the membership mix and chairmanship rules:
+            </p>
             <div class="overflow-x-auto">
               <table class="table-note">
                 <thead>
@@ -869,31 +1307,31 @@
                 <tbody class="divide-y divide-[var(--line)]">
                   <tr>
                     <td class="py-2.5 pr-4 font-bold text-amber-600 dark:text-amber-400">Estimates Committee (PYQ-0768)</td>
-                    <td class="py-2.5 px-3 text-rose-600 dark:text-rose-400 font-bold">30 members (ALL from Lok Sabha; NO Rajya Sabha)</td>
+                    <td class="py-2.5 px-3 text-rose-600 dark:text-rose-400 font-bold">30 members (ALL from Lok Sabha; ZERO from Rajya Sabha)</td>
                     <td class="py-2.5 px-3 t-mid">1950, on recommendation of Finance Minister John Mathai</td>
                     <td class="py-2.5 px-3 t-mid">Appointed by Speaker from the <strong class="t-hi">ruling party</strong></td>
-                    <td class="py-2.5 pl-3 t-lo">Examines budget estimates; suggests economies in expenditure; nicknamed "continuous economy committee".</td>
+                    <td class="py-2.5 pl-3 t-lo">Examines budget estimates; suggests savings and efficiency; nicknamed "continuous economy committee".</td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-bold text-emerald-600 dark:text-emerald-400">Public Accounts Committee (PAC)</td>
                     <td class="py-2.5 px-3 font-semibold text-emerald-600 dark:text-emerald-400">22 members (15 Lok Sabha + 7 Rajya Sabha)</td>
-                    <td class="py-2.5 px-3 t-mid">Set up in 1921 under Government of India Act 1919</td>
+                    <td class="py-2.5 px-3 t-mid">Oldest committee (set up 1921 under GoI Act 1919)</td>
                     <td class="py-2.5 px-3 text-emerald-600 dark:text-emerald-400 font-bold">Appointed by Speaker from the <strong class="t-hi">Opposition</strong> (convention since 1967)</td>
-                    <td class="py-2.5 pl-3 t-lo">Examines annual audit reports of the Comptroller &amp; Auditor General (CAG); hunts waste, corruption, and misuse.</td>
+                    <td class="py-2.5 pl-3 t-lo">Known as "post-mortem committee"; scrutinizes CAG audit reports to expose waste, fraud, and illegal expenditure.</td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-bold text-sky-600 dark:text-sky-400">Committee on Public Undertakings (CoPU)</td>
                     <td class="py-2.5 px-3 font-semibold text-sky-600 dark:text-sky-400">22 members (15 Lok Sabha + 7 Rajya Sabha)</td>
                     <td class="py-2.5 px-3 t-mid">Created 1964 on Krishna Menon Committee recommendation</td>
                     <td class="py-2.5 px-3 t-mid">Appointed by Speaker from Lok Sabha members only</td>
-                    <td class="py-2.5 pl-3 t-lo">Examines reports and accounts of Public Sector Undertakings (PSUs) and relevant CAG audit findings.</td>
+                    <td class="py-2.5 pl-3 t-lo">Examines reports and accounts of Public Sector Undertakings (PSUs like LIC, ONGC, BHEL) and CAG findings.</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p class="text-xs t-lo mt-3">
-              Common Rule: Members of all three financial committees are elected annually by proportional representation using single transferable vote (STV). <strong class="t-hi">A Minister cannot be elected to any of these committees.</strong>
-            </p>
+            <div class="mt-3 p-2.5 rounded bg-rose-500/10 border border-rose-500/25 text-xs text-rose-700 dark:text-rose-300 font-semibold">
+              CRITICAL UNIVERSAL RULE: A Minister CANNOT be elected to any of these financial committees! If an MP becomes a Minister after joining a committee, they must immediately vacate their committee seat.
+            </div>
           </div>
         </section>
 
@@ -1219,16 +1657,46 @@
             @open="openNotesDrawer"
           />
 
-          <p class="text-sm leading-relaxed t-mid mb-6">
-            The Indian Constitution establishes a dual polity with structural parallels between the Union and State levels, yet with vital asymmetric distinctions in executive discretion, pardoning powers, ordinance scope, and legislative council checks.
-          </p>
+          <!-- Section Plain-English Introduction -->
+          <div class="mb-6 rounded-xl border border-amber-500/25 bg-amber-500/5 p-4 sm:p-5">
+            <h3 class="text-sm font-bold t-hi mb-1.5 flex items-center gap-2">
+              <UIcon name="i-heroicons-light-bulb" class="h-4 w-4 text-amber-500" />
+              The Big Picture: Why Union vs State Comparisons Dominate Exams
+            </h3>
+            <p class="text-xs t-mid leading-relaxed mb-3">
+              On the surface, the Central Government and State Governments look almost identical: the President is like a Governor, the Prime Minister is like a Chief Minister, and Parliament is like a State Legislature. But the examiners deliberately target the <strong class="t-hi">critical legal differences</strong> where the rules do NOT match:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-amber-600 dark:text-amber-400">Pardon Power:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Only the <strong class="t-hi">President</strong> can pardon a death sentence or military court-martial. A Governor cannot!
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-emerald-600 dark:text-emerald-400">Constitutional Discretion:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  The <strong class="t-hi">Governor</strong> has explicit constitutional discretion (Art. 163). The President has NO explicit constitutional discretion!
+                </p>
+              </div>
+              <div class="p-3 rounded-lg bg-elev border b-line">
+                <span class="font-bold text-rose-600 dark:text-rose-400">Joint Sittings:</span>
+                <p class="t-lo mt-1 leading-relaxed">
+                  Parliament can hold a <strong class="t-hi">Joint Sitting</strong> (Art. 108) to break deadlocks. States have <strong class="t-hi">ZERO provision for a Joint Sitting</strong>!
+                </p>
+              </div>
+            </div>
+          </div>
 
           <!-- Table 1: President vs Governor Comparison Matrix -->
           <div class="panel p-5 bg-elev border b-line mb-8">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-scale" class="h-4 w-4 text-amber-500" />
-              President of India vs Governor of a State : Forensic Comparison Matrix
+              President of India vs Governor of a State: Head-to-Head Comparison
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-4">
+              Both are constitutional heads of their respective territories, but their appointment, removal, and emergency powers differ completely:
+            </p>
             <div class="overflow-x-auto">
               <table class="table-note">
                 <thead>
@@ -1241,18 +1709,18 @@
                 <tbody class="divide-y divide-[var(--line)]">
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Constitutional Office</td>
-                    <td class="py-2.5 px-3 t-mid">Article 52 : Head of State &amp; First Citizen</td>
-                    <td class="py-2.5 pl-3 t-mid">Article 153 : Constitutional Head of State</td>
+                    <td class="py-2.5 px-3 t-mid">Article 52 : Head of State &amp; First Citizen of India</td>
+                    <td class="py-2.5 pl-3 t-mid">Article 153 : Constitutional Head of the State</td>
                   </tr>
                   <tr>
-                    <td class="py-2.5 pr-4 font-semibold t-hi">Selection Mode</td>
-                    <td class="py-2.5 px-3 t-mid">Elected by Electoral College (Art. 54) via PR-STV</td>
-                    <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-semibold">Appointed by President under hand and seal (Art. 155)</td>
+                    <td class="py-2.5 pr-4 font-semibold t-hi">How are they appointed?</td>
+                    <td class="py-2.5 px-3 t-mid">Elected by an Electoral College (Art. 54) of elected MPs and MLAs via Single Transferable Vote.</td>
+                    <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-semibold">Appointed directly by the President on Central Cabinet advice (Art. 155); no election held.</td>
                   </tr>
                   <tr>
-                    <td class="py-2.5 pr-4 font-semibold t-hi">Tenure &amp; Removal</td>
-                    <td class="py-2.5 px-3 t-mid">5 years; removed ONLY by parliamentary impeachment for "Violation of Constitution" (Art. 61)</td>
-                    <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-semibold">Holds office during <strong class="t-hi">pleasure of the President</strong> (Art. 156(1)); no impeachment required</td>
+                    <td class="py-2.5 pr-4 font-semibold t-hi">Tenure &amp; How to Remove</td>
+                    <td class="py-2.5 px-3 t-mid">5-year term. Removed ONLY through formal parliamentary impeachment for "Violation of Constitution" (Art. 61) by 2/3rd total membership.</td>
+                    <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-semibold">Holds office during the <strong class="t-hi">pleasure of the President</strong> (Art. 156(1)). Can be dismissed at any time without giving reasons; no impeachment needed!</td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Pardoning Powers</td>
@@ -1261,51 +1729,51 @@
                       <ul class="list-disc pl-4 mt-1 font-normal text-xs text-amber-700 dark:text-amber-300">
                         <li>All Court Martial (military court) sentences</li>
                         <li>All offenses against Union laws</li>
-                        <li><strong class="t-hi">Can pardon ALL death sentences</strong></li>
+                        <li><strong class="t-hi">Can completely PARDON death sentences</strong></li>
                       </ul>
                     </td>
                     <td class="py-2.5 pl-3 font-semibold text-emerald-600 dark:text-emerald-400">
                       <strong class="t-hi">Article 161:</strong> Can suspend, remit, or commute offenses against State laws:
                       <ul class="list-disc pl-4 mt-1 font-normal text-xs text-emerald-700 dark:text-emerald-300">
-                        <li>NO power over Court Martial sentences</li>
-                        <li><strong class="t-hi">CANNOT PARDON A DEATH SENTENCE</strong> (can only suspend, remit or commute)</li>
+                        <li>Zero power over Court Martial (military) sentences</li>
+                        <li><strong class="t-hi">CANNOT PARDON A DEATH SENTENCE</strong> (can only suspend, remit, or commute to life)</li>
                       </ul>
                     </td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Ordinance-Making Power</td>
                     <td class="py-2.5 px-3 t-mid">
-                      <strong class="t-hi">Article 123:</strong> Promulgated during recess of Parliament. Valid for max 6 months + 6 weeks.
+                      <strong class="t-hi">Article 123:</strong> Issued when Parliament is in recess. Valid for max 6 months + 6 weeks.
                     </td>
                     <td class="py-2.5 pl-3 t-mid">
-                      <strong class="t-hi">Article 213:</strong> Promulgated during recess of State Legislature. Cannot promulgate without presidential instruction on certain subjects.
+                      <strong class="t-hi">Article 213:</strong> Issued when State Legislature is in recess. Cannot issue ordinances on certain subjects without President's prior instruction.
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-2.5 pr-4 font-semibold t-hi">Constitutional Discretion</td>
+                    <td class="py-2.5 pr-4 font-semibold t-hi">Discretionary Power</td>
                     <td class="py-2.5 px-3 text-amber-600 dark:text-amber-400 font-semibold">
-                      <strong class="t-hi">NO explicit constitutional discretion.</strong> Bound strictly by Article 74(1) aid and advice (Shamsher Singh 1974).
+                      <strong class="t-hi">NO explicit constitutional discretion.</strong> Bound strictly by Article 74(1) Cabinet advice (confirmed in <em class="t-hi">Shamsher Singh 1974</em>).
                     </td>
                     <td class="py-2.5 pl-3 text-emerald-600 dark:text-emerald-400 font-semibold">
-                      <strong class="t-hi">EXPLICIT constitutional discretion under Article 163(1) &amp; 163(2).</strong> Governor's decision on what is discretionary is final.
+                      <strong class="t-hi">EXPLICIT constitutional discretion under Article 163(1) &amp; 163(2).</strong> If any question arises whether a matter is in Governor's discretion, Governor's decision is final!
                     </td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Veto Powers over Bills</td>
                     <td class="py-2.5 px-3 t-mid">
-                      <strong class="t-hi">Article 111:</strong> Assent, Withhold assent, or Return ordinary bill once for reconsideration.
+                      <strong class="t-hi">Article 111:</strong> Can give Assent, Withhold assent, or Return ordinary bill once for reconsideration.
                     </td>
                     <td class="py-2.5 pl-3 t-mid">
-                      <strong class="t-hi">Article 200:</strong> Assent, Withhold assent, Return bill once, or <strong class="t-hi">Reserve bill for the consideration of the President</strong>.
+                      <strong class="t-hi">Article 200:</strong> Can give Assent, Withhold assent, Return bill once, OR <strong class="t-hi">Reserve the bill for the consideration of the President</strong>.
                     </td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Bill Passed Again upon Reconsideration</td>
                     <td class="py-2.5 px-3 text-emerald-600 dark:text-emerald-400 font-bold">
-                      President <strong class="t-hi">MUST give assent</strong> under Article 111 (Suspensive veto overridden).
+                      The President <strong class="t-hi">MUST give assent</strong> under Article 111 (Suspensive veto is broken).
                     </td>
                     <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-bold">
-                      Under <strong class="t-hi">Article 201</strong>, if State Legislature passes reserved bill again, President is <strong class="t-hi">STILL NOT BOUND</strong> to give assent!
+                      Under <strong class="t-hi">Article 201</strong>, if a State Assembly re-passes a bill that was reserved for the President, the President is <strong class="t-hi">STILL NOT BOUND</strong> to sign it!
                     </td>
                   </tr>
                 </tbody>
@@ -1315,10 +1783,13 @@
 
           <!-- Table 2: Parliament vs State Legislature Comparison Matrix -->
           <div class="panel p-5 bg-elev border b-line">
-            <h3 class="text-sm font-bold t-hi mb-3 flex items-center gap-2">
+            <h3 class="text-sm font-bold t-hi mb-2 flex items-center gap-2">
               <UIcon name="i-heroicons-building-library" class="h-4 w-4 text-emerald-500" />
-              Parliament vs State Legislature : Institutional Comparison Matrix
+              Parliament vs State Legislature: Structural Comparison
             </h3>
+            <p class="text-xs t-mid leading-relaxed mb-4">
+              Understanding how power is distributed between upper and lower chambers at the Center versus in the States:
+            </p>
             <div class="overflow-x-auto">
               <table class="table-note">
                 <thead>
@@ -1331,39 +1802,39 @@
                 <tbody class="divide-y divide-[var(--line)]">
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Chamber Structure</td>
-                    <td class="py-2.5 px-3 t-mid"><strong class="t-hi">Mandatory Bicameral</strong> (Art. 79: President + Rajya Sabha + Lok Sabha)</td>
-                    <td class="py-2.5 pl-3 t-mid"><strong class="t-hi">Unicameral or Bicameral</strong> (Art. 168: Governor + SLA [and SLC in only 6 States: UP, Bihar, Maharashtra, Karnataka, AP, Telangana])</td>
+                    <td class="py-2.5 px-3 t-mid"><strong class="t-hi">Always Bicameral (Two Houses)</strong>: President + Rajya Sabha + Lok Sabha (Art. 79).</td>
+                    <td class="py-2.5 pl-3 t-mid"><strong class="t-hi">Can be Unicameral or Bicameral</strong> (Art. 168): Governor + Assembly (and Council in only 6 states: UP, Bihar, Maharashtra, Karnataka, AP, Telangana).</td>
                   </tr>
                   <tr>
-                    <td class="py-2.5 pr-4 font-semibold t-hi">Creation / Abolition of Upper House</td>
-                    <td class="py-2.5 px-3 text-rose-600 dark:text-rose-400 font-semibold">NOT possible (Rajya Sabha is an indestructible federal pillar)</td>
+                    <td class="py-2.5 pr-4 font-semibold t-hi">Can the Upper House be Abolished?</td>
+                    <td class="py-2.5 px-3 text-rose-600 dark:text-rose-400 font-semibold">IMPOSSIBLE. Rajya Sabha is a permanent federal pillar and cannot be abolished.</td>
                     <td class="py-2.5 pl-3 text-emerald-600 dark:text-emerald-400 font-semibold">
-                      <strong class="t-hi">Article 169:</strong> State Assembly passes resolution by special majority; Parliament enacts by ordinary law (simple majority).
+                      <strong class="t-hi">EASILY ABOLISHED (Article 169):</strong> State Assembly passes a resolution by special majority, and Parliament passes an ordinary law with simple majority.
                     </td>
                   </tr>
                   <tr>
-                    <td class="py-2.5 pr-4 font-semibold t-hi">Upper House Power on Ordinary Bills</td>
+                    <td class="py-2.5 pr-4 font-semibold t-hi">Power of Upper House on Ordinary Bills</td>
                     <td class="py-2.5 px-3 font-semibold text-amber-600 dark:text-amber-400">
-                      Rajya Sabha has <strong class="t-hi">equal power</strong> to amend or reject; deadlock leads to Joint Sitting (Art. 108).
+                      Rajya Sabha has <strong class="t-hi">equal power</strong> to amend or reject; deadlock can trigger a Joint Sitting (Art. 108).
                     </td>
                     <td class="py-2.5 pl-3 font-semibold text-rose-600 dark:text-rose-400">
-                      Legislative Council is a <strong class="t-hi">dilatory chamber only</strong>; can delay for maximum <strong class="t-hi">4 months</strong> (3 months 1st time + 1 month 2nd time); Assembly overrides!
+                      Legislative Council is only a <strong class="t-hi">dilatory (delaying) chamber</strong>. Can delay a bill for max <strong class="t-hi">4 months</strong> (3 months 1st time + 1 month 2nd time), after which the Assembly overrides it!
                     </td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Joint Sitting Mechanism</td>
-                    <td class="py-2.5 px-3 text-emerald-600 dark:text-emerald-400 font-bold">YES : Article 108 (President summons, Speaker presides)</td>
-                    <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-bold">NO : There is NO provision for a joint sitting in State Legislatures!</td>
+                    <td class="py-2.5 px-3 text-emerald-600 dark:text-emerald-400 font-bold">YES : Article 108 (Summoned by President, presided by LS Speaker).</td>
+                    <td class="py-2.5 pl-3 text-rose-600 dark:text-rose-400 font-bold">NO : There is ZERO provision for a joint sitting in any State Legislature!</td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Money Bills (Upper House Window)</td>
-                    <td class="py-2.5 px-3 t-mid">Rajya Sabha limited to <strong class="t-hi">14 days</strong>; recommendations only (Art. 109)</td>
-                    <td class="py-2.5 pl-3 t-mid">Legislative Council limited to <strong class="t-hi">14 days</strong>; recommendations only (Art. 198)</td>
+                    <td class="py-2.5 px-3 t-mid">Rajya Sabha limited to <strong class="t-hi">14 days</strong>; recommendations only (Art. 109).</td>
+                    <td class="py-2.5 pl-3 t-mid">Legislative Council limited to <strong class="t-hi">14 days</strong>; recommendations only (Art. 198).</td>
                   </tr>
                   <tr>
                     <td class="py-2.5 pr-4 font-semibold t-hi">Minimum Age for Membership</td>
-                    <td class="py-2.5 px-3 t-mid">Lok Sabha: 25 years · Rajya Sabha: 30 years (Art. 84)</td>
-                    <td class="py-2.5 pl-3 t-mid">Legislative Assembly: 25 years · Legislative Council: 30 years (Art. 173)</td>
+                    <td class="py-2.5 px-3 t-mid">Lok Sabha: 25 years · Rajya Sabha: 30 years (Art. 84).</td>
+                    <td class="py-2.5 pl-3 t-mid">Legislative Assembly: 25 years · Legislative Council: 30 years (Art. 173).</td>
                   </tr>
                 </tbody>
               </table>
