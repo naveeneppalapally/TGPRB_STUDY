@@ -610,6 +610,36 @@
     "enriched_at": "2026-08-11T12:56:27.458463Z"
   },
   {
+    "uid": "PYQ-0303",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies: Supreme Court & High Courts; Election Commission, UPSC, CAG & Finance Commission; NITI Aayog, NHRC, Lokpal & Tribunals; Important Constitutional Amendments",
+    "sub_topic": "Constitutional and Statutory Positions & First Officeholders",
+    "question_type": "match_the_following",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "K.C. Neogy was appointed as the chairman of the First Finance Commission in 1951. Sukumar Sen served as India's first Chief Election Commissioner, H.J. Kania was the first Chief Justice of independent India, and Jawaharlal Nehru, as Prime Minister, served as the ex-officio first Chairman of the Planning Commission.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 104,
+        "source_page": 34
+      }
+    ],
+    "has_image": false,
+    "question_text": "Match the following: List-I: (a) First Finance Commission Chairman, (b) First Chief Election Commissioner, (c) First Chief Justice of India, (d) First Chairman of Planning Commission of India. List-II: (i) H.J. Kania, (ii) Jawaharlal Nehru, (iii) K.C. Neogy, (iv) Sukumar Sen.",
+    "options": [
+      "(a) – (iv), (b) – (ii), (c) – (iii), (d) – (i)",
+      "(a) – (iii), (b) – (iv), (c) – (i), (d) – (ii)",
+      "(a) – (ii), (b) – (iv), (c) – (iii), (d) – (i)",
+      "(a) – (i), (b) – (ii), (c) – (iv), (d) – (iii)"
+    ],
+    "enriched_at": "2026-08-11T12:56:39.910255Z"
+  },
+  {
     "uid": "PYQ-0309",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -648,6 +678,46 @@
       "(a), (b) and (c) are wrong"
     ],
     "enriched_at": "2026-08-11T12:57:25.668963Z"
+  },
+  {
+    "uid": "PYQ-0312",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "The 5-judge Constitution Bench that struck down the 99th Constitutional Amendment Act and the NJAC Act in October 2015 was headed by Justice J.S. Khehar. By a 4:1 majority, the Supreme Court declared the NJAC unconstitutional and restored the Collegium system to safeguard the independence of the judiciary.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 115,
+        "source_page": 38
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 115,
+        "source_page": 36
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 115,
+        "source_page": 36
+      }
+    ],
+    "has_image": false,
+    "question_text": "Who among the following headed the Constitutional Bench that invalidated NJAC Act ?",
+    "options": [
+      "(1) Justice Madan B. Lokur",
+      "(2) Justice Kurien Joseph",
+      "(3) Justice A.K. Goel",
+      "(4) Justice J.S. Kehar"
+    ],
+    "enriched_at": "2026-08-11T12:57:51.901591Z"
   },
   {
     "uid": "PYQ-0313",
@@ -728,6 +798,121 @@
       "(4) (A) only"
     ],
     "enriched_at": "2026-08-11T12:58:09.492333Z"
+  },
+  {
+    "uid": "PYQ-0318",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Attorney General of India",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Under Article 76 of the Indian Constitution, the Attorney General is appointed by the President (not the CJI) and holds office during the pleasure of the President, meaning there is no fixed tenure of six years. Thus, statements (b) and (c) are incorrect, making (a) only the correct choice.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 121,
+        "source_page": 40
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 121,
+        "source_page": 38
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 121,
+        "source_page": 38
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements\n(a) The present Attorney General is Mukul Rohatgi\n(b) The Attorney General is appointed by Chief Justice of India\n(c) The tenure of office of Attorney General is six years\nWhich of the statement given above is/are correct ?",
+    "options": [
+      "(1) (a) and (c)",
+      "(2) (b) and (c)",
+      "(3) (b) and (a)",
+      "(4) (a) only"
+    ],
+    "enriched_at": "2026-08-11T12:58:37.517570Z"
+  },
+  {
+    "uid": "PYQ-0320",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Finance Commission (Article 280)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Statements (A) and (B) are correct: Dr. Y.V. Reddy chaired the 14th Finance Commission, which recommended a historic hike in state share of central taxes from 32% to 42%. Statement (C) is incorrect because the Finance Commission is constituted by the President of India under Article 280 of the Constitution, not by the Union Finance Minister.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 123,
+        "source_page": 41
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 123,
+        "source_page": 39
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 123,
+        "source_page": 39
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which among the following is/are correct statements ?\n(A) The 14th Finance Commission was headed by Dr. Y.V. Reddy\n(B) The 14th Finance Commission recommended devolution of 42% of funds to State Governments\n(C) Finance Commission is appointed by Union Finance Minister",
+    "options": [
+      "(A) and (C)",
+      "(A) and (B)",
+      "(B) and (C)",
+      "(A) only"
+    ],
+    "enriched_at": "2026-08-11T12:58:54.329649Z"
+  },
+  {
+    "uid": "PYQ-0321",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "assertion_reason",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 0.95,
+    "explanation": "Assertion (A) is true as PIL allows public-spirited citizens to file petitions for enforcing public welfare and human rights. Reason (R) is also true because the Supreme Court and High Courts hold discretionary power to entertain or reject PILs to curb frivolous litigation. However, this discretionary power is a procedural safeguard and not the reason why PIL protects the cause of the people.",
+    "recommended_memory_technique": "representation_framework",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 124,
+        "source_page": 41
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 124,
+        "source_page": 39
+      }
+    ],
+    "has_image": false,
+    "question_text": "Assertion (A) : Public Interest Litigation protects peoples' cause.\nReason (R) : Higher Courts have the discretion to admit Public Interest Litigations.",
+    "options": [
+      "Both (A) and (R) are individually true and (R) is the correct explanation of (A)",
+      "Both (A) and (R) are individually true but (R) is not the correct explanation of (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "enriched_at": "2026-08-11T12:59:00.773454Z"
   },
   {
     "uid": "PYQ-0326",
@@ -954,6 +1139,36 @@
     "explanation_reviewed_at": "2026-10-15"
   },
   {
+    "uid": "PYQ-0516",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Inter-State Council & Constitutional/Statutory Bodies",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "The Inter-State Council was set up in May 1990 under Article 263 of the Constitution on the recommendation of the Sarkaria Commission (1983-88), not the Justice J.S. Verma Committee. It is chaired by the Prime Minister and includes Chief Ministers of all States and UTs as well as Administrators of UTs without assemblies.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 95,
+        "source_page": 28
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which one of the following is not correct statement with regard to Inter-State Council ?",
+    "options": [
+      "It's Chairman is Prime Minister.",
+      "All Chief Ministers are it's members.",
+      "It was constituted on the recommendation of Justice J.S. Verma Committee report.",
+      "Administrators of Union Territories not having Legislative Assembly are its members."
+    ],
+    "enriched_at": "2026-08-11T13:26:10.520280Z"
+  },
+  {
     "uid": "PYQ-0519",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -1014,6 +1229,36 @@
     "enriched_at": "2026-08-11T13:26:41.778580Z"
   },
   {
+    "uid": "PYQ-0523",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Under Article 124(1) of the Indian Constitution, the power to prescribe or increase the number of judges in the Supreme Court rests with Parliament through legislation. In contrast, the strength of a High Court is determined by the President.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 102,
+        "source_page": 30
+      }
+    ],
+    "has_image": false,
+    "question_text": "Who has the power to prescribe the number of judges in Supreme Court?",
+    "options": [
+      "President in consultation with Prime Minister",
+      "President in consultation with Chief Justice of India",
+      "Rajya Sabha by passing a law",
+      "Parliament by passing a law"
+    ],
+    "enriched_at": "2026-08-11T13:27:05.734543Z"
+  },
+  {
     "uid": "PYQ-0533",
     "subject_id": "GEO",
     "subject_name": "Indian & World Geography",
@@ -1072,6 +1317,36 @@
       "b-c-a-d"
     ],
     "enriched_at": "2026-08-11T13:28:40.470418Z"
+  },
+  {
+    "uid": "PYQ-0549",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "A separate High Court for Andhra Pradesh (principal seat at Amaravati) was constituted with effect from January 1, 2019. With this addition, the total number of High Courts in India became 25, not 27.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 128,
+        "source_page": 41
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements about High Courts in India :\na. A separate High Court for the state of Andhra Pradesh was constituted by the President of India with effect from January 1, 2019.\nb. With the creation of this new High Court, India has 27 High Courts as on March 1, 2019.\nChoose the correct answer:",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "enriched_at": "2026-08-11T13:30:29.535560Z"
   },
   {
     "uid": "PYQ-0589",
@@ -1222,6 +1497,76 @@
       "Kodanda Ram"
     ],
     "enriched_at": "2026-08-11T13:39:38.459836Z"
+  },
+  {
+    "uid": "PYQ-0627",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Lokpal & Search Committee",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "In September 2018, the Government of India constituted an eight-member search committee headed by former Supreme Court judge Justice Ranjana Prakash Desai to recommend a panel of names for the chairperson and members of Lokpal. Under the Lokpal and Lokayuktas Act, 2013, the search committee assists the Selection Committee chaired by the Prime Minister.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 6,
+        "source_page": 6
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 6,
+        "source_page": 4
+      }
+    ],
+    "has_image": false,
+    "question_text": "Lokpal search committee, which was constituted by the government of India in September, 2018 is headed by:",
+    "options": [
+      "Sakha Ram Singh Yadav",
+      "A. Surya Prakash",
+      "Arundhati Bhattacharya",
+      "Ranjana Prakash Desai"
+    ],
+    "enriched_at": "2026-08-11T13:41:54.372457Z"
+  },
+  {
+    "uid": "PYQ-0649",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Election Commission, UPSC, CAG & Finance Commission",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Statement 'a' is incorrect because the Election Commissioners are appointed by the President of India, not the Prime Minister. Statement 'b' is correct because Article 324(2) of the Indian Constitution specifies that the appointment of the Chief Election Commissioner and other Election Commissioners shall be made by the President.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 28,
+        "source_page": 16
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 28,
+        "source_page": 14
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements about the Election Commission:\na. The Prime Minister of India appointed Sunil Chandra as the Election Commissioner in February 2019.\nb. The appointment of Election Commissioner is made under the clause 2 of Article 324 of the Indian Constitution.\nChoose the correct answer:",
+    "options": [
+      "Both a and b are correct",
+      "Both a and b are not correct",
+      "Only a is correct",
+      "Only b is correct"
+    ],
+    "enriched_at": "2026-08-11T13:44:58.834393Z"
   },
   {
     "uid": "PYQ-0690",
@@ -1573,6 +1918,76 @@
     "enriched_at": "2026-08-11T13:58:30.313611Z"
   },
   {
+    "uid": "PYQ-0760",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Important Constitutional Amendments",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "The 24th Constitutional Amendment Act, 1971 was passed to counteract the Golaknath judgement (1967). It explicitly amended Articles 13 and 368 to clarify that Parliament has the power to amend any part of the Constitution, including Fundamental Rights, using the procedure in Article 368.",
+    "recommended_memory_technique": "timeline_chunking",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 140,
+        "source_page": 46
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 140,
+        "source_page": 44
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which Amendment of Indian constitution implicitly says that fundamental rights are amendable under the procedure laid down in Article 368?",
+    "options": [
+      "29th",
+      "42nd",
+      "25th",
+      "24th"
+    ],
+    "enriched_at": "2026-08-11T13:58:39.350007Z"
+  },
+  {
+    "uid": "PYQ-0763",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Important Constitutional Amendments",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "The 102nd Constitutional Amendment Act of 2018 granted constitutional status to the National Commission for Backward Classes (NCBC). It inserted Article 338B into the Constitution, defining the structure, duties, and powers of the commission.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 143,
+        "source_page": 47
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 143,
+        "source_page": 45
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which constitutional amendment conferred constitutional status on the National Commission for Backward classes ?",
+    "options": [
+      "102nd",
+      "103rd",
+      "100th",
+      "101th"
+    ],
+    "enriched_at": "2026-08-11T13:58:59.457804Z"
+  },
+  {
     "uid": "PYQ-0766",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -1706,6 +2121,36 @@
       "In 1864 Hunter Committee was appointed to review the growth of Higher Education in India."
     ],
     "enriched_at": "2026-08-11T14:21:13.180858Z"
+  },
+  {
+    "uid": "PYQ-0936",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Under Article 124(2) of the Indian Constitution, the judges of the Supreme Court are appointed by the President of India by warrant under his hand and seal. This appointment is made based on the recommendations of the Supreme Court Collegium system.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2022_Prelims.json",
+        "q_no": 117,
+        "source_page": 22
+      }
+    ],
+    "has_image": false,
+    "question_text": "Who appoints the Supreme Court judges?",
+    "options": [
+      "Prime Minister",
+      "Attorney General",
+      "Vice President",
+      "President"
+    ],
+    "enriched_at": "2026-08-11T14:22:39.884451Z"
   },
   {
     "uid": "PYQ-0943",
@@ -1976,6 +2421,36 @@
       "None of the above"
     ],
     "enriched_at": "2026-08-11T14:49:21.831629Z"
+  },
+  {
+    "uid": "PYQ-1113",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Article 233 of the Indian Constitution deals with the appointment, posting, and promotion of District Judges in a State, which is done by the Governor in consultation with the High Court exercising jurisdiction over that State.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2023_Mains_Official.json",
+        "q_no": 97,
+        "source_page": 25
+      }
+    ],
+    "has_image": false,
+    "question_text": "Under which article in constitution of India, District Judges are appointed?",
+    "options": [
+      "243",
+      "233",
+      "320",
+      "None of the above"
+    ],
+    "enriched_at": "2026-08-11T14:50:03.429560Z"
   },
   {
     "uid": "PYQ-1149",
@@ -2667,6 +3142,46 @@
     "enriched_at": "2026-08-11T16:31:00.765998Z"
   },
   {
+    "uid": "PYQ-1562",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Legal Services Authorities & Free Legal Aid",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 0.95,
+    "explanation": "Statement (a) is correct as India's first mobile court was inaugurated at Punhana in Mewat district, Haryana in 2007. Statement (d) is correct because the Legal Services Authorities Act was passed in 1987. Statement (c) is incorrect because free legal aid is provided under Article 39A (Directive Principles), whereas Article 40 deals with the organisation of village panchayats.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "SI_2016_Final_GS_Paper.json",
+        "q_no": 119,
+        "source_page": 39
+      },
+      {
+        "source_file": "SI_2016_Mains_Paper2.json",
+        "q_no": 119,
+        "source_page": 41
+      },
+      {
+        "source_file": "SI_2016_Mains_Paper4.json",
+        "q_no": 119,
+        "source_page": 42
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which of the following statements are correct?\na) The first mobile court was started in Haryana\nb) The executive chairman of National Legal Services Authority is Justice Anil R.Dave\nc) Article 40 provides for free legal aid\nd) Legal Services Authorities Act was enacted in 1987",
+    "options": [
+      "a, b & c",
+      "a, b & d",
+      "b, c & d",
+      "a & d"
+    ],
+    "enriched_at": "2026-08-11T16:31:18.286215Z"
+  },
+  {
     "uid": "PYQ-1672",
     "subject_id": "GEO",
     "subject_name": "Indian & World Geography",
@@ -2735,6 +3250,46 @@
       "(4) (iii) (iv) (ii) (i)"
     ],
     "enriched_at": "2026-08-11T17:02:11.069152Z"
+  },
+  {
+    "uid": "PYQ-1796",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "NITI Aayog, NHRC, Lokpal & Tribunals",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "NITI Aayog stands for National Institution (or Institute) for Transforming India. Formed on January 1, 2015, via a Cabinet resolution, it replaced the Planning Commission to serve as the premier policy think tank of the Indian Government.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "SI_2016_Prelims_Paper.json",
+        "q_no": 127,
+        "source_page": 34
+      },
+      {
+        "source_file": "SI_2016_Prelims_Paper1.json",
+        "q_no": 127,
+        "source_page": 36
+      },
+      {
+        "source_file": "SI_2016_Prelims_Paper2.json",
+        "q_no": 127,
+        "source_page": 36
+      }
+    ],
+    "has_image": false,
+    "question_text": "NITI Ayog stands for",
+    "options": [
+      "National Institute for Technical Investigation",
+      "National Income Transfer to Individuals",
+      "National Institute for Transforming India",
+      "National Intelligence Training Institute"
+    ],
+    "enriched_at": "2026-08-11T17:02:55.549773Z"
   },
   {
     "uid": "PYQ-1813",
@@ -2995,6 +3550,36 @@
       "It is presided over by Speaker."
     ],
     "enriched_at": "2026-08-11T18:23:28.252784Z"
+  },
+  {
+    "uid": "PYQ-2236",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "The Supreme Court of India enjoys Original Jurisdiction (Article 131) for federal disputes, Advisory Jurisdiction (Article 143) to advise the President, and Appellate Jurisdiction (Articles 132-136) over civil, criminal, and constitutional appeals.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Mains_Paper2.json",
+        "q_no": 134,
+        "source_page": 45
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which of the following jurisdictions are enjoyed by the Supreme Court of India?\n(A) Original Jurisdictions (B) Advisory Jurisdictions (C) Appellate Jurisdictions\nChoose the correct answer:",
+    "options": [
+      "(1) (A) and (B) only",
+      "(2) (B) and (C) only",
+      "(3) (A) and (C) only",
+      "(4) (A), (B) and (C)"
+    ],
+    "enriched_at": "2026-08-11T18:28:00.785662Z"
   },
   {
     "uid": "PYQ-2238",
@@ -3279,6 +3864,36 @@
     "enriched_at": "2026-08-12T08:17:05.340626Z"
   },
   {
+    "uid": "PYQ-2519",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Election Commission, UPSC, CAG & Finance Commission",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Under Article 280(3) of the Indian Constitution, the Finance Commission is tasked with recommending tax distribution between the Union and States, establishing principles for Grants-in-Aid to States, and addressing any other matter referred to it by the President in the interest of sound finance.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Prelims_Paper1.json",
+        "q_no": 169,
+        "source_page": 45
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which of the following responsibilities are under the preview of the Finance Commission? (a) Sharing of net proceeds of taxes between the centre and states. (b) Recommending the principles for governing the grant-in-aid to the states by the centre. (c) Recommendation on the matters referred to it by the President for the interest of sound finance. Choose the correct answer:",
+    "options": [
+      "(a) only",
+      "(b) only",
+      "(b) and (c) only",
+      "(a), (b) and (c)"
+    ],
+    "enriched_at": "2026-08-12T08:17:13.124423Z"
+  },
+  {
     "uid": "PYQ-2526",
     "subject_id": "TEL",
     "subject_name": "Telangana State - History, Movement, Geography & Schemes",
@@ -3429,6 +4044,36 @@
     "enriched_at": "2026-08-12T08:20:30.994721Z"
   },
   {
+    "uid": "PYQ-2653",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Supreme Court & High Courts",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Section 124A of the Indian Penal Code (IPC) defines sedition as an offense committed when any person brings or attempts to bring hatred, contempt, or disaffection towards the government established by law. In May 2022, the Supreme Court of India suspended all pending trials and proceedings under Section 124A IPC until the law is re-examined.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "SI_2022_Prelims.json",
+        "q_no": 108,
+        "source_page": 29
+      }
+    ],
+    "has_image": false,
+    "question_text": "The Supreme Court of India suspended ______ covering sedition",
+    "options": [
+      "Section 120(B) of IPC",
+      "Section 124(A) of IPC",
+      "Section 128 of IPC",
+      "Section 132 of IPC"
+    ],
+    "enriched_at": "2026-08-12T08:43:33.265587Z"
+  },
+  {
     "uid": "PYQ-2699",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -3457,6 +4102,36 @@
       "All the above"
     ],
     "enriched_at": "2026-08-12T08:49:21.315351Z"
+  },
+  {
+    "uid": "PYQ-2707",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "NITI Aayog, NHRC, Lokpal & Tribunals; Important Constitutional Amendments",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "The National Human Rights Commission (NHRC) is a statutory (non-constitutional) body established under the Protection of Human Rights Act, 1993. On the other hand, the Election Commission (Article 324), National Commission for SCs (Article 338), and National Commission for STs (Article 338A) are constitutional bodies established directly by the Constitution of India.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "SI_2022_Prelims.json",
+        "q_no": 163,
+        "source_page": 41
+      }
+    ],
+    "has_image": false,
+    "question_text": "Identify the Non-Constitutional Body.",
+    "options": [
+      "National Human Rights Commission",
+      "Election Commission of India",
+      "National Commission for SCs",
+      "National Commission for STs"
+    ],
+    "enriched_at": "2026-08-12T08:50:08.678987Z"
   },
   {
     "uid": "PYQ-2712",
@@ -4060,6 +4735,66 @@
       "Satlej"
     ],
     "enriched_at": "2026-08-12T09:45:16.393105Z"
+  },
+  {
+    "uid": "PYQ-3049",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Election Commission, UPSC, CAG & Finance Commission; NITI Aayog, NHRC, Lokpal & Tribunals; Important Constitutional Amendments",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "The Special Officer for Linguistic Minorities is a Constitutional Body provided under Article 350B of the Indian Constitution, inserted by the 7th Constitutional Amendment Act of 1956. In contrast, the Central Council of Indian Medicine and Central Council of Homoeopathy are statutory bodies created by Acts of Parliament.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "SI_2023_Mains_General_Studies.json",
+        "q_no": 120,
+        "source_page": 37
+      }
+    ],
+    "has_image": false,
+    "question_text": "Identify the Indian Constitutional Body among the following.",
+    "options": [
+      "Central Council of Indian Medicine",
+      "Special Officer for Linguistic Minorities",
+      "Central Council of Homeotherapy",
+      "Transport Development Council"
+    ],
+    "enriched_at": "2026-08-12T09:45:54.240934Z"
+  },
+  {
+    "uid": "PYQ-3062",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-JUDICIARY-BODIES",
+    "topic_name": "Judiciary & Constitutional/Statutory Bodies",
+    "sub_topic": "Important Constitutional Amendments",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "The Anti-Defection Law was inserted into the Indian Constitution as the 10th Schedule (Tenth Schedule) through the 52nd Constitutional Amendment Act of 1985. It lays down the process and criteria for disqualifying elected legislators on grounds of defecting from one political party to another.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "SI_2023_Mains_General_Studies.json",
+        "q_no": 133,
+        "source_page": 40
+      }
+    ],
+    "has_image": false,
+    "question_text": "The anti-defection law is part of which schedule of Indian Constitution ?",
+    "options": [
+      "II Schedule",
+      "VI Schedule",
+      "VII Schedule",
+      "X Schedule"
+    ],
+    "enriched_at": "2026-08-12T09:47:19.439687Z"
   },
   {
     "uid": "PYQ-3071",

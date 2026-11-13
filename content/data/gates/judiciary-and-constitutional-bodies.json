@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-POL-JUDICIARY",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-POL-JUD-1",
+      "question": "Under Article 124(2) of the Indian Constitution, who appoints the judges of the Supreme Court of India?",
+      "options": [
+        "Prime Minister of India",
+        "Chief Justice of India independently",
+        "Law Commission of India",
+        "President of India on the recommendation of the Collegium"
+      ],
+      "correct_answer": 3,
+      "explanation": "Under Article 124(2), every judge of the Supreme Court is appointed by the President by warrant under his hand and seal on the recommendation of the Collegium."
+    },
+    {
+      "id": "GATE-POL-JUD-2",
+      "question": "How does the writ jurisdiction of a High Court under Article 226 compare with that of the Supreme Court under Article 32?",
+      "options": [
+        "High Court writ jurisdiction is narrower because it only enforces Fundamental Rights",
+        "High Court writ jurisdiction is wider because it enforces both Fundamental Rights and any other legal rights",
+        "Both courts possess strictly identical writ jurisdictions",
+        "The High Court cannot issue the writ of Habeas Corpus"
+      ],
+      "correct_answer": 1,
+      "explanation": "Under Article 226, High Courts can issue writs for the enforcement of Fundamental Rights as well as for any other ordinary legal right, making its writ jurisdiction broader than that of the Supreme Court under Article 32 (which is restricted to Fundamental Rights)."
+    },
+    {
+      "id": "GATE-POL-JUD-3",
+      "question": "Which Article of the Indian Constitution establishes the independent office of the Comptroller and Auditor General (CAG) of India?",
+      "options": [
+        "Article 148",
+        "Article 280",
+        "Article 315",
+        "Article 324"
+      ],
+      "correct_answer": 0,
+      "explanation": "Article 148 provides for an independent Comptroller and Auditor General of India, who acts as the guardian of the public purse and audits the accounts of both the Union and the States."
+    },
+    {
+      "id": "GATE-POL-JUD-4",
+      "question": "The Finance Commission of India is constituted by the President under Article 280 every:",
+      "options": [
+        "3 years",
+        "5 years (or earlier as needed)",
+        "6 years",
+        "10 years"
+      ],
+      "correct_answer": 1,
+      "explanation": "Under Article 280(1), the President constitutes the Finance Commission at the expiration of every fifth year or at such earlier time as the President considers necessary."
+    },
+    {
+      "id": "GATE-POL-JUD-5",
+      "question": "Which of the following bodies in India is a statutory body established by an Act of Parliament and NOT a constitutional body?",
+      "options": [
+        "National Human Rights Commission (NHRC)",
+        "Election Commission of India (ECI)",
+        "Comptroller and Auditor General (CAG)",
+        "Union Public Service Commission (UPSC)"
+      ],
+      "correct_answer": 0,
+      "explanation": "The National Human Rights Commission (NHRC) is a statutory body established under the Protection of Human Rights Act, 1993, whereas ECI (Art. 324), CAG (Art. 148), and UPSC (Art. 315) are constitutional bodies."
+    }
+  ]
+}

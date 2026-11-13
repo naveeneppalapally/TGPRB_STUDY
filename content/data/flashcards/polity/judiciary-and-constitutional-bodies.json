@@ -1,0 +1,138 @@
+{
+  "note_id": "NOTE-POL-JUDICIARY",
+  "topic_id": "POL-JUDICIARY-BODIES",
+  "cards": [
+    {
+      "id": "POL-JUD-01",
+      "front": "Which Article establishes the Supreme Court of India and empowers Parliament to prescribe the number of judges by law?",
+      "back": "Article 124(1) establishes the Supreme Court of India and authorizes Parliament to determine its judicial strength by law.",
+      "key_fact": "Article 124(1) establishes the Supreme Court; Parliament prescribes its strength by law.",
+      "tags": [
+        "polity",
+        "supreme-court",
+        "article-124"
+      ]
+    },
+    {
+      "id": "POL-JUD-02",
+      "front": "What is the retirement age for a Supreme Court judge compared to a High Court judge?",
+      "back": "A Supreme Court judge retires at the age of 65 years (Article 124(2)), whereas a High Court judge retires at 62 years (Article 217(1)).",
+      "key_fact": "SC judges retire at 65 years, while HC judges retire at 62 years.",
+      "tags": [
+        "polity",
+        "judiciary",
+        "tenure"
+      ]
+    },
+    {
+      "id": "POL-JUD-03",
+      "front": "Under which Article does the Supreme Court have Original Jurisdiction in federal disputes between the Union and States?",
+      "back": "Article 131 gives the Supreme Court exclusive Original Jurisdiction in federal disputes between the Government of India and one or more States.",
+      "key_fact": "Article 131 confers exclusive Original Jurisdiction on the Supreme Court in Centre-State disputes.",
+      "tags": [
+        "polity",
+        "supreme-court",
+        "jurisdiction"
+      ]
+    },
+    {
+      "id": "POL-JUD-04",
+      "front": "Which Article empowers the President to seek the Advisory Opinion of the Supreme Court on questions of law or public importance?",
+      "back": "Article 143 empowers the President to refer questions of law or fact to the Supreme Court for its advisory opinion.",
+      "key_fact": "Article 143 provides for Presidential reference and advisory jurisdiction of the Supreme Court.",
+      "tags": [
+        "polity",
+        "supreme-court",
+        "advisory-jurisdiction"
+      ]
+    },
+    {
+      "id": "POL-JUD-05",
+      "front": "Who was the first Chief Justice of India (CJI)?",
+      "back": "Justice H.J. Kania (Harilal Jekisundas Kania) was the first Chief Justice of independent India (1950-1951).",
+      "key_fact": "Justice H.J. Kania was the first Chief Justice of India.",
+      "tags": [
+        "polity",
+        "first-officeholders",
+        "chief-justice"
+      ]
+    },
+    {
+      "id": "POL-JUD-06",
+      "front": "Under which Article are District Judges in a State appointed, and by whom?",
+      "back": "Under Article 233, District Judges are appointed by the Governor of the State in consultation with the High Court exercising jurisdiction.",
+      "key_fact": "Article 233: District Judges are appointed by the Governor in consultation with the High Court.",
+      "tags": [
+        "polity",
+        "subordinate-courts",
+        "district-judges"
+      ]
+    },
+    {
+      "id": "POL-JUD-07",
+      "front": "What is the Latin meaning and constitutional purpose of the writ of Habeas Corpus?",
+      "back": "Habeas Corpus means 'To have the body of'. It is issued by the SC (Art. 32) or HC (Art. 226) against both public and private authorities to secure the release of an unlawfully detained person.",
+      "key_fact": "Habeas Corpus means 'to have the body' and protects personal liberty against unlawful detention.",
+      "tags": [
+        "polity",
+        "writs",
+        "habeas-corpus"
+      ]
+    },
+    {
+      "id": "POL-JUD-08",
+      "front": "Which Article provides for the Comptroller and Auditor General (CAG) of India, and what is the CAG's term of office?",
+      "back": "Article 148 provides for the CAG of India. The CAG holds office for a term of 6 years or until attaining the age of 65 years, whichever is earlier.",
+      "key_fact": "Article 148 provides for CAG; tenure is 6 years or 65 years of age.",
+      "tags": [
+        "polity",
+        "constitutional-bodies",
+        "cag"
+      ]
+    },
+    {
+      "id": "POL-JUD-09",
+      "front": "Which Article establishes the Election Commission of India (ECI), and who appoints the Chief Election Commissioner?",
+      "back": "Article 324 establishes the Election Commission of India. The Chief Election Commissioner and other Election Commissioners are appointed by the President.",
+      "key_fact": "Article 324 establishes the Election Commission; appointed by the President.",
+      "tags": [
+        "polity",
+        "constitutional-bodies",
+        "election-commission"
+      ]
+    },
+    {
+      "id": "POL-JUD-10",
+      "front": "Under which Article is the Finance Commission constituted, and what is its primary constitutional duty?",
+      "back": "The Finance Commission is constituted under Article 280 by the President every 5 years to recommend the distribution of net tax proceeds between the Union and States.",
+      "key_fact": "Article 280: Finance Commission recommends Union-State net tax sharing every 5 years.",
+      "tags": [
+        "polity",
+        "constitutional-bodies",
+        "finance-commission"
+      ]
+    },
+    {
+      "id": "POL-JUD-11",
+      "front": "Under which Article is the Attorney General for India appointed, and what is their term of office?",
+      "back": "Under Article 76, the Attorney General is appointed by the President and holds office during the pleasure of the President (no fixed constitutional term).",
+      "key_fact": "Article 76: Attorney General holds office during the pleasure of the President.",
+      "tags": [
+        "polity",
+        "constitutional-bodies",
+        "attorney-general"
+      ]
+    },
+    {
+      "id": "POL-JUD-12",
+      "front": "Is NITI Aayog a constitutional, statutory, or extra-constitutional body, and when was it established?",
+      "back": "NITI Aayog is a non-constitutional, non-statutory (extra-constitutional) body created by an executive resolution of the Union Cabinet on January 1, 2015, replacing the Planning Commission.",
+      "key_fact": "NITI Aayog is an extra-constitutional body established on January 1, 2015 by Cabinet resolution.",
+      "tags": [
+        "polity",
+        "statutory-bodies",
+        "niti-aayog"
+      ]
+    }
+  ]
+}

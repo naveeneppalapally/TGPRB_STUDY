@@ -568,6 +568,36 @@
     "aliases": [
       "NOTE-POL-COURTS",
       "NOTE-POL-BODIES"
+    ],
+    "gateFile": "content/data/gates/judiciary-and-constitutional-bodies.json",
+    "deckFile": "content/data/flashcards/polity/judiciary-and-constitutional-bodies.json",
+    "noteSlug": "judiciary",
+    "subjectSlug": "polity",
+    "studySlug": "judiciary",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-0312",
+      "PYQ-2653",
+      "PYQ-0523",
+      "PYQ-0936",
+      "PYQ-2236",
+      "PYQ-0303",
+      "PYQ-0549",
+      "PYQ-1113",
+      "PYQ-1562",
+      "PYQ-0321",
+      "PYQ-0760",
+      "PYQ-3062",
+      "PYQ-0318",
+      "PYQ-0320",
+      "PYQ-0516",
+      "PYQ-0649",
+      "PYQ-0763",
+      "PYQ-2519",
+      "PYQ-3049",
+      "PYQ-0627",
+      "PYQ-1796",
+      "PYQ-2707"
     ]
   },
   {

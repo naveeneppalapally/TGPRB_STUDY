@@ -277,6 +277,13 @@
       "canonicalTopicIds": [
         "POL-UNION-EXEC-LEG"
       ]
+    },
+    {
+      "id": "NOTE-POL-JUDICIARY",
+      "pyqCount": 22,
+      "canonicalTopicIds": [
+        "POL-JUDICIARY-BODIES"
+      ]
     }
   ]
 }
