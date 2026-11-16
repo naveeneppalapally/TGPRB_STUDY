@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-POL-PANCHAYAT",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-POL-SLG-1",
+      "question": "Which of the following is correct regarding the qualifications and constitutional status of the Governor of a State under Article 157?",
+      "options": [
+        "The Constitution prescribes only two qualifications: must be a citizen of India and have completed the age of 35 years",
+        "The office of the Governor is an employment under the Central Government",
+        "The Constitution requires a person to be a resident of the concerned State",
+        "The salary of the Governor is fixed by the Union Home Minister"
+      ],
+      "correct_answer": 0,
+      "explanation": "Under Article 157, the Constitution lays down only two qualifications for appointment as Governor: a person must be a citizen of India and must have completed the age of 35 years. The Supreme Court in Hargovind Pant v. Raghukul Tilak (1979) held that the Governor's office is an independent constitutional office and not an employment under the Central Government."
+    },
+    {
+      "id": "GATE-POL-SLG-2",
+      "question": "Regarding a state bill reserved by the Governor for the consideration of the President under Article 201, what happens if the State Legislature reconsiders and passes the bill again?",
+      "options": [
+        "The President is constitutionally bound to give assent to the reconsidered bill",
+        "The bill automatically becomes law without presidential assent",
+        "The President is not bound to give assent and can still withhold assent",
+        "The bill must be referred to a joint sitting of both Houses of Parliament"
+      ],
+      "correct_answer": 2,
+      "explanation": "Under Article 201, when a state bill is returned for reconsideration and the State Legislature passes it again with or without amendments, the President is under no constitutional obligation to give assent. This contrasts with Article 200 where the Governor must give assent if the state legislature passes the returned bill again."
+    },
+    {
+      "id": "GATE-POL-SLG-3",
+      "question": "Which committee on Panchayati Raj first recommended according constitutional recognition and protection to Panchayati Raj institutions, as well as constitutional provisions for regular elections?",
+      "options": [
+        "Balwant Rai Mehta Committee (1957)",
+        "Ashok Mehta Committee (1977)",
+        "L.M. Singhvi Committee (1986)",
+        "G.V.K. Rao Committee (1985)"
+      ],
+      "correct_answer": 2,
+      "explanation": "The L.M. Singhvi Committee (1986), appointed by the Rajiv Gandhi government, recommended that Panchayati Raj institutions should be constitutionally recognized, protected, and preserved. This recommendation paved the way for the 73rd Constitutional Amendment Act, 1992."
+    },
+    {
+      "id": "GATE-POL-SLG-4",
+      "question": "Under Article 243K of the Indian Constitution, the superintendence, direction, and control of the preparation of electoral rolls for and conduct of all elections to the Panchayats is vested in:",
+      "options": [
+        "State Election Commissioner",
+        "Election Commission of India",
+        "District Collector and District Election Officer",
+        "State Department of Panchayati Raj"
+      ],
+      "correct_answer": 0,
+      "explanation": "Article 243K vests the superintendence, direction, and control of all elections to Panchayats in an independent State Election Commissioner. The State Election Commissioner is appointed by the Governor but can only be removed from office in like manner and on like grounds as a Judge of a High Court."
+    },
+    {
+      "id": "GATE-POL-SLG-5",
+      "question": "Under the Telangana State Panchayati Raj Act, 2018, what is the minimum qualifying age to contest for the office of Sarpanch?",
+      "options": [
+        "18 years",
+        "21 years",
+        "25 years",
+        "30 years"
+      ],
+      "correct_answer": 1,
+      "explanation": "Under the Telangana State Panchayati Raj Act, 2018 (as well as Article 243F of the Constitution), the minimum age to contest for the office of Sarpanch or Ward Member in a Gram Panchayat is 21 years (whereas the voting age is 18 years)."
+    }
+  ]
+}

@@ -415,6 +415,41 @@
     "enriched_at": "2026-08-11T12:38:34.393026Z"
   },
   {
+    "uid": "PYQ-0168",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 0.95,
+    "explanation": "V. Shanmuganathan was appointed as the Governor of Meghalaya and Draupadi Murmu was appointed as the Governor of Jharkhand in May 2015. Meanwhile, Tathagata Roy was appointed as the Governor of Tripura and Najma Heptulla was appointed as the Governor of Manipur.",
+    "recommended_memory_technique": "timeline_chunking",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Mains.json",
+        "q_no": 168,
+        "source_page": 40
+      },
+      {
+        "source_file": "Constable_2023_Set_A.json",
+        "q_no": 168,
+        "source_page": 39
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements: a) Shanmuganathan is appointed as Governor of Meghalaya b) Draupadi Murmu is appointed as Governor of Jharkhand c) Tathagata Roy is appointed as Governor of Arunachal Pradesh d) Najma Heptullah is appointed as Governor of Mizoram Choose the correct statements :",
+    "options": [
+      "(1) a & c",
+      "(2) a & b",
+      "(3) b&d",
+      "(4) a&d"
+    ],
+    "enriched_at": "2026-08-11T12:39:05.415504Z"
+  },
+  {
     "uid": "PYQ-0191",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -568,6 +603,46 @@
       "(4) (b), (c) are correct, but (a) is wrong"
     ],
     "enriched_at": "2026-08-11T12:55:42.392420Z"
+  },
+  {
+    "uid": "PYQ-0297",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "Bihar was the first state to implement 50% reservation for women in Panchayati Raj Institutions in 2006. Currently, 84 seats are reserved for Scheduled Castes (SC) and 47 seats (not 41) are reserved for Scheduled Tribes (ST) in the Lok Sabha.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 98,
+        "source_page": 32
+      },
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 98,
+        "source_page": 30
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 98,
+        "source_page": 30
+      }
+    ],
+    "has_image": false,
+    "question_text": "Read the following statements :\n(a) First State to offer 50% reservation for women in Panchayati Raj Institutions is Bihar\n(b) The number of seats reserved for scheduled caste members in Lok Sabha is 84\n(c) The number of seats reserved for scheduled tribe members in Lok Sabha is 41\nThe correct answer is",
+    "options": [
+      "(c) is correct but (a) and (b) are wrong",
+      "(c) and (a) are correct, but (b) is wrong",
+      "(a) and (b) are correct, but (c) is wrong",
+      "All (a), (b) and (c) are wrong"
+    ],
+    "enriched_at": "2026-08-11T12:55:56.614815Z"
   },
   {
     "uid": "PYQ-0301",
@@ -798,6 +873,36 @@
       "(4) (A) only"
     ],
     "enriched_at": "2026-08-11T12:58:09.492333Z"
+  },
+  {
+    "uid": "PYQ-0316",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "match_the_following",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Lakshmikant Parsekar served as Chief Minister of Goa, T.R. Zeliang headed Nagaland, Lal Thanhawla led Mizoram, and Harish Rawat was the Chief Minister of Uttarakhand during the mid-2010s period.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2015_Prelims.json",
+        "q_no": 119,
+        "source_page": 39
+      }
+    ],
+    "has_image": false,
+    "question_text": "Match the following: List-I (State) (a) Goa (b) Nagaland (c) Mizoram (d) Uttarakhand List-II (Chief Minister) (i) Harish Rawat (ii) Lal Thanhawla (iii) Lakshmikant Parsekar (iv) T.R. Zeliang",
+    "options": [
+      "(a) – (ii), (b) – (iv), (c) – (iii), (d) – (i)",
+      "(a) – (iii), (b) – (iv), (c) – (ii), (d) – (i)",
+      "(a) – (iv), (b) – (ii), (c) – (iii), (d) – (i)",
+      "(a) – (i), (b) – (iii), (c) – (iv), (d) – (ii)"
+    ],
+    "enriched_at": "2026-08-11T12:58:22.943649Z"
   },
   {
     "uid": "PYQ-0318",
@@ -1075,6 +1180,41 @@
     "enriched_at": "2026-08-11T13:08:25.255335Z"
   },
   {
+    "uid": "PYQ-0403",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "match_the_following",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Matching the States with their respective Chief Ministers during the 2014-2016 period: Goa was led by Lakshmikant Parsekar, Nagaland by T.R. Zeliang, Mizoram by Lal Thanhawla, and Uttarakhand by Harish Rawat.",
+    "recommended_memory_technique": "deliberate_practice",
+    "occurrences": [
+      {
+        "source_file": "Constable_2016_Mains.json",
+        "q_no": 119,
+        "source_page": 37
+      },
+      {
+        "source_file": "Constable_2016_Prelims.json",
+        "q_no": 119,
+        "source_page": 37
+      }
+    ],
+    "has_image": false,
+    "question_text": "Match the following :\nList-I\n(State)\n(a) Goa\n(b) Nagaland\n(c) Mizoram\n(d) Uttarakhand\nList-II\n(Chief Minister)\n(i) Harish Rawat\n(ii) Lal Thanhawla\n(iii) Lakshmikant Parsekar\n(iv) T.R. Zeliang",
+    "options": [
+      "(a) – (ii), (b) – (iv), (c) – (iii), (d) – (i)",
+      "(a) – (iii), (b) – (iv), (c) – (ii), (d) – (i)",
+      "(a) – (iv), (b) – (ii), (c) – (iii), (d) – (i)",
+      "(a) – (i), (b) – (iii), (c) – (iv), (d) – (ii)"
+    ],
+    "enriched_at": "2026-08-11T13:10:58.576301Z"
+  },
+  {
     "uid": "PYQ-0495",
     "subject_id": "HIS",
     "subject_name": "History of India & National Movement",
@@ -1169,6 +1309,36 @@
     "enriched_at": "2026-08-11T13:26:10.520280Z"
   },
   {
+    "uid": "PYQ-0518",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "match_the_following",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "As of February 2019, Trivendra Singh Rawat served as the CM of Uttarakhand, Jai Ram Thakur as the CM of Himachal Pradesh, Biplab Kumar Deb as the CM of Tripura, and V. Narayana Swamy as the CM of Union Territory Puducherry.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 97,
+        "source_page": 29
+      }
+    ],
+    "has_image": false,
+    "question_text": "Match the following states with their Chief Minister as on 20th Feb, 2019:\nList – I (States)\na. Uttarakhand\nb. Himachal Pradesh\nc. Tripura\nd. Puducherry\nList – II (Chief Ministers)\ni. Biplab Kumar Deb\nii. Trivendra Singh Rawat\niii. V. Narayana Swamy\niv. Jai Ram Thakur\nThe correct answer is:",
+    "options": [
+      "a-iii, b-ii, c-i, d-iv",
+      "a-ii, b-i, c-iii, d-iv",
+      "a-ii, b-iv, c-i, d-iii",
+      "a-ii, b-iv, c-i, d-iii"
+    ],
+    "enriched_at": "2026-08-11T13:26:25.911220Z"
+  },
+  {
     "uid": "PYQ-0519",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -1227,6 +1397,36 @@
       "iii & iv"
     ],
     "enriched_at": "2026-08-11T13:26:41.778580Z"
+  },
+  {
+    "uid": "PYQ-0521",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Municipalities & Urban Local Bodies (74th Amendment)",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "The Contingency Fund of India (Article 267) is strictly maintained to meet unforeseen urgent expenditures pending parliamentary approval, and is not a revenue source for local bodies. Municipalities derive revenue through taxes authorized or assigned by the State Legislature, as well as grants-in-aid from the Consolidated Fund of the State and Consolidated Fund of India (based on Finance Commission recommendations).",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 100,
+        "source_page": 30
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which one of the following statements is not correct with regard to sources of revenue to Municipalities?",
+    "options": [
+      "Grants-in-aid from contingency fund of India.",
+      "Grants-in-aid from consolidated fund of India.",
+      "Taxes collected by Municipalities authorized by the State Legislature by law.",
+      "Taxes collected by state but are assigned to Municipality."
+    ],
+    "enriched_at": "2026-08-11T13:26:49.773249Z"
   },
   {
     "uid": "PYQ-0523",
@@ -1377,6 +1577,46 @@
       "Devaki Yashoda"
     ],
     "enriched_at": "2026-08-11T13:36:46.866045Z"
+  },
+  {
+    "uid": "PYQ-0590",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment); Municipalities & Urban Local Bodies (74th Amendment)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "The 73rd and 74th Constitutional Amendment Acts mandates a reservation of not less than one-third (33%) of the total seats for women in local self-governments. This structural provision facilitated political empowerment by ensuring women's entry into Gram Panchayats and Municipalities across India.",
+    "recommended_memory_technique": "narrative_chain",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Mains.json",
+        "q_no": 169,
+        "source_page": 53
+      },
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 170,
+        "source_page": 55
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 170,
+        "source_page": 53
+      }
+    ],
+    "has_image": false,
+    "question_text": "Reservations as per 73rd and 74th Constitutional Amendment have facilitated",
+    "options": [
+      "Women's appointments in all top positions",
+      "Women entering Gram Panchayats and Municipalities",
+      "Establishing small shops by many women",
+      "Increasing women labour in Agriculture"
+    ],
+    "enriched_at": "2026-08-11T13:36:53.704734Z"
   },
   {
     "uid": "PYQ-0592",
@@ -1848,6 +2088,76 @@
     "enriched_at": "2026-08-11T13:57:57.515216Z"
   },
   {
+    "uid": "PYQ-0755",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 0.98,
+    "explanation": "Article 157 of the Constitution prescribes only two qualifications for a person to be appointed as Governor: they must be a citizen of India and must have completed 35 years of age. Additionally, the Supreme Court ruled in 1979 that the office of the Governor is an independent constitutional office and not an employment under the Union Government.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 135,
+        "source_page": 45
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 135,
+        "source_page": 43
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which one of the following statements is true with regard to the office of the Governor?",
+    "options": [
+      "It is subordinate to the Union Government.",
+      "Governor's salary is fixed by Union Home Minister.",
+      "The constitution under Article 157 prescribes only two qualifications.",
+      "It is an employment under the Government of India."
+    ],
+    "enriched_at": "2026-08-11T13:58:04.789637Z"
+  },
+  {
+    "uid": "PYQ-0757",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "An ordinary bill can originate in either house of a bicameral state legislature. The Legislative Council can delay an ordinary bill for up to 3 months in the first instance and 1 month (30 days) in the second instance, making statement iii incorrect. Money bills can only be delayed by the Legislative Council for up to 14 days, making statement iv incorrect. Thus, only statements i and ii are correct.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 137,
+        "source_page": 46
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 137,
+        "source_page": 44
+      }
+    ],
+    "has_image": false,
+    "question_text": "Consider the following statements with regard to the State Legislature. i. An ordinary bill can originate in any of the Houses. ii. Legislative Council can delay ordinary bill only for a period of three months in the first instance. iii. Legislative Council in the second instance can hold ordinary bill for fifteen days. iv. Legislative Council can only delay a money bill for twenty days. Choose the correct answer among the following:",
+    "options": [
+      "i, ii, iii, iv",
+      "i & ii",
+      "i, ii & iii",
+      "i, ii, iv"
+    ],
+    "enriched_at": "2026-08-11T13:58:17.676201Z"
+  },
+  {
     "uid": "PYQ-0758",
     "subject_id": "HIS",
     "subject_name": "History of India & National Movement",
@@ -1951,6 +2261,76 @@
       "24th"
     ],
     "enriched_at": "2026-08-11T13:58:39.350007Z"
+  },
+  {
+    "uid": "PYQ-0761",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 0.98,
+    "explanation": "Under Paragraph 5(1) of the Fifth Schedule of the Indian Constitution, the Governor of a state is empowered to direct that any particular Act of Parliament or State Legislature shall not apply to a Scheduled Area, or shall apply subject to specified exceptions and modifications.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 141,
+        "source_page": 47
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 141,
+        "source_page": 45
+      }
+    ],
+    "has_image": false,
+    "question_text": "Who among the following is authorized to decide the applicability of any Particular Act of Parliament to a Scheduled Area ?",
+    "options": [
+      "Union Tribal Affairs Minster",
+      "Prime Minister",
+      "President",
+      "Governor"
+    ],
+    "enriched_at": "2026-08-11T13:58:45.961870Z"
+  },
+  {
+    "uid": "PYQ-0762",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment)",
+    "question_type": "match_the_following",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "Balwant Rai Mehta Committee (1957) recommended that Zilla Parishad be an advisory body. Ashok Mehta Committee (1978) recommended that Zilla Parishad be the primary executive body. K. Santhanam Committee (1963) recommended setting up a Panchayati Raj Finance Corporation, while the L.M. Singhvi Committee (1986) emphasized the establishment of Nyaya Panchayats.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "Constable_2018_Prelims.json",
+        "q_no": 142,
+        "source_page": 47
+      },
+      {
+        "source_file": "SI_2018_Mains_Paper4_GS.json",
+        "q_no": 142,
+        "source_page": 45
+      }
+    ],
+    "has_image": false,
+    "question_text": "Match the following: List-I (Committee) a. Balwant Rai Mehta b. Ashok Mehta c. K. Santhanam d. L.M. Singhvi List-II (Recommendation) i. Zilla Parishad should be executive body ii. Nyaya Panchayats iii. Zilla Parishad should be advisory body iv. Panchayati Raj Finance Corporation The correct answer is :",
+    "options": [
+      "a:ii, b:i, c:iv, d:iii",
+      "a:i, b:iii, c:iv, d:ii",
+      "a:iii, b:i, c:iv, d:ii",
+      "a:iii, b:ii, c:i, d:iv"
+    ],
+    "enriched_at": "2026-08-11T13:58:53.564528Z"
   },
   {
     "uid": "PYQ-0763",
@@ -2393,6 +2773,36 @@
     "enriched_at": "2026-08-11T14:46:59.357052Z"
   },
   {
+    "uid": "PYQ-1103",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "match_the_following",
+    "difficulty": "M",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Justice S. Abdul Nazeer serves as the Governor of Andhra Pradesh, Ramesh Bais as the Governor of Maharashtra, Anandiben Patel as the Governor of Uttar Pradesh, Arif Mohammad Khan as the Governor of Kerala, and Satyadev Narain Arya served as the Governor of Tripura.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2023_Mains_Official.json",
+        "q_no": 86,
+        "source_page": 22
+      }
+    ],
+    "has_image": false,
+    "question_text": "Identify the Governors of states and match them with the states of their ruling accordingly.\nGroup-I (Governors):\n(a) S. Abdul Najeer\n(b) Shri Ramesh bais\n(c) Anandiben Patel\n(d) Arif Mohammad Khan\n(e) Shri Satyadev Narain Arya\nGroup-II (States):\n(i) Maharashtra\n(ii) Andhra Pradesh\n(iii) Kerala\n(iv) Tripura\n(v) Uttar pradesh",
+    "options": [
+      "(a)-(iii), (b)-(ii), (c)-(i), (d)-(iv), (e)-(v)",
+      "(a)-(iii), (b)-(ii), (c)-(v), (d)-(iv), (e)-(i)",
+      "(a)-(ii), (b)-(i), (c)-(iii), (d)-(iv), (e)-(v)",
+      "(a)-(ii), (b)-(i), (c)-(v), (d)-(iii), (e)-(iv)"
+    ],
+    "enriched_at": "2026-08-11T14:48:55.455419Z"
+  },
+  {
     "uid": "PYQ-1107",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -2481,6 +2891,36 @@
       "Manipur"
     ],
     "enriched_at": "2026-08-11T14:54:30.901162Z"
+  },
+  {
+    "uid": "PYQ-1154",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "According to Article 154(1) of the Constitution of India, the executive power of the State shall be vested in the Governor. While the Chief Minister is the real executive head (de facto), the Governor is the constitutional or nominal executive head (de jure) of the state.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "Constable_2023_Mains_Official.json",
+        "q_no": 139,
+        "source_page": 36
+      }
+    ],
+    "has_image": false,
+    "question_text": "In India, The executive power of the state shall be vested in ________.",
+    "options": [
+      "President",
+      "Chief Minister",
+      "Prime Minister",
+      "Governor"
+    ],
+    "enriched_at": "2026-08-11T14:55:09.423813Z"
   },
   {
     "uid": "PYQ-1168",
@@ -3522,6 +3962,36 @@
     "explanation_reviewed_at": "2026-10-15"
   },
   {
+    "uid": "PYQ-2201",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment) & TS PR Act 2018",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 1,
+    "confidence": 0.95,
+    "explanation": "Under the Telangana State Panchayati Raj Act, 2018, the minimum age to contest for Sarpanch is 21 years (statement c) and a village with a population between 1500 and 3000 is divided into 11 wards (statement d). 'Roznamcha' is a general daily diary of events maintained by village officers, not a death register, and the Grama Sabha quorum for 3001-5000 voters is 200 members (300 is for voters exceeding 5000).",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Mains_Paper2.json",
+        "q_no": 99,
+        "source_page": 32
+      }
+    ],
+    "has_image": false,
+    "question_text": "Examine the following statements with regard to Telangana State Panchayati Raj Act, 2018.\na. Roznamcha is a diary in which details of dead people are maintained.\nb. The quorum for the Grama Sabha if voters are 3001 to 5000 is 300 members.\nc. The eligibility age for office of Sarpanch is 21 years.\nd. The number of wards in a village with population exceeding 1500 but not exceeding 3000 is 11 (eleven).\nChoose the correct answer.",
+    "options": [
+      "a & b only",
+      "c & d only",
+      "b, c & d only",
+      "a, c & d only"
+    ],
+    "enriched_at": "2026-08-11T18:23:09.118797Z"
+  },
+  {
     "uid": "PYQ-2203",
     "subject_id": "POL",
     "subject_name": "Indian Polity & Constitution",
@@ -3643,6 +4113,36 @@
       "d, b, c, a"
     ],
     "enriched_at": "2026-08-11T18:41:53.440543Z"
+  },
+  {
+    "uid": "PYQ-2473",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 2,
+    "confidence": 0.95,
+    "explanation": "Governor's rule was imposed in J&K on June 20, 2018 (third week of June), and S.P. Vaid was serving as the DGP of J&K at the time. However, B.V.R. Subrahmanyam was appointed as the Chief Secretary of J&K, not the Governor (N.N. Vohra was the Governor then). Thus, statements (a) and (c) are correct.",
+    "recommended_memory_technique": "timeline_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Prelims_Paper1.json",
+        "q_no": 123,
+        "source_page": 29
+      }
+    ],
+    "has_image": false,
+    "question_text": "Examine the following statements :\n(a) Governor's rule has been imposed in Jammu and Kashmir in the third week of June 2018.\n(b) B.V.R. Subrahmanyam was appointed as the Governor of Jammu and Kashmir.\n(c) The Director General of Police of Jammu and Kashmir is S.P. Vaid.\nChoose the correct answer:",
+    "options": [
+      "(a) and (b) only",
+      "(b) and (c) only",
+      "(a) and (c) only",
+      "(a), (b) and (c)"
+    ],
+    "enriched_at": "2026-08-11T19:00:32.847228Z"
   },
   {
     "uid": "PYQ-2499",
@@ -3802,6 +4302,36 @@
       "(a)-(iii), (b)-(iv), (c)-(v), (d)-(i)"
     ],
     "enriched_at": "2026-08-12T08:16:00.004968Z"
+  },
+  {
+    "uid": "PYQ-2516",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "M",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "Under Article 201 of the Constitution, when a bill is reserved by the Governor for the President's consideration, the President may declare assent, withhold assent, or direct the Governor to return the bill to the state legislature, which must reconsider it within six months. Unlike the Governor, the President is NOT bound to give assent even if the state legislature passes the bill again.",
+    "recommended_memory_technique": "contrast_pairs",
+    "occurrences": [
+      {
+        "source_file": "SI_2018_Prelims_Paper1.json",
+        "q_no": 166,
+        "source_page": 44
+      }
+    ],
+    "has_image": false,
+    "question_text": "Regarding the state bills reserved for President's consideration, examine the following statements:\n(a) President may declare his assent to the bill.\n(b) President may return the bill to the state legislature for its consideration.\n(c) State legislature shall reconsider it accordingly within a period of six months.\n(d) If the legislature again passed it with or without amendment, President shall approve it.\nChoose the correct answer :",
+    "options": [
+      "(a), (b) and (c) only",
+      "(a), (b) and (d) only",
+      "(b), (c) and (d) only",
+      "(a) and (c) only"
+    ],
+    "enriched_at": "2026-08-12T08:16:46.907345Z"
   },
   {
     "uid": "PYQ-2517",
@@ -4102,6 +4632,36 @@
       "All the above"
     ],
     "enriched_at": "2026-08-12T08:49:21.315351Z"
+  },
+  {
+    "uid": "PYQ-2700",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "According to Article 243(b) of the Indian Constitution (introduced by the 73rd Constitutional Amendment Act, 1992), 'Gram Sabha' is defined as a body consisting of persons registered in the electoral rolls relating to a village comprised within the area of Panchayat at the village level.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "SI_2022_Prelims.json",
+        "q_no": 156,
+        "source_page": 40
+      }
+    ],
+    "has_image": false,
+    "question_text": "\"A body consisting of persons registered in the electoral rolls relating to a village comprised within the area of panchayat at the village level\" is called",
+    "options": [
+      "District",
+      "Gram Sabha",
+      "Panchayat Area",
+      "None of the above"
+    ],
+    "enriched_at": "2026-08-12T08:49:27.049441Z"
   },
   {
     "uid": "PYQ-2707",
@@ -4707,6 +5267,36 @@
     "enriched_at": "2026-08-12T09:44:36.553199Z"
   },
   {
+    "uid": "PYQ-3041",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 1,
+    "confidence": 1,
+    "explanation": "Under Article 155 of the Indian Constitution, the Governor of a State is appointed by the President of India by warrant under his hand and seal. The Governor holds office during the pleasure of the President (Article 156).",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2023_Mains_General_Studies.json",
+        "q_no": 112,
+        "source_page": 35
+      }
+    ],
+    "has_image": false,
+    "question_text": "In India who appoints the Governors for states ?",
+    "options": [
+      "Prime minister",
+      "President of India",
+      "Supreme Court Chief Justice",
+      "Lok Sabha Speaker"
+    ],
+    "enriched_at": "2026-08-12T09:45:04.308476Z"
+  },
+  {
     "uid": "PYQ-3043",
     "subject_id": "GEO",
     "subject_name": "Indian & World Geography",
@@ -4797,6 +5387,66 @@
     "enriched_at": "2026-08-12T09:47:19.439687Z"
   },
   {
+    "uid": "PYQ-3065",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Governor, Chief Minister & State Legislature",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 3,
+    "confidence": 1,
+    "explanation": "Part VI of the Indian Constitution (Articles 152 to 237) deals with 'The States', where Chapter III specifically covers the State Legislature (Articles 168 to 212). Part V covers 'The Union', Part IV contains the Directive Principles of State Policy, and Part VII was repealed by the 7th Constitutional Amendment Act, 1956.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2023_Mains_General_Studies.json",
+        "q_no": 136,
+        "source_page": 41
+      }
+    ],
+    "has_image": false,
+    "question_text": "Which part of the Indian Constitution deals with State Legislature ?",
+    "options": [
+      "Part -VII",
+      "Part - V",
+      "Part - IV",
+      "Part - VI"
+    ],
+    "enriched_at": "2026-08-12T09:47:39.915048Z"
+  },
+  {
+    "uid": "PYQ-3067",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 2,
+    "confidence": 1,
+    "explanation": "Part IX of the Constitution of India, titled 'The Panchayats', was added by the 73rd Constitutional Amendment Act, 1992. It constitutionalized the three-tier Panchayati Raj system along with the Eleventh Schedule containing 29 functional items.",
+    "recommended_memory_technique": "hierarchical_chunking",
+    "occurrences": [
+      {
+        "source_file": "SI_2023_Mains_General_Studies.json",
+        "q_no": 138,
+        "source_page": 41
+      }
+    ],
+    "has_image": false,
+    "question_text": "Part -IX has been added to the Constitution of India through ______",
+    "options": [
+      "104th Constitutional Amendment Act",
+      "86th Constitutional Amendment Act",
+      "73rd Constitutional Amendment Act",
+      "74th Constitutional Amendment Act"
+    ],
+    "enriched_at": "2026-08-12T09:47:51.592421Z"
+  },
+  {
     "uid": "PYQ-3071",
     "subject_id": "GEO",
     "subject_name": "Indian & World Geography",
@@ -4855,6 +5505,36 @@
       "Act of Good Government"
     ],
     "enriched_at": "2026-08-12T09:48:40.390388Z"
+  },
+  {
+    "uid": "PYQ-3078",
+    "subject_id": "POL",
+    "subject_name": "Indian Polity & Constitution",
+    "topic_id": "POL-STATE-LOCAL",
+    "topic_name": "State Government & Local Governance",
+    "sub_topic": "Panchayati Raj (73rd Amendment)",
+    "question_type": "factual_recall",
+    "difficulty": "F",
+    "correct_option_index": 0,
+    "confidence": 1,
+    "explanation": "Under Article 243K of the Indian Constitution, the superintendence, direction, and control of the preparation of electoral rolls for and conduct of all elections to the Panchayats are vested in the State Election Commission headed by the State Election Commissioner. The State Election Commissioner is appointed by the Governor of the state.",
+    "recommended_memory_technique": "keyword_method",
+    "occurrences": [
+      {
+        "source_file": "SI_2023_Mains_General_Studies.json",
+        "q_no": 149,
+        "source_page": 44
+      }
+    ],
+    "has_image": false,
+    "question_text": "In India, the conduct of election to Panchayats is vested under:",
+    "options": [
+      "State Election Commissioner",
+      "District Election Commissioner",
+      "Chief Election Commissioner",
+      "Chief Minister of the State"
+    ],
+    "enriched_at": "2026-08-12T10:00:11.518442Z"
   },
   {
     "uid": "PYQ-3083",

@@ -284,6 +284,13 @@
       "canonicalTopicIds": [
         "POL-JUDICIARY-BODIES"
       ]
+    },
+    {
+      "id": "NOTE-POL-PANCHAYAT",
+      "pyqCount": 21,
+      "canonicalTopicIds": [
+        "POL-STATE-LOCAL"
+      ]
     }
   ]
 }

@@ -1,0 +1,171 @@
+{
+  "note_id": "NOTE-POL-PANCHAYAT",
+  "topic_id": "POL-STATE-LOCAL",
+  "cards": [
+    {
+      "id": "POL-SLG-01",
+      "front": "In whom is the executive power of the State vested according to the Indian Constitution?",
+      "back": "Under Article 154(1), the executive power of the State is vested in the Governor, exercised directly or through subordinate officers.",
+      "key_fact": "Article 154(1) vests the executive power of the State in the Governor.",
+      "tags": [
+        "polity",
+        "governor",
+        "state-executive"
+      ]
+    },
+    {
+      "id": "POL-SLG-02",
+      "front": "Who appoints the Governor of a State and what is the tenure of the office?",
+      "back": "Under Article 155, the Governor is appointed by the President of India by warrant under hand and seal. Under Article 156, the Governor holds office during the pleasure of the President.",
+      "key_fact": "The Governor is appointed by the President and holds office during the President's pleasure.",
+      "tags": [
+        "polity",
+        "governor",
+        "appointment"
+      ]
+    },
+    {
+      "id": "POL-SLG-03",
+      "front": "What are the constitutional qualifications prescribed for appointment as Governor under Article 157?",
+      "back": "Article 157 prescribes only two qualifications: the person must be a citizen of India and must have completed the age of 35 years.",
+      "key_fact": "Article 157 requires only Indian citizenship and completion of 35 years of age.",
+      "tags": [
+        "polity",
+        "governor",
+        "qualifications"
+      ]
+    },
+    {
+      "id": "POL-SLG-04",
+      "front": "Which Article empowers the Governor to promulgate ordinances during the recess of the State Legislature?",
+      "back": "Article 213 empowers the Governor to promulgate ordinances when the State Legislature is not in session. It must be approved within 6 weeks of reassembly.",
+      "key_fact": "Article 213 confers ordinance-making power on the Governor during legislative recess.",
+      "tags": [
+        "polity",
+        "governor",
+        "ordinance"
+      ]
+    },
+    {
+      "id": "POL-SLG-05",
+      "front": "How does the pardoning power of the Governor under Article 161 differ from that of the President under Article 72?",
+      "back": "The Governor cannot pardon a death sentence (can only suspend, remit, or commute it) and cannot pardon punishments awarded by a Court Martial.",
+      "key_fact": "Governor (Art. 161) cannot pardon death sentences or court martial convictions.",
+      "tags": [
+        "polity",
+        "pardoning-power",
+        "governor"
+      ]
+    },
+    {
+      "id": "POL-SLG-06",
+      "front": "Under which Article can Parliament create or abolish a State Legislative Council, and what is the required procedure?",
+      "back": "Under Article 169, Parliament can abolish or create a Legislative Council if the State Legislative Assembly passes a resolution by a special majority (two-thirds present and voting, majority of total membership).",
+      "key_fact": "Article 169 enables Parliament to create or abolish a Legislative Council by simple majority following an Assembly special majority resolution.",
+      "tags": [
+        "polity",
+        "legislative-council",
+        "article-169"
+      ]
+    },
+    {
+      "id": "POL-SLG-07",
+      "front": "What is the maximum period for which a State Legislative Council can delay an ordinary bill passed by the Assembly?",
+      "back": "A Legislative Council can delay an ordinary bill for a maximum of 4 months (3 months on first passage, and 1 month on second passage). There is NO joint sitting in State Legislatures.",
+      "key_fact": "Legislative Council is only a dilatory chamber with a maximum 4-month delay power on ordinary bills.",
+      "tags": [
+        "polity",
+        "state-legislature",
+        "legislative-procedure"
+      ]
+    },
+    {
+      "id": "POL-SLG-08",
+      "front": "When a State Bill is reserved for the President under Article 201, is the President bound to give assent if passed again by the State Legislature?",
+      "back": "No. Under Article 201, the President is under no constitutional obligation to give assent even if the State Legislature passes the reconsidered bill again.",
+      "key_fact": "Article 201 allows the President absolute discretion; reconsidered state bills do NOT mandate presidential assent.",
+      "tags": [
+        "polity",
+        "president",
+        "state-bills"
+      ]
+    },
+    {
+      "id": "POL-SLG-09",
+      "front": "Which Constitutional Amendment Act added Part IX and the Eleventh Schedule to the Constitution?",
+      "back": "The 73rd Constitutional Amendment Act, 1992 added Part IX ('The Panchayats') and the Eleventh Schedule (containing 29 functional subjects), taking effect on 24 April 1993.",
+      "key_fact": "73rd CAA 1992 added Part IX and the 11th Schedule with 29 subjects.",
+      "tags": [
+        "polity",
+        "panchayati-raj",
+        "73rd-amendment"
+      ]
+    },
+    {
+      "id": "POL-SLG-10",
+      "front": "How is 'Gram Sabha' defined under Article 243(b) of the Constitution?",
+      "back": "Gram Sabha is a body consisting of persons registered in the electoral rolls relating to a village comprised within the area of the Panchayat at the village level.",
+      "key_fact": "Gram Sabha comprises all registered voters of a village in the panchayat area (Art. 243(b)).",
+      "tags": [
+        "polity",
+        "gram-sabha",
+        "panchayati-raj"
+      ]
+    },
+    {
+      "id": "POL-SLG-11",
+      "front": "What was the core structural recommendation of the Balwant Rai Mehta Committee (1957) versus the Ashok Mehta Committee (1977)?",
+      "back": "Balwant Rai Mehta recommended a 3-tier system (Gram Panchayat, Panchayat Samiti, Zilla Parishad). Ashok Mehta recommended a 2-tier system (Mandal Panchayat and Zilla Parishad).",
+      "key_fact": "Balwant Rai Mehta recommended 3-tier PRIs; Ashok Mehta recommended a 2-tier system.",
+      "tags": [
+        "polity",
+        "committees",
+        "panchayati-raj"
+      ]
+    },
+    {
+      "id": "POL-SLG-12",
+      "front": "What is the constitutional minimum reservation for women in Panchayats and Municipalities, and which state first raised it to 50%?",
+      "back": "Articles 243D and 243T mandate not less than one-third (33%) reservation for women. Bihar became the first state in India to increase women reservation to 50% in 2006.",
+      "key_fact": "Constitutional minimum is 33% for women; Bihar was the first state to provide 50% reservation in 2006.",
+      "tags": [
+        "polity",
+        "reservations",
+        "women-reservation"
+      ]
+    },
+    {
+      "id": "POL-SLG-13",
+      "front": "Which Constitutional Amendment Act added Part IX-A and the Twelfth Schedule for Urban Local Bodies?",
+      "back": "The 74th Constitutional Amendment Act, 1992 added Part IX-A ('The Municipalities') and the Twelfth Schedule containing 18 functional items, effective from 1 June 1993.",
+      "key_fact": "74th CAA 1992 added Part IX-A and the 12th Schedule with 18 functional items.",
+      "tags": [
+        "polity",
+        "municipalities",
+        "74th-amendment"
+      ]
+    },
+    {
+      "id": "POL-SLG-14",
+      "front": "Under Article 243K, who appoints the State Election Commissioner and how can they be removed?",
+      "back": "The State Election Commissioner is appointed by the Governor, but can only be removed from office in like manner and on like grounds as a Judge of a High Court (by the President).",
+      "key_fact": "State Election Commissioner is appointed by the Governor but removed like a High Court Judge.",
+      "tags": [
+        "polity",
+        "state-election-commission",
+        "article-243k"
+      ]
+    },
+    {
+      "id": "POL-SLG-15",
+      "front": "What is the minimum age hierarchy for contesting elections across constitutional tiers in India?",
+      "back": "Local Bodies (Sarpanch/Panch/Ward Member): 21 years; Legislative Assembly & Lok Sabha: 25 years; Legislative Council & Rajya Sabha: 30 years; Governor & President: 35 years.",
+      "key_fact": "Minimum age: 21 for Panchayats, 25 for MLA/MP (LS), 30 for MLC/MP (RS), 35 for Governor/President.",
+      "tags": [
+        "polity",
+        "qualifications",
+        "age-criteria"
+      ]
+    }
+  ]
+}

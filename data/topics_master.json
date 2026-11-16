@@ -603,7 +603,7 @@
   {
     "id": "NOTE-POL-PANCHAYAT",
     "subject": "Polity",
-    "title": "Local Governance & Panchayati Raj",
+    "title": "State Government & Local Governance",
     "keywords": [
       "panchayat",
       "panchayati raj",
@@ -617,11 +617,46 @@
       "zilla parishad",
       "mandal praja parishad",
       "balwant rai mehta",
-      "ashok mehta committee"
+      "ashok mehta committee",
+      "governor",
+      "chief minister",
+      "state legislature",
+      "legislative assembly",
+      "legislative council"
     ],
     "aliases": [
       "NOTE-POL-LOCAL-GOVT",
-      "NOTE-POL-73RDAMENDMENT"
+      "NOTE-POL-73RDAMENDMENT",
+      "NOTE-POL-STATE-LOCAL"
+    ],
+    "gateFile": "content/data/gates/state-and-local-governance.json",
+    "deckFile": "content/data/flashcards/polity/state-and-local-governance.json",
+    "noteSlug": "state-and-local-governance",
+    "subjectSlug": "polity",
+    "studySlug": "state-and-local-governance",
+    "delivery": "paired",
+    "pyqUids": [
+      "PYQ-3065",
+      "PYQ-0590",
+      "PYQ-0755",
+      "PYQ-1154",
+      "PYQ-3041",
+      "PYQ-0761",
+      "PYQ-0757",
+      "PYQ-2516",
+      "PYQ-3067",
+      "PYQ-2700",
+      "PYQ-0762",
+      "PYQ-0297",
+      "PYQ-0521",
+      "PYQ-3078",
+      "PYQ-2201",
+      "PYQ-0168",
+      "PYQ-0316",
+      "PYQ-0403",
+      "PYQ-0518",
+      "PYQ-1103",
+      "PYQ-2473"
     ]
   },
   {
