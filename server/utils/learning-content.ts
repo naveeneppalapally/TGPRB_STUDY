@@ -23,6 +23,8 @@ import gate9 from "../../content/data/gates/judiciary-and-constitutional-bodies.
 import deck9 from "../../content/data/flashcards/polity/judiciary-and-constitutional-bodies.json"
 import gate10 from "../../content/data/gates/state-and-local-governance.json"
 import deck10 from "../../content/data/flashcards/polity/state-and-local-governance.json"
+import gate11 from "../../content/data/gates/fundamental-rights-dpsp-duties.json"
+import deck11 from "../../content/data/flashcards/polity/fundamental-rights-dpsp-duties.json"
 
 export const TOPICS = topics
 export { canonicalNoteId } from '../../utils/note-id'
@@ -39,6 +41,7 @@ export const LEARNING_ASSETS = {
   "NOTE-POL-UNION-EXEC": { gate: gate8, deck: deck8 },
   "NOTE-POL-JUDICIARY": { gate: gate9, deck: deck9 },
   "NOTE-POL-PANCHAYAT": { gate: gate10, deck: deck10 },
+  "NOTE-POL-RIGHTS": { gate: gate11, deck: deck11 },
 } as Record<string, { gate: Gate; deck: unknown }>
 export interface Gate {
   note_id: string

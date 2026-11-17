@@ -291,6 +291,13 @@
       "canonicalTopicIds": [
         "POL-STATE-LOCAL"
       ]
+    },
+    {
+      "id": "NOTE-POL-RIGHTS",
+      "pyqCount": 35,
+      "canonicalTopicIds": [
+        "POL-FR-DPSP"
+      ]
     }
   ]
 }

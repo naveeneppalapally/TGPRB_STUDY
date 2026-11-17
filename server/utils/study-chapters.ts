@@ -10,4 +10,5 @@ import chapter7 from "../../content/data/study/polity/parliament"
 import chapter8 from "../../content/data/study/polity/judiciary"
 import chapter9 from "../../content/data/study/telangana/telangana-statehood-movement"
 import chapter10 from "../../content/data/study/polity/state-and-local-governance"
-export const CHAPTERS: Record<string, StudyChapter> = Object.fromEntries([chapter0, chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9, chapter10].map(chapter => [chapter.slug, chapter]))
+import chapter11 from "../../content/data/study/polity/fundamental-rights-dpsp-duties"
+export const CHAPTERS: Record<string, StudyChapter> = Object.fromEntries([chapter0, chapter1, chapter2, chapter3, chapter4, chapter5, chapter6, chapter7, chapter8, chapter9, chapter10, chapter11].map(chapter => [chapter.slug, chapter]))

@@ -1,0 +1,66 @@
+{
+  "note_id": "NOTE-POL-RIGHTS",
+  "pass_threshold": 3,
+  "questions": [
+    {
+      "id": "GATE-POL-FR-1",
+      "question": "The Supreme Court of India enjoys the power of 'Judicial Review', which specifically means the power to:",
+      "options": [
+        "Review the judgements and administrative decrees of State High Courts",
+        "Review the political advice tendered by the Council of Ministers to the President",
+        "Decide the constitutionality of legislative Acts passed by Parliament or State Legislatures and executive orders",
+        "Advise the President of India on political questions of public importance"
+      ],
+      "correct_answer": 2,
+      "explanation": "Judicial Review refers specifically to the constitutional power of the judiciary (Articles 13, 32, and 226) to examine the constitutional validity of legislative enactments and executive orders. If found to violate constitutional provisions or the Basic Structure, courts declare them void."
+    },
+    {
+      "id": "GATE-POL-FR-2",
+      "question": "Which one of the following is NOT included within the Right to Equality under Articles 14 to 18 of the Constitution?",
+      "options": [
+        "Social equality and non-discrimination on grounds of religion, race, caste, sex or place of birth",
+        "Abolition of titles except military and academic distinctions",
+        "Abolition of untouchability and prohibition of its practice",
+        "Economic equality guaranteeing equal distribution of wealth"
+      ],
+      "correct_answer": 3,
+      "explanation": "The Right to Equality (Articles 14-18) covers equality before law (Art. 14), prohibition of discrimination (Art. 15), equality of opportunity in public employment (Art. 16), abolition of untouchability (Art. 17), and abolition of titles (Art. 18). Economic equality is a socio-economic goal under Part IV (DPSP) and the Preamble, not an enforceable Fundamental Right."
+    },
+    {
+      "id": "GATE-POL-FR-3",
+      "question": "Which Articles of the Indian Constitution cannot be suspended even during the proclamation of a National Emergency under Article 359?",
+      "options": [
+        "Article 14 and Article 19",
+        "Article 20 and Article 21",
+        "Article 19 and Article 32",
+        "Article 15 and Article 16"
+      ],
+      "correct_answer": 1,
+      "explanation": "By the 44th Constitutional Amendment Act, 1978, the right to protection in respect of conviction for offences (Article 20) and the right to life and personal liberty (Article 21) cannot be suspended even during a National Emergency under Article 359."
+    },
+    {
+      "id": "GATE-POL-FR-4",
+      "question": "Equal Justice and Free Legal Aid are guaranteed under which provision of the Indian Constitution?",
+      "options": [
+        "Article 39A under Directive Principles of State Policy (Part IV)",
+        "Article 21 under Fundamental Rights (Part III)",
+        "Article 51A under Fundamental Duties (Part IV-A)",
+        "Article 300A under Constitutional Rights (Part XII)"
+      ],
+      "correct_answer": 0,
+      "explanation": "Equal justice and free legal aid is enshrined under Article 39A of the Indian Constitution, which forms part of the Directive Principles of State Policy (Part IV). It was inserted into the Constitution by the 42nd Constitutional Amendment Act, 1976 and led to the enactment of the Legal Services Authorities Act, 1987 (NALSA)."
+    },
+    {
+      "id": "GATE-POL-FR-5",
+      "question": "Examine the following statements regarding Fundamental Duties:\n(a) Article 51 deals with Fundamental Duties.\n(b) Fundamental Duties were incorporated in the Constitution through the 42nd Amendment Act, 1976.\n(c) Fundamental Duties cannot be enforced directly by courts through writs.\n(d) Fundamental Duties cannot be promoted by constitutional methods.\nWhich of the statements given above are correct?",
+      "options": [
+        "(a) and (b) only",
+        "(b) and (c) only",
+        "(a) and (c) only",
+        "(a), (b) and (c)"
+      ],
+      "correct_answer": 1,
+      "explanation": "Fundamental Duties are incorporated under Article 51A (Part IV-A) by the 42nd Constitutional Amendment Act, 1976 based on the Swaran Singh Committee recommendations, making statement (a) false and (b) true. Fundamental Duties are non-justiciable and cannot be directly enforced by courts using writs, making statement (c) true. Parliament can, however, enforce them by enacting dedicated statutory laws."
+    }
+  ]
+}

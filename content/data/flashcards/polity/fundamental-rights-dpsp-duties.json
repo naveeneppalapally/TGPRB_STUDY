@@ -1,0 +1,171 @@
+{
+  "note_id": "NOTE-POL-RIGHTS",
+  "topic_id": "POL-FR-DPSP",
+  "cards": [
+    {
+      "id": "POL-FR-01",
+      "front": "Which Articles of the Constitution define 'State' for Fundamental Rights and Directive Principles?",
+      "back": "Article 12 (for Part III) and Article 36 (for Part IV) define 'State' identically, including Government, Parliament, State Legislatures, local authorities, and statutory authorities like LIC and ONGC.",
+      "key_fact": "Article 12 and Article 36 define 'State' identically for Part III and Part IV.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-12"
+      ]
+    },
+    {
+      "id": "POL-FR-02",
+      "front": "What does Article 13 declare regarding laws inconsistent with Fundamental Rights?",
+      "back": "Article 13 declares all laws inconsistent with or in derogation of Fundamental Rights void, establishing the constitutional foundation for judicial review in India.",
+      "key_fact": "Article 13 provides the constitutional bedrock for judicial review in India.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "judicial-review"
+      ]
+    },
+    {
+      "id": "POL-FR-03",
+      "front": "What is the distinction between 'Equality before Law' and 'Equal Protection of the Laws' under Article 14?",
+      "back": "Equality before law is a British negative concept meaning no person is above the law. Equal protection of the laws is an American positive concept meaning equals must be treated equally in equal circumstances.",
+      "key_fact": "Article 14 combines British equality before law with American equal protection of the laws.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-14"
+      ]
+    },
+    {
+      "id": "POL-FR-04",
+      "front": "On what five grounds does Article 15(1) prohibit discrimination against citizens?",
+      "back": "Article 15(1) prohibits discrimination against any citizen on grounds only of religion, race, caste, sex, or place of birth (five specific grounds).",
+      "key_fact": "Article 15(1) prohibits discrimination on 5 specific grounds: religion, race, caste, sex, or place of birth.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-15"
+      ]
+    },
+    {
+      "id": "POL-FR-05",
+      "front": "Which two additional grounds of non-discrimination are included in Article 16 compared to Article 15?",
+      "back": "Article 16 adds 'descent' and 'residence' to the five Article 15 grounds, prohibiting discrimination in public employment on seven grounds.",
+      "key_fact": "Article 16 prohibits discrimination in public employment on 7 grounds, adding descent and residence.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-16"
+      ]
+    },
+    {
+      "id": "POL-FR-06",
+      "front": "Which Article abolishes untouchability and which parliamentary Acts enforce this prohibition?",
+      "back": "Article 17 abolishes untouchability and forbids its practice in any form. It is enforced by the Protection of Civil Rights Act, 1955 and the SC/ST (Prevention of Atrocities) Act, 1989.",
+      "key_fact": "Article 17 abolishes untouchability and is enforced by the Protection of Civil Rights Act, 1955.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-17"
+      ]
+    },
+    {
+      "id": "POL-FR-07",
+      "front": "What are the 6 democratic freedoms guaranteed to citizens under Article 19(1)?",
+      "back": "Speech and expression, peaceful assembly, forming associations/unions, free movement throughout India, residence/settlement in India, and practicing any profession/trade. Right to property was deleted by the 44th CAA, 1978.",
+      "key_fact": "Article 19 guarantees 6 freedoms to citizens; Right to Property was deleted by the 44th Amendment Act, 1978.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-19"
+      ]
+    },
+    {
+      "id": "POL-FR-08",
+      "front": "What three safeguards against arbitrary penal actions are provided by Article 20?",
+      "back": "Protection against ex-post facto criminal laws (Art. 20(1)), protection against double jeopardy (Art. 20(2)), and protection against compulsory self-incrimination (Art. 20(3)).",
+      "key_fact": "Article 20 protects against ex-post facto criminal law, double jeopardy, and self-incrimination.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-20"
+      ]
+    },
+    {
+      "id": "POL-FR-09",
+      "front": "Which Fundamental Rights cannot be suspended even during a National Emergency?",
+      "back": "Articles 20 and 21 cannot be suspended during any National Emergency, as mandated by the 44th Constitutional Amendment Act, 1978 under Article 359.",
+      "key_fact": "The 44th Amendment Act, 1978 prevents suspension of Articles 20 and 21 during Emergency.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "emergency"
+      ]
+    },
+    {
+      "id": "POL-FR-10",
+      "front": "Which Constitutional Amendment inserted Article 21A (Right to Education)?",
+      "back": "The 86th Constitutional Amendment Act, 2002 inserted Article 21A, guaranteeing free and compulsory education to all children aged 6 to 14 years.",
+      "key_fact": "The 86th Amendment Act, 2002 added Article 21A for free and compulsory education for ages 6 to 14.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "article-21a"
+      ]
+    },
+    {
+      "id": "POL-FR-11",
+      "front": "What are the five constitutional prerogative writs issued under Article 32 and Article 226?",
+      "back": "Habeas Corpus (to produce the body), Mandamus (we command), Prohibition (to forbid a lower court), Certiorari (to quash an illegal order), and Quo-Warranto (by what warrant or authority).",
+      "key_fact": "The five constitutional writs are Habeas Corpus, Mandamus, Prohibition, Certiorari, and Quo-Warranto.",
+      "tags": [
+        "polity",
+        "fundamental-rights",
+        "writs"
+      ]
+    },
+    {
+      "id": "POL-FR-12",
+      "front": "How did the Minerva Mills case (1980) define the relationship between Fundamental Rights and DPSPs?",
+      "back": "The Supreme Court held that the Constitution is founded on the bedrock of balance and harmony between Part III and Part IV, which forms part of the unamendable Basic Structure.",
+      "key_fact": "Minerva Mills (1980) established that harmony between Part III and Part IV is part of the Basic Structure.",
+      "tags": [
+        "polity",
+        "dpsp",
+        "landmark-cases"
+      ]
+    },
+    {
+      "id": "POL-FR-13",
+      "front": "Which Article provides for Equal Justice and Free Legal Aid, and when was it added?",
+      "back": "Article 39A provides for equal justice and free legal aid to ensure justice is not denied by economic or other disability. It was inserted into Part IV by the 42nd Amendment Act, 1976.",
+      "key_fact": "Article 39A (Free Legal Aid) was added to Part IV by the 42nd Constitutional Amendment Act, 1976.",
+      "tags": [
+        "polity",
+        "dpsp",
+        "article-39a"
+      ]
+    },
+    {
+      "id": "POL-FR-14",
+      "front": "Which committee recommended Fundamental Duties and which amendment incorporated them?",
+      "back": "The Swaran Singh Committee (1976) recommended Fundamental Duties; the 42nd Amendment Act, 1976 added 10 duties in Part IV-A under Article 51A.",
+      "key_fact": "Swaran Singh Committee recommended Fundamental Duties; 10 duties were added by the 42nd Amendment Act, 1976.",
+      "tags": [
+        "polity",
+        "fundamental-duties",
+        "swaran-singh"
+      ]
+    },
+    {
+      "id": "POL-FR-15",
+      "front": "What is the 11th Fundamental Duty and which amendment added it?",
+      "back": "The duty of a parent or guardian to provide educational opportunities to their child between ages 6 and 14, added under Article 51A(k) by the 86th Amendment Act, 2002.",
+      "key_fact": "The 86th Amendment Act, 2002 added the 11th Fundamental Duty under Article 51A(k).",
+      "tags": [
+        "polity",
+        "fundamental-duties",
+        "86th-amendment"
+      ]
+    }
+  ]
+}

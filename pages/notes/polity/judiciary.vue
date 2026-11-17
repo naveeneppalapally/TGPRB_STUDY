@@ -2078,7 +2078,7 @@ const pyqs: Pyq[] = reactive(canonicalNotePyqs([
     "correct": 0,
     "explanation": "The National Human Rights Commission (NHRC) is a statutory (non-constitutional) body established under the Protection of Human Rights Act, 1993. On the other hand, the Election Commission (Article 324), National Commission for SCs (Article 338), and National Commission for STs (Article 338A) are constitutional bodies established directly by the Constitution of India."
   }
-]))
+]).map(q => ({ ...q, revealed: false, selected: null as number | null })))
 
 const activeExamFilter = ref('all')
 const examFilters = [
