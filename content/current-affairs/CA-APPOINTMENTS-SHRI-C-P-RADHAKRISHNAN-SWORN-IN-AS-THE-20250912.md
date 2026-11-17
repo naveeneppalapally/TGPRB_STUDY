@@ -4,8 +4,8 @@ type: "current_affair"
 category: "appointments"
 exam_section: "Polity"
 topic: "15th Vice President of India"
-related_topic_ids: ["NOTE-POL-UNION-EXEC"]
-keyword_topic_ids: ["NOTE-POL-UNION-EXEC"]
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-UNION-EXEC"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-UNION-EXEC"]
 is_telangana_focus: false
 difficulty: "F"
 exam_depth: "both"

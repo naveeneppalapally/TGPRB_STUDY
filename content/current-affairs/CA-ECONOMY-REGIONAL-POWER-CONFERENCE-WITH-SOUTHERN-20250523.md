@@ -4,8 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Regional Power Conference for Southern States"
-related_topic_ids: ["NOTE-TEL-SCHEMES"]
-keyword_topic_ids: []
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-TEL-SCHEMES"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"

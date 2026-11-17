@@ -4,8 +4,8 @@ type: "current_affair"
 category: "environment"
 exam_section: "Geography"
 topic: "Environment"
-related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS"]
-keyword_topic_ids: ["NOTE-GEO-FORESTS"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS", "NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-POL-PANCHAYAT"]
 source_topic_ids: ["NOTE-GEO-DAMS", "NOTE-GEO-DRAINAGE", "NOTE-GEO-FORESTS", "NOTE-GEO-IRRIGATION", "NOTE-GEO-MOUNTAINS"]
 is_telangana_focus: false
 difficulty: "M"

@@ -4,8 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Telangana State"
-related_topic_ids: ["NOTE-TEL-MOVEMENT"]
-keyword_topic_ids: []
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-TEL-MOVEMENT"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 source_topic_ids: ["NOTE-TEL-MOVEMENT"]
 is_telangana_focus: true
 difficulty: "M"

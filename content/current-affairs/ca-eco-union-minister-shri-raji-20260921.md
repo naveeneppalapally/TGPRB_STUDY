@@ -4,8 +4,8 @@ type: "current_affair"
 category: "economy"
 exam_section: "Economy"
 topic: "Indian Economy"
-related_topic_ids: ["NOTE-GEO-DAMS"]
-keyword_topic_ids: ["NOTE-GEO-DAMS"]
+related_topic_ids: ["NOTE-GEO-DAMS", "NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-GEO-DAMS", "NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

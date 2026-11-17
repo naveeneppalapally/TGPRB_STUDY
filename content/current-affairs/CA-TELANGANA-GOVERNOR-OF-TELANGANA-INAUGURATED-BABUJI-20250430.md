@@ -4,8 +4,8 @@ type: "current_affair"
 category: "telangana"
 exam_section: "Telangana"
 topic: "Inauguration of Babuji Vanam at Kanha Shanti Vanam"
-related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-TEL-CULTURE"]
-keyword_topic_ids: []
+related_topic_ids: ["NOTE-GEO-FORESTS", "NOTE-POL-PANCHAYAT", "NOTE-TEL-CULTURE"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 is_telangana_focus: true
 difficulty: "M"
 exam_depth: "both"

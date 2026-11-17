@@ -4,8 +4,8 @@ type: "current_affair"
 category: "awards"
 exam_section: "General Studies"
 topic: "Awards and Honours"
-related_topic_ids: []
-keyword_topic_ids: []
+related_topic_ids: ["NOTE-POL-PANCHAYAT"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "si"

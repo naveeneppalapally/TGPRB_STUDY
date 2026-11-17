@@ -4,8 +4,8 @@ type: "current_affair"
 category: "international"
 exam_section: "Polity"
 topic: "Commonwealth Parliamentary Association Zone-II Conference"
-related_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
-keyword_topic_ids: ["NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+related_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
+keyword_topic_ids: ["NOTE-POL-PANCHAYAT", "NOTE-POL-UNION-EXEC", "NOTE-SCI-INNOVATION"]
 is_telangana_focus: false
 difficulty: "M"
 exam_depth: "both"
