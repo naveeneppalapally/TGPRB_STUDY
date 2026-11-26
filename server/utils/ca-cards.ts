@@ -41,6 +41,101 @@ export function istStartOfToday(now: Date): Date {
   ) - istOffset)
 }
 
+export type CAMode = 'high-yield' | 'all'
+
+export function parseCAMode(raw: unknown): CAMode {
+  return String(raw ?? 'all').trim().toLowerCase() === 'high-yield' ? 'high-yield' : 'all'
+}
+
+const CATEGORY_PYQ_WEIGHT: Record<string, number> = {
+  telangana: 5,
+  appointments: 4,
+  awards: 4,
+  defence: 4,
+  science: 3,
+  sports: 3,
+  international: 3,
+  economy: 3,
+  judiciary: 3,
+  environment: 2,
+  books: 2,
+  schemes: 1,
+}
+
+/**
+ * Deterministic exam-priority score for a current-affairs card.
+ * Higher scores surface Telangana-focus, factual difficulty, high-PYQ categories,
+ * linked study topics, and richer MCQ coverage.
+ */
+export function highYieldScore(card: CACard): number {
+  const meta = card?.meta ?? {}
+  let score = 0
+
+  const diff = String(meta.difficulty ?? '').trim().toUpperCase()
+  if (diff === 'F') score += 4
+  else if (diff === 'M') score += 2
+
+  if (meta.is_telangana_focus === true) score += 5
+
+  const cat = String(meta.category ?? '').trim().toLowerCase()
+  score += CATEGORY_PYQ_WEIGHT[cat] ?? 0
+
+  if (Array.isArray(meta.related_topic_ids) && meta.related_topic_ids.length > 0) score += 1
+  if (Array.isArray(meta.mcqs) && meta.mcqs.length >= 2) score += 1
+
+  return score
+}
+
+function compareHighYield(a: CACard, b: CACard): number {
+  const scoreDiff = highYieldScore(b) - highYieldScore(a)
+  if (scoreDiff !== 0) return scoreDiff
+  const idA = String(a?.id ?? '')
+  const idB = String(b?.id ?? '')
+  return idA < idB ? -1 : idA > idB ? 1 : 0
+}
+
+function isHighPriorityCard(card: CACard): boolean {
+  const meta = card?.meta ?? {}
+  return meta.is_telangana_focus === true || String(meta.difficulty ?? '').trim().toUpperCase() === 'F'
+}
+
+/**
+ * Select the daily High-Yield subset (typically 5-7 cards/day, up to 8 when a
+ * day has >7 Telangana-focus or difficulty-'F' cards). Does not mutate `cards`.
+ */
+export function selectHighYieldCards(cards: readonly CACard[]): CACard[] {
+  const byDay = new Map<string, CACard[]>()
+
+  for (const card of cards) {
+    const key = entryDate(card)
+    let bucket = byDay.get(key)
+    if (!bucket) {
+      bucket = []
+      byDay.set(key, bucket)
+    }
+    bucket.push(card)
+  }
+
+  const dayKeys = Array.from(byDay.keys()).sort((a, b) => (a > b ? -1 : a < b ? 1 : 0))
+  const selected: CACard[] = []
+
+  for (const key of dayKeys) {
+    const dayCards = byDay.get(key)!
+    const sorted = [...dayCards].sort(compareHighYield)
+    const priorityCount = dayCards.filter(isHighPriorityCard).length
+    const cap = priorityCount > 7 ? 8 : 7
+    const qualified = sorted.filter(c => highYieldScore(c) >= 5)
+
+    if (qualified.length >= 5) {
+      selected.push(...qualified.slice(0, cap))
+    } else {
+      selected.push(...sorted.slice(0, Math.min(5, sorted.length)))
+    }
+  }
+
+  return selected
+}
+
 export function windowCutoff(window: string, now: Date): Date | null {
   switch (window) {
     case '1D':

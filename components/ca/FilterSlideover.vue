@@ -42,6 +42,27 @@
           </div>
         </section>
 
+        <!-- Month -->
+        <section v-if="monthRows.length">
+          <h3 class="eyebrow mb-2">Month</h3>
+          <div class="grid grid-cols-2 gap-1.5">
+            <button
+              v-for="m in monthRows"
+              :key="m.id"
+              type="button"
+              class="press flex min-h-[44px] items-center justify-between gap-2 rounded-lg border px-3 py-2 text-left transition-colors"
+              :class="month === m.id
+                ? 'border-saffron-500/50 bg-[var(--accent-soft)]'
+                : 'b-line bg-sub hover:border-[var(--line-strong)]'"
+              :aria-pressed="month === m.id"
+              @click="toggleMonth(m.id)"
+            >
+              <span class="truncate text-xs font-medium t-hi">{{ m.label }}</span>
+              <span class="num font-mono text-[11px] t-lo">{{ m.count }}</span>
+            </button>
+          </div>
+        </section>
+
         <!-- Telangana-only toggle -->
         <section>
           <button
@@ -194,6 +215,7 @@ interface Facets {
   sections: Record<string, number>
   difficulties: Record<string, number>
   depths: Record<string, number>
+  months?: Record<string, number>
 }
 
 const props = defineProps<{ facets: Facets | null }>()
@@ -201,6 +223,7 @@ defineEmits<{ reset: [] }>()
 
 const open = defineModel<boolean>('open', { default: false })
 const windowModel = defineModel<string>('window', { default: '' })
+const month = defineModel<string>('month', { default: '' })
 const category = defineModel<string>('category', { default: '' })
 const section = defineModel<string>('section', { default: '' })
 const difficulty = defineModel<string>('difficulty', { default: '' })
@@ -218,6 +241,23 @@ const windowOptions = [
   { value: '6M', label: 'Hot zone (6 months)' },
   { value: '1Y', label: 'Last year' },
 ]
+
+const MONTH_SHORT = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+]
+
+function formatMonthLabel(key: string): string {
+  const [y, m] = key.split('-').map(Number)
+  if (!y || !m || m < 1 || m > 12) return key
+  return `${MONTH_SHORT[m - 1]} ${y}`
+}
+
+const monthRows = computed(() =>
+  Object.entries(props.facets?.months ?? {})
+    .sort(([a], [b]) => b.localeCompare(a))
+    .map(([id, count]) => ({ id, label: formatMonthLabel(id), count })),
+)
 
 const categoryRows = computed(() =>
   Object.entries(props.facets?.categories ?? {})
@@ -242,6 +282,10 @@ const difficultyOptions = computed(() => [
   { value: 'M', label: 'Medium', count: props.facets?.difficulties?.M ?? 0 },
   { value: 'O', label: 'Hard', count: props.facets?.difficulties?.O ?? 0 },
 ])
+
+function toggleMonth(id: string) {
+  month.value = month.value === id ? '' : id
+}
 
 function toggleCategory(id: string) {
   category.value = category.value === id ? '' : id

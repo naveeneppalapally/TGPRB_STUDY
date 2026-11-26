@@ -50,27 +50,36 @@ def extract_existing_ids(content: str) -> set:
                 break
     return ids
 
-def update_related_topic_ids_in_content(content: str, new_ids: list) -> str:
-    new_line = f'related_topic_ids: {json.dumps(sorted(new_ids))}'
-    
-    # 1. Flow style JSON array: related_topic_ids: [...]
-    if re.search(r'related_topic_ids:[ \t]*\[[^\]]*\]', content):
-        return re.sub(r'related_topic_ids:[ \t]*\[[^\]]*\]', new_line, content, count=1)
-    
+def update_topic_list_field(content: str, field: str, new_ids: list, anchor_field: str = 'topic') -> str:
+    """Replace or insert a frontmatter topic-ID list field in flow JSON format."""
+    new_line = f'{field}: {json.dumps(sorted(new_ids))}'
+    escaped = re.escape(field)
+
+    # 1. Flow style JSON array: <field>: [...]
+    flow_pattern = rf'^{escaped}:[ \t]*\[[^\]]*\]'
+    if re.search(flow_pattern, content, re.MULTILINE):
+        return re.sub(flow_pattern, lambda _: new_line, content, count=1, flags=re.MULTILINE)
+
     # 2. Block YAML list: each item line must start with hyphen
-    block_pattern = r'related_topic_ids:(?:[ \t]*\r?\n[ \t]*-[^\r\n]*)+'
-    if re.search(block_pattern, content):
-        return re.sub(block_pattern, new_line, content, count=1)
-    
-    # 3. Simple bare line: related_topic_ids:
-    if re.search(r'related_topic_ids:[ \t]*(?:\r?\n|$)', content):
-        return re.sub(r'related_topic_ids:[ \t]*(?:\r?\n|$)', new_line + '\n', content, count=1)
-    
-    # 4. If missing, insert after topic:
-    if re.search(r'(topic:[^\r\n]*\r?\n)', content):
-        return re.sub(r'(topic:[^\r\n]*\r?\n)', r'\1' + new_line + '\n', content, count=1)
-    
+    block_pattern = rf'^{escaped}:(?:[ \t]*\r?\n[ \t]*-[^\r\n]*)+'
+    if re.search(block_pattern, content, re.MULTILINE):
+        return re.sub(block_pattern, lambda _: new_line, content, count=1, flags=re.MULTILINE)
+
+    # 3. Simple bare line: <field>:
+    bare_pattern = rf'^{escaped}:[ \t]*(?:\r?\n|$)'
+    if re.search(bare_pattern, content, re.MULTILINE):
+        return re.sub(bare_pattern, lambda _: new_line + '\n', content, count=1, flags=re.MULTILINE)
+
+    # 4. If missing, insert after anchor_field:
+    anchor_pattern = rf'(^{re.escape(anchor_field)}:[^\r\n]*\r?\n)'
+    if re.search(anchor_pattern, content, re.MULTILINE):
+        return re.sub(anchor_pattern, lambda m: m.group(1) + new_line + '\n', content, count=1, flags=re.MULTILINE)
+
     return content
+
+
+def update_related_topic_ids_in_content(content: str, new_ids: list) -> str:
+    return update_topic_list_field(content, 'related_topic_ids', new_ids, anchor_field='topic')
 
 def resolve_tags(fields, compiled_keywords, alias_to_canonical, known_ids):
     normalize = lambda values: {alias_to_canonical.get(value, value) for value in values if alias_to_canonical.get(value, value) in known_ids}
@@ -148,11 +157,7 @@ def run_sync():
                 topic_card_counts[canonical_id] += 1
 
         updated_content = update_related_topic_ids_in_content(original_content, list(current_ids))
-        new_keywords = 'keyword_topic_ids: ' + json.dumps(sorted(keyword_ids))
-        if re.search(r'^keyword_topic_ids:.*$', updated_content, re.MULTILINE):
-            updated_content = re.sub(r'^keyword_topic_ids:.*$', new_keywords, updated_content, flags=re.MULTILINE)
-        else:
-            updated_content = re.sub(r'^(related_topic_ids:.*)$', r'\1\n' + new_keywords, updated_content, count=1, flags=re.MULTILINE)
+        updated_content = update_topic_list_field(updated_content, 'keyword_topic_ids', list(keyword_ids), anchor_field='related_topic_ids')
         if updated_content != original_content:
             with open(fpath, 'w', encoding='utf-8') as f:
                 f.write(updated_content)

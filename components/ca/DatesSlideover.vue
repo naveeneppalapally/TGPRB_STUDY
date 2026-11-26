@@ -8,7 +8,9 @@
             <UIcon name="i-heroicons-calendar-days" class="h-3 w-3" />
             Browse by date
           </p>
-          <p class="text-body-xs t-lo">Every day with current-affairs cards</p>
+          <p class="text-body-xs t-lo">
+            {{ props.mode === 'high-yield' ? 'High-yield picks per day (5-8/day)' : 'Every day with current-affairs cards' }}
+          </p>
         </div>
         <UButton
           icon="i-heroicons-x-mark"
@@ -42,7 +44,16 @@
         <!-- Date rows grouped by month -->
         <template v-else-if="groups.length">
           <section v-for="g in groups" :key="g.key" class="mb-5">
-            <h3 class="eyebrow mb-2">{{ g.label }}</h3>
+            <div class="mb-2 flex items-center justify-between gap-2">
+              <h3 class="eyebrow">{{ g.label }}</h3>
+              <button
+                type="button"
+                class="press inline-flex min-h-[36px] items-center gap-1 rounded-md border b-line bg-elev px-2.5 py-1 font-mono text-[11px] font-medium accent transition-colors hover:border-saffron-500/50"
+                @click="selectMonth(g.key)"
+              >
+                All month ({{ g.totalCount }})
+              </button>
+            </div>
             <div class="flex flex-col gap-1">
               <button
                 v-for="d in g.rows"
@@ -79,11 +90,23 @@
 <script setup lang="ts">
 interface DateRow { date: string, count: number, tgCount: number }
 
+const props = withDefaults(defineProps<{
+  mode?: 'high-yield' | 'all'
+}>(), {
+  mode: 'all',
+})
+
 const open = defineModel<boolean>('open', { default: false })
-const emit = defineEmits<{ select: [date: string] }>()
+const emit = defineEmits<{ select: [date: string], selectMonth: [month: string] }>()
+
+const modeRef = toRef(props, 'mode')
 
 const { data, pending, error, refresh } = await useFetch('/api/ca/dates', {
   key: 'ca-dates-panel',
+  query: computed(() => ({
+    mode: modeRef.value === 'high-yield' ? 'high-yield' : undefined,
+  })),
+  watch: [modeRef],
 })
 
 const MONTHS = [
@@ -93,13 +116,15 @@ const MONTHS = [
 
 const groups = computed(() => {
   const rows: DateRow[] = (data.value as any)?.dates ?? []
-  const map = new Map<string, { key: string, label: string, rows: DateRow[] }>()
+  const map = new Map<string, { key: string, label: string, totalCount: number, rows: DateRow[] }>()
   for (const d of rows) {
     const [y, m] = d.date.split('-').map(Number)
     if (!y || !m) continue
     const key = `${y}-${String(m).padStart(2, '0')}`
-    if (!map.has(key)) map.set(key, { key, label: `${MONTHS[m - 1]} ${y}`, rows: [] })
-    map.get(key)!.rows.push(d)
+    if (!map.has(key)) map.set(key, { key, label: `${MONTHS[m - 1]} ${y}`, totalCount: 0, rows: [] })
+    const entry = map.get(key)!
+    entry.totalCount += d.count
+    entry.rows.push(d)
   }
   // Newest month first, rows inside each month stay newest first
   return [...map.values()].sort((a, b) => (a.key < b.key ? 1 : -1))
@@ -115,6 +140,11 @@ function formatRow(dateStr: string): string {
 
 function select(dateStr: string) {
   emit('select', dateStr)
+  open.value = false
+}
+
+function selectMonth(monthStr: string) {
+  emit('selectMonth', monthStr)
   open.value = false
 }
 </script>

@@ -43,10 +43,11 @@
           size="lg"
           icon="i-heroicons-academic-cap"
           class="press min-h-[44px]"
+          :loading="drillLoading"
           :disabled="!drillTarget"
           @click="startDrill"
         >
-          Start drill
+          {{ month ? 'Drill month' : 'Start drill' }}
         </UButton>
         <UButton
           color="gray"
@@ -66,6 +67,64 @@
       ref="filterBarRef"
       class="sticky top-14 z-30 -mx-4 border-b b-line bg-base-85 px-4 backdrop-blur sm:-mx-6 sm:px-6"
     >
+      <!-- Feed density mode toggle: High-Yield (5-8/day) vs Full Feed -->
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b b-line py-2">
+        <div
+          role="radiogroup"
+          aria-label="Feed density view"
+          class="inline-flex w-full items-center gap-1 rounded-xl border b-line bg-elev p-1 sm:w-auto"
+        >
+          <button
+            type="button"
+            role="radio"
+            :aria-checked="mode === 'high-yield'"
+            title="Top 5-8 exam-critical cards per day when short on time"
+            class="press inline-flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors sm:flex-initial"
+            :class="mode === 'high-yield'
+              ? 'bg-saffron-600 text-white shadow-sm'
+              : 't-mid hover:t-hi'"
+            @click="setMode('high-yield')"
+          >
+            <UIcon name="i-heroicons-bolt" class="h-4 w-4 shrink-0" />
+            <span>High-Yield</span>
+            <span
+              class="num rounded px-1.5 py-0.5 font-mono text-[10px]"
+              :class="mode === 'high-yield' ? 'bg-white/20 text-white' : 'bg-sub t-lo'"
+            >
+              5-8/d
+            </span>
+          </button>
+          <button
+            type="button"
+            role="radio"
+            :aria-checked="mode === 'all'"
+            title="All daily PIB cards (~15-20+/day)"
+            class="press inline-flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors sm:flex-initial"
+            :class="mode === 'all'
+              ? 'bg-saffron-600 text-white shadow-sm'
+              : 't-mid hover:t-hi'"
+            @click="setMode('all')"
+          >
+            <UIcon name="i-heroicons-queue-list" class="h-4 w-4 shrink-0" />
+            <span>Full Feed</span>
+            <span
+              class="num rounded px-1.5 py-0.5 font-mono text-[10px]"
+              :class="mode === 'all' ? 'bg-white/20 text-white' : 'bg-sub t-lo'"
+            >
+              All
+            </span>
+          </button>
+        </div>
+
+        <p
+          v-if="mode === 'high-yield'"
+          class="flex flex-wrap items-center gap-1.5 text-xs t-mid"
+        >
+          <span class="chip chip-saffron chip-mono">High-Yield active</span>
+          <span>Top 5-8 exam-critical cards per day</span>
+        </p>
+      </div>
+
       <div class="flex flex-wrap items-center gap-2 py-2.5">
         <!-- Search (300ms debounce into q) -->
         <div class="relative w-full sm:w-auto sm:min-w-[240px] sm:flex-1">
@@ -100,6 +159,19 @@
             <option value="oldest">Oldest first</option>
             <option value="tg">Telangana first</option>
             <option value="hardest">Hardest first</option>
+          </select>
+
+          <!-- Month filter -->
+          <label for="ca-month" class="sr-only">Filter by month</label>
+          <select
+            id="ca-month"
+            v-model="month"
+            class="h-11 min-h-[44px] rounded-lg border b-line bg-elev px-3 text-xs font-medium t-hi focus:border-saffron-500 focus:outline-none"
+          >
+            <option value="">All months</option>
+            <option v-for="m in monthOptions" :key="m.id" :value="m.id">
+              {{ m.label }} ({{ m.count }})
+            </option>
           </select>
 
           <!-- Dates slideover -->
@@ -227,7 +299,7 @@
         </section>
 
         <!-- Load more -->
-        <div v-if="items.length < total" class="py-6 text-center">
+        <div v-if="items.length < total" class="flex flex-wrap items-center justify-center gap-2 py-6 text-center">
           <UButton
             color="primary"
             size="md"
@@ -237,6 +309,17 @@
           >
             Load more
             <span class="text-white/80">({{ total - items.length }} remaining)</span>
+          </UButton>
+          <UButton
+            v-if="month && total - items.length <= 500"
+            color="gray"
+            variant="soft"
+            size="md"
+            class="min-h-[44px] font-semibold"
+            :loading="loadingAllMonth"
+            @click="loadAllMonth"
+          >
+            Show all {{ total }} in {{ formatMonthLabel(month) }}
           </UButton>
         </div>
         <p v-else class="py-4 text-center text-xs font-medium t-lo">
@@ -264,9 +347,20 @@
         <UIcon name="i-heroicons-newspaper" class="mx-auto mb-3 h-10 w-10 t-lo" />
         <h3 class="mb-1 text-base font-semibold t-hi">No current affairs found</h3>
         <p class="mb-4 text-sm t-mid">Try a different search term, a broader timeframe, or clear your filters.</p>
-        <UButton color="primary" variant="soft" class="min-h-[44px]" @click="resetAllFilters">
-          Reset all filters
-        </UButton>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <UButton color="primary" variant="soft" class="min-h-[44px]" @click="resetAllFilters">
+            Reset all filters
+          </UButton>
+          <UButton
+            v-if="mode === 'high-yield'"
+            color="gray"
+            variant="soft"
+            class="min-h-[44px]"
+            @click="setMode('all')"
+          >
+            Switch to Full Feed
+          </UButton>
+        </div>
       </div>
     </section>
 
@@ -274,6 +368,7 @@
     <CaFilterSlideover
       v-model:open="filtersOpen"
       v-model:window="windowVal"
+      v-model:month="month"
       v-model:category="category"
       v-model:section="section"
       v-model:difficulty="difficulty"
@@ -284,7 +379,9 @@
     />
     <CaDatesSlideover
       v-model:open="datesOpen"
+      :mode="mode"
       @select="onSelectDate"
+      @select-month="onSelectMonth"
     />
 
     <!-- 13. Drill modal -->
@@ -329,9 +426,12 @@ const section = ref('')
 const difficulty = ref('')
 const depth = ref('')
 const windowVal = ref('')
+const month = ref('')
 const date = ref('')
 const tg = ref(false)
 const sort = ref<'newest' | 'oldest' | 'tg' | 'hardest'>('newest')
+const mode = ref<'high-yield' | 'all'>('all')
+const hasExplicitModeQuery = ref(false)
 const page = ref(1)
 
 const filtersOpen = ref(false)
@@ -352,15 +452,23 @@ function str(v: unknown): string {
   difficulty.value = str(qr.difficulty)
   depth.value = str(qr.depth)
   windowVal.value = str(qr.window)
+  const qmon = str(qr.month).trim()
+  if (/^\d{4}-\d{2}$/.test(qmon)) month.value = qmon
   date.value = str(qr.date)
   tg.value = str(qr.tg) === '1' || str(qr.tg) === 'true'
   const qs = str(qr.sort)
   if (qs === 'newest' || qs === 'oldest' || qs === 'tg' || qs === 'hardest') sort.value = qs
+  const qm = str(qr.mode).trim().toLowerCase()
+  if (qm === 'high-yield' || qm === 'all') {
+    hasExplicitModeQuery.value = true
+    mode.value = qm
+  }
 }
 
 // 9. URL sync: write filter state back to the query string (omitting defaults).
-watch([q, category, section, difficulty, depth, windowVal, date, tg, sort], () => {
+watch([q, category, section, difficulty, depth, windowVal, month, date, tg, sort, mode], () => {
   page.value = 1
+  drillOverrideItems.value = null
   const query: Record<string, string> = {}
   if (q.value) query.q = q.value
   if (category.value) query.category = category.value
@@ -368,15 +476,33 @@ watch([q, category, section, difficulty, depth, windowVal, date, tg, sort], () =
   if (difficulty.value) query.difficulty = difficulty.value
   if (depth.value) query.depth = depth.value
   if (windowVal.value) query.window = windowVal.value
+  if (month.value) query.month = month.value
   if (date.value) query.date = date.value
   if (tg.value) query.tg = '1'
   if (sort.value !== 'newest') query.sort = sort.value
+  if (mode.value === 'high-yield') query.mode = 'high-yield'
   router.replace({ query }).catch(() => {})
 })
 
-// An exact date and a timeframe window are mutually exclusive.
-watch(windowVal, (v) => { if (v) date.value = '' })
-watch(date, (v) => { if (v) windowVal.value = '' })
+// An exact date, a month, and a timeframe window are mutually exclusive.
+watch(windowVal, (v) => {
+  if (v) {
+    date.value = ''
+    month.value = ''
+  }
+})
+watch(month, (v) => {
+  if (v) {
+    date.value = ''
+    windowVal.value = ''
+  }
+})
+watch(date, (v) => {
+  if (v) {
+    windowVal.value = ''
+    month.value = ''
+  }
+})
 
 // Search debounce (manual setTimeout pattern, 300ms)
 let debounceTimer: ReturnType<typeof setTimeout> | null = null
@@ -400,22 +526,28 @@ onBeforeUnmount(() => {
 // ---------------------------------------------------------------------------
 // 7. Server-paginated feed with page accumulation
 // ---------------------------------------------------------------------------
+const baseFeedQuery = computed(() => ({
+  q: q.value || undefined,
+  category: category.value || undefined,
+  section: section.value || undefined,
+  difficulty: difficulty.value || undefined,
+  depth: depth.value || undefined,
+  window: windowVal.value || undefined,
+  month: month.value || undefined,
+  date: date.value || undefined,
+  tg: tg.value ? '1' : undefined,
+  mode: mode.value === 'high-yield' ? 'high-yield' : undefined,
+  sort: sort.value,
+}))
+
 const { data, pending, error, refresh } = await useFetch('/api/ca/feed', {
   key: 'ca-feed-page',
   query: computed(() => ({
-    q: q.value || undefined,
-    category: category.value || undefined,
-    section: section.value || undefined,
-    difficulty: difficulty.value || undefined,
-    depth: depth.value || undefined,
-    window: windowVal.value || undefined,
-    date: date.value || undefined,
-    tg: tg.value ? '1' : undefined,
-    sort: sort.value,
+    ...baseFeedQuery.value,
     page: page.value,
     limit: PAGE_SIZE,
   })),
-  watch: [q, category, section, difficulty, depth, windowVal, date, tg, sort, page],
+  watch: [q, category, section, difficulty, depth, windowVal, month, date, tg, sort, mode, page],
 })
 
 const items = ref<any[]>([])
@@ -529,6 +661,19 @@ if (import.meta.client) {
   }
 }
 
+function setMode(next: 'high-yield' | 'all'): void {
+  if (mode.value === next) return
+  page.value = 1
+  mode.value = next
+  if (import.meta.client) {
+    try {
+      localStorage.setItem('tgprb:ca:mode', next)
+    } catch {
+      // Storage blocked
+    }
+  }
+}
+
 function toggleDensity(): void {
   density.value = density.value === 'compact' ? 'comfortable' : 'compact'
   if (import.meta.client) {
@@ -553,10 +698,23 @@ const activeFilterCount = computed(() => {
   if (difficulty.value) n++
   if (depth.value) n++
   if (windowVal.value) n++
+  if (month.value) n++
   if (date.value) n++
   if (tg.value) n++
   return n
 })
+
+function formatMonthLabel(key: string): string {
+  const [y, m] = key.split('-').map(Number)
+  if (!y || !m || m < 1 || m > 12) return key
+  return `${MONTH_SHORT[m - 1]} ${y}`
+}
+
+const monthOptions = computed(() =>
+  Object.entries((facets.value as any)?.months ?? {})
+    .sort(([a], [b]) => b.localeCompare(a))
+    .map(([id, count]) => ({ id, label: formatMonthLabel(id), count: Number(count) })),
+)
 
 interface ActiveChip {
   key: string
@@ -578,6 +736,7 @@ const activeChips = computed<ActiveChip[]>(() => {
     const wl = ({ '1D': 'Today', '7D': 'This week', '1M': 'This month', '6M': 'Hot zone', '1Y': 'Last year' } as Record<string, string>)[windowVal.value] ?? windowVal.value
     chips.push({ key: 'window', label: `Timeframe: ${wl}`, onRemove: () => { windowVal.value = '' } })
   }
+  if (month.value) chips.push({ key: 'month', label: `Month: ${formatMonthLabel(month.value)}`, onRemove: () => { month.value = '' } })
   if (date.value) chips.push({ key: 'date', label: `Date: ${date.value}`, onRemove: () => { date.value = '' } })
   if (tg.value) chips.push({ key: 'tg', label: 'Telangana focus', onRemove: () => { tg.value = false } })
   return chips
@@ -590,6 +749,7 @@ function resetAllFilters(): void {
   difficulty.value = ''
   depth.value = ''
   windowVal.value = ''
+  month.value = ''
   date.value = ''
   tg.value = false
   sort.value = 'newest'
@@ -597,6 +757,13 @@ function resetAllFilters(): void {
 
 function onSelectDate(d: string): void {
   date.value = d
+  month.value = ''
+  windowVal.value = ''
+}
+
+function onSelectMonth(m: string): void {
+  month.value = m
+  date.value = ''
   windowVal.value = ''
 }
 
@@ -622,8 +789,23 @@ function measureFilterBar(): void {
 }
 
 onMounted(() => {
+  if (!hasExplicitModeQuery.value) {
+    try {
+      const storedMode = localStorage.getItem('tgprb:ca:mode')
+      if (storedMode === 'high-yield') {
+        page.value = 1
+        mode.value = 'high-yield'
+      }
+    } catch {
+      // Storage blocked
+    }
+  }
   measureFilterBar()
   window.addEventListener('resize', measureFilterBar, { passive: true })
+})
+
+watch([mode, () => activeChips.value.length], () => {
+  nextTick(measureFilterBar)
 })
 
 onBeforeUnmount(() => {
@@ -635,19 +817,59 @@ onBeforeUnmount(() => {
 // ---------------------------------------------------------------------------
 
 const drillOpen = ref(false)
+const drillLoading = ref(false)
+const loadingAllMonth = ref(false)
 const drillIndex = ref(0)
 const drillScore = ref(0)
 const drillWrong = ref(0)
+const drillOverrideItems = ref<any[] | null>(null)
 
 interface DrillItem {
   item: any
   mcqIndex: number
 }
 
-// Flatten every MCQ of every card in the current filtered, loaded set.
+async function fetchAllFilteredCards(): Promise<any[]> {
+  const allItems: any[] = []
+  const seen = new Set<string>()
+  let p = 1
+  let pages = 1
+  while (p <= pages) {
+    const res: any = await $fetch('/api/ca/feed', {
+      query: { ...baseFeedQuery.value, page: p, limit: 500 },
+    })
+    const batch = Array.isArray(res?.items) ? res.items : []
+    for (const item of batch) {
+      if (!seen.has(item.id)) {
+        seen.add(item.id)
+        allItems.push(item)
+      }
+    }
+    pages = Math.max(Number(res?.totalPages) || 1, 1)
+    if (batch.length === 0) break
+    p += 1
+  }
+  return allItems
+}
+
+async function loadAllMonth(): Promise<void> {
+  if (loadingAllMonth.value || !month.value) return
+  loadingAllMonth.value = true
+  try {
+    const allItems = await fetchAllFilteredCards()
+    if (allItems.length) {
+      items.value = allItems
+    }
+  } finally {
+    loadingAllMonth.value = false
+  }
+}
+
+// Flatten every MCQ of every card in the current filtered set.
 const drillQuestions = computed<DrillItem[]>(() => {
   const out: DrillItem[] = []
-  for (const item of items.value) {
+  const source = drillOverrideItems.value ?? items.value
+  for (const item of source) {
     const mcqs = Array.isArray(item?.meta?.mcqs) ? item.meta.mcqs : []
     mcqs.forEach((mcq: any, mcqIndex: number) => {
       if (mcq && mcq.question && Array.isArray(mcq.options) && mcq.options.length >= 2) {
@@ -660,8 +882,19 @@ const drillQuestions = computed<DrillItem[]>(() => {
 
 const drillTarget = computed(() => drillQuestions.value.length > 0)
 
-function startDrill(): void {
-  if (!drillTarget.value) return
+async function startDrill(): Promise<void> {
+  if (!drillTarget.value || drillLoading.value) return
+  if (items.value.length < total.value && (month.value || date.value || total.value <= 600)) {
+    drillLoading.value = true
+    try {
+      const allItems = await fetchAllFilteredCards()
+      if (allItems.length) drillOverrideItems.value = allItems
+    } finally {
+      drillLoading.value = false
+    }
+  } else {
+    drillOverrideItems.value = null
+  }
   drillIndex.value = 0
   drillScore.value = 0
   drillWrong.value = 0

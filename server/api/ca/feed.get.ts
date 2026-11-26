@@ -1,5 +1,13 @@
 import { defineEventHandler, getQuery } from 'h3'
-import { CA_CARDS, entryDate, entryTime, istStartOfToday, windowCutoff } from '~/server/utils/ca-cards'
+import {
+  CA_CARDS,
+  entryDate,
+  entryTime,
+  istStartOfToday,
+  parseCAMode,
+  selectHighYieldCards,
+  windowCutoff,
+} from '~/server/utils/ca-cards'
 
 /**
  * Full-featured current-affairs feed for /current-affairs.
@@ -13,11 +21,13 @@ import { CA_CARDS, entryDate, entryTime, istStartOfToday, windowCutoff } from '~
  *   difficulty one of F | M | O
  *   depth      exact case-insensitive match on meta.exam_depth
  *   window     ALL | 1D | 7D | 1M | 6M | 1Y (entryDate >= cutoff)
- *   date       exact YYYY-MM-DD match on entryDate (takes precedence over window)
+ *   month      exact YYYY-MM match on entryDate (takes precedence over window)
+ *   date       exact YYYY-MM-DD match on entryDate (takes precedence over month/window)
  *   tg         '1' keeps only is_telangana_focus === true
+ *   mode       all (default) | high-yield
  *   sort       newest (default) | oldest | tg | hardest
  *   page       default 1
- *   limit      default 30, clamped 1-100
+ *   limit      default 30, clamped 1-500
  *
  * Facets are context-aware: every count reflects all active filters EXCEPT its
  * own group. Selecting timeframe=Today turns the category numbers into Today's
@@ -33,7 +43,9 @@ const DIFFICULTY_RANK: Record<string, number> = { O: 0, M: 1, F: 2 }
  * so, for example, category counts respond to the timeframe filter but not to
  * which category is currently selected.
  */
-type FacetGroup = 'category' | 'section' | 'difficulty' | 'depth'
+type FacetGroup = 'category' | 'section' | 'difficulty' | 'depth' | 'month'
+
+const MONTH_RE = /^\d{4}-\d{2}$/
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
@@ -45,13 +57,16 @@ export default defineEventHandler(async (event) => {
   const difficulty = ['F', 'M', 'O'].includes(difficultyRaw) ? difficultyRaw : ''
   const depth = String(query.depth ?? '').trim().toLowerCase()
   const windowRaw = String(query.window ?? 'ALL').trim().toUpperCase()
+  const monthRaw = String(query.month ?? '').trim()
+  const month = MONTH_RE.test(monthRaw) ? monthRaw : ''
   const date = String(query.date ?? '').trim()
   const tgOnly = String(query.tg ?? '') === '1'
+  const mode = parseCAMode(query.mode)
   const sort = String(query.sort ?? 'newest').trim().toLowerCase()
   const page = Math.max(Math.floor(Number(query.page) || 1), 1)
-  const limit = Math.min(Math.max(Math.floor(Number(query.limit) || 30), 1), 100)
+  const limit = Math.min(Math.max(Math.floor(Number(query.limit) || 30), 1), 500)
 
-  const all = CA_CARDS as any[]
+  const all = (mode === 'high-yield' ? selectHighYieldCards(CA_CARDS) : CA_CARDS) as any[]
 
   const now = new Date()
   const todayStart = istStartOfToday(now).getTime()
@@ -66,6 +81,7 @@ export default defineEventHandler(async (event) => {
   const allCategories = new Set<string>()
   const allSections = new Set<string>()
   const allDepths = new Set<string>()
+  const allMonths = new Set<string>()
 
   for (const e of all as any[]) {
     const meta = e.meta ?? {}
@@ -81,9 +97,11 @@ export default defineEventHandler(async (event) => {
     if (sec) allSections.add(sec)
     const dep = String(meta.exam_depth ?? '').trim().toLowerCase()
     if (dep) allDepths.add(dep)
+    const mon = entryDate(e).slice(0, 7)
+    if (MONTH_RE.test(mon)) allMonths.add(mon)
   }
 
-  const cutoff = date ? null : windowCutoff(windowRaw, now)
+  const cutoff = (date || month) ? null : windowCutoff(windowRaw, now)
 
   /**
    * Context-aware match.
@@ -105,10 +123,14 @@ export default defineEventHandler(async (event) => {
     if (skipGroup !== 'difficulty' && difficulty && String(meta.difficulty ?? '').toUpperCase() !== difficulty) return false
     if (skipGroup !== 'depth' && depth && String(meta.exam_depth ?? '').toLowerCase() !== depth) return false
     if (tgOnly && meta.is_telangana_focus !== true) return false
-    if (date) {
-      if (entryDate(e) !== date) return false
-    } else if (cutoff) {
-      if (entryTime(e) < cutoff.getTime()) return false
+    if (skipGroup !== 'month') {
+      if (date) {
+        if (entryDate(e) !== date) return false
+      } else if (month) {
+        if (entryDate(e).slice(0, 7) !== month) return false
+      } else if (cutoff) {
+        if (entryTime(e) < cutoff.getTime()) return false
+      }
     }
     return true
   }
@@ -123,6 +145,8 @@ export default defineEventHandler(async (event) => {
       for (const key of allCategories) out[key] = 0
     } else if (group === 'section') {
       for (const key of allSections) out[key] = 0
+    } else if (group === 'month') {
+      for (const key of Array.from(allMonths).sort((a, b) => b.localeCompare(a))) out[key] = 0
     } else {
       for (const key of allDepths) out[key] = 0
     }
@@ -133,6 +157,11 @@ export default defineEventHandler(async (event) => {
       if (group === 'difficulty') {
         const diff = String(meta.difficulty ?? '').trim().toUpperCase()
         if (diff === 'F' || diff === 'M' || diff === 'O') out[diff] += 1
+        continue
+      }
+      if (group === 'month') {
+        const mon = entryDate(e).slice(0, 7)
+        if (MONTH_RE.test(mon)) out[mon] = (out[mon] ?? 0) + 1
         continue
       }
       const key = group === 'category'
@@ -149,6 +178,7 @@ export default defineEventHandler(async (event) => {
   const sections = facetCounts('section')
   const difficulties = facetCounts('difficulty')
   const depths = facetCounts('depth')
+  const months = facetCounts('month')
 
   // Result set: the full filter, no group skipped.
   const filtered = (all as any[]).filter(e => matches(e))
@@ -184,6 +214,6 @@ export default defineEventHandler(async (event) => {
     page,
     totalPages,
     stats,
-    facets: { categories, sections, difficulties, depths },
+    facets: { categories, sections, difficulties, depths, months },
   }
 })
