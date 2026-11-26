@@ -1,13 +1,13 @@
 import { defineEventHandler } from 'h3'
-import { CA_CARDS } from '~/server/utils/ca-cards'
+import { getCACards } from '~/server/utils/ca-cards'
 
 /**
  * Dashboard current-affairs briefs.
  * Serves the homepage strip (TG focus first, then newest) plus counts,
  * so the client never loads the Nuxt Content query engine.
  */
-export default defineEventHandler(() => {
-  const all = CA_CARDS
+export default defineEventHandler(async (event) => {
+  const all = await getCACards(event)
 
   const sorted = [...all].sort(
     (a: any, b: any) => new Date(b.meta?.date ?? 0).getTime() - new Date(a.meta?.date ?? 0).getTime(),
@@ -18,7 +18,7 @@ export default defineEventHandler(() => {
   // "Today" in IST, matching the student-facing review-day convention.
   const todayIST = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kolkata' }).format(new Date())
 
-  const slim = (e: (typeof CA_CARDS)[number]) => ({
+  const slim = (e: (typeof all)[number]) => ({
     id: e.id,
     meta: {
       headline: String(e.meta?.headline || ''),

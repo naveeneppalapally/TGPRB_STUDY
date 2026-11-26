@@ -27,6 +27,32 @@ const ROOT = process.cwd()
 const CONTENT_DIR = resolve(ROOT, 'content/current-affairs')
 const OUT_DIR = resolve(ROOT, 'content/data/ca')
 const OUT_FILE = join(OUT_DIR, 'cards.json')
+const RUNTIME_DIR = resolve(ROOT, 'public/_ca')
+const RUNTIME_FILE = join(RUNTIME_DIR, 'cards-runtime.json')
+
+// Non-runtime scraper provenance keys that can be omitted from the edge worker
+// payload while staying present in markdown sources and cards.json.
+const RUNTIME_OMIT_META_KEYS = new Set([
+  'retrieved_at',
+  'extraction_model',
+  'event_key',
+  'event_date_basis',
+  'source_topic_ids',
+  'keyword_topic_ids',
+  'ministry',
+  'topic',
+  'type',
+])
+
+function slimRuntimeMeta(meta: Record<string, unknown>): Record<string, unknown> {
+  const out: Record<string, unknown> = {}
+  for (const [k, v] of Object.entries(meta)) {
+    if (RUNTIME_OMIT_META_KEYS.has(k)) continue
+    if (k === 'canonical_source_url' && v === meta.source_url) continue
+    out[k] = v
+  }
+  return out
+}
 
 interface CACardExport {
   id: string
@@ -75,8 +101,14 @@ function main(): void {
   const json = JSON.stringify(cards)
   writeFileSync(OUT_FILE, json, 'utf-8')
 
+  if (!existsSync(RUNTIME_DIR)) mkdirSync(RUNTIME_DIR, { recursive: true })
+  const runtimeCards = cards.map(c => ({ id: c.id, meta: slimRuntimeMeta(c.meta) }))
+  const runtimeJson = JSON.stringify(runtimeCards)
+  writeFileSync(RUNTIME_FILE, runtimeJson, 'utf-8')
+
   const sizeMb = (json.length / 1024 / 1024).toFixed(2)
-  console.log(`[ca-export] ${cards.length} cards -> content/data/ca/cards.json (${sizeMb} MB)`)
+  const runtimeMb = (runtimeJson.length / 1024 / 1024).toFixed(2)
+  console.log(`[ca-export] ${cards.length} cards -> content/data/ca/cards.json (${sizeMb} MB), public/_ca/cards-runtime.json (${runtimeMb} MB)`)
 
 }
 

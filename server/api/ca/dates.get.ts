@@ -1,5 +1,5 @@
 import { defineEventHandler, getQuery } from 'h3'
-import { CA_CARDS, entryDate, parseCAMode, selectHighYieldCards } from '~/server/utils/ca-cards'
+import { entryDate, getCACards, parseCAMode, selectHighYieldCards } from '~/server/utils/ca-cards'
 
 /**
  * Calendar of current-affairs coverage.
@@ -10,10 +10,11 @@ import { CA_CARDS, entryDate, parseCAMode, selectHighYieldCards } from '~/server
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
   const query = getQuery(event)
   const mode = parseCAMode(query.mode)
-  const all = mode === 'high-yield' ? selectHighYieldCards(CA_CARDS) : CA_CARDS
+  const rawAll = await getCACards(event)
+  const all = mode === 'high-yield' ? selectHighYieldCards(rawAll) : rawAll
 
   const byDate = new Map<string, { date: string, count: number, tgCount: number }>()
 

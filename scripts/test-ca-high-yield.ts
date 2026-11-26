@@ -3,8 +3,8 @@ import { IncomingMessage, ServerResponse } from 'node:http'
 import { Socket } from 'node:net'
 import { createEvent } from 'h3'
 import {
-  CA_CARDS,
   entryDate,
+  getCACards,
   highYieldScore,
   parseCAMode,
   selectHighYieldCards,
@@ -122,8 +122,9 @@ const smallDay = [
 assert.equal(selectHighYieldCards(smallDay).length, 2)
 
 // 8. Real archive invariant: every date keeps 1..8 cards
-const hyArchive = selectHighYieldCards(CA_CARDS)
-assert.ok(hyArchive.length > 0 && hyArchive.length <= CA_CARDS.length)
+const caCards = await getCACards()
+const hyArchive = selectHighYieldCards(caCards)
+assert.ok(hyArchive.length > 0 && hyArchive.length <= caCards.length)
 const countsByDay = new Map<string, number>()
 for (const c of hyArchive) {
   const d = entryDate(c)
@@ -147,7 +148,7 @@ const feedHY = await feedHandler(mockEvent('/api/ca/feed?mode=high-yield&limit=5
 const datesAll = await datesHandler(mockEvent('/api/ca/dates'))
 const datesHY = await datesHandler(mockEvent('/api/ca/dates?mode=high-yield'))
 
-assert.equal(feedAll.stats.total, CA_CARDS.length)
+assert.equal(feedAll.stats.total, caCards.length)
 assert.equal(feedHY.stats.total, hyArchive.length)
 assert.equal(feedHY.total, hyArchive.length)
 assert.equal(feedHY.items.length, Math.min(5, hyArchive.length))
@@ -176,5 +177,5 @@ assert.ok(dateBeatsMonth.total > 0 && dateBeatsMonth.items.every((e: any) => ent
 assert.equal(dateBeatsMonth.facets.months['2026-11'], monthAll.total)
 
 console.log(
-  `PASS: ca-high-yield tests (archive=${CA_CARDS.length}, highYield=${hyArchive.length}, dates=${datesHY.dates.length}, novAll=${monthAll.total}, novHY=${monthHY.total})`,
+  `PASS: ca-high-yield tests (archive=${caCards.length}, highYield=${hyArchive.length}, dates=${datesHY.dates.length}, novAll=${monthAll.total}, novHY=${monthHY.total})`,
 )

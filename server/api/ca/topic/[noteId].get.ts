@@ -1,5 +1,5 @@
 import { createError, defineEventHandler, getRouterParam } from 'h3'
-import { CA_CARDS } from '~/server/utils/ca-cards'
+import { getCACards } from '~/server/utils/ca-cards'
 import topicsMaster from '~/data/topics_master.json'
 
 interface TopicEntry {
@@ -68,7 +68,7 @@ export default defineEventHandler(async (event) => {
     ? Array.from(new Set([topicEntry.id, ...(topicEntry.aliases || [])]))
     : [noteId]
 
-  const allEntries = CA_CARDS as any[]
+  const allEntries = (await getCACards(event)) as any[]
   const direct = allEntries.filter((entry: any) => {
     const ids: string[] = entry.meta?.related_topic_ids ?? entry.related_topic_ids ?? []
     return Array.isArray(ids) && ids.some((id: string) => validIds.includes(id))

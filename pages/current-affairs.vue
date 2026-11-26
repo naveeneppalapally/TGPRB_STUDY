@@ -62,10 +62,9 @@
       </div>
     </section>
 
-    <!-- 3. Sticky filter bar -->
+    <!-- 3. Filter bar (sticky on sm+ directly beneath the 56px header; scrolls naturally on phone) -->
     <div
-      ref="filterBarRef"
-      class="sticky top-14 z-30 -mx-4 border-b b-line bg-base-85 px-4 backdrop-blur sm:-mx-6 sm:px-6"
+      class="z-30 -mx-4 border-b b-line bg-base-85 px-4 backdrop-blur sm:sticky sm:top-14 sm:-mx-6 sm:px-6"
     >
       <!-- Feed density mode toggle: High-Yield (5-8/day) vs Full Feed -->
       <div class="flex flex-wrap items-center justify-between gap-2 border-b b-line py-2">
@@ -272,8 +271,7 @@
       <template v-else-if="groups.length">
         <section v-for="g in groups" :key="g.key" class="mb-7" :aria-label="`${g.label}, ${g.items.length} cards`">
           <h2
-            class="sticky z-20 -mx-4 flex items-baseline justify-between border-b b-line bg-base-85 px-4 py-2 backdrop-blur sm:-mx-6 sm:px-6"
-            :style="{ top: groupHeaderTop }"
+            class="flex items-baseline justify-between border-b b-line pb-2"
           >
             <span class="text-xs font-bold uppercase tracking-wider t-hi">{{ g.label }}</span>
             <span class="num font-mono text-[10px] t-lo">{{ g.items.length }} {{ g.items.length === 1 ? 'card' : 'cards' }}</span>
@@ -769,23 +767,13 @@ function onSelectMonth(m: string): void {
 
 
 // ---------------------------------------------------------------------------
-// 11. Card refs + sticky group header offset
+// 11. Card refs & persisted view mode hydration
 // ---------------------------------------------------------------------------
 
 const cardRefs = new Map<string, any>()
 function setCardRef(id: string, el: any): void {
   if (el) cardRefs.set(id, el)
   else cardRefs.delete(id)
-}
-
-// Filter bar is sticky at top-14 (56px); group headers stick below it.
-const filterBarRef = ref<HTMLElement | null>(null)
-const groupHeaderTop = ref('112px')
-
-function measureFilterBar(): void {
-  if (!import.meta.client || !filterBarRef.value) return
-  const bar = filterBarRef.value.getBoundingClientRect()
-  groupHeaderTop.value = `${Math.round(56 + bar.height)}px`
 }
 
 onMounted(() => {
@@ -800,16 +788,6 @@ onMounted(() => {
       // Storage blocked
     }
   }
-  measureFilterBar()
-  window.addEventListener('resize', measureFilterBar, { passive: true })
-})
-
-watch([mode, () => activeChips.value.length], () => {
-  nextTick(measureFilterBar)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', measureFilterBar)
 })
 
 // ---------------------------------------------------------------------------

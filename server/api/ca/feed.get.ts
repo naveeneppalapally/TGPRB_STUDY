@@ -1,8 +1,8 @@
 import { defineEventHandler, getQuery } from 'h3'
 import {
-  CA_CARDS,
   entryDate,
   entryTime,
+  getCACards,
   istStartOfToday,
   parseCAMode,
   selectHighYieldCards,
@@ -66,7 +66,8 @@ export default defineEventHandler(async (event) => {
   const page = Math.max(Math.floor(Number(query.page) || 1), 1)
   const limit = Math.min(Math.max(Math.floor(Number(query.limit) || 30), 1), 500)
 
-  const all = (mode === 'high-yield' ? selectHighYieldCards(CA_CARDS) : CA_CARDS) as any[]
+  const rawAll = await getCACards(event)
+  const all = (mode === 'high-yield' ? selectHighYieldCards(rawAll) : rawAll) as any[]
 
   const now = new Date()
   const todayStart = istStartOfToday(now).getTime()
