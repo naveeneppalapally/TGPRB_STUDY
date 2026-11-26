@@ -62,10 +62,8 @@
       </div>
     </section>
 
-    <!-- 3. Filter bar (sticky on sm+ directly beneath the 56px header; scrolls naturally on phone) -->
-    <div
-      class="z-30 -mx-4 border-b b-line bg-base-85 px-4 backdrop-blur sm:sticky sm:top-14 sm:-mx-6 sm:px-6"
-    >
+    <!-- 3. Filter bar (scrolls naturally so cards get the full reading viewport) -->
+    <div class="-mx-4 border-b b-line px-4 sm:-mx-6 sm:px-6">
       <!-- Feed density mode toggle: High-Yield (5-8/day) vs Full Feed -->
       <div class="flex flex-wrap items-center justify-between gap-2 border-b b-line py-2">
         <div
