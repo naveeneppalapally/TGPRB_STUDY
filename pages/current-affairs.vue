@@ -237,6 +237,45 @@
           Reset all
         </button>
       </div>
+
+      <!-- 4b. Top Prev/Next day stepper when viewing a specific date -->
+      <div
+        v-if="date"
+        aria-label="Date navigation (top)"
+        class="flex flex-wrap items-center justify-between gap-2 border-t b-line py-2"
+      >
+        <button
+          type="button"
+          class="press inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border b-line bg-elev px-3 text-xs font-medium transition-colors"
+          :class="prevDate ? 't-hi hover:border-[var(--line-strong)]' : 'cursor-not-allowed opacity-40 t-lo'"
+          :disabled="!prevDate"
+          @click="prevDate && stepToDate(prevDate)"
+        >
+          <UIcon name="i-heroicons-chevron-left" class="h-4 w-4 shrink-0" />
+          <span>{{ prevDate ? formatShortDate(prevDate) : 'Earliest' }}</span>
+        </button>
+
+        <button
+          type="button"
+          class="press inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border border-saffron-500/40 bg-saffron-500/10 px-3 text-xs font-semibold accent"
+          title="Open date list at current date"
+          @click="datesOpen = true"
+        >
+          <UIcon name="i-heroicons-calendar-days" class="h-4 w-4 shrink-0" />
+          <span>{{ dayLabel(date) }}</span>
+        </button>
+
+        <button
+          type="button"
+          class="press inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border b-line bg-elev px-3 text-xs font-medium transition-colors"
+          :class="nextDate ? 't-hi hover:border-[var(--line-strong)]' : 'cursor-not-allowed opacity-40 t-lo'"
+          :disabled="!nextDate"
+          @click="nextDate && stepToDate(nextDate)"
+        >
+          <span>{{ nextDate ? formatShortDate(nextDate) : 'Latest' }}</span>
+          <UIcon name="i-heroicons-chevron-right" class="h-4 w-4 shrink-0" />
+        </button>
+      </div>
     </div>
 
     <!-- 7. Feed -->
@@ -324,6 +363,44 @@
           All {{ total }} {{ total === 1 ? 'card' : 'cards' }} shown
         </p>
 
+        <!-- Bottom Prev/Next day stepper after reading a date -->
+        <nav
+          v-if="date"
+          aria-label="Date navigation (bottom)"
+          class="panel mt-2 flex flex-wrap items-center justify-between gap-2 p-3"
+        >
+          <button
+            type="button"
+            class="press inline-flex min-h-[44px] items-center gap-1.5 rounded-lg border b-line bg-elev px-3.5 text-xs font-semibold transition-colors"
+            :class="prevDate ? 't-hi hover:border-[var(--line-strong)]' : 'cursor-not-allowed opacity-40 t-lo'"
+            :disabled="!prevDate"
+            @click="prevDate && stepToDate(prevDate)"
+          >
+            <UIcon name="i-heroicons-chevron-left" class="h-4 w-4 shrink-0" />
+            <span>{{ prevDate ? `Prev: ${formatShortDate(prevDate)}` : 'Earliest date' }}</span>
+          </button>
+
+          <button
+            type="button"
+            class="press inline-flex min-h-[44px] items-center gap-1.5 px-2 text-xs font-medium t-mid hover:t-hi"
+            @click="datesOpen = true"
+          >
+            <UIcon name="i-heroicons-calendar-days" class="h-4 w-4 shrink-0" />
+            <span>{{ dayLabel(date) }}</span>
+          </button>
+
+          <button
+            type="button"
+            class="press inline-flex min-h-[44px] items-center gap-1.5 rounded-lg px-4 text-xs font-semibold shadow-sm transition-opacity"
+            :class="nextDate ? 'bg-saffron-600 text-white hover:opacity-90' : 'border b-line bg-elev opacity-40 cursor-not-allowed t-lo'"
+            :disabled="!nextDate"
+            @click="nextDate && stepToDate(nextDate)"
+          >
+            <span>{{ nextDate ? `Next: ${formatShortDate(nextDate)}` : 'Latest date' }}</span>
+            <UIcon name="i-heroicons-chevron-right" class="h-4 w-4 shrink-0" />
+          </button>
+        </nav>
+
         <!-- Loading-more skeletons -->
         <div v-if="pending && items.length" class="flex flex-col gap-3" aria-hidden="true">
           <div
@@ -378,6 +455,12 @@
     <CaDatesSlideover
       v-model:open="datesOpen"
       :mode="mode"
+      :selected-date="date"
+      :selected-month="month"
+      :date-rows="dateRows"
+      :date-pending="datesPending"
+      :date-error="Boolean(datesError)"
+      @refresh-dates="refreshDates()"
       @select="onSelectDate"
       @select-month="onSelectMonth"
     />
@@ -751,6 +834,59 @@ function resetAllFilters(): void {
   date.value = ''
   tg.value = false
   sort.value = 'newest'
+}
+
+const { data: datesPayload, pending: datesPending, error: datesError, refresh: refreshDates } = await useFetch('/api/ca/dates', {
+  key: 'ca-dates-panel',
+  query: computed(() => ({
+    mode: mode.value === 'high-yield' ? 'high-yield' : undefined,
+  })),
+  watch: [mode],
+})
+
+const dateRows = computed<Array<{ date: string, count: number, tgCount: number }>>(
+  () => ((datesPayload.value as any)?.dates ?? []),
+)
+
+const availableDatesAsc = computed(() =>
+  [...dateRows.value]
+    .map(r => r.date)
+    .filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d))
+    .sort((a, b) => a.localeCompare(b)),
+)
+
+const prevDate = computed(() => {
+  if (!date.value) return ''
+  const idx = availableDatesAsc.value.indexOf(date.value)
+  if (idx > 0) return availableDatesAsc.value[idx - 1]
+  for (let i = availableDatesAsc.value.length - 1; i >= 0; i -= 1) {
+    if (availableDatesAsc.value[i] < date.value) return availableDatesAsc.value[i]
+  }
+  return ''
+})
+
+const nextDate = computed(() => {
+  if (!date.value) return ''
+  const idx = availableDatesAsc.value.indexOf(date.value)
+  if (idx !== -1 && idx + 1 < availableDatesAsc.value.length) return availableDatesAsc.value[idx + 1]
+  for (const d of availableDatesAsc.value) {
+    if (d > date.value) return d
+  }
+  return ''
+})
+
+function formatShortDate(key: string): string {
+  const [y, m, d] = key.split('-').map(Number)
+  if (!y || !m || !d || m < 1 || m > 12) return key
+  return `${d} ${MONTH_SHORT[m - 1]}`
+}
+
+function stepToDate(targetDate: string): void {
+  if (!targetDate) return
+  onSelectDate(targetDate)
+  if (import.meta.client) {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 }
 
 function onSelectDate(d: string): void {
